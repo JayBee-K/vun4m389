@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,300..700;1,300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 :root {
     --transition-default: 0.3s all ease-in-out;
@@ -25,7 +25,10 @@
     --dark-500: #767C90;
     --dark-400: #9196A6;
     --dark-300: #ADB1BC;
+
+    --bg-light: #F8F8F9;
 }
+
 
 body {
     position: relative;
@@ -35,7 +38,11 @@ body {
     font-size: var(--size-theme);
     font-weight: 400;
     font-style: normal;
-    background-color: #fafafa;
+    background-color: var(--bs-white);
+}
+
+*::-webkit-scrollbar{
+    width: 0;
 }
 
 a,
@@ -288,6 +295,10 @@ textarea:focus {
     color: inherit !important
 }
 
+.primary-color {
+    color: var(--primary-color);
+}
+
 .dark-color {
     color: var(--dark-color);
 }
@@ -385,6 +396,19 @@ textarea:focus {
     font-size: 1em;
     font-weight: 700;
     transition: var(--transition-default);
+    white-space: nowrap;
+}
+
+.button-theme.button-theme_primary {
+    color: var(--bs-white);
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+}
+
+.button-theme.button-theme_primary:active {
+    color: var(--bs-white);
+    border-color: var(--primary-hover);
+    background-color: var(--primary-hover);
 }
 
 .button-theme.button-theme_outline_dark {
@@ -397,4 +421,20 @@ textarea:focus {
     color: var(--bs-white);
     border-color: var(--primary-color);
     background-color: var(--primary-color);
+}
+
+.modal-theme .modal-dialog {
+    -webkit-transform: translate(0, 250px);
+    -ms-transform: translate(0, 250px);
+    transform: translate(0, 250px);
+}
+
+.modal-theme.show .modal-dialog {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+}
+
+.modal-theme .modal-dialog .modal-content {
+    border-radius: 24px;
 }
