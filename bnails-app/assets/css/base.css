@@ -41,7 +41,7 @@ body {
     background-color: var(--bs-white);
 }
 
-*::-webkit-scrollbar{
+*::-webkit-scrollbar {
     width: 0;
 }
 
@@ -399,16 +399,14 @@ textarea:focus {
     white-space: nowrap;
 }
 
+.button-theme svg path {
+    transition: var(--transition-default);
+}
+
 .button-theme.button-theme_primary {
     color: var(--bs-white);
     border-color: var(--primary-color);
     background-color: var(--primary-color);
-}
-
-.button-theme.button-theme_primary:active {
-    color: var(--bs-white);
-    border-color: var(--primary-hover);
-    background-color: var(--primary-hover);
 }
 
 .button-theme.button-theme_outline_dark {
@@ -417,10 +415,16 @@ textarea:focus {
     background-color: var(--bs-white);
 }
 
+.button-theme.button-theme_primary:active,
 .button-theme.button-theme_outline_dark:active {
     color: var(--bs-white);
-    border-color: var(--primary-color);
-    background-color: var(--primary-color);
+    border-color: var(--primary-hover);
+    background-color: var(--primary-hover);
+}
+
+.button-theme.button-theme_primary:active svg path,
+.button-theme.button-theme_outline_dark:active svg path {
+    fill: var(--bs-white);
 }
 
 .modal-theme .modal-dialog {
@@ -430,11 +434,46 @@ textarea:focus {
 }
 
 .modal-theme.show .modal-dialog {
-    -webkit-transform: none;
-    -ms-transform: none;
-    transform: none;
+    -webkit-transform: none !important;
+    -ms-transform: none !important;
+    transform: none !important;
 }
 
 .modal-theme .modal-dialog .modal-content {
     border-radius: 24px;
+}
+
+.modal-full {
+    top: unset;
+    bottom: 0;
+}
+
+.modal-full .modal-dialog {
+    max-width: 100%;
+    height: calc(100% - 50px);
+    min-height: calc(100% - 50px);
+    margin: 50px 0 0;
+    transition: var(--transition-default) !important;
+    transform: translateY(110%) !important;
+}
+
+.modal-full .modal-dialog .modal-content {
+    height: 100%;
+    border-radius: 24px 24px 0 0;
+}
+
+.modal-full .modal-header {
+    position: relative;
+    padding-top: 25px;
+}
+
+.modal-full .modal-header .modal-button_close {
+    top: 15px;
+}
+
+.modal-full .modal-footer .modal-button_expand {
+    width: 43px;
+    height: 43px;
+    padding: 0;
+    flex-shrink: 0;
 }
