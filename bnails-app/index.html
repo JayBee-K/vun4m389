@@ -1,804 +1,789 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta name="theme-color" content="#ffffff">
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="theme-color" content="#ffffff">
 
-    <title>Bnails App</title>
-    <meta name="description" content="Bnails App">
-    <meta name="author" content="">
+	<title>Bnails App</title>
+	<meta name="description" content="Bnails App">
+	<meta name="author" content="">
 
-    <meta property="og:title" content="Bnails App">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    <meta property="og:description" content="Bnails App">
-    <meta property="og:image" content="">
+	<meta property="og:title" content="Bnails App">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:description" content="Bnails App">
+	<meta property="og:image" content="">
 
-    <link rel="icon" href="./assets/images/favicon.png">
-    <link rel="apple-touch-icon" href="./assets/images/favicon.png">
-    <link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
-    <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+	<link rel="icon" href="./assets/images/favicon.png">
+	<link rel="apple-touch-icon" href="./assets/images/favicon.png">
+	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+	<link rel="stylesheet" href="./assets/css/base.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 
 <div class="modal fade modal-theme modal-spin" id="modalSpin" data-bs-backdrop="static" data-bs-keyboard="false">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content border-0">
-            <div class="modal-body">
-                <button type="button" data-bs-dismiss="modal" class="link-default effect-path modal-button_close">
-                    <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.75584 1.07745C1.4304 0.752015 0.902767 0.752015 0.57733 1.07745C0.251893 1.40289 0.251893 1.93053 0.57733 2.25596L5.82147 7.5001L0.57733 12.7442C0.251893 13.0697 0.251893 13.5973 0.57733 13.9228C0.902767 14.2482 1.4304 14.2482 1.75584 13.9228L6.99998 8.67861L12.244 13.9226C12.5694 14.2481 13.0971 14.2481 13.4225 13.9226C13.7479 13.5972 13.7479 13.0696 13.4225 12.7441L8.17849 7.5001L13.4225 2.25609C13.7479 1.93065 13.7479 1.40301 13.4225 1.07758C13.0971 0.752141 12.5694 0.752141 12.244 1.07758L6.99998 6.32159L1.75584 1.07745Z"
-                              fill="#9196A6"/>
-                    </svg>
-                </button>
-                <div class="spin-content text-center"></div>
-            </div>
-        </div>
-    </div>
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content border-0">
+			<div class="modal-body">
+				<button type="button" data-bs-dismiss="modal" class="link-default effect-path modal-button_close">
+					<svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M1.75584 1.07745C1.4304 0.752015 0.902767 0.752015 0.57733 1.07745C0.251893 1.40289 0.251893 1.93053 0.57733 2.25596L5.82147 7.5001L0.57733 12.7442C0.251893 13.0697 0.251893 13.5973 0.57733 13.9228C0.902767 14.2482 1.4304 14.2482 1.75584 13.9228L6.99998 8.67861L12.244 13.9226C12.5694 14.2481 13.0971 14.2481 13.4225 13.9226C13.7479 13.5972 13.7479 13.0696 13.4225 12.7441L8.17849 7.5001L13.4225 2.25609C13.7479 1.93065 13.7479 1.40301 13.4225 1.07758C13.0971 0.752141 12.5694 0.752141 12.244 1.07758L6.99998 6.32159L1.75584 1.07745Z"
+						      fill="#9196A6"/>
+					</svg>
+				</button>
+				<div class="spin-content text-center"></div>
+			</div>
+		</div>
+	</div>
 </div>
 
 
 <div class="vstack position-relative min-vh-100 h-100 overflow-hidden">
-    <header id="header" class="header bg-white w-100 py-2">
-        <div class="container">
-            <div class="hstack justify-content-between gap-30px">
-                <div class="hstack gap-10px">
-                    <a href="" class="header-logo d-inline-block align-middle">
-                        <img src="./assets/images/logo.png" class="mw-100" alt="">
-                    </a>
-                    <div class="header-text fz-18 dark-color fw-700">
-                        Hello, Rosie! 👋
-                    </div>
-                </div>
-                <div class="hstack gap-10">
-                    <div class="header-notification">
-                        <button class="header-notification_button effect-path hstack justify-content-center link-default"
-                                type="button">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                      d="M11.6628 2.60829C11.6654 2.5746 11.6667 2.53855 11.6667 2.50001C11.6667 1.57954 10.9205 0.833344 10 0.833344C9.07953 0.833344 8.33334 1.57954 8.33334 2.50001C8.33334 2.53855 8.33464 2.57459 8.33722 2.60827C7.03401 2.79357 6.03975 3.21557 5.29321 3.86538C4.25844 4.76607 3.83984 5.98484 3.60957 7.16721C3.49416 7.75977 3.42032 8.37678 3.35007 8.96695L3.34748 8.9887C3.2769 9.58168 3.20914 10.151 3.10653 10.7055C2.8991 11.8265 2.56451 12.7907 1.87914 13.5562C1.70975 13.7454 1.63587 14.0015 1.67847 14.2518C1.72108 14.5022 1.8755 14.7194 2.09794 14.842C3.4571 15.5906 5.04529 16.1034 6.71356 16.3905C6.71945 16.4252 6.72589 16.4598 6.73286 16.4943C6.82537 16.9516 7.01296 17.3849 7.28418 17.7661C7.58918 18.1946 7.99129 18.545 8.45762 18.7884C8.92396 19.0318 9.44128 19.1613 9.96729 19.1665C10.4933 19.1717 11.0131 19.0523 11.4841 18.8181C11.9551 18.5839 12.364 18.2415 12.6774 17.819C12.956 17.4433 13.1521 17.0137 13.2535 16.5583C13.2659 16.5027 13.2769 16.4468 13.2864 16.3905C14.9547 16.1034 16.5429 15.5906 17.9021 14.842C18.1245 14.7194 18.2789 14.5022 18.3215 14.2518C18.3641 14.0015 18.2902 13.7454 18.1209 13.5562C17.4355 12.7906 17.1009 11.8265 16.8934 10.7055C16.7908 10.151 16.723 9.58165 16.6525 8.98865L16.6499 8.96693C16.5796 8.37677 16.5058 7.75975 16.3903 7.16719C16.16 5.98483 15.7414 4.76607 14.7067 3.86538C13.9601 3.21559 12.9659 2.7936 11.6628 2.60829ZM11.4735 16.6121C10.9834 16.6486 10.491 16.6667 10 16.6667C9.50897 16.6667 9.01662 16.6486 8.52649 16.6121C8.56075 16.677 8.59934 16.7396 8.64209 16.7997C8.79459 17.014 8.99564 17.1891 9.22881 17.3108C9.46198 17.4325 9.72064 17.4973 9.98364 17.4999C10.2466 17.5025 10.5065 17.4428 10.742 17.3257C10.9776 17.2086 11.182 17.0374 11.3387 16.8262C11.3891 16.7581 11.4342 16.6866 11.4735 16.6121ZM10 15C7.76434 15 5.56047 14.5919 3.75967 13.8036C4.29807 12.9147 4.5724 11.9436 4.74537 11.0088C4.85789 10.4007 4.93113 9.78519 4.99977 9.20836L5.00505 9.16395C5.0765 8.5637 5.14382 8.0079 5.2455 7.48582C5.44939 6.4389 5.76871 5.66109 6.38746 5.12252C7.00434 4.58557 8.05919 4.16668 9.99994 4.16668C11.9407 4.16668 12.9955 4.58557 13.6124 5.12252C14.2312 5.6611 14.5505 6.43892 14.7544 7.48583C14.8561 8.00791 14.9234 8.56371 14.9949 9.16396L15.0002 9.20837C15.0688 9.7852 15.1421 10.4007 15.2546 11.0088C15.4276 11.9436 15.7019 12.9147 16.2403 13.8036C14.4395 14.5919 12.2357 15 10 15Z"
-                                      fill="#111215"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="header-search">
-                        <button class="header-search_button effect-path hstack justify-content-center link-default"
-                                type="button">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                      d="M15.2739 15.6192C13.8374 16.7947 12.001 17.5 9.99999 17.5C5.39762 17.5 1.66666 13.769 1.66666 9.16668C1.66666 4.5643 5.39762 0.833344 9.99999 0.833344C14.6024 0.833344 18.3333 4.5643 18.3333 9.16668C18.3333 11.1677 17.628 13.0041 16.4524 14.4406L18.9226 16.9108C19.248 17.2363 19.248 17.7639 18.9226 18.0893C18.5972 18.4148 18.0695 18.4148 17.7441 18.0893L15.2739 15.6192ZM16.6667 9.16668C16.6667 12.8486 13.6819 15.8333 9.99999 15.8333C6.31809 15.8333 3.33332 12.8486 3.33332 9.16668C3.33332 5.48478 6.31809 2.50001 9.99999 2.50001C13.6819 2.50001 16.6667 5.48478 16.6667 9.16668Z"
-                                      fill="#111215"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <main id="main" class="main vstack flex-fill overflow-hidden position-relative">
-        <div class="position-absolute top-0 start-0 end-0 bottom-0 overflow-auto">
-            <div class="section-body">
-                <div class="section-hero">
-                    <div class="container">
-                        <div class="slider-theme position-relative" id="heroSlider">
-                            <div class="swiper" style="height: 215px;">
-                                <div class="swiper-wrapper h-auto">
-                                    <div class="swiper-slide h-auto">
-                                        <div class="hero-item hstack gap-25px"
-                                             style="background-color: var(--dark-color)">
-                                            <div class="hero-avatar flex-shrink-0 position-relative">
-                                                <div class="hero-decor_right__1">
-                                                    <img src="./assets/images/hero/decor/hero-decor-right-1.png"
-                                                         class="img-fluid" alt="">
-                                                </div>
-                                                <div class="hero-decor_left__1">
-                                                    <img src="./assets/images/hero/decor/hero-decor-left-1.png"
-                                                         class="img-fluid" alt="">
-                                                </div>
-                                                <div class="hero-decor_star__1">
-                                                    <img src="./assets/images/hero/decor/hero-star-1.png"
-                                                         class="img-fluid" alt="">
-                                                </div>
-                                                <div class="hero-image position-relative overflow-hidden">
-                                                    <img src="./assets/images/hero/hero-1.png" class="img-fluid" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="hero-content text-white">
-                                                <div class="hero-title fz-18 fw-700 mb-2">
-                                                    Get free coin!
-                                                </div>
-                                                <div class="hero-desc fw-300 mb-2">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                                    eiusmod
-                                                </div>
-                                                <div class="hero-button">
-                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                                         xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M5 10C5 9.53976 5.3731 9.16667 5.83333 9.16667H12.1548L10.2441 7.25592C9.91864 6.93049 9.91864 6.40285 10.2441 6.07741C10.5695 5.75197 11.0972 5.75197 11.4226 6.07741L14.7559 9.41074C15.0814 9.73618 15.0814 10.2638 14.7559 10.5893L11.4226 13.9226C11.0972 14.248 10.5695 14.248 10.2441 13.9226C9.91864 13.5972 9.91864 13.0695 10.2441 12.7441L12.1548 10.8333H5.83333C5.3731 10.8333 5 10.4602 5 10Z"
-                                                              fill="white"/>
-                                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                                              d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20ZM10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333Z"
-                                                              fill="white"/>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide h-auto">
-                                        <div class="hero-item hstack gap-25px"
-                                             style="background-color: var(--primary-color)">
-                                            <div class="hero-avatar flex-shrink-0 position-relative">
-                                                <div class="hero-decor_right__1">
-                                                    <img src="./assets/images/hero/decor/hero-decor-right-2.png"
-                                                         class="img-fluid" alt="">
-                                                </div>
-                                                <div class="hero-decor_left__1">
-                                                    <img src="./assets/images/hero/decor/hero-decor-left-2.png"
-                                                         class="img-fluid" alt="">
-                                                </div>
-                                                <div class="hero-decor_star__1">
-                                                    <img src="./assets/images/hero/decor/hero-star-2.png"
-                                                         class="img-fluid" alt="">
-                                                </div>
-                                                <div class="hero-image position-relative overflow-hidden">
-                                                    <img src="./assets/images/hero/hero-1.png" class="img-fluid" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="hero-content text-white">
-                                                <div class="hero-title fz-18 fw-700 mb-2">
-                                                    Get free coin!
-                                                </div>
-                                                <div class="hero-desc fw-300 mb-2">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                                    eiusmod
-                                                </div>
-                                                <div class="hero-button">
-                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                                         xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M5 10C5 9.53976 5.3731 9.16667 5.83333 9.16667H12.1548L10.2441 7.25592C9.91864 6.93049 9.91864 6.40285 10.2441 6.07741C10.5695 5.75197 11.0972 5.75197 11.4226 6.07741L14.7559 9.41074C15.0814 9.73618 15.0814 10.2638 14.7559 10.5893L11.4226 13.9226C11.0972 14.248 10.5695 14.248 10.2441 13.9226C9.91864 13.5972 9.91864 13.0695 10.2441 12.7441L12.1548 10.8333H5.83333C5.3731 10.8333 5 10.4602 5 10Z"
-                                                              fill="white"/>
-                                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                                              d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20ZM10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333Z"
-                                                              fill="white"/>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide h-auto">
-                                        <div class="hero-item hstack gap-25px" style="background-color: #7CB0F9">
-                                            <div class="hero-avatar flex-shrink-0 position-relative">
-                                                <div class="hero-decor_right__1">
-                                                    <img src="./assets/images/hero/decor/hero-decor-right-3.png"
-                                                         class="img-fluid" alt="">
-                                                </div>
-                                                <div class="hero-decor_left__1">
-                                                    <img src="./assets/images/hero/decor/hero-decor-left-3.png"
-                                                         class="img-fluid" alt="">
-                                                </div>
-                                                <div class="hero-decor_star__1">
-                                                    <img src="./assets/images/hero/decor/hero-star-3.png"
-                                                         class="img-fluid" alt="">
-                                                </div>
-                                                <div class="hero-image position-relative overflow-hidden">
-                                                    <img src="./assets/images/hero/hero-1.png" class="img-fluid" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="hero-content text-white">
-                                                <div class="hero-title fz-18 fw-700 mb-2">
-                                                    Get free coin!
-                                                </div>
-                                                <div class="hero-desc fw-300 mb-2">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                                    eiusmod
-                                                </div>
-                                                <div class="hero-button">
-                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                                         xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M5 10C5 9.53976 5.3731 9.16667 5.83333 9.16667H12.1548L10.2441 7.25592C9.91864 6.93049 9.91864 6.40285 10.2441 6.07741C10.5695 5.75197 11.0972 5.75197 11.4226 6.07741L14.7559 9.41074C15.0814 9.73618 15.0814 10.2638 14.7559 10.5893L11.4226 13.9226C11.0972 14.248 10.5695 14.248 10.2441 13.9226C9.91864 13.5972 9.91864 13.0695 10.2441 12.7441L12.1548 10.8333H5.83333C5.3731 10.8333 5 10.4602 5 10Z"
-                                                              fill="white"/>
-                                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                                              d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20ZM10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333Z"
-                                                              fill="white"/>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="section-buttons section-gap">
-                    <div class="container">
-                        <div class="hstack gap-15px">
-                            <a href="" class="button-theme button-theme_outline_dark w-50">
-                                Get Free Coin
-                            </a>
-                            <a href="" class="button-theme button-theme_outline_dark w-50">
-                                Transaction history
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="section-appointments section-gap">
-                    <div class="container">
-                        <div class="section-heading">
-                            <div class="heading-title">
-                                Your appointments
-                            </div>
-                            <a href="" class="heading-link">
-                                See all
-                            </a>
-                        </div>
-                    </div>
-                    <div class="container pe-0">
-                        <div class="slider-theme position-relative" id="appointmentSlider">
-                            <div class="swiper h-auto">
-                                <div class="swiper-wrapper h-auto">
-                                    <div class="swiper-slide">
-                                        <div class="appointment-card">
-                                            <div class="appointment-title fz-16 fw-700 primary-color">
-                                                Bnails Amarillo #1
-                                            </div>
-                                            <div class="appointment-times hstack gap-15px justify-content-between">
-                                                <div class="appointment-times_item vstack">
-                                                    <div class="appointment-times_day fz-12 dark-color_400">
-                                                        12 April
-                                                    </div>
-                                                    <div class="appointment-times_hour fz-14 dark-color fw-700">
-                                                        09:00 AM
-                                                    </div>
-                                                </div>
-                                                <div class="appointment-times_item vstack align-items-end">
-                                                    <div class="appointment-times_day fz-12 dark-color_400">
-                                                        12 April
-                                                    </div>
-                                                    <div class="appointment-times_hour fz-14 dark-color fw-700">
-                                                        09:30 AM
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="appointment-service hstack gap-15px justify-content-between">
-                                                <div class="appointment-service_list hstack gap-5px">
-                                                    <div class="appointment-service_list__item hstack justify-content-center">
-                                                        <img src="./assets/images/service/icon-1.png"
-                                                             class="img-fluid"
-                                                             alt="">
-                                                    </div>
-                                                    <div class="appointment-service_list__item hstack justify-content-center">
-                                                        <img src="./assets/images/service/icon-1.png"
-                                                             class="img-fluid"
-                                                             alt="">
-                                                    </div>
-                                                    <div class="appointment-service_list__item hstack justify-content-center">
-                                                        <img src="./assets/images/service/icon-1.png"
-                                                             class="img-fluid"
-                                                             alt="">
-                                                    </div>
-                                                    <div class="appointment-service_list__item hstack justify-content-center">
-                                                        <img src="./assets/images/service/icon-1.png"
-                                                             class="img-fluid"
-                                                             alt="">
-                                                    </div>
-                                                </div>
-                                                <div class="appointment-service_text fz-12 dark-color_600 text-nowrap text-end">
-                                                    View Services Details
-                                                </div>
-                                            </div>
-                                            <div class="appointment-expand hstack gap-15px justify-content-between">
-                                                <div class="appointment-expand_price fz-18 fw-700 dark-color">
-                                                    $250.00
-                                                </div>
-                                                <div class="appointment-expand_address hstack justify-content-center rounded-circle">
-                                                    <svg width="18" height="20" viewBox="0 0 18 20" fill="none"
-                                                         xmlns="http://www.w3.org/2000/svg">
-                                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                                              d="M8.99999 5C7.15904 5 5.66666 6.49238 5.66666 8.33333C5.66666 10.1743 7.15904 11.6667 8.99999 11.6667C10.8409 11.6667 12.3333 10.1743 12.3333 8.33333C12.3333 6.49238 10.8409 5 8.99999 5ZM7.33332 8.33333C7.33332 7.41286 8.07952 6.66667 8.99999 6.66667C9.92046 6.66667 10.6667 7.41286 10.6667 8.33333C10.6667 9.25381 9.92046 10 8.99999 10C8.07952 10 7.33332 9.25381 7.33332 8.33333Z"
-                                                              fill="white"/>
-                                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                                              d="M8.99999 0C4.41537 0 0.666656 3.63879 0.666656 8.16667C0.666656 11.2223 2.4969 14.1658 4.30523 16.272C5.22355 17.3416 6.17106 18.2359 6.95183 18.8687C7.34114 19.1843 7.70004 19.4438 8.00197 19.6295C8.15197 19.7217 8.3015 19.8041 8.44282 19.8663C8.55738 19.9167 8.76561 20 8.99999 20C9.23437 20 9.4426 19.9167 9.55716 19.8663C9.69849 19.8041 9.84801 19.7217 9.99802 19.6295C10.2999 19.4438 10.6588 19.1843 11.0482 18.8687C11.8289 18.2359 12.7764 17.3416 13.6948 16.272C15.5031 14.1658 17.3333 11.2223 17.3333 8.16667C17.3333 3.63879 13.5846 0 8.99999 0ZM2.33332 8.16667C2.33332 4.59437 5.30034 1.66667 8.99999 1.66667C12.6996 1.66667 15.6667 4.59437 15.6667 8.16667C15.6667 10.611 14.1636 13.1675 12.4302 15.1863C11.5777 16.1792 10.7023 17.0037 9.9987 17.574C9.64583 17.86 9.34718 18.0731 9.12501 18.2097C9.07745 18.239 9.03582 18.2632 8.99999 18.283C8.96416 18.2632 8.92253 18.239 8.87497 18.2097C8.6528 18.0731 8.35415 17.86 8.00128 17.574C7.29767 17.0037 6.42226 16.1792 5.56975 15.1863C3.83641 13.1675 2.33332 10.611 2.33332 8.16667Z"
-                                                              fill="white"/>
-                                                    </svg>
+	<header id="header" class="header bg-white w-100 py-2">
+		<div class="container">
+			<div class="hstack justify-content-between gap-30px">
+				<div class="hstack gap-10px">
+					<a href="" class="header-logo d-inline-block align-middle">
+						<img src="./assets/images/logo.png" class="mw-100" alt="">
+					</a>
+					<div class="header-text fz-18 dark-color fw-700">
+						Hello, Rosie! 👋
+					</div>
+				</div>
+				<div class="hstack gap-10">
+					<div class="header-notification">
+						<button class="header-notification_button effect-path hstack justify-content-center link-default"
+						        type="button">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+							     xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+								      d="M11.6628 2.60829C11.6654 2.5746 11.6667 2.53855 11.6667 2.50001C11.6667 1.57954 10.9205 0.833344 10 0.833344C9.07953 0.833344 8.33334 1.57954 8.33334 2.50001C8.33334 2.53855 8.33464 2.57459 8.33722 2.60827C7.03401 2.79357 6.03975 3.21557 5.29321 3.86538C4.25844 4.76607 3.83984 5.98484 3.60957 7.16721C3.49416 7.75977 3.42032 8.37678 3.35007 8.96695L3.34748 8.9887C3.2769 9.58168 3.20914 10.151 3.10653 10.7055C2.8991 11.8265 2.56451 12.7907 1.87914 13.5562C1.70975 13.7454 1.63587 14.0015 1.67847 14.2518C1.72108 14.5022 1.8755 14.7194 2.09794 14.842C3.4571 15.5906 5.04529 16.1034 6.71356 16.3905C6.71945 16.4252 6.72589 16.4598 6.73286 16.4943C6.82537 16.9516 7.01296 17.3849 7.28418 17.7661C7.58918 18.1946 7.99129 18.545 8.45762 18.7884C8.92396 19.0318 9.44128 19.1613 9.96729 19.1665C10.4933 19.1717 11.0131 19.0523 11.4841 18.8181C11.9551 18.5839 12.364 18.2415 12.6774 17.819C12.956 17.4433 13.1521 17.0137 13.2535 16.5583C13.2659 16.5027 13.2769 16.4468 13.2864 16.3905C14.9547 16.1034 16.5429 15.5906 17.9021 14.842C18.1245 14.7194 18.2789 14.5022 18.3215 14.2518C18.3641 14.0015 18.2902 13.7454 18.1209 13.5562C17.4355 12.7906 17.1009 11.8265 16.8934 10.7055C16.7908 10.151 16.723 9.58165 16.6525 8.98865L16.6499 8.96693C16.5796 8.37677 16.5058 7.75975 16.3903 7.16719C16.16 5.98483 15.7414 4.76607 14.7067 3.86538C13.9601 3.21559 12.9659 2.7936 11.6628 2.60829ZM11.4735 16.6121C10.9834 16.6486 10.491 16.6667 10 16.6667C9.50897 16.6667 9.01662 16.6486 8.52649 16.6121C8.56075 16.677 8.59934 16.7396 8.64209 16.7997C8.79459 17.014 8.99564 17.1891 9.22881 17.3108C9.46198 17.4325 9.72064 17.4973 9.98364 17.4999C10.2466 17.5025 10.5065 17.4428 10.742 17.3257C10.9776 17.2086 11.182 17.0374 11.3387 16.8262C11.3891 16.7581 11.4342 16.6866 11.4735 16.6121ZM10 15C7.76434 15 5.56047 14.5919 3.75967 13.8036C4.29807 12.9147 4.5724 11.9436 4.74537 11.0088C4.85789 10.4007 4.93113 9.78519 4.99977 9.20836L5.00505 9.16395C5.0765 8.5637 5.14382 8.0079 5.2455 7.48582C5.44939 6.4389 5.76871 5.66109 6.38746 5.12252C7.00434 4.58557 8.05919 4.16668 9.99994 4.16668C11.9407 4.16668 12.9955 4.58557 13.6124 5.12252C14.2312 5.6611 14.5505 6.43892 14.7544 7.48583C14.8561 8.00791 14.9234 8.56371 14.9949 9.16396L15.0002 9.20837C15.0688 9.7852 15.1421 10.4007 15.2546 11.0088C15.4276 11.9436 15.7019 12.9147 16.2403 13.8036C14.4395 14.5919 12.2357 15 10 15Z"
+								      fill="#111215"/>
+							</svg>
+						</button>
+					</div>
+					<div class="header-search">
+						<button class="header-search_button effect-path hstack justify-content-center link-default"
+						        type="button">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+							     xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+								      d="M15.2739 15.6192C13.8374 16.7947 12.001 17.5 9.99999 17.5C5.39762 17.5 1.66666 13.769 1.66666 9.16668C1.66666 4.5643 5.39762 0.833344 9.99999 0.833344C14.6024 0.833344 18.3333 4.5643 18.3333 9.16668C18.3333 11.1677 17.628 13.0041 16.4524 14.4406L18.9226 16.9108C19.248 17.2363 19.248 17.7639 18.9226 18.0893C18.5972 18.4148 18.0695 18.4148 17.7441 18.0893L15.2739 15.6192ZM16.6667 9.16668C16.6667 12.8486 13.6819 15.8333 9.99999 15.8333C6.31809 15.8333 3.33332 12.8486 3.33332 9.16668C3.33332 5.48478 6.31809 2.50001 9.99999 2.50001C13.6819 2.50001 16.6667 5.48478 16.6667 9.16668Z"
+								      fill="#111215"/>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main id="main" class="main vstack flex-fill overflow-hidden position-relative">
+		<div class="position-absolute top-0 start-0 end-0 bottom-0 overflow-auto">
+			<div class="section-body">
+				<div class="section-hero">
+					<div class="container">
+						<div class="slider-theme position-relative" id="heroSlider">
+							<div class="swiper" style="height: 265px;">
+								<div class="swiper-wrapper h-auto">
+									<div class="swiper-slide h-auto">
+										<div class="hero-item hstack gap-25px"
+										     style="background-color: var(--dark-color)">
+											<div class="hero-avatar flex-shrink-0 position-relative">
+												<div class="hero-image position-relative overflow-hidden">
+													<img src="./assets/images/hero/hero-1.png" class="img-fluid" alt="">
+												</div>
+											</div>
+											<div class="hero-content text-white">
+												<div class="hero-title fz-18 fw-700 mb-2">
+													Get free coin!
+												</div>
+												<div class="hero-desc fw-300 mb-2">
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+													eiusmod
+												</div>
+												<div class="hero-button">
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+													     xmlns="http://www.w3.org/2000/svg">
+														<path d="M5 10C5 9.53976 5.3731 9.16667 5.83333 9.16667H12.1548L10.2441 7.25592C9.91864 6.93049 9.91864 6.40285 10.2441 6.07741C10.5695 5.75197 11.0972 5.75197 11.4226 6.07741L14.7559 9.41074C15.0814 9.73618 15.0814 10.2638 14.7559 10.5893L11.4226 13.9226C11.0972 14.248 10.5695 14.248 10.2441 13.9226C9.91864 13.5972 9.91864 13.0695 10.2441 12.7441L12.1548 10.8333H5.83333C5.3731 10.8333 5 10.4602 5 10Z"
+														      fill="white"/>
+														<path fill-rule="evenodd" clip-rule="evenodd"
+														      d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20ZM10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333Z"
+														      fill="white"/>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide h-auto">
+										<div class="hero-item hstack gap-25px"
+										     style="background-color: var(--primary-color)">
+											<div class="hero-avatar flex-shrink-0 position-relative">
+												<div class="hero-image position-relative overflow-hidden">
+													<img src="./assets/images/hero/hero-2.png" class="img-fluid" alt="">
+												</div>
+											</div>
+											<div class="hero-content text-white">
+												<div class="hero-title fz-18 fw-700 mb-2">
+													Get free coin!
+												</div>
+												<div class="hero-desc fw-300 mb-2">
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+													eiusmod
+												</div>
+												<div class="hero-button">
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+													     xmlns="http://www.w3.org/2000/svg">
+														<path d="M5 10C5 9.53976 5.3731 9.16667 5.83333 9.16667H12.1548L10.2441 7.25592C9.91864 6.93049 9.91864 6.40285 10.2441 6.07741C10.5695 5.75197 11.0972 5.75197 11.4226 6.07741L14.7559 9.41074C15.0814 9.73618 15.0814 10.2638 14.7559 10.5893L11.4226 13.9226C11.0972 14.248 10.5695 14.248 10.2441 13.9226C9.91864 13.5972 9.91864 13.0695 10.2441 12.7441L12.1548 10.8333H5.83333C5.3731 10.8333 5 10.4602 5 10Z"
+														      fill="white"/>
+														<path fill-rule="evenodd" clip-rule="evenodd"
+														      d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20ZM10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333Z"
+														      fill="white"/>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide h-auto">
+										<div class="hero-item hstack gap-25px" style="background-color: #7CB0F9">
+											<div class="hero-avatar flex-shrink-0 position-relative">
+												<div class="hero-image position-relative overflow-hidden">
+													<img src="./assets/images/hero/hero-3.png" class="img-fluid" alt="">
+												</div>
+											</div>
+											<div class="hero-content text-white">
+												<div class="hero-title fz-18 fw-700 mb-2">
+													Get free coin!2
+												</div>
+												<div class="hero-desc fw-300 mb-2">
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+													eiusmod
+												</div>
+												<div class="hero-button">
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+													     xmlns="http://www.w3.org/2000/svg">
+														<path d="M5 10C5 9.53976 5.3731 9.16667 5.83333 9.16667H12.1548L10.2441 7.25592C9.91864 6.93049 9.91864 6.40285 10.2441 6.07741C10.5695 5.75197 11.0972 5.75197 11.4226 6.07741L14.7559 9.41074C15.0814 9.73618 15.0814 10.2638 14.7559 10.5893L11.4226 13.9226C11.0972 14.248 10.5695 14.248 10.2441 13.9226C9.91864 13.5972 9.91864 13.0695 10.2441 12.7441L12.1548 10.8333H5.83333C5.3731 10.8333 5 10.4602 5 10Z"
+														      fill="white"/>
+														<path fill-rule="evenodd" clip-rule="evenodd"
+														      d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20ZM10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333Z"
+														      fill="white"/>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section-bcoin section-gap">
+					<div class="container">
+						<div class="bcoin-inner position-relative overflow-hidden text-center text-white">
+							<div class="fz-14 fw-700">
+								Total BCoin
+							</div>
+							<div class="bcoin-title fw-700 hstack justify-content-center gap-5px">
+								<svg width="26" height="26" viewBox="0 0 20 20" fill="none"
+								     xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+									      d="M4.30662 1.2044C4.46117 0.972564 4.72137 0.833313 4.99999 0.833313H15C15.2786 0.833313 15.5388 0.972564 15.6934 1.2044L19.0267 6.2044C19.2188 6.49247 19.2127 6.86928 19.0114 7.15101L10.6781 18.8177C10.5217 19.0367 10.2691 19.1666 9.99999 19.1666C9.73087 19.1666 9.47831 19.0367 9.32188 18.8177L0.988551 7.15101C0.787314 6.86928 0.781238 6.49247 0.973287 6.2044L4.30662 1.2044ZM5.44598 2.49998L3.22376 5.83331H6.06603L7.17714 2.49998H5.44598ZM8.93396 2.49998L7.82285 5.83331H12.1771L11.066 2.49998H8.93396ZM12.8228 2.49998L13.934 5.83331H16.7762L14.554 2.49998H12.8228ZM16.714 7.49998H13.9619L12.1272 13.9215L16.714 7.49998ZM9.99999 15.2999L12.2286 7.49998H7.77144L9.99999 15.2999ZM6.03808 7.49998L7.8728 13.9215L3.28599 7.49998H6.03808Z"
+									      fill="white"/>
+								</svg>
+								2.500
+							</div>
+							<div class="bcoin-decor position-absolute top-50 start-50 translate-middle w-100 h-100 pe-none">
+								<img src="./assets/images/bcoin-decor.png" class="w-100 h-100 object-fit-cover" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section-buttons section-gap">
+					<div class="container">
+						<div class="hstack gap-15px">
+							<a href="" class="button-theme button-theme_outline_dark w-50">
+								Get Free Coin
+							</a>
+							<a href="" class="button-theme button-theme_outline_dark w-50">
+								Transaction history
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="section-appointments section-gap">
+					<div class="container">
+						<div class="section-heading">
+							<div class="heading-title">
+								Your appointments
+							</div>
+							<a href="" class="heading-link">
+								See all
+							</a>
+						</div>
+					</div>
+					<div class="container pe-0">
+						<div class="slider-theme position-relative" id="appointmentSlider">
+							<div class="swiper h-auto">
+								<div class="swiper-wrapper h-auto">
+									<div class="swiper-slide">
+										<div class="appointment-card">
+											<div class="appointment-title fz-16 fw-700 primary-color">
+												Bnails Amarillo #1
+											</div>
+											<div class="appointment-times hstack gap-15px justify-content-between">
+												<div class="appointment-times_item vstack">
+													<div class="appointment-times_day fz-12 dark-color_400">
+														12 April
+													</div>
+													<div class="appointment-times_hour fz-14 dark-color fw-700">
+														09:00 AM
+													</div>
+												</div>
+												<div class="appointment-times_item vstack align-items-end">
+													<div class="appointment-times_day fz-12 dark-color_400">
+														12 April
+													</div>
+													<div class="appointment-times_hour fz-14 dark-color fw-700">
+														09:30 AM
+													</div>
+												</div>
+											</div>
+											<div class="appointment-service hstack gap-15px justify-content-between">
+												<div class="appointment-service_list hstack gap-5px">
+													<div class="appointment-service_list__item hstack justify-content-center">
+														<img src="./assets/images/service/icon-1.png"
+														     class="img-fluid"
+														     alt="">
+													</div>
+													<div class="appointment-service_list__item hstack justify-content-center">
+														<img src="./assets/images/service/icon-1.png"
+														     class="img-fluid"
+														     alt="">
+													</div>
+													<div class="appointment-service_list__item hstack justify-content-center">
+														<img src="./assets/images/service/icon-1.png"
+														     class="img-fluid"
+														     alt="">
+													</div>
+													<div class="appointment-service_list__item hstack justify-content-center">
+														<img src="./assets/images/service/icon-1.png"
+														     class="img-fluid"
+														     alt="">
+													</div>
+												</div>
+												<div class="appointment-service_text fz-12 dark-color_600 text-nowrap text-end">
+													View Services Details
+												</div>
+											</div>
+											<div class="appointment-expand hstack gap-15px justify-content-between">
+												<div class="appointment-expand_price fz-18 fw-700 dark-color">
+													$250.00
+												</div>
+												<div class="appointment-expand_address hstack justify-content-center rounded-circle">
+													<svg width="18" height="20" viewBox="0 0 18 20" fill="none"
+													     xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd"
+														      d="M8.99999 5C7.15904 5 5.66666 6.49238 5.66666 8.33333C5.66666 10.1743 7.15904 11.6667 8.99999 11.6667C10.8409 11.6667 12.3333 10.1743 12.3333 8.33333C12.3333 6.49238 10.8409 5 8.99999 5ZM7.33332 8.33333C7.33332 7.41286 8.07952 6.66667 8.99999 6.66667C9.92046 6.66667 10.6667 7.41286 10.6667 8.33333C10.6667 9.25381 9.92046 10 8.99999 10C8.07952 10 7.33332 9.25381 7.33332 8.33333Z"
+														      fill="white"/>
+														<path fill-rule="evenodd" clip-rule="evenodd"
+														      d="M8.99999 0C4.41537 0 0.666656 3.63879 0.666656 8.16667C0.666656 11.2223 2.4969 14.1658 4.30523 16.272C5.22355 17.3416 6.17106 18.2359 6.95183 18.8687C7.34114 19.1843 7.70004 19.4438 8.00197 19.6295C8.15197 19.7217 8.3015 19.8041 8.44282 19.8663C8.55738 19.9167 8.76561 20 8.99999 20C9.23437 20 9.4426 19.9167 9.55716 19.8663C9.69849 19.8041 9.84801 19.7217 9.99802 19.6295C10.2999 19.4438 10.6588 19.1843 11.0482 18.8687C11.8289 18.2359 12.7764 17.3416 13.6948 16.272C15.5031 14.1658 17.3333 11.2223 17.3333 8.16667C17.3333 3.63879 13.5846 0 8.99999 0ZM2.33332 8.16667C2.33332 4.59437 5.30034 1.66667 8.99999 1.66667C12.6996 1.66667 15.6667 4.59437 15.6667 8.16667C15.6667 10.611 14.1636 13.1675 12.4302 15.1863C11.5777 16.1792 10.7023 17.0037 9.9987 17.574C9.64583 17.86 9.34718 18.0731 9.12501 18.2097C9.07745 18.239 9.03582 18.2632 8.99999 18.283C8.96416 18.2632 8.92253 18.239 8.87497 18.2097C8.6528 18.0731 8.35415 17.86 8.00128 17.574C7.29767 17.0037 6.42226 16.1792 5.56975 15.1863C3.83641 13.1675 2.33332 10.611 2.33332 8.16667Z"
+														      fill="white"/>
+													</svg>
 
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="appointment-card">
-                                            <div class="appointment-title fz-16 fw-700 primary-color">
-                                                Bnails Amarillo #2
-                                            </div>
-                                            <div class="appointment-times hstack gap-15px justify-content-between">
-                                                <div class="appointment-times_item vstack">
-                                                    <div class="appointment-times_day fz-12 dark-color_400">
-                                                        12 April
-                                                    </div>
-                                                    <div class="appointment-times_hour fz-14 dark-color fw-700">
-                                                        13:00 AM
-                                                    </div>
-                                                </div>
-                                                <div class="appointment-times_item vstack align-items-end">
-                                                    <div class="appointment-times_day fz-12 dark-color_400">
-                                                        12 April
-                                                    </div>
-                                                    <div class="appointment-times_hour fz-14 dark-color fw-700">
-                                                        13:30 AM
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="appointment-service hstack gap-15px justify-content-between">
-                                                <div class="appointment-service_list hstack gap-5px">
-                                                    <div class="appointment-service_list__item hstack justify-content-center">
-                                                        <img src="./assets/images/service/icon-1.png"
-                                                             class="img-fluid"
-                                                             alt="">
-                                                    </div>
-                                                    <div class="appointment-service_list__item hstack justify-content-center">
-                                                        <img src="./assets/images/service/icon-1.png"
-                                                             class="img-fluid"
-                                                             alt="">
-                                                    </div>
-                                                    <div class="appointment-service_list__item hstack justify-content-center">
-                                                        <img src="./assets/images/service/icon-1.png"
-                                                             class="img-fluid"
-                                                             alt="">
-                                                    </div>
-                                                    <div class="appointment-service_list__item hstack justify-content-center">
-                                                        <img src="./assets/images/service/icon-1.png"
-                                                             class="img-fluid"
-                                                             alt="">
-                                                    </div>
-                                                </div>
-                                                <div class="appointment-service_text fz-12 dark-color_600 text-nowrap text-end">
-                                                    View Services Details
-                                                </div>
-                                            </div>
-                                            <div class="appointment-expand hstack gap-15px justify-content-between">
-                                                <div class="appointment-expand_price fz-18 fw-700 dark-color">
-                                                    $250.00
-                                                </div>
-                                                <div class="appointment-expand_address hstack justify-content-center rounded-circle">
-                                                    <svg width="18" height="20" viewBox="0 0 18 20" fill="none"
-                                                         xmlns="http://www.w3.org/2000/svg">
-                                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                                              d="M8.99999 5C7.15904 5 5.66666 6.49238 5.66666 8.33333C5.66666 10.1743 7.15904 11.6667 8.99999 11.6667C10.8409 11.6667 12.3333 10.1743 12.3333 8.33333C12.3333 6.49238 10.8409 5 8.99999 5ZM7.33332 8.33333C7.33332 7.41286 8.07952 6.66667 8.99999 6.66667C9.92046 6.66667 10.6667 7.41286 10.6667 8.33333C10.6667 9.25381 9.92046 10 8.99999 10C8.07952 10 7.33332 9.25381 7.33332 8.33333Z"
-                                                              fill="white"/>
-                                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                                              d="M8.99999 0C4.41537 0 0.666656 3.63879 0.666656 8.16667C0.666656 11.2223 2.4969 14.1658 4.30523 16.272C5.22355 17.3416 6.17106 18.2359 6.95183 18.8687C7.34114 19.1843 7.70004 19.4438 8.00197 19.6295C8.15197 19.7217 8.3015 19.8041 8.44282 19.8663C8.55738 19.9167 8.76561 20 8.99999 20C9.23437 20 9.4426 19.9167 9.55716 19.8663C9.69849 19.8041 9.84801 19.7217 9.99802 19.6295C10.2999 19.4438 10.6588 19.1843 11.0482 18.8687C11.8289 18.2359 12.7764 17.3416 13.6948 16.272C15.5031 14.1658 17.3333 11.2223 17.3333 8.16667C17.3333 3.63879 13.5846 0 8.99999 0ZM2.33332 8.16667C2.33332 4.59437 5.30034 1.66667 8.99999 1.66667C12.6996 1.66667 15.6667 4.59437 15.6667 8.16667C15.6667 10.611 14.1636 13.1675 12.4302 15.1863C11.5777 16.1792 10.7023 17.0037 9.9987 17.574C9.64583 17.86 9.34718 18.0731 9.12501 18.2097C9.07745 18.239 9.03582 18.2632 8.99999 18.283C8.96416 18.2632 8.92253 18.239 8.87497 18.2097C8.6528 18.0731 8.35415 17.86 8.00128 17.574C7.29767 17.0037 6.42226 16.1792 5.56975 15.1863C3.83641 13.1675 2.33332 10.611 2.33332 8.16667Z"
-                                                              fill="white"/>
-                                                    </svg>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="appointment-card">
+											<div class="appointment-title fz-16 fw-700 primary-color">
+												Bnails Amarillo #2
+											</div>
+											<div class="appointment-times hstack gap-15px justify-content-between">
+												<div class="appointment-times_item vstack">
+													<div class="appointment-times_day fz-12 dark-color_400">
+														12 April
+													</div>
+													<div class="appointment-times_hour fz-14 dark-color fw-700">
+														13:00 AM
+													</div>
+												</div>
+												<div class="appointment-times_item vstack align-items-end">
+													<div class="appointment-times_day fz-12 dark-color_400">
+														12 April
+													</div>
+													<div class="appointment-times_hour fz-14 dark-color fw-700">
+														13:30 AM
+													</div>
+												</div>
+											</div>
+											<div class="appointment-service hstack gap-15px justify-content-between">
+												<div class="appointment-service_list hstack gap-5px">
+													<div class="appointment-service_list__item hstack justify-content-center">
+														<img src="./assets/images/service/icon-1.png"
+														     class="img-fluid"
+														     alt="">
+													</div>
+													<div class="appointment-service_list__item hstack justify-content-center">
+														<img src="./assets/images/service/icon-1.png"
+														     class="img-fluid"
+														     alt="">
+													</div>
+													<div class="appointment-service_list__item hstack justify-content-center">
+														<img src="./assets/images/service/icon-1.png"
+														     class="img-fluid"
+														     alt="">
+													</div>
+													<div class="appointment-service_list__item hstack justify-content-center">
+														<img src="./assets/images/service/icon-1.png"
+														     class="img-fluid"
+														     alt="">
+													</div>
+												</div>
+												<div class="appointment-service_text fz-12 dark-color_600 text-nowrap text-end">
+													View Services Details
+												</div>
+											</div>
+											<div class="appointment-expand hstack gap-15px justify-content-between">
+												<div class="appointment-expand_price fz-18 fw-700 dark-color">
+													$250.00
+												</div>
+												<div class="appointment-expand_address hstack justify-content-center rounded-circle">
+													<svg width="18" height="20" viewBox="0 0 18 20" fill="none"
+													     xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd"
+														      d="M8.99999 5C7.15904 5 5.66666 6.49238 5.66666 8.33333C5.66666 10.1743 7.15904 11.6667 8.99999 11.6667C10.8409 11.6667 12.3333 10.1743 12.3333 8.33333C12.3333 6.49238 10.8409 5 8.99999 5ZM7.33332 8.33333C7.33332 7.41286 8.07952 6.66667 8.99999 6.66667C9.92046 6.66667 10.6667 7.41286 10.6667 8.33333C10.6667 9.25381 9.92046 10 8.99999 10C8.07952 10 7.33332 9.25381 7.33332 8.33333Z"
+														      fill="white"/>
+														<path fill-rule="evenodd" clip-rule="evenodd"
+														      d="M8.99999 0C4.41537 0 0.666656 3.63879 0.666656 8.16667C0.666656 11.2223 2.4969 14.1658 4.30523 16.272C5.22355 17.3416 6.17106 18.2359 6.95183 18.8687C7.34114 19.1843 7.70004 19.4438 8.00197 19.6295C8.15197 19.7217 8.3015 19.8041 8.44282 19.8663C8.55738 19.9167 8.76561 20 8.99999 20C9.23437 20 9.4426 19.9167 9.55716 19.8663C9.69849 19.8041 9.84801 19.7217 9.99802 19.6295C10.2999 19.4438 10.6588 19.1843 11.0482 18.8687C11.8289 18.2359 12.7764 17.3416 13.6948 16.272C15.5031 14.1658 17.3333 11.2223 17.3333 8.16667C17.3333 3.63879 13.5846 0 8.99999 0ZM2.33332 8.16667C2.33332 4.59437 5.30034 1.66667 8.99999 1.66667C12.6996 1.66667 15.6667 4.59437 15.6667 8.16667C15.6667 10.611 14.1636 13.1675 12.4302 15.1863C11.5777 16.1792 10.7023 17.0037 9.9987 17.574C9.64583 17.86 9.34718 18.0731 9.12501 18.2097C9.07745 18.239 9.03582 18.2632 8.99999 18.283C8.96416 18.2632 8.92253 18.239 8.87497 18.2097C8.6528 18.0731 8.35415 17.86 8.00128 17.574C7.29767 17.0037 6.42226 16.1792 5.56975 15.1863C3.83641 13.1675 2.33332 10.611 2.33332 8.16667Z"
+														      fill="white"/>
+													</svg>
 
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="appointment-card">
-                                            <div class="appointment-title fz-16 fw-700 primary-color">
-                                                Bnails Amarillo #3
-                                            </div>
-                                            <div class="appointment-times hstack gap-15px justify-content-between">
-                                                <div class="appointment-times_item vstack">
-                                                    <div class="appointment-times_day fz-12 dark-color_400">
-                                                        12 April
-                                                    </div>
-                                                    <div class="appointment-times_hour fz-14 dark-color fw-700">
-                                                        15:00 AM
-                                                    </div>
-                                                </div>
-                                                <div class="appointment-times_item vstack align-items-end">
-                                                    <div class="appointment-times_day fz-12 dark-color_400">
-                                                        12 April
-                                                    </div>
-                                                    <div class="appointment-times_hour fz-14 dark-color fw-700">
-                                                        15:30 AM
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="appointment-service hstack gap-15px justify-content-between">
-                                                <div class="appointment-service_list hstack gap-5px">
-                                                    <div class="appointment-service_list__item hstack justify-content-center">
-                                                        <img src="./assets/images/service/icon-1.png"
-                                                             class="img-fluid"
-                                                             alt="">
-                                                    </div>
-                                                    <div class="appointment-service_list__item hstack justify-content-center">
-                                                        <img src="./assets/images/service/icon-1.png"
-                                                             class="img-fluid"
-                                                             alt="">
-                                                    </div>
-                                                    <div class="appointment-service_list__item hstack justify-content-center">
-                                                        <img src="./assets/images/service/icon-1.png"
-                                                             class="img-fluid"
-                                                             alt="">
-                                                    </div>
-                                                    <div class="appointment-service_list__item hstack justify-content-center">
-                                                        <img src="./assets/images/service/icon-1.png"
-                                                             class="img-fluid"
-                                                             alt="">
-                                                    </div>
-                                                </div>
-                                                <div class="appointment-service_text fz-12 dark-color_600 text-nowrap text-end">
-                                                    View Services Details
-                                                </div>
-                                            </div>
-                                            <div class="appointment-expand hstack gap-15px justify-content-between">
-                                                <div class="appointment-expand_price fz-18 fw-700 dark-color">
-                                                    $250.00
-                                                </div>
-                                                <div class="appointment-expand_address hstack justify-content-center rounded-circle">
-                                                    <svg width="18" height="20" viewBox="0 0 18 20" fill="none"
-                                                         xmlns="http://www.w3.org/2000/svg">
-                                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                                              d="M8.99999 5C7.15904 5 5.66666 6.49238 5.66666 8.33333C5.66666 10.1743 7.15904 11.6667 8.99999 11.6667C10.8409 11.6667 12.3333 10.1743 12.3333 8.33333C12.3333 6.49238 10.8409 5 8.99999 5ZM7.33332 8.33333C7.33332 7.41286 8.07952 6.66667 8.99999 6.66667C9.92046 6.66667 10.6667 7.41286 10.6667 8.33333C10.6667 9.25381 9.92046 10 8.99999 10C8.07952 10 7.33332 9.25381 7.33332 8.33333Z"
-                                                              fill="white"/>
-                                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                                              d="M8.99999 0C4.41537 0 0.666656 3.63879 0.666656 8.16667C0.666656 11.2223 2.4969 14.1658 4.30523 16.272C5.22355 17.3416 6.17106 18.2359 6.95183 18.8687C7.34114 19.1843 7.70004 19.4438 8.00197 19.6295C8.15197 19.7217 8.3015 19.8041 8.44282 19.8663C8.55738 19.9167 8.76561 20 8.99999 20C9.23437 20 9.4426 19.9167 9.55716 19.8663C9.69849 19.8041 9.84801 19.7217 9.99802 19.6295C10.2999 19.4438 10.6588 19.1843 11.0482 18.8687C11.8289 18.2359 12.7764 17.3416 13.6948 16.272C15.5031 14.1658 17.3333 11.2223 17.3333 8.16667C17.3333 3.63879 13.5846 0 8.99999 0ZM2.33332 8.16667C2.33332 4.59437 5.30034 1.66667 8.99999 1.66667C12.6996 1.66667 15.6667 4.59437 15.6667 8.16667C15.6667 10.611 14.1636 13.1675 12.4302 15.1863C11.5777 16.1792 10.7023 17.0037 9.9987 17.574C9.64583 17.86 9.34718 18.0731 9.12501 18.2097C9.07745 18.239 9.03582 18.2632 8.99999 18.283C8.96416 18.2632 8.92253 18.239 8.87497 18.2097C8.6528 18.0731 8.35415 17.86 8.00128 17.574C7.29767 17.0037 6.42226 16.1792 5.56975 15.1863C3.83641 13.1675 2.33332 10.611 2.33332 8.16667Z"
-                                                              fill="white"/>
-                                                    </svg>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="appointment-card">
+											<div class="appointment-title fz-16 fw-700 primary-color">
+												Bnails Amarillo #3
+											</div>
+											<div class="appointment-times hstack gap-15px justify-content-between">
+												<div class="appointment-times_item vstack">
+													<div class="appointment-times_day fz-12 dark-color_400">
+														12 April
+													</div>
+													<div class="appointment-times_hour fz-14 dark-color fw-700">
+														15:00 AM
+													</div>
+												</div>
+												<div class="appointment-times_item vstack align-items-end">
+													<div class="appointment-times_day fz-12 dark-color_400">
+														12 April
+													</div>
+													<div class="appointment-times_hour fz-14 dark-color fw-700">
+														15:30 AM
+													</div>
+												</div>
+											</div>
+											<div class="appointment-service hstack gap-15px justify-content-between">
+												<div class="appointment-service_list hstack gap-5px">
+													<div class="appointment-service_list__item hstack justify-content-center">
+														<img src="./assets/images/service/icon-1.png"
+														     class="img-fluid"
+														     alt="">
+													</div>
+													<div class="appointment-service_list__item hstack justify-content-center">
+														<img src="./assets/images/service/icon-1.png"
+														     class="img-fluid"
+														     alt="">
+													</div>
+													<div class="appointment-service_list__item hstack justify-content-center">
+														<img src="./assets/images/service/icon-1.png"
+														     class="img-fluid"
+														     alt="">
+													</div>
+													<div class="appointment-service_list__item hstack justify-content-center">
+														<img src="./assets/images/service/icon-1.png"
+														     class="img-fluid"
+														     alt="">
+													</div>
+												</div>
+												<div class="appointment-service_text fz-12 dark-color_600 text-nowrap text-end">
+													View Services Details
+												</div>
+											</div>
+											<div class="appointment-expand hstack gap-15px justify-content-between">
+												<div class="appointment-expand_price fz-18 fw-700 dark-color">
+													$250.00
+												</div>
+												<div class="appointment-expand_address hstack justify-content-center rounded-circle">
+													<svg width="18" height="20" viewBox="0 0 18 20" fill="none"
+													     xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd"
+														      d="M8.99999 5C7.15904 5 5.66666 6.49238 5.66666 8.33333C5.66666 10.1743 7.15904 11.6667 8.99999 11.6667C10.8409 11.6667 12.3333 10.1743 12.3333 8.33333C12.3333 6.49238 10.8409 5 8.99999 5ZM7.33332 8.33333C7.33332 7.41286 8.07952 6.66667 8.99999 6.66667C9.92046 6.66667 10.6667 7.41286 10.6667 8.33333C10.6667 9.25381 9.92046 10 8.99999 10C8.07952 10 7.33332 9.25381 7.33332 8.33333Z"
+														      fill="white"/>
+														<path fill-rule="evenodd" clip-rule="evenodd"
+														      d="M8.99999 0C4.41537 0 0.666656 3.63879 0.666656 8.16667C0.666656 11.2223 2.4969 14.1658 4.30523 16.272C5.22355 17.3416 6.17106 18.2359 6.95183 18.8687C7.34114 19.1843 7.70004 19.4438 8.00197 19.6295C8.15197 19.7217 8.3015 19.8041 8.44282 19.8663C8.55738 19.9167 8.76561 20 8.99999 20C9.23437 20 9.4426 19.9167 9.55716 19.8663C9.69849 19.8041 9.84801 19.7217 9.99802 19.6295C10.2999 19.4438 10.6588 19.1843 11.0482 18.8687C11.8289 18.2359 12.7764 17.3416 13.6948 16.272C15.5031 14.1658 17.3333 11.2223 17.3333 8.16667C17.3333 3.63879 13.5846 0 8.99999 0ZM2.33332 8.16667C2.33332 4.59437 5.30034 1.66667 8.99999 1.66667C12.6996 1.66667 15.6667 4.59437 15.6667 8.16667C15.6667 10.611 14.1636 13.1675 12.4302 15.1863C11.5777 16.1792 10.7023 17.0037 9.9987 17.574C9.64583 17.86 9.34718 18.0731 9.12501 18.2097C9.07745 18.239 9.03582 18.2632 8.99999 18.283C8.96416 18.2632 8.92253 18.239 8.87497 18.2097C8.6528 18.0731 8.35415 17.86 8.00128 17.574C7.29767 17.0037 6.42226 16.1792 5.56975 15.1863C3.83641 13.1675 2.33332 10.611 2.33332 8.16667Z"
+														      fill="white"/>
+													</svg>
 
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="appointment-card">
-                                            <div class="appointment-title fz-16 fw-700 primary-color">
-                                                Bnails Amarillo #1
-                                            </div>
-                                            <div class="appointment-times hstack gap-15px justify-content-between">
-                                                <div class="appointment-times_item vstack">
-                                                    <div class="appointment-times_day fz-12 dark-color_400">
-                                                        12 April
-                                                    </div>
-                                                    <div class="appointment-times_hour fz-14 dark-color fw-700">
-                                                        09:00 AM
-                                                    </div>
-                                                </div>
-                                                <div class="appointment-times_item vstack align-items-end">
-                                                    <div class="appointment-times_day fz-12 dark-color_400">
-                                                        12 April
-                                                    </div>
-                                                    <div class="appointment-times_hour fz-14 dark-color fw-700">
-                                                        09:30 AM
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="appointment-service hstack gap-15px justify-content-between">
-                                                <div class="appointment-service_list hstack gap-5px">
-                                                    <div class="appointment-service_list__item hstack justify-content-center">
-                                                        <img src="./assets/images/service/icon-1.png"
-                                                             class="img-fluid"
-                                                             alt="">
-                                                    </div>
-                                                    <div class="appointment-service_list__item hstack justify-content-center">
-                                                        <img src="./assets/images/service/icon-1.png"
-                                                             class="img-fluid"
-                                                             alt="">
-                                                    </div>
-                                                    <div class="appointment-service_list__item hstack justify-content-center">
-                                                        <img src="./assets/images/service/icon-1.png"
-                                                             class="img-fluid"
-                                                             alt="">
-                                                    </div>
-                                                    <div class="appointment-service_list__item hstack justify-content-center">
-                                                        <img src="./assets/images/service/icon-1.png"
-                                                             class="img-fluid"
-                                                             alt="">
-                                                    </div>
-                                                </div>
-                                                <div class="appointment-service_text fz-12 dark-color_600 text-nowrap text-end">
-                                                    View Services Details
-                                                </div>
-                                            </div>
-                                            <div class="appointment-expand hstack gap-15px justify-content-between">
-                                                <div class="appointment-expand_price fz-18 fw-700 dark-color">
-                                                    $250.00
-                                                </div>
-                                                <div class="appointment-expand_address hstack justify-content-center rounded-circle">
-                                                    <svg width="18" height="20" viewBox="0 0 18 20" fill="none"
-                                                         xmlns="http://www.w3.org/2000/svg">
-                                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                                              d="M8.99999 5C7.15904 5 5.66666 6.49238 5.66666 8.33333C5.66666 10.1743 7.15904 11.6667 8.99999 11.6667C10.8409 11.6667 12.3333 10.1743 12.3333 8.33333C12.3333 6.49238 10.8409 5 8.99999 5ZM7.33332 8.33333C7.33332 7.41286 8.07952 6.66667 8.99999 6.66667C9.92046 6.66667 10.6667 7.41286 10.6667 8.33333C10.6667 9.25381 9.92046 10 8.99999 10C8.07952 10 7.33332 9.25381 7.33332 8.33333Z"
-                                                              fill="white"/>
-                                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                                              d="M8.99999 0C4.41537 0 0.666656 3.63879 0.666656 8.16667C0.666656 11.2223 2.4969 14.1658 4.30523 16.272C5.22355 17.3416 6.17106 18.2359 6.95183 18.8687C7.34114 19.1843 7.70004 19.4438 8.00197 19.6295C8.15197 19.7217 8.3015 19.8041 8.44282 19.8663C8.55738 19.9167 8.76561 20 8.99999 20C9.23437 20 9.4426 19.9167 9.55716 19.8663C9.69849 19.8041 9.84801 19.7217 9.99802 19.6295C10.2999 19.4438 10.6588 19.1843 11.0482 18.8687C11.8289 18.2359 12.7764 17.3416 13.6948 16.272C15.5031 14.1658 17.3333 11.2223 17.3333 8.16667C17.3333 3.63879 13.5846 0 8.99999 0ZM2.33332 8.16667C2.33332 4.59437 5.30034 1.66667 8.99999 1.66667C12.6996 1.66667 15.6667 4.59437 15.6667 8.16667C15.6667 10.611 14.1636 13.1675 12.4302 15.1863C11.5777 16.1792 10.7023 17.0037 9.9987 17.574C9.64583 17.86 9.34718 18.0731 9.12501 18.2097C9.07745 18.239 9.03582 18.2632 8.99999 18.283C8.96416 18.2632 8.92253 18.239 8.87497 18.2097C8.6528 18.0731 8.35415 17.86 8.00128 17.574C7.29767 17.0037 6.42226 16.1792 5.56975 15.1863C3.83641 13.1675 2.33332 10.611 2.33332 8.16667Z"
-                                                              fill="white"/>
-                                                    </svg>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="appointment-card">
+											<div class="appointment-title fz-16 fw-700 primary-color">
+												Bnails Amarillo #1
+											</div>
+											<div class="appointment-times hstack gap-15px justify-content-between">
+												<div class="appointment-times_item vstack">
+													<div class="appointment-times_day fz-12 dark-color_400">
+														12 April
+													</div>
+													<div class="appointment-times_hour fz-14 dark-color fw-700">
+														09:00 AM
+													</div>
+												</div>
+												<div class="appointment-times_item vstack align-items-end">
+													<div class="appointment-times_day fz-12 dark-color_400">
+														12 April
+													</div>
+													<div class="appointment-times_hour fz-14 dark-color fw-700">
+														09:30 AM
+													</div>
+												</div>
+											</div>
+											<div class="appointment-service hstack gap-15px justify-content-between">
+												<div class="appointment-service_list hstack gap-5px">
+													<div class="appointment-service_list__item hstack justify-content-center">
+														<img src="./assets/images/service/icon-1.png"
+														     class="img-fluid"
+														     alt="">
+													</div>
+													<div class="appointment-service_list__item hstack justify-content-center">
+														<img src="./assets/images/service/icon-1.png"
+														     class="img-fluid"
+														     alt="">
+													</div>
+													<div class="appointment-service_list__item hstack justify-content-center">
+														<img src="./assets/images/service/icon-1.png"
+														     class="img-fluid"
+														     alt="">
+													</div>
+													<div class="appointment-service_list__item hstack justify-content-center">
+														<img src="./assets/images/service/icon-1.png"
+														     class="img-fluid"
+														     alt="">
+													</div>
+												</div>
+												<div class="appointment-service_text fz-12 dark-color_600 text-nowrap text-end">
+													View Services Details
+												</div>
+											</div>
+											<div class="appointment-expand hstack gap-15px justify-content-between">
+												<div class="appointment-expand_price fz-18 fw-700 dark-color">
+													$250.00
+												</div>
+												<div class="appointment-expand_address hstack justify-content-center rounded-circle">
+													<svg width="18" height="20" viewBox="0 0 18 20" fill="none"
+													     xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd"
+														      d="M8.99999 5C7.15904 5 5.66666 6.49238 5.66666 8.33333C5.66666 10.1743 7.15904 11.6667 8.99999 11.6667C10.8409 11.6667 12.3333 10.1743 12.3333 8.33333C12.3333 6.49238 10.8409 5 8.99999 5ZM7.33332 8.33333C7.33332 7.41286 8.07952 6.66667 8.99999 6.66667C9.92046 6.66667 10.6667 7.41286 10.6667 8.33333C10.6667 9.25381 9.92046 10 8.99999 10C8.07952 10 7.33332 9.25381 7.33332 8.33333Z"
+														      fill="white"/>
+														<path fill-rule="evenodd" clip-rule="evenodd"
+														      d="M8.99999 0C4.41537 0 0.666656 3.63879 0.666656 8.16667C0.666656 11.2223 2.4969 14.1658 4.30523 16.272C5.22355 17.3416 6.17106 18.2359 6.95183 18.8687C7.34114 19.1843 7.70004 19.4438 8.00197 19.6295C8.15197 19.7217 8.3015 19.8041 8.44282 19.8663C8.55738 19.9167 8.76561 20 8.99999 20C9.23437 20 9.4426 19.9167 9.55716 19.8663C9.69849 19.8041 9.84801 19.7217 9.99802 19.6295C10.2999 19.4438 10.6588 19.1843 11.0482 18.8687C11.8289 18.2359 12.7764 17.3416 13.6948 16.272C15.5031 14.1658 17.3333 11.2223 17.3333 8.16667C17.3333 3.63879 13.5846 0 8.99999 0ZM2.33332 8.16667C2.33332 4.59437 5.30034 1.66667 8.99999 1.66667C12.6996 1.66667 15.6667 4.59437 15.6667 8.16667C15.6667 10.611 14.1636 13.1675 12.4302 15.1863C11.5777 16.1792 10.7023 17.0037 9.9987 17.574C9.64583 17.86 9.34718 18.0731 9.12501 18.2097C9.07745 18.239 9.03582 18.2632 8.99999 18.283C8.96416 18.2632 8.92253 18.239 8.87497 18.2097C8.6528 18.0731 8.35415 17.86 8.00128 17.574C7.29767 17.0037 6.42226 16.1792 5.56975 15.1863C3.83641 13.1675 2.33332 10.611 2.33332 8.16667Z"
+														      fill="white"/>
+													</svg>
 
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="appointment-card">
-                                            <div class="appointment-title fz-16 fw-700 primary-color">
-                                                Bnails Amarillo #2
-                                            </div>
-                                            <div class="appointment-times hstack gap-15px justify-content-between">
-                                                <div class="appointment-times_item vstack">
-                                                    <div class="appointment-times_day fz-12 dark-color_400">
-                                                        12 April
-                                                    </div>
-                                                    <div class="appointment-times_hour fz-14 dark-color fw-700">
-                                                        13:00 AM
-                                                    </div>
-                                                </div>
-                                                <div class="appointment-times_item vstack align-items-end">
-                                                    <div class="appointment-times_day fz-12 dark-color_400">
-                                                        12 April
-                                                    </div>
-                                                    <div class="appointment-times_hour fz-14 dark-color fw-700">
-                                                        13:30 AM
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="appointment-service hstack gap-15px justify-content-between">
-                                                <div class="appointment-service_list hstack gap-5px">
-                                                    <div class="appointment-service_list__item hstack justify-content-center">
-                                                        <img src="./assets/images/service/icon-1.png"
-                                                             class="img-fluid"
-                                                             alt="">
-                                                    </div>
-                                                    <div class="appointment-service_list__item hstack justify-content-center">
-                                                        <img src="./assets/images/service/icon-1.png"
-                                                             class="img-fluid"
-                                                             alt="">
-                                                    </div>
-                                                    <div class="appointment-service_list__item hstack justify-content-center">
-                                                        <img src="./assets/images/service/icon-1.png"
-                                                             class="img-fluid"
-                                                             alt="">
-                                                    </div>
-                                                    <div class="appointment-service_list__item hstack justify-content-center">
-                                                        <img src="./assets/images/service/icon-1.png"
-                                                             class="img-fluid"
-                                                             alt="">
-                                                    </div>
-                                                </div>
-                                                <div class="appointment-service_text fz-12 dark-color_600 text-nowrap text-end">
-                                                    View Services Details
-                                                </div>
-                                            </div>
-                                            <div class="appointment-expand hstack gap-15px justify-content-between">
-                                                <div class="appointment-expand_price fz-18 fw-700 dark-color">
-                                                    $250.00
-                                                </div>
-                                                <div class="appointment-expand_address hstack justify-content-center rounded-circle">
-                                                    <svg width="18" height="20" viewBox="0 0 18 20" fill="none"
-                                                         xmlns="http://www.w3.org/2000/svg">
-                                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                                              d="M8.99999 5C7.15904 5 5.66666 6.49238 5.66666 8.33333C5.66666 10.1743 7.15904 11.6667 8.99999 11.6667C10.8409 11.6667 12.3333 10.1743 12.3333 8.33333C12.3333 6.49238 10.8409 5 8.99999 5ZM7.33332 8.33333C7.33332 7.41286 8.07952 6.66667 8.99999 6.66667C9.92046 6.66667 10.6667 7.41286 10.6667 8.33333C10.6667 9.25381 9.92046 10 8.99999 10C8.07952 10 7.33332 9.25381 7.33332 8.33333Z"
-                                                              fill="white"/>
-                                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                                              d="M8.99999 0C4.41537 0 0.666656 3.63879 0.666656 8.16667C0.666656 11.2223 2.4969 14.1658 4.30523 16.272C5.22355 17.3416 6.17106 18.2359 6.95183 18.8687C7.34114 19.1843 7.70004 19.4438 8.00197 19.6295C8.15197 19.7217 8.3015 19.8041 8.44282 19.8663C8.55738 19.9167 8.76561 20 8.99999 20C9.23437 20 9.4426 19.9167 9.55716 19.8663C9.69849 19.8041 9.84801 19.7217 9.99802 19.6295C10.2999 19.4438 10.6588 19.1843 11.0482 18.8687C11.8289 18.2359 12.7764 17.3416 13.6948 16.272C15.5031 14.1658 17.3333 11.2223 17.3333 8.16667C17.3333 3.63879 13.5846 0 8.99999 0ZM2.33332 8.16667C2.33332 4.59437 5.30034 1.66667 8.99999 1.66667C12.6996 1.66667 15.6667 4.59437 15.6667 8.16667C15.6667 10.611 14.1636 13.1675 12.4302 15.1863C11.5777 16.1792 10.7023 17.0037 9.9987 17.574C9.64583 17.86 9.34718 18.0731 9.12501 18.2097C9.07745 18.239 9.03582 18.2632 8.99999 18.283C8.96416 18.2632 8.92253 18.239 8.87497 18.2097C8.6528 18.0731 8.35415 17.86 8.00128 17.574C7.29767 17.0037 6.42226 16.1792 5.56975 15.1863C3.83641 13.1675 2.33332 10.611 2.33332 8.16667Z"
-                                                              fill="white"/>
-                                                    </svg>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="appointment-card">
+											<div class="appointment-title fz-16 fw-700 primary-color">
+												Bnails Amarillo #2
+											</div>
+											<div class="appointment-times hstack gap-15px justify-content-between">
+												<div class="appointment-times_item vstack">
+													<div class="appointment-times_day fz-12 dark-color_400">
+														12 April
+													</div>
+													<div class="appointment-times_hour fz-14 dark-color fw-700">
+														13:00 AM
+													</div>
+												</div>
+												<div class="appointment-times_item vstack align-items-end">
+													<div class="appointment-times_day fz-12 dark-color_400">
+														12 April
+													</div>
+													<div class="appointment-times_hour fz-14 dark-color fw-700">
+														13:30 AM
+													</div>
+												</div>
+											</div>
+											<div class="appointment-service hstack gap-15px justify-content-between">
+												<div class="appointment-service_list hstack gap-5px">
+													<div class="appointment-service_list__item hstack justify-content-center">
+														<img src="./assets/images/service/icon-1.png"
+														     class="img-fluid"
+														     alt="">
+													</div>
+													<div class="appointment-service_list__item hstack justify-content-center">
+														<img src="./assets/images/service/icon-1.png"
+														     class="img-fluid"
+														     alt="">
+													</div>
+													<div class="appointment-service_list__item hstack justify-content-center">
+														<img src="./assets/images/service/icon-1.png"
+														     class="img-fluid"
+														     alt="">
+													</div>
+													<div class="appointment-service_list__item hstack justify-content-center">
+														<img src="./assets/images/service/icon-1.png"
+														     class="img-fluid"
+														     alt="">
+													</div>
+												</div>
+												<div class="appointment-service_text fz-12 dark-color_600 text-nowrap text-end">
+													View Services Details
+												</div>
+											</div>
+											<div class="appointment-expand hstack gap-15px justify-content-between">
+												<div class="appointment-expand_price fz-18 fw-700 dark-color">
+													$250.00
+												</div>
+												<div class="appointment-expand_address hstack justify-content-center rounded-circle">
+													<svg width="18" height="20" viewBox="0 0 18 20" fill="none"
+													     xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd"
+														      d="M8.99999 5C7.15904 5 5.66666 6.49238 5.66666 8.33333C5.66666 10.1743 7.15904 11.6667 8.99999 11.6667C10.8409 11.6667 12.3333 10.1743 12.3333 8.33333C12.3333 6.49238 10.8409 5 8.99999 5ZM7.33332 8.33333C7.33332 7.41286 8.07952 6.66667 8.99999 6.66667C9.92046 6.66667 10.6667 7.41286 10.6667 8.33333C10.6667 9.25381 9.92046 10 8.99999 10C8.07952 10 7.33332 9.25381 7.33332 8.33333Z"
+														      fill="white"/>
+														<path fill-rule="evenodd" clip-rule="evenodd"
+														      d="M8.99999 0C4.41537 0 0.666656 3.63879 0.666656 8.16667C0.666656 11.2223 2.4969 14.1658 4.30523 16.272C5.22355 17.3416 6.17106 18.2359 6.95183 18.8687C7.34114 19.1843 7.70004 19.4438 8.00197 19.6295C8.15197 19.7217 8.3015 19.8041 8.44282 19.8663C8.55738 19.9167 8.76561 20 8.99999 20C9.23437 20 9.4426 19.9167 9.55716 19.8663C9.69849 19.8041 9.84801 19.7217 9.99802 19.6295C10.2999 19.4438 10.6588 19.1843 11.0482 18.8687C11.8289 18.2359 12.7764 17.3416 13.6948 16.272C15.5031 14.1658 17.3333 11.2223 17.3333 8.16667C17.3333 3.63879 13.5846 0 8.99999 0ZM2.33332 8.16667C2.33332 4.59437 5.30034 1.66667 8.99999 1.66667C12.6996 1.66667 15.6667 4.59437 15.6667 8.16667C15.6667 10.611 14.1636 13.1675 12.4302 15.1863C11.5777 16.1792 10.7023 17.0037 9.9987 17.574C9.64583 17.86 9.34718 18.0731 9.12501 18.2097C9.07745 18.239 9.03582 18.2632 8.99999 18.283C8.96416 18.2632 8.92253 18.239 8.87497 18.2097C8.6528 18.0731 8.35415 17.86 8.00128 17.574C7.29767 17.0037 6.42226 16.1792 5.56975 15.1863C3.83641 13.1675 2.33332 10.611 2.33332 8.16667Z"
+														      fill="white"/>
+													</svg>
 
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="appointment-card">
-                                            <div class="appointment-title fz-16 fw-700 primary-color">
-                                                Bnails Amarillo #3
-                                            </div>
-                                            <div class="appointment-times hstack gap-15px justify-content-between">
-                                                <div class="appointment-times_item vstack">
-                                                    <div class="appointment-times_day fz-12 dark-color_400">
-                                                        12 April
-                                                    </div>
-                                                    <div class="appointment-times_hour fz-14 dark-color fw-700">
-                                                        15:00 AM
-                                                    </div>
-                                                </div>
-                                                <div class="appointment-times_item vstack align-items-end">
-                                                    <div class="appointment-times_day fz-12 dark-color_400">
-                                                        12 April
-                                                    </div>
-                                                    <div class="appointment-times_hour fz-14 dark-color fw-700">
-                                                        15:30 AM
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="appointment-service hstack gap-15px justify-content-between">
-                                                <div class="appointment-service_list hstack gap-5px">
-                                                    <div class="appointment-service_list__item hstack justify-content-center">
-                                                        <img src="./assets/images/service/icon-1.png"
-                                                             class="img-fluid"
-                                                             alt="">
-                                                    </div>
-                                                    <div class="appointment-service_list__item hstack justify-content-center">
-                                                        <img src="./assets/images/service/icon-1.png"
-                                                             class="img-fluid"
-                                                             alt="">
-                                                    </div>
-                                                    <div class="appointment-service_list__item hstack justify-content-center">
-                                                        <img src="./assets/images/service/icon-1.png"
-                                                             class="img-fluid"
-                                                             alt="">
-                                                    </div>
-                                                    <div class="appointment-service_list__item hstack justify-content-center">
-                                                        <img src="./assets/images/service/icon-1.png"
-                                                             class="img-fluid"
-                                                             alt="">
-                                                    </div>
-                                                </div>
-                                                <div class="appointment-service_text fz-12 dark-color_600 text-nowrap text-end">
-                                                    View Services Details
-                                                </div>
-                                            </div>
-                                            <div class="appointment-expand hstack gap-15px justify-content-between">
-                                                <div class="appointment-expand_price fz-18 fw-700 dark-color">
-                                                    $250.00
-                                                </div>
-                                                <div class="appointment-expand_address hstack justify-content-center rounded-circle">
-                                                    <svg width="18" height="20" viewBox="0 0 18 20" fill="none"
-                                                         xmlns="http://www.w3.org/2000/svg">
-                                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                                              d="M8.99999 5C7.15904 5 5.66666 6.49238 5.66666 8.33333C5.66666 10.1743 7.15904 11.6667 8.99999 11.6667C10.8409 11.6667 12.3333 10.1743 12.3333 8.33333C12.3333 6.49238 10.8409 5 8.99999 5ZM7.33332 8.33333C7.33332 7.41286 8.07952 6.66667 8.99999 6.66667C9.92046 6.66667 10.6667 7.41286 10.6667 8.33333C10.6667 9.25381 9.92046 10 8.99999 10C8.07952 10 7.33332 9.25381 7.33332 8.33333Z"
-                                                              fill="white"/>
-                                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                                              d="M8.99999 0C4.41537 0 0.666656 3.63879 0.666656 8.16667C0.666656 11.2223 2.4969 14.1658 4.30523 16.272C5.22355 17.3416 6.17106 18.2359 6.95183 18.8687C7.34114 19.1843 7.70004 19.4438 8.00197 19.6295C8.15197 19.7217 8.3015 19.8041 8.44282 19.8663C8.55738 19.9167 8.76561 20 8.99999 20C9.23437 20 9.4426 19.9167 9.55716 19.8663C9.69849 19.8041 9.84801 19.7217 9.99802 19.6295C10.2999 19.4438 10.6588 19.1843 11.0482 18.8687C11.8289 18.2359 12.7764 17.3416 13.6948 16.272C15.5031 14.1658 17.3333 11.2223 17.3333 8.16667C17.3333 3.63879 13.5846 0 8.99999 0ZM2.33332 8.16667C2.33332 4.59437 5.30034 1.66667 8.99999 1.66667C12.6996 1.66667 15.6667 4.59437 15.6667 8.16667C15.6667 10.611 14.1636 13.1675 12.4302 15.1863C11.5777 16.1792 10.7023 17.0037 9.9987 17.574C9.64583 17.86 9.34718 18.0731 9.12501 18.2097C9.07745 18.239 9.03582 18.2632 8.99999 18.283C8.96416 18.2632 8.92253 18.239 8.87497 18.2097C8.6528 18.0731 8.35415 17.86 8.00128 17.574C7.29767 17.0037 6.42226 16.1792 5.56975 15.1863C3.83641 13.1675 2.33332 10.611 2.33332 8.16667Z"
-                                                              fill="white"/>
-                                                    </svg>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="appointment-card">
+											<div class="appointment-title fz-16 fw-700 primary-color">
+												Bnails Amarillo #3
+											</div>
+											<div class="appointment-times hstack gap-15px justify-content-between">
+												<div class="appointment-times_item vstack">
+													<div class="appointment-times_day fz-12 dark-color_400">
+														12 April
+													</div>
+													<div class="appointment-times_hour fz-14 dark-color fw-700">
+														15:00 AM
+													</div>
+												</div>
+												<div class="appointment-times_item vstack align-items-end">
+													<div class="appointment-times_day fz-12 dark-color_400">
+														12 April
+													</div>
+													<div class="appointment-times_hour fz-14 dark-color fw-700">
+														15:30 AM
+													</div>
+												</div>
+											</div>
+											<div class="appointment-service hstack gap-15px justify-content-between">
+												<div class="appointment-service_list hstack gap-5px">
+													<div class="appointment-service_list__item hstack justify-content-center">
+														<img src="./assets/images/service/icon-1.png"
+														     class="img-fluid"
+														     alt="">
+													</div>
+													<div class="appointment-service_list__item hstack justify-content-center">
+														<img src="./assets/images/service/icon-1.png"
+														     class="img-fluid"
+														     alt="">
+													</div>
+													<div class="appointment-service_list__item hstack justify-content-center">
+														<img src="./assets/images/service/icon-1.png"
+														     class="img-fluid"
+														     alt="">
+													</div>
+													<div class="appointment-service_list__item hstack justify-content-center">
+														<img src="./assets/images/service/icon-1.png"
+														     class="img-fluid"
+														     alt="">
+													</div>
+												</div>
+												<div class="appointment-service_text fz-12 dark-color_600 text-nowrap text-end">
+													View Services Details
+												</div>
+											</div>
+											<div class="appointment-expand hstack gap-15px justify-content-between">
+												<div class="appointment-expand_price fz-18 fw-700 dark-color">
+													$250.00
+												</div>
+												<div class="appointment-expand_address hstack justify-content-center rounded-circle">
+													<svg width="18" height="20" viewBox="0 0 18 20" fill="none"
+													     xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd"
+														      d="M8.99999 5C7.15904 5 5.66666 6.49238 5.66666 8.33333C5.66666 10.1743 7.15904 11.6667 8.99999 11.6667C10.8409 11.6667 12.3333 10.1743 12.3333 8.33333C12.3333 6.49238 10.8409 5 8.99999 5ZM7.33332 8.33333C7.33332 7.41286 8.07952 6.66667 8.99999 6.66667C9.92046 6.66667 10.6667 7.41286 10.6667 8.33333C10.6667 9.25381 9.92046 10 8.99999 10C8.07952 10 7.33332 9.25381 7.33332 8.33333Z"
+														      fill="white"/>
+														<path fill-rule="evenodd" clip-rule="evenodd"
+														      d="M8.99999 0C4.41537 0 0.666656 3.63879 0.666656 8.16667C0.666656 11.2223 2.4969 14.1658 4.30523 16.272C5.22355 17.3416 6.17106 18.2359 6.95183 18.8687C7.34114 19.1843 7.70004 19.4438 8.00197 19.6295C8.15197 19.7217 8.3015 19.8041 8.44282 19.8663C8.55738 19.9167 8.76561 20 8.99999 20C9.23437 20 9.4426 19.9167 9.55716 19.8663C9.69849 19.8041 9.84801 19.7217 9.99802 19.6295C10.2999 19.4438 10.6588 19.1843 11.0482 18.8687C11.8289 18.2359 12.7764 17.3416 13.6948 16.272C15.5031 14.1658 17.3333 11.2223 17.3333 8.16667C17.3333 3.63879 13.5846 0 8.99999 0ZM2.33332 8.16667C2.33332 4.59437 5.30034 1.66667 8.99999 1.66667C12.6996 1.66667 15.6667 4.59437 15.6667 8.16667C15.6667 10.611 14.1636 13.1675 12.4302 15.1863C11.5777 16.1792 10.7023 17.0037 9.9987 17.574C9.64583 17.86 9.34718 18.0731 9.12501 18.2097C9.07745 18.239 9.03582 18.2632 8.99999 18.283C8.96416 18.2632 8.92253 18.239 8.87497 18.2097C8.6528 18.0731 8.35415 17.86 8.00128 17.574C7.29767 17.0037 6.42226 16.1792 5.56975 15.1863C3.83641 13.1675 2.33332 10.611 2.33332 8.16667Z"
+														      fill="white"/>
+													</svg>
 
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="section-spin">
-                    <div class="container">
-                        <div class="section-heading">
-                            <div class="heading-title">
-                                Lucky Spin!
-                            </div>
-                            <a href="" class="heading-link">
-                                Expand
-                            </a>
-                        </div>
-                        <div class="spin-box">
-                            <div class="spin-circle ratio ratio-1x1" id="spinWrapper">
-                                <canvas id="spinCanvas" width='375' height='375'>
-                                    Canvas not supported, use another browser.
-                                </canvas>
-                                <button type="button" id="spinButton" class="spin-circle_button">
-                                    Spin!
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="section-services section-gap">
-                    <div class="container">
-                        <div class="section-heading">
-                            <div class="heading-title">
-                                Bnails Service
-                            </div>
-                            <a href="" class="heading-link">
-                                See all
-                            </a>
-                        </div>
-                        <div class="row row-cols-2 g-3">
-                            <div class="col">
-                                <div class="service-box h-100 position-relative overflow-hidden transition-default hstack">
-                                    <div class="service-image flex-shrink-0 hstack justify-content-center">
-                                        <img src="./assets/images/service/icon-1.png" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="service-title transition-default fz-15 fw-700 dark-color">
-                                        Polygel Nails
-                                    </div>
-                                    <a href="" class="stretched-link"></a>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="service-box h-100 position-relative overflow-hidden transition-default hstack">
-                                    <div class="service-image flex-shrink-0 hstack justify-content-center">
-                                        <img src="./assets/images/service/icon-1.png" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="service-title transition-default fz-15 fw-700 dark-color">
-                                        Acrylic Nails
-                                    </div>
-                                    <a href="" class="stretched-link"></a>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="service-box h-100 position-relative overflow-hidden transition-default hstack">
-                                    <div class="service-image flex-shrink-0 hstack justify-content-center">
-                                        <img src="./assets/images/service/icon-1.png" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="service-title transition-default fz-15 fw-700 dark-color">
-                                        Dip Nails
-                                    </div>
-                                    <a href="" class="stretched-link"></a>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="service-box h-100 position-relative overflow-hidden transition-default hstack">
-                                    <div class="service-image flex-shrink-0 hstack justify-content-center">
-                                        <img src="./assets/images/service/icon-1.png" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="service-title transition-default fz-15 fw-700 dark-color">
-                                        Dip Nails
-                                    </div>
-                                    <a href="" class="stretched-link"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-    <footer id="footer" class="footer position-fixed bottom-0 start-0 end-0 zi-10 w-100">
-        <div class="footer-toolbar background-cover position-relative zi-1">
-            <div class="container">
-                <div class="hstack gap-15px justify-content-between">
-                    <div class="toolbar-item">
-                        <a href="#modalSpin" data-bs-toggle="modal"
-                           class="toolbar-item_link fw-500 fz-15 dark-color effect-path align-items-center justify-content-center vstack gap-1">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                      d="M11.3625 1.14205C10.534 0.603528 9.46602 0.603529 8.63752 1.14205L1.97086 5.47538C1.26138 5.93655 0.833328 6.7253 0.833328 7.57149V16.667C0.833328 18.0477 1.95262 19.167 3.33333 19.167H16.6667C18.0474 19.167 19.1667 18.0477 19.1667 16.667V7.57149C19.1667 6.7253 18.7386 5.93655 18.0291 5.47538L11.3625 1.14205ZM9.54584 2.53946C9.822 2.35995 10.178 2.35995 10.4542 2.53946L17.1208 6.87279C17.3573 7.02651 17.5 7.28943 17.5 7.57149V16.667C17.5 17.1273 17.1269 17.5003 16.6667 17.5003H13.3332L13.3333 11.2183C13.3333 9.47859 11.6792 8.33368 10.0001 8.33368C8.32089 8.33368 6.6668 9.4786 6.66679 11.2183L6.66666 17.5003L7.65151 17.5003H3.33333C2.87309 17.5003 2.49999 17.1273 2.49999 16.667V7.57149C2.49999 7.28943 2.64268 7.02651 2.87917 6.87279L9.54584 2.53946ZM8.33333 17.5003H12.6514L11.6665 17.5003L11.6667 11.2183C11.6666 10.6922 11.0822 10.0003 10.0001 10.0003C8.91789 10.0003 8.33346 10.6922 8.33346 11.2183L8.33333 17.5003Z"
-                                      fill="#111215"/>
-                            </svg>
-                            Home
-                        </a>
-                    </div>
-                    <div class="toolbar-item toolbar-item_floating position-absolute start-50 translate-middle-x hstack justify-content-center">
-                        <a href=""
-                           class="toolbar-item_link align-items-center justify-content-center vstack gap-1 rounded-circle">
-                            <svg width="20" height="19" viewBox="0 0 20 19" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6.25001 13.3334C6.94037 13.3334 7.50001 12.7737 7.50001 12.0834C7.50001 11.393 6.94037 10.8334 6.25001 10.8334C5.55965 10.8334 5.00001 11.393 5.00001 12.0834C5.00001 12.7737 5.55965 13.3334 6.25001 13.3334Z"
-                                      fill="white"/>
-                                <path d="M11.25 12.0834C11.25 12.7737 10.6904 13.3334 10 13.3334C9.30965 13.3334 8.75001 12.7737 8.75001 12.0834C8.75001 11.393 9.30965 10.8334 10 10.8334C10.6904 10.8334 11.25 11.393 11.25 12.0834Z"
-                                      fill="white"/>
-                                <path d="M13.75 13.3334C14.4404 13.3334 15 12.7737 15 12.0834C15 11.393 14.4404 10.8334 13.75 10.8334C13.0597 10.8334 12.5 11.393 12.5 12.0834C12.5 12.7737 13.0597 13.3334 13.75 13.3334Z"
-                                      fill="white"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                      d="M6.66668 1.66671C6.66668 1.20647 6.29358 0.833374 5.83334 0.833374C5.37311 0.833374 5.00001 1.20647 5.00001 1.66671V2.50004H3.33334C1.95263 2.50004 0.833344 3.61933 0.833344 5.00004V15.8334C0.833344 17.2141 1.95263 18.3334 3.33334 18.3334H16.6667C18.0474 18.3334 19.1667 17.2141 19.1667 15.8334V5.00004C19.1667 3.61933 18.0474 2.50004 16.6667 2.50004H15V1.66671C15 1.20647 14.6269 0.833374 14.1667 0.833374C13.7064 0.833374 13.3333 1.20647 13.3333 1.66671V2.50004H6.66668V1.66671ZM2.50001 5.00004C2.50001 4.5398 2.87311 4.16671 3.33334 4.16671H16.6667C17.1269 4.16671 17.5 4.5398 17.5 5.00004V6.66671H2.50001V5.00004ZM2.50001 8.33337H17.5V15.8334C17.5 16.2936 17.1269 16.6667 16.6667 16.6667H3.33334C2.87311 16.6667 2.50001 16.2936 2.50001 15.8334V8.33337Z"
-                                      fill="white"/>
-                            </svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section-spin">
+					<div class="container">
+						<div class="section-heading">
+							<div class="heading-title">
+								Lucky Spin!
+							</div>
+							<a href="" class="heading-link">
+								Expand
+							</a>
+						</div>
+						<div class="spin-box">
+							<div class="spin-circle ratio ratio-1x1" id="spinWrapper">
+								<canvas id="spinCanvas" width='375' height='375'>
+									Canvas not supported, use another browser.
+								</canvas>
+								<button type="button" id="spinButton" class="spin-circle_button">
+									Spin!
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section-services section-gap">
+					<div class="container">
+						<div class="section-heading">
+							<div class="heading-title">
+								Bnails Service
+							</div>
+							<a href="" class="heading-link">
+								See all
+							</a>
+						</div>
+						<div class="row row-cols-2 g-3">
+							<div class="col">
+								<div class="service-box h-100 position-relative overflow-hidden transition-default hstack">
+									<div class="service-image flex-shrink-0 hstack justify-content-center">
+										<img src="./assets/images/service/icon-1.png" class="img-fluid" alt="">
+									</div>
+									<div class="service-title transition-default fz-15 fw-700 dark-color">
+										Polygel Nails
+									</div>
+									<a href="" class="stretched-link"></a>
+								</div>
+							</div>
+							<div class="col">
+								<div class="service-box h-100 position-relative overflow-hidden transition-default hstack">
+									<div class="service-image flex-shrink-0 hstack justify-content-center">
+										<img src="./assets/images/service/icon-1.png" class="img-fluid" alt="">
+									</div>
+									<div class="service-title transition-default fz-15 fw-700 dark-color">
+										Acrylic Nails
+									</div>
+									<a href="" class="stretched-link"></a>
+								</div>
+							</div>
+							<div class="col">
+								<div class="service-box h-100 position-relative overflow-hidden transition-default hstack">
+									<div class="service-image flex-shrink-0 hstack justify-content-center">
+										<img src="./assets/images/service/icon-1.png" class="img-fluid" alt="">
+									</div>
+									<div class="service-title transition-default fz-15 fw-700 dark-color">
+										Dip Nails
+									</div>
+									<a href="" class="stretched-link"></a>
+								</div>
+							</div>
+							<div class="col">
+								<div class="service-box h-100 position-relative overflow-hidden transition-default hstack">
+									<div class="service-image flex-shrink-0 hstack justify-content-center">
+										<img src="./assets/images/service/icon-1.png" class="img-fluid" alt="">
+									</div>
+									<div class="service-title transition-default fz-15 fw-700 dark-color">
+										Dip Nails
+									</div>
+									<a href="" class="stretched-link"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer id="footer" class="footer position-fixed bottom-0 start-0 end-0 zi-10 w-100">
+		<div class="footer-toolbar background-cover position-relative zi-1">
+			<div class="container">
+				<div class="hstack gap-15px justify-content-between">
+					<div class="toolbar-item">
+						<a href=""
+						   class="toolbar-item_link is-active fw-500 fz-15 dark-color effect-path align-items-center justify-content-center vstack gap-1">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+							     xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+								      d="M11.3625 1.14205C10.534 0.603528 9.46602 0.603529 8.63752 1.14205L1.97086 5.47538C1.26138 5.93655 0.833328 6.7253 0.833328 7.57149V16.667C0.833328 18.0477 1.95262 19.167 3.33333 19.167H16.6667C18.0474 19.167 19.1667 18.0477 19.1667 16.667V7.57149C19.1667 6.7253 18.7386 5.93655 18.0291 5.47538L11.3625 1.14205ZM9.54584 2.53946C9.822 2.35995 10.178 2.35995 10.4542 2.53946L17.1208 6.87279C17.3573 7.02651 17.5 7.28943 17.5 7.57149V16.667C17.5 17.1273 17.1269 17.5003 16.6667 17.5003H13.3332L13.3333 11.2183C13.3333 9.47859 11.6792 8.33368 10.0001 8.33368C8.32089 8.33368 6.6668 9.4786 6.66679 11.2183L6.66666 17.5003L7.65151 17.5003H3.33333C2.87309 17.5003 2.49999 17.1273 2.49999 16.667V7.57149C2.49999 7.28943 2.64268 7.02651 2.87917 6.87279L9.54584 2.53946ZM8.33333 17.5003H12.6514L11.6665 17.5003L11.6667 11.2183C11.6666 10.6922 11.0822 10.0003 10.0001 10.0003C8.91789 10.0003 8.33346 10.6922 8.33346 11.2183L8.33333 17.5003Z"
+								      fill="#111215"/>
+							</svg>
+							Home
+						</a>
+					</div>
+					<div class="toolbar-item toolbar-item_floating position-absolute start-50 translate-middle-x hstack justify-content-center">
+						<a href=""
+						   class="toolbar-item_link align-items-center justify-content-center vstack gap-1 rounded-circle">
+							<svg width="20" height="19" viewBox="0 0 20 19" fill="none"
+							     xmlns="http://www.w3.org/2000/svg">
+								<path d="M6.25001 13.3334C6.94037 13.3334 7.50001 12.7737 7.50001 12.0834C7.50001 11.393 6.94037 10.8334 6.25001 10.8334C5.55965 10.8334 5.00001 11.393 5.00001 12.0834C5.00001 12.7737 5.55965 13.3334 6.25001 13.3334Z"
+								      fill="white"/>
+								<path d="M11.25 12.0834C11.25 12.7737 10.6904 13.3334 10 13.3334C9.30965 13.3334 8.75001 12.7737 8.75001 12.0834C8.75001 11.393 9.30965 10.8334 10 10.8334C10.6904 10.8334 11.25 11.393 11.25 12.0834Z"
+								      fill="white"/>
+								<path d="M13.75 13.3334C14.4404 13.3334 15 12.7737 15 12.0834C15 11.393 14.4404 10.8334 13.75 10.8334C13.0597 10.8334 12.5 11.393 12.5 12.0834C12.5 12.7737 13.0597 13.3334 13.75 13.3334Z"
+								      fill="white"/>
+								<path fill-rule="evenodd" clip-rule="evenodd"
+								      d="M6.66668 1.66671C6.66668 1.20647 6.29358 0.833374 5.83334 0.833374C5.37311 0.833374 5.00001 1.20647 5.00001 1.66671V2.50004H3.33334C1.95263 2.50004 0.833344 3.61933 0.833344 5.00004V15.8334C0.833344 17.2141 1.95263 18.3334 3.33334 18.3334H16.6667C18.0474 18.3334 19.1667 17.2141 19.1667 15.8334V5.00004C19.1667 3.61933 18.0474 2.50004 16.6667 2.50004H15V1.66671C15 1.20647 14.6269 0.833374 14.1667 0.833374C13.7064 0.833374 13.3333 1.20647 13.3333 1.66671V2.50004H6.66668V1.66671ZM2.50001 5.00004C2.50001 4.5398 2.87311 4.16671 3.33334 4.16671H16.6667C17.1269 4.16671 17.5 4.5398 17.5 5.00004V6.66671H2.50001V5.00004ZM2.50001 8.33337H17.5V15.8334C17.5 16.2936 17.1269 16.6667 16.6667 16.6667H3.33334C2.87311 16.6667 2.50001 16.2936 2.50001 15.8334V8.33337Z"
+								      fill="white"/>
+							</svg>
 
-                        </a>
-                    </div>
-                    <div class="toolbar-item">
-                        <a href=""
-                           class="toolbar-item_link fw-500 fz-15 dark-color effect-path align-items-center justify-content-center vstack gap-1">
-                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                      d="M15.4996 5.83337C15.4996 8.5948 13.261 10.8334 10.4996 10.8334C7.73817 10.8334 5.49959 8.5948 5.49959 5.83337C5.49959 3.07195 7.73817 0.833374 10.4996 0.833374C13.261 0.833374 15.4996 3.07195 15.4996 5.83337ZM13.8329 5.83337C13.8329 7.67432 12.3405 9.16671 10.4996 9.16671C8.65864 9.16671 7.16626 7.67432 7.16626 5.83337C7.16626 3.99242 8.65864 2.50004 10.4996 2.50004C12.3405 2.50004 13.8329 3.99242 13.8329 5.83337Z"
-                                      fill="#111215"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                      d="M10.4997 11.6667C8.05371 11.6667 6.29018 12.1741 5.02513 12.9348C3.75504 13.6986 3.04165 14.6854 2.6477 15.5485C2.31563 16.276 2.46677 17.0173 2.90796 17.5455C3.32852 18.049 3.98242 18.3334 4.6663 18.3334H16.3329C17.0168 18.3334 17.6707 18.049 18.0913 17.5455C18.5324 17.0174 18.6836 16.276 18.3515 15.5485C17.9576 14.6855 17.2443 13.6986 15.9742 12.9348C14.7091 12.1741 12.9456 11.6667 10.4997 11.6667ZM4.16388 16.2405C4.43735 15.6414 4.93967 14.931 5.88405 14.3631C6.83347 13.7922 8.28316 13.3334 10.4997 13.3334C12.7162 13.3334 14.1658 13.7922 15.1152 14.3631C16.0596 14.931 16.5619 15.6415 16.8354 16.2405C16.8676 16.3113 16.8662 16.3538 16.863 16.3755C16.8593 16.4003 16.8471 16.4352 16.8121 16.4771C16.737 16.567 16.5695 16.6667 16.3329 16.6667H4.6663C4.42969 16.6667 4.26223 16.567 4.18709 16.4771C4.15211 16.4352 4.13995 16.4003 4.13624 16.3755C4.133 16.3538 4.13159 16.3113 4.16388 16.2405Z"
-                                      fill="#111215"/>
-                            </svg>
-                            Profile
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+						</a>
+					</div>
+					<div class="toolbar-item">
+						<a href=""
+						   class="toolbar-item_link fw-500 fz-15 dark-color effect-path align-items-center justify-content-center vstack gap-1">
+							<svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+							     xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+								      d="M15.4996 5.83337C15.4996 8.5948 13.261 10.8334 10.4996 10.8334C7.73817 10.8334 5.49959 8.5948 5.49959 5.83337C5.49959 3.07195 7.73817 0.833374 10.4996 0.833374C13.261 0.833374 15.4996 3.07195 15.4996 5.83337ZM13.8329 5.83337C13.8329 7.67432 12.3405 9.16671 10.4996 9.16671C8.65864 9.16671 7.16626 7.67432 7.16626 5.83337C7.16626 3.99242 8.65864 2.50004 10.4996 2.50004C12.3405 2.50004 13.8329 3.99242 13.8329 5.83337Z"
+								      fill="#111215"/>
+								<path fill-rule="evenodd" clip-rule="evenodd"
+								      d="M10.4997 11.6667C8.05371 11.6667 6.29018 12.1741 5.02513 12.9348C3.75504 13.6986 3.04165 14.6854 2.6477 15.5485C2.31563 16.276 2.46677 17.0173 2.90796 17.5455C3.32852 18.049 3.98242 18.3334 4.6663 18.3334H16.3329C17.0168 18.3334 17.6707 18.049 18.0913 17.5455C18.5324 17.0174 18.6836 16.276 18.3515 15.5485C17.9576 14.6855 17.2443 13.6986 15.9742 12.9348C14.7091 12.1741 12.9456 11.6667 10.4997 11.6667ZM4.16388 16.2405C4.43735 15.6414 4.93967 14.931 5.88405 14.3631C6.83347 13.7922 8.28316 13.3334 10.4997 13.3334C12.7162 13.3334 14.1658 13.7922 15.1152 14.3631C16.0596 14.931 16.5619 15.6415 16.8354 16.2405C16.8676 16.3113 16.8662 16.3538 16.863 16.3755C16.8593 16.4003 16.8471 16.4352 16.8121 16.4771C16.737 16.567 16.5695 16.6667 16.3329 16.6667H4.6663C4.42969 16.6667 4.26223 16.567 4.18709 16.4771C4.15211 16.4352 4.13995 16.4003 4.13624 16.3755C4.133 16.3538 4.13159 16.3113 4.16388 16.2405Z"
+								      fill="#111215"/>
+							</svg>
+							Profile
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 </div>
 
 <script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
