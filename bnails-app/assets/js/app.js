@@ -157,6 +157,11 @@ export const handleSpin = function () {
         let spinSize = document.getElementById('spinWrapper').offsetWidth - 20;
         document.getElementById('spinCanvas').setAttribute('height', spinSize);
         document.getElementById('spinCanvas').setAttribute('width', spinSize);
+
+        if (document.getElementById('spinTurn') !== null) {
+            document.getElementById('spinTurn').setAttribute('style', '--spacing: ' + (spinSize / 2 + 20) + 'px')
+        }
+
         let theWheel = new Winwheel({
             outerRadius: (spinSize / 2) + 13, // Bán kính ngoài
             innerRadius: 40, // Size lỗ trung tâm

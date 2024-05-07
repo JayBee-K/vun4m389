@@ -26,6 +26,22 @@
 </head>
 <body>
 
+<div class="modal fade modal-theme modal-spin" id="modalSpin" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0">
+            <div class="modal-body">
+                <button type="button" data-bs-dismiss="modal" class="link-default effect-path modal-button_close">
+                    <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.75584 1.07745C1.4304 0.752015 0.902767 0.752015 0.57733 1.07745C0.251893 1.40289 0.251893 1.93053 0.57733 2.25596L5.82147 7.5001L0.57733 12.7442C0.251893 13.0697 0.251893 13.5973 0.57733 13.9228C0.902767 14.2482 1.4304 14.2482 1.75584 13.9228L6.99998 8.67861L12.244 13.9226C12.5694 14.2481 13.0971 14.2481 13.4225 13.9226C13.7479 13.5972 13.7479 13.0696 13.4225 12.7441L8.17849 7.5001L13.4225 2.25609C13.7479 1.93065 13.7479 1.40301 13.4225 1.07758C13.0971 0.752141 12.5694 0.752141 12.244 1.07758L6.99998 6.32159L1.75584 1.07745Z"
+                              fill="#9196A6"/>
+                    </svg>
+                </button>
+                <div class="spin-content text-center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="vstack position-relative min-vh-100 h-100 overflow-hidden">
     <div class="section-header bg-white position-fixed top-0 start-0 end-0 zi-10 w-100">
         <div class="header-inner transition-default hstack">
@@ -53,84 +69,52 @@
         <div class="position-absolute top-0 start-0 end-0 bottom-0 overflow-auto">
             <div class="section-body section-page">
                 <div class="container">
-                    <div class="section-hero vstack gap-15px mt-0">
-                        <div class="hero-item hstack gap-25px"
-                             style="background-color: var(--dark-color)">
-                            <div class="hero-avatar flex-shrink-0 position-relative">
-                                <div class="hero-image position-relative overflow-hidden">
-                                    <img src="./assets/images/hero/hero-1.png" class="img-fluid" alt="">
-                                </div>
-                            </div>
-                            <div class="hero-content text-white">
-                                <div class="hero-title fz-18 fw-700 mb-2">
-                                    Get free coin!
-                                </div>
-                                <div class="hero-desc fw-300 mb-2">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod
-                                </div>
-                                <div class="hero-button">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5 10C5 9.53976 5.3731 9.16667 5.83333 9.16667H12.1548L10.2441 7.25592C9.91864 6.93049 9.91864 6.40285 10.2441 6.07741C10.5695 5.75197 11.0972 5.75197 11.4226 6.07741L14.7559 9.41074C15.0814 9.73618 15.0814 10.2638 14.7559 10.5893L11.4226 13.9226C11.0972 14.248 10.5695 14.248 10.2441 13.9226C9.91864 13.5972 9.91864 13.0695 10.2441 12.7441L12.1548 10.8333H5.83333C5.3731 10.8333 5 10.4602 5 10Z"
-                                              fill="white"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                              d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20ZM10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333Z"
-                                              fill="white"/>
-                                    </svg>
-                                </div>
+                    <div class="section-spin section-spin_bg">
+                        <div class="spin-box">
+                            <div class="spin-circle ratio ratio-1x1" id="spinWrapper">
+                                <canvas id="spinCanvas" width='375' height='375'>
+                                    Canvas not supported, use another browser.
+                                </canvas>
+                                <button type="button" id="spinButton" class="spin-circle_button">
+                                    Spin!
+                                </button>
                             </div>
                         </div>
-                        <div class="hero-item hstack gap-25px"
-                             style="background-color: var(--primary-color)">
-                            <div class="hero-avatar flex-shrink-0 position-relative">
-                                <div class="hero-image position-relative overflow-hidden">
-                                    <img src="./assets/images/hero/hero-2.png" class="img-fluid" alt="">
+                        <div class="spin-turn text-center" id="spinTurn">
+                            <div class="spin-turn_content">
+                                <div class="spin-turn_title fz-16 fw-700 dark-color">
+                                    Hello Rosie!
+                                </div>
+                                <div class="spin-turn_desc fw-500 dark-color">
+                                    Today you have <span class="primary-color fw-700">2</span> turns to spin the lucky
+                                    wheel.
                                 </div>
                             </div>
-                            <div class="hero-content text-white">
-                                <div class="hero-title fz-18 fw-700 mb-2">
-                                    Get free coin!
+                            <div class="hero-item hstack gap-25px"
+                                 style="background-color: var(--dark-color)">
+                                <div class="hero-avatar flex-shrink-0 position-relative">
+                                    <div class="hero-image position-relative overflow-hidden">
+                                        <img src="./assets/images/hero/hero-1.png" class="img-fluid" alt="">
+                                    </div>
                                 </div>
-                                <div class="hero-desc fw-300 mb-2">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod
-                                </div>
-                                <div class="hero-button">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5 10C5 9.53976 5.3731 9.16667 5.83333 9.16667H12.1548L10.2441 7.25592C9.91864 6.93049 9.91864 6.40285 10.2441 6.07741C10.5695 5.75197 11.0972 5.75197 11.4226 6.07741L14.7559 9.41074C15.0814 9.73618 15.0814 10.2638 14.7559 10.5893L11.4226 13.9226C11.0972 14.248 10.5695 14.248 10.2441 13.9226C9.91864 13.5972 9.91864 13.0695 10.2441 12.7441L12.1548 10.8333H5.83333C5.3731 10.8333 5 10.4602 5 10Z"
-                                              fill="white"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                              d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20ZM10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333Z"
-                                              fill="white"/>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hero-item hstack gap-25px" style="background-color: #7CB0F9">
-                            <div class="hero-avatar flex-shrink-0 position-relative">
-                                <div class="hero-image position-relative overflow-hidden">
-                                    <img src="./assets/images/hero/hero-3.png" class="img-fluid" alt="">
-                                </div>
-                            </div>
-                            <div class="hero-content text-white">
-                                <div class="hero-title fz-18 fw-700 mb-2">
-                                    Get free coin!2
-                                </div>
-                                <div class="hero-desc fw-300 mb-2">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod
-                                </div>
-                                <div class="hero-button">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5 10C5 9.53976 5.3731 9.16667 5.83333 9.16667H12.1548L10.2441 7.25592C9.91864 6.93049 9.91864 6.40285 10.2441 6.07741C10.5695 5.75197 11.0972 5.75197 11.4226 6.07741L14.7559 9.41074C15.0814 9.73618 15.0814 10.2638 14.7559 10.5893L11.4226 13.9226C11.0972 14.248 10.5695 14.248 10.2441 13.9226C9.91864 13.5972 9.91864 13.0695 10.2441 12.7441L12.1548 10.8333H5.83333C5.3731 10.8333 5 10.4602 5 10Z"
-                                              fill="white"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                              d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20ZM10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333Z"
-                                              fill="white"/>
-                                    </svg>
+                                <div class="hero-content text-white">
+                                    <div class="hero-title fz-18 fw-700 mb-2">
+                                        Get free coin!
+                                    </div>
+                                    <div class="hero-desc fw-300 mb-2">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                        eiusmod
+                                    </div>
+                                    <div class="hero-button">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 10C5 9.53976 5.3731 9.16667 5.83333 9.16667H12.1548L10.2441 7.25592C9.91864 6.93049 9.91864 6.40285 10.2441 6.07741C10.5695 5.75197 11.0972 5.75197 11.4226 6.07741L14.7559 9.41074C15.0814 9.73618 15.0814 10.2638 14.7559 10.5893L11.4226 13.9226C11.0972 14.248 10.5695 14.248 10.2441 13.9226C9.91864 13.5972 9.91864 13.0695 10.2441 12.7441L12.1548 10.8333H5.83333C5.3731 10.8333 5 10.4602 5 10Z"
+                                                  fill="white"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20ZM10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333Z"
+                                                  fill="white"/>
+                                        </svg>
+                                    </div>
                                 </div>
                             </div>
                         </div>
