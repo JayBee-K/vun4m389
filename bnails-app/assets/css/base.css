@@ -1,9 +1,123 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,300..700;1,300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+@font-face {
+    font-family: 'Helvetica Neus';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url(../fonts/helvetica-neue/HelveticaNeueLight.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Helvetica Neus';
+    font-style: italic;
+    font-weight: 200;
+    font-display: swap;
+    src: url(../fonts/helvetica-neue/HelveticaNeueLightItalic.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Helvetica Neus';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(../fonts/helvetica-neue/HelveticaNeueThin.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Helvetica Neus';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url(../fonts/helvetica-neue/HelveticaNeueThinItalic.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Helvetica Neus';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../fonts/helvetica-neue/HelveticaNeueRoman.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Helvetica Neus';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../fonts/helvetica-neue/HelveticaNeueItalic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Helvetica Neus';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(../fonts/helvetica-neue/HelveticaNeueMedium.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Helvetica Neus';
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url(../fonts/helvetica-neue/HelveticaNeueMediumItalic.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Helvetica Neus';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(../fonts/helvetica-neue/HelveticaNeueBold.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Helvetica Neus';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url(../fonts/helvetica-neue/HelveticaNeueBoldItalic.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Helvetica Neus';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(../fonts/helvetica-neue/HelveticaNeueHeavy.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Helvetica Neus';
+    font-style: italic;
+    font-weight: 800;
+    font-display: swap;
+    src: url(../fonts/helvetica-neue/HelveticaNeueHeavyItalic.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Helvetica Neus';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url(../fonts/helvetica-neue/HelveticaNeueBlack.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Helvetica Neus';
+    font-style: italic;
+    font-weight: 900;
+    font-display: swap;
+    src: url(../fonts/helvetica-neue/HelveticaNeueBlackItalic.otf) format('opentype');
+}
+
 
 :root {
     --transition-default: 0.3s all ease-in-out;
-    --font-heading: "Lato", Arial, Helvetica, sans-serif;
-    --font-theme: "Cabin", Arial, Helvetica, sans-serif;
+    --font-heading: "Lato", "Helvetica Neus", sans-serif;
+    --font-theme: "Helvetica Neus", sans-serif;
     --size-theme: 14px;
 
 
@@ -28,7 +142,6 @@
 
     --bg-light: #F8F8F9;
 }
-
 
 body {
     position: relative;
@@ -316,7 +429,7 @@ textarea:focus {
 }
 
 .dark-color_600 {
-    color: var(--dark-700);
+    color: var(--dark-600);
 }
 
 .dark-color_500 {
@@ -397,6 +510,11 @@ textarea:focus {
     font-weight: 700;
     transition: var(--transition-default);
     white-space: nowrap;
+}
+
+.button-theme svg {
+    position: relative;
+    top: -1px;
 }
 
 .button-theme svg path {
