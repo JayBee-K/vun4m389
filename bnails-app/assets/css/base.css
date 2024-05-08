@@ -487,7 +487,8 @@ textarea:focus {
     overflow-y: auto !important;
 }
 
-.overflow-y::-webkit-scrollbar {
+.overflow-y::-webkit-scrollbar,
+.scrollbar-hidden::-webkit-scrollbar{
     width: 0;
     display: none;
     opacity: 0;
