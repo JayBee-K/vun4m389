@@ -487,6 +487,13 @@ textarea:focus {
     overflow-y: auto !important;
 }
 
+.overflow-y::-webkit-scrollbar {
+    width: 0;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
 .effect-path svg path {
     transition: var(--transition-default);
 }
