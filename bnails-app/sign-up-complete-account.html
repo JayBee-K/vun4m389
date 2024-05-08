@@ -1,119 +1,163 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport"
-	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta name="theme-color" content="#ffffff">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
 
-	<title>Bnails App</title>
-	<meta name="description" content="Bnails App">
-	<meta name="author" content="">
+    <title>Bnails App</title>
+    <meta name="description" content="Bnails App">
+    <meta name="author" content="">
 
-	<meta property="og:title" content="Bnails App">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="">
-	<meta property="og:description" content="Bnails App">
-	<meta property="og:image" content="">
+    <meta property="og:title" content="Bnails App">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="Bnails App">
+    <meta property="og:image" content="">
 
-	<link rel="icon" href="./assets/images/favicon.png">
-	<link rel="apple-touch-icon" href="./assets/images/favicon.png">
-	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
-	<link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
-	<link rel="stylesheet" href="./assets/css/base.css">
-	<link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="./assets/images/favicon.png">
+    <link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 
+<div class="modal fade modal-theme modal-success" id="modalUserSuccess" data-bs-backdrop="static"
+     data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0">
+            <div class="modal-body">
+                <div class="modal-success_content text-center">
+                    <div class="modal-success_image">
+                        <img src="./assets/images/congratulations.png" width="120" height="120" class="img-fluid"
+                             alt="">
+                    </div>
+                    <div class="modal-success_title fz-20 fw-700 dark-color">
+                        Successfully! !
+                    </div>
+                    <div class="modal-success_desc fz-15">
+                        Your account has been successfully verified, let's enjoy Bnails services now!
+                    </div>
+                    <div class="modal-success_button">
+                        <button type="button" data-bs-dismiss="modal"
+                                class="fz-15 button-theme button-theme_primary w-100">
+                            Get Started
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="vstack position-relative min-vh-100 h-100 overflow-hidden">
-	<main id="main" class="main vstack flex-fill overflow-hidden position-relative">
-		<div class="position-absolute top-0 start-0 end-0 bottom-0 overflow-auto">
-			<div class="section-user vstack h-100">
-				<div class="user-header">
-					<div class="user-back mb-4">
-						<a href="./sign-in.html" class="user-back_link rounded-circle hstack justify-content-center">
-							<svg width="9" height="16" viewBox="0 0 9 16" fill="none"
-							     xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" clip-rule="evenodd"
-								      d="M8.08926 0.744078C8.41469 1.06951 8.41469 1.59715 8.08926 1.92259L2.01184 8L8.08926 14.0774C8.41469 14.4028 8.41469 14.9305 8.08926 15.2559C7.76382 15.5814 7.23618 15.5814 6.91074 15.2559L0.244078 8.58926C-0.0813592 8.26382 -0.0813592 7.73618 0.244078 7.41074L6.91074 0.744078C7.23618 0.418641 7.76382 0.418641 8.08926 0.744078Z"
-								      fill="#111215"/>
-							</svg>
-						</a>
-					</div>
-					<div class="user-title fz-24 fw-700 dark-color">
-						Complete Account
-					</div>
-					<div class="user-desc fw-300 dark-color">
-						Already have an account?
-						<a href="./sign-in.html" class="fw-700 primary-color">
-							Sign in
-						</a>
-					</div>
-				</div>
-				<div class="user-body">
-					<div class="user-form section-form">
-						<div class="user-item form-item">
-							<div class="form-label fz-14 fw-300 dark-color_600">
-								Name
-							</div>
-							<div class="form-group position-relative handleFocusInput">
-								<div class="form-group_button form-group_button__prepend position-absolute top-50 translate-middle-y pe-none zi-2">
-									<svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path fill-rule="evenodd" clip-rule="evenodd" d="M13.9996 5.83334C13.9996 8.59477 11.761 10.8333 8.99959 10.8333C6.23817 10.8333 3.99959 8.59477 3.99959 5.83334C3.99959 3.07192 6.23817 0.833344 8.99959 0.833344C11.761 0.833344 13.9996 3.07192 13.9996 5.83334ZM12.3329 5.83334C12.3329 7.67429 10.8405 9.16668 8.99959 9.16668C7.15864 9.16668 5.66626 7.67429 5.66626 5.83334C5.66626 3.99239 7.15864 2.50001 8.99959 2.50001C10.8405 2.50001 12.3329 3.99239 12.3329 5.83334Z" fill="#111215"/>
-										<path fill-rule="evenodd" clip-rule="evenodd" d="M8.99965 11.6667C6.55371 11.6667 4.79018 12.174 3.52513 12.9348C2.25504 13.6986 1.54165 14.6854 1.1477 15.5484C0.815633 16.2759 0.96677 17.0173 1.40796 17.5455C1.82852 18.049 2.48242 18.3333 3.1663 18.3333H14.8329C15.5168 18.3333 16.1707 18.049 16.5913 17.5455C17.0324 17.0173 17.1836 16.276 16.8515 15.5485C16.4576 14.6854 15.7443 13.6986 14.4742 12.9348C13.2091 12.174 11.4456 11.6667 8.99965 11.6667ZM2.66388 16.2405C2.93735 15.6414 3.43967 14.931 4.38405 14.3631C5.33347 13.7921 6.78316 13.3333 8.99965 13.3333C11.2162 13.3333 12.6658 13.7921 13.6152 14.3631C14.5596 14.931 15.0619 15.6414 15.3354 16.2405C15.3676 16.3113 15.3662 16.3538 15.363 16.3755C15.3593 16.4003 15.3471 16.4352 15.3121 16.477C15.237 16.567 15.0695 16.6667 14.8329 16.6667H3.1663C2.92969 16.6667 2.76223 16.567 2.68709 16.477C2.65211 16.4351 2.63995 16.4003 2.63624 16.3755C2.633 16.3538 2.63159 16.3113 2.66388 16.2405Z" fill="#111215"/>
-									</svg>
-								</div>
-								<input type="text" placeholder="Your name"
-								       class="form-group_input focusInput">
-							</div>
-						</div>
-						<div class="user-item form-item">
-							<div class="form-label fz-14 fw-300 dark-color_600">
-								Date of birth
-							</div>
-							<div class="form-group position-relative handleFocusInput">
-								<div class="form-group_button form-group_button__prepend position-absolute top-50 translate-middle-y pe-none zi-2">
-									<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M6.24992 13.3333C6.94027 13.3333 7.49992 12.7737 7.49992 12.0833C7.49992 11.393 6.94027 10.8333 6.24992 10.8333C5.55956 10.8333 4.99992 11.393 4.99992 12.0833C4.99992 12.7737 5.55956 13.3333 6.24992 13.3333Z" fill="#111215"/>
-										<path d="M11.2499 12.0833C11.2499 12.7737 10.6903 13.3333 9.99992 13.3333C9.30956 13.3333 8.74992 12.7737 8.74992 12.0833C8.74992 11.393 9.30956 10.8333 9.99992 10.8333C10.6903 10.8333 11.2499 11.393 11.2499 12.0833Z" fill="#111215"/>
-										<path d="M13.7499 13.3333C14.4403 13.3333 14.9999 12.7737 14.9999 12.0833C14.9999 11.393 14.4403 10.8333 13.7499 10.8333C13.0596 10.8333 12.4999 11.393 12.4999 12.0833C12.4999 12.7737 13.0596 13.3333 13.7499 13.3333Z" fill="#111215"/>
-										<path fill-rule="evenodd" clip-rule="evenodd" d="M6.66658 1.66668C6.66658 1.20644 6.29349 0.833344 5.83325 0.833344C5.37301 0.833344 4.99992 1.20644 4.99992 1.66668V2.50001H3.33325C1.95254 2.50001 0.833252 3.6193 0.833252 5.00001V15.8333C0.833252 17.2141 1.95254 18.3333 3.33325 18.3333H16.6666C18.0473 18.3333 19.1666 17.2141 19.1666 15.8333V5.00001C19.1666 3.6193 18.0473 2.50001 16.6666 2.50001H14.9999V1.66668C14.9999 1.20644 14.6268 0.833344 14.1666 0.833344C13.7063 0.833344 13.3333 1.20644 13.3333 1.66668V2.50001H6.66658V1.66668ZM2.49992 5.00001C2.49992 4.53977 2.87301 4.16668 3.33325 4.16668H16.6666C17.1268 4.16668 17.4999 4.53977 17.4999 5.00001V6.66668H2.49992V5.00001ZM2.49992 8.33334H17.4999V15.8333C17.4999 16.2936 17.1268 16.6667 16.6666 16.6667H3.33325C2.87301 16.6667 2.49992 16.2936 2.49992 15.8333V8.33334Z" fill="#111215"/>
-									</svg>
-								</div>
-								<input type="text" placeholder="Your date of birth"
-								       class="form-group_input focusInput">
-							</div>
-						</div>
-						<div class="user-item form-item">
-							<div class="form-label fz-14 fw-300 dark-color_600">
-								Name
-							</div>
-							<div class="form-group position-relative handleFocusInput">
-								<div class="form-group_button form-group_button__prepend position-absolute top-50 translate-middle-y pe-none zi-2">
-									<svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4287 1.89544C10.1648 1.7371 9.83507 1.7371 9.57117 1.89544L3.28629 5.66637L9.57117 9.43729C9.83507 9.59563 10.1648 9.59563 10.4287 9.43729L16.7135 5.66637L10.4287 1.89544ZM17.4999 7.13819L11.2862 10.8664C10.4945 11.3415 9.50538 11.3415 8.71368 10.8664L2.49992 7.13819V14.833C2.49992 15.2933 2.87301 15.6664 3.33325 15.6664H16.6666C17.1268 15.6664 17.4999 15.2933 17.4999 14.833V7.13819ZM8.71368 0.466284C9.50538 -0.00873984 10.4945 -0.00874023 11.2862 0.466283L18.762 4.95179C19.013 5.10239 19.1666 5.37365 19.1666 5.66637V14.833C19.1666 16.2137 18.0473 17.333 16.6666 17.333H3.33325C1.95254 17.333 0.833252 16.2137 0.833252 14.833V5.66637C0.833252 5.37365 0.986834 5.10239 1.23784 4.95179L8.71368 0.466284Z" fill="#111215"/>
-									</svg>
-								</div>
-								<input type="email" placeholder="Your email"
-								       class="form-group_input focusInput">
-							</div>
-						</div>
-						<div class="user-item form-item mt-5">
-							<button type="button" class="button-theme button-theme_primary w-100">
-								Continue
-							</button>
-						</div>
-					</div>
-				</div>
-				<div class="user-footer mt-auto pt-4">
-					<div class="user-footer_text text-center">
-						By signing up you agree to our <a href="" class="fw-700 primary-color fz-12">Terms</a> and <a href="" class="fw-700 primary-color fz-12">Conditions of Use</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</main>
+    <main id="main" class="main vstack flex-fill overflow-hidden position-relative">
+        <div class="position-absolute top-0 start-0 end-0 bottom-0 overflow-auto">
+            <div class="section-user vstack vh-100">
+                <div class="user-header">
+                    <div class="user-back mb-4">
+                        <a href="./sign-in.html" class="user-back_link rounded-circle hstack justify-content-center">
+                            <svg width="9" height="16" viewBox="0 0 9 16" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M8.08926 0.744078C8.41469 1.06951 8.41469 1.59715 8.08926 1.92259L2.01184 8L8.08926 14.0774C8.41469 14.4028 8.41469 14.9305 8.08926 15.2559C7.76382 15.5814 7.23618 15.5814 6.91074 15.2559L0.244078 8.58926C-0.0813592 8.26382 -0.0813592 7.73618 0.244078 7.41074L6.91074 0.744078C7.23618 0.418641 7.76382 0.418641 8.08926 0.744078Z"
+                                      fill="#111215"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="user-title fz-24 fw-700 dark-color">
+                        Complete Account
+                    </div>
+                    <div class="user-desc fw-300 dark-color">
+                        Already have an account?
+                        <a href="./sign-in.html" class="fw-700 primary-color">
+                            Sign in
+                        </a>
+                    </div>
+                </div>
+                <div class="user-body">
+                    <div class="user-form section-form">
+                        <div class="user-item form-item">
+                            <div class="form-label fz-14 fw-300 dark-color_600">
+                                Name
+                            </div>
+                            <div class="form-group position-relative handleFocusInput">
+                                <div class="form-group_button form-group_button__prepend position-absolute top-50 translate-middle-y pe-none zi-2">
+                                    <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M13.9996 5.83334C13.9996 8.59477 11.761 10.8333 8.99959 10.8333C6.23817 10.8333 3.99959 8.59477 3.99959 5.83334C3.99959 3.07192 6.23817 0.833344 8.99959 0.833344C11.761 0.833344 13.9996 3.07192 13.9996 5.83334ZM12.3329 5.83334C12.3329 7.67429 10.8405 9.16668 8.99959 9.16668C7.15864 9.16668 5.66626 7.67429 5.66626 5.83334C5.66626 3.99239 7.15864 2.50001 8.99959 2.50001C10.8405 2.50001 12.3329 3.99239 12.3329 5.83334Z"
+                                              fill="#111215"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M8.99965 11.6667C6.55371 11.6667 4.79018 12.174 3.52513 12.9348C2.25504 13.6986 1.54165 14.6854 1.1477 15.5484C0.815633 16.2759 0.96677 17.0173 1.40796 17.5455C1.82852 18.049 2.48242 18.3333 3.1663 18.3333H14.8329C15.5168 18.3333 16.1707 18.049 16.5913 17.5455C17.0324 17.0173 17.1836 16.276 16.8515 15.5485C16.4576 14.6854 15.7443 13.6986 14.4742 12.9348C13.2091 12.174 11.4456 11.6667 8.99965 11.6667ZM2.66388 16.2405C2.93735 15.6414 3.43967 14.931 4.38405 14.3631C5.33347 13.7921 6.78316 13.3333 8.99965 13.3333C11.2162 13.3333 12.6658 13.7921 13.6152 14.3631C14.5596 14.931 15.0619 15.6414 15.3354 16.2405C15.3676 16.3113 15.3662 16.3538 15.363 16.3755C15.3593 16.4003 15.3471 16.4352 15.3121 16.477C15.237 16.567 15.0695 16.6667 14.8329 16.6667H3.1663C2.92969 16.6667 2.76223 16.567 2.68709 16.477C2.65211 16.4351 2.63995 16.4003 2.63624 16.3755C2.633 16.3538 2.63159 16.3113 2.66388 16.2405Z"
+                                              fill="#111215"/>
+                                    </svg>
+                                </div>
+                                <input type="text" placeholder="Your name"
+                                       class="form-group_input focusInput">
+                            </div>
+                        </div>
+                        <div class="user-item form-item">
+                            <div class="form-label fz-14 fw-300 dark-color_600">
+                                Date of birth
+                            </div>
+                            <div class="form-group position-relative handleFocusInput">
+                                <div class="form-group_button form-group_button__prepend position-absolute top-50 translate-middle-y pe-none zi-2">
+                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.24992 13.3333C6.94027 13.3333 7.49992 12.7737 7.49992 12.0833C7.49992 11.393 6.94027 10.8333 6.24992 10.8333C5.55956 10.8333 4.99992 11.393 4.99992 12.0833C4.99992 12.7737 5.55956 13.3333 6.24992 13.3333Z"
+                                              fill="#111215"/>
+                                        <path d="M11.2499 12.0833C11.2499 12.7737 10.6903 13.3333 9.99992 13.3333C9.30956 13.3333 8.74992 12.7737 8.74992 12.0833C8.74992 11.393 9.30956 10.8333 9.99992 10.8333C10.6903 10.8333 11.2499 11.393 11.2499 12.0833Z"
+                                              fill="#111215"/>
+                                        <path d="M13.7499 13.3333C14.4403 13.3333 14.9999 12.7737 14.9999 12.0833C14.9999 11.393 14.4403 10.8333 13.7499 10.8333C13.0596 10.8333 12.4999 11.393 12.4999 12.0833C12.4999 12.7737 13.0596 13.3333 13.7499 13.3333Z"
+                                              fill="#111215"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M6.66658 1.66668C6.66658 1.20644 6.29349 0.833344 5.83325 0.833344C5.37301 0.833344 4.99992 1.20644 4.99992 1.66668V2.50001H3.33325C1.95254 2.50001 0.833252 3.6193 0.833252 5.00001V15.8333C0.833252 17.2141 1.95254 18.3333 3.33325 18.3333H16.6666C18.0473 18.3333 19.1666 17.2141 19.1666 15.8333V5.00001C19.1666 3.6193 18.0473 2.50001 16.6666 2.50001H14.9999V1.66668C14.9999 1.20644 14.6268 0.833344 14.1666 0.833344C13.7063 0.833344 13.3333 1.20644 13.3333 1.66668V2.50001H6.66658V1.66668ZM2.49992 5.00001C2.49992 4.53977 2.87301 4.16668 3.33325 4.16668H16.6666C17.1268 4.16668 17.4999 4.53977 17.4999 5.00001V6.66668H2.49992V5.00001ZM2.49992 8.33334H17.4999V15.8333C17.4999 16.2936 17.1268 16.6667 16.6666 16.6667H3.33325C2.87301 16.6667 2.49992 16.2936 2.49992 15.8333V8.33334Z"
+                                              fill="#111215"/>
+                                    </svg>
+                                </div>
+                                <input type="text" placeholder="Your date of birth"
+                                       class="form-group_input focusInput">
+                            </div>
+                        </div>
+                        <div class="user-item form-item">
+                            <div class="form-label fz-14 fw-300 dark-color_600">
+                                Name
+                            </div>
+                            <div class="form-group position-relative handleFocusInput">
+                                <div class="form-group_button form-group_button__prepend position-absolute top-50 translate-middle-y pe-none zi-2">
+                                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M10.4287 1.89544C10.1648 1.7371 9.83507 1.7371 9.57117 1.89544L3.28629 5.66637L9.57117 9.43729C9.83507 9.59563 10.1648 9.59563 10.4287 9.43729L16.7135 5.66637L10.4287 1.89544ZM17.4999 7.13819L11.2862 10.8664C10.4945 11.3415 9.50538 11.3415 8.71368 10.8664L2.49992 7.13819V14.833C2.49992 15.2933 2.87301 15.6664 3.33325 15.6664H16.6666C17.1268 15.6664 17.4999 15.2933 17.4999 14.833V7.13819ZM8.71368 0.466284C9.50538 -0.00873984 10.4945 -0.00874023 11.2862 0.466283L18.762 4.95179C19.013 5.10239 19.1666 5.37365 19.1666 5.66637V14.833C19.1666 16.2137 18.0473 17.333 16.6666 17.333H3.33325C1.95254 17.333 0.833252 16.2137 0.833252 14.833V5.66637C0.833252 5.37365 0.986834 5.10239 1.23784 4.95179L8.71368 0.466284Z"
+                                              fill="#111215"/>
+                                    </svg>
+                                </div>
+                                <input type="email" placeholder="Your email"
+                                       class="form-group_input focusInput">
+                            </div>
+                        </div>
+                        <div class="user-item form-item mt-5">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#modalUserSuccess"
+                                    class="button-theme button-theme_primary w-100">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-footer mt-auto pt-4">
+                    <div class="user-footer_text text-center">
+                        By signing up you agree to our <a href="" class="fw-700 primary-color fz-12">Terms</a> and <a
+                            href="" class="fw-700 primary-color fz-12">Conditions of Use</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 </div>
 
 <script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>

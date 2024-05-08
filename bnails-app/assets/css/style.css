@@ -249,6 +249,11 @@
 	border: 10px solid var(--primary-color);
 }
 
+.spin-box .spin-circle canvas {
+	border-radius: 50%;
+	overflow: hidden;
+}
+
 .spin-box .spin-circle .spin-circle_button {
 	position: absolute;
 	width: 80px;
