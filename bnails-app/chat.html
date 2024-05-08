@@ -1,91 +1,247 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta name="theme-color" content="#ffffff">
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="theme-color" content="#ffffff">
 
-    <title>Bnails App</title>
-    <meta name="description" content="Bnails App">
-    <meta name="author" content="">
+	<title>Bnails App</title>
+	<meta name="description" content="Bnails App">
+	<meta name="author" content="">
 
-    <meta property="og:title" content="Bnails App">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    <meta property="og:description" content="Bnails App">
-    <meta property="og:image" content="">
+	<meta property="og:title" content="Bnails App">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:description" content="Bnails App">
+	<meta property="og:image" content="">
 
-    <link rel="icon" href="./assets/images/favicon.png">
-    <link rel="apple-touch-icon" href="./assets/images/favicon.png">
-    <link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
-    <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+	<link rel="icon" href="./assets/images/favicon.png">
+	<link rel="apple-touch-icon" href="./assets/images/favicon.png">
+	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+	<link rel="stylesheet" href="./assets/css/base.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 
 <div class="vstack position-relative min-vh-100 h-100 overflow-hidden">
-    <div class="section-header bg-white position-fixed top-0 start-0 end-0 zi-10 w-100">
-        <div class="header-inner transition-default hstack">
-            <div class="container">
-                <div class="vstack">
-                    <div class="position-relative text-center">
-                        <a href="./index.html"
-                           class="position-absolute start-0 top-50 translate-middle-y header-back link-default">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                 viewBox="0 0 24 24" fill="none">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                      d="M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289Z"
-                                      fill="#191E24"></path>
-                            </svg>
-                        </a>
-                        <div class="header-title fz-18 fw-700">
-                            Customer service
-                        </div>
-                        <a href=""
-                           class="position-absolute end-0 top-50 translate-middle-y header-question link-default">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                      d="M10 1.53846C5.32682 1.53846 1.53846 5.32682 1.53846 10C1.53846 14.6732 5.32682 18.4615 10 18.4615C14.6732 18.4615 18.4615 14.6732 18.4615 10C18.4615 5.32682 14.6732 1.53846 10 1.53846ZM0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10Z"
-                                      fill="#111215"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                      d="M8.57316 4.85048C9.25788 4.61576 10.0053 4.5557 10.7253 4.67422C11.4451 4.79271 12.1223 5.08741 12.6662 5.53753C13.2113 5.98864 13.6043 6.58216 13.7658 7.25418C13.928 7.92905 13.8426 8.62634 13.5307 9.24949C13.2206 9.86907 12.708 10.3749 12.0818 10.7212C11.6763 10.9454 11.2297 11.0995 10.7665 11.1803C10.7328 11.574 10.4025 11.883 10.0001 11.883C9.57525 11.883 9.23085 11.5386 9.23085 11.1138V10.4771C9.23085 10.0523 9.57525 9.70792 10.0001 9.70792C10.4855 9.70792 10.9513 9.58829 11.3373 9.37484C11.723 9.16153 11.9992 8.87193 12.1549 8.56091C12.3088 8.25348 12.3452 7.92676 12.27 7.61372C12.194 7.29782 12.0009 6.98389 11.6854 6.72275C11.3686 6.46063 10.9494 6.27028 10.4754 6.19226C10.0017 6.11427 9.51178 6.15507 9.07204 6.30581C8.63207 6.45663 8.27796 6.70478 8.04022 6.99924C7.80445 7.29126 7.69239 7.61549 7.69239 7.93073C7.69239 8.35556 7.348 8.69996 6.92316 8.69996C6.49833 8.69996 6.15393 8.35556 6.15393 7.93073C6.15393 7.2387 6.40279 6.57829 6.84321 6.03279C7.28166 5.48974 7.88865 5.08513 8.57316 4.85048Z"
-                                      fill="#111215"/>
-                                <path d="M9.99979 14.6149C10.637 14.6149 11.1536 14.1874 11.1536 13.66C11.1536 13.1326 10.637 12.7051 9.99979 12.7051C9.36254 12.7051 8.84595 13.1326 8.84595 13.66C8.84595 14.1874 9.36254 14.6149 9.99979 14.6149Z"
-                                      fill="#111215"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <main id="main" class="main vstack flex-fill overflow-hidden position-relative">
-        <div class="position-absolute top-0 start-0 end-0 bottom-0 overflow-auto">
-            <div class="section-body section-page section-chat">
-                <div class="container">
-                    <div class="chat-time">
-                        <span class="position-absolute top-50 start-50 translate-middle fz-12 lh-sm fw-300">07/05/2024</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-    <footer id="footer" class="footer position-fixed bottom-0 start-0 end-0 zi-10 w-100">
-        <div class="chat-footer">
-            <div class="chat-image">
-
-            </div>
-            <div class="chat-editor">
-            </div>
-            <div class="chat-button">
-
-            </div>
-        </div>
-    </footer>
+	<div class="section-header bg-white position-fixed top-0 start-0 end-0 zi-10 w-100">
+		<div class="header-inner transition-default hstack">
+			<div class="container">
+				<div class="vstack">
+					<div class="position-relative text-center">
+						<a href="./index.html"
+						   class="position-absolute start-0 top-50 translate-middle-y header-back link-default">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+							     viewBox="0 0 24 24" fill="none">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+								      d="M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289Z"
+								      fill="#191E24"></path>
+							</svg>
+						</a>
+						<div class="header-title fz-18 fw-700">
+							Customer service
+						</div>
+						<a href=""
+						   class="position-absolute end-0 top-50 translate-middle-y header-question link-default">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+							     xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+								      d="M10 1.53846C5.32682 1.53846 1.53846 5.32682 1.53846 10C1.53846 14.6732 5.32682 18.4615 10 18.4615C14.6732 18.4615 18.4615 14.6732 18.4615 10C18.4615 5.32682 14.6732 1.53846 10 1.53846ZM0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10Z"
+								      fill="#111215"/>
+								<path fill-rule="evenodd" clip-rule="evenodd"
+								      d="M8.57316 4.85048C9.25788 4.61576 10.0053 4.5557 10.7253 4.67422C11.4451 4.79271 12.1223 5.08741 12.6662 5.53753C13.2113 5.98864 13.6043 6.58216 13.7658 7.25418C13.928 7.92905 13.8426 8.62634 13.5307 9.24949C13.2206 9.86907 12.708 10.3749 12.0818 10.7212C11.6763 10.9454 11.2297 11.0995 10.7665 11.1803C10.7328 11.574 10.4025 11.883 10.0001 11.883C9.57525 11.883 9.23085 11.5386 9.23085 11.1138V10.4771C9.23085 10.0523 9.57525 9.70792 10.0001 9.70792C10.4855 9.70792 10.9513 9.58829 11.3373 9.37484C11.723 9.16153 11.9992 8.87193 12.1549 8.56091C12.3088 8.25348 12.3452 7.92676 12.27 7.61372C12.194 7.29782 12.0009 6.98389 11.6854 6.72275C11.3686 6.46063 10.9494 6.27028 10.4754 6.19226C10.0017 6.11427 9.51178 6.15507 9.07204 6.30581C8.63207 6.45663 8.27796 6.70478 8.04022 6.99924C7.80445 7.29126 7.69239 7.61549 7.69239 7.93073C7.69239 8.35556 7.348 8.69996 6.92316 8.69996C6.49833 8.69996 6.15393 8.35556 6.15393 7.93073C6.15393 7.2387 6.40279 6.57829 6.84321 6.03279C7.28166 5.48974 7.88865 5.08513 8.57316 4.85048Z"
+								      fill="#111215"/>
+								<path d="M9.99979 14.6149C10.637 14.6149 11.1536 14.1874 11.1536 13.66C11.1536 13.1326 10.637 12.7051 9.99979 12.7051C9.36254 12.7051 8.84595 13.1326 8.84595 13.66C8.84595 14.1874 9.36254 14.6149 9.99979 14.6149Z"
+								      fill="#111215"/>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<main id="main" class="main vstack flex-fill overflow-hidden position-relative">
+		<div class="position-absolute top-0 start-0 end-0 bottom-0 overflow-auto">
+			<div class="section-body section-page section-chat">
+				<div class="container">
+					<div class="chat-wrapper">
+						<div class="chat-day">
+							<span class="position-absolute top-50 start-50 translate-middle fz-12 lh-sm fw-300 dark-color_400">07/05/2024</span>
+						</div>
+						<div class="chat-item chat-item_primary hstack gap-10px">
+							<div class="chat-content vstack gap-10px">
+								<div class="chat-messages vstack gap-5px">
+									<div class="chat-message_item">
+										Hi, good morning! I'd like to schedule an appointment for a manicure and
+										pedicure.
+									</div>
+								</div>
+								<div class="chat-time hstack gap-10px fz-12">
+									<span class="fw-500 dark-color">Me</span>
+									<span class="fw-300 dark-color_400 hstack gap-10px">Monday 15:11</span>
+								</div>
+							</div>
+						</div>
+						<div class="chat-item hstack gap-10px">
+							<div class="chat-avatar align-self-end flex-shrink-0">
+								<img src="./assets/images/logo.png" width="48" height="48" class="img-fluid" alt="">
+							</div>
+							<div class="chat-content vstack gap-10px">
+								<div class="chat-messages vstack gap-5px">
+									<div class="chat-message_item">
+										Hi! Thank you for calling Bnails.
+									</div>
+									<div class="chat-message_item">
+										Can I get your name for the appointment?
+									</div>
+									<div class="chat-message_item">
+										Would you like to schedule an appointment for today or a future date?
+									</div>
+								</div>
+								<div class="chat-time hstack gap-10px fz-12">
+									<span class="fw-500 dark-color">Customer service</span>
+									<span class="fw-300 dark-color_400 hstack gap-10px">Monday 15:11</span>
+								</div>
+							</div>
+						</div>
+						<div class="chat-item chat-item_primary hstack gap-10px">
+							<div class="chat-content vstack gap-10px">
+								<div class="chat-messages vstack gap-5px">
+									<div class="chat-message_item">
+										It's Rosie Phan
+									</div>
+								</div>
+								<div class="chat-time hstack gap-10px fz-12">
+									<span class="fw-500 dark-color">Me</span>
+									<span class="fw-300 dark-color_400 hstack gap-10px">Monday 15:11</span>
+								</div>
+							</div>
+						</div>
+						<div class="chat-item hstack gap-10px">
+							<div class="chat-avatar align-self-end flex-shrink-0">
+								<img src="./assets/images/logo.png" width="48" height="48" class="img-fluid" alt="">
+							</div>
+							<div class="chat-content vstack gap-10px">
+								<div class="chat-messages vstack gap-5px">
+									<div class="chat-message_item">
+										Would you like to schedule an appointment for today or a future date?
+									</div>
+								</div>
+								<div class="chat-time hstack gap-10px fz-12">
+									<span class="fw-500 dark-color">Customer service</span>
+									<span class="fw-300 dark-color_400 hstack gap-10px">Monday 15:11</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="chat-wrapper">
+						<div class="chat-day">
+							<span class="position-absolute top-50 start-50 translate-middle fz-12 lh-sm fw-300 dark-color_400">Today</span>
+						</div>
+						<div class="chat-item chat-item_primary hstack gap-10px">
+							<div class="chat-content vstack gap-10px">
+								<div class="chat-messages vstack gap-5px">
+									<div class="chat-message_item">
+										Hi, good morning! I'd like to schedule an appointment for a manicure and
+										pedicure.
+									</div>
+								</div>
+								<div class="chat-time hstack gap-10px fz-12">
+									<span class="fw-500 dark-color">Me</span>
+									<span class="fw-300 dark-color_400 hstack gap-10px">Monday 15:11</span>
+								</div>
+							</div>
+						</div>
+						<div class="chat-item hstack gap-10px">
+							<div class="chat-avatar align-self-end flex-shrink-0">
+								<img src="./assets/images/logo.png" width="48" height="48" class="img-fluid" alt="">
+							</div>
+							<div class="chat-content vstack gap-10px">
+								<div class="chat-messages vstack gap-5px">
+									<div class="chat-message_item">
+										Hi! Thank you for calling Bnails.
+									</div>
+									<div class="chat-message_item">
+										Can I get your name for the appointment?
+									</div>
+									<div class="chat-message_item">
+										Would you like to schedule an appointment for today or a future date?
+									</div>
+								</div>
+								<div class="chat-time hstack gap-10px fz-12">
+									<span class="fw-500 dark-color">Customer service</span>
+									<span class="fw-300 dark-color_400 hstack gap-10px">Monday 15:11</span>
+								</div>
+							</div>
+						</div>
+						<div class="chat-item chat-item_primary hstack gap-10px">
+							<div class="chat-content vstack gap-10px">
+								<div class="chat-messages vstack gap-5px">
+									<div class="chat-message_item">
+										It's Rosie Phan
+									</div>
+								</div>
+								<div class="chat-time hstack gap-10px fz-12">
+									<span class="fw-500 dark-color">Me</span>
+									<span class="fw-300 dark-color_400 hstack gap-10px">Monday 15:11</span>
+								</div>
+							</div>
+						</div>
+						<div class="chat-item hstack gap-10px">
+							<div class="chat-avatar align-self-end flex-shrink-0">
+								<img src="./assets/images/logo.png" width="48" height="48" class="img-fluid" alt="">
+							</div>
+							<div class="chat-content vstack gap-10px">
+								<div class="chat-messages vstack gap-5px">
+									<div class="chat-message_item">
+										Would you like to schedule an appointment for today or a future date?
+									</div>
+								</div>
+								<div class="chat-time hstack gap-10px fz-12">
+									<span class="fw-500 dark-color">Customer service</span>
+									<span class="fw-300 dark-color_400 hstack gap-10px">Monday 15:11</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer id="footer" class="footer position-fixed bottom-0 start-0 end-0 zi-10 w-100">
+		<div class="chat-footer">
+			<div class="chat-editor bg-white w-100">
+				<div class="container">
+					<div class="chat-editor_form position-relative w-100" id="handleCalcSizeForm">
+						<button type="button" class="chat-image_button position-absolute zi-2 link-default effect-path">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+							     xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+								      d="M15 13.3334C15.2889 13.3334 15.5571 13.1838 15.7089 12.9381C15.8608 12.6925 15.8746 12.3857 15.7454 12.1274L12.4121 5.4607C12.2709 5.17838 11.9823 5.00004 11.6667 5.00004C11.3511 5.00004 11.0625 5.17838 10.9213 5.4607L9.16671 8.96998L8.24539 7.12736C8.10423 6.84504 7.81568 6.66671 7.50004 6.66671C7.18439 6.66671 6.89584 6.84504 6.75468 7.12736L4.25468 12.1274C4.12552 12.3857 4.13933 12.6925 4.29116 12.9381C4.443 13.1838 4.71123 13.3334 5.00004 13.3334L15 13.3334ZM9.91583 11.1985L11.6667 7.69676L13.6517 11.6667H9.68173L9.90772 11.2147C9.91048 11.2094 9.91319 11.2039 9.91583 11.1985ZM8.23501 10.8334L7.50004 9.36343L6.3484 11.6667H7.81834L8.23501 10.8334Z"
+								      fill="#9196A6"/>
+								<path fill-rule="evenodd" clip-rule="evenodd"
+								      d="M0.833374 3.33337C0.833374 1.95266 1.95266 0.833374 3.33337 0.833374H16.6667C18.0474 0.833374 19.1667 1.95266 19.1667 3.33337V16.6667C19.1667 18.0474 18.0474 19.1667 16.6667 19.1667H3.33337C1.95266 19.1667 0.833374 18.0474 0.833374 16.6667V3.33337ZM3.33337 2.50004C2.87314 2.50004 2.50004 2.87314 2.50004 3.33337V16.6667C2.50004 17.1269 2.87314 17.5 3.33337 17.5H16.6667C17.1269 17.5 17.5 17.1269 17.5 16.6667V3.33337C17.5 2.87314 17.1269 2.50004 16.6667 2.50004H3.33337Z"
+								      fill="#9196A6"/>
+							</svg>
+						</button>
+						<textarea class="chat-editor_input" id="handleEditorChange"
+						          placeholder="Write messages..."></textarea>
+						<button type="button" class="chat-editor_button position-absolute zi-2 link-default">
+							<svg width="19" height="20" viewBox="0 0 19 20" fill="none"
+							     xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+								      d="M0.942154 1.04764C1.20154 0.813911 1.57914 0.766669 1.88812 0.929289L17.7214 9.26262C17.9952 9.40672 18.1667 9.69065 18.1667 10.0001C18.1667 10.3095 17.9952 10.5934 17.7214 10.7375L1.88812 19.0708C1.57914 19.2334 1.20154 19.1862 0.942154 18.9525C0.682765 18.7187 0.596589 18.3481 0.726264 18.0239L3.9358 10.0001L0.726264 1.97621C0.596589 1.65203 0.682765 1.28137 0.942154 1.04764ZM5.39752 10.8334L3.11399 16.5422L13.9608 10.8334H5.39752ZM13.9608 9.16672H5.39752L3.11399 3.4579L13.9608 9.16672Z"
+								      fill="#E1099E"/>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 </div>
 
 <script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>

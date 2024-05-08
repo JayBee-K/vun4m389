@@ -1,597 +1,626 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-
 @font-face {
-    font-family: 'Helvetica Neus';
-    font-style: normal;
-    font-weight: 200;
-    font-display: swap;
-    src: url(../fonts/helvetica-neue/HelveticaNeueLight.otf) format('opentype');
+	font-family: 'Helvetica Neus';
+	font-style: normal;
+	font-weight: 200;
+	font-display: swap;
+	src: url(../fonts/helvetica-neue/HelveticaNeueThin.otf) format('opentype');
 }
 
 @font-face {
-    font-family: 'Helvetica Neus';
-    font-style: italic;
-    font-weight: 200;
-    font-display: swap;
-    src: url(../fonts/helvetica-neue/HelveticaNeueLightItalic.otf) format('opentype');
+	font-family: 'Helvetica Neus';
+	font-style: italic;
+	font-weight: 200;
+	font-display: swap;
+	src: url(../fonts/helvetica-neue/HelveticaNeueThinItalic.otf) format('opentype');
 }
 
 @font-face {
-    font-family: 'Helvetica Neus';
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: url(../fonts/helvetica-neue/HelveticaNeueThin.otf) format('opentype');
+	font-family: 'Helvetica Neus';
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src: url(../fonts/helvetica-neue/HelveticaNeueLight.otf) format('opentype');
 }
 
 @font-face {
-    font-family: 'Helvetica Neus';
-    font-style: italic;
-    font-weight: 300;
-    font-display: swap;
-    src: url(../fonts/helvetica-neue/HelveticaNeueThinItalic.otf) format('opentype');
+	font-family: 'Helvetica Neus';
+	font-style: italic;
+	font-weight: 300;
+	font-display: swap;
+	src: url(../fonts/helvetica-neue/HelveticaNeueLightItalic.otf) format('opentype');
 }
 
 @font-face {
-    font-family: 'Helvetica Neus';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(../fonts/helvetica-neue/HelveticaNeueRoman.otf) format('opentype');
+	font-family: 'Helvetica Neus';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(../fonts/helvetica-neue/HelveticaNeueRoman.otf) format('opentype');
 }
 
 @font-face {
-    font-family: 'Helvetica Neus';
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-    src: url(../fonts/helvetica-neue/HelveticaNeueItalic.ttf) format('truetype');
+	font-family: 'Helvetica Neus';
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+	src: url(../fonts/helvetica-neue/HelveticaNeueItalic.ttf) format('truetype');
 }
 
 @font-face {
-    font-family: 'Helvetica Neus';
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: url(../fonts/helvetica-neue/HelveticaNeueMedium.otf) format('opentype');
+	font-family: 'Helvetica Neus';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url(../fonts/helvetica-neue/HelveticaNeueMedium.otf) format('opentype');
 }
 
 @font-face {
-    font-family: 'Helvetica Neus';
-    font-style: italic;
-    font-weight: 500;
-    font-display: swap;
-    src: url(../fonts/helvetica-neue/HelveticaNeueMediumItalic.otf) format('opentype');
+	font-family: 'Helvetica Neus';
+	font-style: italic;
+	font-weight: 500;
+	font-display: swap;
+	src: url(../fonts/helvetica-neue/HelveticaNeueMediumItalic.otf) format('opentype');
 }
 
 @font-face {
-    font-family: 'Helvetica Neus';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url(../fonts/helvetica-neue/HelveticaNeueBold.otf) format('opentype');
+	font-family: 'Helvetica Neus';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url(../fonts/helvetica-neue/HelveticaNeueBold.otf) format('opentype');
 }
 
 @font-face {
-    font-family: 'Helvetica Neus';
-    font-style: italic;
-    font-weight: 700;
-    font-display: swap;
-    src: url(../fonts/helvetica-neue/HelveticaNeueBoldItalic.otf) format('opentype');
+	font-family: 'Helvetica Neus';
+	font-style: italic;
+	font-weight: 700;
+	font-display: swap;
+	src: url(../fonts/helvetica-neue/HelveticaNeueBoldItalic.otf) format('opentype');
 }
 
 @font-face {
-    font-family: 'Helvetica Neus';
-    font-style: normal;
-    font-weight: 800;
-    font-display: swap;
-    src: url(../fonts/helvetica-neue/HelveticaNeueHeavy.otf) format('opentype');
+	font-family: 'Helvetica Neus';
+	font-style: normal;
+	font-weight: 800;
+	font-display: swap;
+	src: url(../fonts/helvetica-neue/HelveticaNeueHeavy.otf) format('opentype');
 }
 
 @font-face {
-    font-family: 'Helvetica Neus';
-    font-style: italic;
-    font-weight: 800;
-    font-display: swap;
-    src: url(../fonts/helvetica-neue/HelveticaNeueHeavyItalic.otf) format('opentype');
+	font-family: 'Helvetica Neus';
+	font-style: italic;
+	font-weight: 800;
+	font-display: swap;
+	src: url(../fonts/helvetica-neue/HelveticaNeueHeavyItalic.otf) format('opentype');
 }
 
 @font-face {
-    font-family: 'Helvetica Neus';
-    font-style: normal;
-    font-weight: 900;
-    font-display: swap;
-    src: url(../fonts/helvetica-neue/HelveticaNeueBlack.otf) format('opentype');
+	font-family: 'Helvetica Neus';
+	font-style: normal;
+	font-weight: 900;
+	font-display: swap;
+	src: url(../fonts/helvetica-neue/HelveticaNeueBlack.otf) format('opentype');
 }
 
 @font-face {
-    font-family: 'Helvetica Neus';
-    font-style: italic;
-    font-weight: 900;
-    font-display: swap;
-    src: url(../fonts/helvetica-neue/HelveticaNeueBlackItalic.otf) format('opentype');
+	font-family: 'Helvetica Neus';
+	font-style: italic;
+	font-weight: 900;
+	font-display: swap;
+	src: url(../fonts/helvetica-neue/HelveticaNeueBlackItalic.otf) format('opentype');
 }
 
 
 :root {
-    --transition-default: 0.3s all ease-in-out;
-    --font-heading: "Lato", "Helvetica Neus", sans-serif;
-    --font-theme: "Helvetica Neus", sans-serif;
-    --size-theme: 14px;
+	--transition-default: 0.3s all ease-in-out;
+	--font-heading: "Lato", "Helvetica Neus", sans-serif;
+	--font-theme: "Helvetica Neus", sans-serif;
+	--size-theme: 14px;
 
 
-    /* Color Base */
-    --primary-color: #E1099E;
-    --primary-hover: #F960C9;
-    --primary-rgb: 225, 9, 158;
+	/* Color Base */
+	--primary-color: #E1099E;
+	--primary-hover: #F960C9;
+	--primary-rgb: 225, 9, 158;
 
-    --primary-400: #F72BB7;
-    --primary-200: #FB95DB;
-    --primary-100: #FDCAED;
-    --primary-50: #FEE4F6;
+	--primary-400: #F72BB7;
+	--primary-200: #FB95DB;
+	--primary-100: #FDCAED;
+	--primary-50: #FEE4F6;
 
-    --dark-color: #111215;
-    --dark-900: #1C1E23;
-    --dark-800: #32353E;
-    --dark-700: #494D5A;
-    --dark-600: #5F6475;
-    --dark-500: #767C90;
-    --dark-400: #9196A6;
-    --dark-300: #ADB1BC;
+	--dark-color: #111215;
+	--dark-900: #1C1E23;
+	--dark-800: #32353E;
+	--dark-700: #494D5A;
+	--dark-600: #5F6475;
+	--dark-500: #767C90;
+	--dark-400: #9196A6;
+	--dark-300: #ADB1BC;
 
-    --bg-light: #F8F8F9;
+	--bg-light: #F8F8F9;
 }
 
 body {
-    position: relative;
-    width: 100%;
-    color: var(--dark-color);
-    font-family: var(--font-theme);
-    font-size: var(--size-theme);
-    font-weight: 400;
-    font-style: normal;
-    background-color: var(--bs-white);
+	position: relative;
+	width: 100%;
+	color: var(--dark-color);
+	font-family: var(--font-theme);
+	font-size: var(--size-theme);
+	font-weight: 400;
+	font-style: normal;
+	background-color: var(--bs-white);
 }
 
 *::-webkit-scrollbar {
-    width: 0;
+	width: 0;
 }
 
 a,
 a:hover,
 a:focus {
-    outline: none;
-    text-decoration: none;
-    cursor: pointer;
-    -o-transition: var(--transition-default);
-    transition: var(--transition-default);
-    -webkit-transition: var(--transition-default);
+	outline: none;
+	text-decoration: none;
+	cursor: pointer;
+	-o-transition: var(--transition-default);
+	transition: var(--transition-default);
+	-webkit-transition: var(--transition-default);
 }
 
 button,
 button:hover,
 button:focus {
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-    outline: none !important;
-    text-decoration: none !important;
-    cursor: pointer;
-    -o-transition: var(--transition-default);
-    transition: var(--transition-default);
-    -webkit-transition: var(--transition-default);
-    cursor: pointer !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	outline: none !important;
+	text-decoration: none !important;
+	cursor: pointer;
+	-o-transition: var(--transition-default);
+	transition: var(--transition-default);
+	-webkit-transition: var(--transition-default);
+	cursor: pointer !important;
 }
 
 input,
 select,
 textarea {
-    -o-transition: var(--transition-default);
-    transition: var(--transition-default);
-    -webkit-transition: var(--transition-default);
+	-o-transition: var(--transition-default);
+	transition: var(--transition-default);
+	-webkit-transition: var(--transition-default);
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%) !important;
-    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%) !important;
-    outline: none !important;
-    border-color: #66afe9 !important;
+	box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%) !important;
+	-webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%) !important;
+	outline: none !important;
+	border-color: #66afe9 !important;
 }
 
 .transition-default {
-    -o-transition: var(--transition-default);
-    transition: var(--transition-default);
-    -webkit-transition: var(--transition-default);
+	-o-transition: var(--transition-default);
+	transition: var(--transition-default);
+	-webkit-transition: var(--transition-default);
 }
 
 .background-cover {
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
 }
 
 .image-cover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
 }
 
 .image-contain {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -o-object-fit: contain;
-    object-fit: contain;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-o-object-fit: contain;
+	object-fit: contain;
 }
 
 .object-fit-cover {
-    -o-object-fit: cover;
-    object-fit: cover;
+	-o-object-fit: cover;
+	object-fit: cover;
 }
 
 .object-fit-contain {
-    -o-object-fit: contain;
-    object-fit: contain;
+	-o-object-fit: contain;
+	object-fit: contain;
 }
 
 .pseudo {
-    position: relative;
+	position: relative;
 }
 
 .pseudo:before,
 .pseudo:after {
-    position: absolute;
-    content: '';
-    display: block;
+	position: absolute;
+	content: '';
+	display: block;
 }
 
 .zi--1 {
-    z-index: -1;
+	z-index: -1;
 }
 
 .zi-1 {
-    z-index: 1;
+	z-index: 1;
 }
 
 .zi-2 {
-    z-index: 2;
+	z-index: 2;
 }
 
 .zi-3 {
-    z-index: 3;
+	z-index: 3;
 }
 
 .zi-4 {
-    z-index: 4;
+	z-index: 4;
 }
 
 .zi-5 {
-    z-index: 5;
+	z-index: 5;
 }
 
 .zi-10 {
-    z-index: 10;
+	z-index: 10;
 }
 
 .ratio > img {
-    -o-object-fit: cover;
-    object-fit: cover;
+	-o-object-fit: cover;
+	object-fit: cover;
 }
 
 .ratio-2x1 {
-    --bs-aspect-ratio: 50%;
+	--bs-aspect-ratio: 50%;
 }
 
 .ratio-3x2 {
-    --bs-aspect-ratio: calc(2 / 3 * 100%);
+	--bs-aspect-ratio: calc(2 / 3 * 100%);
 }
 
 .gap-5px {
-    gap: 5px;
+	gap: 5px;
 }
 
 .gap-10px {
-    gap: 10px;
+	gap: 10px;
 }
 
 .gap-15px {
-    gap: 15px;
+	gap: 15px;
 }
 
 .gap-20px {
-    gap: 20px;
+	gap: 20px;
 }
 
 .gap-25px {
-    gap: 25px;
+	gap: 25px;
 }
 
 .gap-30px {
-    gap: 30px;
+	gap: 30px;
 }
 
 .link-default {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    vertical-align: middle;
-    border: 0;
-    outline: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    background: transparent;
-    padding: 0;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	vertical-align: middle;
+	border: 0;
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	background: transparent;
+	padding: 0;
 }
 
 .flex-same {
-    -webkit-box-flex: 1 !important;
-    -ms-flex: 1 1 0px !important;
-    flex: 1 1 0 !important;
+	-webkit-box-flex: 1 !important;
+	-ms-flex: 1 1 0px !important;
+	flex: 1 1 0 !important;
 }
 
 .fz-10 {
-    font-size: .7em;
+	font-size: .7em;
 }
 
 .fz-11 {
-    font-size: .775em;
+	font-size: .775em;
 }
 
 .fz-12 {
-    font-size: .85em;
+	font-size: .85em;
 }
 
 .fz-13 {
-    font-size: .925em;
+	font-size: .925em;
 }
 
 .fz-14 {
-    font-size: 1em;
+	font-size: 1em;
 }
 
 .fz-15 {
-    font-size: 1.075em;
+	font-size: 1.075em;
 }
 
 .fz-16 {
-    font-size: 1.15em;
+	font-size: 1.15em;
 }
 
 .fz-17 {
-    font-size: 1.225em;
+	font-size: 1.225em;
 }
 
 .fz-18 {
-    font-size: 1.3em;
+	font-size: 1.3em;
 }
 
 .fz-19 {
-    font-size: 1.375em;
+	font-size: 1.375em;
 }
 
 .fz-20 {
-    font-size: 1.45em;
+	font-size: 1.45em;
 }
 
 .fz-21 {
-    font-size: 1.525em;
+	font-size: 1.525em;
 }
 
 .fz-22 {
-    font-size: 1.6em;
+	font-size: 1.6em;
 }
 
 .fz-23 {
-    font-size: 1.675em;
+	font-size: 1.675em;
 }
 
 .fz-24 {
-    font-size: 1.75em;
+	font-size: 1.75em;
 }
 
 .fz-inherit {
-    font-size: inherit !important
+	font-size: inherit !important
 }
 
 .color-inherit {
-    color: inherit !important
+	color: inherit !important
 }
 
 .primary-color {
-    color: var(--primary-color);
+	color: var(--primary-color);
 }
 
 .dark-color {
-    color: var(--dark-color);
+	color: var(--dark-color);
 }
 
 .dark-color_900 {
-    color: var(--dark-900);
+	color: var(--dark-900);
 }
 
 .dark-color_800 {
-    color: var(--dark-800);
+	color: var(--dark-800);
 }
 
 .dark-color_700 {
-    color: var(--dark-700);
+	color: var(--dark-700);
 }
 
 .dark-color_600 {
-    color: var(--dark-600);
+	color: var(--dark-600);
 }
 
 .dark-color_500 {
-    color: var(--dark-500);
+	color: var(--dark-500);
 }
 
 .dark-color_400 {
-    color: var(--dark-400);
+	color: var(--dark-400);
 }
 
 .dark-color_300 {
-    color: var(--dark-300);
+	color: var(--dark-300);
 }
 
 .fw-300 {
-    font-weight: 300;
+	font-weight: 300;
 }
 
 .fw-400 {
-    font-weight: 400;
+	font-weight: 400;
 }
 
 .fw-500 {
-    font-weight: 500;
+	font-weight: 500;
 }
 
 .fw-600 {
-    font-weight: 600;
+	font-weight: 600;
 }
 
 .fw-700 {
-    font-weight: 700;
+	font-weight: 700;
 }
 
 .fw-800 {
-    font-weight: 800;
+	font-weight: 800;
 }
 
 .fw-900 {
-    font-weight: 900;
+	font-weight: 900;
 }
 
 .mw-25px {
-    min-width: 25px !important;
+	min-width: 25px !important;
 }
 
 .mw-50px {
-    min-width: 50px !important;
+	min-width: 50px !important;
 }
 
 .mw-75px {
-    min-width: 75px !important;
+	min-width: 75px !important;
 }
 
 .mw-100px {
-    min-width: 100px !important;
+	min-width: 100px !important;
 }
 
 .effect-path svg path {
-    transition: var(--transition-default);
+	transition: var(--transition-default);
 }
 
 .effect-path:active svg path {
-    fill: var(--primary-color);
+	fill: var(--primary-color);
 }
 
 .button-theme {
-    padding: 10px 24px;
-    box-shadow: none;
-    outline: none;
-    border-radius: 56px;
-    border: 1px solid transparent;
-    gap: 8px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1em;
-    font-weight: 700;
-    transition: var(--transition-default);
-    white-space: nowrap;
+	padding: 10px 24px;
+	box-shadow: none;
+	outline: none;
+	border-radius: 56px;
+	border: 1px solid transparent;
+	gap: 8px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1em;
+	font-weight: 700;
+	transition: var(--transition-default);
+	white-space: nowrap;
 }
 
 .button-theme svg {
-    position: relative;
-    top: -1px;
+	position: relative;
+	top: -1px;
 }
 
 .button-theme svg path {
-    transition: var(--transition-default);
+	transition: var(--transition-default);
 }
 
 .button-theme.button-theme_primary {
-    color: var(--bs-white);
-    border-color: var(--primary-color);
-    background-color: var(--primary-color);
+	color: var(--bs-white);
+	border-color: var(--primary-color);
+	background-color: var(--primary-color);
 }
 
 .button-theme.button-theme_outline_dark {
-    color: var(--dark-color);
-    border-color: var(--dark-color);
-    background-color: var(--bs-white);
+	color: var(--dark-color);
+	border-color: var(--dark-color);
+	background-color: var(--bs-white);
 }
 
 .button-theme.button-theme_primary:active,
 .button-theme.button-theme_outline_dark:active {
-    color: var(--bs-white);
-    border-color: var(--primary-hover);
-    background-color: var(--primary-hover);
+	color: var(--bs-white);
+	border-color: var(--primary-hover);
+	background-color: var(--primary-hover);
 }
 
 .button-theme.button-theme_primary:active svg path,
 .button-theme.button-theme_outline_dark:active svg path {
-    fill: var(--bs-white);
+	fill: var(--bs-white);
 }
 
 .modal-theme .modal-dialog {
-    -webkit-transform: translate(0, 250px);
-    -ms-transform: translate(0, 250px);
-    transform: translate(0, 250px);
+	-webkit-transform: translate(0, 250px);
+	-ms-transform: translate(0, 250px);
+	transform: translate(0, 250px);
 }
 
 .modal-theme.show .modal-dialog {
-    -webkit-transform: none !important;
-    -ms-transform: none !important;
-    transform: none !important;
+	-webkit-transform: none !important;
+	-ms-transform: none !important;
+	transform: none !important;
 }
 
 .modal-theme .modal-dialog .modal-content {
-    border-radius: 24px;
+	border-radius: 24px;
 }
 
 .modal-full {
-    top: unset;
-    bottom: 0;
+	top: unset;
+	bottom: 0;
 }
 
-.modal-full .modal-dialog {
-    max-width: 100%;
-    height: calc(100% - 50px);
-    min-height: calc(100% - 50px);
-    margin: 50px 0 0;
-    transition: var(--transition-default) !important;
-    transform: translateY(110%) !important;
+/*.modal-full .modal-dialog {
+	max-width: 100%;
+	max-height: calc(100% - 50px);
+	overflow: hidden;
+	min-height: 50px;
+	margin: auto 0;
+	transition: var(--transition-default) !important;
+	transform: translateY(110%) !important;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
 }
 
 .modal-full .modal-dialog .modal-content {
-    height: 100%;
-    border-radius: 24px 24px 0 0;
+	height: 100%;
+	max-height: 100%;
+	border-radius: 24px 24px 0 0;
+}*/
+
+.modal-full .modal-dialog {
+	max-width: 100%;
+	max-height: 100%;
+	min-height: 50px;
+	height: 100%;
+	overflow: hidden;
+	margin: auto 0;
+	transition: var(--transition-default) !important;
+	transform: translateY(110%) !important;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.modal-full .modal-dialog .modal-content {
+	height: auto;
+	max-height: calc(100% - 50px);
+	border-radius: 24px 24px 0 0;
 }
 
 .modal-full .modal-header {
-    position: relative;
-    padding-top: 25px;
+	position: relative;
+	padding-top: 25px;
 }
 
 .modal-full .modal-header .modal-button_close {
-    top: 15px;
+	top: 15px;
 }
 
 .modal-full .modal-footer .modal-button_expand {
-    width: 43px;
-    height: 43px;
-    padding: 0;
-    flex-shrink: 0;
+	width: 43px;
+	height: 43px;
+	padding: 0;
+	flex-shrink: 0;
 }
