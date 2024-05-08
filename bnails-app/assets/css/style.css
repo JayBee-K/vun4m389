@@ -722,6 +722,13 @@
 	width: 100%;
 	height: 50px;
 	padding: 15px 45px;
+	transition: var(--transition-default);
+	border: 1px solid transparent;
+}
+
+.section-search .search-inner.focus-input {
+	background: var(--bs-white);
+	border-color: var(--primary-color);
 }
 
 .section-search .search-inner .search-inner_input {
@@ -762,4 +769,84 @@
 
 .bcoin-history .bcoin-history_item + .bcoin-history_item {
 	border-top: 1px solid #F1F2F4;
+}
+
+.section-user {
+	padding: 30px;
+}
+
+.section-user .user-header .user-back .user-back_link{
+	width: 40px;
+	height: 40px;
+	background: var(--primary-50);
+}
+
+.section-user .user-header .user-back .user-back_link svg path {
+	transition: var(--transition-default);
+}
+
+.section-user .user-header .user-back .user-back_link:active{
+	background: var(--primary-color);
+}
+
+.section-user .user-header .user-back .user-back_link:active svg path {
+	fill: var(--bs-white);
+}
+
+.section-user .user-body {
+	margin-top: 45px;
+}
+
+.section-form .form-item + .form-item {
+	margin-top: 15px;
+}
+
+.section-form .form-item .form-label {
+	margin-bottom: 8px;
+}
+
+.section-form .form-item .form-group {
+	background: var(--bg-light);
+	border-radius: 48px;
+	width: 100%;
+	height: 50px;
+	padding: 15px;
+	transition: var(--transition-default);
+	border: 1px solid transparent;
+}
+
+.section-form .form-item .form-group .form-group_input {
+	border: none !important;
+	box-shadow: none !important;
+	outline: none !important;
+	border-radius: 0;
+	background: transparent;
+	font-size: 1.075em;
+	color: var(--bs-black);
+	font-weight: 400;
+	resize: none;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.section-form .form-item .form-group .form-group_button__prepend {
+	left: 15px;
+}
+
+.section-form .form-item .form-group .form-group_button__prepend ~ .form-group_input {
+	padding-left: 30px;
+}
+
+.section-form .form-item .form-group .form-group_button__append {
+	right: 15px;
+}
+
+.section-form .form-item .form-group .form-group_button__append ~ .form-group_input {
+	padding-right: 30px;
+}
+
+.section-form .form-item .form-group.focus-input {
+	background: var(--bs-white);
+	border-color: var(--primary-color);
 }
