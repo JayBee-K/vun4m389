@@ -353,6 +353,25 @@ export function handleToggleTypePassword() {
 	}
 }
 
+/****
+ * Handle Init Material Date
+ */
+
+export function handleInitMaterialDate() {
+	let handleInitMaterial = document.querySelectorAll('.handleInitMaterial');
+	if (handleInitMaterial !== null) {
+		handleInitMaterial.forEach(function (item) {
+			const picker = new MaterialDatePicker().on('submit', (val) => {
+				item.value = moment(val.toDate()).format('DD/MM/YYYY');
+			})
+
+			item.addEventListener('click', function () {
+				picker.open()
+			});
+		});
+	}
+}
+
 window.addEventListener('load', function () {
 	window.addEventListener("resize", () => {
 		windowWidth = window.innerWidth;
@@ -365,6 +384,7 @@ window.addEventListener('load', function () {
 	handleCalcHeightTextarea();
 	handleFocusInput();
 	handleToggleTypePassword();
+	handleInitMaterialDate();
 });
 
 

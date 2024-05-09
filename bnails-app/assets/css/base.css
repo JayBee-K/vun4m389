@@ -721,3 +721,87 @@ textarea:focus {
 .is-preloader .main {
 	height: 100%;
 }
+
+.c-scrim {
+	background-color: rgba(0, 0, 0, 0.4);
+	z-index: 1058;
+}
+
+.c-datepicker {
+	z-index: 1059;
+	min-height: 350px;
+	border-radius: 24px;
+	overflow: hidden;
+	top: 75%;
+}
+
+.c-datepicker.c-datepicker {
+	top: 50%;
+}
+
+.c-datepicker,
+.c-datepicker:after,
+.c-datepicker:before,
+.c-datepicker *,
+.c-datepicker *:after,
+.c-datepicker *:before {
+	box-sizing: unset;
+}
+
+.c-datepicker__header,
+.c-datepicker__clock {
+	display: none !important;
+}
+
+.c-datepicker__header-day {
+	background-color: var(--primary-color);
+}
+
+.c-datepicker__header-date {
+	background-color: var(--primary-hover);
+}
+
+.c-datepicker__header-date__month {
+	font-size: 1.3em;
+}
+
+.c-datepicker__header-date__day {
+	line-height: 1.35;
+	font-size: 4em;
+}
+
+.c-datepicker__header-date__time {
+	font-size: 1.7em;
+}
+
+.c-datepicker__clock-hands {
+	background-color: var(--primary-color);
+}
+
+.c-datepicker__day--selected {
+	color: var(--bs-white);
+}
+
+.c-datepicker__day--selected::after {
+	background-color: var(--primary-color) !important;
+	z-index: -1;
+}
+
+.c-datepicker__hour-hand,
+.u-hover-ball-effect:hover:before, .c-datepicker__day-body:hover:before, .c-datepicker__clock__num:hover:before, .c-datepicker__clock__am-pm-toggle label:hover:before {
+	background-color: var(--primary-color) !important;
+}
+
+.c-btn {
+	color: var(--dark-700);
+}
+
+.rd-month-label {
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.c-datepicker__day-head,
+.c-datepicker__day-body {
+	font-size: 14px;
+}
