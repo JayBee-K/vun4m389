@@ -523,6 +523,16 @@ textarea:focus {
 	white-space: nowrap;
 }
 
+.button-theme.button-theme_small {
+	padding: 6px 18px;
+	font-size: .925em;
+}
+
+.button-theme.button-theme_large {
+	padding: 12px 30px;
+	font-size: 1.075em;
+}
+
 .button-theme svg {
 	position: relative;
 	top: -1px;
