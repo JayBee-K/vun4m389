@@ -372,6 +372,58 @@ export function handleInitMaterialDate() {
 	}
 }
 
+/****=
+ * Handle Call Modal Location & Fill Data
+ */
+
+export function handleModalLocation() {
+	let callModalLocation = document.querySelectorAll('.callModalLocation');
+	let modalLocation = new bootstrap.Modal('#modalLocation');
+	if (callModalLocation !== null && modalLocation !== null) {
+		callModalLocation.forEach(function (item) {
+			item.addEventListener('click', function () {
+
+				// Lấy lại vị trí của input và gán vào modal
+				// (mục đích để khi selected danh sách sẽ fill vào input trước đó
+
+				let target = item.getAttribute('data-fill');
+				modalLocation._element.setAttribute('data-target', target);
+				modalLocation.show()
+			});
+		});
+	}
+
+	let handleChangeList = document.getElementById('handleChangeList');
+	if (handleChangeList !== null) {
+		let handleChangeListItem = handleChangeList.querySelectorAll('.handleChangeListItem');
+		if (handleChangeListItem !== null) {
+			handleChangeListItem.forEach(function (item) {
+				item.addEventListener('click', function () {
+					if (item.classList.contains('is-selected') === false) {
+						handleChangeListItem.forEach(function (el) {
+							el.classList.remove('is-selected');
+						});
+						item.classList.add('is-selected');
+					}
+
+					// Lấy lại giá trị attribute của modal và tìm vị trí của input để fill giá trị của select
+					// (kết hợp với đoạn script phía trên)
+
+					let value = item.getAttribute('data-value');
+					let target = modalLocation._element.getAttribute('data-target');
+
+					let input = document.querySelector(`.callModalLocation[data-fill="${target}"]`);
+					if(input !== null) {
+						input.value = value;
+						input.parentElement.classList.add('focus-input');
+						modalLocation.hide()
+					}
+				});
+			});
+		}
+	}
+}
+
 window.addEventListener('load', function () {
 	window.addEventListener("resize", () => {
 		windowWidth = window.innerWidth;
@@ -385,6 +437,7 @@ window.addEventListener('load', function () {
 	handleFocusInput();
 	handleToggleTypePassword();
 	handleInitMaterialDate();
+	handleModalLocation();
 });
 
 

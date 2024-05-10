@@ -839,7 +839,8 @@
 }
 
 .section-form .form-item .form-group .form-group_input.form-group_fake__select {
-	cursor: no-drop;
+	caret-color: transparent;
+	cursor: pointer;
 }
 
 .section-form .form-item .form-group .form-group_button__prepend {
@@ -896,6 +897,32 @@
 	text-align: center;
 	position: absolute;
 	inset: 0;
+}
+
+.section-form .form-item .form-list {
+	border-radius: 20px;
+	padding: 12px;
+	background-color: var(--bs-white);
+}
+
+.section-form .form-item .form-list .form-list_item {
+	padding: 12px 24px;
+	border: 1px solid var(--primary-50);
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	transition: var(--transition-default);
+}
+
+.section-form .form-item .form-list .form-list_item:first-child,
+.section-form .form-item .form-list .form-list_item.is-selected + .form-list_item {
+	border-top-color: transparent
+}
+
+.section-form .form-item .form-list .form-list_item.is-selected {
+	background-color: var(--primary-50);
+	border-color: var(--primary-200);
+	border-radius: 56px;
 }
 
 .profile-user {
@@ -1235,4 +1262,12 @@
 .booking-step .step-item.stepItemCurrent .step-item_content {
 	background-color: var(--bs-white);
 	border-color: var(--primary-50);
+}
+
+.modal-location .modal-content {
+	background-color: var(--bg-light);
+}
+
+.modal-location .section-form {
+	padding: 15px;
 }
