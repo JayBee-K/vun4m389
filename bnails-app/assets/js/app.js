@@ -413,7 +413,7 @@ export function handleModalLocation() {
 					let target = modalLocation._element.getAttribute('data-target');
 
 					let input = document.querySelector(`.callModalLocation[data-fill="${target}"]`);
-					if(input !== null) {
+					if (input !== null) {
 						input.value = value;
 						input.parentElement.classList.add('focus-input');
 						modalLocation.hide()
@@ -423,6 +423,7 @@ export function handleModalLocation() {
 		}
 	}
 }
+
 
 window.addEventListener('load', function () {
 	window.addEventListener("resize", () => {

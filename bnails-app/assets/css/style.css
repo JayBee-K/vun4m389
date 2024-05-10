@@ -1202,22 +1202,22 @@
 	top: 36px;
 	left: 12px;
 	width: 1px;
-	border-left: 1px dotted #C8CBD3;
+	border-left: 1px dotted var(--primary-color);
 	z-index: -1;
 }
 
 .booking-step .step-item .step-item_button {
 	width: 24px;
 	height: 24px;
-	background-color: #C8CBD3;
+	background-color: var(--primary-color);
 	margin-top: 13px;
 }
 
 .booking-step .step-item .step-item_content {
 	padding: 12px 16px;
-	background-color: var(--bg-light);
+	border: 1px solid var(--primary-50);
 	border-radius: 12px;
-	border: 1px solid transparent;
+	background-color: var(--bs-white);
 }
 
 .booking-step .step-item .step-item_content .step-content_button {
@@ -1235,6 +1235,7 @@
 .booking-step .step-item .step-item_content .step-content_collapse .step-content_desc {
 	padding: 8px;
 	border-radius: 8px;
+	margin-bottom: 15px;
 	background: linear-gradient(270.4deg, rgba(254, 228, 246, 0.8) 0%, rgba(254, 228, 246, 0.35) 100%);
 }
 
@@ -1247,21 +1248,18 @@
 	margin-bottom: 0;
 }
 
-.booking-step .step-item .step-item_content .step-content_collapse .step-content_filter {
-	margin-top: 15px;
+
+.booking-step .step-item.stepItemCurrent ~ .step-item:before {
+	border-left-color: #C8CBD3;
 }
 
-.booking-step .step-item.stepItemCurrent:before {
-	border-left-color: var(--primary-color);
+.booking-step .step-item.stepItemCurrent ~ .step-item .step-item_button {
+	background-color: #C8CBD3;
 }
 
-.booking-step .step-item.stepItemCurrent .step-item_button {
-	background-color: var(--primary-color);
-}
-
-.booking-step .step-item.stepItemCurrent .step-item_content {
-	background-color: var(--bs-white);
-	border-color: var(--primary-50);
+.booking-step .step-item.stepItemCurrent ~ .step-item .step-item_content {
+	background-color: var(--bg-light);
+	border-color: transparent;
 }
 
 .modal-location .modal-content {
