@@ -533,6 +533,23 @@ textarea:focus {
 	font-size: 1.075em;
 }
 
+.button-theme_circle.button-theme {
+	height: 43px;
+	width: 43px;
+	border-radius: 50%;
+	padding: 0;
+}
+
+.button-theme_circle.button-theme_small {
+	height: 33px;
+	width: 33px;
+}
+
+.button-theme_circle.button-theme_large {
+	height: 48.5px;
+	width: 48.5px;
+}
+
 .button-theme svg {
 	position: relative;
 	top: -1px;
@@ -565,13 +582,25 @@ textarea:focus {
 	background-color: var(--bs-white);
 }
 
-.button-theme.button-theme_primary:active,
-.button-theme.button-theme_outline_primary:active,
-.button-theme.button-theme_overlay:active
-.button-theme.button-theme_outline_dark:active {
+.button-theme.button-theme_light {
+	background-color: #C8CBD3;
+	color: var(--bs-white);
+	border-color: transparent;
+}
+
+.button-theme.button-theme_primary:active {
 	color: var(--bs-white);
 	border-color: var(--primary-hover);
 	background-color: var(--primary-hover);
+}
+
+.button-theme.button-theme_outline_primary:active,
+.button-theme.button-theme_overlay:active,
+.button-theme.button-theme_outline_dark:active,
+.button-theme.button-theme_light:active {
+	color: var(--bs-white);
+	border-color: var(--primary-color);
+	background-color: var(--primary-color);
 }
 
 .button-theme.button-theme_primary:active svg path,
