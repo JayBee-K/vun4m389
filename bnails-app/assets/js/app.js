@@ -378,7 +378,7 @@ export function handleInitMaterialDate() {
 
 export function handleModalLocation() {
 	let callModalLocation = document.querySelectorAll('.callModalLocation');
-	let modalLocation = new bootstrap.Modal('#modalLocation');
+	let modalLocation = document.getElementById('modalLocation');
 	if (callModalLocation !== null && modalLocation !== null) {
 		callModalLocation.forEach(function (item) {
 			item.addEventListener('click', function () {
@@ -386,9 +386,18 @@ export function handleModalLocation() {
 				// Lấy lại vị trí của input và gán vào modal
 				// (mục đích để khi selected danh sách sẽ fill vào input trước đó
 
+
 				let target = item.getAttribute('data-fill');
+				modalLocation = new bootstrap.Modal('#modalLocation')
 				modalLocation._element.setAttribute('data-target', target);
-				modalLocation.show()
+				modalLocation.show();
+
+				let targetModal = item.getAttribute('data-modal');
+				if (document.getElementById(targetModal) !== null) {
+					const modalFilter = bootstrap.Modal.getInstance('#' + targetModal);
+					modalLocation._element.setAttribute('data-modal', targetModal);
+					modalFilter.hide();
+				}
 			});
 		});
 	}
@@ -418,6 +427,8 @@ export function handleModalLocation() {
 						input.parentElement.classList.add('focus-input');
 						modalLocation.hide()
 					}
+
+					// chưa xử lý mở lại modal Filter
 				});
 			});
 		}

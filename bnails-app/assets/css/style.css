@@ -94,6 +94,7 @@
 
 .footer .footer-buttons {
 	padding: 15px 0;
+	background-color: var(--bs-white);
 }
 
 .section-body {
