@@ -386,7 +386,6 @@ export function handleModalLocation() {
 				// Lấy lại vị trí của input và gán vào modal
 				// (mục đích để khi selected danh sách sẽ fill vào input trước đó
 
-
 				let target = item.getAttribute('data-fill');
 				modalLocation = new bootstrap.Modal('#modalLocation')
 				modalLocation._element.setAttribute('data-target', target);
@@ -399,6 +398,17 @@ export function handleModalLocation() {
 					modalFilter.hide();
 				}
 			});
+		});
+
+
+		// Nếu mở modal Location từ trong modal Filter
+		// Thì khi đóng modal Lcation hoặc đã chọn 1 option (khi chọn 1 option cũng đã gọi lên method hide của modal Location) thì sẽ mở lại modal Filter
+		modalLocation.addEventListener('hide.bs.modal', function () {
+			let filter = modalLocation._element.getAttribute('data-modal');
+			if (document.getElementById(filter) !== null) {
+				const modalFilter = bootstrap.Modal.getInstance('#' + filter);
+				modalFilter.show();
+			}
 		});
 	}
 
@@ -427,7 +437,6 @@ export function handleModalLocation() {
 						input.parentElement.classList.add('focus-input');
 						modalLocation.hide()
 					}
-
 					// chưa xử lý mở lại modal Filter
 				});
 			});
