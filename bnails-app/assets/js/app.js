@@ -183,52 +183,62 @@ export const handleSpin = function () {
 				{
 					fillStyle: '#FEE4F6',
 					text: 'Voucher',
-					textLineWidth: 0
+					textLineWidth: 0,
+					size: winwheelPercentToDegrees(30),
 				},
 				{
 					fillStyle: '#FDCAED',
 					text: '50 Coin',
-					textLineWidth: 0
-				},
-				{
-					fillStyle: '#FEE4F6',
-					text: 'Voucher',
-					textLineWidth: 0
-				},
-				{
-					fillStyle: '#FDCAED',
-					text: '100 Coin',
-					textLineWidth: 0
+					textLineWidth: 0,
+					size: winwheelPercentToDegrees(10),
 				},
 				{
 					fillStyle: '#FEE4F6',
 					text: 'Voucher',
 					textLineWidth: 0,
+					size: winwheelPercentToDegrees(20),
 				},
 				{
 					fillStyle: '#FDCAED',
 					text: '100 Coin',
-					textLineWidth: 0
+					textLineWidth: 0,
+					size: winwheelPercentToDegrees(10),
 				},
 				{
 					fillStyle: '#FEE4F6',
 					text: 'Voucher',
-					textLineWidth: 0
+					textLineWidth: 0,
+					size: winwheelPercentToDegrees(5),
+				},
+				{
+					fillStyle: '#FDCAED',
+					text: '100 Coin',
+					textLineWidth: 0,
+					size: winwheelPercentToDegrees(5),
+				},
+				{
+					fillStyle: '#FEE4F6',
+					text: 'Voucher',
+					textLineWidth: 0,
+					size: winwheelPercentToDegrees(5),
 				},
 				{
 					fillStyle: '#FDCAED',
 					text: '500 Coin',
-					textLineWidth: 0
+					textLineWidth: 0,
+					size: winwheelPercentToDegrees(5),
 				},
 				{
 					fillStyle: '#FEE4F6',
 					text: 'Voucher',
-					textLineWidth: 0
+					textLineWidth: 0,
+					size: winwheelPercentToDegrees(5),
 				},
 				{
 					fillStyle: '#FDCAED',
 					text: '200 Coin',
-					textLineWidth: 0
+					textLineWidth: 0,
+					size: winwheelPercentToDegrees(5),
 				}
 			],
 			animation: // Chỉ định hình động để sử dụng.
