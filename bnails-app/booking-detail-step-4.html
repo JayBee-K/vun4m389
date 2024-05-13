@@ -27,7 +27,7 @@
 </head>
 <body>
 
-<div class="modal fade modal-theme modal-full modal-theme_light modal-booking_service" id="modalBookingService">
+<div class="modal fade modal-theme modal-full modal-theme_light modal-booking_stylist" id="modalBookingStylist">
 	<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
 		<div class="modal-content border-0">
 			<div class="modal-header bg-transparent border-bottom-0 text-center justify-content-center">
@@ -37,225 +37,462 @@
 						<rect width="48" height="4" rx="2" fill="#C8CBD3"/>
 					</svg>
 				</button>
-				<div class="modal-title mb-0 fz-20 dark-color fw-700">
-					Choose Service
+				<div class="modal-title mb-0 fz-18 dark-color fw-700">
+					Choose Stylist & Time
 				</div>
 			</div>
 			<div class="modal-body p-0">
 				<div class="section-form">
-					<div class="service-list" id="handleChangeService">
-						<div class="service-list_item handleChangeServiceItem is-selected hstack gap-10px"
-						     data-value="Polygel Nails">
-							<div class="service-item_avatar position-relative hstack justify-content-center flex-shrink-0">
-								<img src="./assets/images/service/icon-1.png"
-								     class="img-fluid layer-upper position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-								<img src="./assets/images/service/icon-white-1.png"
-								     class="img-fluid layer-lower position-absolute top-50 start-50 translate-middle transition-default"
+					<div class="stylist-list" id="handleChangeStylist">
+						<div class="stylist-list_item stylist-list_item_highlight hstack gap-10px">
+							<div class="stylist-item_avatar align-self-center position-relative hstack justify-content-center flex-shrink-0 rounded-circle overflow-hidden">
+								<img src="./assets/images/icon-user.png"
+								     class="w-100 h-100 object-fit-cover"
 								     alt="">
 							</div>
-							<div class="service-item_content w-100 hstack justify-content-between gap-10px">
-								<div class="service-item_info">
-									<div class="service-item_title fw-700 dark-color">
-										Polygel Nails
-									</div>
-									<div class="service-item_time fz-12 dark-color_600">
-										45 minutes
-									</div>
-								</div>
-								<div class="service-item_price primary-color fw-700 ms-auto">
-									$250.00
+							<div class="stylist-item_content w-100">
+								<div class="stylist-item_title fw-700 dark-color">
+									First Technician Available
 								</div>
 							</div>
 						</div>
-						<div class="service-list_item handleChangeServiceItem hstack gap-10px"
-						     data-value="Acrylic - Fill Regular">
-							<div class="service-item_avatar position-relative hstack justify-content-center flex-shrink-0">
-								<img src="./assets/images/service/icon-1.png"
-								     class="img-fluid layer-upper position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-								<img src="./assets/images/service/icon-white-1.png"
-								     class="img-fluid layer-lower position-absolute top-50 start-50 translate-middle transition-default"
+						<div class="stylist-list_item handleChangeStylistItem hstack gap-10px"
+						     data-value="Olivia Quintana" data-image="./assets/images/user.png">
+							<div class="stylist-item_avatar align-self-center position-relative hstack justify-content-center flex-shrink-0 rounded-circle overflow-hidden">
+								<img src="./assets/images/user.png"
+								     class="w-100 h-100 object-fit-cover"
 								     alt="">
 							</div>
-							<div class="service-item_content w-100 hstack justify-content-between gap-10px">
-								<div class="service-item_info">
-									<div class="service-item_title fw-700 dark-color">
-										Acrylic - Fill Regular
-									</div>
-									<div class="service-item_time fz-12 dark-color_600">
-										45 minutes
-									</div>
+							<div class="stylist-item_content w-100 vstack">
+								<div class="stylist-item_title fw-700 dark-color">
+									Olivia Quintana
 								</div>
-								<div class="service-item_price primary-color fw-700 ms-auto">
-									$250.00
-								</div>
-							</div>
-						</div>
-						<div class="service-list_item handleChangeServiceItem hstack gap-10px"
-						     data-value="Dip Nails">
-							<div class="service-item_avatar position-relative hstack justify-content-center flex-shrink-0">
-								<img src="./assets/images/service/icon-1.png"
-								     class="img-fluid layer-upper position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-								<img src="./assets/images/service/icon-white-1.png"
-								     class="img-fluid layer-lower position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-							</div>
-							<div class="service-item_content w-100 hstack justify-content-between gap-10px">
-								<div class="service-item_info">
-									<div class="service-item_title fw-700 dark-color">
-										Dip Nails
+								<div class="stylist-item_expand hstack gap-10px justify-content-between">
+									<div class="stylist-item_star hstack gap-5px">
+										<div class="stylist-item_star__value hstack gap-1">
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#E4E5E9"/>
+											</svg>
+										</div>
+										<div class="stylist-item_star__text dark-color_600 fz-12 fw-500">
+											4.9
+										</div>
 									</div>
-									<div class="service-item_time fz-12 dark-color_600">
-										45 minutes
+									<div class="stylist-item_review dark-color_600 fw-300 fz-12 ms-auto">
+										(487 reviews)
 									</div>
-								</div>
-								<div class="service-item_price primary-color fw-700 ms-auto">
-									$250.00
-								</div>
-							</div>
-						</div>
-						<div class="service-list_item handleChangeServiceItem hstack gap-10px"
-						     data-value="Pedicures">
-							<div class="service-item_avatar position-relative hstack justify-content-center flex-shrink-0">
-								<img src="./assets/images/service/icon-1.png"
-								     class="img-fluid layer-upper position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-								<img src="./assets/images/service/icon-white-1.png"
-								     class="img-fluid layer-lower position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-							</div>
-							<div class="service-item_content w-100 hstack justify-content-between gap-10px">
-								<div class="service-item_info">
-									<div class="service-item_title fw-700 dark-color">
-										Pedicures
-									</div>
-									<div class="service-item_time fz-12 dark-color_600">
-										45 minutes
-									</div>
-								</div>
-								<div class="service-item_price primary-color fw-700 ms-auto">
-									$250.00
 								</div>
 							</div>
 						</div>
-						<div class="service-list_item handleChangeServiceItem hstack gap-10px"
-						     data-value="Shellac Nails">
-							<div class="service-item_avatar position-relative hstack justify-content-center flex-shrink-0">
-								<img src="./assets/images/service/icon-1.png"
-								     class="img-fluid layer-upper position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-								<img src="./assets/images/service/icon-white-1.png"
-								     class="img-fluid layer-lower position-absolute top-50 start-50 translate-middle transition-default"
+						<div class="stylist-list_item handleChangeStylistItem hstack gap-10px"
+						     data-value="Hally" data-image="./assets/images/profile-user.png">
+							<div class="stylist-item_avatar align-self-center position-relative hstack justify-content-center flex-shrink-0 rounded-circle overflow-hidden">
+								<img src="./assets/images/profile-user.png"
+								     class="w-100 h-100 object-fit-cover"
 								     alt="">
 							</div>
-							<div class="service-item_content w-100 hstack justify-content-between gap-10px">
-								<div class="service-item_info">
-									<div class="service-item_title fw-700 dark-color">
-										Shellac Nails
-									</div>
-									<div class="service-item_time fz-12 dark-color_600">
-										45 minutes
-									</div>
+							<div class="stylist-item_content w-100 vstack">
+								<div class="stylist-item_title fw-700 dark-color">
+									Hally
 								</div>
-								<div class="service-item_price primary-color fw-700 ms-auto">
-									$250.00
-								</div>
-							</div>
-						</div>
-						<div class="service-list_item handleChangeServiceItem hstack gap-10px"
-						     data-value="Swaxing">
-							<div class="service-item_avatar position-relative hstack justify-content-center flex-shrink-0">
-								<img src="./assets/images/service/icon-1.png"
-								     class="img-fluid layer-upper position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-								<img src="./assets/images/service/icon-white-1.png"
-								     class="img-fluid layer-lower position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-							</div>
-							<div class="service-item_content w-100 hstack justify-content-between gap-10px">
-								<div class="service-item_info">
-									<div class="service-item_title fw-700 dark-color">
-										Swaxing
+								<div class="stylist-item_expand hstack gap-10px justify-content-between">
+									<div class="stylist-item_star hstack gap-5px">
+										<div class="stylist-item_star__value hstack gap-1">
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#E4E5E9"/>
+											</svg>
+										</div>
+										<div class="stylist-item_star__text dark-color_600 fz-12 fw-500">
+											4.9
+										</div>
 									</div>
-									<div class="service-item_time fz-12 dark-color_600">
-										45 minutes
+									<div class="stylist-item_review dark-color_600 fw-300 fz-12 ms-auto">
+										(487 reviews)
 									</div>
-								</div>
-								<div class="service-item_price primary-color fw-700 ms-auto">
-									$250.00
-								</div>
-							</div>
-						</div>
-						<div class="service-list_item handleChangeServiceItem hstack gap-10px"
-						     data-value="Herbal Spa Pedicure">
-							<div class="service-item_avatar position-relative hstack justify-content-center flex-shrink-0">
-								<img src="./assets/images/service/icon-1.png"
-								     class="img-fluid layer-upper position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-								<img src="./assets/images/service/icon-white-1.png"
-								     class="img-fluid layer-lower position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-							</div>
-							<div class="service-item_content w-100 hstack justify-content-between gap-10px">
-								<div class="service-item_info">
-									<div class="service-item_title fw-700 dark-color">
-										Herbal Spa Pedicure
-									</div>
-									<div class="service-item_time fz-12 dark-color_600">
-										45 minutes
-									</div>
-								</div>
-								<div class="service-item_price primary-color fw-700 ms-auto">
-									$250.00
 								</div>
 							</div>
 						</div>
-						<div class="service-list_item handleChangeServiceItem hstack gap-10px"
-						     data-value="Add On Service">
-							<div class="service-item_avatar position-relative hstack justify-content-center flex-shrink-0">
-								<img src="./assets/images/service/icon-1.png"
-								     class="img-fluid layer-upper position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-								<img src="./assets/images/service/icon-white-1.png"
-								     class="img-fluid layer-lower position-absolute top-50 start-50 translate-middle transition-default"
+						<div class="stylist-list_item handleChangeStylistItem hstack gap-10px"
+						     data-value="Olivia Quintana" data-image="./assets/images/user.png">
+							<div class="stylist-item_avatar align-self-center position-relative hstack justify-content-center flex-shrink-0 rounded-circle overflow-hidden">
+								<img src="./assets/images/user.png"
+								     class="w-100 h-100 object-fit-cover"
 								     alt="">
 							</div>
-							<div class="service-item_content w-100 hstack justify-content-between gap-10px">
-								<div class="service-item_info">
-									<div class="service-item_title fw-700 dark-color">
-										Add On Service
-									</div>
-									<div class="service-item_time fz-12 dark-color_600">
-										45 minutes
-									</div>
+							<div class="stylist-item_content w-100 vstack">
+								<div class="stylist-item_title fw-700 dark-color">
+									Olivia Quintana
 								</div>
-								<div class="service-item_price primary-color fw-700 ms-auto">
-									$250.00
+								<div class="stylist-item_expand hstack gap-10px justify-content-between">
+									<div class="stylist-item_star hstack gap-5px">
+										<div class="stylist-item_star__value hstack gap-1">
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#E4E5E9"/>
+											</svg>
+										</div>
+										<div class="stylist-item_star__text dark-color_600 fz-12 fw-500">
+											4.9
+										</div>
+									</div>
+									<div class="stylist-item_review dark-color_600 fw-300 fz-12 ms-auto">
+										(487 reviews)
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="service-list_item handleChangeServiceItem hstack gap-10px" data-value="Manicure">
-							<div class="service-item_avatar position-relative hstack justify-content-center flex-shrink-0">
-								<img src="./assets/images/service/icon-1.png"
-								     class="img-fluid layer-upper position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-								<img src="./assets/images/service/icon-white-1.png"
-								     class="img-fluid layer-lower position-absolute top-50 start-50 translate-middle transition-default"
+						<div class="stylist-list_item handleChangeStylistItem hstack gap-10px"
+						     data-value="Hally" data-image="./assets/images/profile-user.png">
+							<div class="stylist-item_avatar align-self-center position-relative hstack justify-content-center flex-shrink-0 rounded-circle overflow-hidden">
+								<img src="./assets/images/profile-user.png"
+								     class="w-100 h-100 object-fit-cover"
 								     alt="">
 							</div>
-							<div class="service-item_content w-100 hstack justify-content-between gap-10px">
-								<div class="service-item_info">
-									<div class="service-item_title fw-700 dark-color">
-										Manicure
+							<div class="stylist-item_content w-100 vstack">
+								<div class="stylist-item_title fw-700 dark-color">
+									Hally
+								</div>
+								<div class="stylist-item_expand hstack gap-10px justify-content-between">
+									<div class="stylist-item_star hstack gap-5px">
+										<div class="stylist-item_star__value hstack gap-1">
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#E4E5E9"/>
+											</svg>
+										</div>
+										<div class="stylist-item_star__text dark-color_600 fz-12 fw-500">
+											4.9
+										</div>
 									</div>
-									<div class="service-item_time fz-12 dark-color_600">
-										45 minutes
+									<div class="stylist-item_review dark-color_600 fw-300 fz-12 ms-auto">
+										(487 reviews)
 									</div>
 								</div>
-								<div class="service-item_price primary-color fw-700 ms-auto">
-									$250.00
+							</div>
+						</div>
+						<div class="stylist-list_item handleChangeStylistItem hstack gap-10px"
+						     data-value="Olivia Quintana" data-image="./assets/images/user.png">
+							<div class="stylist-item_avatar align-self-center position-relative hstack justify-content-center flex-shrink-0 rounded-circle overflow-hidden">
+								<img src="./assets/images/user.png"
+								     class="w-100 h-100 object-fit-cover"
+								     alt="">
+							</div>
+							<div class="stylist-item_content w-100 vstack">
+								<div class="stylist-item_title fw-700 dark-color">
+									Olivia Quintana
+								</div>
+								<div class="stylist-item_expand hstack gap-10px justify-content-between">
+									<div class="stylist-item_star hstack gap-5px">
+										<div class="stylist-item_star__value hstack gap-1">
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#E4E5E9"/>
+											</svg>
+										</div>
+										<div class="stylist-item_star__text dark-color_600 fz-12 fw-500">
+											4.9
+										</div>
+									</div>
+									<div class="stylist-item_review dark-color_600 fw-300 fz-12 ms-auto">
+										(487 reviews)
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="stylist-list_item handleChangeStylistItem is-selected hstack gap-10px"
+						     data-value="Hally" data-image="./assets/images/profile-user.png">
+							<div class="stylist-item_avatar align-self-center position-relative hstack justify-content-center flex-shrink-0 rounded-circle overflow-hidden">
+								<img src="./assets/images/profile-user.png"
+								     class="w-100 h-100 object-fit-cover"
+								     alt="">
+							</div>
+							<div class="stylist-item_content w-100 vstack">
+								<div class="stylist-item_title fw-700 dark-color">
+									Hally
+								</div>
+								<div class="stylist-item_expand hstack gap-10px justify-content-between">
+									<div class="stylist-item_star hstack gap-5px">
+										<div class="stylist-item_star__value hstack gap-1">
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#E4E5E9"/>
+											</svg>
+										</div>
+										<div class="stylist-item_star__text dark-color_600 fz-12 fw-500">
+											4.9
+										</div>
+									</div>
+									<div class="stylist-item_review dark-color_600 fw-300 fz-12 ms-auto">
+										(487 reviews)
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="stylist-list_item handleChangeStylistItem hstack gap-10px"
+						     data-value="Olivia Quintana" data-image="./assets/images/user.png">
+							<div class="stylist-item_avatar align-self-center position-relative hstack justify-content-center flex-shrink-0 rounded-circle overflow-hidden">
+								<img src="./assets/images/user.png"
+								     class="w-100 h-100 object-fit-cover"
+								     alt="">
+							</div>
+							<div class="stylist-item_content w-100 vstack">
+								<div class="stylist-item_title fw-700 dark-color">
+									Olivia Quintana
+								</div>
+								<div class="stylist-item_expand hstack gap-10px justify-content-between">
+									<div class="stylist-item_star hstack gap-5px">
+										<div class="stylist-item_star__value hstack gap-1">
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#E4E5E9"/>
+											</svg>
+										</div>
+										<div class="stylist-item_star__text dark-color_600 fz-12 fw-500">
+											4.9
+										</div>
+									</div>
+									<div class="stylist-item_review dark-color_600 fw-300 fz-12 ms-auto">
+										(487 reviews)
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="stylist-list_item handleChangeStylistItem hstack gap-10px"
+						     data-value="Hally" data-image="./assets/images/profile-user.png">
+							<div class="stylist-item_avatar align-self-center position-relative hstack justify-content-center flex-shrink-0 rounded-circle overflow-hidden">
+								<img src="./assets/images/profile-user.png"
+								     class="w-100 h-100 object-fit-cover"
+								     alt="">
+							</div>
+							<div class="stylist-item_content w-100 vstack">
+								<div class="stylist-item_title fw-700 dark-color">
+									Hally
+								</div>
+								<div class="stylist-item_expand hstack gap-10px justify-content-between">
+									<div class="stylist-item_star hstack gap-5px">
+										<div class="stylist-item_star__value hstack gap-1">
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#E4E5E9"/>
+											</svg>
+										</div>
+										<div class="stylist-item_star__text dark-color_600 fz-12 fw-500">
+											4.9
+										</div>
+									</div>
+									<div class="stylist-item_review dark-color_600 fw-300 fz-12 ms-auto">
+										(487 reviews)
+									</div>
 								</div>
 							</div>
 						</div>
@@ -525,7 +762,9 @@
 										</div>
 										<div class="step-content_desc__text fz-12 fw-300 dark-color">
 											<p>
-												Choose “First Technician Available” for an instant appointment, or select your preferref tech below to view their available times. Let’s find the perfect slot for you!
+												Choose “First Technician Available” for an instant appointment, or
+												select your preferref tech below to view their available times. Let’s
+												find the perfect slot for you!
 											</p>
 										</div>
 									</div>
@@ -545,6 +784,70 @@
 												<input type="tel" placeholder="Choose Stylist & Time" readonly
 												       data-fill="step-4"
 												       class="form-group_input form-group_fake__select focusInput callModalBookingStylist">
+											</div>
+										</div>
+										<div class="form-item" id="handleSelectTime" style="display: none">
+											<div class="time-select">
+												<div class="time-select_item position-relative overflow-hidden">
+													<input type="radio" id="timeExample1" name="timeExample" class="time-select_item__input">
+													<label for="timeExample1" class="time-select_item__label">
+														10:00 AM
+													</label>
+												</div>
+												<div class="time-select_item position-relative overflow-hidden">
+													<input type="radio" id="timeExample2" name="timeExample" class="time-select_item__input">
+													<label for="timeExample2" class="time-select_item__label">
+														11:00 AM
+													</label>
+												</div>
+												<div class="time-select_item position-relative overflow-hidden">
+													<input type="radio" id="timeExample3" name="timeExample" class="time-select_item__input">
+													<label for="timeExample3" class="time-select_item__label">
+														00:00 PM
+													</label>
+												</div>
+												<div class="time-select_item position-relative overflow-hidden">
+													<input type="radio" id="timeExample4" name="timeExample" class="time-select_item__input">
+													<label for="timeExample4" class="time-select_item__label">
+														01:00 PM
+													</label>
+												</div>
+												<div class="time-select_item position-relative overflow-hidden">
+													<input type="radio" id="timeExample5" name="timeExample" class="time-select_item__input">
+													<label for="timeExample5" class="time-select_item__label">
+														02:00 PM
+													</label>
+												</div>
+												<div class="time-select_item position-relative overflow-hidden">
+													<input type="radio" id="timeExample6" name="timeExample" class="time-select_item__input">
+													<label for="timeExample6" class="time-select_item__label">
+														03:00 PM
+													</label>
+												</div>
+												<div class="time-select_item position-relative overflow-hidden">
+													<input type="radio" id="timeExample7" name="timeExample" class="time-select_item__input">
+													<label for="timeExample7" class="time-select_item__label">
+														04:00 PM
+													</label>
+												</div>
+												<div class="time-select_item position-relative overflow-hidden">
+													<input type="radio" id="timeExample8" name="timeExample" class="time-select_item__input">
+													<label for="timeExample8" class="time-select_item__label">
+														05:00 PM
+													</label>
+												</div>
+												<div class="time-select_item position-relative overflow-hidden">
+													<input type="radio" id="timeExample9" name="timeExample" class="time-select_item__input">
+													<label for="timeExample9" class="time-select_item__label">
+														06:00 PM
+													</label>
+												</div>
+												<div class="time-select_item position-relative overflow-hidden">
+													<input type="radio" id="timeExample10" name="timeExample" class="time-select_item__input">
+													<label for="timeExample10" class="time-select_item__label">
+														07:00 PM
+													</label>
+												</div>
 											</div>
 										</div>
 									</div>

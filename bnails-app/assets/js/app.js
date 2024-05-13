@@ -432,7 +432,7 @@ export function handleModalLocation() {
 					let target = modalLocation._element.getAttribute('data-target');
 
 					let input = document.querySelector(`.callModalLocation[data-fill="${target}"]`);
-					if (input !== null) {
+					if (input !== null && value !== null) {
 						input.value = value;
 						input.parentElement.classList.add('focus-input');
 						modalLocation.hide()
@@ -504,10 +504,96 @@ export function handleModalBookingService() {
 					let target = modalBookingService._element.getAttribute('data-target');
 
 					let input = document.querySelector(`.callModalBookingService[data-fill="${target}"]`);
-					if (input !== null) {
+					if (input !== null && value !== null) {
 						input.value = value;
 						input.parentElement.classList.add('focus-input');
 						modalBookingService.hide()
+					}
+					// chưa xử lý mở lại modal Filter
+				});
+			});
+		}
+	}
+}
+
+
+/****=
+ * Handle Call Modal Booking Stylist & Fill Data
+ */
+
+export function handleModalBookingStylist() {
+	let callModalBookingStylist = document.querySelectorAll('.callModalBookingStylist');
+	let modalBookingStylist = document.getElementById('modalBookingStylist');
+	if (callModalBookingStylist !== null && modalBookingStylist !== null) {
+		callModalBookingStylist.forEach(function (item) {
+			item.addEventListener('click', function () {
+
+				// Lấy lại vị trí của input và gán vào modal
+				// (mục đích để khi selected danh sách sẽ fill vào input trước đó
+
+				let target = item.getAttribute('data-fill');
+				modalBookingStylist = new bootstrap.Modal('#modalBookingStylist')
+				modalBookingStylist._element.setAttribute('data-target', target);
+				modalBookingStylist.show();
+
+				let targetModal = item.getAttribute('data-modal');
+				if (document.getElementById(targetModal) !== null) {
+					const modalFilter = bootstrap.Modal.getInstance('#' + targetModal);
+					modalBookingStylist._element.setAttribute('data-modal', targetModal);
+					modalFilter.hide();
+				}
+			});
+		});
+
+
+		// Nếu mở modal BookingStylist từ trong modal Filter
+		// Thì khi đóng modal BookingStylist hoặc đã chọn 1 option (khi chọn 1 option cũng đã gọi lên method hide của modal BookingStylist) thì sẽ mở lại modal Filter
+		modalBookingStylist.addEventListener('hide.bs.modal', function () {
+			let filter = modalBookingStylist._element.getAttribute('data-modal');
+			if (document.getElementById(filter) !== null) {
+				const modalFilter = bootstrap.Modal.getInstance('#' + filter);
+				modalFilter.show();
+			}
+		});
+	}
+
+	let handleChangeStylist = document.getElementById('handleChangeStylist');
+	if (handleChangeStylist !== null) {
+		let handleChangeStylistItem = handleChangeStylist.querySelectorAll('.handleChangeStylistItem');
+		if (handleChangeStylistItem !== null) {
+			handleChangeStylistItem.forEach(function (item) {
+				item.addEventListener('click', function () {
+					if (item.classList.contains('is-selected') === false) {
+						handleChangeStylistItem.forEach(function (el) {
+							el.classList.remove('is-selected');
+						});
+						item.classList.add('is-selected');
+					}
+
+					// Lấy lại giá trị attribute của modal và tìm vị trí của input để fill giá trị của select
+					// (kết hợp với đoạn script phía trên)
+
+					let value = item.getAttribute('data-value');
+					let image = item.getAttribute('data-image');
+					let target = modalBookingStylist._element.getAttribute('data-target');
+
+					let input = document.querySelector(`.callModalBookingStylist[data-fill="${target}"]`);
+					if (input !== null && value !== null) {
+						input.value = value;
+						input.parentElement.classList.add('focus-input');
+
+						if (image !== null) {
+							input.insertAdjacentHTML("beforeBegin", `<div class="form-group_button form-group_button__prepend position-absolute top-50 translate-middle-y pe-none zi-2">
+																					<img src="${image}" alt="">
+																				</div>`);
+						}
+
+						let handleSelectTime = document.getElementById('handleSelectTime');
+						if(handleSelectTime !== null) {
+							handleSelectTime.style.display = 'block';
+						}
+
+						modalBookingStylist.hide();
 					}
 					// chưa xử lý mở lại modal Filter
 				});
@@ -532,6 +618,7 @@ window.addEventListener('load', function () {
 	handleInitMaterialDate();
 	handleModalLocation();
 	handleModalBookingService();
+	handleModalBookingStylist();
 });
 
 

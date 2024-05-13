@@ -27,7 +27,7 @@
 </head>
 <body>
 
-<div class="modal fade modal-theme modal-full modal-theme_light modal-booking_service" id="modalBookingService">
+<div class="modal fade modal-theme modal-full modal-theme_light modal-discount" id="modalDiscount">
 	<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
 		<div class="modal-content border-0">
 			<div class="modal-header bg-transparent border-bottom-0 text-center justify-content-center">
@@ -38,229 +38,208 @@
 					</svg>
 				</button>
 				<div class="modal-title mb-0 fz-18 dark-color fw-700">
-					Choose Service
+					Apply Discount
 				</div>
 			</div>
 			<div class="modal-body p-0">
 				<div class="section-form">
-					<div class="service-list" id="handleChangeService">
-						<div class="service-list_item handleChangeServiceItem is-selected hstack gap-10px"
-						     data-value="Polygel Nails">
-							<div class="service-item_avatar position-relative hstack justify-content-center flex-shrink-0">
-								<img src="./assets/images/service/icon-1.png"
-								     class="img-fluid layer-upper position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-								<img src="./assets/images/service/icon-white-1.png"
-								     class="img-fluid layer-lower position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-							</div>
-							<div class="service-item_content w-100 hstack justify-content-between gap-10px">
-								<div class="service-item_info">
-									<div class="service-item_title fw-700 dark-color">
-										Polygel Nails
-									</div>
-									<div class="service-item_time fz-12 dark-color_600">
-										45 minutes
-									</div>
-								</div>
-								<div class="service-item_price primary-color fw-700 ms-auto">
-									$250.00
-								</div>
-							</div>
+					<div class="form-item">
+						<div class="form-group bg-white position-relative handleFocusInput">
+							<input type="tel" placeholder="Enter the code"
+							       class="form-group_input focusInput">
 						</div>
-						<div class="service-list_item handleChangeServiceItem hstack gap-10px"
-						     data-value="Acrylic - Fill Regular">
-							<div class="service-item_avatar position-relative hstack justify-content-center flex-shrink-0">
-								<img src="./assets/images/service/icon-1.png"
-								     class="img-fluid layer-upper position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-								<img src="./assets/images/service/icon-white-1.png"
-								     class="img-fluid layer-lower position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-							</div>
-							<div class="service-item_content w-100 hstack justify-content-between gap-10px">
-								<div class="service-item_info">
-									<div class="service-item_title fw-700 dark-color">
-										Acrylic - Fill Regular
+					</div>
+					<div class="form-item">
+						<div class="discount-list">
+							<div class="discount-list_item hstack gap-10px">
+								<div class="discount-item_avatar align-self-center position-relative hstack justify-content-center flex-shrink-0 overflow-hidden">
+									<img src="./assets/images/discount/discount-1.png"
+									     class="w-100 h-100 object-fit-cover"
+									     alt="">
+								</div>
+								<div class="discount-item_content w-100 vstack">
+									<div class="discount-item_title fw-700 dark-color">
+										30% off this summer
 									</div>
-									<div class="service-item_time fz-12 dark-color_600">
-										45 minutes
+									<div class="discount-item_review dark-color_600 fw-300 fz-12">
+										Special promotion 30% off early summer at
 									</div>
 								</div>
-								<div class="service-item_price primary-color fw-700 ms-auto">
-									$250.00
+							</div>
+							<div class="discount-list_item is-selected hstack gap-10px">
+								<div class="discount-item_avatar align-self-center position-relative hstack justify-content-center flex-shrink-0 overflow-hidden">
+									<img src="./assets/images/discount/discount-2.png"
+									     class="w-100 h-100 object-fit-cover"
+									     alt="">
 								</div>
-							</div>
-						</div>
-						<div class="service-list_item handleChangeServiceItem hstack gap-10px"
-						     data-value="Dip Nails">
-							<div class="service-item_avatar position-relative hstack justify-content-center flex-shrink-0">
-								<img src="./assets/images/service/icon-1.png"
-								     class="img-fluid layer-upper position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-								<img src="./assets/images/service/icon-white-1.png"
-								     class="img-fluid layer-lower position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-							</div>
-							<div class="service-item_content w-100 hstack justify-content-between gap-10px">
-								<div class="service-item_info">
-									<div class="service-item_title fw-700 dark-color">
-										Dip Nails
+								<div class="discount-item_content w-100 vstack">
+									<div class="discount-item_title fw-700 dark-color">
+										30% off this summer
 									</div>
-									<div class="service-item_time fz-12 dark-color_600">
-										45 minutes
+									<div class="discount-item_review dark-color_600 fw-300 fz-12">
+										Special promotion 30% off early summer at
 									</div>
 								</div>
-								<div class="service-item_price primary-color fw-700 ms-auto">
-									$250.00
+							</div>
+							<div class="discount-list_item hstack gap-10px">
+								<div class="discount-item_avatar align-self-center position-relative hstack justify-content-center flex-shrink-0 overflow-hidden">
+									<img src="./assets/images/discount/discount-3.png"
+									     class="w-100 h-100 object-fit-cover"
+									     alt="">
 								</div>
-							</div>
-						</div>
-						<div class="service-list_item handleChangeServiceItem hstack gap-10px"
-						     data-value="Pedicures">
-							<div class="service-item_avatar position-relative hstack justify-content-center flex-shrink-0">
-								<img src="./assets/images/service/icon-1.png"
-								     class="img-fluid layer-upper position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-								<img src="./assets/images/service/icon-white-1.png"
-								     class="img-fluid layer-lower position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-							</div>
-							<div class="service-item_content w-100 hstack justify-content-between gap-10px">
-								<div class="service-item_info">
-									<div class="service-item_title fw-700 dark-color">
-										Pedicures
+								<div class="discount-item_content w-100 vstack">
+									<div class="discount-item_title fw-700 dark-color">
+										30% off this summer
 									</div>
-									<div class="service-item_time fz-12 dark-color_600">
-										45 minutes
+									<div class="discount-item_review dark-color_600 fw-300 fz-12">
+										Special promotion 30% off early summer at
 									</div>
 								</div>
-								<div class="service-item_price primary-color fw-700 ms-auto">
-									$250.00
+							</div>
+							<div class="discount-list_item hstack gap-10px">
+								<div class="discount-item_avatar align-self-center position-relative hstack justify-content-center flex-shrink-0 overflow-hidden">
+									<img src="./assets/images/discount/discount-1.png"
+									     class="w-100 h-100 object-fit-cover"
+									     alt="">
 								</div>
-							</div>
-						</div>
-						<div class="service-list_item handleChangeServiceItem hstack gap-10px"
-						     data-value="Shellac Nails">
-							<div class="service-item_avatar position-relative hstack justify-content-center flex-shrink-0">
-								<img src="./assets/images/service/icon-1.png"
-								     class="img-fluid layer-upper position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-								<img src="./assets/images/service/icon-white-1.png"
-								     class="img-fluid layer-lower position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-							</div>
-							<div class="service-item_content w-100 hstack justify-content-between gap-10px">
-								<div class="service-item_info">
-									<div class="service-item_title fw-700 dark-color">
-										Shellac Nails
+								<div class="discount-item_content w-100 vstack">
+									<div class="discount-item_title fw-700 dark-color">
+										30% off this summer
 									</div>
-									<div class="service-item_time fz-12 dark-color_600">
-										45 minutes
+									<div class="discount-item_review dark-color_600 fw-300 fz-12">
+										Special promotion 30% off early summer at
 									</div>
 								</div>
-								<div class="service-item_price primary-color fw-700 ms-auto">
-									$250.00
+							</div>
+							<div class="discount-list_item hstack gap-10px">
+								<div class="discount-item_avatar align-self-center position-relative hstack justify-content-center flex-shrink-0 overflow-hidden">
+									<img src="./assets/images/discount/discount-2.png"
+									     class="w-100 h-100 object-fit-cover"
+									     alt="">
 								</div>
-							</div>
-						</div>
-						<div class="service-list_item handleChangeServiceItem hstack gap-10px"
-						     data-value="Swaxing">
-							<div class="service-item_avatar position-relative hstack justify-content-center flex-shrink-0">
-								<img src="./assets/images/service/icon-1.png"
-								     class="img-fluid layer-upper position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-								<img src="./assets/images/service/icon-white-1.png"
-								     class="img-fluid layer-lower position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-							</div>
-							<div class="service-item_content w-100 hstack justify-content-between gap-10px">
-								<div class="service-item_info">
-									<div class="service-item_title fw-700 dark-color">
-										Swaxing
+								<div class="discount-item_content w-100 vstack">
+									<div class="discount-item_title fw-700 dark-color">
+										30% off this summer
 									</div>
-									<div class="service-item_time fz-12 dark-color_600">
-										45 minutes
+									<div class="discount-item_review dark-color_600 fw-300 fz-12">
+										Special promotion 30% off early summer at
 									</div>
 								</div>
-								<div class="service-item_price primary-color fw-700 ms-auto">
-									$250.00
+							</div>
+							<div class="discount-list_item hstack gap-10px">
+								<div class="discount-item_avatar align-self-center position-relative hstack justify-content-center flex-shrink-0 overflow-hidden">
+									<img src="./assets/images/discount/discount-3.png"
+									     class="w-100 h-100 object-fit-cover"
+									     alt="">
 								</div>
-							</div>
-						</div>
-						<div class="service-list_item handleChangeServiceItem hstack gap-10px"
-						     data-value="Herbal Spa Pedicure">
-							<div class="service-item_avatar position-relative hstack justify-content-center flex-shrink-0">
-								<img src="./assets/images/service/icon-1.png"
-								     class="img-fluid layer-upper position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-								<img src="./assets/images/service/icon-white-1.png"
-								     class="img-fluid layer-lower position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-							</div>
-							<div class="service-item_content w-100 hstack justify-content-between gap-10px">
-								<div class="service-item_info">
-									<div class="service-item_title fw-700 dark-color">
-										Herbal Spa Pedicure
+								<div class="discount-item_content w-100 vstack">
+									<div class="discount-item_title fw-700 dark-color">
+										30% off this summer
 									</div>
-									<div class="service-item_time fz-12 dark-color_600">
-										45 minutes
+									<div class="discount-item_review dark-color_600 fw-300 fz-12">
+										Special promotion 30% off early summer at
 									</div>
 								</div>
-								<div class="service-item_price primary-color fw-700 ms-auto">
-									$250.00
+							</div>
+							<div class="discount-list_item hstack gap-10px">
+								<div class="discount-item_avatar align-self-center position-relative hstack justify-content-center flex-shrink-0 overflow-hidden">
+									<img src="./assets/images/discount/discount-1.png"
+									     class="w-100 h-100 object-fit-cover"
+									     alt="">
 								</div>
-							</div>
-						</div>
-						<div class="service-list_item handleChangeServiceItem hstack gap-10px"
-						     data-value="Add On Service">
-							<div class="service-item_avatar position-relative hstack justify-content-center flex-shrink-0">
-								<img src="./assets/images/service/icon-1.png"
-								     class="img-fluid layer-upper position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-								<img src="./assets/images/service/icon-white-1.png"
-								     class="img-fluid layer-lower position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-							</div>
-							<div class="service-item_content w-100 hstack justify-content-between gap-10px">
-								<div class="service-item_info">
-									<div class="service-item_title fw-700 dark-color">
-										Add On Service
+								<div class="discount-item_content w-100 vstack">
+									<div class="discount-item_title fw-700 dark-color">
+										30% off this summer
 									</div>
-									<div class="service-item_time fz-12 dark-color_600">
-										45 minutes
+									<div class="discount-item_review dark-color_600 fw-300 fz-12">
+										Special promotion 30% off early summer at
 									</div>
 								</div>
-								<div class="service-item_price primary-color fw-700 ms-auto">
-									$250.00
+							</div>
+							<div class="discount-list_item hstack gap-10px">
+								<div class="discount-item_avatar align-self-center position-relative hstack justify-content-center flex-shrink-0 overflow-hidden">
+									<img src="./assets/images/discount/discount-2.png"
+									     class="w-100 h-100 object-fit-cover"
+									     alt="">
 								</div>
-							</div>
-						</div>
-						<div class="service-list_item handleChangeServiceItem hstack gap-10px" data-value="Manicure">
-							<div class="service-item_avatar position-relative hstack justify-content-center flex-shrink-0">
-								<img src="./assets/images/service/icon-1.png"
-								     class="img-fluid layer-upper position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-								<img src="./assets/images/service/icon-white-1.png"
-								     class="img-fluid layer-lower position-absolute top-50 start-50 translate-middle transition-default"
-								     alt="">
-							</div>
-							<div class="service-item_content w-100 hstack justify-content-between gap-10px">
-								<div class="service-item_info">
-									<div class="service-item_title fw-700 dark-color">
-										Manicure
+								<div class="discount-item_content w-100 vstack">
+									<div class="discount-item_title fw-700 dark-color">
+										30% off this summer
 									</div>
-									<div class="service-item_time fz-12 dark-color_600">
-										45 minutes
+									<div class="discount-item_review dark-color_600 fw-300 fz-12">
+										Special promotion 30% off early summer at
 									</div>
 								</div>
-								<div class="service-item_price primary-color fw-700 ms-auto">
-									$250.00
+							</div>
+							<div class="discount-list_item hstack gap-10px">
+								<div class="discount-item_avatar align-self-center position-relative hstack justify-content-center flex-shrink-0 overflow-hidden">
+									<img src="./assets/images/discount/discount-3.png"
+									     class="w-100 h-100 object-fit-cover"
+									     alt="">
+								</div>
+								<div class="discount-item_content w-100 vstack">
+									<div class="discount-item_title fw-700 dark-color">
+										30% off this summer
+									</div>
+									<div class="discount-item_review dark-color_600 fw-300 fz-12">
+										Special promotion 30% off early summer at
+									</div>
+								</div>
+							</div>
+							<div class="discount-list_item hstack gap-10px">
+								<div class="discount-item_avatar align-self-center position-relative hstack justify-content-center flex-shrink-0 overflow-hidden">
+									<img src="./assets/images/discount/discount-1.png"
+									     class="w-100 h-100 object-fit-cover"
+									     alt="">
+								</div>
+								<div class="discount-item_content w-100 vstack">
+									<div class="discount-item_title fw-700 dark-color">
+										30% off this summer
+									</div>
+									<div class="discount-item_review dark-color_600 fw-300 fz-12">
+										Special promotion 30% off early summer at
+									</div>
+								</div>
+							</div>
+							<div class="discount-list_item hstack gap-10px">
+								<div class="discount-item_avatar align-self-center position-relative hstack justify-content-center flex-shrink-0 overflow-hidden">
+									<img src="./assets/images/discount/discount-2.png"
+									     class="w-100 h-100 object-fit-cover"
+									     alt="">
+								</div>
+								<div class="discount-item_content w-100 vstack">
+									<div class="discount-item_title fw-700 dark-color">
+										30% off this summer
+									</div>
+									<div class="discount-item_review dark-color_600 fw-300 fz-12">
+										Special promotion 30% off early summer at
+									</div>
+								</div>
+							</div>
+							<div class="discount-list_item hstack gap-10px">
+								<div class="discount-item_avatar align-self-center position-relative hstack justify-content-center flex-shrink-0 overflow-hidden">
+									<img src="./assets/images/discount/discount-3.png"
+									     class="w-100 h-100 object-fit-cover"
+									     alt="">
+								</div>
+								<div class="discount-item_content w-100 vstack">
+									<div class="discount-item_title fw-700 dark-color">
+										30% off this summer
+									</div>
+									<div class="discount-item_review dark-color_600 fw-300 fz-12">
+										Special promotion 30% off early summer at
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
+			<div class="modal-footer border-0 bg-white vstack gap-10px justify-content-center text-center align-items-center">
+				<button type="button" data-bs-dismiss="modal"
+				        class="fz-15 button-theme button-theme_primary w-100">
+					Apply
+				</button>
 			</div>
 		</div>
 	</div>
@@ -314,7 +293,7 @@
 								<div class="step-content_collapse">
 									<div class="step-content_filter section-form">
 										<div class="form-item">
-											<div class="form-group position-relative handleFocusInput">
+											<div class="form-group position-relative handleFocusInput focus-input">
 												<div class="form-group_button form-group_button__append position-absolute top-50 translate-middle-y pe-none zi-2">
 													<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 													     xmlns="http://www.w3.org/2000/svg">
@@ -458,6 +437,165 @@
 								</div>
 							</div>
 						</div>
+						<div class="step-item position-relative hstack gap-15px">
+							<button type="button"
+							        class="step-item_button hstack justify-content-center link-default rounded-circle flex-shrink-0">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+								     xmlns="http://www.w3.org/2000/svg">
+									<path d="M12.1381 6.13807C12.3984 5.87772 12.3984 5.45561 12.1381 5.19526C11.8777 4.93491 11.4556 4.93491 11.1953 5.19526L6.66667 9.72386L4.4714 7.5286C4.21106 7.26825 3.78894 7.26825 3.5286 7.5286C3.26825 7.78895 3.26825 8.21106 3.5286 8.47141L6.19526 11.1381C6.45561 11.3984 6.87772 11.3984 7.13807 11.1381L12.1381 6.13807Z"
+									      fill="white"/>
+									<path fill-rule="evenodd" clip-rule="evenodd"
+									      d="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM14.6667 8C14.6667 11.6819 11.6819 14.6667 8 14.6667C4.3181 14.6667 1.33333 11.6819 1.33333 8C1.33333 4.3181 4.3181 1.33333 8 1.33333C11.6819 1.33333 14.6667 4.3181 14.6667 8Z"
+									      fill="white"/>
+								</svg>
+							</button>
+							<div class="step-item_content">
+								<button type="button"
+								        class="step-content_button link-default fz-14 fw-700 dark-color w-100">
+									Choose Service
+								</button>
+								<div class="step-content_collapse w-100">
+									<div class="step-content_filter section-form">
+										<div class="form-item">
+											<div class="form-group position-relative handleFocusInput focus-input">
+												<div class="form-group_button form-group_button__append position-absolute top-50 translate-middle-y pe-none zi-2">
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+													     xmlns="http://www.w3.org/2000/svg">
+														<path d="M9.41074 13.0893C9.56702 13.2455 9.77898 13.3333 10 13.3333C10.221 13.3333 10.433 13.2455 10.5893 13.0893L13.9226 9.75592C14.248 9.43049 14.248 8.90285 13.9226 8.57741C13.5972 8.25197 13.0695 8.25197 12.7441 8.57741L10 11.3215L7.25592 8.57741C6.93048 8.25197 6.40285 8.25197 6.07741 8.57741C5.75197 8.90285 5.75197 9.43049 6.07741 9.75592L9.41074 13.0893Z"
+														      fill="#9196A6"/>
+														<path fill-rule="evenodd" clip-rule="evenodd"
+														      d="M20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10ZM18.3333 10C18.3333 14.6024 14.6024 18.3333 10 18.3333C5.39763 18.3333 1.66667 14.6024 1.66667 10C1.66667 5.39763 5.39763 1.66667 10 1.66667C14.6024 1.66667 18.3333 5.39763 18.3333 10Z"
+														      fill="#9196A6"/>
+													</svg>
+												</div>
+												<input type="tel" placeholder="Choose Service" readonly
+												       value="Acrylic - Fill Regular"
+												       data-fill="step-3"
+												       class="form-group_input form-group_fake__select focusInput callModalBookingService">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="step-item position-relative hstack gap-15px">
+							<button type="button"
+							        class="step-item_button hstack justify-content-center link-default rounded-circle flex-shrink-0">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+								     xmlns="http://www.w3.org/2000/svg">
+									<path d="M12.1381 6.13807C12.3984 5.87772 12.3984 5.45561 12.1381 5.19526C11.8777 4.93491 11.4556 4.93491 11.1953 5.19526L6.66667 9.72386L4.4714 7.5286C4.21106 7.26825 3.78894 7.26825 3.5286 7.5286C3.26825 7.78895 3.26825 8.21106 3.5286 8.47141L6.19526 11.1381C6.45561 11.3984 6.87772 11.3984 7.13807 11.1381L12.1381 6.13807Z"
+									      fill="white"/>
+									<path fill-rule="evenodd" clip-rule="evenodd"
+									      d="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM14.6667 8C14.6667 11.6819 11.6819 14.6667 8 14.6667C4.3181 14.6667 1.33333 11.6819 1.33333 8C1.33333 4.3181 4.3181 1.33333 8 1.33333C11.6819 1.33333 14.6667 4.3181 14.6667 8Z"
+									      fill="white"/>
+								</svg>
+							</button>
+							<div class="step-item_content">
+								<button type="button"
+								        class="step-content_button link-default fz-14 fw-700 dark-color w-100">
+									Choose Stylist & Time
+								</button>
+								<div class="step-content_collapse w-100">
+									<div class="step-content_filter section-form">
+										<div class="form-item">
+											<div class="form-group position-relative handleFocusInput focus-input">
+												<div class="form-group_button form-group_button__append position-absolute top-50 translate-middle-y pe-none zi-2">
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+													     xmlns="http://www.w3.org/2000/svg">
+														<path d="M9.41074 13.0893C9.56702 13.2455 9.77898 13.3333 10 13.3333C10.221 13.3333 10.433 13.2455 10.5893 13.0893L13.9226 9.75592C14.248 9.43049 14.248 8.90285 13.9226 8.57741C13.5972 8.25197 13.0695 8.25197 12.7441 8.57741L10 11.3215L7.25592 8.57741C6.93048 8.25197 6.40285 8.25197 6.07741 8.57741C5.75197 8.90285 5.75197 9.43049 6.07741 9.75592L9.41074 13.0893Z"
+														      fill="#9196A6"/>
+														<path fill-rule="evenodd" clip-rule="evenodd"
+														      d="M20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10ZM18.3333 10C18.3333 14.6024 14.6024 18.3333 10 18.3333C5.39763 18.3333 1.66667 14.6024 1.66667 10C1.66667 5.39763 5.39763 1.66667 10 1.66667C14.6024 1.66667 18.3333 5.39763 18.3333 10Z"
+														      fill="#9196A6"/>
+													</svg>
+												</div>
+												<div class="form-group_button form-group_button__prepend position-absolute top-50 translate-middle-y pe-none zi-2">
+													<img src="./assets/images/profile-user.png" alt="">
+												</div>
+												<input type="tel" placeholder="Choose Stylist & Time" readonly
+												       value="Antaram Letitia"
+												       data-fill="step-4"
+												       class="form-group_input form-group_fake__select focusInput callModalBookingStylist">
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="time-select">
+												<div class="time-select_item position-relative overflow-hidden">
+													<input type="radio" id="timeExample1" name="timeExample"
+													       class="time-select_item__input">
+													<label for="timeExample1" class="time-select_item__label">
+														10:00 AM
+													</label>
+												</div>
+												<div class="time-select_item position-relative overflow-hidden">
+													<input type="radio" id="timeExample2" name="timeExample"
+													       class="time-select_item__input">
+													<label for="timeExample2" class="time-select_item__label">
+														11:00 AM
+													</label>
+												</div>
+												<div class="time-select_item position-relative overflow-hidden">
+													<input type="radio" id="timeExample3" name="timeExample"
+													       class="time-select_item__input">
+													<label for="timeExample3" class="time-select_item__label">
+														00:00 PM
+													</label>
+												</div>
+												<div class="time-select_item position-relative overflow-hidden">
+													<input type="radio" id="timeExample4" name="timeExample"
+													       class="time-select_item__input">
+													<label for="timeExample4" class="time-select_item__label">
+														01:00 PM
+													</label>
+												</div>
+												<div class="time-select_item position-relative overflow-hidden">
+													<input type="radio" id="timeExample5" name="timeExample"
+													       class="time-select_item__input">
+													<label for="timeExample5" class="time-select_item__label">
+														02:00 PM
+													</label>
+												</div>
+												<div class="time-select_item position-relative overflow-hidden">
+													<input type="radio" id="timeExample6" name="timeExample"
+													       class="time-select_item__input">
+													<label for="timeExample6" class="time-select_item__label">
+														03:00 PM
+													</label>
+												</div>
+												<div class="time-select_item position-relative overflow-hidden">
+													<input type="radio" id="timeExample7" name="timeExample"
+													       class="time-select_item__input">
+													<label for="timeExample7" class="time-select_item__label">
+														04:00 PM
+													</label>
+												</div>
+												<div class="time-select_item position-relative overflow-hidden">
+													<input type="radio" id="timeExample8" name="timeExample"
+													       class="time-select_item__input">
+													<label for="timeExample8" class="time-select_item__label">
+														05:00 PM
+													</label>
+												</div>
+												<div class="time-select_item position-relative overflow-hidden">
+													<input type="radio" id="timeExample9" name="timeExample"
+													       class="time-select_item__input">
+													<label for="timeExample9" class="time-select_item__label">
+														06:00 PM
+													</label>
+												</div>
+												<div class="time-select_item position-relative overflow-hidden">
+													<input type="radio" id="timeExample10" name="timeExample"
+													       class="time-select_item__input">
+													<label for="timeExample10" class="time-select_item__label">
+														07:00 PM
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 						<div class="step-item stepItemCurrent position-relative hstack gap-15px">
 							<button type="button"
 							        class="step-item_button hstack justify-content-center link-default rounded-circle flex-shrink-0">
@@ -474,7 +612,7 @@
 							<div class="step-item_content">
 								<button type="button"
 								        class="step-content_button link-default fz-14 fw-700 dark-color w-100">
-									Choose Service
+									Promotions & Other Inquiries
 								</button>
 								<div class="step-content_collapse w-100">
 									<div class="step-content_desc hstack gap-10px">
@@ -484,72 +622,45 @@
 										</div>
 										<div class="step-content_desc__text fz-12 fw-300 dark-color">
 											<p>
-												Pick a date that works best for you and we will make it happen!
+												Lorem ipsum is placeholder text commonly used in the graphic.
 											</p>
 										</div>
 									</div>
 									<div class="step-content_filter section-form">
 										<div class="form-item">
 											<div class="form-group position-relative handleFocusInput">
-												<div class="form-group_button form-group_button__append position-absolute top-50 translate-middle-y pe-none zi-2">
-													<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-													     xmlns="http://www.w3.org/2000/svg">
-														<path d="M9.41074 13.0893C9.56702 13.2455 9.77898 13.3333 10 13.3333C10.221 13.3333 10.433 13.2455 10.5893 13.0893L13.9226 9.75592C14.248 9.43049 14.248 8.90285 13.9226 8.57741C13.5972 8.25197 13.0695 8.25197 12.7441 8.57741L10 11.3215L7.25592 8.57741C6.93048 8.25197 6.40285 8.25197 6.07741 8.57741C5.75197 8.90285 5.75197 9.43049 6.07741 9.75592L9.41074 13.0893Z"
-														      fill="#9196A6"/>
-														<path fill-rule="evenodd" clip-rule="evenodd"
-														      d="M20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10ZM18.3333 10C18.3333 14.6024 14.6024 18.3333 10 18.3333C5.39763 18.3333 1.66667 14.6024 1.66667 10C1.66667 5.39763 5.39763 1.66667 10 1.66667C14.6024 1.66667 18.3333 5.39763 18.3333 10Z"
-														      fill="#9196A6"/>
-													</svg>
-												</div>
-												<input type="tel" placeholder="Choose Service" readonly
-												       data-fill="step-3"
-												       class="form-group_input form-group_fake__select focusInput callModalBookingService">
+												<input type="tel" placeholder="Note"
+												       class="form-group_input form-group_fake__select focusInput">
 											</div>
+										</div>
+										<div class="form-item">
+											<button type="button" data-bs-toggle="modal" data-bs-target="#modalDiscount"
+											        class="button-theme button-theme_outline_dark w-100">
+												<svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+												     xmlns="http://www.w3.org/2000/svg">
+													<g clip-path="url(#clip0_1076_1132)">
+														<path d="M14.075 6.76198C14.3575 6.39869 14.2921 5.87513 13.9288 5.59257C13.5655 5.31001 13.0419 5.37546 12.7594 5.73875L6.92605 13.2387C6.64349 13.602 6.70893 14.1256 7.07222 14.4082C7.43551 14.6907 7.95907 14.6253 8.24163 14.262L14.075 6.76198Z"
+														      fill="#111215"/>
+														<path d="M8.41719 8.33366C9.10754 8.33366 9.66718 7.77401 9.66718 7.08366C9.66718 6.3933 9.10754 5.83366 8.41719 5.83366C7.72683 5.83366 7.16719 6.3933 7.16719 7.08366C7.16719 7.77401 7.72683 8.33366 8.41719 8.33366Z"
+														      fill="#111215"/>
+														<path d="M13.8339 12.917C13.8339 13.6073 13.2742 14.167 12.5839 14.167C11.8935 14.167 11.3339 13.6073 11.3339 12.917C11.3339 12.2266 11.8935 11.667 12.5839 11.667C13.2742 11.667 13.8339 12.2266 13.8339 12.917Z"
+														      fill="#111215"/>
+														<path fill-rule="evenodd" clip-rule="evenodd"
+														      d="M18.4324 6.71479C19.1816 3.90584 16.5949 1.31917 13.786 2.06841C12.3296 -0.447608 8.67146 -0.447608 7.21503 2.06841C4.40608 1.31917 1.81941 3.90584 2.56865 6.71479C0.0526356 8.17122 0.052636 11.8293 2.56866 13.2858C1.81941 16.0947 4.40608 18.6814 7.21503 17.9321C8.67146 20.4481 12.3296 20.4481 13.786 17.9321C16.5949 18.6814 19.1816 16.0947 18.4324 13.2858C20.9484 11.8293 20.9484 8.17122 18.4324 6.71479ZM8.6014 3.00598C9.39681 1.46209 11.6042 1.46209 12.3996 3.00598C12.7189 3.62577 13.4393 3.92415 14.1033 3.71168C15.7575 3.18243 17.3183 4.7433 16.7891 6.39743L16.6359 6.87619C16.5119 7.2639 16.6861 7.6845 17.0479 7.87094L17.4948 8.10116C19.0387 8.89657 19.0387 11.104 17.4948 11.8994C16.875 12.2187 16.5766 12.9391 16.7891 13.6031C17.3183 15.2572 15.7575 16.8181 14.1033 16.2888C13.4393 16.0764 12.7189 16.3748 12.3996 16.9946C11.6042 18.5384 9.39681 18.5384 8.6014 16.9946C8.28209 16.3748 7.56172 16.0764 6.89768 16.2888C5.24354 16.8181 3.68267 15.2572 4.21193 13.6031C4.42439 12.9391 4.12601 12.2187 3.50622 11.8994C1.96234 11.104 1.96234 8.89656 3.50622 8.10116C4.12601 7.78184 4.42439 7.06148 4.21193 6.39743C3.68267 4.7433 5.24354 3.18243 6.89768 3.71168C7.56172 3.92415 8.28209 3.62577 8.6014 3.00598Z"
+														      fill="#111215"/>
+													</g>
+													<defs>
+														<clipPath id="clip0_1076_1132">
+															<rect width="20" height="20" fill="white"
+															      transform="translate(0.5)"/>
+														</clipPath>
+													</defs>
+												</svg>
+												Apply Discount
+											</button>
 										</div>
 									</div>
 								</div>
-							</div>
-						</div>
-						<div class="step-item position-relative hstack gap-15px">
-							<button type="button"
-							        class="step-item_button hstack justify-content-center link-default rounded-circle flex-shrink-0">
-								<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-								     xmlns="http://www.w3.org/2000/svg">
-									<path d="M6 4.66667C6.36819 4.66667 6.66667 4.96514 6.66667 5.33333V10.6667C6.66667 11.0349 6.36819 11.3333 6 11.3333C5.63181 11.3333 5.33333 11.0349 5.33333 10.6667V5.33333C5.33333 4.96514 5.63181 4.66667 6 4.66667Z"
-									      fill="white"/>
-									<path d="M10.6667 5.33333C10.6667 4.96514 10.3682 4.66667 10 4.66667C9.63181 4.66667 9.33333 4.96514 9.33333 5.33333V10.6667C9.33333 11.0349 9.63181 11.3333 10 11.3333C10.3682 11.3333 10.6667 11.0349 10.6667 10.6667V5.33333Z"
-									      fill="white"/>
-									<path fill-rule="evenodd" clip-rule="evenodd"
-									      d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8 14.6667C11.6819 14.6667 14.6667 11.6819 14.6667 8C14.6667 4.3181 11.6819 1.33333 8 1.33333C4.3181 1.33333 1.33333 4.3181 1.33333 8C1.33333 11.6819 4.3181 14.6667 8 14.6667Z"
-									      fill="white"/>
-								</svg>
-							</button>
-							<div class="step-item_content">
-								<button type="button"
-								        class="step-content_button link-default fz-14 fw-700 dark-color w-100">
-									Choose Stylist & Time
-								</button>
-							</div>
-						</div>
-						<div class="step-item position-relative hstack gap-15px">
-							<button type="button"
-							        class="step-item_button hstack justify-content-center link-default rounded-circle flex-shrink-0">
-								<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-								     xmlns="http://www.w3.org/2000/svg">
-									<path d="M6 4.66667C6.36819 4.66667 6.66667 4.96514 6.66667 5.33333V10.6667C6.66667 11.0349 6.36819 11.3333 6 11.3333C5.63181 11.3333 5.33333 11.0349 5.33333 10.6667V5.33333C5.33333 4.96514 5.63181 4.66667 6 4.66667Z"
-									      fill="white"/>
-									<path d="M10.6667 5.33333C10.6667 4.96514 10.3682 4.66667 10 4.66667C9.63181 4.66667 9.33333 4.96514 9.33333 5.33333V10.6667C9.33333 11.0349 9.63181 11.3333 10 11.3333C10.3682 11.3333 10.6667 11.0349 10.6667 10.6667V5.33333Z"
-									      fill="white"/>
-									<path fill-rule="evenodd" clip-rule="evenodd"
-									      d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8 14.6667C11.6819 14.6667 14.6667 11.6819 14.6667 8C14.6667 4.3181 11.6819 1.33333 8 1.33333C4.3181 1.33333 1.33333 4.3181 1.33333 8C1.33333 11.6819 4.3181 14.6667 8 14.6667Z"
-									      fill="white"/>
-								</svg>
-							</button>
-							<div class="step-item_content">
-								<button type="button"
-								        class="step-content_button link-default fz-14 fw-700 dark-color w-100">
-									Promotions & Other Inquiries
-								</button>
 							</div>
 						</div>
 					</div>
@@ -577,9 +688,12 @@
 							      fill="#111215"/>
 						</svg>
 						Add To Cart
+						<span class="button-theme_quality">
+							5
+						</span>
 					</button>
 					<button type="button"
-					        class="link-default button-theme button-theme_light button-theme_circle flex-shrink-0">
+					        class="link-default button-theme button-theme_primary button-theme_circle flex-shrink-0">
 						<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M6.24998 13.3333C6.94034 13.3333 7.49998 12.7736 7.49998 12.0833C7.49998 11.3929 6.94034 10.8333 6.24998 10.8333C5.55962 10.8333 4.99998 11.3929 4.99998 12.0833C4.99998 12.7736 5.55962 13.3333 6.24998 13.3333Z"
 							      fill="white"/>

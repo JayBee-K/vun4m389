@@ -524,6 +524,19 @@ textarea:focus {
 	white-space: nowrap;
 }
 
+.button-theme .button-theme_quality{
+	min-width: 20px;
+	min-height: 20px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--bs-white);
+	font-weight: 700;
+	background-color: var(--primary-color);
+	font-size: 12px;
+}
+
 .button-theme.button-theme_small {
 	padding: 6px 18px;
 	font-size: .925em;
@@ -549,11 +562,6 @@ textarea:focus {
 .button-theme_circle.button-theme_large {
 	height: 48.5px;
 	width: 48.5px;
-}
-
-.button-theme svg {
-	position: relative;
-	top: -1px;
 }
 
 .button-theme svg path {

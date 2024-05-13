@@ -496,11 +496,9 @@
 }
 
 .modal-location .section-form,
-.modal-booking_service .section-form {
-	padding: 0 15px 15px;
-}
-
-.modal-booking_service .section-form {
+.modal-booking_service .section-form,
+.modal-booking_stylist .section-form,
+.modal-discount .section-form {
 	padding: 0 15px 15px;
 }
 
@@ -550,7 +548,7 @@
 	background: linear-gradient(180deg, #F960C9 12.5%, #F72BB7 64.5%, #CA008C 100%);
 }
 
-.modal-booking_service .service-list .service-list_item.is-selected .service-item_avatar .layer-lower{
+.modal-booking_service .service-list .service-list_item.is-selected .service-item_avatar .layer-lower {
 	opacity: 1;
 	visibility: visible;
 	pointer-events: auto;
@@ -566,6 +564,76 @@
 	background-color: var(--primary-50);
 	border-color: var(--primary-200);
 	border-radius: 12px;
+}
+
+.modal-booking_stylist .stylist-list {
+	padding: 15px;
+	background-color: var(--bs-white);
+	border-radius: 20px;
+}
+
+.modal-booking_stylist .stylist-list .stylist-list_item {
+	border: 1px solid var(--primary-50);
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	transition: var(--transition-default);
+	padding: 12px;
+}
+
+.modal-booking_stylist .stylist-list .stylist-list_item .stylist-item_avatar {
+	width: 32px;
+	height: 32px;
+}
+
+.modal-booking_stylist .stylist-list .stylist-list_item .stylist-item_content .stylist-item_expand .stylist-item_star .stylist-item_star__value svg {
+	width: 14px;
+	height: 14px;
+}
+
+.modal-booking_stylist .stylist-list .stylist-list_item:first-child,
+.modal-booking_stylist .stylist-list .stylist-list_item.is-selected + .stylist-list_item,
+.modal-booking_stylist .stylist-list .stylist-list_item.stylist-list_item_highlight + .stylist-list_item {
+	border-top-color: transparent
+}
+
+.modal-booking_stylist .stylist-list .stylist-list_item.stylist-list_item_highlight,
+.modal-booking_stylist .stylist-list .stylist-list_item.is-selected {
+	background-color: var(--primary-50);
+	border-color: var(--primary-200);
+	border-radius: 16px;
+}
+
+.modal-discount .discount-list {
+	padding: 15px;
+	background-color: var(--bs-white);
+	border-radius: 20px;
+}
+
+.modal-discount .discount-list .discount-list_item {
+	border: 1px solid var(--primary-50);
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	transition: var(--transition-default);
+	padding: 12px;
+}
+
+.modal-discount .discount-list .discount-list_item .discount-item_avatar {
+	width: 48px;
+	height: 48px;
+}
+
+.modal-discount .discount-list .discount-list_item .discount-item_content {
+	align-self: center;
+}
+
+.modal-discount .discount-list .discount-list_item.is-selected .discount-item_content .discount-item_title {
+	color: var(--primary-color);
+}
+
+.modal-discount .discount-list .discount-list_item:first-child {
+	border-top-color: transparent
 }
 
 .section-chat {
@@ -917,6 +985,12 @@
 	left: 15px;
 }
 
+.section-form .form-item .form-group .form-group_button__prepend img {
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+}
+
 .section-form .form-item .form-group .form-group_button__prepend ~ .form-group_input {
 	padding-left: 30px;
 }
@@ -978,6 +1052,50 @@
 	border-color: var(--primary-color);
 	background: #FEE4F6;
 }
+
+.section-form .form-item .time-select {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 9px;
+}
+
+.section-form .form-item .time-select .time-select_item {
+	width: calc(33.3333% - 6px);
+}
+
+.section-form .form-item .time-select .time-select_item .time-select_item__input {
+	position: absolute;
+	pointer-events: none;
+	opacity: 0;
+	visibility: hidden;
+	display: none;
+	width: 0;
+}
+
+.section-form .form-item .time-select .time-select_item .time-select_item__label {
+	background-color: var(--bg-light);
+	border-radius: 12px;
+	padding: 8px 16px 7px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	font-size: .85em;
+	font-weight: 700;
+	color: var(--dark-600);
+	border: 1px solid transparent;
+	transition: var(--transition-default);
+	white-space: nowrap;
+}
+
+.section-form .form-item .time-select .time-select_item .time-select_item__input:checked + .time-select_item__label {
+	color: var(--dark-color);
+	border-color: var(--primary-color);
+	background: #FEE4F6;
+}
+
 
 .section-form .form-item .form-group.focus-input,
 .section-form .form-otp .form-otp_item.focus-input {
@@ -1385,4 +1503,96 @@
 .booking-step .step-item.stepItemCurrent ~ .step-item .step-item_content {
 	background-color: var(--bg-light);
 	border-color: transparent;
+}
+
+.booking-confirm .service-store {
+	background-color: var(--bs-white);
+	border-radius: 20px;
+}
+
+.booking-confirm .service-store .service-store_title {
+	font-family: var(--font-heading);
+}
+
+.booking-confirm .service-store .service-store_content {
+	padding: 8px;
+	background-color: var(--bg-light);
+	border-radius: 50px;
+}
+
+.booking-confirm .service-store .service-store_content .service-store_avatar{
+	height: 32px;
+	width: 32px;
+}
+
+.booking-confirm .service-list {
+	background-color: var(--bs-white);
+	border-radius: 20px;
+	margin-top: 30px;
+}
+
+.booking-confirm .service-list .service-list_title {
+	font-family: var(--font-heading);
+}
+
+.booking-confirm .service-list .service-list_item {
+	padding-top: 14px;
+	margin-top: 10px;
+	border-top: 1px solid var(--primary-50);
+}
+
+.booking-confirm .service-list .service-list_item .service-item_avatar {
+	width: 64px;
+	height: 64px;
+	background-color: var(--primary-50);
+	border-radius: 12px;
+	padding: 10px;
+}
+
+.booking-confirm .service-list .service-list_item .service-item_content {
+	gap: 3px;
+}
+
+.booking-confirm .service-list .service-list_item .service-item_content .service-item_time {
+	color: var(--dark-600);
+	font-weight: 500;
+}
+
+.booking-confirm .service-list .service-list_item .service-item_content .service-item_title {
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	-webkit-box-orient: vertical;
+	line-height: 1.3;
+}
+
+.booking-confirm .service-list .service-list_item .service-item_content .service-item_user {
+	border-radius: 16px;
+	position: relative;
+	background-color: #F1F2F4;
+	width: max-content;
+	padding: 2px 8px 2px 2px;
+	color: var(--dark-600);
+	font-weight: 500;
+}
+
+.booking-confirm .service-list .service-list_item .service-item_content .service-item_user img {
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+}
+
+.booking-confirm .service-total {
+	margin-top: 30px;
+}
+
+.booking-confirm .service-total .service-total_item {
+	padding: 10px 0;
+}
+
+.booking-confirm .service-total .service-total_item + .service-total_item {
+	border-top: 1px solid var(--primary-50);
 }
