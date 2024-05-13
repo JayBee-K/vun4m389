@@ -444,6 +444,78 @@ export function handleModalLocation() {
 	}
 }
 
+/****=
+ * Handle Call Modal Booking Service & Fill Data
+ */
+
+export function handleModalBookingService() {
+	let callModalBookingService = document.querySelectorAll('.callModalBookingService');
+	let modalBookingService = document.getElementById('modalBookingService');
+	if (callModalBookingService !== null && modalBookingService !== null) {
+		callModalBookingService.forEach(function (item) {
+			item.addEventListener('click', function () {
+
+				// Lấy lại vị trí của input và gán vào modal
+				// (mục đích để khi selected danh sách sẽ fill vào input trước đó
+
+				let target = item.getAttribute('data-fill');
+				modalBookingService = new bootstrap.Modal('#modalBookingService')
+				modalBookingService._element.setAttribute('data-target', target);
+				modalBookingService.show();
+
+				let targetModal = item.getAttribute('data-modal');
+				if (document.getElementById(targetModal) !== null) {
+					const modalFilter = bootstrap.Modal.getInstance('#' + targetModal);
+					modalBookingService._element.setAttribute('data-modal', targetModal);
+					modalFilter.hide();
+				}
+			});
+		});
+
+
+		// Nếu mở modal BookingService từ trong modal Filter
+		// Thì khi đóng modal BookingService hoặc đã chọn 1 option (khi chọn 1 option cũng đã gọi lên method hide của modal BookingService) thì sẽ mở lại modal Filter
+		modalBookingService.addEventListener('hide.bs.modal', function () {
+			let filter = modalBookingService._element.getAttribute('data-modal');
+			if (document.getElementById(filter) !== null) {
+				const modalFilter = bootstrap.Modal.getInstance('#' + filter);
+				modalFilter.show();
+			}
+		});
+	}
+
+	let handleChangeService = document.getElementById('handleChangeService');
+	if (handleChangeService !== null) {
+		let handleChangeServiceItem = handleChangeService.querySelectorAll('.handleChangeServiceItem');
+		if (handleChangeServiceItem !== null) {
+			handleChangeServiceItem.forEach(function (item) {
+				item.addEventListener('click', function () {
+					if (item.classList.contains('is-selected') === false) {
+						handleChangeServiceItem.forEach(function (el) {
+							el.classList.remove('is-selected');
+						});
+						item.classList.add('is-selected');
+					}
+
+					// Lấy lại giá trị attribute của modal và tìm vị trí của input để fill giá trị của select
+					// (kết hợp với đoạn script phía trên)
+
+					let value = item.getAttribute('data-value');
+					let target = modalBookingService._element.getAttribute('data-target');
+
+					let input = document.querySelector(`.callModalBookingService[data-fill="${target}"]`);
+					if (input !== null) {
+						input.value = value;
+						input.parentElement.classList.add('focus-input');
+						modalBookingService.hide()
+					}
+					// chưa xử lý mở lại modal Filter
+				});
+			});
+		}
+	}
+}
+
 
 window.addEventListener('load', function () {
 	window.addEventListener("resize", () => {
@@ -459,6 +531,7 @@ window.addEventListener('load', function () {
 	handleToggleTypePassword();
 	handleInitMaterialDate();
 	handleModalLocation();
+	handleModalBookingService();
 });
 
 

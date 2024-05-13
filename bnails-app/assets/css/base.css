@@ -492,7 +492,8 @@ textarea:focus {
 }
 
 .overflow-y::-webkit-scrollbar,
-.scrollbar-hidden::-webkit-scrollbar {
+.scrollbar-hidden::-webkit-scrollbar,
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar{
 	width: 0;
 	display: none;
 	opacity: 0;
@@ -622,6 +623,10 @@ textarea:focus {
 
 .modal-theme .modal-dialog .modal-content {
 	border-radius: 24px;
+}
+
+.modal-theme.modal-theme_light .modal-content {
+	background-color: var(--bg-light);
 }
 
 .modal-full {
