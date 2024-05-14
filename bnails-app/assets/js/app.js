@@ -165,6 +165,71 @@ export const handleSpin = function () {
 			document.getElementById('spinTurn').setAttribute('style', '--spacing: ' + (spinSize / 2 + 20) + 'px')
 		}
 
+		// Data anh sẽ truyền vào tại đây nha
+		let objectData = [
+			{
+				fillStyle: '#FEE4F6',
+				text: 'Voucher',
+				textLineWidth: 0,
+			},
+			{
+				fillStyle: '#FDCAED',
+				text: '50 Coin',
+				textLineWidth: 0,
+			},
+			{
+				fillStyle: '#FEE4F6',
+				text: 'Voucher',
+				textLineWidth: 0,
+			},
+			{
+				fillStyle: '#FDCAED',
+				text: '100 Coin',
+				textLineWidth: 0,
+			},
+			{
+				fillStyle: '#FEE4F6',
+				text: 'Dừng tại đây',
+				textLineWidth: 0,
+			},
+			{
+				fillStyle: '#FDCAED',
+				text: '100 Coin',
+				textLineWidth: 0,
+			},
+			{
+				fillStyle: '#FEE4F6',
+				text: 'Voucher',
+				textLineWidth: 0,
+			},
+			{
+				fillStyle: '#FDCAED',
+				text: '500 Coin',
+				textLineWidth: 0,
+			},
+			{
+				fillStyle: '#FEE4F6',
+				text: 'Voucher',
+				textLineWidth: 0,
+			},
+			{
+				fillStyle: '#FDCAED',
+				text: '200 Coin',
+				textLineWidth: 0,
+			}
+		];
+
+		/****
+		 * anglePause: Vòng xoay sẽ dừng ở n độ
+		 * anglePause = 360 / a * b - ((360 / a) / 2)
+		 * Vòng xoay = 360(độ)
+		 * Tham số a: objectData.length (các phần của vòng xoay)
+		 * Tham số b: vị trí sẽ dừng lại
+		 * Tham số ((360 / a) / 2): luôn luôn dừng ở chính giữa của 1 phần
+		 * Ví dụ vòng xoay sẽ dừng ở mảng ghép thứ 5 (theo chiều kim đồng hồ)
+		 * */
+		let anglePause = (360 / objectData.length) * 5 - ((360 / objectData.length) / 2);
+
 		let theWheel = new Winwheel({
 			outerRadius: (spinSize / 2) + 13, // Bán kính ngoài
 			innerRadius: 40, // Size lỗ trung tâm
@@ -179,64 +244,14 @@ export const handleSpin = function () {
 			strokeStyle: 0,
 			textLineWidth: 0,
 			numSegments: 10, // Số ô
-			segments: [
-				{
-					fillStyle: '#FEE4F6',
-					text: 'Voucher',
-					textLineWidth: 0,
-				},
-				{
-					fillStyle: '#FDCAED',
-					text: '50 Coin',
-					textLineWidth: 0,
-				},
-				{
-					fillStyle: '#FEE4F6',
-					text: 'Voucher',
-					textLineWidth: 0,
-				},
-				{
-					fillStyle: '#FDCAED',
-					text: '100 Coin',
-					textLineWidth: 0,
-				},
-				{
-					fillStyle: '#FEE4F6',
-					text: 'Voucher',
-					textLineWidth: 0,
-				},
-				{
-					fillStyle: '#FDCAED',
-					text: '100 Coin',
-					textLineWidth: 0,
-				},
-				{
-					fillStyle: '#FEE4F6',
-					text: 'Voucher',
-					textLineWidth: 0,
-				},
-				{
-					fillStyle: '#FDCAED',
-					text: '500 Coin',
-					textLineWidth: 0,
-				},
-				{
-					fillStyle: '#FEE4F6',
-					text: 'Voucher',
-					textLineWidth: 0,
-				},
-				{
-					fillStyle: '#FDCAED',
-					text: '200 Coin',
-					textLineWidth: 0,
-				}
-			],
+			segments: objectData,
 			animation: // Chỉ định hình động để sử dụng.
 				{
 					spins: 1, // Số vòng quay hoàn chỉnh mặc định.
 					callbackFinished: doneSpin,
 					type: 'spinToStop',
 					duration: 5,
+					stopAngle: anglePause
 				},
 			pins: {
 				number: 10,
@@ -368,6 +383,20 @@ export function handleInitMaterialDate() {
 			item.addEventListener('click', function () {
 				picker.open()
 			});
+		});
+	}
+}
+
+/****
+ * Handle Call DataPicker Materia
+ */
+
+export function handleCallDatePickerMaterial() {
+	let btnCall = document.getElementById('callDatePicker');
+	if (btnCall !== null) {
+		btnCall.addEventListener('click', function () {
+			const picker = new MaterialDatePicker();
+			picker.open()
 		});
 	}
 }
@@ -589,7 +618,7 @@ export function handleModalBookingStylist() {
 						}
 
 						let handleSelectTime = document.getElementById('handleSelectTime');
-						if(handleSelectTime !== null) {
+						if (handleSelectTime !== null) {
 							handleSelectTime.style.display = 'block';
 						}
 
@@ -616,6 +645,7 @@ window.addEventListener('load', function () {
 	handleFocusInput();
 	handleToggleTypePassword();
 	handleInitMaterialDate();
+	handleCallDatePickerMaterial();
 	handleModalLocation();
 	handleModalBookingService();
 	handleModalBookingStylist();

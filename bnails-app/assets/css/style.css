@@ -204,7 +204,7 @@
 }
 
 .appointment-card .appointment-expand .appointment-expand_status.appointment-expand_status__failed,
-.appointment-card .appointment-expand .appointment-expand_status.appointment-expand_status__done{
+.appointment-card .appointment-expand .appointment-expand_status.appointment-expand_status__done {
 	background-color: #C8CBD3;
 }
 
@@ -381,6 +381,12 @@
 .section-tabs .tabs-inner,
 .section-tabs .nav-tabs {
 	margin-bottom: 20px;
+}
+
+.section-tabs .nav-tabs {
+	overflow-x: auto;
+	overflow-y: hidden;
+	max-width: 100%;
 }
 
 .section-tabs .tabs-inner .nav-tabs {
@@ -729,6 +735,10 @@
 	border-top: 1px solid var(--primary-50);
 }
 
+.modal-appointment .appointment-content .rating-title {
+	font-family: var(--font-heading);
+}
+
 .modal-appointment .appointment-content .rating-total.rating-status {
 	margin-bottom: 15px;
 	padding: 12px;
@@ -750,10 +760,6 @@
 	line-height: 0;
 }
 
-.modal-appointment .appointment-content .rating-title {
-	font-family: var(--font-heading);
-}
-
 .modal-appointment .appointment-content .rating-total.rating-status .rating-total_item__status.rating-status_waiting {
 	background-color: #FDE891;
 }
@@ -763,7 +769,7 @@
 }
 
 .modal-appointment .appointment-content .rating-total.rating-status .rating-total_item__status.rating-status_done {
-	background-color: var(--bg-light);
+	background-color: #C8CBD3;
 	color: var(--bs-white);
 }
 
@@ -1749,4 +1755,112 @@
 
 .booking-confirm .service-total .service-total_item + .service-total_item {
 	border-top: 1px solid var(--primary-50);
+}
+
+.section-schedule .schedule-header {
+	box-shadow: 0px 10px 24px 0px #2E32340D;
+}
+
+.section-schedule .schedule-header .schedule-info .schedule-info_today {
+	font-family: var(--font-heading);
+}
+
+.section-schedule .schedule-date {
+	margin-top: 20px;
+	padding-bottom: 15px;
+}
+
+.section-schedule .schedule-date .schedule-date_item {
+	background-color: var(--bg-light);
+	border-radius: 12px;
+	padding: 12px 8px;
+	width: calc(100% / 7 - 5px);
+	flex-shrink: 0;
+	position: relative;
+	overflow: hidden;
+	transition: var(--transition-default);
+	border: 1px solid transparent;
+}
+
+.section-schedule .schedule-date .schedule-date_item:before {
+	height: 12px;
+	width: 12px;
+	background-color: var(--primary-color);
+	content: "";
+	display: block;
+	bottom: -6px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 50%;
+	position: absolute;
+	transition: var(--transition-default);
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+
+.section-schedule .schedule-date .schedule-date_item.is-selected {
+	background-color: var(--primary-50);
+	border-color: var(--primary-color);
+}
+
+.section-schedule .schedule-date .schedule-date_item.is-selected:before {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+}
+
+.section-schedule .schedule-body {
+	padding-top: 15px;
+}
+
+.section-schedule .schedule-item {
+	background-color: var(--bg-light);
+	padding: 12px;
+	border-radius: 16px;
+}
+
+.section-schedule .schedule-item .schedule-item_body {
+	margin-top: 5px;
+	width: calc(100% - 150px);
+	overflow-x: auto;
+}
+
+.section-schedule .schedule-item .schedule-item_body .schedule-item_service {
+	border-radius: 4px;
+	background-color: var(--primary-50);
+	width: 22px;
+	height: 22px;
+	padding: 3px;
+	flex-shrink: 0;
+}
+
+.section-schedule .schedule-item .schedule-item_footer {
+	margin-top: 10px;
+}
+
+.section-schedule .schedule-item .schedule-item_footer .schedule-item_status {
+	padding: 6px 12px 6px 6px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	font-size: .85em;
+	font-weight: 700;
+	color: var(--dark-color);
+	border-radius: 20px;
+	line-height: 0;
+}
+
+.section-schedule .schedule-item .schedule-item_footer .schedule-item_status.schedule-item_status__waiting {
+	background-color: #FDE891;
+}
+
+.section-schedule .schedule-item .schedule-item_footer .schedule-item_status.schedule-item_status__ongoing {
+	background-color: var(--primary-200);
+}
+
+.section-schedule .schedule-item .schedule-item_footer .schedule-item_status.schedule-item_status__done {
+	background-color: #C8CBD3;
+	color: var(--bs-white);
 }

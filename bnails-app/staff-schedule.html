@@ -72,223 +72,214 @@
 	<main id="main" class="main vstack flex-fill overflow-hidden position-relative">
 		<div class="position-absolute top-0 start-0 end-0 bottom-0 overflow-y">
 			<div class="section-body">
-				<div class="container">
-					<div class="section-profile vstack gap-20px">
-						<div class="profile-user hstack gap-15px">
-							<div class="profile-avatar rounded-circle overflow-hidden flex-shrink-0">
-								<img src="./assets/images/profile-user.png" class="img-fluid" alt="">
-							</div>
-							<div class="profile-information align-self-center vstack gap-5px flex-fill">
-								<div class="profile-top hstack gap-10px text-nowrap">
-									<div class="profile-name fz-16 fw-700 dark-color">
-										Rosie Phan
+				<div class="section-schedule">
+					<div class="schedule-header">
+						<div class="container">
+							<div class="hstack gap-15px justify-content-between">
+								<div class="schedule-info">
+									<div class="schedule-info_today fz-24 dark-color fw-800 lh-1">
+										12 April
+									</div>
+									<div class="schedule-info_desc fz-14 fw-300 dark-color_600">
+										8 appointment
 									</div>
 								</div>
-								<div class="profile-bottom">
-									<div class="profile-wallet profile-wallet_staff">
-										<div class="profile-wallet_staff__value w-100 h-100 lh-1 hstack justify-content-center position-absolute text-white text-center start-50 top-50 translate-middle fz-10">
-											270 point
-										</div>
-									</div>
-								</div>
+								<button type="button" id="callDatePicker"
+								        class="button-theme button-theme_circle button-theme_primary">
+									<svg width="20" height="19" viewBox="0 0 20 19" fill="none"
+									     xmlns="http://www.w3.org/2000/svg">
+										<path d="M5.83334 11.6667C6.29358 11.6667 6.66668 11.2936 6.66668 10.8334C6.66668 10.3731 6.29358 10 5.83334 10C5.37311 10 5.00001 10.3731 5.00001 10.8334C5.00001 11.2936 5.37311 11.6667 5.83334 11.6667Z"
+										      fill="white"/>
+										<path d="M10 10.8334C10 11.2936 9.62691 11.6667 9.16668 11.6667C8.70644 11.6667 8.33334 11.2936 8.33334 10.8334C8.33334 10.3731 8.70644 10 9.16668 10C9.62691 10 10 10.3731 10 10.8334Z"
+										      fill="white"/>
+										<path d="M12.5 11.6667C12.9602 11.6667 13.3333 11.2936 13.3333 10.8334C13.3333 10.3731 12.9602 10 12.5 10C12.0398 10 11.6667 10.3731 11.6667 10.8334C11.6667 11.2936 12.0398 11.6667 12.5 11.6667Z"
+										      fill="white"/>
+										<path d="M6.66668 14.1667C6.66668 14.6269 6.29358 15 5.83334 15C5.37311 15 5.00001 14.6269 5.00001 14.1667C5.00001 13.7065 5.37311 13.3334 5.83334 13.3334C6.29358 13.3334 6.66668 13.7065 6.66668 14.1667Z"
+										      fill="white"/>
+										<path d="M9.16668 15C9.62691 15 10 14.6269 10 14.1667C10 13.7065 9.62691 13.3334 9.16668 13.3334C8.70644 13.3334 8.33334 13.7065 8.33334 14.1667C8.33334 14.6269 8.70644 15 9.16668 15Z"
+										      fill="white"/>
+										<path fill-rule="evenodd" clip-rule="evenodd"
+										      d="M6.66668 1.66671C6.66668 1.20647 6.29358 0.833374 5.83334 0.833374C5.37311 0.833374 5.00001 1.20647 5.00001 1.66671V2.50004H3.33334C1.95263 2.50004 0.833344 3.61933 0.833344 5.00004V15.8334C0.833344 17.2141 1.95263 18.3334 3.33334 18.3334H16.6667C18.0474 18.3334 19.1667 17.2141 19.1667 15.8334V5.00004C19.1667 3.61933 18.0474 2.50004 16.6667 2.50004H15V1.66671C15 1.20647 14.6269 0.833374 14.1667 0.833374C13.7064 0.833374 13.3333 1.20647 13.3333 1.66671V2.50004H6.66668V1.66671ZM2.50001 5.00004C2.50001 4.5398 2.87311 4.16671 3.33334 4.16671H16.6667C17.1269 4.16671 17.5 4.5398 17.5 5.00004V6.66671H2.50001V5.00004ZM2.50001 8.33337H17.5V15.8334C17.5 16.2936 17.1269 16.6667 16.6667 16.6667H3.33334C2.87311 16.6667 2.50001 16.2936 2.50001 15.8334V8.33337Z"
+										      fill="white"/>
+									</svg>
+								</button>
 							</div>
-							<div class="profile-arrow hstack justify-content-center ms-auto align-self-center flex-shrink-0">
-								<svg width="9" height="16" viewBox="0 0 9 16" fill="none"
-								     xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd"
-									      d="M0.910734 0.744078C1.23617 0.418641 1.76381 0.418641 2.08925 0.744078L8.75591 7.41074C9.08135 7.73618 9.08135 8.26382 8.75591 8.58926L2.08925 15.2559C1.76381 15.5814 1.23617 15.5814 0.910734 15.2559C0.585297 14.9305 0.585297 14.4028 0.910734 14.0774L6.98815 8L0.910734 1.92259C0.585297 1.59715 0.585297 1.06951 0.910734 0.744078Z"
-									      fill="#9196A6"/>
-								</svg>
+							<div class="schedule-date hstack gap-5px">
+								<button type="button"
+								        class="schedule-date_item link-default vstack align-items-center justify-content-center text-center">
+									<span class="fz-14 fw-700 dark-color">10</span>
+									<span class="fz-12 fw-500 dark-color_600">
+										M
+									</span>
+								</button>
+								<button type="button"
+								        class="schedule-date_item link-default vstack align-items-center justify-content-center text-center">
+									<span class="fz-14 fw-700 dark-color">11</span>
+									<span class="fz-12 fw-500 dark-color_600">
+										T
+									</span>
+								</button>
+								<button type="button"
+								        class="schedule-date_item is-selected link-default vstack align-items-center justify-content-center text-center">
+									<span class="fz-14 fw-700 dark-color">12</span>
+									<span class="fz-12 fw-500 dark-color_600">
+										W
+									</span>
+								</button>
+								<button type="button"
+								        class="schedule-date_item link-default vstack align-items-center justify-content-center text-center">
+									<span class="fz-14 fw-700 dark-color">13</span>
+									<span class="fz-12 fw-500 dark-color_600">
+										T
+									</span>
+								</button>
+								<button type="button"
+								        class="schedule-date_item link-default vstack align-items-center justify-content-center text-center">
+									<span class="fz-14 fw-700 dark-color">14</span>
+									<span class="fz-12 fw-500 dark-color_600">
+										F
+									</span>
+								</button>
+								<button type="button"
+								        class="schedule-date_item link-default vstack align-items-center justify-content-center text-center">
+									<span class="fz-14 fw-700 dark-color">15</span>
+									<span class="fz-12 fw-500 dark-color_600">
+										S
+									</span>
+								</button>
+								<button type="button"
+								        class="schedule-date_item link-default vstack align-items-center justify-content-center text-center">
+									<span class="fz-14 fw-700 dark-color">16</span>
+									<span class="fz-12 fw-500 dark-color_600">
+										S
+									</span>
+								</button>
 							</div>
 						</div>
-						<div class="profile-box vstack gap-20px">
-							<div class="profile-box_item vstack gap-15px">
-								<div class="profile-box_link hstack gap-10px">
-									<div class="profile-box_link__icon flex-shrink-0 bg-white rounded-circle hstack justify-content-center">
-										<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-										     xmlns="http://www.w3.org/2000/svg">
-											<path fill-rule="evenodd" clip-rule="evenodd"
-											      d="M7.49999 1.66683C7.49999 1.20659 7.87309 0.833496 8.33333 0.833496H11.6667C12.1269 0.833496 12.5 1.20659 12.5 1.66683V18.3335C12.5 18.7937 12.1269 19.1668 11.6667 19.1668H8.33333C7.87309 19.1668 7.49999 18.7937 7.49999 18.3335V1.66683ZM9.16666 2.50016V17.5002H10.8333V2.50016H9.16666Z"
-											      fill="#111215"/>
-											<path fill-rule="evenodd" clip-rule="evenodd"
-											      d="M14.1667 7.50016C14.1667 7.03992 14.5398 6.66683 15 6.66683H18.3333C18.7936 6.66683 19.1667 7.03992 19.1667 7.50016V18.3335C19.1667 18.7937 18.7936 19.1668 18.3333 19.1668H15C14.5398 19.1668 14.1667 18.7937 14.1667 18.3335V7.50016ZM15.8333 8.3335V17.5002H17.5V8.3335H15.8333Z"
-											      fill="#111215"/>
-											<path fill-rule="evenodd" clip-rule="evenodd"
-											      d="M0.833328 10.8335C0.833328 10.3733 1.20642 10.0002 1.66666 10.0002H4.99999C5.46023 10.0002 5.83333 10.3733 5.83333 10.8335V18.3335C5.83333 18.7937 5.46023 19.1668 4.99999 19.1668H1.66666C1.20642 19.1668 0.833328 18.7937 0.833328 18.3335V10.8335ZM2.49999 11.6668V17.5002H4.16666V11.6668H2.49999Z"
-											      fill="#111215"/>
-										</svg>
+					</div>
+					<div class="schedule-body">
+						<div class="container">
+							<div class="schedule-item position-relative overflow-hidden">
+								<div class="schedule-item_header hstack gap-15px justify-content-between">
+									<div class="schedule-item_title primary-color fw-700 fz-12">
+										Bnails Amarillo #1
 									</div>
-									<div class="profile-box_link__title dark-color fz-14 fw-700 flex-fill">
-										Statistics
-									</div>
-									<div class="profile-box_link__arrow hstack justify-content-center ms-auto align-self-center flex-shrink-0">
-										<svg width="9" height="16" viewBox="0 0 9 16" fill="none"
-										     xmlns="http://www.w3.org/2000/svg">
-											<path fill-rule="evenodd" clip-rule="evenodd"
-											      d="M0.910734 0.744078C1.23617 0.418641 1.76381 0.418641 2.08925 0.744078L8.75591 7.41074C9.08135 7.73618 9.08135 8.26382 8.75591 8.58926L2.08925 15.2559C1.76381 15.5814 1.23617 15.5814 0.910734 15.2559C0.585297 14.9305 0.585297 14.4028 0.910734 14.0774L6.98815 8L0.910734 1.92259C0.585297 1.59715 0.585297 1.06951 0.910734 0.744078Z"
-											      fill="#9196A6"/>
-										</svg>
+									<div class="schedule-item_time fz-10 fw-500 text-end dark-color">
+										12 April 09:00 AM
 									</div>
 								</div>
-								<div class="profile-box_link hstack gap-10px">
-									<div class="profile-box_link__icon flex-shrink-0 bg-white rounded-circle hstack justify-content-center">
-										<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-										     xmlns="http://www.w3.org/2000/svg">
-											<g clip-path="url(#clip0_1085_6900)">
-												<path fill-rule="evenodd" clip-rule="evenodd"
-												      d="M9.96802 0.833496C10.329 0.833496 10.649 1.06596 10.7606 1.40932L12.6315 7.16751H18.686C19.1463 7.16751 19.5194 7.5406 19.5194 8.00084C19.5194 8.46108 19.1463 8.83417 18.686 8.83417H12.0261C11.665 8.83417 11.3451 8.60171 11.2335 8.25835L9.96802 4.36355L8.70252 8.25835C8.59096 8.60171 8.271 8.83417 7.90997 8.83417H3.81474L7.12785 11.2413C7.41992 11.4535 7.54214 11.8296 7.43058 12.173L6.17054 16.051L9.09081 13.9113C9.46205 13.6393 9.98352 13.7197 10.2555 14.091C10.5276 14.4622 10.4471 14.9837 10.0759 15.2557L5.07252 18.9217C4.7808 19.1354 4.38452 19.1366 4.09152 18.9247C3.79852 18.7127 3.67569 18.3359 3.78744 17.992L5.65839 12.2338L0.76018 8.67502C0.468107 8.46282 0.345892 8.08668 0.457454 7.74333C0.569016 7.39997 0.888979 7.16751 1.25 7.16751H7.30452L9.17547 1.40932C9.28703 1.06596 9.607 0.833496 9.96802 0.833496ZM12.8594 11.2502C12.8594 10.7899 13.2325 10.4168 13.6927 10.4168H18.686C19.1463 10.4168 19.5194 10.7899 19.5194 11.2502C19.5194 11.7104 19.1463 12.0835 18.686 12.0835H13.6927C13.2325 12.0835 12.8594 11.7104 12.8594 11.2502ZM12.8594 14.5835C12.8594 14.1233 13.2325 13.7502 13.6927 13.7502H18.686C19.1463 13.7502 19.5194 14.1233 19.5194 14.5835C19.5194 15.0437 19.1463 15.4168 18.686 15.4168H13.6927C13.2325 15.4168 12.8594 15.0437 12.8594 14.5835Z"
-												      fill="#111215"/>
+								<div class="schedule-item_body hstack gap-5px">
+									<div class="schedule-item_service hstack justify-content-center">
+										<img src="./assets/images/service/icon-1.png" class="img-fluid" alt="">
+									</div>
+									<div class="schedule-item_service hstack justify-content-center">
+										<img src="./assets/images/service/icon-1.png" class="img-fluid" alt="">
+									</div>
+									<div class="schedule-item_service hstack justify-content-center">
+										<img src="./assets/images/service/icon-1.png" class="img-fluid" alt="">
+									</div>
+									<div class="schedule-item_service hstack justify-content-center">
+										<img src="./assets/images/service/icon-1.png" class="img-fluid" alt="">
+									</div>
+								</div>
+								<div class="schedule-item_footer">
+									<div class="schedule-item_status schedule-item_status__waiting">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g clip-path="url(#clip0_796_23834)">
+												<path d="M9.99277 1.66667C10.453 1.66667 10.8261 1.29357 10.8261 0.833333C10.8261 0.373096 10.453 0 9.99277 0C9.53254 0 9.15944 0.373096 9.15944 0.833333C9.15944 1.29357 9.53254 1.66667 9.99277 1.66667Z" fill="#111215"></path>
+												<path d="M12.8429 2.16937C13.2754 2.32678 13.7536 2.10379 13.911 1.67131C14.0684 1.23883 13.8455 0.760624 13.413 0.603213C12.9805 0.445803 12.5023 0.668792 12.3449 1.10127C12.1875 1.53376 12.4105 2.01196 12.8429 2.16937Z" fill="#111215"></path>
+												<path d="M16.5232 3.51348C16.2274 3.86604 15.7018 3.91202 15.3492 3.61619C14.9967 3.32035 14.9507 2.79472 15.2465 2.44216C15.5423 2.0896 16.068 2.04361 16.4205 2.33945C16.7731 2.63528 16.8191 3.16091 16.5232 3.51348Z" fill="#111215"></path>
+												<path d="M17.2095 5.83318C17.4396 6.23176 17.9492 6.36832 18.3478 6.1382C18.7464 5.90808 18.883 5.39842 18.6528 4.99985C18.4227 4.60127 17.9131 4.46471 17.5145 4.69482C17.1159 4.92494 16.9794 5.4346 17.2095 5.83318Z" fill="#111215"></path>
+												<path d="M19.1645 9.22909C18.7112 9.30901 18.279 9.00637 18.1991 8.55312C18.1192 8.09988 18.4218 7.66766 18.8751 7.58774C19.3283 7.50782 19.7605 7.81046 19.8404 8.26371C19.9204 8.71695 19.6177 9.14917 19.1645 9.22909Z" fill="#111215"></path>
+												<path d="M18.199 11.4472C18.1191 11.9004 18.4217 12.3327 18.875 12.4126C19.3282 12.4925 19.7604 12.1899 19.8403 11.7366C19.9203 11.2834 19.6176 10.8511 19.1644 10.7712C18.7111 10.6913 18.2789 10.9939 18.199 11.4472Z" fill="#111215"></path>
+												<path d="M17.5141 15.3049C17.1155 15.0747 16.9789 14.5651 17.2091 14.1665C17.4392 13.7679 17.9488 13.6314 18.3474 13.8615C18.746 14.0916 18.8826 14.6013 18.6524 14.9998C18.4223 15.3984 17.9127 15.535 17.5141 15.3049Z" fill="#111215"></path>
+												<path d="M15.3485 16.3838C14.996 16.6796 14.95 17.2052 15.2458 17.5578C15.5416 17.9103 16.0673 17.9563 16.4198 17.6605C16.7724 17.3647 16.8184 16.839 16.5225 16.4865C16.2267 16.1339 15.7011 16.0879 15.3485 16.3838Z" fill="#111215"></path>
+												<path d="M12.3445 18.8991C12.1871 18.4666 12.4101 17.9884 12.8425 17.831C13.275 17.6736 13.7532 17.8966 13.9106 18.3291C14.068 18.7615 13.8451 19.2397 13.4126 19.3972C12.9801 19.5546 12.5019 19.3316 12.3445 18.8991Z" fill="#111215"></path>
+												<path d="M9.99237 18.3333C9.53213 18.3333 9.15903 18.7064 9.15903 19.1667C9.15903 19.6269 9.53213 20 9.99237 20C10.4526 20 10.8257 19.6269 10.8257 19.1667C10.8257 18.7064 10.4526 18.3333 9.99237 18.3333Z" fill="#111215"></path>
+												<path d="M6.0741 18.3287C6.23151 17.8962 6.70971 17.6732 7.1422 17.8306C7.57468 17.988 7.79767 18.4662 7.64026 18.8987C7.48285 19.3312 7.00464 19.5542 6.57216 19.3968C6.13968 19.2394 5.91669 18.7612 6.0741 18.3287Z" fill="#111215"></path>
+												<path d="M4.63592 16.3838C4.28336 16.088 3.75773 16.134 3.46189 16.4865C3.16606 16.8391 3.21204 17.3647 3.56461 17.6606C3.91717 17.9564 4.4428 17.9104 4.73863 17.5578C5.03447 17.2053 4.98848 16.6796 4.63592 16.3838Z" fill="#111215"></path>
+												<path d="M1.63731 13.8618C2.03589 13.6317 2.54555 13.7682 2.77567 14.1668C3.00578 14.5654 2.86922 15.0751 2.47065 15.3052C2.07207 15.5353 1.56241 15.3987 1.33229 15.0002C1.10217 14.6016 1.23873 14.0919 1.63731 13.8618Z" fill="#111215"></path>
+												<path d="M1.78604 11.4469C1.70612 10.9936 1.27391 10.691 0.820663 10.7709C0.367418 10.8508 0.0647772 11.283 0.144697 11.7363C0.224616 12.1895 0.656831 12.4922 1.11008 12.4123C1.56332 12.3323 1.86596 11.9001 1.78604 11.4469Z" fill="#111215"></path>
+												<path d="M1.11018 7.58743C1.56343 7.66735 1.86607 8.09956 1.78615 8.55281C1.70623 9.00605 1.27401 9.30869 0.82077 9.22877C0.367525 9.14885 0.0648841 8.71664 0.144803 8.26339C0.224723 7.81015 0.656938 7.50751 1.11018 7.58743Z" fill="#111215"></path>
+												<path d="M2.77607 5.83349C3.00619 5.43491 2.86963 4.92525 2.47105 4.69513C2.07247 4.46501 1.56282 4.60158 1.3327 5.00015C1.10258 5.39873 1.23914 5.90839 1.63772 6.13851C2.0363 6.36863 2.54595 6.23206 2.77607 5.83349Z" fill="#111215"></path>
+												<path d="M4.73933 2.44222C5.03517 2.79478 4.98918 3.32041 4.63662 3.61625C4.28406 3.91208 3.75843 3.8661 3.46259 3.51353C3.16676 3.16097 3.21274 2.63534 3.56531 2.33951C3.91787 2.04367 4.4435 2.08966 4.73933 2.44222Z" fill="#111215"></path>
+												<path d="M7.1426 2.1694C7.57508 2.01199 7.79807 1.53379 7.64066 1.10131C7.48325 0.668827 7.00504 0.445838 6.57256 0.603248C6.14008 0.760659 5.91709 1.23886 6.0745 1.67134C6.23191 2.10382 6.71011 2.32681 7.1426 2.1694Z" fill="#111215"></path>
 											</g>
 											<defs>
-												<clipPath id="clip0_1085_6900">
-													<rect width="20" height="20" fill="white"/>
+												<clipPath id="clip0_796_23834">
+													<rect width="20" height="20" fill="white"></rect>
 												</clipPath>
 											</defs>
 										</svg>
-									</div>
-									<div class="profile-box_link__title dark-color fz-14 fw-700 flex-fill">
-										Your rating
-									</div>
-									<div class="profile-box_link__arrow hstack justify-content-center ms-auto align-self-center flex-shrink-0">
-										<svg width="9" height="16" viewBox="0 0 9 16" fill="none"
-										     xmlns="http://www.w3.org/2000/svg">
-											<path fill-rule="evenodd" clip-rule="evenodd"
-											      d="M0.910734 0.744078C1.23617 0.418641 1.76381 0.418641 2.08925 0.744078L8.75591 7.41074C9.08135 7.73618 9.08135 8.26382 8.75591 8.58926L2.08925 15.2559C1.76381 15.5814 1.23617 15.5814 0.910734 15.2559C0.585297 14.9305 0.585297 14.4028 0.910734 14.0774L6.98815 8L0.910734 1.92259C0.585297 1.59715 0.585297 1.06951 0.910734 0.744078Z"
-											      fill="#9196A6"/>
-										</svg>
-									</div>
-								</div>
-								<div class="profile-box_link hstack gap-10px">
-									<div class="profile-box_link__icon flex-shrink-0 bg-white rounded-circle hstack justify-content-center">
-										<svg width="14" height="20" viewBox="0 0 14 20" fill="none"
-										     xmlns="http://www.w3.org/2000/svg">
-											<path fill-rule="evenodd" clip-rule="evenodd"
-											      d="M6.99999 0.833496C3.3181 0.833496 0.333328 3.81826 0.333328 7.50016C0.333328 9.60548 1.30922 11.4829 2.83333 12.7046V18.3335C2.83333 18.6223 2.98287 18.8905 3.22855 19.0424C3.47423 19.1942 3.78102 19.208 4.03934 19.0789L6.99999 17.5985L9.96065 19.0789C10.219 19.208 10.5258 19.1942 10.7714 19.0424C11.0171 18.8905 11.1667 18.6223 11.1667 18.3335V12.7046C12.6908 11.4829 13.6667 9.60548 13.6667 7.50016C13.6667 3.81826 10.6819 0.833496 6.99999 0.833496ZM1.99999 7.50016C1.99999 4.73874 4.23857 2.50016 6.99999 2.50016C9.76142 2.50016 12 4.73874 12 7.50016C12 10.2616 9.76142 12.5002 6.99999 12.5002C4.23857 12.5002 1.99999 10.2616 1.99999 7.50016ZM9.49999 13.6822C8.72797 13.9947 7.88408 14.1668 6.99999 14.1668C6.11591 14.1668 5.27202 13.9947 4.49999 13.6822V16.9851L6.62732 15.9215C6.86192 15.8042 7.13807 15.8042 7.37267 15.9215L9.49999 16.9851V13.6822Z"
-											      fill="#111215"/>
-										</svg>
-									</div>
-									<div class="profile-box_link__title dark-color fz-14 fw-700 flex-fill">
-										Rankings
-									</div>
-									<div class="profile-box_link__arrow hstack justify-content-center ms-auto align-self-center flex-shrink-0">
-										<svg width="9" height="16" viewBox="0 0 9 16" fill="none"
-										     xmlns="http://www.w3.org/2000/svg">
-											<path fill-rule="evenodd" clip-rule="evenodd"
-											      d="M0.910734 0.744078C1.23617 0.418641 1.76381 0.418641 2.08925 0.744078L8.75591 7.41074C9.08135 7.73618 9.08135 8.26382 8.75591 8.58926L2.08925 15.2559C1.76381 15.5814 1.23617 15.5814 0.910734 15.2559C0.585297 14.9305 0.585297 14.4028 0.910734 14.0774L6.98815 8L0.910734 1.92259C0.585297 1.59715 0.585297 1.06951 0.910734 0.744078Z"
-											      fill="#9196A6"/>
-										</svg>
-									</div>
-								</div>
-								<div class="profile-box_link hstack gap-10px">
-									<div class="profile-box_link__icon flex-shrink-0 bg-white rounded-circle hstack justify-content-center">
-										<svg width="18" height="20" viewBox="0 0 18 20" fill="none"
-										     xmlns="http://www.w3.org/2000/svg">
-											<path fill-rule="evenodd" clip-rule="evenodd"
-											      d="M3.16667 2.50016C2.70643 2.50016 2.33334 2.87326 2.33334 3.3335V16.6668C2.33334 17.1271 2.70643 17.5002 3.16667 17.5002H14.8333C15.2936 17.5002 15.6667 17.1271 15.6667 16.6668V8.3335H12.3333C10.9526 8.3335 9.83334 7.21421 9.83334 5.8335V2.50016H3.16667ZM11.5 3.67867L14.4882 6.66683H12.3333C11.8731 6.66683 11.5 6.29373 11.5 5.8335V3.67867ZM0.666672 3.3335C0.666672 1.95278 1.78596 0.833496 3.16667 0.833496H10.6667C10.8877 0.833496 11.0996 0.921293 11.2559 1.07757L17.0893 6.91091C17.2455 7.06719 17.3333 7.27915 17.3333 7.50016V16.6668C17.3333 18.0475 16.2141 19.1668 14.8333 19.1668H3.16667C1.78596 19.1668 0.666672 18.0475 0.666672 16.6668V3.3335Z"
-											      fill="#111215"/>
-										</svg>
-									</div>
-									<div class="profile-box_link__title dark-color fz-14 fw-700 flex-fill">
-										Report
-									</div>
-									<div class="profile-box_link__arrow hstack justify-content-center ms-auto align-self-center flex-shrink-0">
-										<svg width="9" height="16" viewBox="0 0 9 16" fill="none"
-										     xmlns="http://www.w3.org/2000/svg">
-											<path fill-rule="evenodd" clip-rule="evenodd"
-											      d="M0.910734 0.744078C1.23617 0.418641 1.76381 0.418641 2.08925 0.744078L8.75591 7.41074C9.08135 7.73618 9.08135 8.26382 8.75591 8.58926L2.08925 15.2559C1.76381 15.5814 1.23617 15.5814 0.910734 15.2559C0.585297 14.9305 0.585297 14.4028 0.910734 14.0774L6.98815 8L0.910734 1.92259C0.585297 1.59715 0.585297 1.06951 0.910734 0.744078Z"
-											      fill="#9196A6"/>
-										</svg>
+										Wait for approval
 									</div>
 								</div>
 							</div>
-							<div class="profile-box_item vstack gap-15px">
-								<div class="profile-box_link hstack gap-10px">
-									<div class="profile-box_link__icon flex-shrink-0 bg-white rounded-circle hstack justify-content-center">
-										<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-										     xmlns="http://www.w3.org/2000/svg">
-											<path fill-rule="evenodd" clip-rule="evenodd"
-											      d="M12.5774 0.910582C12.9029 0.585145 13.4305 0.585145 13.7559 0.910582L17.0893 4.24392C17.4147 4.56935 17.4147 5.09699 17.0893 5.42243L5.42259 17.0891C5.26631 17.2454 5.05435 17.3332 4.83334 17.3332H1.50001C1.03977 17.3332 0.666672 16.9601 0.666672 16.4998V13.1665C0.666672 12.9455 0.754469 12.7335 0.910749 12.5772L12.5774 0.910582ZM11.8452 3.99984L14 6.15466L15.3215 4.83317L13.1667 2.67835L11.8452 3.99984ZM12.8215 7.33317L10.6667 5.17835L3.51185 12.3332L5.66667 14.488L12.8215 7.33317ZM4.48816 15.6665L2.33334 13.5117V15.6665H4.48816Z"
-											      fill="#111215"/>
-										</svg>
+							<div class="schedule-item position-relative overflow-hidden">
+								<div class="schedule-item_header hstack gap-15px justify-content-between">
+									<div class="schedule-item_title primary-color fw-700 fz-12">
+										Bnails Amarillo #1
 									</div>
-									<div class="profile-box_link__title dark-color fz-14 fw-700 flex-fill">
-										Edit profile
-										<div class="fz-12 fw-300 dark-color_600">
-											rosietran112@gmail.com
-										</div>
-									</div>
-									<div class="profile-box_link__arrow hstack justify-content-center ms-auto align-self-center flex-shrink-0">
-										<svg width="9" height="16" viewBox="0 0 9 16" fill="none"
-										     xmlns="http://www.w3.org/2000/svg">
-											<path fill-rule="evenodd" clip-rule="evenodd"
-											      d="M0.910734 0.744078C1.23617 0.418641 1.76381 0.418641 2.08925 0.744078L8.75591 7.41074C9.08135 7.73618 9.08135 8.26382 8.75591 8.58926L2.08925 15.2559C1.76381 15.5814 1.23617 15.5814 0.910734 15.2559C0.585297 14.9305 0.585297 14.4028 0.910734 14.0774L6.98815 8L0.910734 1.92259C0.585297 1.59715 0.585297 1.06951 0.910734 0.744078Z"
-											      fill="#9196A6"/>
-										</svg>
+									<div class="schedule-item_time fz-10 fw-500 text-end dark-color">
+										12 April 09:00 AM
 									</div>
 								</div>
-								<div class="profile-box_link hstack gap-10px">
-									<div class="profile-box_link__icon flex-shrink-0 bg-white rounded-circle hstack justify-content-center">
-										<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-										     xmlns="http://www.w3.org/2000/svg">
-											<path fill-rule="evenodd" clip-rule="evenodd"
-											      d="M11.6628 2.60845C11.6654 2.57475 11.6667 2.53871 11.6667 2.50016C11.6667 1.57969 10.9205 0.833496 10 0.833496C9.07953 0.833496 8.33334 1.57969 8.33334 2.50016C8.33334 2.5387 8.33464 2.57474 8.33722 2.60843C7.03401 2.79372 6.03975 3.21572 5.29321 3.86553C4.25844 4.76623 3.83984 5.98499 3.60957 7.16736C3.49416 7.75992 3.42032 8.37693 3.35007 8.9671L3.34748 8.98885C3.2769 9.58183 3.20914 10.1512 3.10653 10.7057C2.8991 11.8266 2.56451 12.7908 1.87914 13.5563C1.70975 13.7455 1.63587 14.0016 1.67847 14.252C1.72108 14.5023 1.8755 14.7196 2.09794 14.8421C3.4571 15.5908 5.04529 16.1036 6.71356 16.3906C6.71945 16.4254 6.72589 16.46 6.73286 16.4945C6.82537 16.9517 7.01296 17.3851 7.28418 17.7662C7.58918 18.1948 7.99129 18.5451 8.45762 18.7885C8.92396 19.0319 9.44128 19.1615 9.96729 19.1667C10.4933 19.1718 11.0131 19.0524 11.4841 18.8182C11.9551 18.584 12.364 18.2417 12.6774 17.8191C12.956 17.4434 13.1521 17.0138 13.2535 16.5585C13.2659 16.5029 13.2769 16.4469 13.2864 16.3906C14.9547 16.1036 16.5429 15.5908 17.9021 14.8421C18.1245 14.7196 18.2789 14.5023 18.3215 14.252C18.3641 14.0016 18.2902 13.7455 18.1209 13.5563C17.4355 12.7908 17.1009 11.8266 16.8934 10.7057C16.7908 10.1511 16.723 9.5818 16.6525 8.9888L16.6499 8.96708C16.5796 8.37692 16.5058 7.75991 16.3903 7.16735C16.16 5.98498 15.7414 4.76622 14.7067 3.86553C13.9601 3.21574 12.9659 2.79375 11.6628 2.60845ZM11.4735 16.6123C10.9834 16.6487 10.491 16.6668 10 16.6668C9.50897 16.6668 9.01662 16.6487 8.52649 16.6123C8.56075 16.6771 8.59934 16.7398 8.64209 16.7998C8.79459 17.0141 8.99564 17.1893 9.22881 17.311C9.46198 17.4327 9.72064 17.4975 9.98364 17.5001C10.2466 17.5027 10.5065 17.443 10.742 17.3259C10.9776 17.2087 11.182 17.0376 11.3387 16.8263C11.3891 16.7583 11.4342 16.6867 11.4735 16.6123ZM10 15.0002C7.76434 15.0002 5.56047 14.592 3.75967 13.8038C4.29807 12.9149 4.5724 11.9437 4.74537 11.0089C4.85789 10.4009 4.93113 9.78535 4.99977 9.20851L5.00505 9.1641C5.0765 8.56385 5.14382 8.00805 5.2455 7.48597C5.44939 6.43906 5.76871 5.66124 6.38746 5.12267C7.00434 4.58572 8.05919 4.16683 9.99994 4.16683C11.9407 4.16683 12.9955 4.58572 13.6124 5.12267C14.2312 5.66125 14.5505 6.43907 14.7544 7.48599C14.8561 8.00806 14.9234 8.56387 14.9949 9.16411L15.0002 9.20852C15.0688 9.78536 15.1421 10.4009 15.2546 11.009C15.4276 11.9437 15.7019 12.9149 16.2403 13.8038C14.4395 14.592 12.2357 15.0002 10 15.0002Z"
-											      fill="#111215"/>
-										</svg>
+								<div class="schedule-item_body hstack gap-5px">
+									<div class="schedule-item_service hstack justify-content-center">
+										<img src="./assets/images/service/icon-1.png" class="img-fluid" alt="">
 									</div>
-									<div class="profile-box_link__title dark-color fz-14 fw-700 flex-fill">
-										Enable notifications
+									<div class="schedule-item_service hstack justify-content-center">
+										<img src="./assets/images/service/icon-1.png" class="img-fluid" alt="">
 									</div>
-									<div class="profile-box_link__toggle toggle-theme hstack justify-content-center ms-auto align-self-center flex-shrink-0">
-										<input class="toggle-theme_input" type="checkbox" role="switch"
-										       id="toogleExample">
-										<label for="toogleExample" class="toggle-theme_label"></label>
+									<div class="schedule-item_service hstack justify-content-center">
+										<img src="./assets/images/service/icon-1.png" class="img-fluid" alt="">
+									</div>
+									<div class="schedule-item_service hstack justify-content-center">
+										<img src="./assets/images/service/icon-1.png" class="img-fluid" alt="">
 									</div>
 								</div>
-								<div class="profile-box_link hstack gap-10px">
-									<div class="profile-box_link__icon flex-shrink-0 bg-white rounded-circle hstack justify-content-center">
-										<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-										     xmlns="http://www.w3.org/2000/svg">
-											<path fill-rule="evenodd" clip-rule="evenodd"
-											      d="M7.33334 3.99984V5.6665H10.6667V3.99984C10.6667 2.15889 12.1591 0.666504 14 0.666504C15.841 0.666504 17.3333 2.15889 17.3333 3.99984C17.3333 5.84079 15.841 7.33317 14 7.33317H12.3333V10.6665H14C15.841 10.6665 17.3333 12.1589 17.3333 13.9998C17.3333 15.8408 15.841 17.3332 14 17.3332C12.1591 17.3332 10.6667 15.8408 10.6667 13.9998V12.3332L7.33334 12.3332V13.9998C7.33334 15.8408 5.84095 17.3332 4.00001 17.3332C2.15906 17.3332 0.666672 15.8408 0.666672 13.9998C0.666672 12.1589 2.15906 10.6665 4.00001 10.6665H5.66667V7.33317L4.00001 7.33317C2.15906 7.33317 0.666672 5.84079 0.666672 3.99984C0.666672 2.15889 2.15906 0.666504 4.00001 0.666504C5.84095 0.666504 7.33334 2.15889 7.33334 3.99984ZM2.33334 3.99984C2.33334 3.07936 3.07953 2.33317 4.00001 2.33317C4.92048 2.33317 5.66667 3.07936 5.66667 3.99984V5.6665H4.00001C3.07953 5.6665 2.33334 4.92031 2.33334 3.99984ZM7.33334 10.6665H10.6667V7.33317L7.33334 7.33317V10.6665ZM5.66667 12.3332L4.00001 12.3332C3.07953 12.3332 2.33334 13.0794 2.33334 13.9998C2.33334 14.9203 3.07953 15.6665 4.00001 15.6665C4.92048 15.6665 5.66667 14.9203 5.66667 13.9998V12.3332ZM12.3333 12.3332V13.9998C12.3333 14.9203 13.0795 15.6665 14 15.6665C14.9205 15.6665 15.6667 14.9203 15.6667 13.9998C15.6667 13.0794 14.9205 12.3332 14 12.3332H12.3333ZM14 5.6665H12.3333V3.99984C12.3333 3.07936 13.0795 2.33317 14 2.33317C14.9205 2.33317 15.6667 3.07936 15.6667 3.99984C15.6667 4.92031 14.9205 5.6665 14 5.6665Z"
-											      fill="#111215"/>
+								<div class="schedule-item_footer">
+									<div class="schedule-item_status schedule-item_status__ongoing">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M4.30378 13.2883C2.48754 10.1425 3.56538 6.11997 6.71119 4.30373C9.78909 2.52671 13.7063 3.52014 15.5751 6.5103L13.5879 5.87298C13.1497 5.73243 12.6804 5.97376 12.5399 6.41201C12.3993 6.85026 12.6407 7.31947 13.0789 7.46003L17.2456 8.79634C17.4991 8.87763 17.7761 8.83294 17.9912 8.67606C18.2062 8.51919 18.3334 8.26901 18.3334 8.00282V3.33317C18.3334 2.87293 17.9603 2.49984 17.5001 2.49984C17.0398 2.49984 16.6667 2.87293 16.6667 3.33317V5.14964C14.2188 1.77611 9.56729 0.730262 5.87786 2.86036C1.93489 5.13683 0.583931 10.1787 2.8604 14.1217C4.38655 16.765 7.15538 18.2423 9.99939 18.2448C10.4596 18.2452 10.8331 17.8724 10.8335 17.4122C10.8339 16.952 10.4611 16.5785 10.0009 16.5781C7.72732 16.5761 5.52044 15.3956 4.30378 13.2883Z" fill="#111215"/>
+											<path d="M17.2413 12.1227C16.7881 12.0428 16.4854 11.6106 16.5654 11.1573C16.6453 10.7041 17.0775 10.4015 17.5307 10.4814C17.984 10.5613 18.2866 10.9935 18.2067 11.4467C18.1268 11.9 17.6946 12.2026 17.2413 12.1227Z" fill="#111215"/>
+											<path d="M15.7732 13.333C15.5431 13.7316 15.6796 14.2413 16.0782 14.4714C16.4768 14.7015 16.9865 14.5649 17.2166 14.1664C17.4467 13.7678 17.3101 13.2581 16.9116 13.028C16.513 12.7979 16.0033 12.9345 15.7732 13.333Z" fill="#111215"/>
+											<path d="M14.1823 16.2808C13.8864 15.9282 13.9324 15.4026 14.285 15.1068C14.6375 14.8109 15.1632 14.8569 15.459 15.2095C15.7548 15.562 15.7088 16.0877 15.3563 16.3835C15.0037 16.6793 14.4781 16.6333 14.1823 16.2808Z" fill="#111215"/>
+											<path d="M12.2799 16.2643C11.8474 16.4217 11.6244 16.8999 11.7818 17.3324C11.9392 17.7649 12.4174 17.9879 12.8499 17.8304C13.2824 17.673 13.5054 17.1948 13.348 16.7624C13.1906 16.3299 12.7124 16.1069 12.2799 16.2643Z" fill="#111215"/>
 										</svg>
-									</div>
-									<div class="profile-box_link__title dark-color fz-14 fw-700 flex-fill">
-										Display language
-										<div class="fz-12 fw-300 dark-color_600">
-											English
-										</div>
+										Ongoing
 									</div>
 								</div>
 							</div>
-							<div class="profile-box_item vstack gap-15px">
-								<div class="profile-box_link hstack gap-10px">
-									<div class="profile-box_link__icon flex-shrink-0 bg-white rounded-circle hstack justify-content-center">
-										<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-										     xmlns="http://www.w3.org/2000/svg">
-											<g clip-path="url(#clip0_1019_8561)">
-												<path d="M7.5 1.66683C7.5 2.12707 7.1269 2.50016 6.66667 2.50016L3.33333 2.50016C2.8731 2.50016 2.5 2.87326 2.5 3.3335L2.5 16.6668C2.5 17.1271 2.8731 17.5002 3.33333 17.5002L6.66667 17.5002C7.1269 17.5002 7.5 17.8733 7.5 18.3335C7.5 18.7937 7.1269 19.1668 6.66667 19.1668L3.33333 19.1668C1.95262 19.1668 0.833333 18.0475 0.833333 16.6668L0.833333 3.3335C0.833333 1.95278 1.95262 0.833496 3.33333 0.833496L6.66667 0.833496C7.1269 0.833496 7.5 1.20659 7.5 1.66683Z"
-												      fill="#111215"/>
-												<path d="M16.3215 10.8333L6.66666 10.8333C6.20642 10.8333 5.83333 10.4602 5.83333 10C5.83333 9.53976 6.20642 9.16667 6.66666 9.16667L16.3215 9.16667L13.5774 6.42259C13.252 6.09715 13.252 5.56952 13.5774 5.24408C13.9028 4.91864 14.4305 4.91864 14.7559 5.24408L18.9226 9.41074C19.248 9.73618 19.248 10.2638 18.9226 10.5893L14.7559 14.7559C14.4305 15.0814 13.9028 15.0814 13.5774 14.7559C13.252 14.4305 13.252 13.9028 13.5774 13.5774L16.3215 10.8333Z"
-												      fill="#111215"/>
-											</g>
-											<defs>
-												<clipPath id="clip0_1019_8561">
-													<rect width="20" height="20" fill="white"/>
-												</clipPath>
-											</defs>
-										</svg>
+							<div class="schedule-item position-relative overflow-hidden">
+								<div class="schedule-item_header hstack gap-15px justify-content-between">
+									<div class="schedule-item_title primary-color fw-700 fz-12">
+										Bnails Amarillo #1
 									</div>
-									<div class="profile-box_link__title dark-color fz-14 fw-700 flex-fill">
-										Sign out
+									<div class="schedule-item_time fz-10 fw-500 text-end dark-color">
+										12 April 09:00 AM
 									</div>
-									<div class="profile-box_link__arrow hstack justify-content-center ms-auto align-self-center flex-shrink-0">
-										<svg width="9" height="16" viewBox="0 0 9 16" fill="none"
-										     xmlns="http://www.w3.org/2000/svg">
-											<path fill-rule="evenodd" clip-rule="evenodd"
-											      d="M0.910734 0.744078C1.23617 0.418641 1.76381 0.418641 2.08925 0.744078L8.75591 7.41074C9.08135 7.73618 9.08135 8.26382 8.75591 8.58926L2.08925 15.2559C1.76381 15.5814 1.23617 15.5814 0.910734 15.2559C0.585297 14.9305 0.585297 14.4028 0.910734 14.0774L6.98815 8L0.910734 1.92259C0.585297 1.59715 0.585297 1.06951 0.910734 0.744078Z"
-											      fill="#9196A6"/>
+								</div>
+								<div class="schedule-item_body hstack gap-5px">
+									<div class="schedule-item_service hstack justify-content-center">
+										<img src="./assets/images/service/icon-1.png" class="img-fluid" alt="">
+									</div>
+									<div class="schedule-item_service hstack justify-content-center">
+										<img src="./assets/images/service/icon-1.png" class="img-fluid" alt="">
+									</div>
+									<div class="schedule-item_service hstack justify-content-center">
+										<img src="./assets/images/service/icon-1.png" class="img-fluid" alt="">
+									</div>
+									<div class="schedule-item_service hstack justify-content-center">
+										<img src="./assets/images/service/icon-1.png" class="img-fluid" alt="">
+									</div>
+								</div>
+								<div class="schedule-item_footer">
+									<div class="schedule-item_status schedule-item_status__done">
+										<svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M14.4108 0.744078C14.7363 0.418641 15.2639 0.418641 15.5893 0.744078L18.9227 4.07741C19.2481 4.40285 19.2481 4.93049 18.9227 5.25592L8.08934 16.0893C7.7639 16.4147 7.23626 16.4147 6.91083 16.0893L0.660826 9.83926C0.335389 9.51382 0.335389 8.98618 0.660826 8.66074L3.99416 5.32741C4.3196 5.00197 4.84723 5.00197 5.17267 5.32741L7.50008 7.65482L14.4108 0.744078ZM15.0001 2.51185L8.08934 9.42259C7.7639 9.74803 7.23626 9.74803 6.91083 9.42259L4.58341 7.09518L2.42859 9.25L7.50008 14.3215L17.1549 4.66667L15.0001 2.51185Z" fill="white"/>
 										</svg>
+										Done
 									</div>
 								</div>
 							</div>

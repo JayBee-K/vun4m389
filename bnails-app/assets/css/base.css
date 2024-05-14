@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap');
 
 @font-face {
 	font-family: 'Helvetica Neus';
@@ -115,7 +115,7 @@
 
 :root {
 	--transition-default: 0.3s all ease-in-out;
-	--font-heading: "Lato", "Helvetica Neus", sans-serif;
+	--font-heading: "Abhaya Libre", "Helvetica Neus", sans-serif;
 	--font-theme: "Helvetica Neus", sans-serif;
 	--size-theme: 14px;
 
@@ -850,6 +850,10 @@ textarea:focus {
 .rd-month-label {
 	font-size: 16px;
 	font-weight: 500;
+}
+
+.c-datepicker__day-head {
+	color: var(--dark-color);
 }
 
 .c-datepicker__day-head,
