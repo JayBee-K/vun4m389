@@ -202,12 +202,17 @@
 	background-color: #1AB616;
 }
 
-.appointment-card .appointment-expand .appointment-expand_status.appointment-expand_status__failed {
+.appointment-card .appointment-expand .appointment-expand_status.appointment-expand_status__failed,
+.appointment-card .appointment-expand .appointment-expand_status.appointment-expand_status__done{
 	background-color: #C8CBD3;
 }
 
 .appointment-card .appointment-expand .appointment-expand_status.appointment-expand_status__waiting {
 	background-color: #FDE891;
+}
+
+.appointment-card .appointment-expand .appointment-expand_status.appointment-expand_status__ongoing {
+	background-color: var(--primary-200);
 }
 
 
@@ -700,6 +705,73 @@
 	border-top-color: transparent
 }
 
+.modal-appointment .appointment-content {
+	padding: 0 15px 15px;
+}
+
+.modal-appointment .appointment-content .rating-item {
+	padding: 12px;
+	border-radius: 20px;
+	background-color: var(--bs-white);
+}
+
+.modal-appointment .appointment-content .rating-total {
+	margin-top: 15px;
+	padding: 0 12px 12px;
+}
+
+.modal-appointment .appointment-content .rating-total .rating-total_item {
+	padding: 10px 0;
+}
+
+.modal-appointment .appointment-content .rating-total .rating-total_item + .rating-total_item {
+	border-top: 1px solid var(--primary-50);
+}
+
+.modal-appointment .appointment-content .rating-total.rating-status {
+	margin-bottom: 15px;
+	padding: 12px;
+	background-color: var(--bs-white);
+	border-radius: 20px;
+	margin-top: 0;
+}
+
+.modal-appointment .appointment-content .rating-total.rating-status .rating-total_item__status {
+	padding: 6px 12px 6px 6px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	font-size: .85em;
+	font-weight: 700;
+	color: var(--dark-color);
+	border-radius: 20px;
+	line-height: 0;
+}
+
+.modal-appointment .appointment-content .rating-title {
+	font-family: var(--font-heading);
+}
+
+.modal-appointment .appointment-content .rating-total.rating-status .rating-total_item__status.rating-status_waiting {
+	background-color: #FDE891;
+}
+
+.modal-appointment .appointment-content .rating-total.rating-status .rating-total_item__status.rating-status_ongoing {
+	background-color: var(--primary-200);
+}
+
+.modal-appointment .appointment-content .rating-total.rating-status .rating-total_item__status.rating-status_done {
+	background-color: var(--bg-light);
+	color: var(--bs-white);
+}
+
+.modal-appointment .appointment-content .rating-item + .rating-item {
+	padding: 12px;
+	margin-top: 15px;
+	border-top: none;
+}
+
 .section-chat {
 	background-color: var(--bs-white);
 }
@@ -896,10 +968,13 @@
 }
 
 .rating-list .rating-item .rating-editor {
+	margin-top: var(--spacing);
+}
+
+.rating-list .rating-item .rating-editor .rating-editor_inner {
 	padding: 8px 16px 8px 46px;
 	background-color: var(--bg-light);
 	border-radius: 48px;
-	margin-top: var(--spacing);
 }
 
 .rating-list .rating-item .rating-editor .rating-editor_button {
@@ -914,6 +989,10 @@
 
 .rating-list .rating-item .rating-editor .rating-editor_input::placeholder {
 	color: var(--dark-400);
+}
+
+.rating-list .rating-item .rating-buttons {
+	margin-top: var(--spacing);
 }
 
 .rating-list .rating-item + .rating-item {

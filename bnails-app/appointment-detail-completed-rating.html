@@ -1,521 +1,525 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta name="theme-color" content="#ffffff">
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="theme-color" content="#ffffff">
 
-    <title>Bnails App</title>
-    <meta name="description" content="Bnails App">
-    <meta name="author" content="">
+	<title>Bnails App</title>
+	<meta name="description" content="Bnails App">
+	<meta name="author" content="">
 
-    <meta property="og:title" content="Bnails App">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    <meta property="og:description" content="Bnails App">
-    <meta property="og:image" content="">
+	<meta property="og:title" content="Bnails App">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:description" content="Bnails App">
+	<meta property="og:image" content="">
 
-    <link rel="icon" href="./assets/images/favicon.png">
-    <link rel="apple-touch-icon" href="./assets/images/favicon.png">
-    <link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+	<link rel="icon" href="./assets/images/favicon.png">
+	<link rel="apple-touch-icon" href="./assets/images/favicon.png">
+	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
 	<link rel="stylesheet" href="./assets/plugins/material-datetime-picker/datepicker.css">
-    <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+	<link rel="stylesheet" href="./assets/css/base.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 
 <div class="vstack position-relative min-vh-100 h-100 overflow-hidden">
-    <div class="section-header bg-white position-fixed top-0 start-0 end-0 zi-10 w-100">
-        <div class="header-inner transition-default hstack">
-            <div class="container">
-                <div class="vstack">
-                    <div class="position-relative text-center">
-                        <a href="./index.html"
-                           class="position-absolute start-0 top-50 translate-middle-y header-back">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                 viewBox="0 0 24 24" fill="none">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                      d="M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289Z"
-                                      fill="#191E24"></path>
-                            </svg>
-                        </a>
-                        <div class="header-title fz-18 fw-700">
-                            Rate Our Services
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <main id="main" class="main vstack flex-fill overflow-hidden position-relative">
-        <div class="position-absolute top-0 start-0 end-0 bottom-0 overflow-y">
-            <div class="section-body section-page section-rating">
-                <div class="container">
-                    <div class="rating-coin hstack gap-5px">
-                        <div class="rating-coin_image flex-shrink-0">
-                            <img src="./assets/images/coin.png" class="img-fluid" height="32" width="32" alt="">
-                        </div>
-                        <div class="rating-coin_title fw-700 dark-color">
-                            Rate to get free coins!
-                        </div>
-                        <div class="rating-coin_link flex-shrink-0 ms-auto">
-                            <a href="" class="d-inline-flex align-middle">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 10C5 9.53976 5.3731 9.16667 5.83333 9.16667H12.1548L10.2441 7.25592C9.91864 6.93049 9.91864 6.40285 10.2441 6.07741C10.5695 5.75197 11.0972 5.75197 11.4226 6.07741L14.7559 9.41074C15.0814 9.73618 15.0814 10.2638 14.7559 10.5893L11.4226 13.9226C11.0972 14.248 10.5695 14.248 10.2441 13.9226C9.91864 13.5972 9.91864 13.0695 10.2441 12.7441L12.1548 10.8333H5.83333C5.3731 10.8333 5 10.4602 5 10Z"
-                                          fill="#111215"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                          d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20ZM10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333Z"
-                                          fill="#111215"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="rating-list">
-                        <div class="rating-item">
-                            <div class="rating-inner">
-                                <div class="rating-service hstack gap-10px">
-                                    <div class="rating-service_avatar hstack justify-content-center flex-shrink-0">
-                                        <img src="./assets/images/service/icon-1.png" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="rating-service_content w-100 hstack justify-content-between gap-10px">
-                                        <div class="rating-service_info">
-                                            <div class="rating-service_title fw-700 dark-color">
-                                                Acrylic - Fill Regular
-                                            </div>
-                                            <div class="rating-service_time fz-12 dark-color_600">
-                                                45 minutes
-                                            </div>
-                                        </div>
-                                        <div class="rating-service_price primary-color fw-700 ms-auto">
-                                            $250.00
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="rating-quality">
-                                    <div class="rating-quality_title fz-12 dark-color_600 fw-300">
-                                        Service quality
-                                    </div>
-                                    <div class="rating-quality_star hstack gap-15px justify-content-between">
-                                        <div class="rating-quality_star__value hstack gap-1">
-                                            <svg width="24" height="22" viewBox="0 0 24 22" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
-                                                      fill="#FBD948"/>
-                                            </svg>
-                                            <svg width="24" height="22" viewBox="0 0 24 22" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
-                                                      fill="#FBD948"/>
-                                            </svg>
-                                            <svg width="24" height="22" viewBox="0 0 24 22" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
-                                                      fill="#FBD948"/>
-                                            </svg>
-                                            <svg width="24" height="22" viewBox="0 0 24 22" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
-                                                      fill="#FBD948"/>
-                                            </svg>
-                                            <svg width="24" height="22" viewBox="0 0 24 22" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
-                                                      fill="#E4E5E9"/>
-                                            </svg>
-                                        </div>
-                                        <div class="rating-quality_star__text dark-color">
-                                            Great!
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="rating-buttons">
-                                    <div class="hstack gap-15px">
-                                        <a href="" class="button-theme button-theme_outline_dark w-50 effect-path">
-                                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M15.7499 13.3333C16.0387 13.3333 16.307 13.1838 16.4588 12.9381C16.6106 12.6924 16.6244 12.3856 16.4953 12.1273L13.1619 5.46063C13.0208 5.17831 12.7322 4.99998 12.4166 4.99998C12.1009 4.99998 11.8124 5.17831 11.6712 5.46063L9.91658 8.96992L8.99527 7.1273C8.85411 6.84498 8.56556 6.66665 8.24992 6.66665C7.93427 6.66665 7.64572 6.84498 7.50456 7.1273L5.00456 12.1273C4.8754 12.3856 4.8892 12.6924 5.04104 12.9381C5.19288 13.1838 5.4611 13.3333 5.74992 13.3333L15.7499 13.3333ZM10.6657 11.1985L12.4166 7.6967L14.4016 11.6666H10.4316L10.6576 11.2147C10.6604 11.2093 10.6631 11.2039 10.6657 11.1985ZM8.98489 10.8333L8.24992 9.36337L7.09828 11.6666H8.56822L8.98489 10.8333Z"
-                                                      fill="#111215"/>
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M1.58325 3.33331C1.58325 1.9526 2.70254 0.833313 4.08325 0.833313H17.4166C18.7973 0.833313 19.9166 1.9526 19.9166 3.33331V16.6666C19.9166 18.0474 18.7973 19.1666 17.4166 19.1666H4.08325C2.70254 19.1666 1.58325 18.0474 1.58325 16.6666V3.33331ZM4.08325 2.49998C3.62301 2.49998 3.24992 2.87308 3.24992 3.33331V16.6666C3.24992 17.1269 3.62301 17.5 4.08325 17.5H17.4166C17.8768 17.5 18.2499 17.1269 18.2499 16.6666V3.33331C18.2499 2.87308 17.8768 2.49998 17.4166 2.49998H4.08325Z"
-                                                      fill="#111215"/>
-                                            </svg>
-                                            Add Photos
-                                        </a>
-                                        <a href="" class="button-theme button-theme_outline_dark w-50 effect-path">
-                                            <svg width="21" height="16" viewBox="0 0 21 16" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M0.25 3C0.25 1.61929 1.36929 0.5 2.75 0.5H12.75C14.1307 0.5 15.25 1.61929 15.25 3V4.34381L19.1531 3.04276C19.4073 2.95806 19.6866 3.00067 19.9039 3.1573C20.1212 3.31392 20.25 3.56546 20.25 3.83333V12.5833C20.25 12.862 20.1107 13.1222 19.8789 13.2767C19.6471 13.4313 19.3533 13.4597 19.0962 13.3526L15.25 11.75V13C15.25 14.3807 14.1307 15.5 12.75 15.5H2.75C1.36929 15.5 0.25 14.3807 0.25 13V3ZM15.25 9.94444L18.5833 11.3333V4.98952L15.25 6.10063V9.94444ZM2.75 2.16667C2.28976 2.16667 1.91667 2.53976 1.91667 3V13C1.91667 13.4602 2.28976 13.8333 2.75 13.8333H12.75C13.2102 13.8333 13.5833 13.4602 13.5833 13V3C13.5833 2.53976 13.2102 2.16667 12.75 2.16667H2.75Z"
-                                                      fill="#111215"/>
-                                            </svg>
-                                            Add Video
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="rating-inner">
-                                <div class="rating-quality">
-                                    <div class="rating-quality_title fz-12 dark-color_600 fw-300">
-                                        Stylist review
-                                    </div>
-                                    <div class="rating-quality_user fz-12 dark-color fw-700 hstack gap-10px">
-                                        <img src="./assets/images/user.png" width="32" height="32" class="img-fluid"
-                                             alt="">
-                                        Olivia Quintana
-                                    </div>
-                                    <div class="rating-quality_star hstack gap-15px justify-content-between">
-                                        <div class="rating-quality_star__value hstack gap-1">
-                                            <svg width="24" height="22" viewBox="0 0 24 22" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
-                                                      fill="#FBD948"/>
-                                            </svg>
-                                            <svg width="24" height="22" viewBox="0 0 24 22" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
-                                                      fill="#FBD948"/>
-                                            </svg>
-                                            <svg width="24" height="22" viewBox="0 0 24 22" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
-                                                      fill="#FBD948"/>
-                                            </svg>
-                                            <svg width="24" height="22" viewBox="0 0 24 22" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
-                                                      fill="#FBD948"/>
-                                            </svg>
-                                            <svg width="24" height="22" viewBox="0 0 24 22" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
-                                                      fill="#E4E5E9"/>
-                                            </svg>
-                                        </div>
-                                        <div class="rating-quality_star__text dark-color">
-                                            Great!
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="rating-feelings hstack gap-5px">
-                                    <div class="rating-feelings_item position-relative">
-                                        <input type="checkbox" checked value="1" id="feeling-example-1-1"
-                                               name="feeling-example-1"
-                                               class="position-absolute opacity-0 visually-hidden pe-none">
-                                        <label for="feeling-example-1-1"
-                                               class="rating-feelings_label transition-default text-nowrap dark-color_600 fz-12">
-                                            Friendly
-                                        </label>
-                                    </div>
-                                    <div class="rating-feelings_item position-relative">
-                                        <input type="checkbox" value="2" id="feeling-example-1-2"
-                                               name="feeling-example-1"
-                                               class="position-absolute opacity-0 visually-hidden pe-none">
-                                        <label for="feeling-example-1-2"
-                                               class="rating-feelings_label transition-default text-nowrap dark-color_600 fz-12">
-                                            Courteous
-                                        </label>
-                                    </div>
-                                    <div class="rating-feelings_item position-relative">
-                                        <input type="checkbox" value="3" id="feeling-example-1-3"
-                                               name="feeling-example-1"
-                                               class="position-absolute opacity-0 visually-hidden pe-none">
-                                        <label for="feeling-example-1-3"
-                                               class="rating-feelings_label transition-default text-nowrap dark-color_600 fz-12">
-                                            Enthusiastically
-                                        </label>
-                                    </div>
-                                    <div class="rating-feelings_item position-relative">
-                                        <input type="checkbox" value="4" id="feeling-example-1-4"
-                                               name="feeling-example-1"
-                                               class="position-absolute opacity-0 visually-hidden pe-none">
-                                        <label for="feeling-example-1-4"
-                                               class="rating-feelings_label transition-default text-nowrap dark-color_600 fz-12">
-                                            Good skills
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="rating-editor position-relative">
-                                    <button type="button"
-                                            class="rating-editor_button link-default position-absolute zi-2 top-50 translate-middle-y">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M14.756 1.91076C14.4306 1.58533 13.9029 1.58533 13.5775 1.91076L1.91083 13.5774C1.75455 13.7337 1.66675 13.9457 1.66675 14.1667V17.5C1.66675 17.9603 2.03984 18.3334 2.50008 18.3334H5.83342C6.05443 18.3334 6.26639 18.2456 6.42267 18.0893L18.0893 6.42261C18.4148 6.09717 18.4148 5.56954 18.0893 5.2441L14.756 1.91076ZM15.0001 7.15484L12.8453 5.00002L14.1667 3.67853L16.3216 5.83335L15.0001 7.15484ZM11.6667 6.17853L13.8216 8.33335L6.66675 15.4882L4.51193 13.3334L11.6667 6.17853ZM3.33341 14.5119L5.48824 16.6667H3.33341V14.5119Z"
-                                                  fill="#111215"/>
-                                            <path d="M10.8334 16.6667C10.3732 16.6667 10.0001 17.0398 10.0001 17.5C10.0001 17.9603 10.3732 18.3334 10.8334 18.3334H17.5001C17.9603 18.3334 18.3334 17.9603 18.3334 17.5C18.3334 17.0398 17.9603 16.6667 17.5001 16.6667H10.8334Z"
-                                                  fill="#111215"/>
-                                        </svg>
-                                    </button>
-                                    <input type="text" placeholder="Note"
-                                           class="form-control bg-transparent border-0 p-0 shadow-none rating-editor_input">
-                                </div>
-                            </div>
-                        </div>
+	<div class="section-header bg-white position-fixed top-0 start-0 end-0 zi-10 w-100">
+		<div class="header-inner transition-default hstack">
+			<div class="container">
+				<div class="vstack">
+					<div class="position-relative text-center">
+						<a href="./index.html"
+						   class="position-absolute start-0 top-50 translate-middle-y header-back">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+							     viewBox="0 0 24 24" fill="none">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+								      d="M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289Z"
+								      fill="#191E24"></path>
+							</svg>
+						</a>
+						<div class="header-title fz-18 fw-700">
+							Rate Our Services
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<main id="main" class="main vstack flex-fill overflow-hidden position-relative">
+		<div class="position-absolute top-0 start-0 end-0 bottom-0 overflow-y">
+			<div class="section-body section-page section-rating">
+				<div class="container">
+					<div class="rating-coin hstack gap-5px">
+						<div class="rating-coin_image flex-shrink-0">
+							<img src="./assets/images/coin.png" class="img-fluid" height="32" width="32" alt="">
+						</div>
+						<div class="rating-coin_title fw-700 dark-color">
+							Rate to get free coins!
+						</div>
+						<div class="rating-coin_link flex-shrink-0 ms-auto">
+							<a href="" class="d-inline-flex align-middle">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+								     xmlns="http://www.w3.org/2000/svg">
+									<path d="M5 10C5 9.53976 5.3731 9.16667 5.83333 9.16667H12.1548L10.2441 7.25592C9.91864 6.93049 9.91864 6.40285 10.2441 6.07741C10.5695 5.75197 11.0972 5.75197 11.4226 6.07741L14.7559 9.41074C15.0814 9.73618 15.0814 10.2638 14.7559 10.5893L11.4226 13.9226C11.0972 14.248 10.5695 14.248 10.2441 13.9226C9.91864 13.5972 9.91864 13.0695 10.2441 12.7441L12.1548 10.8333H5.83333C5.3731 10.8333 5 10.4602 5 10Z"
+									      fill="#111215"/>
+									<path fill-rule="evenodd" clip-rule="evenodd"
+									      d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20ZM10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333Z"
+									      fill="#111215"/>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<div class="rating-list">
+						<div class="rating-item">
+							<div class="rating-inner">
+								<div class="rating-service hstack gap-10px">
+									<div class="rating-service_avatar hstack justify-content-center flex-shrink-0">
+										<img src="./assets/images/service/icon-1.png" class="img-fluid" alt="">
+									</div>
+									<div class="rating-service_content w-100 hstack justify-content-between gap-10px">
+										<div class="rating-service_info">
+											<div class="rating-service_title fw-700 dark-color">
+												Acrylic - Fill Regular
+											</div>
+											<div class="rating-service_time fz-12 dark-color_600">
+												45 minutes
+											</div>
+										</div>
+										<div class="rating-service_price primary-color fw-700 ms-auto">
+											$250.00
+										</div>
+									</div>
+								</div>
+								<div class="rating-quality">
+									<div class="rating-quality_title fz-12 dark-color_600 fw-300">
+										Service quality
+									</div>
+									<div class="rating-quality_star hstack gap-15px justify-content-between">
+										<div class="rating-quality_star__value hstack gap-1">
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#E4E5E9"/>
+											</svg>
+										</div>
+										<div class="rating-quality_star__text dark-color">
+											Great!
+										</div>
+									</div>
+								</div>
+								<div class="rating-buttons">
+									<div class="hstack gap-15px">
+										<a href="" class="button-theme button-theme_outline_dark w-50 effect-path">
+											<svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M15.7499 13.3333C16.0387 13.3333 16.307 13.1838 16.4588 12.9381C16.6106 12.6924 16.6244 12.3856 16.4953 12.1273L13.1619 5.46063C13.0208 5.17831 12.7322 4.99998 12.4166 4.99998C12.1009 4.99998 11.8124 5.17831 11.6712 5.46063L9.91658 8.96992L8.99527 7.1273C8.85411 6.84498 8.56556 6.66665 8.24992 6.66665C7.93427 6.66665 7.64572 6.84498 7.50456 7.1273L5.00456 12.1273C4.8754 12.3856 4.8892 12.6924 5.04104 12.9381C5.19288 13.1838 5.4611 13.3333 5.74992 13.3333L15.7499 13.3333ZM10.6657 11.1985L12.4166 7.6967L14.4016 11.6666H10.4316L10.6576 11.2147C10.6604 11.2093 10.6631 11.2039 10.6657 11.1985ZM8.98489 10.8333L8.24992 9.36337L7.09828 11.6666H8.56822L8.98489 10.8333Z"
+												      fill="#111215"/>
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M1.58325 3.33331C1.58325 1.9526 2.70254 0.833313 4.08325 0.833313H17.4166C18.7973 0.833313 19.9166 1.9526 19.9166 3.33331V16.6666C19.9166 18.0474 18.7973 19.1666 17.4166 19.1666H4.08325C2.70254 19.1666 1.58325 18.0474 1.58325 16.6666V3.33331ZM4.08325 2.49998C3.62301 2.49998 3.24992 2.87308 3.24992 3.33331V16.6666C3.24992 17.1269 3.62301 17.5 4.08325 17.5H17.4166C17.8768 17.5 18.2499 17.1269 18.2499 16.6666V3.33331C18.2499 2.87308 17.8768 2.49998 17.4166 2.49998H4.08325Z"
+												      fill="#111215"/>
+											</svg>
+											Add Photos
+										</a>
+										<a href="" class="button-theme button-theme_outline_dark w-50 effect-path">
+											<svg width="21" height="16" viewBox="0 0 21 16" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M0.25 3C0.25 1.61929 1.36929 0.5 2.75 0.5H12.75C14.1307 0.5 15.25 1.61929 15.25 3V4.34381L19.1531 3.04276C19.4073 2.95806 19.6866 3.00067 19.9039 3.1573C20.1212 3.31392 20.25 3.56546 20.25 3.83333V12.5833C20.25 12.862 20.1107 13.1222 19.8789 13.2767C19.6471 13.4313 19.3533 13.4597 19.0962 13.3526L15.25 11.75V13C15.25 14.3807 14.1307 15.5 12.75 15.5H2.75C1.36929 15.5 0.25 14.3807 0.25 13V3ZM15.25 9.94444L18.5833 11.3333V4.98952L15.25 6.10063V9.94444ZM2.75 2.16667C2.28976 2.16667 1.91667 2.53976 1.91667 3V13C1.91667 13.4602 2.28976 13.8333 2.75 13.8333H12.75C13.2102 13.8333 13.5833 13.4602 13.5833 13V3C13.5833 2.53976 13.2102 2.16667 12.75 2.16667H2.75Z"
+												      fill="#111215"/>
+											</svg>
+											Add Video
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="rating-inner">
+								<div class="rating-quality">
+									<div class="rating-quality_title fz-12 dark-color_600 fw-300">
+										Stylist review
+									</div>
+									<div class="rating-quality_user fz-12 dark-color fw-700 hstack gap-10px">
+										<img src="./assets/images/user.png" width="32" height="32" class="img-fluid"
+										     alt="">
+										Olivia Quintana
+									</div>
+									<div class="rating-quality_star hstack gap-15px justify-content-between">
+										<div class="rating-quality_star__value hstack gap-1">
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#E4E5E9"/>
+											</svg>
+										</div>
+										<div class="rating-quality_star__text dark-color">
+											Great!
+										</div>
+									</div>
+								</div>
+								<div class="rating-feelings hstack gap-5px">
+									<div class="rating-feelings_item position-relative">
+										<input type="checkbox" checked value="1" id="feeling-example-1-1"
+										       name="feeling-example-1"
+										       class="position-absolute opacity-0 visually-hidden pe-none">
+										<label for="feeling-example-1-1"
+										       class="rating-feelings_label transition-default text-nowrap dark-color_600 fz-12">
+											Friendly
+										</label>
+									</div>
+									<div class="rating-feelings_item position-relative">
+										<input type="checkbox" value="2" id="feeling-example-1-2"
+										       name="feeling-example-1"
+										       class="position-absolute opacity-0 visually-hidden pe-none">
+										<label for="feeling-example-1-2"
+										       class="rating-feelings_label transition-default text-nowrap dark-color_600 fz-12">
+											Courteous
+										</label>
+									</div>
+									<div class="rating-feelings_item position-relative">
+										<input type="checkbox" value="3" id="feeling-example-1-3"
+										       name="feeling-example-1"
+										       class="position-absolute opacity-0 visually-hidden pe-none">
+										<label for="feeling-example-1-3"
+										       class="rating-feelings_label transition-default text-nowrap dark-color_600 fz-12">
+											Enthusiastically
+										</label>
+									</div>
+									<div class="rating-feelings_item position-relative">
+										<input type="checkbox" value="4" id="feeling-example-1-4"
+										       name="feeling-example-1"
+										       class="position-absolute opacity-0 visually-hidden pe-none">
+										<label for="feeling-example-1-4"
+										       class="rating-feelings_label transition-default text-nowrap dark-color_600 fz-12">
+											Good skills
+										</label>
+									</div>
+								</div>
+								<div class="rating-editor">
+									<div class="rating-editor_inner position-relative">
+										<button type="button"
+										        class="rating-editor_button link-default position-absolute zi-2 top-50 translate-middle-y">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M14.756 1.91076C14.4306 1.58533 13.9029 1.58533 13.5775 1.91076L1.91083 13.5774C1.75455 13.7337 1.66675 13.9457 1.66675 14.1667V17.5C1.66675 17.9603 2.03984 18.3334 2.50008 18.3334H5.83342C6.05443 18.3334 6.26639 18.2456 6.42267 18.0893L18.0893 6.42261C18.4148 6.09717 18.4148 5.56954 18.0893 5.2441L14.756 1.91076ZM15.0001 7.15484L12.8453 5.00002L14.1667 3.67853L16.3216 5.83335L15.0001 7.15484ZM11.6667 6.17853L13.8216 8.33335L6.66675 15.4882L4.51193 13.3334L11.6667 6.17853ZM3.33341 14.5119L5.48824 16.6667H3.33341V14.5119Z"
+												      fill="#111215"/>
+												<path d="M10.8334 16.6667C10.3732 16.6667 10.0001 17.0398 10.0001 17.5C10.0001 17.9603 10.3732 18.3334 10.8334 18.3334H17.5001C17.9603 18.3334 18.3334 17.9603 18.3334 17.5C18.3334 17.0398 17.9603 16.6667 17.5001 16.6667H10.8334Z"
+												      fill="#111215"/>
+											</svg>
+										</button>
+										<input type="text" placeholder="Note"
+										       class="form-control bg-transparent border-0 p-0 shadow-none rating-editor_input">
+									</div>
+								</div>
+							</div>
+						</div>
 
-                        <div class="rating-item">
-                            <div class="rating-inner">
-                                <div class="rating-service hstack gap-10px">
-                                    <div class="rating-service_avatar hstack justify-content-center flex-shrink-0">
-                                        <img src="./assets/images/service/icon-1.png" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="rating-service_content w-100 hstack justify-content-between gap-10px">
-                                        <div class="rating-service_info">
-                                            <div class="rating-service_title fw-700 dark-color">
-                                                Acrylic - Fill Regular
-                                            </div>
-                                            <div class="rating-service_time fz-12 dark-color_600">
-                                                45 minutes
-                                            </div>
-                                        </div>
-                                        <div class="rating-service_price primary-color fw-700 ms-auto">
-                                            $250.00
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="rating-quality">
-                                    <div class="rating-quality_title fz-12 dark-color_600 fw-300">
-                                        Service quality
-                                    </div>
-                                    <div class="rating-quality_star hstack gap-15px justify-content-between">
-                                        <div class="rating-quality_star__value hstack gap-1">
-                                            <svg width="24" height="22" viewBox="0 0 24 22" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
-                                                      fill="#FBD948"/>
-                                            </svg>
-                                            <svg width="24" height="22" viewBox="0 0 24 22" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
-                                                      fill="#FBD948"/>
-                                            </svg>
-                                            <svg width="24" height="22" viewBox="0 0 24 22" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
-                                                      fill="#FBD948"/>
-                                            </svg>
-                                            <svg width="24" height="22" viewBox="0 0 24 22" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
-                                                      fill="#FBD948"/>
-                                            </svg>
-                                            <svg width="24" height="22" viewBox="0 0 24 22" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
-                                                      fill="#E4E5E9"/>
-                                            </svg>
-                                        </div>
-                                        <div class="rating-quality_star__text dark-color">
-                                            Great!
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="rating-buttons">
-                                    <div class="hstack gap-15px">
-                                        <a href="" class="button-theme button-theme_outline_dark w-50 effect-path">
-                                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M15.7499 13.3333C16.0387 13.3333 16.307 13.1838 16.4588 12.9381C16.6106 12.6924 16.6244 12.3856 16.4953 12.1273L13.1619 5.46063C13.0208 5.17831 12.7322 4.99998 12.4166 4.99998C12.1009 4.99998 11.8124 5.17831 11.6712 5.46063L9.91658 8.96992L8.99527 7.1273C8.85411 6.84498 8.56556 6.66665 8.24992 6.66665C7.93427 6.66665 7.64572 6.84498 7.50456 7.1273L5.00456 12.1273C4.8754 12.3856 4.8892 12.6924 5.04104 12.9381C5.19288 13.1838 5.4611 13.3333 5.74992 13.3333L15.7499 13.3333ZM10.6657 11.1985L12.4166 7.6967L14.4016 11.6666H10.4316L10.6576 11.2147C10.6604 11.2093 10.6631 11.2039 10.6657 11.1985ZM8.98489 10.8333L8.24992 9.36337L7.09828 11.6666H8.56822L8.98489 10.8333Z"
-                                                      fill="#111215"/>
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M1.58325 3.33331C1.58325 1.9526 2.70254 0.833313 4.08325 0.833313H17.4166C18.7973 0.833313 19.9166 1.9526 19.9166 3.33331V16.6666C19.9166 18.0474 18.7973 19.1666 17.4166 19.1666H4.08325C2.70254 19.1666 1.58325 18.0474 1.58325 16.6666V3.33331ZM4.08325 2.49998C3.62301 2.49998 3.24992 2.87308 3.24992 3.33331V16.6666C3.24992 17.1269 3.62301 17.5 4.08325 17.5H17.4166C17.8768 17.5 18.2499 17.1269 18.2499 16.6666V3.33331C18.2499 2.87308 17.8768 2.49998 17.4166 2.49998H4.08325Z"
-                                                      fill="#111215"/>
-                                            </svg>
-                                            Add Photos
-                                        </a>
-                                        <a href="" class="button-theme button-theme_outline_dark w-50 effect-path">
-                                            <svg width="21" height="16" viewBox="0 0 21 16" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M0.25 3C0.25 1.61929 1.36929 0.5 2.75 0.5H12.75C14.1307 0.5 15.25 1.61929 15.25 3V4.34381L19.1531 3.04276C19.4073 2.95806 19.6866 3.00067 19.9039 3.1573C20.1212 3.31392 20.25 3.56546 20.25 3.83333V12.5833C20.25 12.862 20.1107 13.1222 19.8789 13.2767C19.6471 13.4313 19.3533 13.4597 19.0962 13.3526L15.25 11.75V13C15.25 14.3807 14.1307 15.5 12.75 15.5H2.75C1.36929 15.5 0.25 14.3807 0.25 13V3ZM15.25 9.94444L18.5833 11.3333V4.98952L15.25 6.10063V9.94444ZM2.75 2.16667C2.28976 2.16667 1.91667 2.53976 1.91667 3V13C1.91667 13.4602 2.28976 13.8333 2.75 13.8333H12.75C13.2102 13.8333 13.5833 13.4602 13.5833 13V3C13.5833 2.53976 13.2102 2.16667 12.75 2.16667H2.75Z"
-                                                      fill="#111215"/>
-                                            </svg>
-                                            Add Video
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="rating-inner">
-                                <div class="rating-quality">
-                                    <div class="rating-quality_title fz-12 dark-color_600 fw-300">
-                                        Stylist review
-                                    </div>
-                                    <div class="rating-quality_user fz-12 dark-color fw-700 hstack gap-10px">
-                                        <img src="./assets/images/user.png" width="32" height="32" class="img-fluid"
-                                             alt="">
-                                        Olivia Quintana
-                                    </div>
-                                    <div class="rating-quality_star hstack gap-15px justify-content-between">
-                                        <div class="rating-quality_star__value hstack gap-1">
-                                            <svg width="24" height="22" viewBox="0 0 24 22" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
-                                                      fill="#FBD948"/>
-                                            </svg>
-                                            <svg width="24" height="22" viewBox="0 0 24 22" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
-                                                      fill="#FBD948"/>
-                                            </svg>
-                                            <svg width="24" height="22" viewBox="0 0 24 22" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
-                                                      fill="#FBD948"/>
-                                            </svg>
-                                            <svg width="24" height="22" viewBox="0 0 24 22" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
-                                                      fill="#FBD948"/>
-                                            </svg>
-                                            <svg width="24" height="22" viewBox="0 0 24 22" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
-                                                      fill="#E4E5E9"/>
-                                            </svg>
-                                        </div>
-                                        <div class="rating-quality_star__text dark-color">
-                                            Great!
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="rating-feelings hstack gap-5px">
-                                    <div class="rating-feelings_item position-relative">
-                                        <input type="checkbox" checked value="1" id="feeling-example-1-1"
-                                               name="feeling-example-1"
-                                               class="position-absolute opacity-0 visually-hidden pe-none">
-                                        <label for="feeling-example-1-1"
-                                               class="rating-feelings_label transition-default text-nowrap dark-color_600 fz-12">
-                                            Friendly
-                                        </label>
-                                    </div>
-                                    <div class="rating-feelings_item position-relative">
-                                        <input type="checkbox" value="2" id="feeling-example-1-2"
-                                               name="feeling-example-1"
-                                               class="position-absolute opacity-0 visually-hidden pe-none">
-                                        <label for="feeling-example-1-2"
-                                               class="rating-feelings_label transition-default text-nowrap dark-color_600 fz-12">
-                                            Courteous
-                                        </label>
-                                    </div>
-                                    <div class="rating-feelings_item position-relative">
-                                        <input type="checkbox" value="3" id="feeling-example-1-3"
-                                               name="feeling-example-1"
-                                               class="position-absolute opacity-0 visually-hidden pe-none">
-                                        <label for="feeling-example-1-3"
-                                               class="rating-feelings_label transition-default text-nowrap dark-color_600 fz-12">
-                                            Enthusiastically
-                                        </label>
-                                    </div>
-                                    <div class="rating-feelings_item position-relative">
-                                        <input type="checkbox" value="4" id="feeling-example-1-4"
-                                               name="feeling-example-1"
-                                               class="position-absolute opacity-0 visually-hidden pe-none">
-                                        <label for="feeling-example-1-4"
-                                               class="rating-feelings_label transition-default text-nowrap dark-color_600 fz-12">
-                                            Good skills
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="rating-editor position-relative">
-                                    <button type="button"
-                                            class="rating-editor_button link-default position-absolute zi-2 top-50 translate-middle-y">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M14.756 1.91076C14.4306 1.58533 13.9029 1.58533 13.5775 1.91076L1.91083 13.5774C1.75455 13.7337 1.66675 13.9457 1.66675 14.1667V17.5C1.66675 17.9603 2.03984 18.3334 2.50008 18.3334H5.83342C6.05443 18.3334 6.26639 18.2456 6.42267 18.0893L18.0893 6.42261C18.4148 6.09717 18.4148 5.56954 18.0893 5.2441L14.756 1.91076ZM15.0001 7.15484L12.8453 5.00002L14.1667 3.67853L16.3216 5.83335L15.0001 7.15484ZM11.6667 6.17853L13.8216 8.33335L6.66675 15.4882L4.51193 13.3334L11.6667 6.17853ZM3.33341 14.5119L5.48824 16.6667H3.33341V14.5119Z"
-                                                  fill="#111215"/>
-                                            <path d="M10.8334 16.6667C10.3732 16.6667 10.0001 17.0398 10.0001 17.5C10.0001 17.9603 10.3732 18.3334 10.8334 18.3334H17.5001C17.9603 18.3334 18.3334 17.9603 18.3334 17.5C18.3334 17.0398 17.9603 16.6667 17.5001 16.6667H10.8334Z"
-                                                  fill="#111215"/>
-                                        </svg>
-                                    </button>
-                                    <input type="text" placeholder="Note"
-                                           class="form-control bg-transparent border-0 p-0 shadow-none rating-editor_input">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-    <footer id="footer" class="footer position-fixed bottom-0 start-0 end-0 zi-10 w-100">
-        <div class="footer-toolbar background-cover position-relative zi-1">
-            <div class="container">
-                <div class="hstack gap-15px justify-content-between">
-                    <div class="toolbar-item">
-                        <a href=""
-                           class="toolbar-item_link is-active fw-500 fz-15 dark-color effect-path align-items-center justify-content-center vstack gap-1">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                      d="M11.3625 1.14205C10.534 0.603528 9.46602 0.603529 8.63752 1.14205L1.97086 5.47538C1.26138 5.93655 0.833328 6.7253 0.833328 7.57149V16.667C0.833328 18.0477 1.95262 19.167 3.33333 19.167H16.6667C18.0474 19.167 19.1667 18.0477 19.1667 16.667V7.57149C19.1667 6.7253 18.7386 5.93655 18.0291 5.47538L11.3625 1.14205ZM9.54584 2.53946C9.822 2.35995 10.178 2.35995 10.4542 2.53946L17.1208 6.87279C17.3573 7.02651 17.5 7.28943 17.5 7.57149V16.667C17.5 17.1273 17.1269 17.5003 16.6667 17.5003H13.3332L13.3333 11.2183C13.3333 9.47859 11.6792 8.33368 10.0001 8.33368C8.32089 8.33368 6.6668 9.4786 6.66679 11.2183L6.66666 17.5003L7.65151 17.5003H3.33333C2.87309 17.5003 2.49999 17.1273 2.49999 16.667V7.57149C2.49999 7.28943 2.64268 7.02651 2.87917 6.87279L9.54584 2.53946ZM8.33333 17.5003H12.6514L11.6665 17.5003L11.6667 11.2183C11.6666 10.6922 11.0822 10.0003 10.0001 10.0003C8.91789 10.0003 8.33346 10.6922 8.33346 11.2183L8.33333 17.5003Z"
-                                      fill="#111215"/>
-                            </svg>
-                            Home
-                        </a>
-                    </div>
-                    <div class="toolbar-item toolbar-item_floating position-absolute start-50 translate-middle-x hstack justify-content-center">
-                        <a href=""
-                           class="toolbar-item_link align-items-center justify-content-center vstack gap-1 rounded-circle">
-                            <svg width="20" height="19" viewBox="0 0 20 19" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6.25001 13.3334C6.94037 13.3334 7.50001 12.7737 7.50001 12.0834C7.50001 11.393 6.94037 10.8334 6.25001 10.8334C5.55965 10.8334 5.00001 11.393 5.00001 12.0834C5.00001 12.7737 5.55965 13.3334 6.25001 13.3334Z"
-                                      fill="white"/>
-                                <path d="M11.25 12.0834C11.25 12.7737 10.6904 13.3334 10 13.3334C9.30965 13.3334 8.75001 12.7737 8.75001 12.0834C8.75001 11.393 9.30965 10.8334 10 10.8334C10.6904 10.8334 11.25 11.393 11.25 12.0834Z"
-                                      fill="white"/>
-                                <path d="M13.75 13.3334C14.4404 13.3334 15 12.7737 15 12.0834C15 11.393 14.4404 10.8334 13.75 10.8334C13.0597 10.8334 12.5 11.393 12.5 12.0834C12.5 12.7737 13.0597 13.3334 13.75 13.3334Z"
-                                      fill="white"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                      d="M6.66668 1.66671C6.66668 1.20647 6.29358 0.833374 5.83334 0.833374C5.37311 0.833374 5.00001 1.20647 5.00001 1.66671V2.50004H3.33334C1.95263 2.50004 0.833344 3.61933 0.833344 5.00004V15.8334C0.833344 17.2141 1.95263 18.3334 3.33334 18.3334H16.6667C18.0474 18.3334 19.1667 17.2141 19.1667 15.8334V5.00004C19.1667 3.61933 18.0474 2.50004 16.6667 2.50004H15V1.66671C15 1.20647 14.6269 0.833374 14.1667 0.833374C13.7064 0.833374 13.3333 1.20647 13.3333 1.66671V2.50004H6.66668V1.66671ZM2.50001 5.00004C2.50001 4.5398 2.87311 4.16671 3.33334 4.16671H16.6667C17.1269 4.16671 17.5 4.5398 17.5 5.00004V6.66671H2.50001V5.00004ZM2.50001 8.33337H17.5V15.8334C17.5 16.2936 17.1269 16.6667 16.6667 16.6667H3.33334C2.87311 16.6667 2.50001 16.2936 2.50001 15.8334V8.33337Z"
-                                      fill="white"/>
-                            </svg>
+						<div class="rating-item">
+							<div class="rating-inner">
+								<div class="rating-service hstack gap-10px">
+									<div class="rating-service_avatar hstack justify-content-center flex-shrink-0">
+										<img src="./assets/images/service/icon-1.png" class="img-fluid" alt="">
+									</div>
+									<div class="rating-service_content w-100 hstack justify-content-between gap-10px">
+										<div class="rating-service_info">
+											<div class="rating-service_title fw-700 dark-color">
+												Acrylic - Fill Regular
+											</div>
+											<div class="rating-service_time fz-12 dark-color_600">
+												45 minutes
+											</div>
+										</div>
+										<div class="rating-service_price primary-color fw-700 ms-auto">
+											$250.00
+										</div>
+									</div>
+								</div>
+								<div class="rating-quality">
+									<div class="rating-quality_title fz-12 dark-color_600 fw-300">
+										Service quality
+									</div>
+									<div class="rating-quality_star hstack gap-15px justify-content-between">
+										<div class="rating-quality_star__value hstack gap-1">
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#E4E5E9"/>
+											</svg>
+										</div>
+										<div class="rating-quality_star__text dark-color">
+											Great!
+										</div>
+									</div>
+								</div>
+								<div class="rating-buttons">
+									<div class="hstack gap-15px">
+										<a href="" class="button-theme button-theme_outline_dark w-50 effect-path">
+											<svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M15.7499 13.3333C16.0387 13.3333 16.307 13.1838 16.4588 12.9381C16.6106 12.6924 16.6244 12.3856 16.4953 12.1273L13.1619 5.46063C13.0208 5.17831 12.7322 4.99998 12.4166 4.99998C12.1009 4.99998 11.8124 5.17831 11.6712 5.46063L9.91658 8.96992L8.99527 7.1273C8.85411 6.84498 8.56556 6.66665 8.24992 6.66665C7.93427 6.66665 7.64572 6.84498 7.50456 7.1273L5.00456 12.1273C4.8754 12.3856 4.8892 12.6924 5.04104 12.9381C5.19288 13.1838 5.4611 13.3333 5.74992 13.3333L15.7499 13.3333ZM10.6657 11.1985L12.4166 7.6967L14.4016 11.6666H10.4316L10.6576 11.2147C10.6604 11.2093 10.6631 11.2039 10.6657 11.1985ZM8.98489 10.8333L8.24992 9.36337L7.09828 11.6666H8.56822L8.98489 10.8333Z"
+												      fill="#111215"/>
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M1.58325 3.33331C1.58325 1.9526 2.70254 0.833313 4.08325 0.833313H17.4166C18.7973 0.833313 19.9166 1.9526 19.9166 3.33331V16.6666C19.9166 18.0474 18.7973 19.1666 17.4166 19.1666H4.08325C2.70254 19.1666 1.58325 18.0474 1.58325 16.6666V3.33331ZM4.08325 2.49998C3.62301 2.49998 3.24992 2.87308 3.24992 3.33331V16.6666C3.24992 17.1269 3.62301 17.5 4.08325 17.5H17.4166C17.8768 17.5 18.2499 17.1269 18.2499 16.6666V3.33331C18.2499 2.87308 17.8768 2.49998 17.4166 2.49998H4.08325Z"
+												      fill="#111215"/>
+											</svg>
+											Add Photos
+										</a>
+										<a href="" class="button-theme button-theme_outline_dark w-50 effect-path">
+											<svg width="21" height="16" viewBox="0 0 21 16" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M0.25 3C0.25 1.61929 1.36929 0.5 2.75 0.5H12.75C14.1307 0.5 15.25 1.61929 15.25 3V4.34381L19.1531 3.04276C19.4073 2.95806 19.6866 3.00067 19.9039 3.1573C20.1212 3.31392 20.25 3.56546 20.25 3.83333V12.5833C20.25 12.862 20.1107 13.1222 19.8789 13.2767C19.6471 13.4313 19.3533 13.4597 19.0962 13.3526L15.25 11.75V13C15.25 14.3807 14.1307 15.5 12.75 15.5H2.75C1.36929 15.5 0.25 14.3807 0.25 13V3ZM15.25 9.94444L18.5833 11.3333V4.98952L15.25 6.10063V9.94444ZM2.75 2.16667C2.28976 2.16667 1.91667 2.53976 1.91667 3V13C1.91667 13.4602 2.28976 13.8333 2.75 13.8333H12.75C13.2102 13.8333 13.5833 13.4602 13.5833 13V3C13.5833 2.53976 13.2102 2.16667 12.75 2.16667H2.75Z"
+												      fill="#111215"/>
+											</svg>
+											Add Video
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="rating-inner">
+								<div class="rating-quality">
+									<div class="rating-quality_title fz-12 dark-color_600 fw-300">
+										Stylist review
+									</div>
+									<div class="rating-quality_user fz-12 dark-color fw-700 hstack gap-10px">
+										<img src="./assets/images/user.png" width="32" height="32" class="img-fluid"
+										     alt="">
+										Olivia Quintana
+									</div>
+									<div class="rating-quality_star hstack gap-15px justify-content-between">
+										<div class="rating-quality_star__value hstack gap-1">
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#FBD948"/>
+											</svg>
+											<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M11.9617 0C12.3949 0 12.7789 0.27896 12.9127 0.690983L15.1579 7.60081H22.4233C22.8565 7.60081 23.2405 7.87977 23.3744 8.2918C23.5082 8.70382 23.3616 9.15519 23.0111 9.40983L17.1332 13.6803L19.3784 20.5902C19.5123 21.0022 19.3656 21.4536 19.0151 21.7082C18.6646 21.9628 18.19 21.9628 17.8395 21.7082L11.9617 17.4377L6.08384 21.7082C5.73335 21.9628 5.25875 21.9628 4.90827 21.7082C4.55778 21.4536 4.41112 21.0022 4.545 20.5902L6.79013 13.6803L0.912283 9.40983C0.561795 9.15519 0.415137 8.70382 0.549012 8.2918C0.682886 7.87977 1.06684 7.60081 1.50007 7.60081H8.76549L11.0106 0.690983C11.1445 0.27896 11.5285 0 11.9617 0Z"
+												      fill="#E4E5E9"/>
+											</svg>
+										</div>
+										<div class="rating-quality_star__text dark-color">
+											Great!
+										</div>
+									</div>
+								</div>
+								<div class="rating-feelings hstack gap-5px">
+									<div class="rating-feelings_item position-relative">
+										<input type="checkbox" checked value="1" id="feeling-example-1-1"
+										       name="feeling-example-1"
+										       class="position-absolute opacity-0 visually-hidden pe-none">
+										<label for="feeling-example-1-1"
+										       class="rating-feelings_label transition-default text-nowrap dark-color_600 fz-12">
+											Friendly
+										</label>
+									</div>
+									<div class="rating-feelings_item position-relative">
+										<input type="checkbox" value="2" id="feeling-example-1-2"
+										       name="feeling-example-1"
+										       class="position-absolute opacity-0 visually-hidden pe-none">
+										<label for="feeling-example-1-2"
+										       class="rating-feelings_label transition-default text-nowrap dark-color_600 fz-12">
+											Courteous
+										</label>
+									</div>
+									<div class="rating-feelings_item position-relative">
+										<input type="checkbox" value="3" id="feeling-example-1-3"
+										       name="feeling-example-1"
+										       class="position-absolute opacity-0 visually-hidden pe-none">
+										<label for="feeling-example-1-3"
+										       class="rating-feelings_label transition-default text-nowrap dark-color_600 fz-12">
+											Enthusiastically
+										</label>
+									</div>
+									<div class="rating-feelings_item position-relative">
+										<input type="checkbox" value="4" id="feeling-example-1-4"
+										       name="feeling-example-1"
+										       class="position-absolute opacity-0 visually-hidden pe-none">
+										<label for="feeling-example-1-4"
+										       class="rating-feelings_label transition-default text-nowrap dark-color_600 fz-12">
+											Good skills
+										</label>
+									</div>
+								</div>
+								<div class="rating-editor">
+									<div class="rating-editor_inner position-relative">
+										<button type="button"
+										        class="rating-editor_button link-default position-absolute zi-2 top-50 translate-middle-y">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+											     xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+												      d="M14.756 1.91076C14.4306 1.58533 13.9029 1.58533 13.5775 1.91076L1.91083 13.5774C1.75455 13.7337 1.66675 13.9457 1.66675 14.1667V17.5C1.66675 17.9603 2.03984 18.3334 2.50008 18.3334H5.83342C6.05443 18.3334 6.26639 18.2456 6.42267 18.0893L18.0893 6.42261C18.4148 6.09717 18.4148 5.56954 18.0893 5.2441L14.756 1.91076ZM15.0001 7.15484L12.8453 5.00002L14.1667 3.67853L16.3216 5.83335L15.0001 7.15484ZM11.6667 6.17853L13.8216 8.33335L6.66675 15.4882L4.51193 13.3334L11.6667 6.17853ZM3.33341 14.5119L5.48824 16.6667H3.33341V14.5119Z"
+												      fill="#111215"/>
+												<path d="M10.8334 16.6667C10.3732 16.6667 10.0001 17.0398 10.0001 17.5C10.0001 17.9603 10.3732 18.3334 10.8334 18.3334H17.5001C17.9603 18.3334 18.3334 17.9603 18.3334 17.5C18.3334 17.0398 17.9603 16.6667 17.5001 16.6667H10.8334Z"
+												      fill="#111215"/>
+											</svg>
+										</button>
+										<input type="text" placeholder="Note"
+										       class="form-control bg-transparent border-0 p-0 shadow-none rating-editor_input">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer id="footer" class="footer position-fixed bottom-0 start-0 end-0 zi-10 w-100">
+		<div class="footer-toolbar background-cover position-relative zi-1">
+			<div class="container">
+				<div class="hstack gap-15px justify-content-between">
+					<div class="toolbar-item">
+						<a href=""
+						   class="toolbar-item_link is-active fw-500 fz-15 dark-color effect-path align-items-center justify-content-center vstack gap-1">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+							     xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+								      d="M11.3625 1.14205C10.534 0.603528 9.46602 0.603529 8.63752 1.14205L1.97086 5.47538C1.26138 5.93655 0.833328 6.7253 0.833328 7.57149V16.667C0.833328 18.0477 1.95262 19.167 3.33333 19.167H16.6667C18.0474 19.167 19.1667 18.0477 19.1667 16.667V7.57149C19.1667 6.7253 18.7386 5.93655 18.0291 5.47538L11.3625 1.14205ZM9.54584 2.53946C9.822 2.35995 10.178 2.35995 10.4542 2.53946L17.1208 6.87279C17.3573 7.02651 17.5 7.28943 17.5 7.57149V16.667C17.5 17.1273 17.1269 17.5003 16.6667 17.5003H13.3332L13.3333 11.2183C13.3333 9.47859 11.6792 8.33368 10.0001 8.33368C8.32089 8.33368 6.6668 9.4786 6.66679 11.2183L6.66666 17.5003L7.65151 17.5003H3.33333C2.87309 17.5003 2.49999 17.1273 2.49999 16.667V7.57149C2.49999 7.28943 2.64268 7.02651 2.87917 6.87279L9.54584 2.53946ZM8.33333 17.5003H12.6514L11.6665 17.5003L11.6667 11.2183C11.6666 10.6922 11.0822 10.0003 10.0001 10.0003C8.91789 10.0003 8.33346 10.6922 8.33346 11.2183L8.33333 17.5003Z"
+								      fill="#111215"/>
+							</svg>
+							Home
+						</a>
+					</div>
+					<div class="toolbar-item toolbar-item_floating position-absolute start-50 translate-middle-x hstack justify-content-center">
+						<a href=""
+						   class="toolbar-item_link align-items-center justify-content-center vstack gap-1 rounded-circle">
+							<svg width="20" height="19" viewBox="0 0 20 19" fill="none"
+							     xmlns="http://www.w3.org/2000/svg">
+								<path d="M6.25001 13.3334C6.94037 13.3334 7.50001 12.7737 7.50001 12.0834C7.50001 11.393 6.94037 10.8334 6.25001 10.8334C5.55965 10.8334 5.00001 11.393 5.00001 12.0834C5.00001 12.7737 5.55965 13.3334 6.25001 13.3334Z"
+								      fill="white"/>
+								<path d="M11.25 12.0834C11.25 12.7737 10.6904 13.3334 10 13.3334C9.30965 13.3334 8.75001 12.7737 8.75001 12.0834C8.75001 11.393 9.30965 10.8334 10 10.8334C10.6904 10.8334 11.25 11.393 11.25 12.0834Z"
+								      fill="white"/>
+								<path d="M13.75 13.3334C14.4404 13.3334 15 12.7737 15 12.0834C15 11.393 14.4404 10.8334 13.75 10.8334C13.0597 10.8334 12.5 11.393 12.5 12.0834C12.5 12.7737 13.0597 13.3334 13.75 13.3334Z"
+								      fill="white"/>
+								<path fill-rule="evenodd" clip-rule="evenodd"
+								      d="M6.66668 1.66671C6.66668 1.20647 6.29358 0.833374 5.83334 0.833374C5.37311 0.833374 5.00001 1.20647 5.00001 1.66671V2.50004H3.33334C1.95263 2.50004 0.833344 3.61933 0.833344 5.00004V15.8334C0.833344 17.2141 1.95263 18.3334 3.33334 18.3334H16.6667C18.0474 18.3334 19.1667 17.2141 19.1667 15.8334V5.00004C19.1667 3.61933 18.0474 2.50004 16.6667 2.50004H15V1.66671C15 1.20647 14.6269 0.833374 14.1667 0.833374C13.7064 0.833374 13.3333 1.20647 13.3333 1.66671V2.50004H6.66668V1.66671ZM2.50001 5.00004C2.50001 4.5398 2.87311 4.16671 3.33334 4.16671H16.6667C17.1269 4.16671 17.5 4.5398 17.5 5.00004V6.66671H2.50001V5.00004ZM2.50001 8.33337H17.5V15.8334C17.5 16.2936 17.1269 16.6667 16.6667 16.6667H3.33334C2.87311 16.6667 2.50001 16.2936 2.50001 15.8334V8.33337Z"
+								      fill="white"/>
+							</svg>
 
-                        </a>
-                    </div>
-                    <div class="toolbar-item">
-                        <a href=""
-                           class="toolbar-item_link fw-500 fz-15 dark-color effect-path align-items-center justify-content-center vstack gap-1">
-                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                      d="M15.4996 5.83337C15.4996 8.5948 13.261 10.8334 10.4996 10.8334C7.73817 10.8334 5.49959 8.5948 5.49959 5.83337C5.49959 3.07195 7.73817 0.833374 10.4996 0.833374C13.261 0.833374 15.4996 3.07195 15.4996 5.83337ZM13.8329 5.83337C13.8329 7.67432 12.3405 9.16671 10.4996 9.16671C8.65864 9.16671 7.16626 7.67432 7.16626 5.83337C7.16626 3.99242 8.65864 2.50004 10.4996 2.50004C12.3405 2.50004 13.8329 3.99242 13.8329 5.83337Z"
-                                      fill="#111215"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                      d="M10.4997 11.6667C8.05371 11.6667 6.29018 12.1741 5.02513 12.9348C3.75504 13.6986 3.04165 14.6854 2.6477 15.5485C2.31563 16.276 2.46677 17.0173 2.90796 17.5455C3.32852 18.049 3.98242 18.3334 4.6663 18.3334H16.3329C17.0168 18.3334 17.6707 18.049 18.0913 17.5455C18.5324 17.0174 18.6836 16.276 18.3515 15.5485C17.9576 14.6855 17.2443 13.6986 15.9742 12.9348C14.7091 12.1741 12.9456 11.6667 10.4997 11.6667ZM4.16388 16.2405C4.43735 15.6414 4.93967 14.931 5.88405 14.3631C6.83347 13.7922 8.28316 13.3334 10.4997 13.3334C12.7162 13.3334 14.1658 13.7922 15.1152 14.3631C16.0596 14.931 16.5619 15.6415 16.8354 16.2405C16.8676 16.3113 16.8662 16.3538 16.863 16.3755C16.8593 16.4003 16.8471 16.4352 16.8121 16.4771C16.737 16.567 16.5695 16.6667 16.3329 16.6667H4.6663C4.42969 16.6667 4.26223 16.567 4.18709 16.4771C4.15211 16.4352 4.13995 16.4003 4.13624 16.3755C4.133 16.3538 4.13159 16.3113 4.16388 16.2405Z"
-                                      fill="#111215"/>
-                            </svg>
-                            Profile
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+						</a>
+					</div>
+					<div class="toolbar-item">
+						<a href=""
+						   class="toolbar-item_link fw-500 fz-15 dark-color effect-path align-items-center justify-content-center vstack gap-1">
+							<svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+							     xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+								      d="M15.4996 5.83337C15.4996 8.5948 13.261 10.8334 10.4996 10.8334C7.73817 10.8334 5.49959 8.5948 5.49959 5.83337C5.49959 3.07195 7.73817 0.833374 10.4996 0.833374C13.261 0.833374 15.4996 3.07195 15.4996 5.83337ZM13.8329 5.83337C13.8329 7.67432 12.3405 9.16671 10.4996 9.16671C8.65864 9.16671 7.16626 7.67432 7.16626 5.83337C7.16626 3.99242 8.65864 2.50004 10.4996 2.50004C12.3405 2.50004 13.8329 3.99242 13.8329 5.83337Z"
+								      fill="#111215"/>
+								<path fill-rule="evenodd" clip-rule="evenodd"
+								      d="M10.4997 11.6667C8.05371 11.6667 6.29018 12.1741 5.02513 12.9348C3.75504 13.6986 3.04165 14.6854 2.6477 15.5485C2.31563 16.276 2.46677 17.0173 2.90796 17.5455C3.32852 18.049 3.98242 18.3334 4.6663 18.3334H16.3329C17.0168 18.3334 17.6707 18.049 18.0913 17.5455C18.5324 17.0174 18.6836 16.276 18.3515 15.5485C17.9576 14.6855 17.2443 13.6986 15.9742 12.9348C14.7091 12.1741 12.9456 11.6667 10.4997 11.6667ZM4.16388 16.2405C4.43735 15.6414 4.93967 14.931 5.88405 14.3631C6.83347 13.7922 8.28316 13.3334 10.4997 13.3334C12.7162 13.3334 14.1658 13.7922 15.1152 14.3631C16.0596 14.931 16.5619 15.6415 16.8354 16.2405C16.8676 16.3113 16.8662 16.3538 16.863 16.3755C16.8593 16.4003 16.8471 16.4352 16.8121 16.4771C16.737 16.567 16.5695 16.6667 16.3329 16.6667H4.6663C4.42969 16.6667 4.26223 16.567 4.18709 16.4771C4.15211 16.4352 4.13995 16.4003 4.13624 16.3755C4.133 16.3538 4.13159 16.3113 4.16388 16.2405Z"
+								      fill="#111215"/>
+							</svg>
+							Profile
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 </div>
 
 <script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>

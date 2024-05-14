@@ -189,10 +189,9 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-	box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%) !important;
-	-webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%) !important;
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
 	outline: none !important;
-	border-color: #66afe9 !important;
 }
 
 .transition-default {
@@ -493,7 +492,7 @@ textarea:focus {
 
 .overflow-y::-webkit-scrollbar,
 .scrollbar-hidden::-webkit-scrollbar,
-.modal-dialog-scrollable .modal-body::-webkit-scrollbar{
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar {
 	width: 0;
 	display: none;
 	opacity: 0;
@@ -524,7 +523,7 @@ textarea:focus {
 	white-space: nowrap;
 }
 
-.button-theme .button-theme_quality{
+.button-theme .button-theme_quality {
 	min-width: 20px;
 	min-height: 20px;
 	border-radius: 50%;
