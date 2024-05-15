@@ -860,3 +860,42 @@ textarea:focus {
 .c-datepicker__day-body {
 	font-size: 14px;
 }
+
+.modal-btns {
+	float: none;
+	position: static;
+	padding: 5px 15px 15px;
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.modal-btns .js-ok {
+	padding: 8px 24px;
+	box-shadow: none;
+	outline: none;
+	border-radius: 56px;
+	border: 1px solid transparent;
+	gap: 8px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: .925em;
+	font-weight: 700;
+	transition: var(--transition-default);
+	white-space: nowrap;
+	background-color: var(--primary-color);
+	color: var(--bs-white);
+}
+
+.modal-btns .js-ok:active {
+	background-color: var(--primary-hover);
+}
+
+.modal-btns .js-cancel {
+	margin-top: 8px;
+	color: var(--dark-600);
+}
+
+.modal-btns .js-cancel:active {
+	color: var(--dark-color);
+}

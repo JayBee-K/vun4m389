@@ -13,7 +13,7 @@
 .section-heading .heading-title {
 	font-size: 1.3em;
 	color: var(--dark-color);
-	font-weight: 700;
+	font-weight: 800;
 	font-family: var(--font-heading);
 }
 
@@ -151,7 +151,11 @@
 }
 
 .section-body.section-page {
-	padding-top: 63px;;
+	padding-top: 63px;
+}
+
+.section-body.section-staff {
+	padding-bottom: 90px;
 }
 
 .appointment-card {
@@ -1863,4 +1867,89 @@
 .section-schedule .schedule-item .schedule-item_footer .schedule-item_status.schedule-item_status__done {
 	background-color: #C8CBD3;
 	color: var(--bs-white);
+}
+
+.appointment-grid .appointment-column .appointment-item {
+	border-radius: 20px;
+	padding: 16px;
+	gap: 12px;
+}
+
+.appointment-grid .appointment-column .appointment-item.appointment-item_large .appointment-item_content {
+	margin-top: 22px;
+}
+
+.appointment-grid .appointment-column .appointment-item.appointment-item_waiting {
+	background-color: #FDE891;
+}
+
+.appointment-grid .appointment-column .appointment-item.appointment-item_ongoing {
+	background-color: var(--primary-color);
+	color: var(--bs-white);
+}
+
+.appointment-grid .appointment-column .appointment-item.appointment-item_done {
+	background-color: var(--dark-color);
+	color: var(--bs-white);
+}
+
+.appointment-grid .appointment-column .appointment-item.appointment-item_reject {
+	background-color: #C8CBD3;
+}
+
+.feature-item {
+	border-radius: 65px;
+	padding: 8px 16px 8px 8px;
+	border: 1px solid var(--primary-50);
+}
+
+.feature-item .feature-item_icon {
+	width: 48px;
+	height: 48px;
+	background-color: var(--primary-50);
+}
+
+.notification-item {
+	border-radius: 16px;
+	padding: 12px 14px 12px 12px;
+	background-color: var(--bg-light);
+}
+
+.notification-item .notification-item_icon {
+	width: 40px;
+	height: 40px;
+}
+
+.notification-item .notification-item_content .notification-item_desc {
+	line-height: 1.7;
+}
+
+.notification-item .notification-item_content .notification-item_time {
+	margin-top: 8px;
+}
+
+.notification-item .notification-item_status {
+	background-color: var(--primary-color);
+	top: 10px;
+	right: 10px;
+	height: 8px;
+	width: 8px;
+}
+
+.notification-item.notification-item_waiting .notification-item_icon {
+	background-color: #FDE891;
+}
+
+.notification-item.notification-item_ongoing .notification-item_icon {
+	background-color: var(--primary-color);
+	color: var(--bs-white);
+}
+
+.notification-item.notification-item_done .notification-item_icon {
+	background-color: var(--dark-color);
+	color: var(--bs-white);
+}
+
+.notification-item.notification-item_reject .notification-item_icon {
+	background-color: #C8CBD3;
 }
