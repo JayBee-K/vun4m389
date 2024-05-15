@@ -781,10 +781,16 @@ textarea:focus {
 .c-datepicker {
 	z-index: 1059;
 	min-height: 350px;
+	padding-bottom: 85px;
 	border-radius: 24px;
 	overflow: hidden;
 	top: 75%;
 }
+
+.c-datepicker__calendar {
+	height: auto;
+}
+
 
 .c-datepicker.c-datepicker {
 	top: 50%;
@@ -800,7 +806,9 @@ textarea:focus {
 }
 
 .c-datepicker__header,
-.c-datepicker__clock {
+.c-datepicker__clock,
+.c-datepicker .c-datepicker--show-time:after,
+.c-datepicker .c-datepicker--show-calendar:after {
 	display: none !important;
 }
 
@@ -861,15 +869,19 @@ textarea:focus {
 	font-size: 14px;
 }
 
-.modal-btns {
+.c-datepicker .modal-btns {
 	float: none;
-	position: static;
 	padding: 5px 15px 15px;
 	display: flex;
 	flex-direction: column-reverse;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: calc(100% - 20px);
 }
 
-.modal-btns .js-ok {
+.c-datepicker .modal-btns .js-ok {
 	padding: 8px 24px;
 	box-shadow: none;
 	outline: none;
@@ -887,15 +899,15 @@ textarea:focus {
 	color: var(--bs-white);
 }
 
-.modal-btns .js-ok:active {
+.c-datepicker .modal-btns .js-ok:active {
 	background-color: var(--primary-hover);
 }
 
-.modal-btns .js-cancel {
+.c-datepicker .modal-btns .js-cancel {
 	margin-top: 8px;
 	color: var(--dark-600);
 }
 
-.modal-btns .js-cancel:active {
+.c-datepicker .modal-btns .js-cancel:active {
 	color: var(--dark-color);
 }

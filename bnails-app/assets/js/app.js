@@ -387,6 +387,27 @@ export function handleInitMaterialDate() {
 	}
 }
 
+export function handleInitMaterialOnLoad() {
+	let handleInitMaterialOnLoad = document.getElementById('initMaterial');
+	if (handleInitMaterialOnLoad !== null) {
+		const picker = new MaterialDatePicker().on('submit', function (d) {
+			handleInitMaterialOnLoad.value = d.format("YYYY-MM-DD HH:mm");
+		});
+
+		picker.open();
+
+		setTimeout(() => {
+			const pickerElement = document.querySelector('.c-datepicker');
+			if (pickerElement) {
+				pickerElement.previousSibling.remove();
+				handleInitMaterialOnLoad.parentNode.insertBefore(pickerElement, handleInitMaterialOnLoad.nextSibling);
+			}
+		}, 0);
+
+		handleInitMaterialOnLoad.style.display = 'none';
+	}
+}
+
 /****
  * Handle Call DataPicker Materia
  */
@@ -645,6 +666,7 @@ window.addEventListener('load', function () {
 	handleFocusInput();
 	handleToggleTypePassword();
 	handleInitMaterialDate();
+	handleInitMaterialOnLoad();
 	handleCallDatePickerMaterial();
 	handleModalLocation();
 	handleModalBookingService();

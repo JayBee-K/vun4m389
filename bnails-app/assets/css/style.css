@@ -783,6 +783,28 @@
 	border-top: none;
 }
 
+.modal-take .modal-dialog-scrollable .modal-content {
+	overflow: unset;
+}
+
+.modal-take .modal-dialog-scrollable .modal-content .modal-header {
+	border-radius: 24px 24px 0 0;
+}
+
+.modal-take .modal-button_close {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	background-color: var(--bs-white);
+	border-radius: 50%;
+	box-shadow: 0px -1px 24px 0px #11121510;
+}
+
 .section-chat {
 	background-color: var(--bs-white);
 }
@@ -1952,4 +1974,25 @@
 
 .notification-item.notification-item_reject .notification-item_icon {
 	background-color: #C8CBD3;
+}
+
+.section-calender .c-datepicker {
+	position: static;
+	transform: unset;
+	width: 100%;
+	box-shadow: none;
+	background-color: var(--bg-light);
+	min-height: 300px;
+	padding-bottom: 65px;
+}
+
+.section-calender .c-datepicker .c-datepicker__days {
+	width: calc(100% - 40px);
+	border-top: 1px solid #E4E5E9;
+}
+
+.section-calender .c-datepicker .c-datepicker--show-time:after,
+.section-calender .c-datepicker .c-datepicker--show-calendar:after,
+.section-calender .c-datepicker .modal-btns {
+	display: none;
 }
