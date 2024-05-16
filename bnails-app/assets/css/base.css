@@ -500,6 +500,8 @@ textarea:focus {
 }
 
 .effect-path svg path {
+	-webkit-transition: var(--transition-default);
+	-o-transition: var(--transition-default);
 	transition: var(--transition-default);
 }
 
@@ -509,16 +511,25 @@ textarea:focus {
 
 .button-theme {
 	padding: 10px 24px;
+	-webkit-box-shadow: none;
 	box-shadow: none;
 	outline: none;
 	border-radius: 56px;
 	border: 1px solid transparent;
 	gap: 8px;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
 	display: inline-flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 	font-size: 1em;
 	font-weight: 700;
+	-webkit-transition: var(--transition-default);
+	-o-transition: var(--transition-default);
 	transition: var(--transition-default);
 	white-space: nowrap;
 }
@@ -527,8 +538,14 @@ textarea:focus {
 	min-width: 20px;
 	min-height: 20px;
 	border-radius: 50%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 	color: var(--bs-white);
 	font-weight: 700;
@@ -564,6 +581,8 @@ textarea:focus {
 }
 
 .button-theme svg path {
+	-webkit-transition: var(--transition-default);
+	-o-transition: var(--transition-default);
 	transition: var(--transition-default);
 }
 
@@ -648,14 +667,25 @@ textarea:focus {
 	height: 100%;
 	overflow: hidden;
 	margin: auto 0;
+	-webkit-transition: var(--transition-default) !important;
+	-o-transition: var(--transition-default) !important;
 	transition: var(--transition-default) !important;
+	-webkit-transform: translateY(110%) !important;
+	-ms-transform: translateY(110%) !important;
 	transform: translateY(110%) !important;
 	position: fixed;
 	left: 0;
 	right: 0;
 	bottom: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
 	justify-content: flex-end;
 }
 
@@ -678,6 +708,7 @@ textarea:focus {
 	width: 43px;
 	height: 43px;
 	padding: 0;
+	-ms-flex-negative: 0;
 	flex-shrink: 0;
 }
 
@@ -802,6 +833,7 @@ textarea:focus {
 .c-datepicker *,
 .c-datepicker *:after,
 .c-datepicker *:before {
+	-webkit-box-sizing: unset;
 	box-sizing: unset;
 }
 
@@ -872,27 +904,43 @@ textarea:focus {
 .c-datepicker .modal-btns {
 	float: none;
 	padding: 5px 15px 15px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: reverse;
+	-ms-flex-direction: column-reverse;
 	flex-direction: column-reverse;
 	position: absolute;
 	bottom: 0;
 	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
 	width: calc(100% - 20px);
 }
 
 .c-datepicker .modal-btns .js-ok {
 	padding: 8px 24px;
+	-webkit-box-shadow: none;
 	box-shadow: none;
 	outline: none;
 	border-radius: 56px;
 	border: 1px solid transparent;
 	gap: 8px;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
 	display: inline-flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 	font-size: .925em;
 	font-weight: 700;
+	-webkit-transition: var(--transition-default);
+	-o-transition: var(--transition-default);
 	transition: var(--transition-default);
 	white-space: nowrap;
 	background-color: var(--primary-color);
