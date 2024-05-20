@@ -24,25 +24,39 @@ export const handleSliderHero = function () {
 	if (document.getElementById('heroSlider') !== null) {
 		const elmSwiper = '#heroSlider';
 		const objSwiper = {
-			effect: 'coverflow',
-			direction: 'vertical',
-			loop: true,
-			//slideToClickedSlide: true,
+			effect: "cards",
 			grabCursor: true,
-			centeredSlides: true,
-			slidesPerView: 'auto',
-			coverflowEffect: {
-				rotate: -5,
-				stretch: 245,
-				depth: 160,
-				modifier: 1,
-				slideShadows: false
+			cardsEffect: {
+				perSlideOffset: 8,
+				perSlideRotate: 0,
+				rotate: 0,
+				slideShadows: 0
 			},
+			loop: true,
+			centeredSlides: true,
 			speed: 300,
 			autoplay: {
-				delay: 7000,
+				delay: 7000000,
 				disableOnInteraction: true,
 			},
+			on: {
+				transitionEnd: function (slider) {
+					let activeSlide = slider.slides[slider.activeIndex];
+					let prevSlide = activeSlide.previousElementSibling;
+					if (prevSlide) {
+						prevSlide.classList.add('hidden-slide');
+					}
+				},
+				transitionStart: function (slider) {
+					let activeSlide = slider.slides[slider.activeIndex];
+					activeSlide.classList.remove('hidden-slide');
+
+					let nextSlide = activeSlide.nextElementSibling;
+					if (nextSlide) {
+						nextSlide.classList.remove('hidden-slide');
+					}
+				}
+			}
 		}
 		handleSwiper(elmSwiper + ' .swiper', objSwiper);
 	}
