@@ -1075,19 +1075,23 @@
 	height: 32px;
 }
 
-.rating-list .rating-item .rating-quality .rating-quality_star {
+.rating-list .rating-item .rating-quality .rating-quality_stars {
 	margin-top: var(--spacing);
 	background-color: var(--bg-light);
 	padding: 10px 16px;
-	border-radius: 48px;
+	border-radius: 20px;
 }
 
-.rating-list .rating-item .rating-quality .rating-quality_star svg {
+.rating-list .rating-item .rating-quality .rating-quality_stars .rating-quality_stars svg {
 	height: 20px;
 	width: 20px;
 }
 
 .rating-list .rating-item .rating-buttons {
+	margin-top: var(--spacing);
+}
+
+.rating-list .rating-item .rating-inner + .rating-inner {
 	margin-top: var(--spacing);
 }
 
