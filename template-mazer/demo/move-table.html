@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table - Mazer Admin Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+</head>
+
+<body>
+<div id="app">
+
+    <div class="modal fade popup-booking" id="popupBooking" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">BOOKING</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body scrollable-vertical">
+                    <div class="row g-3">
+                        <div class="col-lg-8">
+                            <div class="form-theme">
+                                <div class="row g-3">
+                                    <div class="col-lg-6">
+                                        <div class="form-item">
+                                            <div class="form-item_label">
+                                                Search:
+                                            </div>
+                                            <div class="form-item_input form-item_input__group">
+                                                <div class="form-item_icon">
+                                                    <i class="bi bi-search"></i>
+                                                </div>
+                                                <input type="text" placeholder="Name or Phone" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-item">
+                                            <div class="form-item_label">
+                                                Phone:
+                                            </div>
+                                            <div class="form-item_input form-item_input__group">
+                                                <div class="form-item_icon">
+                                                    <i class="bi bi-telephone"></i>
+                                                </div>
+                                                <input type="text" placeholder="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-item">
+                                            <div class="form-item_label">
+                                                Name:
+                                            </div>
+                                            <div class="form-item_input form-item_input__group">
+                                                <div class="form-item_icon">
+                                                    <i class="bi bi-person"></i>
+                                                </div>
+                                                <input type="text" placeholder="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-item">
+                                            <div class="form-item_label">
+                                                Email:
+                                            </div>
+                                            <div class="form-item_input form-item_input__group">
+                                                <div class="form-item_icon">
+                                                    <i class="bi bi-envelope"></i>
+                                                </div>
+                                                <input type="text" placeholder="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-item">
+                                            <div class="form-item_label">
+                                                Birthday:
+                                            </div>
+                                            <div class="form-item_input form-item_input__group">
+                                                <div class="form-item_icon">
+                                                    <i class="bi bi-calendar3"></i>
+                                                </div>
+                                                <input type="date" placeholder="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-item">
+                                            <div class="form-item_label"></div>
+                                            <div class="form-item_input">
+                                                <div class="form-item_check">
+                                                    <input type="checkbox" name="example-check-1" id="example-check-1"
+                                                           placeholder="" class="form-check">
+                                                    <label for="example-check-1" class="form-check_label">
+                                                        FIX/REDO
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-item">
+                                            <div class="form-item_label"></div>
+                                            <button type="button" class="btn btn-primary">
+                                                Profile Customer
+                                            </button>
+                                            <button type="button" class="btn btn-orange">
+                                                From ADS
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-item">
+                                            <div class="form-item_label">
+                                                Phone:
+                                            </div>
+                                            <div class="form-item_input form-item_input__group">
+                                                <div class="form-item_icon">
+                                                    <i class="bi bi-calendar3"></i>
+                                                </div>
+                                                <input type="text" placeholder="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-item">
+                                            <div class="form-item_label">
+                                                Status:
+                                            </div>
+                                            <div class="form-item_input form-item_status">
+                                                <div class="form-item_status__box">
+                                                    <input type="radio" name="example-status" id="status-1"
+                                                           placeholder="" class="form-status">
+                                                    <label for="status-1" class="form-status_label">
+                                                        Walk-in
+                                                    </label>
+                                                </div>
+                                                <div class="form-item_status__box">
+                                                    <input type="radio" name="example-status" id="status-2"
+                                                           placeholder="" checked class="form-status">
+                                                    <label for="status-2" class="form-status_label">
+                                                        Appointment
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-item">
+                                            <div class="form-item_label">
+                                                Staff:
+                                            </div>
+                                            <div class="form-item_input form-item_input__group">
+                                                <select name="" class="form-select" id="">
+                                                    <option value="">Staff 1</option>
+                                                    <option value="">Staff 2</option>
+                                                    <option value="">Staff 3</option>
+                                                    <option value="">Staff 4</option>
+                                                    <option value="">Staff 5</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-item">
+                                            <div class="form-item_label">
+                                                Service:
+                                            </div>
+                                            <div class="form-item_input form-item_input__group">
+                                                <select name="" class="form-select" id="">
+                                                    <option value="">Service 1</option>
+                                                    <option value="">Service 2</option>
+                                                    <option value="">Service 3</option>
+                                                    <option value="">Service 4</option>
+                                                    <option value="">Service 5</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-item">
+                                            <div class="form-item_label">Type</div>
+                                            <div class="form-item_input form-item_checks">
+                                                <div class="form-item_check">
+                                                    <input type="checkbox" name="example-type" id="example-type-1"
+                                                           placeholder="" class="form-check">
+                                                    <label for="example-type-1" class="form-check_label">
+                                                        Service Parallel
+                                                    </label>
+                                                </div>
+                                                <div class="form-item_check">
+                                                    <input type="checkbox" name="example-type" id="example-type-2"
+                                                           placeholder="" class="form-check">
+                                                    <label for="example-type-2" class="form-check_label">
+                                                        Overbook
+                                                    </label>
+                                                </div>
+                                                <div class="form-item_check">
+                                                    <input type="checkbox" name="example-type" id="example-type-3"
+                                                           placeholder="" class="form-check">
+                                                    <label for="example-type-3" class="form-check_label">
+                                                        Next Hour
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-item">
+                                            <div class="form-item_label"></div>
+                                            <button type="button" class="btn btn-primary w-100">
+                                                <i class="bi bi-check-square"></i>
+                                                Add Service
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 position-relative mb-3">
+                            <div class="list-service scrollable-vertical">
+                                <div class="list-service_item active">
+                                    <div class="service-item_image">
+                                        <img src="https://bnails.com/App_Themes/bnails/images/ser7.png"
+                                             class="img-fluid" width="50px" height="50px" alt="">
+                                    </div>
+                                    <div class="service-item_content">
+                                        <div class="service-item_title">
+                                            Add On
+                                        </div>
+                                        <div class="service-item_price">
+                                            $5.00
+                                        </div>
+                                    </div>
+                                    <div class="service-item_button">
+                                        <button type="button" class="btn btn-primary btn-sm">
+                                            <i class="bi bi-check-square"></i>
+                                            Add Service
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="list-service_item">
+                                    <div class="service-item_image">
+                                        <img src="https://bnails.com/App_Themes/bnails/images/ser7.png"
+                                             class="img-fluid" width="50px" height="50px" alt="">
+                                    </div>
+                                    <div class="service-item_content">
+                                        <div class="service-item_title">
+                                            Add On
+                                        </div>
+                                        <div class="service-item_price">
+                                            $5.00
+                                        </div>
+                                    </div>
+                                    <div class="service-item_button">
+                                        <button type="button" class="btn btn-primary btn-sm">
+                                            <i class="bi bi-check-square"></i>
+                                            Add Service
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="list-service_item">
+                                    <div class="service-item_image">
+                                        <img src="https://bnails.com/App_Themes/bnails/images/ser7.png"
+                                             class="img-fluid" width="50px" height="50px" alt="">
+                                    </div>
+                                    <div class="service-item_content">
+                                        <div class="service-item_title">
+                                            Add On
+                                        </div>
+                                        <div class="service-item_price">
+                                            $5.00
+                                        </div>
+                                    </div>
+                                    <div class="service-item_button">
+                                        <button type="button" class="btn btn-primary btn-sm">
+                                            <i class="bi bi-check-square"></i>
+                                            Add Service
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="list-service_item">
+                                    <div class="service-item_image">
+                                        <img src="https://bnails.com/App_Themes/bnails/images/ser7.png"
+                                             class="img-fluid" width="50px" height="50px" alt="">
+                                    </div>
+                                    <div class="service-item_content">
+                                        <div class="service-item_title">
+                                            Add On
+                                        </div>
+                                        <div class="service-item_price">
+                                            $5.00
+                                        </div>
+                                    </div>
+                                    <div class="service-item_button">
+                                        <button type="button" class="btn btn-primary btn-sm">
+                                            <i class="bi bi-check-square"></i>
+                                            Add Service
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="list-service_item">
+                                    <div class="service-item_image">
+                                        <img src="https://bnails.com/App_Themes/bnails/images/ser7.png"
+                                             class="img-fluid" width="50px" height="50px" alt="">
+                                    </div>
+                                    <div class="service-item_content">
+                                        <div class="service-item_title">
+                                            Add On
+                                        </div>
+                                        <div class="service-item_price">
+                                            $5.00
+                                        </div>
+                                    </div>
+                                    <div class="service-item_button">
+                                        <button type="button" class="btn btn-primary btn-sm">
+                                            <i class="bi bi-check-square"></i>
+                                            Add Service
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="list-service_item">
+                                    <div class="service-item_image">
+                                        <img src="https://bnails.com/App_Themes/bnails/images/ser7.png"
+                                             class="img-fluid" width="50px" height="50px" alt="">
+                                    </div>
+                                    <div class="service-item_content">
+                                        <div class="service-item_title">
+                                            Add On
+                                        </div>
+                                        <div class="service-item_price">
+                                            $5.00
+                                        </div>
+                                    </div>
+                                    <div class="service-item_button">
+                                        <button type="button" class="btn btn-primary btn-sm">
+                                            <i class="bi bi-check-square"></i>
+                                            Add Service
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="list-service_item">
+                                    <div class="service-item_image">
+                                        <img src="https://bnails.com/App_Themes/bnails/images/ser7.png"
+                                             class="img-fluid" width="50px" height="50px" alt="">
+                                    </div>
+                                    <div class="service-item_content">
+                                        <div class="service-item_title">
+                                            Add On
+                                        </div>
+                                        <div class="service-item_price">
+                                            $5.00
+                                        </div>
+                                    </div>
+                                    <div class="service-item_button">
+                                        <button type="button" class="btn btn-primary btn-sm">
+                                            <i class="bi bi-check-square"></i>
+                                            Add Service
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-theme">
+                        <div class="form-item mb-0">
+                            <div class="form-item_label">
+                                Important Note:
+                            </div>
+                            <div class="form-item_input">
+                                <input type="text" placeholder="Note customer" class="form-control">
+                            </div>
+                            <div class="form-item_button">
+                                <button type="button" class="btn btn-primary">
+                                    Update Important Note
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="time-list">
+                        <div class="time-item">
+                            <div class="time-item_title">
+                                Today:
+                            </div>
+                            <div class="time-item_value scrollable-horizontal">
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-1" id="time-example-1-1">
+                                    <label for="time-example-1-1">
+                                        05:00 AM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-1" id="time-example-1-2">
+                                    <label for="time-example-1-2">
+                                        10:45 AM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-1" id="time-example-1-3">
+                                    <label for="time-example-1-3">
+                                        11:00 AM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-1" id="time-example-1-4">
+                                    <label for="time-example-1-4">
+                                        12:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-1" id="time-example-1-5">
+                                    <label for="time-example-1-5">
+                                        1:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-1" id="time-example-1-6">
+                                    <label for="time-example-1-6">
+                                        2:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-1" id="time-example-1-7">
+                                    <label for="time-example-1-7">
+                                        3:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-1" id="time-example-1-8">
+                                    <label for="time-example-1-8">
+                                        4:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-1" id="time-example-1-9">
+                                    <label for="time-example-1-9">
+                                        5:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-1" id="time-example-1-10">
+                                    <label for="time-example-1-10">
+                                        6:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-1" id="time-example-1-11">
+                                    <label for="time-example-1-11">
+                                        7:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-1" id="time-example-1-12">
+                                    <label for="time-example-1-12">
+                                        8:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-1" id="time-example-1-13">
+                                    <label for="time-example-1-13">
+                                        9:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-1" id="time-example-1-14">
+                                    <label for="time-example-1-14">
+                                        10:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-1" id="time-example-1-15">
+                                    <label for="time-example-1-15">
+                                        11:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-1" id="time-example-1-16">
+                                    <label for="time-example-1-16">
+                                        12:00 PM
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="time-item">
+                            <div class="time-item_title">
+                                Sun 03/10:
+                            </div>
+                            <div class="time-item_value scrollable-horizontal">
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-2" id="time-example-2-1">
+                                    <label for="time-example-2-1">
+                                        05:00 AM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-2" id="time-example-2-2">
+                                    <label for="time-example-2-2">
+                                        10:45 AM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-2" id="time-example-2-3">
+                                    <label for="time-example-2-3">
+                                        11:00 AM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-2" id="time-example-2-4">
+                                    <label for="time-example-2-4">
+                                        12:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-2" id="time-example-2-5">
+                                    <label for="time-example-2-5">
+                                        1:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-2" id="time-example-2-6">
+                                    <label for="time-example-2-6">
+                                        2:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-2" id="time-example-2-7">
+                                    <label for="time-example-2-7">
+                                        3:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-2" id="time-example-2-8">
+                                    <label for="time-example-2-8">
+                                        4:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-2" id="time-example-2-9">
+                                    <label for="time-example-2-9">
+                                        5:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-2" id="time-example-2-10">
+                                    <label for="time-example-2-10">
+                                        6:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-2" id="time-example-2-11">
+                                    <label for="time-example-2-11">
+                                        7:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-2" id="time-example-2-12">
+                                    <label for="time-example-2-12">
+                                        8:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-2" id="time-example-2-13">
+                                    <label for="time-example-2-13">
+                                        9:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-2" id="time-example-2-14">
+                                    <label for="time-example-2-14">
+                                        10:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-2" id="time-example-2-15">
+                                    <label for="time-example-2-15">
+                                        11:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-2" id="time-example-2-16">
+                                    <label for="time-example-2-16">
+                                        12:00 PM
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="time-item">
+                            <div class="time-item_title">
+                                Mon 03/11:
+                            </div>
+                            <div class="time-item_value scrollable-horizontal">
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-3" id="time-example-3-1">
+                                    <label for="time-example-3-1">
+                                        05:00 AM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-3" id="time-example-3-2">
+                                    <label for="time-example-3-2">
+                                        10:45 AM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-3" id="time-example-3-3">
+                                    <label for="time-example-3-3">
+                                        11:00 AM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-3" id="time-example-3-4">
+                                    <label for="time-example-3-4">
+                                        12:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-3" id="time-example-3-5">
+                                    <label for="time-example-3-5">
+                                        1:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-3" id="time-example-3-6">
+                                    <label for="time-example-3-6">
+                                        2:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-3" id="time-example-3-7">
+                                    <label for="time-example-3-7">
+                                        3:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-3" id="time-example-3-8">
+                                    <label for="time-example-3-8">
+                                        4:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-3" id="time-example-3-9">
+                                    <label for="time-example-3-9">
+                                        5:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-3" id="time-example-3-10">
+                                    <label for="time-example-3-10">
+                                        6:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-3" id="time-example-3-11">
+                                    <label for="time-example-3-11">
+                                        7:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-3" id="time-example-3-12">
+                                    <label for="time-example-3-12">
+                                        8:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-3" id="time-example-3-13">
+                                    <label for="time-example-3-13">
+                                        9:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-3" id="time-example-3-14">
+                                    <label for="time-example-3-14">
+                                        10:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-3" id="time-example-3-15">
+                                    <label for="time-example-3-15">
+                                        11:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-3" id="time-example-3-16">
+                                    <label for="time-example-3-16">
+                                        12:00 PM
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="time-item">
+                            <div class="time-item_title">
+                                Tue 03/12:
+                            </div>
+                            <div class="time-item_value scrollable-horizontal">
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-4" id="time-example-4-1">
+                                    <label for="time-example-4-1">
+                                        05:00 AM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-4" id="time-example-4-2">
+                                    <label for="time-example-4-2">
+                                        10:45 AM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-4" id="time-example-4-3">
+                                    <label for="time-example-4-3">
+                                        11:00 AM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-4" id="time-example-4-4">
+                                    <label for="time-example-4-4">
+                                        12:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-4" id="time-example-4-5">
+                                    <label for="time-example-4-5">
+                                        1:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-4" id="time-example-4-6">
+                                    <label for="time-example-4-6">
+                                        2:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-4" id="time-example-4-7">
+                                    <label for="time-example-4-7">
+                                        3:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-4" id="time-example-4-8">
+                                    <label for="time-example-4-8">
+                                        4:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-4" id="time-example-4-9">
+                                    <label for="time-example-4-9">
+                                        5:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-4" id="time-example-4-10">
+                                    <label for="time-example-4-10">
+                                        6:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-4" id="time-example-4-11">
+                                    <label for="time-example-4-11">
+                                        7:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-4" id="time-example-4-12">
+                                    <label for="time-example-4-12">
+                                        8:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-4" id="time-example-4-13">
+                                    <label for="time-example-4-13">
+                                        9:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-4" id="time-example-4-14">
+                                    <label for="time-example-4-14">
+                                        10:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-4" id="time-example-4-15">
+                                    <label for="time-example-4-15">
+                                        11:00 PM
+                                    </label>
+                                </div>
+                                <div class="time-choose">
+                                    <input type="radio" name="time-example-4" id="time-example-4-16">
+                                    <label for="time-example-4-16">
+                                        12:00 PM
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered align-middle text-nowrap">
+                            <tr>
+                                <th>
+                                    STT
+                                </th>
+                                <th>
+                                    Name
+                                </th>
+                                <th>
+                                    Price
+                                </th>
+                                <th>
+                                    Staff
+                                </th>
+                                <th style="width: 175px;">
+                                    Time
+                                </th>
+                                <th style="width: 175px;">
+                                    <button type="button" class="btn btn-info">
+                                        <i class="bi bi-check-square"></i>
+                                        Update group
+                                    </button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    1
+                                </td>
+                                <td>
+                                    <div class="input-borderless">
+                                        <input type="text" class="form-control" value="Pedicure">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-borderless">
+                                        <input type="text" class="form-control" value="38">
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="mb-0">First Available Technician</p>
+                                    <div class="input-borderless">
+                                        <input type="text" class="form-control" value="" placeholder="Note">
+                                    </div>
+                                </td>
+                                <td>
+                                    05:00 PM - 5:45 PM
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-danger">
+                                        <i class="bi bi-trash-fill"></i>
+                                        Delete
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">
+                        <i class="bi bi-bookmark-check"></i>
+                        Book
+                    </button>
+                    <button type="button" class="btn btn-orange">
+                        <i class="bi bi-list-check"></i>
+                        Wait List
+                    </button>
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">
+                        <i class="bi bi-x-circle"></i>
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sidebar" class="active">
+        <div class="sidebar-wrapper active">
+            <div class="sidebar-header">
+                <div class="d-flex justify-content-between">
+                    <div class="logo">
+                        <a href="index.html"><img src="assets/images/logo/logo.png" alt="Logo" srcset=""></a>
+                    </div>
+                    <div class="toggler">
+                        <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-menu">
+                <ul class="menu">
+                    <li class="sidebar-title">Menu</li>
+
+                    <li class="sidebar-item  ">
+                        <a href="index.html" class='sidebar-link'>
+                            <i class="bi bi-grid-fill"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item  has-sub">
+                        <a href="#" class='sidebar-link'>
+                            <i class="bi bi-stack"></i>
+                            <span>Components</span>
+                        </a>
+                        <ul class="submenu ">
+                            <li class="submenu-item ">
+                                <a href="component-alert.html">Alert</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="component-badge.html">Badge</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="component-breadcrumb.html">Breadcrumb</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="component-button.html">Button</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="component-card.html">Card</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="component-carousel.html">Carousel</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="component-dropdown.html">Dropdown</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="component-list-group.html">List Group</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="component-modal.html">Modal</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="component-navs.html">Navs</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="component-pagination.html">Pagination</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="component-progress.html">Progress</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="component-spinner.html">Spinner</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="component-tooltip.html">Tooltip</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-item  has-sub">
+                        <a href="#" class='sidebar-link'>
+                            <i class="bi bi-collection-fill"></i>
+                            <span>Extra Components</span>
+                        </a>
+                        <ul class="submenu ">
+                            <li class="submenu-item ">
+                                <a href="extra-component-avatar.html">Avatar</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="extra-component-sweetalert.html">Sweet Alert</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="extra-component-toastify.html">Toastify</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="extra-component-rating.html">Rating</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="extra-component-divider.html">Divider</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-item  has-sub">
+                        <a href="#" class='sidebar-link'>
+                            <i class="bi bi-grid-1x2-fill"></i>
+                            <span>Layouts</span>
+                        </a>
+                        <ul class="submenu ">
+                            <li class="submenu-item ">
+                                <a href="layout-default.html">Default Layout</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="layout-vertical-1-column.html">1 Column</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="layout-vertical-navbar.html">Vertical Navbar</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="layout-rtl.html">RTL Layout</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="layout-horizontal.html">Horizontal Menu</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-title">Forms &amp; Tables</li>
+
+                    <li class="sidebar-item  has-sub">
+                        <a href="#" class='sidebar-link'>
+                            <i class="bi bi-hexagon-fill"></i>
+                            <span>Form Elements</span>
+                        </a>
+                        <ul class="submenu ">
+                            <li class="submenu-item ">
+                                <a href="form-element-input.html">Input</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="form-element-input-group.html">Input Group</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="form-element-select.html">Select</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="form-element-radio.html">Radio</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="form-element-checkbox.html">Checkbox</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="form-element-textarea.html">Textarea</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-item  ">
+                        <a href="form-layout.html" class='sidebar-link'>
+                            <i class="bi bi-file-earmark-medical-fill"></i>
+                            <span>Form Layout</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item  has-sub">
+                        <a href="#" class='sidebar-link'>
+                            <i class="bi bi-pen-fill"></i>
+                            <span>Form Editor</span>
+                        </a>
+                        <ul class="submenu ">
+                            <li class="submenu-item ">
+                                <a href="form-editor-quill.html">Quill</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="form-editor-ckeditor.html">CKEditor</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="form-editor-summernote.html">Summernote</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="form-editor-tinymce.html">TinyMCE</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-item active ">
+                        <a href="table.html" class='sidebar-link'>
+                            <i class="bi bi-grid-1x2-fill"></i>
+                            <span>Table</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item  ">
+                        <a href="table-datatable.html" class='sidebar-link'>
+                            <i class="bi bi-file-earmark-spreadsheet-fill"></i>
+                            <span>Datatable</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-title">Extra UI</li>
+
+                    <li class="sidebar-item  has-sub">
+                        <a href="#" class='sidebar-link'>
+                            <i class="bi bi-pentagon-fill"></i>
+                            <span>Widgets</span>
+                        </a>
+                        <ul class="submenu ">
+                            <li class="submenu-item ">
+                                <a href="ui-widgets-chatbox.html">Chatbox</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="ui-widgets-pricing.html">Pricing</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="ui-widgets-todolist.html">To-do List</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-item  has-sub">
+                        <a href="#" class='sidebar-link'>
+                            <i class="bi bi-egg-fill"></i>
+                            <span>Icons</span>
+                        </a>
+                        <ul class="submenu ">
+                            <li class="submenu-item ">
+                                <a href="ui-icons-bootstrap-icons.html">Bootstrap Icons </a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="ui-icons-fontawesome.html">Fontawesome</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="ui-icons-dripicons.html">Dripicons</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-item  has-sub">
+                        <a href="#" class='sidebar-link'>
+                            <i class="bi bi-bar-chart-fill"></i>
+                            <span>Charts</span>
+                        </a>
+                        <ul class="submenu ">
+                            <li class="submenu-item ">
+                                <a href="ui-chart-chartjs.html">ChartJS</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="ui-chart-apexcharts.html">Apexcharts</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-item  ">
+                        <a href="ui-file-uploader.html" class='sidebar-link'>
+                            <i class="bi bi-cloud-arrow-up-fill"></i>
+                            <span>File Uploader</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item  has-sub">
+                        <a href="#" class='sidebar-link'>
+                            <i class="bi bi-map-fill"></i>
+                            <span>Maps</span>
+                        </a>
+                        <ul class="submenu ">
+                            <li class="submenu-item ">
+                                <a href="ui-map-google-map.html">Google Map</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="ui-map-jsvectormap.html">JS Vector Map</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-title">Pages</li>
+
+                    <li class="sidebar-item  ">
+                        <a href="application-email.html" class='sidebar-link'>
+                            <i class="bi bi-envelope-fill"></i>
+                            <span>Email Application</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item  ">
+                        <a href="application-chat.html" class='sidebar-link'>
+                            <i class="bi bi-chat-dots-fill"></i>
+                            <span>Chat Application</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item  ">
+                        <a href="application-gallery.html" class='sidebar-link'>
+                            <i class="bi bi-image-fill"></i>
+                            <span>Photo Gallery</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item  ">
+                        <a href="application-checkout.html" class='sidebar-link'>
+                            <i class="bi bi-basket-fill"></i>
+                            <span>Checkout Page</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item  has-sub">
+                        <a href="#" class='sidebar-link'>
+                            <i class="bi bi-person-badge-fill"></i>
+                            <span>Authentication</span>
+                        </a>
+                        <ul class="submenu ">
+                            <li class="submenu-item ">
+                                <a href="auth-login.html">Login</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="auth-register.html">Register</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="auth-forgot-password.html">Forgot Password</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-item  has-sub">
+                        <a href="#" class='sidebar-link'>
+                            <i class="bi bi-x-octagon-fill"></i>
+                            <span>Errors</span>
+                        </a>
+                        <ul class="submenu ">
+                            <li class="submenu-item ">
+                                <a href="error-403.html">403</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="error-404.html">404</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="error-500.html">500</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-title">Raise Support</li>
+
+                    <li class="sidebar-item  ">
+                        <a href="https://zuramai.github.io/mazer/docs" class='sidebar-link'>
+                            <i class="bi bi-life-preserver"></i>
+                            <span>Documentation</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item  ">
+                        <a href="https://github.com/zuramai/mazer/blob/main/CONTRIBUTING.md" class='sidebar-link'>
+                            <i class="bi bi-puzzle"></i>
+                            <span>Contribute</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item  ">
+                        <a href="https://github.com/zuramai/mazer#donate" class='sidebar-link'>
+                            <i class="bi bi-cash"></i>
+                            <span>Donate</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+        </div>
+    </div>
+    <div id="main" class="move-table">
+        <header class="mb-3">
+            <a href="#" class="burger-btn d-block d-xl-none">
+                <i class="bi bi-justify fs-3"></i>
+            </a>
+        </header>
+
+        <div class="page-heading">
+            <!-- Move Tables start -->
+            <section class="section">
+                <section class="schedule-wrap">
+                    <div class="schedule-header clear">
+                        <div class="sch-hd-left">
+                            <a href="javascript:;" class="sch-nav prev"><i class="bi bi-chevron-left"></i>
+                                PRev</a>
+                        </div>
+                        <div class="sch-hd-right">
+                            <div class="noti-parent hd-item pending-block">
+                                <a href="javascript:;" class="btn-square-border pending-link"><span
+                                        class="badge">1</span></a>
+                                <ul class="noti-ul">
+                                    <li>
+                                        <a href="#" class="service-item">
+                                            <h4 class="caption">NO: 224 - Trần Văn A</h4>
+                                            <dl class="dl-info clear">
+                                                <dt>Phone:</dt>
+                                                <dd>01010101</dd>
+                                                <dt>Email:</dt>
+                                                <dd>atranvan@email.com</dd>
+                                            </dl>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="service-item">
+                                            <h4 class="caption">NO: 224 - Trần Văn B</h4>
+                                            <dl class="dl-info clear">
+                                                <dt>Phone:</dt>
+                                                <dd>01010101</dd>
+                                                <dt>Email:</dt>
+                                                <dd>atranvan@email.com</dd>
+                                            </dl>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="service-item">
+                                            <h4 class="caption">NO: 224 - Trần Văn C</h4>
+                                            <dl class="dl-info clear">
+                                                <dt>Phone:</dt>
+                                                <dd>01010101</dd>
+                                                <dt>Email:</dt>
+                                                <dd>atranvan@email.com</dd>
+                                            </dl>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="noti-parent hd-item trash-block">
+                                <a href="javascript:;" class="btn-square-border trash-link"><span
+                                        class="badge">11</span></a>
+                                <ul class="noti-ul">
+                                    <li>
+                                        <a href="#" class="service-item ">
+                                            <h4 class="caption">NO: 224 - Trần Văn A</h4>
+                                            <dl class="dl-info clear">
+                                                <dt>Phone:</dt>
+                                                <dd>01010101</dd>
+                                                <dt>Email:</dt>
+                                                <dd>atranvan@email.com</dd>
+                                                <dt>Dịch vụ</dt>
+                                                <dd>dv1, dv2, dv3</dd>
+                                            </dl>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="service-item ">
+                                            <h4 class="caption">NO: 224 - Trần Văn A</h4>
+                                            <dl class="dl-info clear">
+                                                <dt>Phone:</dt>
+                                                <dd>01010101</dd>
+                                                <dt>Email:</dt>
+                                                <dd>atranvan@email.com</dd>
+                                                <dt>Dịch vụ</dt>
+                                                <dd>dv1, dv2, dv3</dd>
+                                            </dl>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="service-item ">
+                                            <h4 class="caption">NO: 224 - Trần Văn A</h4>
+                                            <dl class="dl-info clear">
+                                                <dt>Phone:</dt>
+                                                <dd>01010101</dd>
+                                                <dt>Email:</dt>
+                                                <dd>atranvan@email.com</dd>
+                                                <dt>Dịch vụ</dt>
+                                                <dd>dv1, dv2, dv3</dd>
+                                            </dl>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <span class="badge">1</span></a>
+                            <a href="#popupBooking" data-bs-toggle="modal" class="hd-item btn-calendar"><i
+                                    class="bi bi-calendar4-week"></i></a>
+                            <a href="javascript:;" class="hd-item sch-nav next">Next <i class="bi bi-chevron-right"></i></a>
+
+                        </div>
+                        <div class="sch-hd-center"><i class="bi bi-calendar4-week"></i> Mon, 31 july, 2017</div>
+                    </div>
+                    <div class="schedule-cont dragscroll" id="schedule-overflow-horizontal">
+                        <table class="">
+                            <thead class="schedule-operatory" id="schedule-operatory">
+                            <tr>
+                                <th class="axisX" style="width: 100px"></th>
+                                <th data-type="4" class="">Nhân Viên 1</th>
+                                <th data-type="4" class="sv-1 sv-3">Nhân Viên 2</th>
+                                <th data-type="3">Nhân Viên 3</th>
+                                <th data-type="2" class="sv-1">Nhân Viên 4</th>
+                                <th data-type="1">Nhân Viên 5</th>
+                                <th data-type="1">Nhân Viên 6</th>
+                                <th data-type="1">Nhân Viên 7</th>
+                                <th data-type="1">Nhân Viên 8</th>
+                                <th data-type="1">Nhân Viên 9</th>
+                                <th data-type="1">Nhân Viên 10</th>
+                                <th data-type="1">Nhân Viên 1</th>
+                                <th data-type="1">Nhân Viên 2</th>
+                                <th data-type="1">Nhân Viên 3</th>
+                                <th data-type="1">Nhân Viên 4</th>
+                                <th data-type="1">Nhân Viên 5</th>
+                                <!--class of th is the revert service type -->
+                            </tr>
+                            </thead>
+                            <tbody class="schedule-body">
+                            <tr>
+                                <td colspan="9">
+                                    <div class="schedule-overflow" id="schedule-overflow">
+                                        <div class="time-grid clear">
+                                            <table id="table-timeline"></table>
+                                            <table id="table-schedule-time"></table>
+
+                                        </div>
+                                        <div class="current-time" id="current-time"></div>
+                                        <div class="event-store" id="event-store">
+                                            <table>
+                                                <tr>
+                                                    <td class="axisX" style="width: 100px;"></td>
+
+                                                </tr>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section class="sec-menu-side" id="menu-edit-user">
+                    <div class="menu-overlay"></div>
+                    <div class="menu-inner">
+                        <ul class="menu-feat-ul">
+                            <li>
+                                <h4 class="title">Thông tin khách hàng</h4>
+                                <div class="menu-feat">
+                                    <div class="user-info-row">
+                                        <div class="lb">Name</div>
+                                        <input type="text" class="form-control" value="Nguyen Thanh Phuong">
+                                    </div>
+                                    <div class="user-info-row">
+                                        <div class="lb">Phone</div>
+                                        <input type="text" class="form-control" value="402-426-5199">
+                                    </div>
+                                    <div class="user-info-row">
+                                        <div class="lb">Email</div>
+                                        <input type="text" class="form-control" value="kolby.weber@yahoo.com">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <h4 class="title clear">Dịch vụ <a href="javascript:;" onclick=""
+                                                                   class="call-model right">Add</a></h4>
+                                <div class="menu-feat">
+                                    <div class="user-info-row removeable-item">
+                                        <div class="service-item">
+                                            <h4 class="caption">Cắt móng, sơn móng, đắp móng</h4>
+                                            <dl class="dl-info clear">
+                                                <dt>Giá tiền:</dt>
+                                                <dd class="hl-txt">500.000 vnđ</dd>
+                                                <dt>Nhân viên:</dt>
+                                                <dd>Nguyễn Thị Mai</dd>
+                                                <dt>Thời gian</dt>
+                                                <dd>11:00 - 11:30</dd>
+                                            </dl>
+                                            <a href="javascript:;" class="remove-item"><i class="bi bi-x"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="user-info-row removeable-item">
+                                        <div class="service-item ">
+                                            <h4 class="caption">Cắt móng, sơn móng, đắp móng</h4>
+                                            <dl class="dl-info clear">
+                                                <dt>Giá tiền:</dt>
+                                                <dd class="hl-txt">500.000 vnđ</dd>
+                                                <dt>Nhân viên:</dt>
+                                                <dd>Nguyễn Thị Mai</dd>
+                                                <dt>Thời gian</dt>
+                                                <dd>11:30 - 12:00</dd>
+                                            </dl>
+                                            <a href="javascript:;" class="remove-item"><i class="bi bi-x"></i></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <h4 class="title clear">Sản phẩm <a href="javascript:;" onclick=""
+                                                                    class="call-model right">Add</a></h4>
+                                <div class="menu-feat">
+                                    <div class="user-info-row removeable-item">
+                                        <div class="service-item">
+                                            <h4 class="caption">Kềm cắt da</h4>
+                                            <dl class="dl-info clear">
+                                                <dt>Giá tiền:</dt>
+                                                <dd class="hl-txt">500.000 vnđ</dd>
+                                                <dt>Người giới thiệu:</dt>
+                                                <dd>Nguyễn Thị Mai</dd>
+                                            </dl>
+                                            <a href="javascript:;" class="remove-item"><i class="bi bi-x"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="user-info-row removeable-item">
+                                        <div class="service-item ">
+                                            <h4 class="caption">Kềm cắt da</h4>
+                                            <dl class="dl-info clear">
+                                                <dt>Giá tiền:</dt>
+                                                <dd class="hl-txt">500.000 vnđ</dd>
+                                                <dt>Người giới thiệu:</dt>
+                                                <dd>Nguyễn Thị Mai</dd>
+                                            </dl>
+                                            <a href="javascript:;" class="remove-item"><i class="bi bi-x"></i></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <h4 class="title clear">Voucher <a href="javascript:;" onclick=""
+                                                                   class="call-model right">Add</a></h4>
+                                <div class="menu-feat">
+                                    <div class="user-info-row removeable-item">
+                                        <div class="service-item">
+                                            <dl class="dl-info clear">
+                                                <dt>Mã voucher:</dt>
+                                                <dd>kasdjaksdjciqoiqwucn</dd>
+                                                <dt>Giá tiền:</dt>
+                                                <dd class="hl-txt">500.000 vnđ</dd>
+
+                                            </dl>
+                                            <a href="javascript:;" class="remove-item"><i class="bi bi-x"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="user-info-row">
+                                        <div class="service-item ">
+                                            <dl class="dl-info clear">
+                                                <dt>Mã voucher:</dt>
+                                                <dd>kasdjaksdjciqoiqwucn</dd>
+                                                <dt>Giá tiền:</dt>
+                                                <dd class="hl-txt">500.000 vnđ</dd>
+                                            </dl>
+                                            <a href="javascript:;" class="remove-item"><i class="bi bi-x"></i></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="user-info-row row-btn">
+                                    <a href="javascript:;" class="btn process-btn">Process</a>
+                                    <a href="javascript:;" class="btn booking-btn">booking</a>
+                                    <a href="javascript:;" class="btn thanhtoan-btn">Thanh toán</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+            <!-- Move Tables end -->
+        </div>
+    </div>
+</div>
+<script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jquery-1.9.1.min.js"></script>
+<script src="assets/js/scheduleRender-backup.js"></script>
+
+<script src="assets/js/main.js"></script>
+</body>
+
+</html>
