@@ -1349,6 +1349,29 @@ a.hl-txt:hover {
 	background: #a1a1a1;
 }
 
+.form-booking {
+	--primary-color: #1aada6;
+	--primary-hover: #149892;
+}
+
+.form-booking .page-heading h3,
+.form-booking .card .card-title,
+.form-booking .text-primary{
+	color: var(--primary-color) !important
+}
+
+
+.form-booking .btn-primary {
+	background-color: var(--primary-color);
+	border-color: var(--primary-color);
+	box-shadow: none !important;
+}
+
+.form-booking .btn-primary:hover {
+	background-color: var(--primary-hover);
+	border-color: var(--primary-hover);
+}
+
 .cart-form__input {
 	display: flex;
 	align-items: center;
@@ -1382,6 +1405,11 @@ a.hl-txt:hover {
 	background: #F8F8F9;
 	border: 1px solid #F8F8F9;
 	font-weight: 400;
+}
+
+.cart-form__input .input-form:focus {
+	box-shadow: none;
+	border-color: var(--primary-color);
 }
 
 .cart-form__input .input-form.input-select {
@@ -1440,7 +1468,7 @@ a.hl-txt:hover {
 	background: transparent;
 	transition: 0.3s all ease-in-out;
 	cursor: pointer;
-	color: #25396f;
+	color: #232323;
 }
 
 .select-group__absolute li:not(:last-child) {
@@ -1456,8 +1484,8 @@ a.hl-txt:hover {
 
 .select-group__absolute li.active {
 	border-radius: 56px;
-	border-color: #435ebe;
-	background: #435ebe;
+	border-color: var(--primary-color);
+	background: var(--primary-color);
 	color: #fff;
 }
 
@@ -1502,9 +1530,9 @@ a.hl-txt:hover {
 	gap: 16px;
 	align-self: stretch;
 	border-radius: 12px;
-	background: #f0f1f5;
+	background: rgb(241, 248, 247);
 	margin-bottom: 16px;
-	color: #25396f;
+	color: #232323;
 }
 
 .cart-section__box > .image {
@@ -1534,7 +1562,7 @@ a.hl-txt:hover {
 }
 
 .card-calendar__title {
-	color: #25396f;
+	color: var(--primary-color);
 	font-size: 1.125em;
 	font-weight: 700;
 	line-height: 24px;
@@ -1580,8 +1608,8 @@ a.hl-txt:hover {
 .calendar-swiper .button-swiper__item {
 	width: 40px;
 	height: 40px;
-	background-color: #435ebe;
-	border: 1px solid #435ebe;
+	background-color: var(--primary-color);
+	border: 1px solid var(--primary-color);
 	padding: 10px;
 }
 
@@ -1601,8 +1629,8 @@ a.hl-txt:hover {
 
 .swiper-slide-active .card-calendar {
 	border-radius: 24px;
-	border: 1px solid #435ebe;
-	background: #ebf0ff;
+	border: 1px solid var(--primary-color);
+	background: #f1f8f7;
 }
 
 .page-cart__tab-top .cart-tab {
@@ -1631,15 +1659,15 @@ a.hl-txt:hover {
 	border: 1px solid transparent;
 	transition: 0.3s all ease-in-out;
 	font-weight: 700;
-	color: #435ebe;
+	color: var(--primary-color);
 	background-color: transparent;
 	width: 100%;
 	box-shadow: none !important;
 }
 
 .page-cart__tab-top .nav-link.active {
-	border: 1px solid #435ebe;
-	color: #435ebe;
+	border: 1px solid var(--primary-color);
+	color: var(--primary-color);
 	background-color: var(--bs-white);
 }
 
@@ -1679,7 +1707,7 @@ a.hl-txt:hover {
 }
 
 .service-list__title {
-	color: #435ebe;
+	color: var(--primary-color);
 	font-size: 1.3em;
 	font-weight: 700;
 }
@@ -1734,7 +1762,7 @@ a.hl-txt:hover {
 }
 
 .service-list__remove .remove:hover {
-	background-color: #435ebe;
+	background-color: var(--primary-color);
 }
 
 .service-list__remove .remove svg path {
@@ -1788,7 +1816,7 @@ a.hl-txt:hover {
 	width: 56px;
 	height: 56px;
 	font-size: 1.3em;
-	color: #435ebe;
+	color: var(--primary-color);
 	border-radius: 50%;
 	font-weight: 700;
 	display: flex;
@@ -1798,8 +1826,8 @@ a.hl-txt:hover {
 
 .booking-form__number .number.active {
 	border-radius: 64px;
-	border: 1px solid #435ebe;
-	background: #435ebe;
+	border: 1px solid var(--primary-color);
+	background: var(--primary-color);
 	color: #fff;
 }
 
@@ -1816,7 +1844,7 @@ a.hl-txt:hover {
 }
 
 .booking-form__button .reset-code:hover {
-	color: #435ebe;
+	color: var(--primary-color);
 }
 
 .booking-form__button .reset-code svg path {
@@ -1824,7 +1852,7 @@ a.hl-txt:hover {
 }
 
 .booking-form__button .reset-code:hover svg path {
-	fill: #435ebe;
+	fill: var(--primary-color);
 }
 
 .booking-form__group .input-form {
@@ -1834,7 +1862,7 @@ a.hl-txt:hover {
 	align-items: center;
 	gap: 12px;
 	border-radius: 48px;
-	border: 1px solid #435ebe;
+	border: 1px solid var(--primary-color);
 	background: var(--bs-white);
 	font-size: 1em;
 }
@@ -1848,7 +1876,7 @@ a.hl-txt:hover {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border-right: 1px solid #435ebe;
+	border-right: 1px solid var(--primary-color);
 }
 
 .booking-form__text {
