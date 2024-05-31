@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Bnails App</title>
+    <meta name="description" content="Bnails App">
+    <meta name="author" content="">
+
+    <meta property="og:title" content="Bnails App">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="Bnails App">
+    <meta property="og:image" content="">
+
+    <link rel="icon" href="./assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="./assets/images/favicon.png">
+    <link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+	<link rel="stylesheet" href="./assets/plugins/material-datetime-picker/datepicker.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<div class="modal fade modal-theme modal-spin" id="modalSpin" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0">
+            <div class="modal-body">
+                <button type="button" data-bs-dismiss="modal" class="link-default effect-path modal-button_close">
+                    <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.75584 1.07745C1.4304 0.752015 0.902767 0.752015 0.57733 1.07745C0.251893 1.40289 0.251893 1.93053 0.57733 2.25596L5.82147 7.5001L0.57733 12.7442C0.251893 13.0697 0.251893 13.5973 0.57733 13.9228C0.902767 14.2482 1.4304 14.2482 1.75584 13.9228L6.99998 8.67861L12.244 13.9226C12.5694 14.2481 13.0971 14.2481 13.4225 13.9226C13.7479 13.5972 13.7479 13.0696 13.4225 12.7441L8.17849 7.5001L13.4225 2.25609C13.7479 1.93065 13.7479 1.40301 13.4225 1.07758C13.0971 0.752141 12.5694 0.752141 12.244 1.07758L6.99998 6.32159L1.75584 1.07745Z"
+                              fill="#9196A6"/>
+                    </svg>
+                </button>
+                <div class="spin-content text-center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="vstack position-relative min-vh-100 h-100 overflow-hidden">
+    <div class="section-header bg-white position-fixed top-0 start-0 end-0 zi-10 w-100">
+        <div class="header-inner transition-default hstack">
+            <div class="container">
+                <div class="vstack">
+                    <div class="position-relative text-center">
+                        <a href="./index.html"
+                           class="position-absolute start-0 top-50 translate-middle-y header-back">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                 viewBox="0 0 24 24" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289Z"
+                                      fill="#191E24"></path>
+                            </svg>
+                        </a>
+                        <div class="header-title fz-18 fw-700">
+                            Your appointments
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main id="main" class="main vstack flex-fill overflow-hidden position-relative">
+        <div class="position-absolute top-0 start-0 end-0 bottom-0 overflow-y">
+            <div class="section-body section-page">
+                <div class="container">
+                    <div class="section-spin section-spin_bg">
+                        <div class="spin-box">
+                            <div class="spin-circle ratio ratio-1x1" id="spinWrapper">
+                                <canvas id="spinCanvas" width='375' height='375'>
+                                    Canvas not supported, use another browser.
+                                </canvas>
+                                <button type="button" id="spinButton" class="spin-circle_button">
+                                    Spin!
+                                </button>
+                            </div>
+                        </div>
+                        <div class="spin-turn text-center" id="spinTurn">
+                            <div class="spin-turn_content">
+                                <div class="spin-turn_title fz-16 fw-700 dark-color">
+                                    Hello Rosie!
+                                </div>
+                                <div class="spin-turn_desc fw-500 dark-color">
+                                    Today you have <span class="primary-color fw-700">2</span> turns to spin the lucky
+                                    wheel.
+                                </div>
+                            </div>
+                            <div class="hero-item hstack gap-25px"
+                                 style="background-color: var(--dark-color)">
+                                <div class="hero-avatar flex-shrink-0 position-relative">
+                                    <div class="hero-image position-relative overflow-hidden">
+                                        <img src="./assets/images/hero/hero-1.png" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                                <div class="hero-content text-white">
+                                    <div class="hero-title fz-18 fw-700 mb-2">
+                                        Get free coin!
+                                    </div>
+                                    <div class="hero-desc fw-300 mb-2">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                        eiusmod
+                                    </div>
+                                    <div class="hero-button">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 10C5 9.53976 5.3731 9.16667 5.83333 9.16667H12.1548L10.2441 7.25592C9.91864 6.93049 9.91864 6.40285 10.2441 6.07741C10.5695 5.75197 11.0972 5.75197 11.4226 6.07741L14.7559 9.41074C15.0814 9.73618 15.0814 10.2638 14.7559 10.5893L11.4226 13.9226C11.0972 14.248 10.5695 14.248 10.2441 13.9226C9.91864 13.5972 9.91864 13.0695 10.2441 12.7441L12.1548 10.8333H5.83333C5.3731 10.8333 5 10.4602 5 10Z"
+                                                  fill="white"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20ZM10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333Z"
+                                                  fill="white"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer" class="footer position-fixed bottom-0 start-0 end-0 zi-10 w-100">
+        <div class="footer-toolbar background-cover position-relative zi-1">
+            <div class="container">
+                <div class="hstack gap-15px justify-content-between">
+                    <div class="toolbar-item">
+                        <a href=""
+                           class="toolbar-item_link is-active fw-500 fz-15 dark-color effect-path align-items-center justify-content-center vstack gap-1">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M11.3625 1.14205C10.534 0.603528 9.46602 0.603529 8.63752 1.14205L1.97086 5.47538C1.26138 5.93655 0.833328 6.7253 0.833328 7.57149V16.667C0.833328 18.0477 1.95262 19.167 3.33333 19.167H16.6667C18.0474 19.167 19.1667 18.0477 19.1667 16.667V7.57149C19.1667 6.7253 18.7386 5.93655 18.0291 5.47538L11.3625 1.14205ZM9.54584 2.53946C9.822 2.35995 10.178 2.35995 10.4542 2.53946L17.1208 6.87279C17.3573 7.02651 17.5 7.28943 17.5 7.57149V16.667C17.5 17.1273 17.1269 17.5003 16.6667 17.5003H13.3332L13.3333 11.2183C13.3333 9.47859 11.6792 8.33368 10.0001 8.33368C8.32089 8.33368 6.6668 9.4786 6.66679 11.2183L6.66666 17.5003L7.65151 17.5003H3.33333C2.87309 17.5003 2.49999 17.1273 2.49999 16.667V7.57149C2.49999 7.28943 2.64268 7.02651 2.87917 6.87279L9.54584 2.53946ZM8.33333 17.5003H12.6514L11.6665 17.5003L11.6667 11.2183C11.6666 10.6922 11.0822 10.0003 10.0001 10.0003C8.91789 10.0003 8.33346 10.6922 8.33346 11.2183L8.33333 17.5003Z"
+                                      fill="#111215"/>
+                            </svg>
+                            Home
+                        </a>
+                    </div>
+                    <div class="toolbar-item toolbar-item_floating position-absolute start-50 translate-middle-x hstack justify-content-center">
+                        <a href=""
+                           class="toolbar-item_link align-items-center justify-content-center vstack gap-1 rounded-circle">
+                            <svg width="20" height="19" viewBox="0 0 20 19" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.25001 13.3334C6.94037 13.3334 7.50001 12.7737 7.50001 12.0834C7.50001 11.393 6.94037 10.8334 6.25001 10.8334C5.55965 10.8334 5.00001 11.393 5.00001 12.0834C5.00001 12.7737 5.55965 13.3334 6.25001 13.3334Z"
+                                      fill="white"/>
+                                <path d="M11.25 12.0834C11.25 12.7737 10.6904 13.3334 10 13.3334C9.30965 13.3334 8.75001 12.7737 8.75001 12.0834C8.75001 11.393 9.30965 10.8334 10 10.8334C10.6904 10.8334 11.25 11.393 11.25 12.0834Z"
+                                      fill="white"/>
+                                <path d="M13.75 13.3334C14.4404 13.3334 15 12.7737 15 12.0834C15 11.393 14.4404 10.8334 13.75 10.8334C13.0597 10.8334 12.5 11.393 12.5 12.0834C12.5 12.7737 13.0597 13.3334 13.75 13.3334Z"
+                                      fill="white"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M6.66668 1.66671C6.66668 1.20647 6.29358 0.833374 5.83334 0.833374C5.37311 0.833374 5.00001 1.20647 5.00001 1.66671V2.50004H3.33334C1.95263 2.50004 0.833344 3.61933 0.833344 5.00004V15.8334C0.833344 17.2141 1.95263 18.3334 3.33334 18.3334H16.6667C18.0474 18.3334 19.1667 17.2141 19.1667 15.8334V5.00004C19.1667 3.61933 18.0474 2.50004 16.6667 2.50004H15V1.66671C15 1.20647 14.6269 0.833374 14.1667 0.833374C13.7064 0.833374 13.3333 1.20647 13.3333 1.66671V2.50004H6.66668V1.66671ZM2.50001 5.00004C2.50001 4.5398 2.87311 4.16671 3.33334 4.16671H16.6667C17.1269 4.16671 17.5 4.5398 17.5 5.00004V6.66671H2.50001V5.00004ZM2.50001 8.33337H17.5V15.8334C17.5 16.2936 17.1269 16.6667 16.6667 16.6667H3.33334C2.87311 16.6667 2.50001 16.2936 2.50001 15.8334V8.33337Z"
+                                      fill="white"/>
+                            </svg>
+
+                        </a>
+                    </div>
+                    <div class="toolbar-item">
+                        <a href=""
+                           class="toolbar-item_link fw-500 fz-15 dark-color effect-path align-items-center justify-content-center vstack gap-1">
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M15.4996 5.83337C15.4996 8.5948 13.261 10.8334 10.4996 10.8334C7.73817 10.8334 5.49959 8.5948 5.49959 5.83337C5.49959 3.07195 7.73817 0.833374 10.4996 0.833374C13.261 0.833374 15.4996 3.07195 15.4996 5.83337ZM13.8329 5.83337C13.8329 7.67432 12.3405 9.16671 10.4996 9.16671C8.65864 9.16671 7.16626 7.67432 7.16626 5.83337C7.16626 3.99242 8.65864 2.50004 10.4996 2.50004C12.3405 2.50004 13.8329 3.99242 13.8329 5.83337Z"
+                                      fill="#111215"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M10.4997 11.6667C8.05371 11.6667 6.29018 12.1741 5.02513 12.9348C3.75504 13.6986 3.04165 14.6854 2.6477 15.5485C2.31563 16.276 2.46677 17.0173 2.90796 17.5455C3.32852 18.049 3.98242 18.3334 4.6663 18.3334H16.3329C17.0168 18.3334 17.6707 18.049 18.0913 17.5455C18.5324 17.0174 18.6836 16.276 18.3515 15.5485C17.9576 14.6855 17.2443 13.6986 15.9742 12.9348C14.7091 12.1741 12.9456 11.6667 10.4997 11.6667ZM4.16388 16.2405C4.43735 15.6414 4.93967 14.931 5.88405 14.3631C6.83347 13.7922 8.28316 13.3334 10.4997 13.3334C12.7162 13.3334 14.1658 13.7922 15.1152 14.3631C16.0596 14.931 16.5619 15.6415 16.8354 16.2405C16.8676 16.3113 16.8662 16.3538 16.863 16.3755C16.8593 16.4003 16.8471 16.4352 16.8121 16.4771C16.737 16.567 16.5695 16.6667 16.3329 16.6667H4.6663C4.42969 16.6667 4.26223 16.567 4.18709 16.4771C4.15211 16.4352 4.13995 16.4003 4.13624 16.3755C4.133 16.3538 4.13159 16.3113 4.16388 16.2405Z"
+                                      fill="#111215"/>
+                            </svg>
+                            Profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/momment.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/material-datetime-picker/datepicker.js"></script>
+<script type="text/javascript" src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/fancybox/fancybox.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/spin/Winwheel.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/spin/TweenMax.min.js"></script>
+<script type="module" src="./assets/js/app.js"></script>
+
+</body>
+</html>

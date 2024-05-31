@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="theme-color" content="#ffffff">
+
+	<title>Bnails App</title>
+	<meta name="description" content="Bnails App">
+	<meta name="author" content="">
+
+	<meta property="og:title" content="Bnails App">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:description" content="Bnails App">
+	<meta property="og:image" content="">
+
+	<link rel="icon" href="./assets/images/favicon.png">
+	<link rel="apple-touch-icon" href="./assets/images/favicon.png">
+	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+	<link rel="stylesheet" href="./assets/plugins/material-datetime-picker/datepicker.css">
+	<link rel="stylesheet" href="./assets/css/base.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<div class="modal fade modal-theme modal-full modal-theme_light modal-location" id="modalLocation">
+	<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+		<div class="modal-content border-0">
+			<div class="modal-header bg-transparent border-bottom-0 text-center justify-content-center">
+				<button type="button" data-bs-dismiss="modal"
+				        class="link-default effect-path position-absolute start-50 translate-middle-x modal-button_close">
+					<svg width="48" height="4" viewBox="0 0 48 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect width="48" height="4" rx="2" fill="#C8CBD3"/>
+					</svg>
+				</button>
+				<div class="modal-title mb-0 fz-18 dark-color fw-700">
+					Choose The Store
+				</div>
+			</div>
+			<div class="modal-body p-0">
+				<div class="section-form">
+					<div class="form-item">
+						<div class="form-group bg-white position-relative handleFocusInput">
+							<div class="form-group_button form-group_button__prepend position-absolute top-50 translate-middle-y pe-none zi-2">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+								     xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+									      d="M15.2739 15.6191C13.8373 16.7946 12.001 17.4999 9.99996 17.4999C5.39759 17.4999 1.66663 13.769 1.66663 9.16658C1.66663 4.56421 5.39759 0.833252 9.99996 0.833252C14.6023 0.833252 18.3333 4.56421 18.3333 9.16658C18.3333 11.1677 17.628 13.004 16.4524 14.4406L18.9226 16.9107C19.248 17.2362 19.248 17.7638 18.9226 18.0892C18.5971 18.4147 18.0695 18.4147 17.744 18.0892L15.2739 15.6191ZM16.6666 9.16658C16.6666 12.8485 13.6819 15.8333 9.99996 15.8333C6.31806 15.8333 3.33329 12.8485 3.33329 9.16658C3.33329 5.48469 6.31806 2.49992 9.99996 2.49992C13.6819 2.49992 16.6666 5.48469 16.6666 9.16658Z"
+									      fill="#111215"/>
+								</svg>
+							</div>
+							<input type="tel" placeholder="Search"
+							       class="form-group_input focusInput">
+						</div>
+					</div>
+					<div class="form-item">
+						<div class="form-list vstack" id="handleChangeList">
+							<button type="button"
+							        class="form-list_item handleChangeListItem is-selected link-default hstack justify-content-center text-center fz-14 fw-700 dark-color"
+							        data-value="Nail Salon Hereford Texas">
+								Nail Salon Hereford Texas
+							</button>
+							<button type="button"
+							        class="form-list_item handleChangeListItem link-default hstack justify-content-center text-center fz-14 fw-700 dark-color"
+							        data-value="Bnails Amarillo #1">
+								Bnails Amarillo #1
+							</button>
+							<button type="button"
+							        class="form-list_item handleChangeListItem link-default hstack justify-content-center text-center fz-14 fw-700 dark-color"
+							        data-value="Bnails Amarillo #2">
+								Bnails Amarillo #2
+							</button>
+							<button type="button"
+							        class="form-list_item handleChangeListItem link-default hstack justify-content-center text-center fz-14 fw-700 dark-color"
+							        data-value="Bnails Amarillo #3">
+								Bnails Amarillo #3
+							</button>
+							<button type="button"
+							        class="form-list_item handleChangeListItem link-default hstack justify-content-center text-center fz-14 fw-700 dark-color"
+							        data-value="Bnails Amarillo #4">
+								Bnails Amarillo #4
+							</button>
+							<button type="button"
+							        class="form-list_item handleChangeListItem link-default hstack justify-content-center text-center fz-14 fw-700 dark-color"
+							        data-value="Bnails Amarillo #5">
+								Bnails Amarillo #5
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="vstack position-relative min-vh-100 h-100 overflow-hidden">
+	<div class="section-header bg-white position-fixed top-0 start-0 end-0 zi-10 w-100">
+		<div class="header-inner transition-default hstack">
+			<div class="container">
+				<div class="vstack">
+					<div class="position-relative text-center">
+						<a href="./index.html"
+						   class="position-absolute start-0 top-50 translate-middle-y header-back">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+							     viewBox="0 0 24 24" fill="none">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+								      d="M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289Z"
+								      fill="#191E24"></path>
+							</svg>
+						</a>
+						<div class="header-title fz-18 fw-700">
+							Booking An Appointment
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<main id="main" class="main vstack flex-fill overflow-hidden position-relative">
+		<div class="position-absolute top-0 start-0 end-0 bottom-0 overflow-y">
+			<div class="section-body section-page">
+				<div class="container">
+					<div class="booking-step vstack gap-15px position-relative">
+						<div class="step-item stepItemCurrent position-relative hstack gap-15px">
+							<button type="button"
+							        class="step-item_button hstack justify-content-center link-default rounded-circle flex-shrink-0">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+								     xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+									      d="M11.6867 8.56533C11.8816 8.44351 12 8.22986 12 8C12 7.77014 11.8816 7.5565 11.6867 7.43467L6.35333 4.10133C6.14782 3.97289 5.88879 3.96609 5.67682 4.08357C5.46485 4.20106 5.33333 4.42432 5.33333 4.66667L5.33333 11.3333C5.33333 11.5757 5.46485 11.7989 5.67682 11.9164C5.88879 12.0339 6.14782 12.0271 6.35333 11.8987L11.6867 8.56533ZM6.66667 10.1305L6.66667 5.8695L10.0755 8L6.66667 10.1305Z"
+									      fill="white"/>
+									<path fill-rule="evenodd" clip-rule="evenodd"
+									      d="M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM14.6667 8C14.6667 11.6819 11.6819 14.6667 8 14.6667C4.3181 14.6667 1.33333 11.6819 1.33333 8C1.33333 4.3181 4.3181 1.33333 8 1.33333C11.6819 1.33333 14.6667 4.3181 14.6667 8Z"
+									      fill="white"/>
+								</svg>
+							</button>
+							<div class="step-item_content">
+								<button type="button"
+								        class="step-content_button link-default fz-14 fw-700 dark-color w-100">
+									Choose The Store
+								</button>
+								<div class="step-content_collapse">
+									<div class="step-content_desc hstack gap-10px">
+										<div class="step-content_desc__avatar flex-shrink-0">
+											<img src="./assets/images/user.png" class="rounded-circle img-fluid"
+											     alt="">
+										</div>
+										<div class="step-content_desc__text fz-12 fw-300 dark-color">
+											<p>
+												Welcome back, 0376314437! Which Bnails location would you prefer for
+												your service?
+											</p>
+										</div>
+									</div>
+									<div class="step-content_filter section-form">
+										<div class="form-item">
+											<div class="form-group position-relative handleFocusInput">
+												<div class="form-group_button form-group_button__append position-absolute top-50 translate-middle-y pe-none zi-2">
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+													     xmlns="http://www.w3.org/2000/svg">
+														<path d="M9.41074 13.0893C9.56702 13.2455 9.77898 13.3333 10 13.3333C10.221 13.3333 10.433 13.2455 10.5893 13.0893L13.9226 9.75592C14.248 9.43049 14.248 8.90285 13.9226 8.57741C13.5972 8.25197 13.0695 8.25197 12.7441 8.57741L10 11.3215L7.25592 8.57741C6.93048 8.25197 6.40285 8.25197 6.07741 8.57741C5.75197 8.90285 5.75197 9.43049 6.07741 9.75592L9.41074 13.0893Z"
+														      fill="#9196A6"/>
+														<path fill-rule="evenodd" clip-rule="evenodd"
+														      d="M20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10ZM18.3333 10C18.3333 14.6024 14.6024 18.3333 10 18.3333C5.39763 18.3333 1.66667 14.6024 1.66667 10C1.66667 5.39763 5.39763 1.66667 10 1.66667C14.6024 1.66667 18.3333 5.39763 18.3333 10Z"
+														      fill="#9196A6"/>
+													</svg>
+												</div>
+												<input type="tel" placeholder="Select location" readonly
+												       data-fill="step-1"
+												       class="form-group_input form-group_fake__select focusInput callModalLocation">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="step-item position-relative hstack gap-15px">
+							<button type="button"
+							        class="step-item_button hstack justify-content-center link-default rounded-circle flex-shrink-0">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+								     xmlns="http://www.w3.org/2000/svg">
+									<path d="M6 4.66667C6.36819 4.66667 6.66667 4.96514 6.66667 5.33333V10.6667C6.66667 11.0349 6.36819 11.3333 6 11.3333C5.63181 11.3333 5.33333 11.0349 5.33333 10.6667V5.33333C5.33333 4.96514 5.63181 4.66667 6 4.66667Z"
+									      fill="white"/>
+									<path d="M10.6667 5.33333C10.6667 4.96514 10.3682 4.66667 10 4.66667C9.63181 4.66667 9.33333 4.96514 9.33333 5.33333V10.6667C9.33333 11.0349 9.63181 11.3333 10 11.3333C10.3682 11.3333 10.6667 11.0349 10.6667 10.6667V5.33333Z"
+									      fill="white"/>
+									<path fill-rule="evenodd" clip-rule="evenodd"
+									      d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8 14.6667C11.6819 14.6667 14.6667 11.6819 14.6667 8C14.6667 4.3181 11.6819 1.33333 8 1.33333C4.3181 1.33333 1.33333 4.3181 1.33333 8C1.33333 11.6819 4.3181 14.6667 8 14.6667Z"
+									      fill="white"/>
+								</svg>
+							</button>
+							<div class="step-item_content">
+								<button type="button"
+								        class="step-content_button link-default fz-14 fw-700 dark-color w-100">
+									Appointment Date
+								</button>
+							</div>
+						</div>
+						<div class="step-item position-relative hstack gap-15px">
+							<button type="button"
+							        class="step-item_button hstack justify-content-center link-default rounded-circle flex-shrink-0">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+								     xmlns="http://www.w3.org/2000/svg">
+									<path d="M6 4.66667C6.36819 4.66667 6.66667 4.96514 6.66667 5.33333V10.6667C6.66667 11.0349 6.36819 11.3333 6 11.3333C5.63181 11.3333 5.33333 11.0349 5.33333 10.6667V5.33333C5.33333 4.96514 5.63181 4.66667 6 4.66667Z"
+									      fill="white"/>
+									<path d="M10.6667 5.33333C10.6667 4.96514 10.3682 4.66667 10 4.66667C9.63181 4.66667 9.33333 4.96514 9.33333 5.33333V10.6667C9.33333 11.0349 9.63181 11.3333 10 11.3333C10.3682 11.3333 10.6667 11.0349 10.6667 10.6667V5.33333Z"
+									      fill="white"/>
+									<path fill-rule="evenodd" clip-rule="evenodd"
+									      d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8 14.6667C11.6819 14.6667 14.6667 11.6819 14.6667 8C14.6667 4.3181 11.6819 1.33333 8 1.33333C4.3181 1.33333 1.33333 4.3181 1.33333 8C1.33333 11.6819 4.3181 14.6667 8 14.6667Z"
+									      fill="white"/>
+								</svg>
+							</button>
+							<div class="step-item_content">
+								<button type="button"
+								        class="step-content_button link-default fz-14 fw-700 dark-color w-100">
+									Choose Service
+								</button>
+							</div>
+						</div>
+						<div class="step-item position-relative hstack gap-15px">
+							<button type="button"
+							        class="step-item_button hstack justify-content-center link-default rounded-circle flex-shrink-0">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+								     xmlns="http://www.w3.org/2000/svg">
+									<path d="M6 4.66667C6.36819 4.66667 6.66667 4.96514 6.66667 5.33333V10.6667C6.66667 11.0349 6.36819 11.3333 6 11.3333C5.63181 11.3333 5.33333 11.0349 5.33333 10.6667V5.33333C5.33333 4.96514 5.63181 4.66667 6 4.66667Z"
+									      fill="white"/>
+									<path d="M10.6667 5.33333C10.6667 4.96514 10.3682 4.66667 10 4.66667C9.63181 4.66667 9.33333 4.96514 9.33333 5.33333V10.6667C9.33333 11.0349 9.63181 11.3333 10 11.3333C10.3682 11.3333 10.6667 11.0349 10.6667 10.6667V5.33333Z"
+									      fill="white"/>
+									<path fill-rule="evenodd" clip-rule="evenodd"
+									      d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8 14.6667C11.6819 14.6667 14.6667 11.6819 14.6667 8C14.6667 4.3181 11.6819 1.33333 8 1.33333C4.3181 1.33333 1.33333 4.3181 1.33333 8C1.33333 11.6819 4.3181 14.6667 8 14.6667Z"
+									      fill="white"/>
+								</svg>
+							</button>
+							<div class="step-item_content">
+								<button type="button"
+								        class="step-content_button link-default fz-14 fw-700 dark-color w-100">
+									Choose Stylist & Time
+								</button>
+							</div>
+						</div>
+						<div class="step-item position-relative hstack gap-15px">
+							<button type="button"
+							        class="step-item_button hstack justify-content-center link-default rounded-circle flex-shrink-0">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+								     xmlns="http://www.w3.org/2000/svg">
+									<path d="M6 4.66667C6.36819 4.66667 6.66667 4.96514 6.66667 5.33333V10.6667C6.66667 11.0349 6.36819 11.3333 6 11.3333C5.63181 11.3333 5.33333 11.0349 5.33333 10.6667V5.33333C5.33333 4.96514 5.63181 4.66667 6 4.66667Z"
+									      fill="white"/>
+									<path d="M10.6667 5.33333C10.6667 4.96514 10.3682 4.66667 10 4.66667C9.63181 4.66667 9.33333 4.96514 9.33333 5.33333V10.6667C9.33333 11.0349 9.63181 11.3333 10 11.3333C10.3682 11.3333 10.6667 11.0349 10.6667 10.6667V5.33333Z"
+									      fill="white"/>
+									<path fill-rule="evenodd" clip-rule="evenodd"
+									      d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8 14.6667C11.6819 14.6667 14.6667 11.6819 14.6667 8C14.6667 4.3181 11.6819 1.33333 8 1.33333C4.3181 1.33333 1.33333 4.3181 1.33333 8C1.33333 11.6819 4.3181 14.6667 8 14.6667Z"
+									      fill="white"/>
+								</svg>
+							</button>
+							<div class="step-item_content">
+								<button type="button"
+								        class="step-content_button link-default fz-14 fw-700 dark-color w-100">
+									Promotions & Other Inquiries
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer id="footer" class="footer position-fixed bottom-0 start-0 end-0 zi-10 w-100">
+		<div class="footer-buttons">
+			<div class="container">
+				<div class="hstack gap-5px justify-content-center flex-nowrap">
+					<button type="button" class="button-theme button-theme_overlay w-100">
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+							      d="M3.44795 0.890139C3.87689 0.723327 4.35985 0.935827 4.52666 1.36477L7.23671 8.33348H12.7633L15.4733 1.36477C15.6401 0.935827 16.1231 0.723327 16.552 0.890139C16.981 1.05695 17.1935 1.5399 17.0267 1.96885L14.5515 8.33348H18.3333C18.5804 8.33348 18.8148 8.44314 18.9731 8.63285C19.1314 8.82257 19.1974 9.07276 19.1532 9.31588L17.7354 17.114C17.5192 18.3027 16.4839 19.1668 15.2757 19.1668H4.72428C3.51607 19.1668 2.48074 18.3027 2.26461 17.114L0.846761 9.31588C0.802558 9.07276 0.86853 8.82257 1.02686 8.63285C1.18519 8.44314 1.41955 8.33348 1.66665 8.33348H5.44845L2.97332 1.96885C2.8065 1.5399 3.019 1.05695 3.44795 0.890139ZM2.66516 10.0001L3.90439 16.8159C3.97643 17.2121 4.32154 17.5001 4.72428 17.5001H15.2757C15.6784 17.5001 16.0235 17.2121 16.0956 16.8159L17.3348 10.0001H2.66516Z"
+							      fill="#111215"/>
+							<path fill-rule="evenodd" clip-rule="evenodd"
+							      d="M6.66665 11.6668C7.12689 11.6668 7.49999 12.0399 7.49999 12.5001V15.0001C7.49999 15.4604 7.12689 15.8335 6.66665 15.8335C6.20642 15.8335 5.83332 15.4604 5.83332 15.0001V12.5001C5.83332 12.0399 6.20642 11.6668 6.66665 11.6668Z"
+							      fill="#111215"/>
+							<path fill-rule="evenodd" clip-rule="evenodd"
+							      d="M9.99999 11.6668C10.4602 11.6668 10.8333 12.0399 10.8333 12.5001V15.0001C10.8333 15.4604 10.4602 15.8335 9.99999 15.8335C9.53975 15.8335 9.16665 15.4604 9.16665 15.0001V12.5001C9.16665 12.0399 9.53975 11.6668 9.99999 11.6668Z"
+							      fill="#111215"/>
+							<path fill-rule="evenodd" clip-rule="evenodd"
+							      d="M13.3333 11.6668C13.7936 11.6668 14.1667 12.0399 14.1667 12.5001V15.0001C14.1667 15.4604 13.7936 15.8335 13.3333 15.8335C12.8731 15.8335 12.5 15.4604 12.5 15.0001V12.5001C12.5 12.0399 12.8731 11.6668 13.3333 11.6668Z"
+							      fill="#111215"/>
+						</svg>
+						Add To Cart
+					</button>
+					<button type="button"
+					        class="link-default button-theme button-theme_light button-theme_circle flex-shrink-0">
+						<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M6.24998 13.3333C6.94034 13.3333 7.49998 12.7736 7.49998 12.0833C7.49998 11.3929 6.94034 10.8333 6.24998 10.8333C5.55962 10.8333 4.99998 11.3929 4.99998 12.0833C4.99998 12.7736 5.55962 13.3333 6.24998 13.3333Z"
+							      fill="white"/>
+							<path d="M11.25 12.0833C11.25 12.7736 10.6903 13.3333 9.99998 13.3333C9.30962 13.3333 8.74998 12.7736 8.74998 12.0833C8.74998 11.3929 9.30962 10.8333 9.99998 10.8333C10.6903 10.8333 11.25 11.3929 11.25 12.0833Z"
+							      fill="white"/>
+							<path d="M13.75 13.3333C14.4403 13.3333 15 12.7736 15 12.0833C15 11.3929 14.4403 10.8333 13.75 10.8333C13.0596 10.8333 12.5 11.3929 12.5 12.0833C12.5 12.7736 13.0596 13.3333 13.75 13.3333Z"
+							      fill="white"/>
+							<path fill-rule="evenodd" clip-rule="evenodd"
+							      d="M6.66665 1.66659C6.66665 1.20635 6.29355 0.833252 5.83331 0.833252C5.37308 0.833252 4.99998 1.20635 4.99998 1.66659V2.49992H3.33331C1.9526 2.49992 0.833313 3.61921 0.833313 4.99992V15.8333C0.833313 17.214 1.9526 18.3333 3.33331 18.3333H16.6666C18.0474 18.3333 19.1666 17.214 19.1666 15.8333V4.99992C19.1666 3.61921 18.0474 2.49992 16.6666 2.49992H15V1.66659C15 1.20635 14.6269 0.833252 14.1666 0.833252C13.7064 0.833252 13.3333 1.20635 13.3333 1.66659V2.49992H6.66665V1.66659ZM2.49998 4.99992C2.49998 4.53968 2.87308 4.16659 3.33331 4.16659H16.6666C17.1269 4.16659 17.5 4.53968 17.5 4.99992V6.66658H2.49998V4.99992ZM2.49998 8.33325H17.5V15.8333C17.5 16.2935 17.1269 16.6666 16.6666 16.6666H3.33331C2.87308 16.6666 2.49998 16.2935 2.49998 15.8333V8.33325Z"
+							      fill="white"/>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/momment.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/material-datetime-picker/datepicker.js"></script>
+<script type="text/javascript" src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/fancybox/fancybox.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/spin/Winwheel.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/spin/TweenMax.min.js"></script>
+<script type="module" src="./assets/js/app.js"></script>
+
+</body>
+</html>
