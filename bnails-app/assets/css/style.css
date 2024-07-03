@@ -1082,9 +1082,43 @@
 	border-radius: 20px;
 }
 
-.rating-list .rating-item .rating-quality .rating-quality_stars .rating-quality_stars svg {
+.rating-list .rating-item .rating-quality .rating-quality_stars .rating-quality_star .rating-quality_star__value {
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.rating-list .rating-item .rating-quality .rating-quality_stars .rating-quality_star .rating-quality_star__value input {
+	position: absolute;
+	top: 0;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+
+.rating-list .rating-item .rating-quality .rating-quality_stars .rating-quality_star svg {
 	height: 20px;
 	width: 20px;
+	fill: #E4E5E9;
+	transition: var(--transition-default);
+}
+
+.rating-list .rating-item .rating-quality .rating-quality_stars .rating-quality_star .rating-quality_star__value input:checked ~ label svg {
+	fill: #FBD948;
+}
+
+.rating-list .rating-item .rating-quality .rating-quality_stars .rating-quality_star .rating-quality_star__value input:hover svg,
+.rating-list .rating-item .rating-quality .rating-quality_stars .rating-quality_star .rating-quality_star__value input:hover ~ label svg {
+	fill: #FBD948;
+}
+
+.rating-list .rating-item .rating-quality .rating-quality_stars .rating-quality_star .rating-quality_star__value input:checked + label:hover,
+.rating-list .rating-item .rating-quality .rating-quality_stars .rating-quality_star .rating-quality_star__value input:checked + label:hover ~ label,
+.rating-list .rating-item .rating-quality .rating-quality_stars .rating-quality_star .rating-quality_star__value input:checked ~ label:hover,
+.rating-list .rating-item .rating-quality .rating-quality_stars .rating-quality_star .rating-quality_star__value input:checked ~ label:hover ~ label,
+.rating-list .rating-item .rating-quality .rating-quality_stars .rating-quality_star .rating-quality_star__value:hover ~ input:checked ~ label {
+	fill: #FBD948;
 }
 
 .rating-list .rating-item .rating-buttons {
