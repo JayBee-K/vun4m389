@@ -1644,6 +1644,26 @@
 	height: 120px;
 }
 
+.profile-detail .profile-avatar.profile-avatar_edit {
+	width: auto;
+	height: auto;
+}
+
+.profile-detail .profile-avatar.profile-avatar_edit .rounded-circle {
+	width: 120px;
+	height: 120px;
+}
+
+.profile-detail .profile-avatar.profile-avatar_edit .profile-avatar_button {
+	height: 30px;
+	width: 30px;
+	background: var(--bs-white);
+	bottom: 0;
+	right: 5px;
+	-webkit-box-shadow: 0px 10px 24px 0px #2E323420 !important;
+	box-shadow: 0px 10px 24px 0px #2E323420 !important;
+}
+
 .profile-detail .profile-vip {
 	background-color: var(--dark-color);
 	border-radius: 24px;
@@ -2269,4 +2289,68 @@
 .section-calender .c-datepicker .c-datepicker--show-calendar:after,
 .section-calender .c-datepicker .modal-btns {
 	display: none;
+}
+
+.rating-list_item {
+	border-radius: 20px;
+	background-color: var(--bg-light);
+	padding: 16px;
+}
+
+.rating-list_item .rating-item_rank .rating-item_rank__icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.rating-list_item .rating-item_rank .rating-item_rank__icon svg {
+	width: 13px;
+	height: 14px;
+}
+
+.rating-list_item .rating-item_avatar {
+	width: 32px;
+	height: 32px;
+}
+
+.rating-list_item .rating-item_content .rating-item_time > span {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.rating-list_item .rating-item_content .rating-item_time > span + span:before {
+	display: inline-block;
+	vertical-align: middle;
+	width: 4px;
+	height: 4px;
+	content: "";
+	background-color: #C8CBD3;
+	margin-left: 8px;
+	margin-right: 8px;
+	border-radius: 50%;
+	transform: translateY(-1px);
+}
+
+.rating-list_item .rating-item_star .rating-item_star__value svg {
+	width: 14px;
+	height: 14px;
+}
+
+.star-heading {
+	margin-bottom: 30px;
+}
+
+.star-heading .heading-title {
+	font-size: 32px;
+	font-family: var(--font-heading);
+}
+
+.star-heading .heading-star {
+	margin-top: 12px
+}
+
+.star-heading .heading-star svg {
+	height: 24px;
+	width: 24px;
 }
