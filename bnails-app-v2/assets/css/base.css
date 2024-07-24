@@ -154,6 +154,11 @@ body {
 	overflow-x: hidden;
 }
 
+.main > .position-absolute.overflow-y {
+	width: 100%;
+	overflow-x: hidden;
+}
+
 a,
 a:hover,
 a:focus {
