@@ -8,7 +8,7 @@
 	/* Color Base */
 	--primary-color: #FFCC32;
 	--primary-gradient: linear-gradient(146.16deg, var(--primary-color) -40.61%, #FFFFFF 171.88%);
-	--primary-hover: #e3b21f;
+	--primary-hover: #f3bd1a;
 	--primary-rgb: 255, 204, 50;
 
 	--space: 4px;
@@ -309,6 +309,22 @@ textarea:focus {
 
 .primary-color {
 	color: var(--primary-color);
+}
+
+.primary-color_hover {
+	transition: var(--transition-default);
+}
+
+.primary-color_hover svg path {
+	transition: var(--transition-default);
+}
+
+.primary-color_hover:hover {
+	color: var(--primary-color);
+}
+
+.primary-color_hover:hover svg path {
+	fill: var(--primary-color);
 }
 
 .background-primary-color {
