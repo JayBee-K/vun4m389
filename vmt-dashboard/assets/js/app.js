@@ -1,0 +1,172 @@
+'use strict';
+export let windowWidth = window.innerWidth;
+
+/***
+ * Function init swiper & init slider
+ * @param elm
+ * @param obj
+ */
+export let handleSwiper = function (elm, obj = {}) {
+	return new Swiper(elm, {
+		loop: true,
+		speed: 1000,
+		autoplay: {
+			delay: 8000,
+			disableOnInteraction: true,
+		},
+		slidesPerView: 1,
+		...obj
+	});
+}
+
+export const handleSliderHero = function () {
+	if (document.getElementById('heroSlider') !== null) {
+		const elmSwiper = '#heroSlider';
+		const objSwiper = {
+			effect: "cards",
+			grabCursor: true,
+			cardsEffect: {
+				perSlideOffset: 8,
+				perSlideRotate: 0,
+				rotate: 0,
+				slideShadows: 0
+			},
+			loop: true,
+			centeredSlides: true,
+			speed: 300,
+			autoplay: {
+				delay: 7000000,
+				disableOnInteraction: true,
+			},
+			on: {
+				transitionEnd: function (slider) {
+					let activeSlide = slider.slides[slider.activeIndex];
+					let prevSlide = activeSlide.previousElementSibling;
+					if (prevSlide) {
+						prevSlide.classList.add('hidden-slide');
+					}
+				},
+				transitionStart: function (slider) {
+					let activeSlide = slider.slides[slider.activeIndex];
+					activeSlide.classList.remove('hidden-slide');
+
+					let nextSlide = activeSlide.nextElementSibling;
+					if (nextSlide) {
+						nextSlide.classList.remove('hidden-slide');
+					}
+				}
+			}
+		}
+		handleSwiper(elmSwiper + ' .swiper', objSwiper);
+	}
+}
+
+/***
+ * Function show text password
+ */
+export function handleToggleTypePassword() {
+	const buttonTogglePassword = document.querySelectorAll('.handleViewPass');
+	if (buttonTogglePassword !== null) {
+		buttonTogglePassword.forEach((button) => {
+			button.addEventListener('click', function () {
+				let target = this.getAttribute('data-id');
+				if (target !== null) {
+					let inputElm = document.getElementById(target);
+					if (inputElm !== null) {
+						let inputType = inputElm.getAttribute('type');
+						if (inputType === 'password') {
+							inputElm.setAttribute('type', 'text');
+							button.innerHTML = `<svg width="20" height="16" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M17 9C17 11.7614 14.7614 14 12 14C9.23858 14 7 11.7614 7 9C7 6.23858 9.23858 4 12 4C14.7614 4 17 6.23858 17 9ZM15 9C15 10.6569 13.6569 12 12 12C10.3431 12 9 10.6569 9 9C9 7.34315 10.3431 6 12 6C13.6569 6 15 7.34315 15 9Z" fill="#111215"/>
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M24 9C24 11.5 18.6274 18 12 18C5.37258 18 0 12 0 9C0 6 5.37258 0 12 0C18.6274 0 24 6.5 24 9ZM21.9995 8.99893L21.9997 9L21.9995 9.00107C21.9972 9.02085 21.9821 9.14491 21.8887 9.38861C21.7858 9.65706 21.6158 9.99772 21.3663 10.3925C20.8668 11.1829 20.1129 12.0894 19.1538 12.9451C17.2109 14.6786 14.665 16 12 16C9.28717 16 6.73355 14.7619 4.82178 13.1112C3.87374 12.2926 3.13408 11.4144 2.64521 10.6218C2.12886 9.7848 2 9.22159 2 9C2 8.77841 2.12886 8.2152 2.64521 7.37816C3.13408 6.58565 3.87374 5.70737 4.82178 4.8888C6.73355 3.23812 9.28717 2 12 2C14.665 2 17.2109 3.32143 19.1538 5.05485C20.1129 5.91057 20.8668 6.81711 21.3663 7.60746C21.6158 8.00228 21.7858 8.34294 21.8887 8.61139C21.9821 8.85509 21.9972 8.97915 21.9995 8.99893Z" fill="#111215"/>
+												</svg>`;
+						} else {
+							inputElm.setAttribute('type', 'password');
+							button.innerHTML = `<svg width="20" height="9" viewBox="0 0 20 9" fill="none"
+												     xmlns="http://www.w3.org/2000/svg">
+													<path d="M1.50028 1.00004C1.22414 0.631849 0.701806 0.55723 0.333616 0.833372C-0.0345735 1.10951 -0.109193 1.63185 0.16695 2.00004C0.479665 2.41699 0.883847 2.87686 1.38411 3.33859L0.140073 5.20441C-0.115243 5.58734 -0.0117939 6.10473 0.371132 6.36005C0.754058 6.61537 1.27145 6.51192 1.52677 6.12899L2.69458 4.3775C3.30038 4.78892 3.99293 5.17477 4.77597 5.5017L4.199 7.52122C4.07258 7.96375 4.32883 8.42499 4.77136 8.55141C5.21389 8.67784 5.67513 8.42159 5.80155 7.97906L6.35588 6.03876C7.20819 6.26651 8.14414 6.42234 9.16695 6.47771V8.16666C9.16695 8.62689 9.54005 8.99999 10.0003 8.99999C10.4605 8.99999 10.8336 8.62689 10.8336 8.16666V6.47771C11.8626 6.42201 12.8037 6.26462 13.6602 6.03461L14.1436 7.9655C14.2554 8.41196 14.7079 8.68327 15.1544 8.57149C15.6008 8.45972 15.8721 8.00718 15.7604 7.56072L15.2429 5.49402C16.0184 5.16875 16.7049 4.78574 17.3059 4.37756L18.4734 6.12895C18.7286 6.5119 19.246 6.61541 19.629 6.36014C20.0119 6.10486 20.1154 5.58748 19.8602 5.20452L18.6164 3.33865C19.1167 2.8769 19.5209 2.41701 19.8336 2.00004C20.1098 1.63185 20.0351 1.10951 19.667 0.833372C19.2988 0.55723 18.7764 0.631849 18.5003 1.00004C17.377 2.49781 14.6931 4.83043 10.0091 4.83337L10.0003 4.83332L9.99143 4.83337C5.30748 4.83043 2.62361 2.49781 1.50028 1.00004Z"
+													      fill="#9196A6"/>
+												</svg>`;
+						}
+					}
+				}
+			});
+		});
+	}
+}
+
+/****
+ * Handle Init Material Date
+ */
+
+export function handleInitMaterialDate() {
+	let handleInitMaterial = document.querySelectorAll('.handleInitMaterial');
+	if (handleInitMaterial !== null) {
+		handleInitMaterial.forEach(function (item) {
+			const picker = new MaterialDatePicker().on('submit', (val) => {
+				item.value = moment(val.toDate()).format('DD/MM/YYYY');
+			})
+
+			item.addEventListener('click', function () {
+				picker.open()
+			});
+		});
+	}
+}
+
+/****
+ * Handle Init Material Date On Load
+ */
+
+export function handleInitMaterialOnLoad() {
+	let handleInitMaterialOnLoad = document.getElementById('initMaterial');
+	if (handleInitMaterialOnLoad !== null) {
+		const picker = new MaterialDatePicker().on('submit', function (d) {
+			handleInitMaterialOnLoad.value = d.format("YYYY-MM-DD HH:mm");
+		});
+
+		picker.open();
+
+		setTimeout(() => {
+			const pickerElement = document.querySelector('.c-datepicker');
+			if (pickerElement) {
+				pickerElement.previousSibling.remove();
+				handleInitMaterialOnLoad.parentNode.insertBefore(pickerElement, handleInitMaterialOnLoad.nextSibling);
+			}
+		}, 0);
+
+		handleInitMaterialOnLoad.style.display = 'none';
+	}
+}
+
+/****
+ * Handle Call DataPicker Materia
+ */
+
+export function handleCallDatePickerMaterial() {
+	let btnCall = document.getElementById('callDatePicker');
+	if (btnCall !== null) {
+		btnCall.addEventListener('click', function () {
+			const picker = new MaterialDatePicker();
+			picker.open()
+		});
+	}
+}
+
+/****=
+ * Handle Call Modal Location & Fill Data
+ */
+
+
+window.addEventListener('load', function () {
+	window.addEventListener("resize", () => {
+		windowWidth = window.innerWidth;
+	});
+
+	handleToggleTypePassword();
+	handleInitMaterialDate();
+	handleInitMaterialOnLoad();
+	handleCallDatePickerMaterial();
+});
+
+
