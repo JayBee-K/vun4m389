@@ -227,16 +227,16 @@
 					</span>
 				</a>
 			</div>
-			<div class="sidebar-box">
-				<div class="text-white fz-15 fw-400">
+			<div class="sidebar-box fz-15">
+				<div class="text-white fw-400">
 					Thời gian làm việc
 				</div>
-				<div class="primary-color fz-15 fw-600">
+				<div class="primary-color fw-600">
 					09:00 - 18:00 (Thứ 2 - Thứ 7)
 				</div>
 			</div>
-			<div class="sidebar-box text-center d-flex flex-column gap-3n">
-				<div class="text-white fz-15 fw-400">
+			<div class="sidebar-box fz-15 text-center d-flex flex-column gap-3n">
+				<div class="text-white fw-400">
 					Kết nối với chúng tôi
 				</div>
 				<div class="hstack gap-4n justify-content-center">
@@ -290,7 +290,8 @@
 			</div>
 		</div>
 	</div>
-	<div class="dashboard-header position-fixed start-0 top-0 w-100 zi-9 hstack gap-7n background-secondary-dark">
+	<div class="dashboard-overlay position-fixed start-0 top-0 w-100 vh-100 zi-9" id="dashboardOverlay"></div>
+	<div class="dashboard-header position-fixed start-0 top-0 w-100 zi-8 hstack gap-7n background-secondary-dark">
 		<div class="header-toolbar hstack gap-6n">
 			<button type="button" id="expandSidebar"
 			        class="hstack gap-2n header-toolbar_item fz-15 fw-500 link-default">
@@ -313,7 +314,9 @@
 					<path d="M20.8598 8.72727L13.9298 3.18727C12.8598 2.32727 11.1298 2.32727 10.0698 3.17727L3.13978 8.72727C2.35978 9.34727 1.85978 10.6573 2.02978 11.6373L3.35978 19.5973C3.59978 21.0173 4.95978 22.1673 6.39978 22.1673H17.5998C19.0298 22.1673 20.3998 21.0073 20.6398 19.5973L21.9698 11.6373C22.1298 10.6573 21.6298 9.34727 20.8598 8.72727ZM11.9998 15.8573C10.6198 15.8573 9.49978 14.7373 9.49978 13.3573C9.49978 11.9773 10.6198 10.8573 11.9998 10.8573C13.3798 10.8573 14.4998 11.9773 14.4998 13.3573C14.4998 14.7373 13.3798 15.8573 11.9998 15.8573Z"
 					      fill="#8D95A3"/>
 				</svg>
-				Dashboard
+				<span class="d-none d-lg-inline">
+					Dashboard
+				</span>
 			</a>
 		</div>
 		<div class="header-toolbar hstack gap-6n ms-auto">
@@ -357,7 +360,8 @@
 					Nguyễn văn A
 				</div>
 				<div class="header-user_wallet hstack gap-2n">
-					<div class="primary-color fz-17 fw-700" id="walletValue" data-value="12.345.678 đ">12.345.678 đ
+					<div class="primary-color fz-17 fw-700 header-user_wallet__value" id="walletValue"
+					     data-value="12.345.678 đ">12.345.678 đ
 					</div>
 					<button type="button" class="link-default handleViewWallet" data-id="walletValue">
 						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -397,7 +401,7 @@
 			</div>
 		</div>
 		<div class="row g-4">
-			<div class="col-lg-8 col-xl-9">
+			<div class="col-lg-7 col-xl-9">
 				<div class="dashboard-wallet dashboard-box position-relative overflow-hidden background-secondary-dark">
 					<div class="dashboard-wallet_decor position-absolute top-0 pe-none">
 						<img src="./assets/images/logo-decor.png" class="img-fluid" alt="">
@@ -439,9 +443,9 @@
 									</div>
 								</div>
 							</div>
-							<div class="ms-auto text-end">
-								<div class="fz-16 text-white">Tỉ giá của bạn</div>
-								<div class="primary-color fz-20 fw-700">Ұ = 3,750 đ</div>
+							<div class="ms-auto text-end wallet-user_rate">
+								<div class="fz-16 text-white wallet-user_rate__text">Tỉ giá của bạn</div>
+								<div class="primary-color fz-20 fw-700 wallet-user_rate__value">Ұ = 3,750 đ</div>
 							</div>
 						</div>
 						<div class="dashboard-wallet_bottom">
@@ -461,8 +465,8 @@
 										</svg>
 										Số dư ví
 									</div>
-									<div class="header-user_wallet hstack gap-2n">
-										<div class="primary-color fz-17 fw-700" id="walletValue2"
+									<div class="hstack gap-2n">
+										<div class="primary-color fz-17 fw-700 dashboard-wallet_value" id="walletValue2"
 										     data-value="12.345.678 đ">12.345.678 đ
 										</div>
 										<button type="button" class="link-default handleViewWallet"
@@ -491,7 +495,7 @@
 					</div>
 				</div>
 				<div class="dashboard-statistical dashboard-gap">
-					<div class="row g-4 row-cols-lg-3 row-cols-sm-2 row-cols-1">
+					<div class="row g-lg-4 g-3 row-cols-xl-3 row-cols-sm-2 row-cols-2">
 						<div class="col">
 							<div class="statistical-item statistical-item_1">
 								<div class="statistical-item_icon">
@@ -702,13 +706,13 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-4 col-xl-3">
+			<div class="col-lg-5 col-xl-3">
 				<div class="dashboard-zalo dashboard-box hstack gap-3n position-relative overflow-hidden background-secondary-dark">
 					<div class="dashboard-zalo_decor position-absolute top-0 end-0 pe-none">
 						<img src="./assets/images/logo-decor-2.png" class="img-fluid" alt="">
 					</div>
 					<div class="dashboard-zalo_info d-inline-flex flex-column gap-2n">
-						<div class="fz-18 fw-500 lh-sm vstack gap-1n">
+						<div class="fz-18 fw-500 lh-sm vstack gap-1n dashboard-zalo_info__title">
 							<span class="fw-800">VMT GLOBAL</span>
 							Kênh CSKH chính thức
 							Zalo Official Account
@@ -726,8 +730,17 @@
 						<div class="dashboard-sub">
 							Cập nhật hàng ngày
 						</div>
-						<button type="button" class="dashboard-notifications_buttons ms-auto link-default">
-							Đánh dấu là đã đọc
+						<button type="button" class="dashboard-notifications_button ms-auto link-default">
+							<span class="dashboard-notifications_button__text d-none d-xl-block">
+								Đánh dấu là đã đọc
+							</span>
+							<span class="dashboard-notifications_button__icon d-blocck d-xl-none">
+								<svg height="512" viewBox="0 0 24 24"
+								     width="512" xmlns="http://www.w3.org/2000/svg">
+									<path d="m11.9 18c-.3 0-.5-.1-.7-.3l-4.9-5c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l4.2 4.2 9.9-9.9c.4-.4 1-.4 1.4 0s.4 1 0 1.4l-10.5 10.7c-.2.1-.5.3-.8.3z"/>
+									<path d="m7 18c-.3 0-.5-.1-.7-.3l-4.9-4.9c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l4.9 4.9c.4.4.4 1 0 1.4-.2.2-.4.3-.7.3zm5.3-5.3c-.3 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l5.3-5.3c.4-.4 1-.4 1.4 0s.4 1 0 1.4l-5.3 5.3c-.2.2-.4.3-.7.3z"/>
+								</svg>
+							</span>
 						</button>
 					</div>
 					<div class="dashboard-tabs vstack gap-5n">

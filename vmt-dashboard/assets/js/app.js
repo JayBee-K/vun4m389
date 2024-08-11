@@ -140,6 +140,13 @@ export function handleToggleSidebar() {
 			document.body.classList.toggle('sidebar-collapsed');
 		});
 	}
+
+	let dashboardOverlay = document.getElementById('dashboardOverlay');
+	if (dashboardOverlay !== null && windowWidth < 992) {
+		dashboardOverlay.addEventListener('click', function () {
+			document.body.classList.remove('sidebar-collapsed');
+		});
+	}
 }
 
 /****
