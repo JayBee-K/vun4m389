@@ -15,7 +15,10 @@
 
 	--primary-dark: #1C1C1C;
 	--secondary-dark: #212121;
+	--accent-dark: #262626;
 	--primary-border: rgba(82, 82, 82, 0.24);
+
+	--text-dark: #142432;
 
 	--gray-500: #EAEBF0;
 	--gray-100: #8D95A3;
@@ -44,7 +47,13 @@ body {
 	width: 100%;
 	overflow-x: hidden;
 }
+a {
+	color: #2997FF;
+}
 
+a:hover {
+	color: #4fa5f8;
+}
 a,
 a:hover,
 a:focus {
@@ -575,21 +584,22 @@ textarea:focus {
 }
 
 .dashboard-scrollbar::-webkit-scrollbar {
-	width: 5px;
+	width: 7px;
 	height: 5px;
 }
 
 .dashboard-scrollbar::-webkit-scrollbar-track {
-	background: #2d2d2d;
+	background: #424242;
+	border-radius: 10px;
 }
 
 .dashboard-scrollbar::-webkit-scrollbar-thumb {
-	background-color: #383838;
+	background-color: #6e6e6e;
 	border-radius: 10px;
 }
 
 .dashboard-scrollbar::-webkit-scrollbar-thumb:hover {
-	background: #333;
+	background: #595959;
 }
 
 .button-theme {
@@ -602,14 +612,19 @@ textarea:focus {
 	text-align: center;
 	white-space: nowrap;
 	gap: calc(1.5 * var(--space));
-	padding: calc(2 * var(--space)) calc(6 * var(--space));
+	padding: calc(2 * var(--space)) calc(8 * var(--space));
 	border-radius: 40px;
 	font-weight: 600;
 	transition: var(--transition-default);
 }
 
 .button-theme.button-theme_large {
-	padding: calc(3 * var(--space)) calc(6 * var(--space));
+	padding: calc(3 * var(--space)) calc(10 * var(--space));
+	font-size: 1.075em;
+}
+
+.button-theme.button-theme_small {
+	padding: calc(1 * var(--space)) calc(6 * var(--space));
 	font-size: 1.075em;
 }
 
@@ -618,53 +633,72 @@ textarea:focus {
 	height: 24px;
 }
 
-.button-theme svg path {
-	transition: var(--transition-default);
-}
-
-.button-theme.button-theme_stroke svg path {
-	stroke: var(--color);
-}
-
-.button-theme.button-theme_fill svg path {
-	fill: var(--color);
-}
-
 .button-theme.button-theme_primary {
-	--color: var(--bs-white);
 	background: var(--primary-color);
-	color: var(--bs-white);
+	color: var(--text-dark);
 }
 
 .button-theme.button-theme_primary:hover {
 	background: var(--primary-hover);
-	color: var(--bs-white);
+	color: var(--text-dark);
 }
 
-.button-theme[class*=button-theme_outline__] {
-	background: transparent;
-	border-color: var(--color);
-	color: var(--color);
-}
-
-.button-theme[class*=button-theme_outline__]:hover {
-	background: var(--color);
-	border-color: var(--color);
-	color: var(--bs-white);
-}
-
-.button-theme.button-theme_outline__primary {
-	--color: var(--primary-color);
+.button-theme svg path {
+	transition: var(--transition-default);
 }
 
 .button-theme.button-theme_outline__danger {
-	--color: var(--color-danger);
+	background: transparent;
+	border-color: var(--color-danger);
+	color: var(--color-danger);
 }
 
-.button-theme.button-theme_stroke:hover svg path {
+.button-theme.button-theme_outline__danger:hover {
+	background: var(--color-danger);
+	border-color: var(--color-danger);
+	color: var(--bs-white);
+}
+
+.button-theme.button-theme_outline__danger.button-theme_stroke svg path {
+	stroke: var(--color-danger);
+}
+
+.button-theme.button-theme_outline__danger.button-theme_fill svg path {
+	fill: var(--color-danger);
+}
+
+.button-theme.button-theme_outline__danger.button-theme_stroke:hover svg path {
 	stroke: var(--bs-white)
 }
 
-.button-theme.button-theme_fill:hover svg path {
+.button-theme.button-theme_outline__danger.button-theme_fill:hover svg path {
 	fill: var(--bs-white)
+}
+
+.button-theme.button-theme_outline__primary {
+	background: transparent;
+	border-color: var(--primary-color);
+	color: var(--primary-color);
+}
+
+.button-theme.button-theme_outline__primary:hover {
+	background: var(--primary-color);
+	border-color: var(--primary-color);
+	color: var(--text-dark);
+}
+
+.button-theme.button-theme_outline__primary.button-theme_stroke svg path {
+	stroke: var(--primary-color);
+}
+
+.button-theme.button-theme_outline__primary.button-theme_fill svg path {
+	fill: var(--primary-color);
+}
+
+.button-theme.button-theme_outline__primary.button-theme_stroke:hover svg path {
+	stroke: var(--text-dark)
+}
+
+.button-theme.button-theme_outline__primary.button-theme_fill:hover svg path {
+	fill: var(--text-dark)
 }
