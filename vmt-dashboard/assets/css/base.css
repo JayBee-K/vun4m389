@@ -19,6 +19,13 @@
 
 	--gray-500: #EAEBF0;
 	--gray-100: #8D95A3;
+
+	--color-danger: #F34047;
+	--color-success: #01C87A;
+	--color-primary: #2997FF;
+	--color-warning: var(--primary-color);
+	--color-info: #3F809B;
+	--color-accent: #956CFE;
 }
 
 body {
@@ -154,6 +161,22 @@ textarea:focus {
 
 .zi-5 {
 	z-index: 5;
+}
+
+.zi-6 {
+	z-index: 6;
+}
+
+.zi-7 {
+	z-index: 7;
+}
+
+.zi-8 {
+	z-index: 8;
+}
+
+.zi-9 {
+	z-index: 9;
 }
 
 .zi-10 {
@@ -548,4 +571,100 @@ textarea:focus {
 
 .overflow-y {
 	overflow-y: auto !important;
+	overflow-x: hidden !important;
+}
+
+.dashboard-scrollbar::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+}
+
+.dashboard-scrollbar::-webkit-scrollbar-track {
+	background: #2d2d2d;
+}
+
+.dashboard-scrollbar::-webkit-scrollbar-thumb {
+	background-color: #383838;
+	border-radius: 10px;
+}
+
+.dashboard-scrollbar::-webkit-scrollbar-thumb:hover {
+	background: #333;
+}
+
+.button-theme {
+	border: 1px solid transparent;
+	outline: none;
+	box-shadow: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	white-space: nowrap;
+	gap: calc(1.5 * var(--space));
+	padding: calc(2 * var(--space)) calc(6 * var(--space));
+	border-radius: 40px;
+	font-weight: 600;
+	transition: var(--transition-default);
+}
+
+.button-theme.button-theme_large {
+	padding: calc(3 * var(--space)) calc(6 * var(--space));
+	font-size: 1.075em;
+}
+
+.button-theme svg {
+	width: 24px;
+	height: 24px;
+}
+
+.button-theme svg path {
+	transition: var(--transition-default);
+}
+
+.button-theme.button-theme_stroke svg path {
+	stroke: var(--color);
+}
+
+.button-theme.button-theme_fill svg path {
+	fill: var(--color);
+}
+
+.button-theme.button-theme_primary {
+	--color: var(--bs-white);
+	background: var(--primary-color);
+	color: var(--bs-white);
+}
+
+.button-theme.button-theme_primary:hover {
+	background: var(--primary-hover);
+	color: var(--bs-white);
+}
+
+.button-theme[class*=button-theme_outline__] {
+	background: transparent;
+	border-color: var(--color);
+	color: var(--color);
+}
+
+.button-theme[class*=button-theme_outline__]:hover {
+	background: var(--color);
+	border-color: var(--color);
+	color: var(--bs-white);
+}
+
+.button-theme.button-theme_outline__primary {
+	--color: var(--primary-color);
+}
+
+.button-theme.button-theme_outline__danger {
+	--color: var(--color-danger);
+}
+
+.button-theme.button-theme_stroke:hover svg path {
+	stroke: var(--bs-white)
+}
+
+.button-theme.button-theme_fill:hover svg path {
+	fill: var(--bs-white)
 }
