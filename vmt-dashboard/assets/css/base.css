@@ -47,6 +47,7 @@ body {
 	width: 100%;
 	overflow-x: hidden;
 }
+
 a {
 	color: #2997FF;
 }
@@ -54,6 +55,7 @@ a {
 a:hover {
 	color: #4fa5f8;
 }
+
 a,
 a:hover,
 a:focus {
@@ -99,6 +101,17 @@ textarea:focus {
 	-o-transition: var(--transition-default);
 	transition: var(--transition-default);
 	-webkit-transition: var(--transition-default);
+}
+
+.limit {
+	--line: 1;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: var(--line);
+	line-clamp: var(--line);
+	-webkit-box-orient: vertical;
 }
 
 .background-cover {
@@ -375,6 +388,34 @@ textarea:focus {
 	color: var(--secondary-dark);
 }
 
+.danger-color {
+	color: var(--color-danger);
+}
+
+.success-color {
+	color: var(--color-success);
+}
+
+.warning-color {
+	color: var(--color-warning);
+}
+
+.info-color {
+	color: var(--color-info);
+}
+
+.accent-color {
+	color: var(--color-accent);
+}
+
+.gray-100-color {
+	color: var(--gray-100);
+}
+
+.gray-500-color {
+	color: var(--gray-500);
+}
+
 .background-secondary-dark {
 	background-color: var(--secondary-dark);
 }
@@ -641,6 +682,22 @@ textarea:focus {
 .button-theme.button-theme_primary:hover {
 	background: var(--primary-hover);
 	color: var(--text-dark);
+}
+
+.button-theme.button-theme_primary.button-theme_stroke svg path {
+	stroke: var(--text-dark);
+}
+
+.button-theme.button-theme_primary.button-theme_fill svg path {
+	fill: var(--text-dark);
+}
+
+.button-theme.button-theme_primary.button-theme_stroke:hover svg path {
+	stroke: var(--text-dark)
+}
+
+.button-theme.button-theme_primary.button-theme_fill:hover svg path {
+	fill: var(--text-dark)
 }
 
 .button-theme svg path {

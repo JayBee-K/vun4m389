@@ -245,7 +245,7 @@
 .dashboard-main {
 	width: 100%;
 	height: 100%;
-	padding-top: calc(20 * var(--space) + 20px);
+	padding-top: calc(20 * var(--space) + 30px);
 	padding-right: calc(7.5 * var(--space));
 	padding-bottom: calc(7.5 * var(--space));
 	padding-left: calc(var(--width) + (7.5 * var(--space)));
@@ -277,6 +277,11 @@
 .dashboard-box {
 	padding: calc(6 * var(--space));
 	border-radius: calc(2 * var(--space));
+}
+
+.dashboard-box_large {
+	padding: calc(8 * var(--space));
+	border-radius: calc(4 * var(--space));
 }
 
 .statistical-item {
@@ -342,8 +347,10 @@
 	color: var(--bs-white);
 	padding: calc(2 * var(--space)) calc(9 * var(--space)) calc(2 * var(--space)) calc(4 * var(--space));
 	min-width: 175px;
-	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+	background-image: url('../images/select-arrow.png');
+	background-size: 14px 8px;
 	font-size: 1em;
+	border-radius: calc(2 * var(--space));
 }
 
 .dashboard-wallet .dashboard-wallet_decor {
@@ -575,3 +582,293 @@
 	padding-top: var(--space);
 }
 
+.dashboard-form .dashboard-form_item {
+	position: relative;
+}
+
+.dashboard-form .dashboard-form_item .dashboard-form_item__select {
+	background-color: #333333;
+	border: 1px solid var(--primary-border);
+	color: var(--bs-white);
+	padding: calc(4 * var(--space)) calc(9 * var(--space)) calc(4 * var(--space)) calc(4 * var(--space));
+	background-image: url('../images/select-arrow.png');
+	background-size: 14px 8px;
+	font-size: 1em;
+	border-radius: calc(2 * var(--space));
+}
+
+.dashboard-form .dashboard-form_item .dashboard-form_item__input {
+	background-color: #333333;
+	border: 1px solid var(--primary-border);
+	color: var(--bs-white);
+	padding: calc(4 * var(--space));
+	font-size: 1em;
+	border-radius: calc(2 * var(--space));
+}
+
+.dashboard-form .dashboard-form_item .dashboard-form_item__select.disabled,
+.dashboard-form .dashboard-form_item .dashboard-form_item__select:disabled,
+.dashboard-form .dashboard-form_item .dashboard-form_item__input.disabled,
+.dashboard-form .dashboard-form_item .dashboard-form_item__input:disabled {
+	background-color: #525252;
+	cursor: not-allowed;
+}
+
+.dashboard-form .dashboard-form_item .dashboard-form_item__input::placeholder {
+	color: #8D95A3;
+}
+
+.dashboard-form .dashboard-form_item.dashboard-form_group .dashboard-form_item__button {
+	border: 1px solid transparent;
+	outline: none;
+	box-shadow: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	white-space: nowrap;
+	gap: calc(1.5 * var(--space));
+	font-weight: 600;
+	transition: var(--transition-default);
+	font-size: 1em;
+	border-radius: var(--space);
+	padding: var(--space) calc(2.5 * var(--space));
+	background: var(--primary-color);
+	color: var(--text-dark);
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: calc(4 * var(--space));
+}
+
+.dashboard-form .dashboard-form_item.dashboard-form_group .dashboard-form_item__button:hover {
+	background: var(--primary-hover);
+	color: var(--text-dark);
+}
+
+.dashboard-form .dashboard-form_item.dashboard-form_group .dashboard-form_item__button + .dashboard-form_item__input {
+	padding-right: calc(25 * var(--space));
+}
+
+.dashboard-form .dashboard-form_heading .dashboard-form_heading__button {
+	border: 1px solid transparent;
+	outline: none;
+	box-shadow: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	white-space: nowrap;
+	gap: calc(1.5 * var(--space));
+	font-weight: 600;
+	transition: var(--transition-default);
+	font-size: .85em;
+	border-radius: var(--space);
+	padding: var(--space) calc(2 * var(--space));
+	background: #F3404733;
+	color: var(--color-danger);
+}
+
+.dashboard-form .dashboard-form_heading .dashboard-form_heading__button:hover {
+	background: var(--color-danger);
+	color: var(--bs-white);
+}
+
+.dashboard-form .dashboard-form_heading .dashboard-form_heading__line {
+	background: #FEFAE8;
+	height: 1px;
+	width: 100%;
+}
+
+.dashboard-bill .dashboard-bill_desc .dashboard-bill_desc__dot {
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	background: var(--gray-100);
+	border-radius: 50%;
+	margin-right: var(--space);
+}
+
+.dashboard-bill .dashboard-bill_line {
+	background: #5252523D;
+	height: 1px;
+	width: 100%;
+	display: block;
+}
+
+.dashboard-bill .dashboard-bill_note .dashboard-bill_note__count {
+	position: absolute;
+	color: #637381;
+	font-size: .925em;
+	bottom: calc(3 * var(--space));
+	right: calc(4 * var(--space));
+	pointer-events: none;
+}
+
+.dashboard-bill .dashboard-bill_note .dashboard-bill_note__input {
+	background-color: #333333;
+	border: 1px solid var(--primary-border);
+	color: var(--bs-white);
+	padding: calc(3 * var(--space)) calc(4 * var(--space));
+	font-size: 1em;
+	resize: none;
+	overflow: hidden;
+	height: 85px;
+	border-radius: calc(2 * var(--space));
+}
+
+.dashboard-bill .dashboard-bill_note .dashboard-bill_note__input::placeholder {
+	color: #637381;
+}
+
+.dashboard-bill .dashboard-bill_voucher .dashboard-bill_voucher__button {
+	background-color: #333333;
+	border: 1px solid var(--primary-border);
+	color: var(--bs-white);
+	padding: calc(3 * var(--space)) calc(4 * var(--space));
+	border-radius: calc(2 * var(--space));
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: calc(2 * var(--space));
+	font-size: .925em;
+
+}
+
+.dashboard-bill .dashboard-bill_voucher .dashboard-bill_voucher__button svg {
+	flex-shrink: 0;
+}
+
+.dashboard-modal .modal-content {
+	background: #313131;
+	border-radius: calc(2 * var(--space));
+	border: 1px solid var(--primary-border);
+}
+
+.dashboard-modal .modal-content .modal-header {
+	border-bottom: 1px solid var(--primary-border);
+	padding-top: calc(3 * var(--space));
+	padding-bottom: calc(3 * var(--space));
+}
+
+.dashboard-modal .modal-content .modal-title {
+	font-size: 1.225em;
+	color: var(--bs-white);
+}
+
+.dashboard-modal .modal-content .link-default svg path {
+	stroke: var(--gray-100);
+	transition: var(--transition-default);
+}
+
+.dashboard-modal .modal-content .link-default:hover svg path {
+	stroke: var(--gray-500);
+}
+
+.dashboard-modal .modal-content .dashboard-form .dashboard-form_item {
+	width: 100%;
+}
+
+.dashboard-modal .modal-content .dashboard-form .dashboard-form_item .dashboard-form_item__input {
+	padding: calc(3 * var(--space)) calc(4 * var(--space));
+	background: var(--accent-dark);
+	width: 100%;
+}
+
+.dashboard-modal .modal-content .dashboard-form .button-theme {
+	padding: calc(2 * var(--space)) calc(4 * var(--space));
+	border-radius: calc(2 * var(--space));
+}
+
+.dashboard-modal .modal-content .dashboard-form .button-theme svg {
+	width: 18px;
+	height: 18px;
+}
+
+.modal-backdrop {
+	background: #000;
+	--bs-backdrop-opacity: .8
+}
+
+.voucher-item {
+	border-radius: calc(2 * var(--space));
+	position: relative;
+	transition: var(--transition-default);
+	background: #2d2d2d;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.voucher-item:before {
+	position: absolute;
+	content: "";
+	background: var(--color-danger);
+	height: 18px;
+	width: 18px;
+	border-radius: 50%;
+	top: calc(4 * var(--space));
+	right: calc(4 * var(--space));
+	opacity: 0;
+	visibility: hidden;
+	transition: var(--transition-default);
+}
+
+.voucher-item:after {
+	position: absolute;
+	content: "";
+	background: url('../images/icon-check.png');
+	top: calc(4 * var(--space));
+	right: calc(5 * var(--space));
+	height: 12px;
+	width: 12px;
+	opacity: 0;
+	visibility: hidden;
+	transition: var(--transition-default);
+}
+
+.voucher-item.active {
+	background: #24303a;
+}
+
+.voucher-item.active:before,
+.voucher-item.active:after {
+	opacity: 1;
+	visibility: visible;
+}
+
+.voucher-item .voucher-item_content {
+	max-width: 92%;
+	padding: calc(2 * var(--space)) calc(4 * var(--space));
+}
+
+.voucher-item .voucher-item_content .voucher-item_desc {
+	color: var(--gray-500);
+}
+
+.voucher-item .voucher-item_expire {
+	position: relative;
+	border-top: 1px dotted var(--primary-border);
+	padding: calc(2 * var(--space)) calc(4 * var(--space));
+	color: var(--color-danger);
+	font-size: 0.85em;
+}
+
+.voucher-item .voucher-item_expire:before,
+.voucher-item .voucher-item_expire:after {
+	display: block;
+	content: "";
+	position: absolute;
+	top: -6px;
+	width: 12px;
+	height: 12px;
+	background: #313131;
+	border-radius: 50%;
+}
+
+.voucher-item .voucher-item_expire:before {
+	left: -6px;
+}
+
+.voucher-item .voucher-item_expire:after {
+	right: -6px;
+}

@@ -194,6 +194,47 @@ export function handleToggleWallet() {
 	}
 }
 
+/****
+ * Handle Init Tooltip Bootstrap
+ */
+export function handleInitTooltipBS() {
+	const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+	if (tooltipTriggerList.length > 0) {
+		const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+	}
+}
+
+/****
+ * Handle Limit Character Textarea
+ */
+export function handleCharacterInput() {
+	const textareaElm = document.querySelectorAll('.handleLimitCharacterInput');
+
+	if (textareaElm.length > 0) {
+		textareaElm.forEach(function (textarea) {
+			const limit = parseInt(textarea.dataset.limit, 10);
+			const parentElement = textarea.closest('.handleCharacterInput');
+			const countDisplay = parentElement.querySelector('.handleCountCharacterInput');
+
+			textarea.addEventListener('input', function () {
+				setTimeout(function () {
+					let currentLength = textarea.value.length;
+
+					if (currentLength >= limit) {
+						parentElement.classList.add('error-limit');
+						textarea.value = textarea.value.substring(0, limit);
+						currentLength = limit;
+					} else {
+						parentElement.classList.remove('error-limit');
+					}
+
+					countDisplay.textContent = `(${currentLength}/${limit})`;
+				}, 0);
+			});
+		});
+	}
+}
+
 window.addEventListener('load', function () {
 	window.addEventListener("resize", () => {
 		windowWidth = window.innerWidth;
@@ -208,6 +249,8 @@ window.addEventListener('load', function () {
 
 	handleToggleSidebar();
 	handleToggleWallet();
+	handleInitTooltipBS();
+	handleCharacterInput();
 });
 
 

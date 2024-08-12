@@ -172,6 +172,10 @@
 		padding: calc(4 * var(--space));
 	}
 
+	.dashboard-box_large {
+		padding: calc(6 * var(--space));
+	}
+
 	.dashboard-tabs .nav-tabs .nav-item .nav-link {
 		padding: calc(1.5 * var(--space)) calc(1.5 * var(--space));
 	}
@@ -367,4 +371,33 @@
 	.dashboard-slider {
 		margin-top: calc(5 * var(--space));
 	}
+
+	.dashboard-form .dashboard-form_item .dashboard-form_item__select {
+		padding: calc(3 * var(--space)) calc(9 * var(--space)) calc(3 * var(--space)) calc(4 * var(--space));
+	}
+
+	.dashboard-form .dashboard-form_item .dashboard-form_item__input {
+		padding: calc(3 * var(--space)) calc(4 * var(--space));
+	}
+
+	.dashboard-form .dashboard-form_item.dashboard-form_group .dashboard-form_item__button {
+		font-size: .925em;
+	}
+
+	.dashboard-form .dashboard-form_heading .dashboard-form_heading__title {
+		font-size: 1.075em;
+	}
+
+	.dashboard-bill .dashboard-bill_price .dashboard-bill_price__value {
+		font-size: 1.15em;
+	}
+
+	.dashboard-modal .modal-content .dashboard-form .dashboard-form_item .dashboard-form_item__input {
+		padding: calc(2 * var(--space)) calc(4 * var(--space));
+	}
+
+	.dashboard-modal .modal-content .dashboard-form .button-theme {
+		padding: calc(2 * var(--space)) calc(3 * var(--space));
+	}
+
 }
