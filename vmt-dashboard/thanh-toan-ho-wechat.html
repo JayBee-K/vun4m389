@@ -655,13 +655,17 @@
 			</button>
 			<a href="" class="hstack gap-2n header-toolbar_item active fz-15 fw-500 link-default">
 				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M20.5 16.75H18.25V14.5C18.25 14.09 17.91 13.75 17.5 13.75C17.09 13.75 16.75 14.09 16.75 14.5V16.75H14.5C14.09 16.75 13.75 17.09 13.75 17.5C13.75 17.91 14.09 18.25 14.5 18.25H16.75V20.5C16.75 20.91 17.09 21.25 17.5 21.25C17.91 21.25 18.25 20.91 18.25 20.5V18.25H20.5C20.91 18.25 21.25 17.91 21.25 17.5C21.25 17.09 20.91 16.75 20.5 16.75Z" fill="#FFCC32"/>
-					<path d="M22 8.52V3.98C22 2.57 21.36 2 19.77 2H15.73C14.14 2 13.5 2.57 13.5 3.98V8.51C13.5 9.93 14.14 10.49 15.73 10.49H19.77C21.36 10.5 22 9.93 22 8.52Z" fill="#FFCC32"/>
-					<path d="M10.5 8.52V3.98C10.5 2.57 9.86 2 8.27 2H4.23C2.64 2 2 2.57 2 3.98V8.51C2 9.93 2.64 10.49 4.23 10.49H8.27C9.86 10.5 10.5 9.93 10.5 8.52Z" fill="#FFCC32"/>
-					<path d="M10.5 19.77V15.73C10.5 14.14 9.86 13.5 8.27 13.5H4.23C2.64 13.5 2 14.14 2 15.73V19.77C2 21.36 2.64 22 4.23 22H8.27C9.86 22 10.5 21.36 10.5 19.77Z" fill="#FFCC32"/>
+					<path d="M20.5 16.75H18.25V14.5C18.25 14.09 17.91 13.75 17.5 13.75C17.09 13.75 16.75 14.09 16.75 14.5V16.75H14.5C14.09 16.75 13.75 17.09 13.75 17.5C13.75 17.91 14.09 18.25 14.5 18.25H16.75V20.5C16.75 20.91 17.09 21.25 17.5 21.25C17.91 21.25 18.25 20.91 18.25 20.5V18.25H20.5C20.91 18.25 21.25 17.91 21.25 17.5C21.25 17.09 20.91 16.75 20.5 16.75Z"
+					      fill="#FFCC32"/>
+					<path d="M22 8.52V3.98C22 2.57 21.36 2 19.77 2H15.73C14.14 2 13.5 2.57 13.5 3.98V8.51C13.5 9.93 14.14 10.49 15.73 10.49H19.77C21.36 10.5 22 9.93 22 8.52Z"
+					      fill="#FFCC32"/>
+					<path d="M10.5 8.52V3.98C10.5 2.57 9.86 2 8.27 2H4.23C2.64 2 2 2.57 2 3.98V8.51C2 9.93 2.64 10.49 4.23 10.49H8.27C9.86 10.5 10.5 9.93 10.5 8.52Z"
+					      fill="#FFCC32"/>
+					<path d="M10.5 19.77V15.73C10.5 14.14 9.86 13.5 8.27 13.5H4.23C2.64 13.5 2 14.14 2 15.73V19.77C2 21.36 2.64 22 4.23 22H8.27C9.86 22 10.5 21.36 10.5 19.77Z"
+					      fill="#FFCC32"/>
 				</svg>
 				<span class="d-none d-lg-inline">
-					Tạo đơn thanh toán / ủy quyền
+					Tạo đơn thanh toán / Wechat
 				</span>
 			</a>
 		</div>
@@ -744,10 +748,10 @@
 							<form action="">
 								<div class="dashboard-form_item">
 									<select name="" id="" class="form-select dashboard-form_item__select">
-										<option value="" selected>Ủy quyền thanh toán</option>
+										<option value="">Ủy quyền thanh toán</option>
 										<option value="">Alipay VN</option>
 										<option value="">Alipay TQ</option>
-										<option value="">Wechat</option>
+										<option value="" selected>Wechat</option>
 										<option value="">Chuyển khoản thẻ</option>
 									</select>
 								</div>
@@ -766,31 +770,46 @@
 										<div class="row g-3">
 											<div class="col-sm-6 col-lg-12 col-xl-6">
 												<div class="dashboard-form_item">
-													<input type="text" placeholder="Nhập số RMB"
+													<input type="text" placeholder="Nhập số tệ"
 													       class="form-control dashboard-form_item__input">
 												</div>
 											</div>
 											<div class="col-sm-6 col-lg-12 col-xl-6">
 												<div class="dashboard-form_item">
-													<input type="text" placeholder="Email sử dụng dịch vụ"
+													<input type="text" placeholder="Ghi chú"
 													       class="form-control dashboard-form_item__input">
 												</div>
 											</div>
-											<div class="col-sm-6 col-lg-12 col-xl-6">
-												<div class="dashboard-form_item dashboard-form_group">
-													<button type="button" class="dashboard-form_item__button">
-														Dán link
-													</button>
-													<input type="text" placeholder="Link sản phẩm thanh toán"
-													       class="form-control dashboard-form_item__input">
-												</div>
+										</div>
+									</div>
+								</div>
+								<div class="dashboard-gap">
+									<div class="vstack gap-4n dashboard-form_box">
+										<div class="dashboard-form_heading gap-6n hstack justify-content-between">
+											<div class="dashboard-form_heading__title text-nowrap flex-shrink-0 fz-16 fw-600 text-white">
+												QR Code
 											</div>
-											<div class="col-sm-6 col-lg-12 col-xl-6">
-												<div class="dashboard-form_item">
-													<input type="text" placeholder="Ghi chú của bạn"
-													       class="form-control dashboard-form_item__input">
-												</div>
-											</div>
+										</div>
+										<div class="dashboard-form_item dashboard-form_item_image">
+											<button type="button" class="dashboard-form_item__button">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+												     xmlns="http://www.w3.org/2000/svg">
+													<path d="M9 10C10.1046 10 11 9.10457 11 8C11 6.89543 10.1046 6 9 6C7.89543 6 7 6.89543 7 8C7 9.10457 7.89543 10 9 10Z"
+													      stroke="#8D95A3" stroke-width="1.5" stroke-linecap="round"
+													      stroke-linejoin="round"/>
+													<path d="M13 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15V10"
+													      stroke="#8D95A3" stroke-width="1.5" stroke-linecap="round"
+													      stroke-linejoin="round"/>
+													<path d="M18 8V2L20 4" stroke="#8D95A3" stroke-width="1.5"
+													      stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M18 2L16 4" stroke="#8D95A3" stroke-width="1.5"
+													      stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M2.66992 18.9505L7.59992 15.6405C8.38992 15.1105 9.52992 15.1705 10.2399 15.7805L10.5699 16.0705C11.3499 16.7405 12.6099 16.7405 13.3899 16.0705L17.5499 12.5005C18.3299 11.8305 19.5899 11.8305 20.3699 12.5005L21.9999 13.9005"
+													      stroke="#8D95A3" stroke-width="1.5" stroke-linecap="round"
+													      stroke-linejoin="round"/>
+												</svg>
+												<input type="file" class="dashboard-form_item__input">
+											</button>
 										</div>
 									</div>
 								</div>
@@ -809,31 +828,31 @@
 										<div class="row g-3">
 											<div class="col-sm-6 col-lg-12 col-xl-6">
 												<div class="dashboard-form_item">
-													<input type="text" placeholder="Nhập số RMB"
+													<input type="text" placeholder="Nhập số tệ"
 													       class="form-control dashboard-form_item__input">
 												</div>
 											</div>
 											<div class="col-sm-6 col-lg-12 col-xl-6">
 												<div class="dashboard-form_item">
-													<input type="text" placeholder="Email sử dụng dịch vụ"
+													<input type="text" placeholder="Ghi chú"
 													       class="form-control dashboard-form_item__input">
 												</div>
 											</div>
-											<div class="col-sm-6 col-lg-12 col-xl-6">
-												<div class="dashboard-form_item dashboard-form_group">
-													<button type="button" class="dashboard-form_item__button">
-														Dán link
-													</button>
-													<input type="text" placeholder="Link sản phẩm thanh toán"
-													       class="form-control dashboard-form_item__input">
-												</div>
+										</div>
+									</div>
+								</div>
+								<div class="dashboard-gap">
+									<div class="vstack gap-4n dashboard-form_box">
+										<div class="dashboard-form_heading gap-6n hstack justify-content-between">
+											<div class="dashboard-form_heading__title text-nowrap flex-shrink-0 fz-16 fw-600 text-white">
+												QR Code
 											</div>
-											<div class="col-sm-6 col-lg-12 col-xl-6">
-												<div class="dashboard-form_item">
-													<input type="text" placeholder="Ghi chú của bạn"
-													       class="form-control dashboard-form_item__input">
-												</div>
-											</div>
+										</div>
+										<div class="dashboard-form_item dashboard-form_item_image">
+											<button type="button" class="dashboard-form_item__button">
+												<img src="./assets/images/qr-bank.png" class="w-100 img-fluid" alt="">
+												<input type="file" class="dashboard-form_item__input">
+											</button>
 										</div>
 									</div>
 								</div>

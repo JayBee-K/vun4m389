@@ -1,4 +1,4 @@
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 992px) {
 	.sidebar-collapsed .dashboard-page {
 		--width: 80px;
 	}
@@ -374,12 +374,16 @@
 
 	.dashboard-form .dashboard-form_item .dashboard-form_item__select {
 		padding: calc(3 * var(--space)) calc(9 * var(--space)) calc(3 * var(--space)) calc(4 * var(--space));
+		font-size: 1em;
 	}
 
 	.dashboard-form .dashboard-form_item .dashboard-form_item__input {
 		padding: calc(3 * var(--space)) calc(4 * var(--space));
+		font-size: 1em;
 	}
-
+	.dashboard-bill .dashboard-bill_note .dashboard-bill_note__input {
+		font-size: 1em;
+	}
 	.dashboard-form .dashboard-form_item.dashboard-form_group .dashboard-form_item__button {
 		font-size: .925em;
 	}
