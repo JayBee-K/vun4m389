@@ -235,6 +235,40 @@ export function handleCharacterInput() {
 	}
 }
 
+/****
+ * Handle More Voucher
+ */
+export function handleMoreVoucher() {
+	const buttonMoreVouchers = document.querySelectorAll('.handleMoreVoucherButton');
+
+	if (buttonMoreVouchers.length > 0) {
+		buttonMoreVouchers.forEach(function (buttonMoreVoucher) {
+			const parentElement = buttonMoreVoucher.closest('.handleMoreVoucher');
+
+			const htmlButtonMoreVoucherExpand = buttonMoreVoucher.innerHTML;
+
+			const htmlButtonMoreVoucherCollapse = `Thu gọn
+													<svg width="15" height="8" viewBox="0 0 15 8" fill="none"
+													     xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd"
+														      d="M14.2071 0.292893C14.5976 0.683418 14.5976 1.31658 14.2071 1.70711L8.20711 7.70711C7.81658 8.09763 7.18342 8.09763 6.79289 7.70711L0.792892 1.70711C0.402368 1.31658 0.402369 0.683417 0.792892 0.292893C1.18342 -0.0976317 1.81658 -0.0976317 2.20711 0.292893L7.5 5.58579L12.7929 0.292893C13.1834 -0.0976312 13.8166 -0.0976311 14.2071 0.292893Z"
+														      fill="#F5C349"/>
+													</svg>`;
+
+			buttonMoreVoucher.addEventListener('click', function () {
+
+				if(parentElement.classList.contains('is-expand')) {
+					buttonMoreVoucher.innerHTML = htmlButtonMoreVoucherExpand;
+					parentElement.classList.remove('is-expand');
+				} else {
+					buttonMoreVoucher.innerHTML = htmlButtonMoreVoucherCollapse;
+					parentElement.classList.add('is-expand')
+				}
+			});
+		});
+	}
+}
+
 window.addEventListener('load', function () {
 	window.addEventListener("resize", () => {
 		windowWidth = window.innerWidth;
@@ -251,6 +285,7 @@ window.addEventListener('load', function () {
 	handleToggleWallet();
 	handleInitTooltipBS();
 	handleCharacterInput();
+	handleMoreVoucher();
 });
 
 

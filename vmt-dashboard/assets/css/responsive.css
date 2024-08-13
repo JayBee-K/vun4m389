@@ -381,9 +381,11 @@
 		padding: calc(3 * var(--space)) calc(4 * var(--space));
 		font-size: 1em;
 	}
+
 	.dashboard-bill .dashboard-bill_note .dashboard-bill_note__input {
 		font-size: 1em;
 	}
+
 	.dashboard-form .dashboard-form_item.dashboard-form_group .dashboard-form_item__button {
 		font-size: .925em;
 	}
@@ -403,5 +405,19 @@
 	.dashboard-modal .modal-content .dashboard-form .button-theme {
 		padding: calc(2 * var(--space)) calc(3 * var(--space));
 	}
+}
 
+@media screen and (max-width: 574px) {
+	.voucher-item .voucher-item_image {
+		width: 36%;
+		padding: calc(2 * var(--space));
+	}
+
+	.voucher-item .voucher-item_content {
+		padding: calc(2 * var(--space)) calc(6 * var(--space)) calc(2 * var(--space)) calc(2 * var(--space));
+	}
+
+	.voucher-item .voucher-item_content .voucher-item_title {
+		font-size: 1.075em;
+	}
 }
