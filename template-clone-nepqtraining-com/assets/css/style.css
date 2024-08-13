@@ -491,3 +491,21 @@ body {
 		position: static !important;
 	}
 }
+
+.modal-payment .modal-header .modal-title {
+	text-align: center;
+	font-size: 20px;
+	font-weight: 700;
+	font-family: var(--font-oswald);
+}
+
+.modal-payment .modal-header > button {
+	text-align: center;
+	font-size: 20px;
+	font-weight: 700;
+	font-family: var(--font-oswald);
+}
+
+.modal-payment .modal-body{
+	height: 250px;
+}

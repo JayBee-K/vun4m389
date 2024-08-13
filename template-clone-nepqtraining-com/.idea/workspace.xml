@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa2ce8b3-cd1b-4001-92b8-3bec8d9531f5" name="Changes" comment="" />
+    <list default="true" id="fa2ce8b3-cd1b-4001-92b8-3bec8d9531f5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/plugins/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/plugins/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/plugins/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,9 +30,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="D:\xampp\php\php.exe" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2kXgI1yhzEIwxdWOcuKARL5Prer" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -42,7 +48,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/exeTools/tools/vun4m389/template-clone-nepqtraining-com/assets",
+    "last_opened_file_path": "D:/Jobs/Mr.Nam/vun4m389/template-clone-nepqtraining-com/assets/plugins",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -53,6 +59,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Jobs\Mr.Nam\vun4m389\template-clone-nepqtraining-com\assets\plugins" />
       <recent name="D:\exeTools\tools\vun4m389\template-clone-nepqtraining-com\assets" />
       <recent name="D:\exeTools\tools\vun4m389\template-clone-nepqtraining-com\plugins" />
       <recent name="D:\exeTools\tools\vun4m389\template-clone-nepqtraining-com\assets\css" />
@@ -71,6 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1723435251845</updated>
       <workItem from="1723435253705" duration="11187000" />
+      <workItem from="1723556873308" duration="5559000" />
     </task>
     <servers />
   </component>
