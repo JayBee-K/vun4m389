@@ -382,7 +382,7 @@
 		font-size: 1em;
 	}
 
-	.dashboard-bill .dashboard-bill_note .dashboard-bill_note__input {
+	.dashboard-right .dashboard-right_note .dashboard-right_note__input {
 		font-size: 1em;
 	}
 
@@ -394,7 +394,7 @@
 		font-size: 1.075em;
 	}
 
-	.dashboard-bill .dashboard-bill_price .dashboard-bill_price__value {
+	.dashboard-right .dashboard-right_price .dashboard-right_price__value {
 		font-size: 1.15em;
 	}
 
@@ -404,6 +404,19 @@
 
 	.dashboard-modal .modal-content .dashboard-form .button-theme {
 		padding: calc(2 * var(--space)) calc(3 * var(--space));
+	}
+
+	.cart-group .cart-group_header .cart-group_header__info img {
+		width: 36px;
+		height: 36px;
+	}
+
+	.cart-group .cart-group_header .cart-group_header__info {
+		font-size: 1.15em;
+	}
+
+	.cart-group .cart-group_table th, .cart-group .cart-group_table td {
+		padding: calc(4 * var(--space)) calc(3 * var(--space));
 	}
 }
 
