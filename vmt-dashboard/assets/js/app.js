@@ -278,7 +278,7 @@ export function handleAddGoods() {
 
 
 	if (handleGoods !== null && btnAddGoods !== null) {
-		const templateGoodRender = `<div class="goods-item hstack gap-4n goodsItem">
+		const templateGoodRender_1 = `<div class="goods-item hstack gap-4n goodsItem">
 											<div class="goods-item_avatar">
 												<img src="./assets/images/product-placeholder.png"
 												     class="img-fluid w-100"
@@ -343,8 +343,106 @@ export function handleAddGoods() {
 											</div>
 										</div>`;
 
+		const templateGoodRender_2 = `<div class="goods-item hstack gap-4n goodsItem">
+											<div class="goods-item_avatar goods-item_avatar__large">
+												<img src="./assets/images/product-placeholder.png" class="img-fluid w-100"
+												     alt="">
+												<input type="file" class="goods-item_avatar__input">
+											</div>
+											<div class="goods-item_group vstack gap-4n w-100">
+												<div class="goods-item_products hstack gap-4n">
+													<div class="goods-item_link">
+														<div class="dashboard-form_item dashboard-form_group">
+															<button type="button" class="dashboard-form_item__button">
+																Dán link
+															</button>
+															<input type="text" placeholder="Nhập link sản phẩm"
+															       class="form-control dashboard-form_item__input">
+														</div>
+													</div>
+													<div class="goods-item_property">
+														<div class="dashboard-form_item">
+															<input type="text" placeholder="Thuộc tính sản phẩm"
+															       class="form-control dashboard-form_item__input">
+														</div>
+													</div>
+												</div>
+												<div class="goods-items_info w-100 hstack gap-4n">
+													<div class="goods-item_name">
+														<div class="dashboard-form_item">
+															<input type="text" placeholder="Tên hàng hóa"
+															       class="form-control dashboard-form_item__input">
+														</div>
+													</div>
+													<div class="goods-item_note">
+														<div class="dashboard-form_item">
+															<input type="text" placeholder="Ghi chú"
+															       class="form-control dashboard-form_item__input">
+														</div>
+													</div>
+													<div class="goods-item_price">
+														<div class="dashboard-form_item">
+															<input type="text" placeholder="Số tệ (Ұ)"
+															       value="65"
+															       class="form-control dashboard-form_item__input">
+														</div>
+													</div>
+													<div class="goods-item_quantity">
+														<div class="dashboard-form_item">
+															<div class="dashboard-form_quantity">
+																<button type="button"
+																        class="dashboard-form_quantity__button"
+																        disabled>
+																	<svg width="12" height="12" viewBox="0 0 12 12"
+																	     fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path fill-rule="evenodd" clip-rule="evenodd"
+																		      d="M9.5 6C9.5 6.27614 9.27614 6.5 9 6.5L3 6.5C2.72386 6.5 2.5 6.27614 2.5 6C2.5 5.72386 2.72386 5.5 3 5.5L9 5.5C9.27614 5.5 9.5 5.72386 9.5 6Z"
+																		      fill="#8D95A3"/>
+																	</svg>
+																</button>
+																<input type="text" value="1"
+																       class="form-control dashboard-form_quantity__input">
+																<button type="button"
+																        class="dashboard-form_quantity__button">
+																	<svg width="12" height="12" viewBox="0 0 12 12"
+																	     fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M6.5 3C6.5 2.72386 6.27614 2.5 6 2.5C5.72386 2.5 5.5 2.72386 5.5 3V5.5H3C2.72386 5.5 2.5 5.72386 2.5 6C2.5 6.27614 2.72386 6.5 3 6.5H5.5V9C5.5 9.27614 5.72386 9.5 6 9.5C6.27614 9.5 6.5 9.27614 6.5 9V6.5H9C9.27614 6.5 9.5 6.27614 9.5 6C9.5 5.72386 9.27614 5.5 9 5.5H6.5V3Z"
+																		      fill="#8D95A3"/>
+																	</svg>
+																</button>
+															</div>
+														</div>
+													</div>
+													<div class="goods-item_total">
+														<div class="goods-item_total__text">
+															Thành tiền
+														</div>
+														<div class="goods-item_total__value text-white fz-16">
+															320.000đ
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="goods-item_remove">
+												<button type="submit"
+												        class="link-default fw-600 primary-color bg-transparent buttonRemoveGood">
+													<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+													     xmlns="http://www.w3.org/2000/svg">
+														<path d="M0.292893 14.2929C-0.0976311 14.6834 -0.0976311 15.3166 0.292893 15.7071C0.683418 16.0976 1.31658 16.0976 1.70711 15.7071L8 9.41421L14.2929 15.7071C14.6834 16.0976 15.3166 16.0976 15.7071 15.7071C16.0976 15.3166 16.0976 14.6834 15.7071 14.2929L9.41421 8L15.7071 1.70711C16.0976 1.31658 16.0976 0.683417 15.7071 0.292894C15.3166 -0.0976312 14.6834 -0.0976312 14.2929 0.292894L8 6.58579L1.70711 0.292895C1.31658 -0.0976293 0.683418 -0.0976293 0.292893 0.292895C-0.097631 0.683419 -0.097631 1.31658 0.292893 1.70711L6.58579 8L0.292893 14.2929Z"
+														      fill="#303236"/>
+													</svg>
+												</button>
+											</div>
+										</div>`;
+
 		btnAddGoods.addEventListener('click', function () {
-			handleGoods.innerHTML += templateGoodRender;
+			let btnAddGoodsType = parseInt(btnAddGoods.dataset.type);
+
+			if(btnAddGoodsType === 1) {
+				handleGoods.innerHTML += templateGoodRender_1;
+			} else {
+				handleGoods.innerHTML += templateGoodRender_2;
+			}
 			handleRemoveGoods();
 		})
 	}
