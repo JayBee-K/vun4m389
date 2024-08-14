@@ -438,7 +438,7 @@ export function handleAddGoods() {
 		btnAddGoods.addEventListener('click', function () {
 			let btnAddGoodsType = parseInt(btnAddGoods.dataset.type);
 
-			if(btnAddGoodsType === 1) {
+			if (btnAddGoodsType === 1) {
 				handleGoods.innerHTML += templateGoodRender_1;
 			} else {
 				handleGoods.innerHTML += templateGoodRender_2;
@@ -462,6 +462,47 @@ export function handleRemoveGoods() {
 	}
 }
 
+export function handleSliderImagesProduct() {
+
+	let avatarProduct = document.getElementById('productAvatar');
+	let thumbProduct = document.getElementById('productThumb');
+
+	if (avatarProduct != null) {
+		let initSliderThumb;
+		if (thumbProduct != null) {
+			const elmSwiperThumb = '#productThumb'
+			const objSwiperThumb = {
+				slidesPerView: 6,
+				spaceBetween: 12,
+				breakpoints: {
+					1199: {
+						slidesPerView: 6,
+					}
+				},
+				loop: false,
+				autoplay: false
+			}
+			initSliderThumb = handleSwiper(elmSwiperThumb + ' .swiper', objSwiperThumb);
+		}
+
+		const elmSwiperAvatar = '#productAvatar'
+		const objSwiperAvatar = {
+			slidesPerView: 1,
+			loop: false,
+			spaceBetween: 10,
+		}
+
+		if (typeof initSliderThumb !== 'undefined') {
+			objSwiperAvatar.thumbs = {
+				swiper: initSliderThumb,
+				spaceBetween: 10,
+			}
+		}
+		handleSwiper(elmSwiperAvatar + ' .swiper', objSwiperAvatar);
+	}
+}
+
+
 window.addEventListener('load', function () {
 	window.addEventListener("resize", () => {
 		windowWidth = window.innerWidth;
@@ -473,6 +514,7 @@ window.addEventListener('load', function () {
 	handleCallDatePickerMaterial();
 
 	handleSliderHero();
+	handleSliderImagesProduct()
 
 	handleToggleSidebar();
 	handleToggleWallet();
