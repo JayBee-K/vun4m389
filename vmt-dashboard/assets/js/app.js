@@ -181,12 +181,12 @@ export function handleCharacterInput() {
 /****
  * Handle More Voucher
  */
-export function handleMoreVoucher() {
-	const buttonMoreVouchers = document.querySelectorAll('.handleMoreVoucherButton');
+export function handleViewMore() {
+	const buttonMoreVouchers = document.querySelectorAll('.handleMoreButton');
 
 	if (buttonMoreVouchers.length > 0) {
 		buttonMoreVouchers.forEach(function (buttonMoreVoucher) {
-			const parentElement = buttonMoreVoucher.closest('.handleMoreVoucher');
+			const parentElement = buttonMoreVoucher.closest('.handleMore');
 
 			const htmlButtonMoreVoucherExpand = buttonMoreVoucher.innerHTML;
 
@@ -514,7 +514,7 @@ window.addEventListener('load', function () {
 	handleToggleWallet();
 	handleInitTooltipBS();
 	handleCharacterInput();
-	handleMoreVoucher();
+	handleViewMore();
 	handleAddGoods();
 	handleRemoveGoods();
 	handleInitDateRangePicker();

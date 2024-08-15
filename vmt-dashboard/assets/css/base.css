@@ -48,11 +48,11 @@ body {
 }
 
 a {
-	color: #2997FF;
+	color: var(--primary-color);
 }
 
 a:hover {
-	color: #4fa5f8;
+	color: var(--primary-hover);
 }
 
 a,
@@ -403,6 +403,10 @@ textarea:focus {
 	color: var(--color-info);
 }
 
+.blue-color {
+	color: var(--color-primary);
+}
+
 .accent-color {
 	color: var(--color-accent);
 }
@@ -602,6 +606,46 @@ textarea:focus {
 
 .button-theme.button-theme_outline__primary.button-theme_fill:hover svg path {
 	fill: var(--text-dark)
+}
+
+.button-theme.button-theme_success {
+	background: var(--color-success);
+	color: var(--bs-white);
+}
+
+.button-theme.button-theme_success:hover {
+	background: #04a969;
+	color: var(--bs-white);
+}
+
+.button-theme.button-theme_danger {
+	background: var(--color-danger);
+	color: var(--bs-white);
+}
+
+.button-theme.button-theme_danger:hover {
+	background: #e33138;
+	color: var(--bs-white);
+}
+
+.button-theme.button-theme_success.button-theme_stroke svg path,
+.button-theme.button-theme_danger.button-theme_stroke svg path {
+	stroke: var(--bs-white);
+}
+
+.button-theme.button-theme_success.button-theme_fill svg path,
+.button-theme.button-theme_danger.button-theme_fill svg path {
+	fill: var(--bs-white);
+}
+
+.button-theme.button-theme_success.button-theme_stroke:hover svg path,
+.button-theme.button-theme_danger.button-theme_stroke:hover svg path {
+	stroke: var(--bs-white)
+}
+
+.button-theme.button-theme_success.button-theme_fill:hover svg path,
+.button-theme.button-theme_danger.button-theme_fill:hover svg path {
+	fill: var(--bs-white)
 }
 
 .daterangepicker {
