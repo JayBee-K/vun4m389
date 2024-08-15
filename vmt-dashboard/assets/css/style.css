@@ -501,6 +501,19 @@
 	border-color: var(--primary-color);
 }
 
+.dashboard-tabs.dashboard-tabs_list .nav-tabs .nav-item .nav-link {
+	border-radius: var(--space);
+	padding: calc(2 * var(--space)) calc(4 * var(--space));
+	font-weight: 600;
+	border: 0;
+}
+
+.dashboard-tabs.dashboard-tabs_list .nav-tabs .nav-item .nav-link.active {
+	color: var(--text-dark);
+	border-color: var(--primary-color);
+	background: var(--primary-color);
+}
+
 .dashboard-notifications_list .notification-item {
 	border-radius: var(--space);
 	position: relative;
@@ -675,7 +688,17 @@
 	padding-left: calc(12 * var(--space));
 }
 
-.dashboard-form .dashboard-form_item.dashboard-form_group .dashboard-form_item__text {
+.dashboard-form .dashboard-form_item.dashboard-form_group .dashboard-form_item__icon.dashboard-form_item__icon__right {
+	left: unset;
+	right: calc(4 * var(--space));
+}
+
+.dashboard-form .dashboard-form_item.dashboard-form_group .dashboard-form_item__icon.dashboard-form_item__icon__right + .dashboard-form_item__input {
+	padding-right: calc(12 * var(--space));
+	padding-left: calc(4 * var(--space));
+}
+
+.dashboard-form .dashboard-form_item.dashboard-form_group .dashboard-form_item__text + .dashboard-form_item__input {
 	font-size: 1em;
 	color: #8D95A3;
 	position: absolute;

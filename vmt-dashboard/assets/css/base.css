@@ -463,161 +463,6 @@ textarea:focus {
 	min-width: 100px !important;
 }
 
-.c-scrim {
-	background-color: rgba(0, 0, 0, 0.4);
-	z-index: 1058;
-}
-
-.c-datepicker {
-	z-index: 1059;
-	min-height: 350px;
-	padding-bottom: 85px;
-	border-radius: 24px;
-	overflow: hidden;
-	top: 75%;
-}
-
-.c-datepicker__calendar {
-	height: auto;
-}
-
-.c-datepicker.c-datepicker {
-	top: 50%;
-}
-
-.c-datepicker,
-.c-datepicker:after,
-.c-datepicker:before,
-.c-datepicker *,
-.c-datepicker *:after,
-.c-datepicker *:before {
-	-webkit-box-sizing: unset;
-	box-sizing: unset;
-}
-
-.c-datepicker__header,
-.c-datepicker__clock,
-.c-datepicker .c-datepicker--show-time:after,
-.c-datepicker .c-datepicker--show-calendar:after {
-	display: none !important;
-}
-
-.c-datepicker__header-day {
-	background-color: var(--primary-color);
-}
-
-.c-datepicker__header-date {
-	background-color: var(--primary-hover);
-}
-
-.c-datepicker__header-date__month {
-	font-size: 1.3em;
-}
-
-.c-datepicker__header-date__day {
-	line-height: 1.35;
-	font-size: 4em;
-}
-
-.c-datepicker__header-date__time {
-	font-size: 1.7em;
-}
-
-.c-datepicker__clock-hands {
-	background-color: var(--primary-color);
-}
-
-.c-datepicker__day--selected {
-	color: var(--bs-white);
-}
-
-.c-datepicker__day--selected::after {
-	background-color: var(--primary-color) !important;
-	z-index: -1;
-}
-
-.c-datepicker__hour-hand,
-.u-hover-ball-effect:hover:before, .c-datepicker__day-body:hover:before, .c-datepicker__clock__num:hover:before, .c-datepicker__clock__am-pm-toggle label:hover:before {
-	background-color: var(--primary-color) !important;
-}
-
-.c-btn {
-	color: var(--dark-700);
-}
-
-.rd-month-label {
-	font-size: 16px;
-	font-weight: 500;
-}
-
-.c-datepicker__day-head {
-	color: var(--dark-color);
-}
-
-.c-datepicker__day-head,
-.c-datepicker__day-body {
-	font-size: 14px;
-}
-
-.c-datepicker .modal-btns {
-	float: none;
-	padding: 5px 15px 15px;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: reverse;
-	-ms-flex-direction: column-reverse;
-	flex-direction: column-reverse;
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	-webkit-transform: translateX(-50%);
-	-ms-transform: translateX(-50%);
-	transform: translateX(-50%);
-	width: calc(100% - 20px);
-}
-
-.c-datepicker .modal-btns .js-ok {
-	padding: 8px 24px;
-	-webkit-box-shadow: none;
-	box-shadow: none;
-	outline: none;
-	border-radius: 56px;
-	border: 1px solid transparent;
-	gap: 8px;
-	display: -webkit-inline-box;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	font-size: .925em;
-	font-weight: 700;
-	-webkit-transition: var(--transition-default);
-	-o-transition: var(--transition-default);
-	transition: var(--transition-default);
-	white-space: nowrap;
-	background-color: var(--primary-color);
-	color: var(--bs-white);
-}
-
-.c-datepicker .modal-btns .js-ok:active {
-	background-color: var(--primary-hover);
-}
-
-.c-datepicker .modal-btns .js-cancel {
-	margin-top: 8px;
-	color: var(--dark-600);
-}
-
-.c-datepicker .modal-btns .js-cancel:active {
-	color: var(--dark-color);
-}
-
 .overflow-y {
 	overflow-y: auto !important;
 	overflow-x: hidden !important;
@@ -757,4 +602,42 @@ textarea:focus {
 
 .button-theme.button-theme_outline__primary.button-theme_fill:hover svg path {
 	fill: var(--text-dark)
+}
+
+.daterangepicker {
+	background: #333333;
+	border: 1px solid #5252523D;
+}
+
+.daterangepicker:after {
+	border-bottom: 6px solid #333333;
+}
+
+.daterangepicker:before {
+	border-bottom: 7px solid #5252523D;
+}
+
+.daterangepicker .calendar-table {
+	background: #333333;
+}
+
+.daterangepicker .calendar-table .next span, .daterangepicker .calendar-table .prev span {
+	border: solid var(--bs-white);
+	border-width: 0 2px 2px 0;
+}
+
+.daterangepicker td.available:hover,
+.daterangepicker th.available:hover {
+	color: var(--primary-color);
+	background-color: transparent;
+}
+
+.daterangepicker td.active, .daterangepicker td.active:hover {
+	background-color: var(--primary-color);
+	color: var(--text-dark);
+}
+
+.daterangepicker td.off, .daterangepicker td.off.in-range, .daterangepicker td.off.start-date, .daterangepicker td.off.end-date {
+	color: var(--bs-gray-700);
+	background-color: transparent;
 }

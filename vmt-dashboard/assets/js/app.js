@@ -71,63 +71,6 @@ export function handleToggleTypePassword() {
 	}
 }
 
-/****
- * Handle Init Material Date
- */
-
-export function handleInitMaterialDate() {
-	let handleInitMaterial = document.querySelectorAll('.handleInitMaterial');
-	if (handleInitMaterial !== null) {
-		handleInitMaterial.forEach(function (item) {
-			const picker = new MaterialDatePicker().on('submit', (val) => {
-				item.value = moment(val.toDate()).format('DD/MM/YYYY');
-			})
-
-			item.addEventListener('click', function () {
-				picker.open()
-			});
-		});
-	}
-}
-
-/****
- * Handle Init Material Date On Load
- */
-
-export function handleInitMaterialOnLoad() {
-	let handleInitMaterialOnLoad = document.getElementById('initMaterial');
-	if (handleInitMaterialOnLoad !== null) {
-		const picker = new MaterialDatePicker().on('submit', function (d) {
-			handleInitMaterialOnLoad.value = d.format("YYYY-MM-DD HH:mm");
-		});
-
-		picker.open();
-
-		setTimeout(() => {
-			const pickerElement = document.querySelector('.c-datepicker');
-			if (pickerElement) {
-				pickerElement.previousSibling.remove();
-				handleInitMaterialOnLoad.parentNode.insertBefore(pickerElement, handleInitMaterialOnLoad.nextSibling);
-			}
-		}, 0);
-
-		handleInitMaterialOnLoad.style.display = 'none';
-	}
-}
-
-/****
- * Handle Call DataPicker Materia
- */
-
-export function handleCallDatePickerMaterial() {
-	let btnCall = document.getElementById('callDatePicker');
-	if (btnCall !== null) {
-		btnCall.addEventListener('click', function () {
-			const picker = new MaterialDatePicker();
-			picker.open()
-		});
-	}
-}
 
 /****
  * Handle Toggle Sidebar
@@ -462,8 +405,10 @@ export function handleRemoveGoods() {
 	}
 }
 
+/****
+ * Handle Slider Avatar - Thumb Product
+ */
 export function handleSliderImagesProduct() {
-
 	let avatarProduct = document.getElementById('productAvatar');
 	let thumbProduct = document.getElementById('productThumb');
 
@@ -502,6 +447,58 @@ export function handleSliderImagesProduct() {
 	}
 }
 
+/****
+ * Handle Init DateRangePicker
+ */
+const handleInitDateRangePicker = function () {
+	$('.initDateRangePicker').each(function () {
+
+		const initDateRangePicker = $(this).daterangepicker({
+			singleDatePicker: true,
+			alwaysShowCalendars: true,
+			timePicker: false,
+			timePicker24Hour: false,
+			timePickerSeconds: false,
+			autoApply: true,
+			locale: {
+				format: 'DD-MM-YYYY',
+				daysOfWeek: [
+					"CN",
+					"T2",
+					"T3",
+					"T4",
+					"T5",
+					"T6",
+					"T7"
+				],
+				monthNames: [
+					"Tháng 1",
+					"Tháng 2",
+					"Tháng 3",
+					"Tháng 4",
+					"Tháng 5",
+					"Tháng 6",
+					"Tháng 7",
+					"Tháng 8",
+					"Tháng 9",
+					"Tháng 10",
+					"Tháng 11",
+					"Tháng 12"
+				],
+				applyLabel: 'Áp dụng',
+				cancelLabel: 'Đóng',
+			}
+		});
+
+		if (typeof type != "undefined" && type === 'time') {
+			initDateRangePicker.on('show.daterangepicker', function (ev, picker) {
+				picker.container.find(".drp-calendar").addClass('px-3');
+				picker.container.find(".calendar-table").hide();
+			});
+		}
+	})
+}
+
 
 window.addEventListener('load', function () {
 	window.addEventListener("resize", () => {
@@ -509,9 +506,6 @@ window.addEventListener('load', function () {
 	});
 
 	handleToggleTypePassword();
-	handleInitMaterialDate();
-	handleInitMaterialOnLoad();
-	handleCallDatePickerMaterial();
 
 	handleSliderHero();
 	handleSliderImagesProduct()
@@ -522,7 +516,8 @@ window.addEventListener('load', function () {
 	handleCharacterInput();
 	handleMoreVoucher();
 	handleAddGoods();
-	handleRemoveGoods()
+	handleRemoveGoods();
+	handleInitDateRangePicker();
 });
 
 
