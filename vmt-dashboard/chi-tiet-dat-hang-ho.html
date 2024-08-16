@@ -33,436 +33,6 @@
 </head>
 <body class="dashboard-scrollbar">
 
-<div class="modal fade dashboard-modal" id="popupVoucher">
-	<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h1 class="modal-title">Mã giảm giá</h1>
-				<button type="button" class="link-default" data-bs-dismiss="modal">
-					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M0.292893 14.2929C-0.0976311 14.6834 -0.0976311 15.3166 0.292893 15.7071C0.683418 16.0976 1.31658 16.0976 1.70711 15.7071L8 9.41421L14.2929 15.7071C14.6834 16.0976 15.3166 16.0976 15.7071 15.7071C16.0976 15.3166 16.0976 14.6834 15.7071 14.2929L9.41421 8L15.7071 1.70711C16.0976 1.31658 16.0976 0.683417 15.7071 0.292894C15.3166 -0.0976312 14.6834 -0.0976312 14.2929 0.292894L8 6.58579L1.70711 0.292895C1.31658 -0.0976293 0.683418 -0.0976293 0.292893 0.292895C-0.097631 0.683419 -0.097631 1.31658 0.292893 1.70711L6.58579 8L0.292893 14.2929Z"
-						      fill="#303236"/>
-					</svg>
-				</button>
-			</div>
-			<div class="modal-body dashboard-scrollbar">
-				<div class="vstack gap-5n">
-					<div class="dashboard-form">
-						<div class="hstack gap-3n">
-							<div class="dashboard-form_item">
-								<input type="text" placeholder="Chọn hoặc nhập mã giảm giá"
-								       class="form-control dashboard-form_item__input">
-							</div>
-							<button type="submit"
-							        class="button-theme button-theme_fill button-theme_primary">
-								Tìm kiếm
-								<svg width="20" height="20" viewBox="0 0 32 32" fill="none"
-								     xmlns="http://www.w3.org/2000/svg">
-									<path d="M15.3337 29.0003C7.80033 29.0003 1.66699 22.867 1.66699 15.3337C1.66699 7.80033 7.80033 1.66699 15.3337 1.66699C22.867 1.66699 29.0003 7.80033 29.0003 15.3337C29.0003 22.867 22.867 29.0003 15.3337 29.0003ZM15.3337 3.66699C8.89366 3.66699 3.66699 8.90699 3.66699 15.3337C3.66699 21.7603 8.89366 27.0003 15.3337 27.0003C21.7737 27.0003 27.0003 21.7603 27.0003 15.3337C27.0003 8.90699 21.7737 3.66699 15.3337 3.66699Z"
-									      fill="#FFCC32"></path>
-									<path d="M29.3333 30.3333C29.0799 30.3333 28.8266 30.2399 28.6266 30.0399L25.9599 27.3733C25.5733 26.9866 25.5733 26.3466 25.9599 25.9599C26.3466 25.5733 26.9866 25.5733 27.3733 25.9599L30.0399 28.6266C30.4266 29.0133 30.4266 29.6533 30.0399 30.0399C29.8399 30.2399 29.5866 30.3333 29.3333 30.3333Z"
-									      fill="#FFCC32"></path>
-								</svg>
-							</button>
-						</div>
-					</div>
-					<div class="dashboard-voucher vstack gap-6n">
-						<div class="dashboard-voucher_item handleMore">
-							<div class="dashboard-voucher_heading hstack gap-4 justify-content-between">
-								<div class="dashboard-voucher_heading__title fz-15 fw-500 text-white">
-									Mã giảm giá
-								</div>
-								<div class="dashboard-voucher_heading__text fz-13 fw-500">
-									Áp dụng tối đa: 1
-								</div>
-							</div>
-							<div class="voucher-list vstack gap-4n">
-								<div class="voucher-item active">
-									<div class="voucher-item_image">
-										<img src="./assets/images/voucher-image.png" alt="">
-									</div>
-									<div class="voucher-item_content vstack align-self-center gap-1">
-										<div class="voucher-item_title fz-16 fw-700 text-white lh-sm">
-											Giảm 2%
-										</div>
-										<div class="voucher-item_desc fz-14">
-											Cho đơn hàng từ 10 triệu
-										</div>
-										<div class="voucher-item_quantity">
-											<div class="voucher-item_stock fz-12 fw-600 text-white">
-												Đã dùng <span>85%</span>
-											</div>
-											<div class="voucher-item_expire fz-12 text-white">
-												Sắp hết hạn: Còn 3 giờ
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="voucher-item">
-									<div class="voucher-item_image">
-										<img src="./assets/images/voucher-image.png" alt="">
-									</div>
-									<div class="voucher-item_content vstack align-self-center gap-1">
-										<div class="voucher-item_title fz-16 fw-700 text-white lh-sm">
-											Giảm 2%
-										</div>
-										<div class="voucher-item_desc fz-14">
-											Cho đơn hàng từ 10 triệu
-										</div>
-										<div class="voucher-item_quantity">
-											<div class="voucher-item_stock fz-12 fw-600 text-white">
-												Đã dùng <span>85%</span>
-											</div>
-											<div class="voucher-item_expire fz-12 text-white">
-												Sắp hết hạn: Còn 3 giờ
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="voucher-item handleMoreListItem">
-									<div class="voucher-item_image">
-										<img src="./assets/images/voucher-image.png" alt="">
-									</div>
-									<div class="voucher-item_content vstack align-self-center gap-1">
-										<div class="voucher-item_title fz-16 fw-700 text-white lh-sm">
-											Giảm 2%
-										</div>
-										<div class="voucher-item_desc fz-14">
-											Cho đơn hàng từ 10 triệu
-										</div>
-										<div class="voucher-item_quantity">
-											<div class="voucher-item_stock fz-12 fw-600 text-white">
-												Đã dùng <span>85%</span>
-											</div>
-											<div class="voucher-item_expire fz-12 text-white">
-												Sắp hết hạn: Còn 3 giờ
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="voucher-item handleMoreListItem">
-									<div class="voucher-item_image">
-										<img src="./assets/images/voucher-image.png" alt="">
-									</div>
-									<div class="voucher-item_content vstack align-self-center gap-1">
-										<div class="voucher-item_title fz-16 fw-700 text-white lh-sm">
-											Giảm 2%
-										</div>
-										<div class="voucher-item_desc fz-14">
-											Cho đơn hàng từ 10 triệu
-										</div>
-										<div class="voucher-item_quantity">
-											<div class="voucher-item_stock fz-12 fw-600 text-white">
-												Đã dùng <span>85%</span>
-											</div>
-											<div class="voucher-item_expire fz-12 text-white">
-												Sắp hết hạn: Còn 3 giờ
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="voucher-item handleMoreListItem">
-									<div class="voucher-item_image">
-										<img src="./assets/images/voucher-image.png" alt="">
-									</div>
-									<div class="voucher-item_content vstack align-self-center gap-1">
-										<div class="voucher-item_title fz-16 fw-700 text-white lh-sm">
-											Giảm 2%
-										</div>
-										<div class="voucher-item_desc fz-14">
-											Cho đơn hàng từ 10 triệu
-										</div>
-										<div class="voucher-item_quantity">
-											<div class="voucher-item_stock fz-12 fw-600 text-white">
-												Đã dùng <span>85%</span>
-											</div>
-											<div class="voucher-item_expire fz-12 text-white">
-												Sắp hết hạn: Còn 3 giờ
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="voucher-item handleMoreListItem">
-									<div class="voucher-item_image">
-										<img src="./assets/images/voucher-image.png" alt="">
-									</div>
-									<div class="voucher-item_content vstack align-self-center gap-1">
-										<div class="voucher-item_title fz-16 fw-700 text-white lh-sm">
-											Giảm 2%
-										</div>
-										<div class="voucher-item_desc fz-14">
-											Cho đơn hàng từ 10 triệu
-										</div>
-										<div class="voucher-item_quantity">
-											<div class="voucher-item_stock fz-12 fw-600 text-white">
-												Đã dùng <span>85%</span>
-											</div>
-											<div class="voucher-item_expire fz-12 text-white">
-												Sắp hết hạn: Còn 3 giờ
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="voucher-item handleMoreListItem">
-									<div class="voucher-item_image">
-										<img src="./assets/images/voucher-image.png" alt="">
-									</div>
-									<div class="voucher-item_content vstack align-self-center gap-1">
-										<div class="voucher-item_title fz-16 fw-700 text-white lh-sm">
-											Giảm 2%
-										</div>
-										<div class="voucher-item_desc fz-14">
-											Cho đơn hàng từ 10 triệu
-										</div>
-										<div class="voucher-item_quantity">
-											<div class="voucher-item_stock fz-12 fw-600 text-white">
-												Đã dùng <span>85%</span>
-											</div>
-											<div class="voucher-item_expire fz-12 text-white">
-												Sắp hết hạn: Còn 3 giờ
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="voucher-item handleMoreListItem">
-									<div class="voucher-item_image">
-										<img src="./assets/images/voucher-image.png" alt="">
-									</div>
-									<div class="voucher-item_content vstack align-self-center gap-1">
-										<div class="voucher-item_title fz-16 fw-700 text-white lh-sm">
-											Giảm 2%
-										</div>
-										<div class="voucher-item_desc fz-14">
-											Cho đơn hàng từ 10 triệu
-										</div>
-										<div class="voucher-item_quantity">
-											<div class="voucher-item_stock fz-12 fw-600 text-white">
-												Đã dùng <span>85%</span>
-											</div>
-											<div class="voucher-item_expire fz-12 text-white">
-												Sắp hết hạn: Còn 3 giờ
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="voucher-expand text-center mt-2">
-								<button type="submit"
-								        class="button-theme button-theme_fill button-theme_primary handleMoreButton">
-									Xem thêm
-									<svg width="15" height="8" viewBox="0 0 15 8" fill="none"
-									     xmlns="http://www.w3.org/2000/svg">
-										<path fill-rule="evenodd" clip-rule="evenodd"
-										      d="M14.2071 0.292893C14.5976 0.683418 14.5976 1.31658 14.2071 1.70711L8.20711 7.70711C7.81658 8.09763 7.18342 8.09763 6.79289 7.70711L0.792892 1.70711C0.402368 1.31658 0.402369 0.683417 0.792892 0.292893C1.18342 -0.0976317 1.81658 -0.0976317 2.20711 0.292893L7.5 5.58579L12.7929 0.292893C13.1834 -0.0976312 13.8166 -0.0976311 14.2071 0.292893Z"
-										      fill="#F5C349"/>
-									</svg>
-								</button>
-							</div>
-						</div>
-						<div class="dashboard-voucher_item handleMore">
-							<div class="dashboard-voucher_heading hstack gap-4 justify-content-between">
-								<div class="dashboard-voucher_heading__title fz-15 fw-500 text-white">
-									Mã vận chuyển
-								</div>
-								<div class="dashboard-voucher_heading__text fz-13 fw-500">
-									Áp dụng tối đa: 1
-								</div>
-							</div>
-							<div class="voucher-list vstack gap-4n">
-								<div class="voucher-item active">
-									<div class="voucher-item_image">
-										<img src="./assets/images/voucher-image.png" alt="">
-									</div>
-									<div class="voucher-item_content vstack align-self-center gap-1">
-										<div class="voucher-item_title fz-16 fw-700 text-white lh-sm">
-											Giảm 2%
-										</div>
-										<div class="voucher-item_desc fz-14">
-											Cho đơn hàng từ 10 triệu
-										</div>
-										<div class="voucher-item_quantity">
-											<div class="voucher-item_stock fz-12 fw-600 text-white">
-												Đã dùng <span>85%</span>
-											</div>
-											<div class="voucher-item_expire fz-12 text-white">
-												Sắp hết hạn: Còn 3 giờ
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="voucher-item">
-									<div class="voucher-item_image">
-										<img src="./assets/images/voucher-image.png" alt="">
-									</div>
-									<div class="voucher-item_content vstack align-self-center gap-1">
-										<div class="voucher-item_title fz-16 fw-700 text-white lh-sm">
-											Giảm 2%
-										</div>
-										<div class="voucher-item_desc fz-14">
-											Cho đơn hàng từ 10 triệu
-										</div>
-										<div class="voucher-item_quantity">
-											<div class="voucher-item_stock fz-12 fw-600 text-white">
-												Đã dùng <span>85%</span>
-											</div>
-											<div class="voucher-item_expire fz-12 text-white">
-												Sắp hết hạn: Còn 3 giờ
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="voucher-item handleMoreListItem">
-									<div class="voucher-item_image">
-										<img src="./assets/images/voucher-image.png" alt="">
-									</div>
-									<div class="voucher-item_content vstack align-self-center gap-1">
-										<div class="voucher-item_title fz-16 fw-700 text-white lh-sm">
-											Giảm 2%
-										</div>
-										<div class="voucher-item_desc fz-14">
-											Cho đơn hàng từ 10 triệu
-										</div>
-										<div class="voucher-item_quantity">
-											<div class="voucher-item_stock fz-12 fw-600 text-white">
-												Đã dùng <span>85%</span>
-											</div>
-											<div class="voucher-item_expire fz-12 text-white">
-												Sắp hết hạn: Còn 3 giờ
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="voucher-item handleMoreListItem">
-									<div class="voucher-item_image">
-										<img src="./assets/images/voucher-image.png" alt="">
-									</div>
-									<div class="voucher-item_content vstack align-self-center gap-1">
-										<div class="voucher-item_title fz-16 fw-700 text-white lh-sm">
-											Giảm 2%
-										</div>
-										<div class="voucher-item_desc fz-14">
-											Cho đơn hàng từ 10 triệu
-										</div>
-										<div class="voucher-item_quantity">
-											<div class="voucher-item_stock fz-12 fw-600 text-white">
-												Đã dùng <span>85%</span>
-											</div>
-											<div class="voucher-item_expire fz-12 text-white">
-												Sắp hết hạn: Còn 3 giờ
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="voucher-item handleMoreListItem">
-									<div class="voucher-item_image">
-										<img src="./assets/images/voucher-image.png" alt="">
-									</div>
-									<div class="voucher-item_content vstack align-self-center gap-1">
-										<div class="voucher-item_title fz-16 fw-700 text-white lh-sm">
-											Giảm 2%
-										</div>
-										<div class="voucher-item_desc fz-14">
-											Cho đơn hàng từ 10 triệu
-										</div>
-										<div class="voucher-item_quantity">
-											<div class="voucher-item_stock fz-12 fw-600 text-white">
-												Đã dùng <span>85%</span>
-											</div>
-											<div class="voucher-item_expire fz-12 text-white">
-												Sắp hết hạn: Còn 3 giờ
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="voucher-item handleMoreListItem">
-									<div class="voucher-item_image">
-										<img src="./assets/images/voucher-image.png" alt="">
-									</div>
-									<div class="voucher-item_content vstack align-self-center gap-1">
-										<div class="voucher-item_title fz-16 fw-700 text-white lh-sm">
-											Giảm 2%
-										</div>
-										<div class="voucher-item_desc fz-14">
-											Cho đơn hàng từ 10 triệu
-										</div>
-										<div class="voucher-item_quantity">
-											<div class="voucher-item_stock fz-12 fw-600 text-white">
-												Đã dùng <span>85%</span>
-											</div>
-											<div class="voucher-item_expire fz-12 text-white">
-												Sắp hết hạn: Còn 3 giờ
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="voucher-item handleMoreListItem">
-									<div class="voucher-item_image">
-										<img src="./assets/images/voucher-image.png" alt="">
-									</div>
-									<div class="voucher-item_content vstack align-self-center gap-1">
-										<div class="voucher-item_title fz-16 fw-700 text-white lh-sm">
-											Giảm 2%
-										</div>
-										<div class="voucher-item_desc fz-14">
-											Cho đơn hàng từ 10 triệu
-										</div>
-										<div class="voucher-item_quantity">
-											<div class="voucher-item_stock fz-12 fw-600 text-white">
-												Đã dùng <span>85%</span>
-											</div>
-											<div class="voucher-item_expire fz-12 text-white">
-												Sắp hết hạn: Còn 3 giờ
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="voucher-item handleMoreListItem">
-									<div class="voucher-item_image">
-										<img src="./assets/images/voucher-image.png" alt="">
-									</div>
-									<div class="voucher-item_content vstack align-self-center gap-1">
-										<div class="voucher-item_title fz-16 fw-700 text-white lh-sm">
-											Giảm 2%
-										</div>
-										<div class="voucher-item_desc fz-14">
-											Cho đơn hàng từ 10 triệu
-										</div>
-										<div class="voucher-item_quantity">
-											<div class="voucher-item_stock fz-12 fw-600 text-white">
-												Đã dùng <span>85%</span>
-											</div>
-											<div class="voucher-item_expire fz-12 text-white">
-												Sắp hết hạn: Còn 3 giờ
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="voucher-expand text-center mt-2">
-								<button type="submit"
-								        class="button-theme button-theme_fill button-theme_primary handleMoreButton">
-									Xem thêm
-									<svg width="15" height="8" viewBox="0 0 15 8" fill="none"
-									     xmlns="http://www.w3.org/2000/svg">
-										<path fill-rule="evenodd" clip-rule="evenodd"
-										      d="M14.2071 0.292893C14.5976 0.683418 14.5976 1.31658 14.2071 1.70711L8.20711 7.70711C7.81658 8.09763 7.18342 8.09763 6.79289 7.70711L0.792892 1.70711C0.402368 1.31658 0.402369 0.683417 0.792892 0.292893C1.18342 -0.0976317 1.81658 -0.0976317 2.20711 0.292893L7.5 5.58579L12.7929 0.292893C13.1834 -0.0976312 13.8166 -0.0976311 14.2071 0.292893Z"
-										      fill="#F5C349"/>
-									</svg>
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="modal-footer">
-				<button type="button" data-bs-dismiss="modal" class="button-theme button-theme_primary w-100 rounded-2 m-0">
-					Áp dụng
-				</button>
-			</div>
-		</div>
-	</div>
-</div>
-
 <div class="dashboard-page position-relative overflow-y w-100">
 	<div class="dashboard-sidebar dashboard-scrollbar position-fixed start-0 top-0 vh-100 zi-10 background-secondary-dark overflow-y">
 		<div class="sidebar-logo position-relative hstack justify-content-center">
@@ -741,13 +311,19 @@
 			</button>
 			<a href="" class="hstack gap-2n header-toolbar_item active fz-15 fw-500 link-default">
 				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M20.5 16.75H18.25V14.5C18.25 14.09 17.91 13.75 17.5 13.75C17.09 13.75 16.75 14.09 16.75 14.5V16.75H14.5C14.09 16.75 13.75 17.09 13.75 17.5C13.75 17.91 14.09 18.25 14.5 18.25H16.75V20.5C16.75 20.91 17.09 21.25 17.5 21.25C17.91 21.25 18.25 20.91 18.25 20.5V18.25H20.5C20.91 18.25 21.25 17.91 21.25 17.5C21.25 17.09 20.91 16.75 20.5 16.75Z" fill="#FFCC32"/>
-					<path d="M22 8.52V3.98C22 2.57 21.36 2 19.77 2H15.73C14.14 2 13.5 2.57 13.5 3.98V8.51C13.5 9.93 14.14 10.49 15.73 10.49H19.77C21.36 10.5 22 9.93 22 8.52Z" fill="#FFCC32"/>
-					<path d="M10.5 8.52V3.98C10.5 2.57 9.86 2 8.27 2H4.23C2.64 2 2 2.57 2 3.98V8.51C2 9.93 2.64 10.49 4.23 10.49H8.27C9.86 10.5 10.5 9.93 10.5 8.52Z" fill="#FFCC32"/>
-					<path d="M10.5 19.77V15.73C10.5 14.14 9.86 13.5 8.27 13.5H4.23C2.64 13.5 2 14.14 2 15.73V19.77C2 21.36 2.64 22 4.23 22H8.27C9.86 22 10.5 21.36 10.5 19.77Z" fill="#FFCC32"/>
+					<path d="M8.28906 6.29C7.86906 6.29 7.53906 5.95 7.53906 5.54V2.75C7.53906 2.34 7.86906 2 8.28906 2C8.70906 2 9.03906 2.34 9.03906 2.75V5.53C9.03906 5.95 8.70906 6.29 8.28906 6.29Z"
+					      fill="#FFCC32"/>
+					<path d="M15.7109 6.29C15.2909 6.29 14.9609 5.95 14.9609 5.54V2.75C14.9609 2.33 15.3009 2 15.7109 2C16.1309 2 16.4609 2.34 16.4609 2.75V5.53C16.4609 5.95 16.1309 6.29 15.7109 6.29Z"
+					      fill="#FFCC32"/>
+					<path d="M21.4995 15.8197C21.4995 15.9697 21.4495 16.1197 21.3195 16.2497C19.8695 17.7097 17.2895 20.3097 15.8095 21.7997C15.6795 21.9397 15.5095 21.9997 15.3395 21.9997C15.0095 21.9997 14.6895 21.7397 14.6895 21.3597V17.8597C14.6895 16.3997 15.9295 15.1897 17.4495 15.1897C18.3995 15.1797 19.7195 15.1797 20.8495 15.1797C21.2395 15.1797 21.4995 15.4897 21.4995 15.8197Z"
+					      fill="#FFCC32"/>
+					<path d="M21.4995 15.8197C21.4995 15.9697 21.4495 16.1197 21.3195 16.2497C19.8695 17.7097 17.2895 20.3097 15.8095 21.7997C15.6795 21.9397 15.5095 21.9997 15.3395 21.9997C15.0095 21.9997 14.6895 21.7397 14.6895 21.3597V17.8597C14.6895 16.3997 15.9295 15.1897 17.4495 15.1897C18.3995 15.1797 19.7195 15.1797 20.8495 15.1797C21.2395 15.1797 21.4995 15.4897 21.4995 15.8197Z"
+					      fill="#FFCC32"/>
+					<path d="M19.57 4.5C18.91 4.01 17.96 4.48 17.96 5.31V5.41C17.96 6.58 17.12 7.66 15.95 7.78C14.6 7.92 13.46 6.86 13.46 5.54V4.5C13.46 3.95 13.01 3.5 12.46 3.5H11.54C10.99 3.5 10.54 3.95 10.54 4.5V5.41C10.54 6.29 10.07 7.11 9.34 7.51C9.3 7.54 9.26 7.56 9.22 7.58C9.21 7.58 9.21 7.59 9.2 7.59C9.13 7.62 9.06 7.65 8.98 7.68C8.96 7.69 8.94 7.69 8.92 7.7C8.8 7.74 8.67 7.77 8.53 7.78H8.52C8.37 7.8 8.21 7.8 8.06 7.78H8.05C7.91 7.77 7.78 7.74 7.66 7.7C7.56 7.67 7.46 7.63 7.36 7.58C6.58 7.23 6.04 6.45 6.04 5.54V5.31C6.04 4.54 5.22 4.08 4.57 4.41C4.56 4.42 4.55 4.42 4.54 4.43H4.53C4.46 4.48 4.4 4.53 4.33 4.58C4.22 4.67 4.11 4.76 4.01 4.86C3.94 4.93 3.87 5 3.81 5.07C3.73 5.15 3.66 5.23 3.59 5.32C3.54 5.38 3.48 5.44 3.44 5.51C3.39 5.57 3.35 5.64 3.31 5.7C3.3 5.71 3.29 5.72 3.28 5.74C3.19 5.87 3.11 6.02 3.04 6.16C3.02 6.18 3.01 6.19 3.01 6.21C2.95 6.33 2.89 6.45 2.85 6.58C2.82 6.63 2.81 6.67 2.79 6.72C2.77 6.76 2.76 6.81 2.74 6.85C2.71 6.95 2.68 7.06 2.65 7.17C2.61 7.31 2.58 7.46 2.56 7.61C2.54 7.72 2.53 7.83 2.52 7.95C2.51 8.09 2.5 8.23 2.5 8.37V17.13C2.5 19.82 4.68 22 7.37 22H12.19C12.74 22 13.19 21.55 13.19 21V17.86C13.19 15.56 15.1 13.69 17.45 13.69C17.98 13.68 19.27 13.68 20.5 13.68C21.05 13.68 21.5 13.23 21.5 12.68V8.37C21.5 6.78 20.74 5.39 19.57 4.5ZM11.13 15.91C11.04 16.21 10.76 16.42 10.43 16.42H6.79C6.74 16.42 6.7 16.42 6.66 16.4C6.3 16.35 6.04 16.04 6.04 15.67C6.04 15.25 6.37 14.91 6.79 14.91H10.43C10.84 14.91 11.18 15.25 11.18 15.67C11.18 15.75 11.17 15.84 11.13 15.91ZM13.91 12.2C13.82 12.5 13.54 12.71 13.21 12.71H6.79C6.74 12.71 6.7 12.71 6.66 12.69C6.3 12.64 6.04 12.33 6.04 11.96C6.04 11.54 6.37 11.2 6.79 11.2H13.21C13.63 11.2 13.96 11.54 13.96 11.96C13.96 12.04 13.95 12.13 13.91 12.2Z"
+					      fill="#FFCC32"/>
 				</svg>
 				<span class="d-none d-lg-inline">
-					Tạo đơn thanh toán / ủy quyền
+					Chi tiết đơn hàng
 				</span>
 			</a>
 		</div>
@@ -814,213 +390,344 @@
 		</div>
 	</div>
 	<div class="dashboard-main position-relative">
-		<div class="dashboard-pay">
-			<div class="row g-4">
-				<div class="col-md-8 col-xl-9">
-					<div class="dashboard-box_large background-secondary-dark">
-						<div class="dashboard-title">
-							Tạo yêu cầu thanh toán hộ
-						</div>
-						<div class="fz-13 text-white mt-2">
-							<span class="danger-color">*Lưu ý</span>
-							Yêu cầu không đúng thực tế, yêu cầu sẽ bị huỷ và hoàn tiền. Gom nhiều thanh toán vào
-							chung yêu cầu để hưởng tỉ giá tốt hơn
-						</div>
-						<div class="dashboard-form dashboard-gap">
-							<form action="">
-								<div class="dashboard-form_item">
-									<select name="" id="" class="form-select dashboard-form_item__select">
-										<option value="" selected>Ủy quyền thanh toán</option>
-										<option value="">Alipay VN</option>
-										<option value="">Alipay TQ</option>
-										<option value="">Wechat</option>
-										<option value="">Chuyển khoản thẻ</option>
-									</select>
-								</div>
-								<div class="dashboard-gap">
-									<div class="vstack gap-4n dashboard-form_box">
-										<div class="dashboard-form_heading gap-6n hstack justify-content-between">
-											<div class="dashboard-form_heading__title text-nowrap flex-shrink-0 fz-16 fw-600 text-white">
-												Đơn thanh toán hộ 01
-											</div>
-											<div class="dashboard-form_heading__line"></div>
-											<button type="button"
-											        class="dashboard-form_heading__button flex-shrink-0">
-												Xóa đơn
-											</button>
-										</div>
-										<div class="row g-3">
-											<div class="col-sm-6 col-lg-12 col-xl-6">
-												<div class="dashboard-form_item">
-													<input type="text" placeholder="Nhập số RMB"
-													       class="form-control dashboard-form_item__input">
-												</div>
-											</div>
-											<div class="col-sm-6 col-lg-12 col-xl-6">
-												<div class="dashboard-form_item">
-													<input type="text" placeholder="Email sử dụng dịch vụ"
-													       class="form-control dashboard-form_item__input">
-												</div>
-											</div>
-											<div class="col-sm-6 col-lg-12 col-xl-6">
-												<div class="dashboard-form_item dashboard-form_group">
-													<button type="button" class="dashboard-form_item__button">
-														Dán link
-													</button>
-													<input type="text" placeholder="Link sản phẩm thanh toán"
-													       class="form-control dashboard-form_item__input">
-												</div>
-											</div>
-											<div class="col-sm-6 col-lg-12 col-xl-6">
-												<div class="dashboard-form_item">
-													<input type="text" placeholder="Ghi chú của bạn"
-													       class="form-control dashboard-form_item__input">
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="dashboard-gap">
-									<div class="vstack gap-4n dashboard-form_box">
-										<div class="dashboard-form_heading gap-6n hstack justify-content-between">
-											<div class="dashboard-form_heading__title text-nowrap flex-shrink-0 fz-16 fw-600 text-white">
-												Đơn thanh toán hộ 02
-											</div>
-											<div class="dashboard-form_heading__line"></div>
-											<button type="button"
-											        class="dashboard-form_heading__button flex-shrink-0">
-												Xóa đơn
-											</button>
-										</div>
-										<div class="row g-3">
-											<div class="col-sm-6 col-lg-12 col-xl-6">
-												<div class="dashboard-form_item">
-													<input type="text" placeholder="Nhập số RMB"
-													       class="form-control dashboard-form_item__input">
-												</div>
-											</div>
-											<div class="col-sm-6 col-lg-12 col-xl-6">
-												<div class="dashboard-form_item">
-													<input type="text" placeholder="Email sử dụng dịch vụ"
-													       class="form-control dashboard-form_item__input">
-												</div>
-											</div>
-											<div class="col-sm-6 col-lg-12 col-xl-6">
-												<div class="dashboard-form_item dashboard-form_group">
-													<button type="button" class="dashboard-form_item__button">
-														Dán link
-													</button>
-													<input type="text" placeholder="Link sản phẩm thanh toán"
-													       class="form-control dashboard-form_item__input">
-												</div>
-											</div>
-											<div class="col-sm-6 col-lg-12 col-xl-6">
-												<div class="dashboard-form_item">
-													<input type="text" placeholder="Ghi chú của bạn"
-													       class="form-control dashboard-form_item__input">
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="dashboard-gap">
-									<button type="submit"
-									        class="button-theme button-theme_stroke button-theme_large button-theme_outline__primary w-100">
-										Thêm yêu cầu thanh toán
-										<svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+		<div class="dashboard-detail">
+			<div class="detail-header hstack gap-3n">
+				<div class="detail-header_back">
+					<a href="" class="link-default hstack gap-1n">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M15.0508 19.9201L8.53078 13.4001C7.76078 12.6301 7.76078 11.3701 8.53078 10.6001L15.0508 4.08008"
+							      stroke="#FFCC32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+							      stroke-linejoin="round"/>
+						</svg>
+						Trở lại
+					</a>
+				</div>
+				<div class="detail-header_logo ms-lg-auto">
+					<img src="./assets/images/brand-avatar.png" class="img-fluid" alt="">
+				</div>
+				<div class="detail-header_line"></div>
+				<div class="detail-header_code primary-color">
+					<span>DHH12345</span>
+					<button type="button" class="link-default">
+						<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+							      d="M1.20015 3.52574C0.878975 3.84692 0.697674 4.38325 0.697674 5.27907V7.04651C0.697674 7.94234 0.878975 8.47867 1.20015 8.79985C1.52133 9.12103 2.05766 9.30233 2.95349 9.30233H4.72092C5.61675 9.30233 6.15308 9.12103 6.47426 8.79985C6.79543 8.47867 6.97674 7.94234 6.97674 7.04651V5.65117C6.97674 5.45851 7.13292 5.30233 7.32557 5.30233C7.51823 5.30233 7.67441 5.45851 7.67441 5.65117V7.04651C7.67441 8.01115 7.48362 8.77715 6.96759 9.29318C6.45156 9.80921 5.68556 10 4.72092 10H2.95349C1.98885 10 1.22285 9.80921 0.706822 9.29318C0.190791 8.77715 0 8.01115 0 7.04651V5.27907C0 4.31444 0.190791 3.54844 0.706822 3.03241C1.22285 2.51638 1.98885 2.32559 2.95349 2.32559H4.34883C4.54149 2.32559 4.69767 2.48177 4.69767 2.67443C4.69767 2.86708 4.54149 3.02326 4.34883 3.02326H2.95349C2.05766 3.02326 1.52133 3.20456 1.20015 3.52574Z"
+							      fill="#8D95A3"></path>
+							<path fill-rule="evenodd" clip-rule="evenodd"
+							      d="M4.21534 2.35214C4.34569 2.29815 4.49573 2.32799 4.5955 2.42776L7.57224 5.4045C7.67201 5.50427 7.70185 5.65431 7.64786 5.78466C7.59386 5.91501 7.46666 6 7.32557 6H5.8372C5.25974 6 4.76376 5.90826 4.42775 5.57225C4.09174 5.23624 4 4.74026 4 4.1628V2.67443C4 2.53333 4.08499 2.40614 4.21534 2.35214ZM4.69767 3.51659V4.1628C4.69767 4.70161 4.79197 4.94981 4.92108 5.07892C5.05018 5.20803 5.29839 5.30233 5.8372 5.30233H6.48341L4.69767 3.51659Z"
+							      fill="#8D95A3"></path>
+							<path fill-rule="evenodd" clip-rule="evenodd"
+							      d="M4.46511 0.348847C4.46511 0.15619 4.62129 1.02026e-05 4.81395 1.02026e-05H6.67441C6.86707 1.02026e-05 7.02325 0.15619 7.02325 0.348847C7.02325 0.541504 6.86707 0.697684 6.67441 0.697684H4.81395C4.62129 0.697684 4.46511 0.541504 4.46511 0.348847Z"
+							      fill="#8D95A3"></path>
+							<path fill-rule="evenodd" clip-rule="evenodd"
+							      d="M4.06976 0.697684C3.49033 0.697684 3.02325 1.16476 3.02325 1.74419C3.02325 1.93685 2.86707 2.09303 2.67442 2.09303C2.48176 2.09303 2.32558 1.93685 2.32558 1.74419C2.32558 0.779445 3.10501 1.02026e-05 4.06976 1.02026e-05H5.28837C5.48102 1.02026e-05 5.6372 0.15619 5.6372 0.348847C5.6372 0.541504 5.48102 0.697684 5.28837 0.697684H4.06976Z"
+							      fill="#8D95A3"></path>
+							<path fill-rule="evenodd" clip-rule="evenodd"
+							      d="M9.65115 2.7907C9.84381 2.7907 9.99999 2.94688 9.99999 3.13954V6.01861C9.99999 6.93219 9.25776 7.67442 8.34418 7.67442C8.15152 7.67442 7.99534 7.51824 7.99534 7.32558C7.99534 7.13293 8.15152 6.97675 8.34418 6.97675C8.87245 6.97675 9.30232 6.54688 9.30232 6.01861V3.13954C9.30232 2.94688 9.4585 2.7907 9.65115 2.7907Z"
+							      fill="#8D95A3"></path>
+							<path fill-rule="evenodd" clip-rule="evenodd"
+							      d="M6.72696 0.0265638C6.85732 -0.0274295 7.00736 0.00241551 7.10712 0.102182L9.89782 2.89288C9.99758 2.99264 10.0274 3.14268 9.97344 3.27304C9.91944 3.40339 9.79224 3.48838 9.65115 3.48838H8.25581C7.71322 3.48838 7.2405 3.40245 6.91903 3.08097C6.59755 2.7595 6.51162 2.28677 6.51162 1.74419V0.348847C6.51162 0.207756 6.59661 0.0805571 6.72696 0.0265638ZM7.20929 1.19101V1.74419C7.20929 2.24812 7.29778 2.47307 7.41235 2.58764C7.52693 2.70222 7.75187 2.7907 8.25581 2.7907H8.80899L7.20929 1.19101Z"
+							      fill="#8D95A3"></path>
+						</svg>
+					</button>
+				</div>
+				<div class="detail-header_status">
+					Chờ báo giá
+					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M3.33366 10C2.70699 10 2.12699 10.22 1.66699 10.5867C1.05366 11.0733 0.666992 11.8267 0.666992 12.6667C0.666992 14.14 1.86033 15.3333 3.33366 15.3333C4.00699 15.3333 4.62033 15.08 5.09366 14.6667C5.64699 14.18 6.00033 13.4667 6.00033 12.6667C6.00033 11.1933 4.80699 10 3.33366 10ZM4.00033 12.8333C4.00033 13.0067 3.90699 13.1733 3.76033 13.26L2.92699 13.76C2.84699 13.8133 2.75366 13.8333 2.66699 13.8333C2.50033 13.8333 2.33366 13.7467 2.24033 13.5933C2.10033 13.3533 2.17366 13.0467 2.41366 12.9067L3.00699 12.5533V11.8333C3.00033 11.56 3.22699 11.3333 3.50033 11.3333C3.77366 11.3333 4.00033 11.56 4.00033 11.8333V12.8333Z"
+						      fill="#FFCC32"></path>
+						<path d="M9.90033 2.63288V5.16621H8.90033V2.63288C8.90033 2.45288 8.74033 2.36621 8.63366 2.36621C8.60033 2.36621 8.56699 2.37288 8.53366 2.38621L3.24699 4.37954C2.89366 4.51288 2.66699 4.84621 2.66699 5.22621V5.67288C2.06033 6.12621 1.66699 6.85288 1.66699 7.67288V5.22621C1.66699 4.43288 2.15366 3.72621 2.89366 3.44621L8.18699 1.44621C8.33366 1.39288 8.48699 1.36621 8.63366 1.36621C9.30033 1.36621 9.90033 1.90621 9.90033 2.63288Z"
+						      fill="#FFCC32"></path>
+						<path d="M14.3331 9.66634V10.333C14.3331 10.513 14.1931 10.6597 14.0065 10.6663H13.0331C12.6798 10.6663 12.3598 10.4063 12.3331 10.0597C12.3131 9.85301 12.3931 9.65967 12.5265 9.52634C12.6465 9.39967 12.8131 9.33301 12.9931 9.33301H13.9998C14.1931 9.33967 14.3331 9.48634 14.3331 9.66634Z"
+						      fill="#FFCC32"></path>
+						<path d="M12.987 8.63366H13.667C14.0337 8.63366 14.3337 8.33366 14.3337 7.96699V7.67366C14.3337 6.29366 13.207 5.16699 11.827 5.16699H4.17366C3.60699 5.16699 3.08699 5.35366 2.66699 5.67366C2.06033 6.12699 1.66699 6.85366 1.66699 7.67366V8.86033C1.66699 9.11366 1.93366 9.27366 2.17366 9.19366C2.54699 9.06699 2.94033 9.00033 3.33366 9.00033C5.35366 9.00033 7.00033 10.647 7.00033 12.667C7.00033 13.147 6.87366 13.6737 6.67366 14.1403C6.56699 14.3803 6.73366 14.667 6.99366 14.667H11.827C13.207 14.667 14.3337 13.5403 14.3337 12.1603V12.0337C14.3337 11.667 14.0337 11.367 13.667 11.367H13.087C12.447 11.367 11.8337 10.9737 11.667 10.3537C11.5337 9.84699 11.6937 9.35366 12.027 9.03366C12.2737 8.78033 12.6137 8.63366 12.987 8.63366ZM9.33366 8.50033H6.00033C5.72699 8.50033 5.50033 8.27366 5.50033 8.00033C5.50033 7.72699 5.72699 7.50033 6.00033 7.50033H9.33366C9.60699 7.50033 9.83366 7.72699 9.83366 8.00033C9.83366 8.27366 9.60699 8.50033 9.33366 8.50033Z"
+						      fill="#FFCC32"></path>
+					</svg>
+				</div>
+				<div class="detail-header_time ms-lg-0">
+					Tạo lúc 23:59 01/01/2024
+				</div>
+			</div>
+			<div class="detail-body">
+				<div class="row g-lg-4 g-5">
+					<div class="col-md-4 col-xl-3">
+						<div class="dashboard-box dashboard-right background-secondary-dark vstack gap-4n">
+							<div class="dashboard-sub text-center hstack gap-3n justify-content-center">
+								Thông tin tài chính đơn hàng
+							</div>
+							<div class="vstack gap-3n dashboard-right_desc">
+								<div class="hstack gap-2n fw-600 text-white">
+									<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+									     xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_1136_30345)">
+											<path d="M15.4648 6.3375C14.6773 2.8725 11.6548 1.3125 8.99983 1.3125C8.99983 1.3125 8.99983 1.3125 8.99233 1.3125C6.34483 1.3125 3.31483 2.865 2.52733 6.33C1.64983 10.2 4.01983 13.4775 6.16483 15.54C6.95983 16.305 7.97983 16.6875 8.99983 16.6875C10.0198 16.6875 11.0398 16.305 11.8273 15.54C13.9723 13.4775 16.3423 10.2075 15.4648 6.3375ZM8.99983 10.095C7.69483 10.095 6.63733 9.0375 6.63733 7.7325C6.63733 6.4275 7.69483 5.37 8.99983 5.37C10.3048 5.37 11.3623 6.4275 11.3623 7.7325C11.3623 9.0375 10.3048 10.095 8.99983 10.095Z"
+											      fill="#FFCC32"/>
+										</g>
+										<defs>
+											<clipPath id="clip0_1136_30345">
+												<rect width="18" height="18" fill="white"/>
+											</clipPath>
+										</defs>
+									</svg>
+									Chi phí cố định
+									<button class="link-default" data-bs-html="true" data-bs-toggle="tooltip"
+									        data-bs-title="<em>Tooltip</em> <u>with</u> <b>HTML</b> Yêu cầu không đúng thực tế, yêu cầu sẽ bị huỷ và hoàn tiền. Gom nhiều thanh toán vào chung yêu cầu để hưởng tỉ giá tốt hơn">
+										<svg width="14" height="14" viewBox="0 0 11 10" fill="none"
 										     xmlns="http://www.w3.org/2000/svg">
-											<path d="M16.5 16L19.7929 12.7071C20.1834 12.3166 20.1834 11.6834 19.7929 11.2929L16.5 8M19.5 12L5.5 12"
-											      stroke="#FFCC32" stroke-width="1.5" stroke-linecap="round"/>
+											<path d="M5.49967 9.47982C3.02884 9.47982 1.02051 7.47148 1.02051 5.00065C1.02051 2.52982 3.02884 0.521484 5.49967 0.521484C7.97051 0.521484 9.97884 2.52982 9.97884 5.00065C9.97884 7.47148 7.97051 9.47982 5.49967 9.47982ZM5.49967 1.14648C3.37467 1.14648 1.64551 2.87565 1.64551 5.00065C1.64551 7.12565 3.37467 8.85482 5.49967 8.85482C7.62467 8.85482 9.35384 7.12565 9.35384 5.00065C9.35384 2.87565 7.62467 1.14648 5.49967 1.14648Z"
+											      fill="#8D95A3"></path>
+											<path d="M5.5 5.72982C5.32917 5.72982 5.1875 5.58815 5.1875 5.41732V3.33398C5.1875 3.16315 5.32917 3.02148 5.5 3.02148C5.67083 3.02148 5.8125 3.16315 5.8125 3.33398V5.41732C5.8125 5.58815 5.67083 5.72982 5.5 5.72982Z"
+											      fill="#8D95A3"></path>
+											<path d="M5.49967 7.0832C5.44551 7.0832 5.39134 7.0707 5.34134 7.04987C5.29134 7.02904 5.24551 6.99987 5.20384 6.96237C5.16634 6.9207 5.13717 6.87904 5.11634 6.82487C5.09551 6.77487 5.08301 6.7207 5.08301 6.66654C5.08301 6.61237 5.09551 6.5582 5.11634 6.5082C5.13717 6.4582 5.16634 6.41237 5.20384 6.3707C5.24551 6.3332 5.29134 6.30404 5.34134 6.2832C5.44134 6.24154 5.55801 6.24154 5.65801 6.2832C5.70801 6.30404 5.75384 6.3332 5.79551 6.3707C5.83301 6.41237 5.86217 6.4582 5.88301 6.5082C5.90384 6.5582 5.91634 6.61237 5.91634 6.66654C5.91634 6.7207 5.90384 6.77487 5.88301 6.82487C5.86217 6.87904 5.83301 6.9207 5.79551 6.96237C5.75384 6.99987 5.70801 7.02904 5.65801 7.04987C5.60801 7.0707 5.55384 7.0832 5.49967 7.0832Z"
+											      fill="#8D95A3"></path>
 										</svg>
 									</button>
 								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 col-xl-3">
-					<div class="dashboard-box dashboard-right background-secondary-dark vstack gap-4n">
-						<div class="dashboard-sub text-center hstack gap-3n justify-content-center">
-							Chi tiết hoá đơn
-							<button class="link-default" data-bs-html="true" data-bs-toggle="tooltip"
-							        data-bs-title="<em>Tooltip</em> <u>with</u> <b>HTML</b> Yêu cầu không đúng thực tế, yêu cầu sẽ bị huỷ và hoàn tiền. Gom nhiều thanh toán vào chung yêu cầu để hưởng tỉ giá tốt hơn">
-								<svg width="18" height="18" viewBox="0 0 11 10" fill="none"
-								     xmlns="http://www.w3.org/2000/svg">
-									<path d="M5.49967 9.47982C3.02884 9.47982 1.02051 7.47148 1.02051 5.00065C1.02051 2.52982 3.02884 0.521484 5.49967 0.521484C7.97051 0.521484 9.97884 2.52982 9.97884 5.00065C9.97884 7.47148 7.97051 9.47982 5.49967 9.47982ZM5.49967 1.14648C3.37467 1.14648 1.64551 2.87565 1.64551 5.00065C1.64551 7.12565 3.37467 8.85482 5.49967 8.85482C7.62467 8.85482 9.35384 7.12565 9.35384 5.00065C9.35384 2.87565 7.62467 1.14648 5.49967 1.14648Z"
-									      fill="#8D95A3"/>
-									<path d="M5.5 5.72982C5.32917 5.72982 5.1875 5.58815 5.1875 5.41732V3.33398C5.1875 3.16315 5.32917 3.02148 5.5 3.02148C5.67083 3.02148 5.8125 3.16315 5.8125 3.33398V5.41732C5.8125 5.58815 5.67083 5.72982 5.5 5.72982Z"
-									      fill="#8D95A3"/>
-									<path d="M5.49967 7.0832C5.44551 7.0832 5.39134 7.0707 5.34134 7.04987C5.29134 7.02904 5.24551 6.99987 5.20384 6.96237C5.16634 6.9207 5.13717 6.87904 5.11634 6.82487C5.09551 6.77487 5.08301 6.7207 5.08301 6.66654C5.08301 6.61237 5.09551 6.5582 5.11634 6.5082C5.13717 6.4582 5.16634 6.41237 5.20384 6.3707C5.24551 6.3332 5.29134 6.30404 5.34134 6.2832C5.44134 6.24154 5.55801 6.24154 5.65801 6.2832C5.70801 6.30404 5.75384 6.3332 5.79551 6.3707C5.83301 6.41237 5.86217 6.4582 5.88301 6.5082C5.90384 6.5582 5.91634 6.61237 5.91634 6.66654C5.91634 6.7207 5.90384 6.77487 5.88301 6.82487C5.86217 6.87904 5.83301 6.9207 5.79551 6.96237C5.75384 6.99987 5.70801 7.02904 5.65801 7.04987C5.60801 7.0707 5.55384 7.0832 5.49967 7.0832Z"
-									      fill="#8D95A3"/>
-								</svg>
-							</button>
-						</div>
-						<div class="dashboard-right_voucher">
-							<button type="button" data-bs-target="#popupVoucher" data-bs-toggle="modal"
-							        class="dashboard-right_voucher__button link-default">
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-								     xmlns="http://www.w3.org/2000/svg">
-									<g clip-path="url(#clip0_1629_7336)">
-										<path d="M21.525 10.8783L20.005 9.35603C19.745 9.09564 19.535 8.58488 19.535 8.22434V6.06109C19.535 5.17977 18.815 4.45869 17.935 4.45869H15.785C15.425 4.45869 14.915 4.24837 14.655 3.98798L13.135 2.4657C12.515 1.84477 11.495 1.84477 10.875 2.4657L9.335 3.98798C9.085 4.24837 8.575 4.45869 8.205 4.45869H6.055C5.175 4.45869 4.455 5.17977 4.455 6.06109V8.21432C4.455 8.57486 4.245 9.08563 3.985 9.34602L2.465 10.8683C1.845 11.4892 1.845 12.5108 2.465 13.1317L3.985 14.654C4.245 14.9144 4.455 15.4251 4.455 15.7857V17.9389C4.455 18.8202 5.175 19.5413 6.055 19.5413H8.205C8.565 19.5413 9.075 19.7516 9.335 20.012L10.855 21.5343C11.475 22.1552 12.495 22.1552 13.115 21.5343L14.635 20.012C14.895 19.7516 15.405 19.5413 15.765 19.5413H17.915C18.795 19.5413 19.515 18.8202 19.515 17.9389V15.7857C19.515 15.4251 19.725 14.9144 19.985 14.654L21.505 13.1317C22.155 12.5208 22.155 11.4992 21.525 10.8783ZM7.995 9.00551C7.995 8.45468 8.445 8.00401 8.995 8.00401C9.545 8.00401 9.995 8.45468 9.995 9.00551C9.995 9.55633 9.555 10.007 8.995 10.007C8.445 10.007 7.995 9.55633 7.995 9.00551ZM9.525 15.5453C9.375 15.6955 9.185 15.7656 8.995 15.7656C8.805 15.7656 8.615 15.6955 8.465 15.5453C8.175 15.2549 8.175 14.7742 8.465 14.4837L14.465 8.47471C14.755 8.18428 15.235 8.18428 15.525 8.47471C15.815 8.76515 15.815 9.24587 15.525 9.5363L9.525 15.5453ZM14.995 16.016C14.435 16.016 13.985 15.5653 13.985 15.0145C13.985 14.4637 14.435 14.013 14.985 14.013C15.535 14.013 15.985 14.4637 15.985 15.0145C15.985 15.5653 15.545 16.016 14.995 16.016Z"
-										      fill="#FFCC32"/>
-									</g>
-									<defs>
-										<clipPath id="clip0_1629_7336">
-											<rect width="20" height="20" fill="white"
-											      transform="translate(2 2)"/>
-										</clipPath>
-									</defs>
-								</svg>
-								<span class="limit">
-									Chọn hoặc nhập mã giảm giá
-								</span>
-							</button>
-						</div>
-						<div class="dashboard-right_desc vstack gap-2n">
-							<div class="hstack gap-3n justify-content-between">
-								<div class="dashboard-right_desc__text gray-100-color">
-									Tổng số tệ cần thanh toán
+								<div class="hstack gap-3n justify-content-between">
+									<div class="dashboard-right_desc__text gray-100-color align-self-center">
+										Tổng tiền hàng
+									</div>
+									<div class="dashboard-right_desc__value fw-600 text-white text-nowrap">
+										348.600đ
+										<div class="dashboard-right_desc__value___small">Ұ99.60</div>
+									</div>
 								</div>
-								<div class="dashboard-right_desc__value fw-600 text-white text-nowrap">
-									Ұ 6700
+								<div class="hstack gap-3n justify-content-between dashboard-right_desc">
+									<div class="dashboard-right_desc__text gray-100-color align-self-center">
+										Vận chuyển nội địa
+									</div>
+									<div class="dashboard-right_desc__value fw-600 text-white text-nowrap">
+										0đ
+										<div class="dashboard-right_desc__value___small">Ұ0.00</div>
+									</div>
+								</div>
+								<div class="hstack gap-3n justify-content-between dashboard-right_desc">
+									<div class="dashboard-right_desc__text gray-100-color align-self-center">
+										Vận chuyển quốc tế
+									</div>
+									<div class="dashboard-right_desc__value fw-600 text-white text-nowrap">
+										0đ
+									</div>
 								</div>
 							</div>
-							<div class="hstack gap-3n justify-content-between">
-								<div class="dashboard-right_desc__text gray-100-color">
-									<div class="dashboard-right_desc__dot"></div>
-									Tỷ lệ áp dụng
+							<div class="dashboard-right_line"></div>
+							<div class="vstack gap-3n dashboard-right_desc">
+								<div class="hstack gap-2n fw-600 text-white">
+									<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+									     xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_1136_30345)">
+											<path d="M15.4648 6.3375C14.6773 2.8725 11.6548 1.3125 8.99983 1.3125C8.99983 1.3125 8.99983 1.3125 8.99233 1.3125C6.34483 1.3125 3.31483 2.865 2.52733 6.33C1.64983 10.2 4.01983 13.4775 6.16483 15.54C6.95983 16.305 7.97983 16.6875 8.99983 16.6875C10.0198 16.6875 11.0398 16.305 11.8273 15.54C13.9723 13.4775 16.3423 10.2075 15.4648 6.3375ZM8.99983 10.095C7.69483 10.095 6.63733 9.0375 6.63733 7.7325C6.63733 6.4275 7.69483 5.37 8.99983 5.37C10.3048 5.37 11.3623 6.4275 11.3623 7.7325C11.3623 9.0375 10.3048 10.095 8.99983 10.095Z"
+											      fill="#FFCC32"/>
+										</g>
+										<defs>
+											<clipPath id="clip0_1136_30345">
+												<rect width="18" height="18" fill="white"/>
+											</clipPath>
+										</defs>
+									</svg>
+									Chi phí dịch vụ
+									<button class="link-default" data-bs-html="true" data-bs-toggle="tooltip"
+									        data-bs-title="<em>Tooltip</em> <u>with</u> <b>HTML</b> Yêu cầu không đúng thực tế, yêu cầu sẽ bị huỷ và hoàn tiền. Gom nhiều thanh toán vào chung yêu cầu để hưởng tỉ giá tốt hơn">
+										<svg width="14" height="14" viewBox="0 0 11 10" fill="none"
+										     xmlns="http://www.w3.org/2000/svg">
+											<path d="M5.49967 9.47982C3.02884 9.47982 1.02051 7.47148 1.02051 5.00065C1.02051 2.52982 3.02884 0.521484 5.49967 0.521484C7.97051 0.521484 9.97884 2.52982 9.97884 5.00065C9.97884 7.47148 7.97051 9.47982 5.49967 9.47982ZM5.49967 1.14648C3.37467 1.14648 1.64551 2.87565 1.64551 5.00065C1.64551 7.12565 3.37467 8.85482 5.49967 8.85482C7.62467 8.85482 9.35384 7.12565 9.35384 5.00065C9.35384 2.87565 7.62467 1.14648 5.49967 1.14648Z"
+											      fill="#8D95A3"></path>
+											<path d="M5.5 5.72982C5.32917 5.72982 5.1875 5.58815 5.1875 5.41732V3.33398C5.1875 3.16315 5.32917 3.02148 5.5 3.02148C5.67083 3.02148 5.8125 3.16315 5.8125 3.33398V5.41732C5.8125 5.58815 5.67083 5.72982 5.5 5.72982Z"
+											      fill="#8D95A3"></path>
+											<path d="M5.49967 7.0832C5.44551 7.0832 5.39134 7.0707 5.34134 7.04987C5.29134 7.02904 5.24551 6.99987 5.20384 6.96237C5.16634 6.9207 5.13717 6.87904 5.11634 6.82487C5.09551 6.77487 5.08301 6.7207 5.08301 6.66654C5.08301 6.61237 5.09551 6.5582 5.11634 6.5082C5.13717 6.4582 5.16634 6.41237 5.20384 6.3707C5.24551 6.3332 5.29134 6.30404 5.34134 6.2832C5.44134 6.24154 5.55801 6.24154 5.65801 6.2832C5.70801 6.30404 5.75384 6.3332 5.79551 6.3707C5.83301 6.41237 5.86217 6.4582 5.88301 6.5082C5.90384 6.5582 5.91634 6.61237 5.91634 6.66654C5.91634 6.7207 5.90384 6.77487 5.88301 6.82487C5.86217 6.87904 5.83301 6.9207 5.79551 6.96237C5.75384 6.99987 5.70801 7.02904 5.65801 7.04987C5.60801 7.0707 5.55384 7.0832 5.49967 7.0832Z"
+											      fill="#8D95A3"></path>
+										</svg>
+									</button>
 								</div>
-								<div class="dashboard-right_desc__value fw-600 text-white text-nowrap">
-									1Ұ = 3.750đ
+								<div class="hstack gap-3n justify-content-between">
+									<div class="dashboard-right_desc__text gray-100-color">
+										Phí mua hàng
+									</div>
+									<div class="dashboard-right_desc__value fw-600 text-white text-nowrap">
+										120.000đ
+									</div>
+								</div>
+								<div class="hstack gap-3n justify-content-between">
+									<div class="dashboard-right_desc__text gray-100-color">
+										Nẹp giấy
+									</div>
+									<div class="dashboard-right_desc__value fw-600 text-white text-nowrap">
+										0
+									</div>
+								</div>
+								<div class="hstack gap-3n justify-content-between">
+									<div class="dashboard-right_desc__text gray-100-color">
+										Đóng gỗ
+									</div>
+									<div class="dashboard-right_desc__value fw-600 text-white text-nowrap">
+										0
+									</div>
+								</div>
+								<div class="hstack gap-3n justify-content-between">
+									<div class="dashboard-right_desc__text gray-100-color">
+										Bảo hiểm
+									</div>
+									<div class="dashboard-right_desc__value fw-600 text-white text-nowrap">
+										0
+									</div>
+								</div>
+								<div class="hstack gap-3n justify-content-between">
+									<div class="dashboard-right_desc__text gray-100-color">
+										Các chi phí khác
+									</div>
+									<div class="dashboard-right_desc__value fw-600 text-white text-nowrap">
+										0
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="dashboard-right_line"></div>
-						<div class="dashboard-right_note handleCharacterInput position-relative">
-							<textarea name="" id=""
-							          class="form-control dashboard-right_note__input handleLimitCharacterInput"
-							          data-limit="100"
-							          placeholder="Thêm ghi chú cho đơn hàng"></textarea>
-							<span class="handleCountCharacterInput dashboard-right_note__count">(0/100)</span>
-						</div>
-						<div class="dashboard-right_price hstack gap-3n justify-content-between">
-							<div class="dashboard-right_price__text gray-100-color fw-600">
-								Tổng cộng
+							<div class="dashboard-right_line"></div>
+							<div class="vstack gap-3n dashboard-right_desc">
+								<div class="hstack gap-2n fw-600 text-white">
+									<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+									     xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_1136_30345)">
+											<path d="M15.4648 6.3375C14.6773 2.8725 11.6548 1.3125 8.99983 1.3125C8.99983 1.3125 8.99983 1.3125 8.99233 1.3125C6.34483 1.3125 3.31483 2.865 2.52733 6.33C1.64983 10.2 4.01983 13.4775 6.16483 15.54C6.95983 16.305 7.97983 16.6875 8.99983 16.6875C10.0198 16.6875 11.0398 16.305 11.8273 15.54C13.9723 13.4775 16.3423 10.2075 15.4648 6.3375ZM8.99983 10.095C7.69483 10.095 6.63733 9.0375 6.63733 7.7325C6.63733 6.4275 7.69483 5.37 8.99983 5.37C10.3048 5.37 11.3623 6.4275 11.3623 7.7325C11.3623 9.0375 10.3048 10.095 8.99983 10.095Z"
+											      fill="#FFCC32"/>
+										</g>
+										<defs>
+											<clipPath id="clip0_1136_30345">
+												<rect width="18" height="18" fill="white"/>
+											</clipPath>
+										</defs>
+									</svg>
+									Chi phí chính ngạch
+									<button class="link-default" data-bs-html="true" data-bs-toggle="tooltip"
+									        data-bs-title="<em>Tooltip</em> <u>with</u> <b>HTML</b> Yêu cầu không đúng thực tế, yêu cầu sẽ bị huỷ và hoàn tiền. Gom nhiều thanh toán vào chung yêu cầu để hưởng tỉ giá tốt hơn">
+										<svg width="14" height="14" viewBox="0 0 11 10" fill="none"
+										     xmlns="http://www.w3.org/2000/svg">
+											<path d="M5.49967 9.47982C3.02884 9.47982 1.02051 7.47148 1.02051 5.00065C1.02051 2.52982 3.02884 0.521484 5.49967 0.521484C7.97051 0.521484 9.97884 2.52982 9.97884 5.00065C9.97884 7.47148 7.97051 9.47982 5.49967 9.47982ZM5.49967 1.14648C3.37467 1.14648 1.64551 2.87565 1.64551 5.00065C1.64551 7.12565 3.37467 8.85482 5.49967 8.85482C7.62467 8.85482 9.35384 7.12565 9.35384 5.00065C9.35384 2.87565 7.62467 1.14648 5.49967 1.14648Z"
+											      fill="#8D95A3"></path>
+											<path d="M5.5 5.72982C5.32917 5.72982 5.1875 5.58815 5.1875 5.41732V3.33398C5.1875 3.16315 5.32917 3.02148 5.5 3.02148C5.67083 3.02148 5.8125 3.16315 5.8125 3.33398V5.41732C5.8125 5.58815 5.67083 5.72982 5.5 5.72982Z"
+											      fill="#8D95A3"></path>
+											<path d="M5.49967 7.0832C5.44551 7.0832 5.39134 7.0707 5.34134 7.04987C5.29134 7.02904 5.24551 6.99987 5.20384 6.96237C5.16634 6.9207 5.13717 6.87904 5.11634 6.82487C5.09551 6.77487 5.08301 6.7207 5.08301 6.66654C5.08301 6.61237 5.09551 6.5582 5.11634 6.5082C5.13717 6.4582 5.16634 6.41237 5.20384 6.3707C5.24551 6.3332 5.29134 6.30404 5.34134 6.2832C5.44134 6.24154 5.55801 6.24154 5.65801 6.2832C5.70801 6.30404 5.75384 6.3332 5.79551 6.3707C5.83301 6.41237 5.86217 6.4582 5.88301 6.5082C5.90384 6.5582 5.91634 6.61237 5.91634 6.66654C5.91634 6.7207 5.90384 6.77487 5.88301 6.82487C5.86217 6.87904 5.83301 6.9207 5.79551 6.96237C5.75384 6.99987 5.70801 7.02904 5.65801 7.04987C5.60801 7.0707 5.55384 7.0832 5.49967 7.0832Z"
+											      fill="#8D95A3"></path>
+										</svg>
+									</button>
+								</div>
+								<div class="hstack gap-3n justify-content-between">
+									<div class="dashboard-right_desc__text gray-100-color">
+										Phí mua hàng
+									</div>
+									<div class="dashboard-right_desc__value fw-600 text-white text-nowrap">
+										120.000đ
+									</div>
+								</div>
+								<div class="hstack gap-3n justify-content-between">
+									<div class="dashboard-right_desc__text gray-100-color">
+										Nẹp giấy
+									</div>
+									<div class="dashboard-right_desc__value fw-600 text-white text-nowrap">
+										0
+									</div>
+								</div>
+								<div class="hstack gap-3n justify-content-between">
+									<div class="dashboard-right_desc__text gray-100-color">
+										Đóng gỗ
+									</div>
+									<div class="dashboard-right_desc__value fw-600 text-white text-nowrap">
+										0
+									</div>
+								</div>
+								<div class="hstack gap-3n justify-content-between">
+									<div class="dashboard-right_desc__text gray-100-color">
+										Bảo hiểm
+									</div>
+									<div class="dashboard-right_desc__value fw-600 text-white text-nowrap">
+										0
+									</div>
+								</div>
+								<div class="hstack gap-3n justify-content-between">
+									<div class="dashboard-right_desc__text gray-100-color">
+										Các chi phí khác
+									</div>
+									<div class="dashboard-right_desc__value fw-600 text-white text-nowrap">
+										0
+									</div>
+								</div>
 							</div>
-							<div class="dashboard-right_price__value primary-color fz-18 fw-600">
-								5.760.000đ
+							<div class="dashboard-right_line"></div>
+							<div class="dashboard-sub text-center hstack gap-3n justify-content-center">
+								Chi tiết hoá đơn
+								<button class="link-default" data-bs-html="true" data-bs-toggle="tooltip"
+								        data-bs-title="<em>Tooltip</em> <u>with</u> <b>HTML</b> Yêu cầu không đúng thực tế, yêu cầu sẽ bị huỷ và hoàn tiền. Gom nhiều thanh toán vào chung yêu cầu để hưởng tỉ giá tốt hơn">
+									<svg width="18" height="18" viewBox="0 0 11 10" fill="none"
+									     xmlns="http://www.w3.org/2000/svg">
+										<path d="M5.49967 9.47982C3.02884 9.47982 1.02051 7.47148 1.02051 5.00065C1.02051 2.52982 3.02884 0.521484 5.49967 0.521484C7.97051 0.521484 9.97884 2.52982 9.97884 5.00065C9.97884 7.47148 7.97051 9.47982 5.49967 9.47982ZM5.49967 1.14648C3.37467 1.14648 1.64551 2.87565 1.64551 5.00065C1.64551 7.12565 3.37467 8.85482 5.49967 8.85482C7.62467 8.85482 9.35384 7.12565 9.35384 5.00065C9.35384 2.87565 7.62467 1.14648 5.49967 1.14648Z"
+										      fill="#8D95A3"/>
+										<path d="M5.5 5.72982C5.32917 5.72982 5.1875 5.58815 5.1875 5.41732V3.33398C5.1875 3.16315 5.32917 3.02148 5.5 3.02148C5.67083 3.02148 5.8125 3.16315 5.8125 3.33398V5.41732C5.8125 5.58815 5.67083 5.72982 5.5 5.72982Z"
+										      fill="#8D95A3"/>
+										<path d="M5.49967 7.0832C5.44551 7.0832 5.39134 7.0707 5.34134 7.04987C5.29134 7.02904 5.24551 6.99987 5.20384 6.96237C5.16634 6.9207 5.13717 6.87904 5.11634 6.82487C5.09551 6.77487 5.08301 6.7207 5.08301 6.66654C5.08301 6.61237 5.09551 6.5582 5.11634 6.5082C5.13717 6.4582 5.16634 6.41237 5.20384 6.3707C5.24551 6.3332 5.29134 6.30404 5.34134 6.2832C5.44134 6.24154 5.55801 6.24154 5.65801 6.2832C5.70801 6.30404 5.75384 6.3332 5.79551 6.3707C5.83301 6.41237 5.86217 6.4582 5.88301 6.5082C5.90384 6.5582 5.91634 6.61237 5.91634 6.66654C5.91634 6.7207 5.90384 6.77487 5.88301 6.82487C5.86217 6.87904 5.83301 6.9207 5.79551 6.96237C5.75384 6.99987 5.70801 7.02904 5.65801 7.04987C5.60801 7.0707 5.55384 7.0832 5.49967 7.0832Z"
+										      fill="#8D95A3"/>
+									</svg>
+								</button>
 							</div>
-						</div>
-						<div class="dashboard-right_button">
-							<button type="submit"
-							        class="button-theme button-theme_stroke button-theme_large button-theme_primary w-100">
-								Tạo đơn
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-								     xmlns="http://www.w3.org/2000/svg">
-									<path d="M16 16L19.2929 12.7071C19.6834 12.3166 19.6834 11.6834 19.2929 11.2929L16 8M19 12L5 12"
-									      stroke="#142432" stroke-width="1.5" stroke-linecap="round"/>
-								</svg>
-							</button>
+							<div class="dashboard-right_voucher">
+								<button type="button" data-bs-target="#popupVoucher" data-bs-toggle="modal"
+								        class="dashboard-right_voucher__button link-default">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+									     xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_1629_7336)">
+											<path d="M21.525 10.8783L20.005 9.35603C19.745 9.09564 19.535 8.58488 19.535 8.22434V6.06109C19.535 5.17977 18.815 4.45869 17.935 4.45869H15.785C15.425 4.45869 14.915 4.24837 14.655 3.98798L13.135 2.4657C12.515 1.84477 11.495 1.84477 10.875 2.4657L9.335 3.98798C9.085 4.24837 8.575 4.45869 8.205 4.45869H6.055C5.175 4.45869 4.455 5.17977 4.455 6.06109V8.21432C4.455 8.57486 4.245 9.08563 3.985 9.34602L2.465 10.8683C1.845 11.4892 1.845 12.5108 2.465 13.1317L3.985 14.654C4.245 14.9144 4.455 15.4251 4.455 15.7857V17.9389C4.455 18.8202 5.175 19.5413 6.055 19.5413H8.205C8.565 19.5413 9.075 19.7516 9.335 20.012L10.855 21.5343C11.475 22.1552 12.495 22.1552 13.115 21.5343L14.635 20.012C14.895 19.7516 15.405 19.5413 15.765 19.5413H17.915C18.795 19.5413 19.515 18.8202 19.515 17.9389V15.7857C19.515 15.4251 19.725 14.9144 19.985 14.654L21.505 13.1317C22.155 12.5208 22.155 11.4992 21.525 10.8783ZM7.995 9.00551C7.995 8.45468 8.445 8.00401 8.995 8.00401C9.545 8.00401 9.995 8.45468 9.995 9.00551C9.995 9.55633 9.555 10.007 8.995 10.007C8.445 10.007 7.995 9.55633 7.995 9.00551ZM9.525 15.5453C9.375 15.6955 9.185 15.7656 8.995 15.7656C8.805 15.7656 8.615 15.6955 8.465 15.5453C8.175 15.2549 8.175 14.7742 8.465 14.4837L14.465 8.47471C14.755 8.18428 15.235 8.18428 15.525 8.47471C15.815 8.76515 15.815 9.24587 15.525 9.5363L9.525 15.5453ZM14.995 16.016C14.435 16.016 13.985 15.5653 13.985 15.0145C13.985 14.4637 14.435 14.013 14.985 14.013C15.535 14.013 15.985 14.4637 15.985 15.0145C15.985 15.5653 15.545 16.016 14.995 16.016Z"
+											      fill="#FFCC32"/>
+										</g>
+										<defs>
+											<clipPath id="clip0_1629_7336">
+												<rect width="20" height="20" fill="white"
+												      transform="translate(2 2)"/>
+											</clipPath>
+										</defs>
+									</svg>
+									<span class="limit">
+										Chọn hoặc nhập mã giảm giá
+									</span>
+								</button>
+							</div>
+							<div class="dashboard-right_desc vstack gap-2n">
+								<div class="hstack gap-3n justify-content-between">
+									<div class="dashboard-right_desc__text gray-100-color">
+										Tổng đơn hànn (<strong>04</strong>)
+									</div>
+									<div class="dashboard-right_desc__value fw-600 text-white text-nowrap">
+										960.000đ
+									</div>
+								</div>
+								<div class="hstack gap-3n justify-content-between">
+									<div class="dashboard-right_desc__text gray-100-color">
+										Đã thanh toán
+									</div>
+									<div class="dashboard-right_desc__value fw-600 success-color text-nowrap">
+										0
+									</div>
+								</div>
+								<div class="hstack gap-3n justify-content-between">
+									<div class="dashboard-right_desc__text gray-100-color">
+										Còn lại
+									</div>
+									<div class="dashboard-right_desc__value fw-600 text-white text-nowrap">
+										960.000đ
+									</div>
+								</div>
+							</div>
+							<div class="dashboard-right_line"></div>
+							<div class="dashboard-right_price hstack gap-3n justify-content-between">
+								<div class="dashboard-right_price__text gray-100-color fw-600">
+									Phải thanh toán
+								</div>
+								<div class="dashboard-right_price__value primary-color fz-18 fw-600">
+									960.000đ
+								</div>
+							</div>
+							<div class="dashboard-right_button">
+								<button type="submit"
+								        class="button-theme button-theme_stroke button-theme_large button-theme_primary w-100">
+									Thanh toán
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>
