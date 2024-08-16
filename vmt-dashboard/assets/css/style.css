@@ -559,12 +559,12 @@
 .dashboard-notifications_list .notification-item .notification-item_status {
 	height: calc(2 * var(--space));
 	width: calc(2 * var(--space));
-	display: inline-block;
 	border-radius: 50%;
 	margin-right: calc(0.5 * var(--space));
 	background: var(--primary-color);
 	flex-shrink: 0;
 	margin-left: 10px;
+	display: none;
 }
 
 .dashboard-notifications_list .notification-item.notification-item_type__1 .notification-highlight {
@@ -609,6 +609,10 @@
 .dashboard-notifications_list .notification-item:hover,
 .dashboard-notifications_list .notification-item.notification-item_unseen {
 	background: var(--accent-dark);
+}
+
+.dashboard-notifications_list .notification-item.notification-item_unseen .notification-item_status {
+	display: inline-block;
 }
 
 .dashboard-notifications_list .notification-empty {
@@ -675,6 +679,15 @@
 }
 
 .dashboard-form .dashboard-form_item .dashboard-form_item__count {
+	position: absolute;
+	color: #8D95A3;
+	font-size: .925em;
+	bottom: calc(3 * var(--space));
+	right: calc(4 * var(--space));
+	pointer-events: none;
+}
+
+.dashboard-form .dashboard-form_item .dashboard-form_item__floating {
 	position: absolute;
 	color: #8D95A3;
 	font-size: .925em;
@@ -1860,12 +1873,12 @@
 	margin-bottom: calc(4 * var(--space));
 }
 
-.dashboard-detail .detail-header .detail-header_back .link-default{
+.dashboard-detail .detail-header .detail-header_back .link-default {
 	color: var(--bs-white);
 	font-size: 1.15em;
 }
 
-.dashboard-detail .detail-header .detail-header_back .link-default  svg{
+.dashboard-detail .detail-header .detail-header_back .link-default svg {
 	width: 20px;
 	height: 20px;
 }
@@ -1939,4 +1952,44 @@
 
 .dashboard-detail .detail-header .detail-header_time {
 	color: var(--gray-100);
+}
+
+.dashboard-timeline .timeline-item:after {
+	left: 8px;
+	width: 2px;
+	top: 26px;
+	height: calc(100% - 26px);
+	background-color: #FFF5C2;
+}
+
+.dashboard-timeline .timeline-item:last-child:after {
+	height: calc(100% - 26px - calc(2 * var(--space)));
+}
+
+.dashboard-timeline .timeline-item .timeline-item_icon svg {
+	height: 20px;
+	width: 20px;
+}
+
+.dashboard-timeline .timeline-item .timeline-item_content {
+	padding-bottom: calc(4 * var(--space));
+}
+
+.dashboard-timeline .timeline-item .timeline-item_content .timeline-item_content__title {
+	font-size: 1em;
+	font-weight: 600;
+	color: var(--bs-white);
+}
+
+.dashboard-timeline .timeline-item .timeline-item_content .timeline-item_content__time {
+	font-size: 0.925em;
+	color: var(--gray-100);
+}
+
+.dashboard-form.dashboard-chat .dashboard-form_item .dashboard-form_item__textarea {
+	height: 160px;
+}
+
+.dashboard-detail .detail-main .dashboard-right .dashboard-right_desc .dashboard-right_desc__text{
+	min-width: 1px;
 }
