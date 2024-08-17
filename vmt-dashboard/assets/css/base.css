@@ -283,70 +283,6 @@ textarea:focus {
 	flex: 1 1 0 !important;
 }
 
-.fz-10 {
-	font-size: .7em;
-}
-
-.fz-11 {
-	font-size: .775em;
-}
-
-.fz-12 {
-	font-size: .85em;
-}
-
-.fz-13 {
-	font-size: .925em;
-}
-
-.fz-14 {
-	font-size: 1em;
-}
-
-.fz-15 {
-	font-size: 1.075em;
-}
-
-.fz-16 {
-	font-size: 1.15em;
-}
-
-.fz-17 {
-	font-size: 1.225em;
-}
-
-.fz-18 {
-	font-size: 1.3em;
-}
-
-.fz-19 {
-	font-size: 1.375em;
-}
-
-.fz-20 {
-	font-size: 1.45em;
-}
-
-.fz-21 {
-	font-size: 1.525em;
-}
-
-.fz-22 {
-	font-size: 1.6em;
-}
-
-.fz-23 {
-	font-size: 1.675em;
-}
-
-.fz-24 {
-	font-size: 1.75em;
-}
-
-.fz-inherit {
-	font-size: inherit !important
-}
-
 .color-inherit {
 	color: inherit !important
 }
@@ -449,6 +385,70 @@ textarea:focus {
 
 .fw-900 {
 	font-weight: 900;
+}
+
+.fz-10 {
+	font-size: .7em;
+}
+
+.fz-11 {
+	font-size: .775em;
+}
+
+.fz-12 {
+	font-size: .85em;
+}
+
+.fz-13 {
+	font-size: .925em;
+}
+
+.fz-14 {
+	font-size: 1em;
+}
+
+.fz-15 {
+	font-size: 1.075em;
+}
+
+.fz-16 {
+	font-size: 1.15em;
+}
+
+.fz-17 {
+	font-size: 1.225em;
+}
+
+.fz-18 {
+	font-size: 1.3em;
+}
+
+.fz-19 {
+	font-size: 1.375em;
+}
+
+.fz-20 {
+	font-size: 1.45em;
+}
+
+.fz-21 {
+	font-size: 1.525em;
+}
+
+.fz-22 {
+	font-size: 1.6em;
+}
+
+.fz-23 {
+	font-size: 1.675em;
+}
+
+.fz-24 {
+	font-size: 1.75em;
+}
+
+.fz-inherit {
+	font-size: inherit !important
 }
 
 .mw-25px {

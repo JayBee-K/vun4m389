@@ -1511,6 +1511,25 @@
 	padding: calc(3 * var(--space)) calc(6 * var(--space));
 }
 
+.dashboard-download.dashboard-download_page {
+	width: auto;
+	display: inline-flex;
+	margin: 0 auto;
+	padding: calc(10 * var(--space));
+}
+
+.dashboard-download.dashboard-download_page .dashboard-download_text {
+	font-size: 1.075em;
+}
+
+.dashboard-download.dashboard-download_page .dashboard-download_title {
+	font-size: 1.75em;
+}
+
+.dashboard-download.dashboard-download_page .dashboard-download_button {
+	margin-top: calc(10 * var(--space));
+}
+
 .dashboard-product .product-image {
 	border-radius: calc(1 * var(--space));
 	overflow: hidden;
@@ -2067,6 +2086,18 @@
 	font-weight: 500;
 }
 
+.dashboard-detail .detail-main .detail-price .detail-price_line {
+	background: #5252523D;
+	height: 1px;
+	width: 100%;
+	display: block;
+	margin: calc(3 * var(--space)) 0 calc(2 * var(--space));
+}
+
+.dashboard-detail .detail-main .detail-price .background-secondary-dark {
+	background-color: #333333;
+}
+
 .dashboard-files {
 	flex-wrap: wrap;
 }
@@ -2145,3 +2176,59 @@
 	border-bottom: 1px solid #5252523d;
 	margin-bottom: calc(3 * var(--space));
 }
+
+.app-box {
+	border-radius: calc(3 * var(--space));
+	background: var(--secondary-dark);
+	position: relative;
+	padding: calc(30 * var(--space)) calc(15 * var(--space));
+	width: 100%;
+}
+
+.app-box:before {
+	background-image: url('../images/app-decor-left.png');
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	pointer-events: none;
+	height: 100%;
+	width: 115px;
+}
+
+.app-box:after {
+	background-image: url('../images/app-decor-top.png');
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	top: calc(5 * var(--space));
+	left: 50%;
+	transform: translateX(-50%);
+	pointer-events: none;
+	height: 183px;
+	width: 162px;
+}
+
+.app-box .app-box_content .app-box_title {
+	font-size: 3em;
+	color: var(--bs-white);
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+.app-box .app-box_content .app-box_desc {
+	font-size: 1.075em;
+	color: var(--bs-white);
+}
+
+.app-box .app-box_content .app-box_desc,
+.app-box .app-box_content .app-box_list {
+	margin-top: calc(5 * var(--space));
+}
+
+.app-box .app-box_content .app-box_buttons {
+	margin-top: calc(8 * var(--space));
+}
+

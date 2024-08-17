@@ -433,6 +433,52 @@
 	.dashboard-detail .detail-header {
 		flex-wrap: wrap;
 	}
+
+	.dashboard-detail .detail-main .detail-price .detail-price_item .detail-price_item__price {
+		font-size: 1.075em;
+	}
+	.app-box {
+		padding: 0;
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	.app-box .app-box_image {
+		position: static !important;
+		text-align: center;
+	}
+
+	.app-box .app-box_content {
+		padding: calc(8 * var(--space))
+	}
+
+	.app-box .app-box_content .app-box_title {
+		font-size: 1.6em;
+	}
+
+	.app-box .app-box_content .app-box_desc {
+		font-size: 1em;
+	}
+
+	.app-box .app-box_list {
+		flex-direction: column;
+	}
+
+	.app-box .app-box_buttons {
+		gap: calc(2 * var(--space));
+	}
+
+	.dashboard-download.dashboard-download_page {
+		padding: calc(8 * var(--space))
+	}
+
+	.dashboard-download.dashboard-download_page .dashboard-download_text {
+		font-size: 1em;
+	}
+
+	.dashboard-download.dashboard-download_page .dashboard-download_title {
+		font-size: 1.6em;
+	}
 }
 
 @media screen and (max-width: 991px) {
