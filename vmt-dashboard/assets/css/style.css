@@ -800,6 +800,10 @@
 	padding-right: calc(25 * var(--space));
 }
 
+.dashboard-form .dashboard-form_item.dashboard-form_group .dashboard-form_item__button.primary-color {
+	color: var(--primary-color) !important;
+}
+
 .dashboard-form .dashboard-form_item.dashboard-form_item_image {
 	position: relative;
 	width: 75px;
@@ -1071,10 +1075,10 @@
 .voucher-item:before {
 	position: absolute;
 	content: "";
-	background: var(--color-danger);
+	background: var(--primary-color);
 	height: 18px;
 	width: 18px;
-	border-radius: 50%;
+	border-radius: var(--space);
 	top: calc(4 * var(--space));
 	right: calc(4 * var(--space));
 	opacity: 0;
@@ -1085,9 +1089,9 @@
 .voucher-item:after {
 	position: absolute;
 	content: "";
-	background: url('../images/icon-check.png');
-	top: calc(4 * var(--space));
-	right: calc(5 * var(--space));
+	background: url('../images/icon-check.svg') center center/cover no-repeat;
+	top: calc(4.75 * var(--space));
+	right: calc(4.5 * var(--space));
 	height: 12px;
 	width: 12px;
 	opacity: 0;
