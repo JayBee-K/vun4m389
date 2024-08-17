@@ -552,6 +552,10 @@
 	width: 28px;
 }
 
+.dashboard-notifications_list .notification-item .notification-item_content {
+	width: 100%;
+}
+
 .dashboard-notifications_list .notification-item .notification-item_content .notification-item_meta {
 	color: var(--gray-100);
 }
@@ -591,6 +595,10 @@
 	color: var(--color-accent);
 }
 
+.dashboard-notifications_list .notification-item .notification-highlight_price {
+	color: var(--color-success) !important;
+}
+
 .dashboard-notifications_list .notification-item + .notification-item {
 	margin-top: calc(3 * var(--space));
 }
@@ -605,6 +613,20 @@
 	height: 1px;
 	background: var(--primary-border);
 }
+
+.dashboard-notifications_list .notification-item_page.notification-item .notification-item_icon svg {
+	height: 20px;
+	width: 20px;
+}
+
+.dashboard-notifications_list .notification-item_page.notification-item .notification-item_content .notification-item_meta {
+	font-size: .85em;
+}
+
+.dashboard-notifications_list .notification-item_page.notification-item .notification-item_content .notification-item_meta > span {
+	font-size: calc(1em + 2px);
+}
+
 
 .dashboard-notifications_list .notification-item:hover,
 .dashboard-notifications_list .notification-item.notification-item_unseen {
@@ -625,10 +647,11 @@
 	opacity: .2;
 }
 
+
 .dashboard-notifications .dashboard-notifications_link {
 	margin-top: calc(3 * var(--space));
 	border-top: 1px solid var(--primary-border);
-	padding-top: var(--space);
+	padding-top: calc(2 * var(--space));
 }
 
 .dashboard-form_background {
@@ -764,8 +787,7 @@
 	background: var(--primary-color);
 	color: var(--text-dark);
 	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+	bottom: calc(3 * var(--space));
 	right: calc(4 * var(--space));
 }
 
@@ -2232,3 +2254,34 @@
 	margin-top: calc(8 * var(--space));
 }
 
+.dashboard-information {
+	padding-top: calc(15 * var(--space));
+	border-top: 1px solid #5252523d;
+}
+
+.dashboard-information .information-avatar .information-avatar_preview {
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+}
+
+.dashboard-information .information-avatar .information-avatar_button {
+	width: 100px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.dashboard-information .information-avatar .information-avatar_button .button-theme {
+	width: 100%;
+	border-radius: var(--space);
+}
+
+.dashboard-information .information-avatar .information-avatar_button .information-avatar_button__input {
+	position: absolute;
+	top: 0;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	z-index: 2;
+}
