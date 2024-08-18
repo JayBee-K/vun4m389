@@ -437,6 +437,7 @@
 	.dashboard-detail .detail-main .detail-price .detail-price_item .detail-price_item__price {
 		font-size: 1.075em;
 	}
+
 	.app-box {
 		padding: 0;
 		display: flex;
@@ -478,6 +479,22 @@
 
 	.dashboard-download.dashboard-download_page .dashboard-download_title {
 		font-size: 1.6em;
+	}
+
+	.dashboard-bank_slider {
+		margin-right: calc(-1 * 3 * var(--space));
+	}
+
+	.dashboard-bank_slider .bank-item .bank-fullname {
+		font-size: 1em;
+	}
+
+	.dashboard-form .dashboard-form_item .dashboard-form_list .dashboard-form_price {
+		width: calc(33.3333% - (2.75 * var(--space)));
+	}
+
+	.dashboard-deposit .deposit-item .deposit-item_title {
+		font-size: 1.075em;
 	}
 }
 
@@ -691,6 +708,10 @@
 	.dashboard-product .product-property .property-item {
 		width: calc(25% - (2.4 * var(--space)));
 	}
+
+	.dashboard-bank_slider {
+		margin-right: calc(-1 * 3 * var(--space));
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -757,5 +778,9 @@
 	.dashboard-form .dashboard-form_item__upload .dashboard-form_item {
 		width: calc(100% / 6 - (2.5 * var(--space))) !important;
 		height: auto;
+	}
+
+	.dashboard-form .dashboard-form_item .dashboard-form_list .dashboard-form_price {
+		width: calc(50% - (2 * var(--space)));
 	}
 }

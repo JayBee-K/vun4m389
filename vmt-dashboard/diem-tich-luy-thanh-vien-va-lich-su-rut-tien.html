@@ -475,13 +475,13 @@
 						<div class="dashboard-tabs dashboard-tabs_flex__fill dashboard-tabs_flex__background dashboard-tabs_list">
 							<ul class="nav nav-tabs">
 								<li class="nav-item">
-									<button type="button" class="nav-link link-default active" data-bs-toggle="tab"
+									<button type="button" class="nav-link link-default" data-bs-toggle="tab"
 									        data-bs-target="#nap-tien">
 										Nạp tiền
 									</button>
 								</li>
 								<li class="nav-item">
-									<button type="button" class="nav-link link-default" data-bs-toggle="tab"
+									<button type="button" class="nav-link link-default active" data-bs-toggle="tab"
 									        data-bs-target="#rut-tien">
 										Rút tiền
 									</button>
@@ -495,66 +495,55 @@
 							</ul>
 						</div>
 						<div class="tab-content">
-							<div class="tab-pane fade active show" id="nap-tien">
+							<div class="tab-pane fade active show" id="rut-tien">
 								<div class="dashboard-form dashboard-form_background vstack gap-4n">
 									<div class="dashboard-form_item dashboard-form_group w-100">
 										<label for class="text-white mb-2 fw-600">
-											Nhập số tiền cần nạp
+											Ngân hàng thụ hưởng
 										</label>
-										<input type="text" value="50.000đ"
-										       class="form-control dashboard-form_item__input">
-										<div class="gray-100-color fz-13 mt-1">
-											Nhập số tiền tối thiểu là 10.000đ
-										</div>
+										<select name="" class="form-select dashboard-form_item__select" id="">
+											<option value="">Chọn ngân hàng thụ hưởng</option>
+											<option value="">Agribank - Ngân hàng NN&PT Nông thôn Việt Nam</option>
+											<option value="">VietinBank - Ngân hàng TMCP Công thương Việt Nam</option>
+											<option value="">BIDV - Ngân hàng TMCP Đầu tư và Phát triển Việt Nam
+											</option>
+											<option value="">Vietcombank - Ngân hàng TMCP Ngoại Thương Việt Nam</option>
+											<option value="">ACB - Ngân hàng TMCP Á Châu</option>
+											<option value="">ABBANK - Ngân hàng TMCP An Bình</option>
+										</select>
 									</div>
-									<div class="dashboard-form_line"></div>
 									<div class="dashboard-form_item dashboard-form_group w-100">
 										<label for class="text-white mb-2 fw-600">
-											Hoặc chọn các giá trị ở dưới đây
+											Số tài khoản
 										</label>
-										<div class="dashboard-form_list">
-											<div class="dashboard-form_price">
-												<input type="radio" class="dashboard-form_price__input" checked name="priceExample" id="priceExample-1">
-												<label for="priceExample-1" class="dashboard-form_price__label">
-													50.000đ
-												</label>
-											</div>
-											<div class="dashboard-form_price">
-												<input type="radio" class="dashboard-form_price__input" name="priceExample" id="priceExample-2">
-												<label for="priceExample-2" class="dashboard-form_price__label">
-													100.000đ
-												</label>
-											</div>
-											<div class="dashboard-form_price">
-												<input type="radio" class="dashboard-form_price__input" name="priceExample" id="priceExample-3">
-												<label for="priceExample-3" class="dashboard-form_price__label">
-													200.000đ
-												</label>
-											</div>
-											<div class="dashboard-form_price">
-												<input type="radio" class="dashboard-form_price__input" name="priceExample" id="priceExample-4">
-												<label for="priceExample-4" class="dashboard-form_price__label">
-													500.000đ
-												</label>
-											</div>
-											<div class="dashboard-form_price">
-												<input type="radio" class="dashboard-form_price__input" name="priceExample" id="priceExample-5">
-												<label for="priceExample-5" class="dashboard-form_price__label">
-													1.000.000đ
-												</label>
-											</div>
-											<div class="dashboard-form_price">
-												<input type="radio" class="dashboard-form_price__input" name="priceExample" id="priceExample-6">
-												<label for="priceExample-6" class="dashboard-form_price__label">
-													1.500.000đ
-												</label>
-											</div>
-										</div>
+										<input type="text" value="0329292501"
+										       class="form-control dashboard-form_item__input">
+									</div>
+									<div class="dashboard-form_item dashboard-form_group w-100">
+										<label for class="text-white mb-2 fw-600">
+											Tên người thụ hưởng
+										</label>
+										<input type="text" value="NGUYEN HUU DAI"
+										       class="form-control dashboard-form_item__input">
+									</div>
+									<div class="dashboard-form_item dashboard-form_group w-100">
+										<label for class="text-white mb-2 fw-600">
+											Số tiền muốn rút
+										</label>
+										<input type="text" value="500.000đ"
+										       class="form-control dashboard-form_item__input">
+									</div>
+									<div class="dashboard-form_item dashboard-form_group w-100">
+										<label for class="text-white mb-2 fw-600">
+											Ghi chú
+										</label>
+										<input type="text" placeholder="Nhập ghi chú (không bắt buộc)"
+										       class="form-control dashboard-form_item__input">
 									</div>
 									<div class="text-center mt-3">
 										<button type="button"
 										        class="button-theme button-theme_primary button-theme_stroke">
-											Nạp tiền
+											Tiếp tục
 											<svg width="25" height="24" viewBox="0 0 25 24" fill="none"
 											     xmlns="http://www.w3.org/2000/svg">
 												<path d="M16.5 16L19.7929 12.7071C20.1834 12.3166 20.1834 11.6834 19.7929 11.2929L16.5 8M19.5 12L5.5 12"
