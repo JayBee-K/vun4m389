@@ -499,6 +499,13 @@
 	width: 100%;
 }
 
+.dashboard-tabs.dashboard-tabs_flex__fill.dashboard-tabs_flex__background .nav-tabs {
+	gap: 0;
+	padding: calc(3 * var(--space));
+	background-color: #33333380;
+	border-radius: var(--space);
+}
+
 .dashboard-tabs .nav-tabs .nav-item .nav-link:hover {
 	color: var(--bs-white);
 }
@@ -552,6 +559,10 @@
 	width: 28px;
 }
 
+.dashboard-notifications_list .notification-item .notification-item_content {
+	width: 100%;
+}
+
 .dashboard-notifications_list .notification-item .notification-item_content .notification-item_meta {
 	color: var(--gray-100);
 }
@@ -591,6 +602,10 @@
 	color: var(--color-accent);
 }
 
+.dashboard-notifications_list .notification-item .notification-highlight_price {
+	color: var(--color-success) !important;
+}
+
 .dashboard-notifications_list .notification-item + .notification-item {
 	margin-top: calc(3 * var(--space));
 }
@@ -605,6 +620,20 @@
 	height: 1px;
 	background: var(--primary-border);
 }
+
+.dashboard-notifications_list .notification-item_page.notification-item .notification-item_icon svg {
+	height: 20px;
+	width: 20px;
+}
+
+.dashboard-notifications_list .notification-item_page.notification-item .notification-item_content .notification-item_meta {
+	font-size: .85em;
+}
+
+.dashboard-notifications_list .notification-item_page.notification-item .notification-item_content .notification-item_meta > span {
+	font-size: calc(1em + 2px);
+}
+
 
 .dashboard-notifications_list .notification-item:hover,
 .dashboard-notifications_list .notification-item.notification-item_unseen {
@@ -625,10 +654,11 @@
 	opacity: .2;
 }
 
+
 .dashboard-notifications .dashboard-notifications_link {
 	margin-top: calc(3 * var(--space));
 	border-top: 1px solid var(--primary-border);
-	padding-top: var(--space);
+	padding-top: calc(2 * var(--space));
 }
 
 .dashboard-form_background {
@@ -640,6 +670,13 @@
 .dashboard-form .dashboard-form_button {
 	padding: calc(4 * var(--space));
 	border-radius: calc(2 * var(--space));
+}
+
+.dashboard-form .dashboard-form_line {
+	background: #5252523D;
+	height: 1px;
+	width: 100%;
+	display: block;
 }
 
 .dashboard-form .dashboard-form_item {
@@ -764,8 +801,7 @@
 	background: var(--primary-color);
 	color: var(--text-dark);
 	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+	bottom: calc(3 * var(--space));
 	right: calc(4 * var(--space));
 }
 
@@ -776,6 +812,52 @@
 
 .dashboard-form .dashboard-form_item.dashboard-form_group .dashboard-form_item__button + .dashboard-form_item__input {
 	padding-right: calc(25 * var(--space));
+}
+
+.dashboard-form .dashboard-form_item.dashboard-form_group .dashboard-form_item__button.primary-color {
+	color: var(--primary-color) !important;
+}
+
+.dashboard-form .dashboard-form_item .dashboard-form_list {
+	display: flex;
+	align-items: center;
+	gap: calc(4 * var(--space));
+	flex-wrap: wrap;
+}
+
+.dashboard-form .dashboard-form_item .dashboard-form_list .dashboard-form_price {
+	position: relative;
+	overflow: hidden;
+	width: calc(100% / 6 - (3.35 * var(--space)));
+}
+
+.dashboard-form .dashboard-form_item .dashboard-form_list .dashboard-form_price .dashboard-form_price__input {
+	position: absolute;
+	opacity: 0;
+	visibility: hidden;
+	display: none;
+}
+
+.dashboard-form .dashboard-form_item .dashboard-form_list .dashboard-form_price .dashboard-form_price__label {
+	color: var(--gray-100);
+	font-weight: 600;
+	font-size: 1.15em;
+	border-radius: var(--space);
+	padding: calc(3 * var(--space)) calc(10 * var(--space));
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #5252523D;
+	cursor: pointer;
+	transition: var(--transition-default);
+	width: 100%;
+}
+
+.dashboard-form .dashboard-form_item .dashboard-form_list .dashboard-form_price .dashboard-form_price__input:checked + .dashboard-form_price__label,
+.dashboard-form .dashboard-form_item .dashboard-form_list .dashboard-form_price .dashboard-form_price__label:hover {
+	background: #FFCC3233;
+	border-color: var(--primary-color);
+	color: var(--primary-color);
 }
 
 .dashboard-form .dashboard-form_item.dashboard-form_item_image {
@@ -1049,23 +1131,23 @@
 .voucher-item:before {
 	position: absolute;
 	content: "";
-	background: var(--color-danger);
+	background: #5252523D;
 	height: 18px;
 	width: 18px;
 	border-radius: 50%;
-	top: calc(4 * var(--space));
-	right: calc(4 * var(--space));
-	opacity: 0;
-	visibility: hidden;
+	top: 50%;
+	transform: translateY(-50%);
+	right: calc(3 * var(--space));
 	transition: var(--transition-default);
 }
 
 .voucher-item:after {
 	position: absolute;
 	content: "";
-	background: url('../images/icon-check.png');
-	top: calc(4 * var(--space));
-	right: calc(5 * var(--space));
+	background: url('../images/icon-check.svg') center center/cover no-repeat;
+	top: 50%;
+	transform: translateY(-50%);
+	right: calc(3.75 * var(--space));
 	height: 12px;
 	width: 12px;
 	opacity: 0;
@@ -1077,7 +1159,10 @@
 	background: #24303a;
 }
 
-.voucher-item.active:before,
+.voucher-item.active:before {
+	background: var(--primary-color);
+}
+
 .voucher-item.active:after {
 	opacity: 1;
 	visibility: visible;
@@ -1114,7 +1199,8 @@
 }
 
 .voucher-item .voucher-item_content {
-	width: 75%;
+	width: 72%;
+	flex: unset;
 	padding: calc(3 * var(--space)) calc(6 * var(--space)) calc(3 * var(--space)) calc(3 * var(--space));
 }
 
@@ -2232,3 +2318,43 @@
 	margin-top: calc(8 * var(--space));
 }
 
+.dashboard-information {
+	padding-top: calc(15 * var(--space));
+	border-top: 1px solid #5252523d;
+}
+
+.dashboard-information .information-avatar .information-avatar_preview {
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+}
+
+.dashboard-information .information-avatar .information-avatar_button {
+	width: 100px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.dashboard-information .information-avatar .information-avatar_button .button-theme {
+	width: 100%;
+	border-radius: var(--space);
+}
+
+.dashboard-information .information-avatar .information-avatar_button .information-avatar_button__input {
+	position: absolute;
+	top: 0;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	z-index: 2;
+}
+
+.dashboard-bank_slider {
+	margin-right: calc(-1 * 6 * var(--space));
+}
+
+.dashboard-deposit,
+.dashboard-deposit .dashboard-box{
+	background: #33333380;
+}

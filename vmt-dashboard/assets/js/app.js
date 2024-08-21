@@ -37,6 +37,33 @@ export const handleSliderHero = function () {
 	}
 }
 
+export const handleSliderBank = function () {
+	if (document.getElementById('sliderLinkedBank') !== null) {
+		const elmSwiper = '#sliderLinkedBank';
+		const objSwiper = {
+			loop: false,
+			speed: 300,
+			autoplay: false,
+			spaceBetween: 10,
+			slidesPerView: 2.25,
+			breakpoints: {
+				320: {
+					slidesPerView: 1.5,
+					spaceBetween: 10,
+				},
+				576: {
+					slidesPerView: 2.5,
+					spaceBetween: 10,
+				},
+				1199: {
+					slidesPerView: 3.5,
+				}
+			},
+		}
+		console.log(handleSwiper(elmSwiper + ' .swiper', objSwiper));
+	}
+}
+
 /***
  * Function show text password
  */
@@ -508,6 +535,7 @@ window.addEventListener('load', function () {
 	handleToggleTypePassword();
 
 	handleSliderHero();
+	handleSliderBank();
 	handleSliderImagesProduct()
 
 	handleToggleSidebar();
