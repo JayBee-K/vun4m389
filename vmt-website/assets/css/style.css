@@ -163,3 +163,26 @@
 	font-weight: 700;
 }
 
+.section-hero .hero-image {
+	margin-bottom: calc(5 * var(--space));
+}
+
+.section-hero .hero-arrow {
+	margin-bottom: calc(10 * var(--space));
+}
+
+.section-hero .hero-images {
+	gap: calc(10 * var(--space));
+}
+
+.section-hero .hero-images .hero-images_title {
+	font-size: 2em;
+	font-family: var(--font-heading);
+	color: var(--bs-white);
+	font-weight: 700;
+}
+
+.section-hero .hero-images .hero-images_item img {
+	width: 80px;
+	height: 80px;
+}

@@ -258,6 +258,22 @@ textarea:focus {
 	gap: calc(10 * var(--space));
 }
 
+.gap-15n {
+	gap: calc(15 * var(--space));
+}
+
+.gap-20n {
+	gap: calc(20 * var(--space));
+}
+
+.gap-25n {
+	gap: calc(25 * var(--space));
+}
+
+.gap-30n {
+	gap: calc(30 * var(--space));
+}
+
 .link-default {
 	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
