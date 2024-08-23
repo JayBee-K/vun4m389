@@ -186,3 +186,90 @@
 	width: 80px;
 	height: 80px;
 }
+
+.section-gap {
+	margin: calc(40 * var(--space));
+}
+
+.section-heading {
+	margin-bottom: calc(30 * var(--space));
+	text-align: center;
+}
+
+.section-heading .heading-title {
+	font-size: 3em;
+	font-weight: 700;
+	font-family: var(--font-heading);
+}
+
+.service-collapse {
+	padding-left: calc(10 * var(--space));
+	position: relative;
+}
+
+.service-collapse:before {
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: calc(1.5 * var(--space));
+	background: #D9D9D9;
+	border-radius: calc(4 * var(--space));
+}
+
+.service-collapse .service-item + .service-item {
+	margin-top: calc(8 * var(--space));
+}
+
+.service-collapse .service-item .service-item_button {
+	font-size: 2em;
+	font-weight: 700;
+	color: var(--gray-300);
+	font-family: var(--font-heading);
+}
+
+.service-collapse .service-item .service-item_button[aria-expanded=true] {
+	color: var(--primary-color);
+}
+
+.service-collapse .service-item .service-item_content .service-item_content__inner {
+	font-size: 1.15em;
+	color: var(--bs-white);
+	line-height: 1.6;
+	margin-top: calc(4 * var(--space));
+}
+
+.service-collapse .service-item .service-item_content .service-item_content__inner p:last-child,
+.service-collapse .service-item .service-item_content .service-item_content__inner ol:last-child,
+.service-collapse .service-item .service-item_content .service-item_content__inner ul:last-child {
+	margin-bottom: 0;
+}
+
+.service-collapse .service-item .service-item_content .service-item_content__inner ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+.service-collapse .service-item .service-item_content .service-item_content__inner ul li + li {
+	margin-top: calc(2 * var(--space));
+}
+
+.service-collapse .service-item .service-item_content .service-item_content__inner ul li:before {
+	display: inline-block;
+	content: "";
+	margin-right: calc(2 * var(--space));
+	background: url('../images/icon/tick-circle.png') center center/cover no-repeat;
+	width: 24px;
+	height: 24px;
+	transform: translateY(6px);
+}
+
+.service-collapse .service-line {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: calc(1.5 * var(--space));
+	background: var(--primary-color);
+	border-radius: calc(4 * var(--space));
+	transition: var(--transition-default);
+}

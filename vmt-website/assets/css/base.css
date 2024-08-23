@@ -21,6 +21,7 @@
 	--text-dark: #142432;
 
 	--gray-500: #EAEBF0;
+	--gray-300: #5B6371;
 	--gray-100: #8D95A3;
 
 	--color-danger: #F34047;
@@ -288,6 +289,7 @@ textarea:focus {
 	box-shadow: none;
 	background: transparent;
 	padding: 0;
+	color: var(--bs-white);
 }
 
 .link-default:active {
