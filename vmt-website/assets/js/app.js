@@ -21,47 +21,90 @@
 		});
 	}
 
-	let handleServiceCollapse = function () {
+	const handleServiceCollapse = function () {
 
 		const serviceCollapse = $('#serviceCollapse');
-		let serviceCollapseButton = serviceCollapse.find('[data-bs-toggle=collapse]');
-		if (serviceCollapse.length && serviceCollapseButton.length) {
+		if (serviceCollapse.length) {
 			const serviceCollapseImage = $('#serviceCollapseImage');
+			const serviceLine = serviceCollapse.find('#serviceLine');
+			let target = serviceCollapse.find('.collapse.show').attr('id');
 
-			// Thay đổi collapse
-			serviceCollapseButton.each(function () {
-				$(this).on('click', function (e) {
-					e.stopPropagation();
-					const buttonElm = $(this);
-					const ariaExpanded = buttonElm.attr('aria-expanded');
-					const dataImage = buttonElm.attr('data-image');
-					if (ariaExpanded === 'true') {
-						setTimeout(function () {
-							const collapseActive = buttonElm.closest('.service-item')[0];
-							serviceLine.css({
-								top: parseInt(collapseActive.offsetTop) + 'px',
-								height: parseInt(collapseActive.scrollHeight) + 'px',
-							});
-						}, 250);
+			// Sự kiện khi một collapse được mở
+			serviceCollapse.on('show.bs.collapse', function (e) {
+				const collapseElm = $(e.target); // Collapse vừa được mở
+				target = collapseElm.attr('id');
+				const buttonElm = serviceCollapse.find(`[data-bs-target="#${collapseElm.attr('id')}"]`);
 
-						if (serviceCollapseImage.length) {
-							const htmlImage = `<img src="${dataImage}" class="h-100 w-auto mw-100 object-fit-contain" alt="">`
-							serviceCollapseImage.find('img')[0].remove();
-							serviceCollapseImage.append(htmlImage);
-						}
-					}
-				})
+				const dataImage = buttonElm.attr('data-image');
+
+				// Cập nhật hình ảnh
+				if (serviceCollapseImage.length && dataImage) {
+					const htmlImage = `<img src="${dataImage}" class="h-100 w-auto mw-100 object-fit-contain" alt="">`;
+					serviceCollapseImage.find('img').remove();
+					serviceCollapseImage.append(htmlImage);
+				}
+
+				// Cập nhật vị trí và chiều cao của serviceLine
+				if (serviceLine.length) {
+					setTimeout(function () {
+						const collapseActive = collapseElm.closest('.service-item')[0];
+						serviceLine.css({
+							top: `${collapseActive.offsetTop}px`,
+							height: `${collapseActive.scrollHeight}px`,
+						});
+					}, 250);
+				}
+			});
+
+			serviceCollapse.on('hide.bs.collapse', function (e) {
+				const collapseElm = $(e.target);
+				if (collapseElm.hasClass('show') && collapseElm.attr('id') == target) {
+					e.preventDefault(); // Ngăn chặn hành vi đóng của collapse đang mở
+				}
 			})
 
-			// Trạng thái khi load trang
-			const serviceLine = serviceCollapse.find('#serviceLine');
+			// Cập nhật trạng thái khi trang được tải
 			if (serviceLine.length) {
 				const collapseActive = serviceCollapse.find('.collapse.show').closest('.service-item')[0];
-				serviceLine.css({
-					top: parseInt(collapseActive.offsetTop) + 'px',
-					height: parseInt(collapseActive.scrollHeight) + 'px',
-				});
+				if (collapseActive) {
+					serviceLine.css({
+						top: `${collapseActive.offsetTop}px`,
+						height: `${collapseActive.scrollHeight}px`,
+					});
+				}
 			}
+		}
+	}
+
+	const handleSliderSupport = function () {
+		const elmSwiper = '#sliderSupport';
+		if ($(elmSwiper).length > 0) {
+			const objSwiper = {
+				speed: 1000,
+				autoplay: {
+					delay: 500000,
+					disableOnInteraction: true,
+				},
+				slidesPerView: 3,
+				centeredSlides: true,
+				loop: true,
+				breakpoints: {
+					320: {
+						slidesPerView: 1.2,
+					},
+					375: {
+						slidesPerView: 1.25,
+					},
+					768: {
+						slidesPerView: 2.5,
+					},
+					1400: {
+						slidesPerView: 5,
+					},
+				},
+				spaceBetween: 30,
+			}
+			handleSwiper(elmSwiper + ' .swiper', objSwiper);
 		}
 	}
 
@@ -71,5 +114,7 @@
 		});
 
 		handleServiceCollapse();
+		handleSliderSupport();
+		handleSliderSupport();
 	})
 })(jQuery);
