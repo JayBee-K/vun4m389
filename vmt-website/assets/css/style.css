@@ -221,10 +221,11 @@
 }
 
 .service-collapse .service-item .service-item_button {
-	font-size: 2em;
+	font-size: 1.75em;
 	font-weight: 700;
 	color: var(--gray-300);
 	font-family: var(--font-heading);
+	text-align: left;
 }
 
 .service-collapse .service-item .service-item_button[aria-expanded=true] {
