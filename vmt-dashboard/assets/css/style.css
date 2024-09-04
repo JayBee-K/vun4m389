@@ -461,8 +461,17 @@
 	color: var(--gray-100);
 }
 
+.dashboard-notifications .dashboard-notifications_heading .dashboard-notifications_button .dashboard-notifications_button__icon path {
+	fill: var(--gray-100);
+	transition: var(--transition-default);
+}
+
 .dashboard-notifications .dashboard-notifications_heading .dashboard-notifications_button:hover {
 	color: var(--bs-white);
+}
+
+.dashboard-notifications .dashboard-notifications_heading .dashboard-notifications_button:hover .dashboard-notifications_button__icon path {
+	fill: var(--bs-white);
 }
 
 .dashboard-tabs .nav-tabs {
@@ -2355,6 +2364,16 @@
 }
 
 .dashboard-deposit,
-.dashboard-deposit .dashboard-box{
+.dashboard-deposit .dashboard-box {
 	background: #33333380;
+}
+
+.dashboard-price .dashboard-price_item + .dashboard-price_item {
+	padding-left: calc(8 * var(--space));
+	margin-left: calc(8 * var(--space));
+	border-left: 1px solid #5252523D;
+}
+
+.dashboard-price .dashboard-price_item:last-child {
+	border-left: 0;
 }

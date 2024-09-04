@@ -718,6 +718,28 @@
 	.dashboard-detail .detail-header .detail-header_back {
 		width: 100%;
 	}
+
+	.dashboard-grid {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.dashboard-price {
+		flex-wrap: wrap;
+		margin-left: 0 !important
+	}
+
+	.dashboard-price .dashboard-price_item {
+		width: 50%;
+		margin-left: 0 !important;
+		padding-left: 0 !important;
+		border-left: 0 !important;
+	}
+
+	.dashboard-price .dashboard-price_item:nth-last-child(2),
+	.dashboard-price .dashboard-price_item:last-child {
+		margin-top: calc(4 * var(--space));
+	}
 }
 
 @media screen and (max-width: 574px) {
@@ -782,5 +804,11 @@
 
 	.dashboard-form .dashboard-form_item .dashboard-form_list .dashboard-form_price {
 		width: calc(50% - (2 * var(--space)));
+	}
+}
+
+@media screen and (min-width: 576px) {
+	.modal-small {
+		--bs-modal-width: 400px
 	}
 }
