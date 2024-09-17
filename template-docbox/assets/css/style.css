@@ -463,7 +463,7 @@
 .content-search .search-list .search-group {
 	color: var(--dark-color);
 	font-size: 1.3em;
-	margin-bottom: 15px;
+	margin-bottom: 25px;
 	font-weight: 700;
 	border-left: 4px solid var(--primary-color);
 	padding-left: 8px;
@@ -495,11 +495,11 @@
 }
 
 .content-search .search-list .search-item + .search-item {
-	margin-top: 12px;
+	margin-top: 15px;
 }
 
 .content-search .search-list + .search-list {
-	margin-top: 30px;
+	margin-top: 25px;
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1400px) {
