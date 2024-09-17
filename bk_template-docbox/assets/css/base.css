@@ -337,7 +337,7 @@ textarea:focus {
 }
 
 .dashboard-scrollbar::-webkit-scrollbar {
-	width: 6px;
+	width: 7px;
 	height: 5px;
 }
 
