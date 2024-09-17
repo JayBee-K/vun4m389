@@ -11,6 +11,13 @@
 	width: 15%;
 }
 
+.section-header .header-navbar .header-navigation {
+	width: calc(70% - 90px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .section-header .header-navbar .header-navigation ul {
 	display: flex;
 	align-items: center;
@@ -48,6 +55,10 @@
 	padding-top: .4rem;
 	padding-bottom: .4rem;
 	width: auto;
+}
+
+.section-header .header-hamburger {
+	display: none;
 }
 
 .section-footer {
