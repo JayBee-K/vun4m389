@@ -115,6 +115,58 @@ $(function () {
 		handleSwiper(elmSwiper + ' .swiper', objSwiper);
 	}
 
+	if ($('#sliderDate').length > 0) {
+		const elmSwiper = '#sliderDate';
+		const objSwiper = {
+			speed: 1000,
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: true,
+			},
+			loop: 0,
+			slidesPerView: 3.5,
+			spaceBetween: 12,
+			navigation: {
+				nextEl: elmSwiper + " .button-next",
+				prevEl: elmSwiper + " .button-prev",
+			},
+			breakpoints: {
+				320: {
+					slidesPerView: 2.25,
+				},
+				575: {
+					slidesPerView: 3.25,
+				},
+				768: {
+					slidesPerView: 3.5,
+				}
+			},
+			on: {
+				init: function(){
+					const index = $('.buttonDate.active').attr('data-index');
+					this.slideTo(index)
+				},
+			}
+		}
+
+		const sliderDate = handleSwiper(elmSwiper + ' .swiper', objSwiper);
+
+		if ($('.buttonDate').length > 0) {
+			$('.buttonDate').click(function () {
+				let button = $(this);
+
+				if (button.hasClass('active')) {
+					return false;
+				} else {
+					$('.buttonDate').removeClass('active');
+					button.addClass('active');
+					const index = button.parent().attr('data-swiper-slide-index');
+					sliderDate.slideTo(index)
+				}
+			});
+		}
+	}
+
 	if ($('#sliderTime').length > 0) {
 		const elmSwiper = '#sliderTime';
 		const objSwiper = {
@@ -140,15 +192,16 @@ $(function () {
 				768: {
 					slidesPerView: 3.5,
 				}
+			},
+			on: {
+				init: function(){
+					const index = $('.buttonTime.active').attr('data-index');
+					this.slideTo(index)
+				},
 			}
 		}
 
 		const sliderTime = handleSwiper(elmSwiper + ' .swiper', objSwiper);
-
-		sliderTime.on('init', function () {
-			const index = $('.buttonTime.active').parent().attr('data-swiper-slide-index');
-			sliderTime.slideTo(index)
-		})
 
 		if ($('.buttonTime').length > 0) {
 			$('.buttonTime').click(function () {
@@ -159,7 +212,7 @@ $(function () {
 				} else {
 					$('.buttonTime').removeClass('active');
 					button.addClass('active');
-					const index = button.parent().attr('data-swiper-slide-index');
+					const index = button.attr('data-index');
 					sliderTime.slideTo(index)
 				}
 			});
