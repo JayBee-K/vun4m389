@@ -75,9 +75,11 @@
 	font-weight: 500;
 	line-height: 28px;
 }
+
 .header .header-navigation > ul > li.active > a {
 	font-weight: 600;
 }
+
 .header .header-navigation > ul > li.active > a,
 .header .header-navigation > ul > li > a:hover {
 	color: var(--primary-color);
