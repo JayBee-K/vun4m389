@@ -1,3 +1,11 @@
+@font-face {
+	font-family: 'Nexa Rust Script';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(../fonts/NexaRustScriptLDemo-1.otf) format('opentype');
+}
+
 :root {
 	--transition-default: 0.3s all ease-in-out;
 	--font-theme: "Libre Franklin", sans-serif;

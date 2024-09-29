@@ -171,7 +171,7 @@ $(function () {
 	});
 
 	const scroll = new SmoothScroll('#header-navigation a', {
-		speed: 800,
+		speed: 500,
 		offset: 120
 	});
 });
