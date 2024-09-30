@@ -24,7 +24,7 @@ function LoadData(date, callbackSuccess) {
 	$.ajax({
 		type: "POST",
 		url: "../assets/json/datajson.txt",
-		data: '{date:"' + date + '"}',
+		data: '{date:"2024-09-30"}',
 		contentType: "application/json; charset=utf-8",
 		dataType: "text",
 		success: function (data) {
@@ -32,8 +32,8 @@ function LoadData(date, callbackSuccess) {
 				callbackSuccess(data);
 			}
 		},
-		error: function () {
-			alert(500);
+		error: function (jqXHR, textStatus, errorThrown) {
+			alert(errorThrown);
 		}
 	});
 
