@@ -23,17 +23,17 @@ export function Init() {
 function LoadData(date, callbackSuccess) {
 	$.ajax({
 		type: "POST",
-		url: "../assets/json/DataJson.json",
+		url: "../assets/json/datajson.txt",
 		data: '{date:"' + date + '"}',
 		contentType: "application/json; charset=utf-8",
-		dataType: "json",
+		dataType: "text",
 		success: function (data) {
 			if (data.length > 0) {
 				callbackSuccess(data);
 			}
 		},
-		error: function (ex) {
-			alert(ex);
+		error: function () {
+			alert(500);
 		}
 	});
 
