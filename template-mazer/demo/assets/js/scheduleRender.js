@@ -23,7 +23,7 @@ export function Init() {
 function LoadData(date, callbackSuccess) {
 	$.ajax({
 		type: "POST",
-		url: "../assets/json/DataJson.txt",
+		url: "/assets/json/DataJson.txt",
 		data: '{date:"' + date + '"}',
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
