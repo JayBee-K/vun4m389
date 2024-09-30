@@ -7,8 +7,8 @@ let scheduleCont = document.getElementById('schedule-overflow');
 let currentView = document.getElementById('current-time');
 let eventStore = document.getElementById('event-store');
 
-window.onload = function(){
-   loadSchedule();
+window.onload = function () {
+	loadSchedule();
 }
 
 export const AppointmentJS = {
@@ -21,28 +21,25 @@ export function Init() {
 }
 
 function LoadData(date, callbackSuccess) {
-	//$.ajax({
-	//    type: "POST",
-	//    url: "/Appointment/Book/LoadDataAppointment",
-	//    data: '{date:"' + date + '"}',
-	//    contentType: "application/json; charset=utf-8",
-	//    dataType: "json",
-	//    success: function (msg) {
-	//        //var data = JSON.parse(msg.d);
-	//        if (msg.rs) {
-	//            callbackSuccess(msg.d);
-	//        }
-	//        hideload();
-	//    },
-	//    error: function () {
-	//        console.log(500);
-	//        hideload();
-	//    }
-	//});
-
-	var d = AppointmentJS.instance.invokeMethodAsync("LoadData").then(result => {
-		callbackSuccess(result);
+	$.ajax({
+		type: "POST",
+		url: "../assets/json/DataJson.txt",
+		data: '{date:"' + date + '"}',
+		contentType: "application/json; charset=utf-8",
+		dataType: "json",
+		success: function (data) {
+			if (data.length > 0) {
+				callbackSuccess(data);
+			}
+		},
+		error: function () {
+			console.log(500);
+		}
 	});
+
+	/*var d = AppointmentJS.instance.invokeMethodAsync("LoadData").then(result => {
+		callbackSuccess(result);
+	});*/
 
 };
 
@@ -56,7 +53,9 @@ export function loadSchedule(date, instances) {
 	for (let i = 8; i <= 23; i++) {
 		let suffix = i < 12 ? 'am' : 'pm';
 		let time = i;
-		if (i > 12) { time = i - 12 }
+		if (i > 12) {
+			time = i - 12
+		}
 		let data_hours = i;
 		$(timelineTable).append(`
             <tr><td class="time"><p class="big-time">${time} <span>${suffix}</span></p><p class="lb-minutes top">15</p><p class="lb-minutes center">30</p><p class="lb-minutes bottom">45</p></td></tr>`);
@@ -121,12 +120,10 @@ export function loadSchedule(date, instances) {
 							discountId: item.discountId,
 							discountName: item.discountName,
 						});
-				}
-				else {
+				} else {
 					addBlankTime(item.starttime, item.endtime, tdIndex, item.id, item.dateNow, item.note);
 				}
-			}
-			catch (err) {
+			} catch (err) {
 
 			}
 			//handleRemoveSsAllEvent();
@@ -137,10 +134,10 @@ export function loadSchedule(date, instances) {
 				console.log(t);
 				var sbsID = $(element).find('input.idE').val();
 				var a = $(element).find('input.idE').closest('td');
-				AppointmentJS.instance.invokeMethodAsync("UpdateMoveService", { HHmm: t, SessionDetailID: Number(sbsID), UserID: Number(a.attr('data-id')) })
+				//AppointmentJS.instance.invokeMethodAsync("UpdateMoveService", { HHmm: t, SessionDetailID: Number(sbsID), UserID: Number(a.attr('data-id')) })
 			});
 		});
-		AppointmentJS.instance.invokeMethodAsync("HideLoading");
+		//AppointmentJS.instance.invokeMethodAsync("HideLoading");
 	});
 	// fixed left col
 	$("#schedule-overflow-horizontal").on("scroll", function (e) {
@@ -161,8 +158,8 @@ export function loadSchedule(date, instances) {
 
 			if (posYt < positionYByTime()) {
 				$(ele).addClass('testdd');
+			} else {
 			}
-			else { }
 		});
 	}, 5000);
 
@@ -174,6 +171,7 @@ function checkOvertimeEvent() {
 		checkOvertimeSingle(ele);
 	});
 }
+
 function checkOvertimeSingle(ele) {
 	let posYt = ele.offsetTop;
 	let posYb = $(ele).innerHeight() + ele.offsetTop;
@@ -196,6 +194,7 @@ function checkOvertimeSingle(ele) {
 		}
 	}
 }
+
 function cellsOperationRender(str = '') {
 	var result = [];
 	for (let i = 1; i < scheduleOperatory.rows[0].cells.length; i++) {
@@ -204,6 +203,7 @@ function cellsOperationRender(str = '') {
 	}
 	return result;
 }
+
 function OtherEvent(ele) {
 	var myCl = $(ele).attr('class').split(' ').filter(myClass => {
 		let mystring = myClass,
@@ -220,6 +220,7 @@ function OtherEvent(ele) {
 	});
 	return result;
 }
+
 function inColEvent(ele) {
 	var result = [];
 	$(ele).closest('.events').find('.sch-event').each(function () {
@@ -236,6 +237,7 @@ function inColEvent(ele) {
 //var timezone = -6;
 var userTime = new Date();
 var svTime = new Date(userTime.getTime() + userTime.getTimezoneOffset() * 60000 + timezone * 60 * 60 * 1000);
+
 function positionYByTime(time = svTime) {
 	let divH = scheduleTable.clientHeight;
 	let rowH = 155;
@@ -243,6 +245,7 @@ function positionYByTime(time = svTime) {
 	let minute = time.getMinutes() + 1;
 	return hour / 16 * divH + minute / 60 * rowH;
 };
+
 function rePositionYByTime(stime = new Date()) {
 	var reSvTime = new Date(stime.getTime() + stime.getTimezoneOffset() * 60000 + timezone * 60 * 60 * 1000);
 	var time = reSvTime;
@@ -252,6 +255,7 @@ function rePositionYByTime(stime = new Date()) {
 	let minute = time.getMinutes() + 1;
 	return hour / 16 * divH + minute / 60 * rowH;
 };
+
 function timeByPositionY(pos) {
 	let divH = scheduleTable.clientHeight;
 	let rawTime = pos / divH * 16;
@@ -279,6 +283,7 @@ function timeByPositionY(pos) {
 	}
 	return `${hours + 8}:${m == 0 ? '00' : Math.round(m)}`;
 };
+
 function addCustomer(timeStar = "", timeEnd = "", tierTimeEnd = "", timeStarMin = "", timeEndMin = "", operatory = 0, opt = {
 	id: 0,
 	color: '#c0c0c0',
@@ -340,7 +345,7 @@ function addCustomer(timeStar = "", timeEnd = "", tierTimeEnd = "", timeStarMin 
             ${opt.cCount > 0 ? '<span class="lb new" title="No show"><i class="bi-slash-circle"></i> ' + opt.cCount + '</span>' : ''}
             ${opt.mess ? '<span class="lb parallel"  title="Service Parallel"> // </span>' : ''}
             ${opt.extra > 0 ? '<span class="lb">Ex+' + opt.extra + '</span>' : ''}
-            ${opt.discountId > 0 ? '<br/><span class="lb"><i class="bi bi-gift" style="top: -1px;"></i> Discount: ' + opt.discountName +'</span>' : ''}
+            ${opt.discountId > 0 ? '<br/><span class="lb"><i class="bi bi-gift" style="top: -1px;"></i> Discount: ' + opt.discountName + '</span>' : ''}
             ${opt.status_deposit == 1 ? '<span class="lb parallel" title="Deposit"><i class="bi bi-currency-dollar"></i></span>' : opt.status_deposit == 2 ? '<span class="lb" title="Deposit"><i class="bi bi-currency-dollar"></i></span>' : ''}           
         </div>        
         <div class="actions">
@@ -371,11 +376,11 @@ function addCustomer(timeStar = "", timeEnd = "", tierTimeEnd = "", timeStarMin 
 			container: 'body'
 		});
 		return eleTempalte;
-	}
-	catch (err) {
+	} catch (err) {
 		console.log(err.message);
 	}
 }
+
 function addBlankTime(timeStar = '', timeEnd = '', operatory = 0, ID = 0, datenow = false, note = "") {
 	let contCell = $(eventStore).find('td:not(.time)').eq(operatory);
 	let contEle = contCell.children('.events');
@@ -401,6 +406,7 @@ function addBlankTime(timeStar = '', timeEnd = '', operatory = 0, ID = 0, dateno
     `;
 	contEle.append(eleTempalte);
 }
+
 function draggSch(obj, callbackStopDragg) {
 	let w = $('#table-schedule-time td:not(.time)').innerWidth() + 3;
 	let h = $('#table-schedule-time td:not(.time)').innerHeight();
@@ -434,8 +440,7 @@ function draggSch(obj, callbackStopDragg) {
 					var hn = parseInt(ee[0]) + 1;
 					e.push('' + hn + '');
 					e.push('00');
-				}
-				else {
+				} else {
 					e.push('' + ee[0] + '');
 					var hn = parseInt(ee[1]);
 					e.push('' + hn + '');
@@ -448,18 +453,15 @@ function draggSch(obj, callbackStopDragg) {
 					var he = e[0] - 12;
 
 					$(obj).find('.tmp-time-top').html(hs + ':' + s[1] + 'PM - ' + he + ':' + e[1] + 'PM');
-				}
-				else {
+				} else {
 					if (s[0] < 12 && e[0] >= 12) {
 						var he = e[0] - 12;
 						if (e[0] == 12) {
 							$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + e[0] + ':' + e[1] + 'PM');
-						}
-						else {
+						} else {
 							$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + he + ':' + e[1] + 'PM');
 						}
-					}
-					else {
+					} else {
 						$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + e[0] + ':' + e[1] + 'AM');
 					}
 				}
@@ -491,9 +493,11 @@ function draggSch(obj, callbackStopDragg) {
 						if (posBt > itTp) {
 							if (posTp < itBt) {
 								isRevert = true;
-								$(currentEle).animate({ top: topStamp + 'px' });
-							} else { }
-						} else { }
+								$(currentEle).animate({top: topStamp + 'px'});
+							} else {
+							}
+						} else {
+						}
 					}
 
 
@@ -504,9 +508,12 @@ function draggSch(obj, callbackStopDragg) {
 					if (posBt > itTp) {
 						if (posTp < itBt) {
 							isRevert = true;
-							$(currentEle).animate({ top: topStamp + 'px' }, function () { });
-						} else { }
-					} else { }
+							$(currentEle).animate({top: topStamp + 'px'}, function () {
+							});
+						} else {
+						}
+					} else {
+					}
 				});
 				if (!isRevert) {
 					checkOvertimeSingle(currentEle);
@@ -523,26 +530,28 @@ function draggSch(obj, callbackStopDragg) {
 
 				}
 
-
 			}
 		});
+	} catch (ex) {
+		console.log(ex);
 	}
-	catch (ex) { }
 	if ($(obj).hasClass('free-axis')) {
-
 		freeAxisOp(obj, function (timeB, element) {
 			callbackStopDragg(timeB, obj);
 		});
 	}
 
 }
+
 function OpenEditMenu1(obj, date) {
 	var $menu = $('#menu-edit-user');
 	$menu.addClass('open');
 }
+
 function removeSch(obj) {
 	//    $(obj).closest('.sch-event').remove();
 }
+
 function freeAxisOp(obj, callbackTL) {
 	let $item = $(obj).closest('.sch-event');
 	$item.find('.ev-top').children('.lb').remove();
@@ -605,8 +614,7 @@ function freeAxisOp(obj, callbackTL) {
 					var hn = parseInt(ee[0]) + 1;
 					e.push('' + hn + '');
 					e.push('00');
-				}
-				else {
+				} else {
 					e.push('' + ee[0] + '');
 					var hn = parseInt(ee[1]);
 					e.push('' + hn + '');
@@ -619,18 +627,15 @@ function freeAxisOp(obj, callbackTL) {
 					var he = e[0] - 12;
 
 					$(obj).find('.tmp-time-top').html(hs + ':' + s[1] + 'PM - ' + he + ':' + e[1] + 'PM');
-				}
-				else {
+				} else {
 					if (s[0] < 12 && e[0] >= 12) {
 						var he = e[0] - 12;
 						if (e[0] == 12) {
 							$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + e[0] + ':' + e[1] + 'PM');
-						}
-						else {
+						} else {
 							$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + he + ':' + e[1] + 'PM');
 						}
-					}
-					else {
+					} else {
 						$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + e[0] + ':' + e[1] + 'AM');
 					}
 				}
@@ -649,11 +654,13 @@ function freeAxisOp(obj, callbackTL) {
 					// only time change
 					inColEvent(this).forEach(function (obj, index) {
 						let itTp = obj.offsetTop;
-						let itBt = obj.offsetTop + $(obj).innerHeight();;
+						let itBt = obj.offsetTop + $(obj).innerHeight();
+						;
 						if (posBt > itTp) {
 							if (posTp < itBt) {
 								isRevert = true;
-								$(currentEle).animate({ top: topStamp + 'px', left: 0 + 'px' }, function () { });
+								$(currentEle).animate({top: topStamp + 'px', left: 0 + 'px'}, function () {
+								});
 							} else {
 
 							}
@@ -671,9 +678,11 @@ function freeAxisOp(obj, callbackTL) {
 							if (posBt > itTp) {
 								if (posTp < itBt) {
 									isRevert = true;
-									$(currentEle).animate({ top: topStamp + 'px' });
-								} else { }
-							} else { }
+									$(currentEle).animate({top: topStamp + 'px'});
+								} else {
+								}
+							} else {
+							}
 						}
 					});
 				}
@@ -684,7 +693,7 @@ function freeAxisOp(obj, callbackTL) {
 					topStamp = 0;
 					callbackTL(timeByPositionY(ui.position.top), obj);
 				} else {
-					$(currentEle).css({ height: revertHeight + 'px' });
+					$(currentEle).css({height: revertHeight + 'px'});
 					setTimeout(function () {
 						checkOvertimeSingle(currentEle);
 						console.log(timeByPositionY(topStamp));
@@ -694,9 +703,10 @@ function freeAxisOp(obj, callbackTL) {
 				}
 			}
 		});
+	} catch (ex) {
 	}
-	catch (ex) { }
 }
+
 function moveOpaSch(obj, revertTop, revertCont, revertClass) {
 	let objLeft = obj.offsetLeft + $(obj).closest('td')[0].offsetLeft;
 	let isRevert = false;
@@ -705,16 +715,18 @@ function moveOpaSch(obj, revertTop, revertCont, revertClass) {
 		if (Math.abs(objLeft - eleLeft) <= 10) {
 			if ($(ele).hasClass(revertClass)) {
 				isRevert = true;
-				$(obj).animate({ top: revertTop + 'px', left: 0 + 'px' });
+				$(obj).animate({top: revertTop + 'px', left: 0 + 'px'});
 				revertCont.append(obj);
-				OtherEvent(obj).forEach(function (ele, index) { $(ele).removeClass('highlight'); });
+				OtherEvent(obj).forEach(function (ele, index) {
+					$(ele).removeClass('highlight');
+				});
 			} else {
 				let typeNV = parseInt($(ele).data('id'));
 
 				updateEventByTier(obj, typeNV);
 
 				$(ele).find('.events').append(obj);
-				$(obj).css({ left: 0 });
+				$(obj).css({left: 0});
 				// recheck inColEvent
 				let posTp = obj.offsetTop;
 				let posBt = obj.offsetTop + $(obj).innerHeight();
@@ -726,12 +738,14 @@ function moveOpaSch(obj, revertTop, revertCont, revertClass) {
 						if (posTp < itBt) {
 							//revert
 							isRevert = true;
-							$(obj).animate({ top: revertTop + 'px' }, function () {
+							$(obj).animate({top: revertTop + 'px'}, function () {
 							});
 							revertCont.append(obj);
 
-						} else { }
-					} else { }
+						} else {
+						}
+					} else {
+					}
 				});
 
 				OtherEvent(obj).forEach(function (ele, index) {
@@ -743,13 +757,15 @@ function moveOpaSch(obj, revertTop, revertCont, revertClass) {
 							if (posTp < itBt) {
 								isRevert = true;
 
-								$(obj).animate({ top: revertTop + 'px' }, function () {
+								$(obj).animate({top: revertTop + 'px'}, function () {
 
 								});
 								revertCont.append(obj);
 
-							} else { }
-						} else { }
+							} else {
+							}
+						} else {
+						}
 					}
 
 				});
@@ -765,6 +781,7 @@ function moveOpaSch(obj, revertTop, revertCont, revertClass) {
 //danh sach thoi gian lam duoc cua nv theo dich vu
 var TimeLevelStaff = [];
 console.log(TimeLevelStaff);
+
 function getLvsByServiceID(id) {
 	var result = [];
 	$.each(TimeLevelStaff, function (index, ele) {
@@ -774,8 +791,10 @@ function getLvsByServiceID(id) {
 	});
 	return result;
 }
+
 function updateEventByTier(obj, tier) {
-	if ($(obj).hasClass('Addon')) { } else {
+	if ($(obj).hasClass('Addon')) {
+	} else {
 
 
 		let rawB = $(obj).find('input.timeBM').val();
@@ -803,7 +822,7 @@ function updateEventByTier(obj, tier) {
 		}
 		let topPosY = $(scheduleTable).find(`tr[data-date-time="${rawB}"]`)[0].offsetTop;
 		let bottomPosY = $(scheduleTable).find(`tr[data-date-time="${rawE_h}:${newE_m == 0 ? '00' : newE_m < 10 ? '0' + newE_m : newE_m}"]`)[0].offsetTop;
-		$(obj).css({ height: (bottomPosY - topPosY) + 'px' });
+		$(obj).css({height: (bottomPosY - topPosY) + 'px'});
 	}
 
 }
@@ -824,12 +843,14 @@ function checkDisableOp(obj) {
 	});
 	return objClass;
 }
+
 function createHighlightCol(obj) {
 	let $cont = $("#table-schedule-time").parent();
 	let $hlCol = $('<div class="hl-colnhe"></div>');
 	$cont.append($hlCol);
-	$hlCol.css({ width: $(obj).innerWidth() + 'px', left: obj.offsetLeft + 'px', top: 0 });
+	$hlCol.css({width: $(obj).innerWidth() + 'px', left: obj.offsetLeft + 'px', top: 0});
 }
+
 function clearAllHighlightCol(obj) {
 	let $cont = $("#table-schedule-time").parent();
 	$cont.find('.hl-colnhe').remove();
@@ -881,9 +902,11 @@ function removeSsAllEvent(obj, status = '', SbsID) {
 	//    }
 	//});
 }
+
 function removeSs(obj, status = '') {
 	$(obj).removeClass(status);
 }
+
 //data functions
 function autoFillInfo(obj) {
 	let stringArr = obj.textContent.split('/');
@@ -901,6 +924,7 @@ function getNewService(obj) {
 	let $sltimestart = $('#addUser-selectTime');
 	let $timeend = $('#addUser-ipTimeEnd');
 }
+
 //-------------------------n4m
 //mở chi tiết đơn
 //export function viewDetail() {
@@ -969,12 +993,10 @@ export function display_sesssion(session) {
 							discountId: item.discountId,
 							discountName: item.discountName,
 						});
-				}
-				else {
+				} else {
 					addBlankTime(item.starttime, item.endtime, tdIndex, item.id, item.dateNow, item.note);
 				}
-			}
-			catch (err) {
+			} catch (err) {
 
 			}
 
@@ -1000,21 +1022,28 @@ export function display_sesssion(session) {
 				//        console.log(500);
 				//    }
 				//});
-				AppointmentJS.instance.invokeMethodAsync("UpdateMoveService", { HHmm: t, SessionDetailID: Number(sbsID), UserID: Number(a.attr('data-id')) })
+				AppointmentJS.instance.invokeMethodAsync("UpdateMoveService", {
+					HHmm: t,
+					SessionDetailID: Number(sbsID),
+					UserID: Number(a.attr('data-id'))
+				})
 			});
 		});
 	});
 }
+
 //xóa từng dịch vụ
 export function delete_session_detail(session_detail_id) {
 	$('input[value="' + session_detail_id + '"]').closest('.sch-event').remove();
 }
+
 jQuery(document).ready(function ($) {
 	$(document).on("click", ".view-detail", function () {
 		let session = $(this).attr('data-session');
 		console.log(AppointmentJS.instance);
 		if (AppointmentJS.instance !== null) {
-			var d = AppointmentJS.instance.invokeMethodAsync("SessionDetailPopup", Number(session)).then(result => { });
+			var d = AppointmentJS.instance.invokeMethodAsync("SessionDetailPopup", Number(session)).then(result => {
+			});
 			console.log(session);
 		}
 	});
@@ -1032,35 +1061,40 @@ jQuery(document).ready(function ($) {
 		if (AppointmentJS.instance !== null) {
 			let session = $(this).attr('data-session');
 			let status = $(this).attr('data-status');
-			AppointmentJS.instance.invokeMethodAsync("DeleteBooking", Number(session), Number(status)).then(result => { });
+			AppointmentJS.instance.invokeMethodAsync("DeleteBooking", Number(session), Number(status)).then(result => {
+			});
 		}
 	});
 	//xóa dịch vụ
 	$(document).on("click", ".delete-service", function () {
 		if (AppointmentJS.instance !== null) {
 			let service = $(this).attr('data-service');
-			AppointmentJS.instance.invokeMethodAsync("DeleteBookingService", Number(service)).then(result => { });
+			AppointmentJS.instance.invokeMethodAsync("DeleteBookingService", Number(service)).then(result => {
+			});
 		}
 	});
 	//reset dịch vụ
 	$(document).on("click", ".reset-service", function () {
 		if (AppointmentJS.instance !== null) {
 			let service = $(this).attr('data-service');
-			AppointmentJS.instance.invokeMethodAsync("ResetBookingService", Number(service)).then(result => { });
+			AppointmentJS.instance.invokeMethodAsync("ResetBookingService", Number(service)).then(result => {
+			});
 		}
 	});
 	//thay doi session cho dịch vụ
 	$(document).on("click", ".change-session", function () {
 		if (AppointmentJS.instance !== null) {
 			let service = $(this).attr('data-service');
-			AppointmentJS.instance.invokeMethodAsync("ChangeSevicesToSession", Number(service)).then(result => { });
+			AppointmentJS.instance.invokeMethodAsync("ChangeSevicesToSession", Number(service)).then(result => {
+			});
 		}
 	});
 	//thay đổi thời gian dịch vụ
 	$(document).on("click", ".change-time", function () {
 		let session = $(this).attr('data-service');
 		if (AppointmentJS.instance !== null) {
-			var d = AppointmentJS.instance.invokeMethodAsync("ChangeTimeService", Number(session)).then(result => { });
+			var d = AppointmentJS.instance.invokeMethodAsync("ChangeTimeService", Number(session)).then(result => {
+			});
 		}
 	});
 });
