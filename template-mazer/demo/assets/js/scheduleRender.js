@@ -32,8 +32,8 @@ function LoadData(date, callbackSuccess) {
 				callbackSuccess(data);
 			}
 		},
-		error: function () {
-			alert(500);
+		error: function (ex) {
+			alert(ex);
 		}
 	});
 
