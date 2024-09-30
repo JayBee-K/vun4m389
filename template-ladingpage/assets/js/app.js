@@ -88,10 +88,6 @@ export const initSliderFeedback = function () {
 		const elmSwiper = '#sliderFeedback';
 		const objSwiper = {
 			speed: 1000,
-			autoplay: {
-				delay: 5000,
-				disableOnInteraction: true,
-			},
 			loop: true,
 			slidesPerView: 3,
 			spaceBetween: 30,
@@ -119,10 +115,6 @@ export const initSliderDate = function () {
 		const elmSwiper = '#sliderDate';
 		const objSwiper = {
 			speed: 1000,
-			autoplay: {
-				delay: 5000,
-				disableOnInteraction: true,
-			},
 			loop: 0,
 			slidesPerView: 3.5,
 			spaceBetween: 12,
@@ -172,10 +164,6 @@ export const initSliderTime = function () {
 		const elmSwiper = '#sliderTime';
 		const objSwiper = {
 			speed: 1000,
-			autoplay: {
-				delay: 5000,
-				disableOnInteraction: true,
-			},
 			loop: 0,
 			slidesPerView: 3.5,
 			spaceBetween: 12,
@@ -221,18 +209,20 @@ export const initSliderTime = function () {
 	}
 }
 
+export const spy = new Gumshoe('#header-navigation a', {
+	offset: 120
+});
+
+export const scroll = new SmoothScroll('#header-navigation a', {
+	speed: 500,
+	offset: 120
+});
+
 $(function () {
 	handleCallMenu();
 	handleStickHeader();
 	handleSelect();
-	initSliderFeedback()
-
-	export const spy = new Gumshoe('#header-navigation a', {
-		offset: 120
-	});
-
-	export const scroll = new SmoothScroll('#header-navigation a', {
-		speed: 500,
-		offset: 120
-	});
+	initSliderFeedback();
+	initSliderDate();
+	initSliderTime();
 });
