@@ -1,4 +1,6 @@
-const handleCallMenu = function () {
+'use strict';
+
+export const handleCallMenu = function () {
 	const hamburger = $('#hamburgerButton');
 	const body = $('body');
 	if (hamburger.length) {
@@ -12,7 +14,7 @@ const handleCallMenu = function () {
 	}
 }
 
-const handleStickHeader = function () {
+export const handleStickHeader = function () {
 	$(window).scroll(function (e) {
 		if ($(document).scrollTop() > $('#header').innerHeight()) {
 			$('#header').addClass('is-scroll');
@@ -22,7 +24,7 @@ const handleStickHeader = function () {
 	});
 }
 
-const handleSwiper = function (elm, obj = {}) {
+export const handleSwiper = function (elm, obj = {}) {
 	return new Swiper(elm, {
 		loop: true,
 		speed: 1000,
@@ -35,7 +37,7 @@ const handleSwiper = function (elm, obj = {}) {
 	});
 }
 
-const handleSelect = function () {
+export const handleSelect = function () {
 	let selects = $('.handleSelect');
 
 	if (selects.length > 0) {
@@ -81,11 +83,7 @@ const handleSelect = function () {
 	}
 }
 
-$(function () {
-	handleCallMenu();
-	handleStickHeader();
-	handleSelect();
-
+export const initSliderFeedback = function () {
 	if ($('#sliderFeedback').length > 0) {
 		const elmSwiper = '#sliderFeedback';
 		const objSwiper = {
@@ -114,7 +112,9 @@ $(function () {
 		}
 		handleSwiper(elmSwiper + ' .swiper', objSwiper);
 	}
+}
 
+export const initSliderDate = function () {
 	if ($('#sliderDate').length > 0) {
 		const elmSwiper = '#sliderDate';
 		const objSwiper = {
@@ -142,7 +142,7 @@ $(function () {
 				}
 			},
 			on: {
-				init: function(){
+				init: function () {
 					const index = $('.buttonDate.active').attr('data-index');
 					this.slideTo(index)
 				},
@@ -166,7 +166,8 @@ $(function () {
 			});
 		}
 	}
-
+}
+export const initSliderTime = function () {
 	if ($('#sliderTime').length > 0) {
 		const elmSwiper = '#sliderTime';
 		const objSwiper = {
@@ -194,7 +195,7 @@ $(function () {
 				}
 			},
 			on: {
-				init: function(){
+				init: function () {
 					const index = $('.buttonTime.active').attr('data-index');
 					this.slideTo(index)
 				},
@@ -218,12 +219,19 @@ $(function () {
 			});
 		}
 	}
+}
 
-	const spy = new Gumshoe('#header-navigation a', {
+$(function () {
+	handleCallMenu();
+	handleStickHeader();
+	handleSelect();
+	initSliderFeedback()
+
+	export const spy = new Gumshoe('#header-navigation a', {
 		offset: 120
 	});
 
-	const scroll = new SmoothScroll('#header-navigation a', {
+	export const scroll = new SmoothScroll('#header-navigation a', {
 		speed: 500,
 		offset: 120
 	});

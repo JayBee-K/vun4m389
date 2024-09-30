@@ -24,16 +24,16 @@ function LoadData(date, callbackSuccess) {
 	$.ajax({
 		type: "POST",
 		url: "../assets/json/datajson.txt",
-		data: '{date:"2024-09-30"}',
+		data: '{date:"' + date + '"}',
 		contentType: "application/json; charset=utf-8",
-		dataType: "text",
+		dataType: "json",
 		success: function (data) {
 			if (data.length > 0) {
 				callbackSuccess(data);
 			}
 		},
-		error: function (jqXHR, textStatus, errorThrown) {
-			alert(errorThrown);
+		error: function () {
+			alert(500);
 		}
 	});
 
