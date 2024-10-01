@@ -33,8 +33,7 @@ function LoadData(date, callbackSuccess) {
 			}
 		},
 		error: function (err) {
-			debugger;
-			alert(err);
+			alert(...err);
 		}
 	});
 
