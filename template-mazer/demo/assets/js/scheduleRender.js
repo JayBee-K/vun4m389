@@ -7,8 +7,8 @@ let scheduleCont = document.getElementById('schedule-overflow');
 let currentView = document.getElementById('current-time');
 let eventStore = document.getElementById('event-store');
 
-let isLongPress = false; // Biến để theo dõi trạng thái nhấn lâu
-const longPressDuration = 1500;
+let dragDelay = 500; // Thời gian delay (ms)
+let timer; // Khai báo biến timer
 
 window.onload = function () {
 	loadSchedule();
@@ -138,32 +138,27 @@ export function loadSchedule(date, instances) {
 		$(".ev-draggable").sortable({
 			items: '.ev-draggable',
 			placeholder: "ui-state-highlight",
-			start: function (event, ui) {
+			start: function(event, ui) {
+				clearTimeout(timer);
 			},
 			stop: function (event, ui) {
+			},
+			handle: ".ev-draggable",
+			helper: function(event) {
+				// Trì hoãn việc cho phép kéo
+				let elem = $(this);
+				timer = setTimeout(function() {
+					elem.sortable("option", "disabled", false);
+				}, dragDelay);
+				return $(this).clone(); // Trả về một bản sao của phần tử để kéo
+			},
+			// Ngăn chặn kéo cho đến khi hết thời gian delay
+			beforeStop: function(event, ui) {
+				clearTimeout(timer); // Hủy timer khi dừng kéo
+				$(this).sortable("option", "disabled", true); // Ngăn chặn kéo
 			}
 		}).disableSelection();
 
-		$(".ev-draggable").on("mousedown", function (e) {
-			isLongPress = false; // Đặt lại trạng thái nhấn lâu
-			const $this = $(this);
-
-			// Thiết lập một bộ đếm thời gian
-			const timer = setTimeout(function () {
-				isLongPress = true; // Đánh dấu là đã nhấn lâu
-				$this.sortable("option", "disabled", false); // Bật kéo thả
-			}, longPressDuration);
-
-			// Sự kiện mouseup
-			$(document).on("mouseup", function () {
-				clearTimeout(timer); // Xóa bộ đếm thời gian
-				if (!isLongPress) {
-					// Nếu không phải nhấn lâu, vô hiệu hóa Sortable
-					$this.sortable("option", "disabled", true);
-				}
-				$(document).off("mouseup"); // Xóa sự kiện mouseup
-			});
-		});
 
 
 		document.querySelectorAll('.ev-draggable').forEach(function (ele, index) {
