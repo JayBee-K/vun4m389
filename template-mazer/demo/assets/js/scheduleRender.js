@@ -33,15 +33,16 @@ function LoadData(date, callbackSuccess) {
 			}
 		},
 		error: function (err) {
-			alert(1);
-			alert(...err);
+			console.log(err); // Xem chi tiết lỗi trong console
+			alert("Error Status: " + err.status + "\n" +
+				"Status Text: " + err.statusText + "\n" +
+				"Response: " + err.responseText);
 		}
 	});
 
 	/*var d = AppointmentJS.instance.invokeMethodAsync("LoadData").then(result => {
 		callbackSuccess(result);
 	});*/
-
 };
 
 export function loadSchedule(date, instances) {
