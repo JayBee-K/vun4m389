@@ -412,7 +412,8 @@ function draggSch(obj, callbackStopDragg) {
 	let h = $('#table-schedule-time td:not(.time)').innerHeight();
 	let topStamp = 0;
 	try {
-		$(obj).draggable({
+		$(obj).draggable(
+			{
 			scroll: true,
 			containment: "#table-schedule-time",
 			refreshPositions: false,
@@ -420,7 +421,6 @@ function draggSch(obj, callbackStopDragg) {
 			revert: false,
 			zIndex: 10,
 			create: function (e, ui) {
-
 			},
 			drag: function (e, ui) {
 				ui.position.left = 0;
@@ -531,7 +531,8 @@ function draggSch(obj, callbackStopDragg) {
 				}
 
 			}
-		});
+		}
+		);
 	} catch (ex) {
 		console.log(ex);
 	}

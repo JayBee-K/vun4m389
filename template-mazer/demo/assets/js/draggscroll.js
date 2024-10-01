@@ -1,5 +1,3 @@
-
-
 /**
  * @fileoverview dragscroll - scroll area by dragging
  * @version 0.0.8
@@ -7,8 +5,6 @@
  * @license MIT, see http://github.com/asvd/dragscroll
  * @copyright 2015 asvd <heliosframework@gmail.com>
  */
-
-
 (function (root, factory) {
 	if (typeof define === 'function' && define.amd) {
 		define(['exports'], factory);
@@ -57,14 +53,11 @@
 								e.preventDefault();
 							}
 						}
-
 					}, 0
 				);
 
 				_window[addEventListener](
-					mouseup, cont.mu = function () {
-						pushed = 0;
-					}, 0
+					mouseup, cont.mu = function () { pushed = 0; }, 0
 				);
 
 				_window[addEventListener](
@@ -72,9 +65,9 @@
 					cont.mm = function (e) {
 						if (pushed) {
 							(scroller = el.scroller || el).scrollLeft -=
-								newScrollX = (-lastClientX + (lastClientX = e.clientX));
+								newScrollX = (- lastClientX + (lastClientX = e.clientX));
 							scroller.scrollTop -=
-								newScrollY = (-lastClientY + (lastClientY = e.clientY));
+								newScrollY = (- lastClientY + (lastClientY = e.clientY));
 							if (el == _document.body) {
 								(scroller = _document.documentElement).scrollLeft -= newScrollX;
 								scroller.scrollTop -= newScrollY;
@@ -85,7 +78,6 @@
 			})(dragged[i++]);
 		}
 	}
-
 
 	if (_document.readyState == 'complete') {
 		reset();
