@@ -33,16 +33,11 @@ function LoadData(date, callbackSuccess) {
 			}
 		},
 		error: function (err) {
-			alert("254" +
-				"Error Status: " + err.status + "\n" +
+			alert("Error Status: " + err.status + "\n" +
 				"Status Text: " + err.statusText + "\n" +
 				"Response: " + err.responseText);
 		}
 	});
-
-	/*var d = AppointmentJS.instance.invokeMethodAsync("LoadData").then(result => {
-		callbackSuccess(result);
-	});*/
 };
 
 export function loadSchedule(date, instances) {
@@ -415,7 +410,7 @@ function draggSch(obj, callbackStopDragg) {
 	let topStamp = 0;
 	try {
 		$(obj).draggable(
-			/*{
+			{
 			scroll: true,
 			containment: "#table-schedule-time",
 			refreshPositions: false,
@@ -533,7 +528,7 @@ function draggSch(obj, callbackStopDragg) {
 				}
 
 			}
-		}*/
+		}
 		);
 	} catch (ex) {
 		console.log(ex);
@@ -565,148 +560,148 @@ function freeAxisOp(obj, callbackTL) {
 	let revertHeight = 0;
 	try {
 		$item.draggable(
-		// 	"option", {
-		// 	axis: '',
-		// 	start: function (event, ui) {
-		// 		dragscroll.reset();
-		// 		topStamp = ui.position.top;
-		// 		leftStamp = ui.position.left;
-		// 		revertHeight = $(this).innerHeight();
-		// 		wframe = $item.parent('.events').width();
-		// 		//n4m edit 11-05-2024
-		// 		if (wframe < 0)
-		// 			wframe = wframe - 2;
-		// 		else
-		// 			wframe = wframe + 2;
-		// 		OtherEvent(this).forEach(function (obj, index) {
-		// 			$(obj).addClass('highlight');
-		// 		});
-		// 		revertClass = checkDisableOp(this);
-		//
-		//
-		// 	},
-		// 	drag: function (event, ui) {
-		// 		let obj = this;
-		// 		ui.position.left = Math.floor(ui.position.left / wframe) * wframe;
-		// 		ui.position.top = Math.floor(ui.position.top / 40) * 40;
-		// 		checkOvertimeSingle(this);
-		//
-		// 		let objLeft = this.offsetLeft + $(this).closest('td')[0].offsetLeft;
-		//
-		// 		//timeByPositionY(ui.position.top)
-		// 		$(eventStore).find('td').each(function (index, ele) {
-		// 			let eleLeft = ele.offsetLeft;
-		// 			if (Math.abs(objLeft - eleLeft) <= 10) {
-		// 				let typeNV = parseInt($(ele).data('id'));
-		// 				updateEventByTier(obj, typeNV);
-		// 			}
-		// 		});
-		// 		// show tamp time
-		// 		var tmpTime = timeByPositionY(ui.position.top);
-		// 		var tmpTimeEND = timeByPositionY(ui.position.top + $(obj).innerHeight());
-		//
-		// 		console.log(tmpTime);
-		// 		console.log(tmpTimeEND);
-		//
-		// 		var s = [];
-		// 		s = tmpTime.split(":");
-		//
-		// 		var e = [];
-		// 		var ee = [];
-		// 		ee = tmpTimeEND.split(":");
-		// 		if (parseInt(ee[1]) == 59) {
-		// 			var hn = parseInt(ee[0]) + 1;
-		// 			e.push('' + hn + '');
-		// 			e.push('00');
-		// 		} else {
-		// 			e.push('' + ee[0] + '');
-		// 			var hn = parseInt(ee[1]);
-		// 			e.push('' + hn + '');
-		// 		}
-		// 		if (s[0] >= 12) {
-		// 			var hs = s[0];
-		// 			if (s[0] > 12) {
-		// 				hs = s[0] - 12;
-		// 			}
-		// 			var he = e[0] - 12;
-		//
-		// 			$(obj).find('.tmp-time-top').html(hs + ':' + s[1] + 'PM - ' + he + ':' + e[1] + 'PM');
-		// 		} else {
-		// 			if (s[0] < 12 && e[0] >= 12) {
-		// 				var he = e[0] - 12;
-		// 				if (e[0] == 12) {
-		// 					$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + e[0] + ':' + e[1] + 'PM');
-		// 				} else {
-		// 					$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + he + ':' + e[1] + 'PM');
-		// 				}
-		// 			} else {
-		// 				$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + e[0] + ':' + e[1] + 'AM');
-		// 			}
-		// 		}
-		// 	},
-		// 	stop: function (event, ui) {
-		// 		let currentEle = this;
-		// 		let posTp = currentEle.offsetTop;
-		// 		let posBt = currentEle.offsetTop + $(currentEle).innerHeight();
-		// 		let isRevert = false;
-		// 		$(this).find('.tmp-time-top').html('');
-		//
-		// 		if (ui.position.left != 0) {
-		//
-		// 			isRevert = moveOpaSch(currentEle, topStamp, $(currentEle.parentElement), revertClass);
-		// 		} else {
-		// 			// only time change
-		// 			inColEvent(this).forEach(function (obj, index) {
-		// 				let itTp = obj.offsetTop;
-		// 				let itBt = obj.offsetTop + $(obj).innerHeight();
-		// 				;
-		// 				if (posBt > itTp) {
-		// 					if (posTp < itBt) {
-		// 						isRevert = true;
-		// 						$(currentEle).animate({top: topStamp + 'px', left: 0 + 'px'}, function () {
-		// 						});
-		// 					} else {
-		//
-		// 					}
-		// 				} else {
-		//
-		// 				}
-		// 			});
-		//
-		// 			OtherEvent(this).forEach(function (obj, index) {
-		// 				let itTp = obj.offsetTop;
-		// 				let itBt = obj.offsetTop + $(obj).innerHeight();
-		// 				$(obj).removeClass('highlight');
-		//
-		// 				if (!$(currentEle).hasClass('parallel')) {
-		// 					if (posBt > itTp) {
-		// 						if (posTp < itBt) {
-		// 							isRevert = true;
-		// 							$(currentEle).animate({top: topStamp + 'px'});
-		// 						} else {
-		// 						}
-		// 					} else {
-		// 					}
-		// 				}
-		// 			});
-		// 		}
-		// 		clearAllHighlightCol(this);
-		// 		if (!isRevert) {
-		// 			checkOvertimeSingle(currentEle);
-		// 			console.log(timeByPositionY(ui.position.top));
-		// 			topStamp = 0;
-		// 			callbackTL(timeByPositionY(ui.position.top), obj);
-		// 		} else {
-		// 			$(currentEle).css({height: revertHeight + 'px'});
-		// 			setTimeout(function () {
-		// 				checkOvertimeSingle(currentEle);
-		// 				console.log(timeByPositionY(topStamp));
-		// 				topStamp = 0;
-		//
-		// 			}, 300)
-		// 		}
-		// 	}
-		// }
+			"option", {
+			axis: '',
+			start: function (event, ui) {
+				dragscroll.reset();
+				topStamp = ui.position.top;
+				leftStamp = ui.position.left;
+				revertHeight = $(this).innerHeight();
+				wframe = $item.parent('.events').width();
+				//n4m edit 11-05-2024
+				if (wframe < 0)
+					wframe = wframe - 2;
+				else
+					wframe = wframe + 2;
+				OtherEvent(this).forEach(function (obj, index) {
+					$(obj).addClass('highlight');
+				});
+				revertClass = checkDisableOp(this);
+
+
+			},
+			drag: function (event, ui) {
+				let obj = this;
+				ui.position.left = Math.floor(ui.position.left / wframe) * wframe;
+				ui.position.top = Math.floor(ui.position.top / 40) * 40;
+				checkOvertimeSingle(this);
+
+				let objLeft = this.offsetLeft + $(this).closest('td')[0].offsetLeft;
+
+				//timeByPositionY(ui.position.top)
+				$(eventStore).find('td').each(function (index, ele) {
+					let eleLeft = ele.offsetLeft;
+					if (Math.abs(objLeft - eleLeft) <= 10) {
+						let typeNV = parseInt($(ele).data('id'));
+						updateEventByTier(obj, typeNV);
+					}
+				});
+				// show tamp time
+				var tmpTime = timeByPositionY(ui.position.top);
+				var tmpTimeEND = timeByPositionY(ui.position.top + $(obj).innerHeight());
+
+				console.log(tmpTime);
+				console.log(tmpTimeEND);
+
+				var s = [];
+				s = tmpTime.split(":");
+
+				var e = [];
+				var ee = [];
+				ee = tmpTimeEND.split(":");
+				if (parseInt(ee[1]) == 59) {
+					var hn = parseInt(ee[0]) + 1;
+					e.push('' + hn + '');
+					e.push('00');
+				} else {
+					e.push('' + ee[0] + '');
+					var hn = parseInt(ee[1]);
+					e.push('' + hn + '');
+				}
+				if (s[0] >= 12) {
+					var hs = s[0];
+					if (s[0] > 12) {
+						hs = s[0] - 12;
+					}
+					var he = e[0] - 12;
+
+					$(obj).find('.tmp-time-top').html(hs + ':' + s[1] + 'PM - ' + he + ':' + e[1] + 'PM');
+				} else {
+					if (s[0] < 12 && e[0] >= 12) {
+						var he = e[0] - 12;
+						if (e[0] == 12) {
+							$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + e[0] + ':' + e[1] + 'PM');
+						} else {
+							$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + he + ':' + e[1] + 'PM');
+						}
+					} else {
+						$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + e[0] + ':' + e[1] + 'AM');
+					}
+				}
+			},
+			stop: function (event, ui) {
+				let currentEle = this;
+				let posTp = currentEle.offsetTop;
+				let posBt = currentEle.offsetTop + $(currentEle).innerHeight();
+				let isRevert = false;
+				$(this).find('.tmp-time-top').html('');
+
+				if (ui.position.left != 0) {
+
+					isRevert = moveOpaSch(currentEle, topStamp, $(currentEle.parentElement), revertClass);
+				} else {
+					// only time change
+					inColEvent(this).forEach(function (obj, index) {
+						let itTp = obj.offsetTop;
+						let itBt = obj.offsetTop + $(obj).innerHeight();
+						;
+						if (posBt > itTp) {
+							if (posTp < itBt) {
+								isRevert = true;
+								$(currentEle).animate({top: topStamp + 'px', left: 0 + 'px'}, function () {
+								});
+							} else {
+
+							}
+						} else {
+
+						}
+					});
+
+					OtherEvent(this).forEach(function (obj, index) {
+						let itTp = obj.offsetTop;
+						let itBt = obj.offsetTop + $(obj).innerHeight();
+						$(obj).removeClass('highlight');
+
+						if (!$(currentEle).hasClass('parallel')) {
+							if (posBt > itTp) {
+								if (posTp < itBt) {
+									isRevert = true;
+									$(currentEle).animate({top: topStamp + 'px'});
+								} else {
+								}
+							} else {
+							}
+						}
+					});
+				}
+				clearAllHighlightCol(this);
+				if (!isRevert) {
+					checkOvertimeSingle(currentEle);
+					console.log(timeByPositionY(ui.position.top));
+					topStamp = 0;
+					callbackTL(timeByPositionY(ui.position.top), obj);
+				} else {
+					$(currentEle).css({height: revertHeight + 'px'});
+					setTimeout(function () {
+						checkOvertimeSingle(currentEle);
+						console.log(timeByPositionY(topStamp));
+						topStamp = 0;
+
+					}, 300)
+				}
+			}
+		}
 		);
 	} catch (ex) {
 	}
