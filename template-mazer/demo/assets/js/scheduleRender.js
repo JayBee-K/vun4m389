@@ -135,7 +135,8 @@ export function loadSchedule(date, instances) {
 	    $(".ev-draggable").sortable({
 		    items: '.ev-draggable',
 		    placeholder: "ui-state-highlight",
-		    delay: 1500,
+		    helper: "clone",
+		    delay: 5000,
 		    start: function(event, ui) {
 		    },
 		    stop: function(event, ui) {
