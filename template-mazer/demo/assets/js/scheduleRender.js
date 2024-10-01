@@ -7,35 +7,6 @@ let scheduleCont = document.getElementById('schedule-overflow');
 let currentView = document.getElementById('current-time');
 let eventStore = document.getElementById('event-store');
 
-let dragDelay = 1500; // Thời gian delay (ms)
-let timer; // Khai báo biến timer
-let isDragging = false; // Cờ để theo dõi trạng thái kéo
-alert(2)
-
-function handleStart(event) {
-	// Ngăn chặn hành động kéo nếu đang thực hiện một hành động khác
-	if (isDragging) return;
-
-	const elem = $(this);
-	timer = setTimeout(function() {
-		isDragging = true; // Đánh dấu là đang kéo
-		elem.sortable("option", "disabled", false);
-		elem.sortable("refreshPositions"); // Cập nhật vị trí
-	}, dragDelay);
-
-	elem.data("ui-sortable").cancelHelper = function() {
-		clearTimeout(timer); // Hủy timer nếu không đủ thời gian
-		isDragging = false; // Đặt lại cờ
-	};
-}
-
-function handleEnd(event) {
-	clearTimeout(timer); // Hủy timer khi dừng kéo
-	$(this).sortable("option", "disabled", true); // Ngăn chặn kéo
-	isDragging = false; // Đặt lại cờ
-}
-
-
 window.onload = function () {
 	loadSchedule();
 }
@@ -163,20 +134,12 @@ export function loadSchedule(date, instances) {
 
 		$(".ev-draggable").sortable({
 			items: '.ev-draggable',
-			placeholder: "ui-sortable-placeholder",
-			start: handleStart,
-			stop: handleEnd,
-			handle: ".ev-draggable"
-		}).disableSelection(); // Ngăn chặn chọn văn bản
-
-		// Thêm sự kiện touch cho thiết bị di động
-		$(".ev-draggable").on('touchstart', handleStart);
-		$(".ev-draggable").on('touchend', handleEnd);
-
+			placeholder: "ui-state-highlight",
+			delay: 500,
+		}).disableSelection();
 
 
 		document.querySelectorAll('.ev-draggable').forEach(function (ele, index) {
-
 			draggSch(ele, function (t, element) {
 				var sbsID = $(element).find('input.idE').val();
 				var a = $(element).find('input.idE').closest('td');
