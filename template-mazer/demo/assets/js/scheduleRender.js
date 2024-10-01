@@ -9,7 +9,32 @@ let eventStore = document.getElementById('event-store');
 
 let dragDelay = 1500; // Thời gian delay (ms)
 let timer; // Khai báo biến timer
-alert(1);
+let isDragging = false; // Cờ để theo dõi trạng thái kéo
+alert(2)
+
+function handleStart(event) {
+	// Ngăn chặn hành động kéo nếu đang thực hiện một hành động khác
+	if (isDragging) return;
+
+	const elem = $(this);
+	timer = setTimeout(function() {
+		isDragging = true; // Đánh dấu là đang kéo
+		elem.sortable("option", "disabled", false);
+		elem.sortable("refreshPositions"); // Cập nhật vị trí
+	}, dragDelay);
+
+	elem.data("ui-sortable").cancelHelper = function() {
+		clearTimeout(timer); // Hủy timer nếu không đủ thời gian
+		isDragging = false; // Đặt lại cờ
+	};
+}
+
+function handleEnd(event) {
+	clearTimeout(timer); // Hủy timer khi dừng kéo
+	$(this).sortable("option", "disabled", true); // Ngăn chặn kéo
+	isDragging = false; // Đặt lại cờ
+}
+
 
 window.onload = function () {
 	loadSchedule();
@@ -138,27 +163,15 @@ export function loadSchedule(date, instances) {
 
 		$(".ev-draggable").sortable({
 			items: '.ev-draggable',
-			placeholder: "ui-state-highlight",
-			start: function(event, ui) {
-				clearTimeout(timer);
-			},
-			stop: function (event, ui) {
-			},
-			handle: ".ev-draggable",
-			helper: function(event) {
-				// Trì hoãn việc cho phép kéo
-				let elem = $(this);
-				timer = setTimeout(function() {
-					elem.sortable("option", "disabled", false);
-				}, dragDelay);
-				return $(this).clone(); // Trả về một bản sao của phần tử để kéo
-			},
-			// Ngăn chặn kéo cho đến khi hết thời gian delay
-			beforeStop: function(event, ui) {
-				clearTimeout(timer); // Hủy timer khi dừng kéo
-				$(this).sortable("option", "disabled", true); // Ngăn chặn kéo
-			}
-		}).disableSelection();
+			placeholder: "ui-sortable-placeholder",
+			start: handleStart,
+			stop: handleEnd,
+			handle: ".ev-draggable"
+		}).disableSelection(); // Ngăn chặn chọn văn bản
+
+		// Thêm sự kiện touch cho thiết bị di động
+		$(".ev-draggable").on('touchstart', handleStart);
+		$(".ev-draggable").on('touchend', handleEnd);
 
 
 
