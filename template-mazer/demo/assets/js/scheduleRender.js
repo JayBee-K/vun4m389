@@ -28,12 +28,12 @@ function LoadData(date, callbackSuccess) {
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
 		success: function (data) {
-			alert(data.length)
 			if (data.length > 0) {
 				callbackSuccess(data);
 			}
 		},
 		error: function (err) {
+			debugger;
 			alert(err);
 		}
 	});
