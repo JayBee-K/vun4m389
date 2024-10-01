@@ -33,6 +33,7 @@ function LoadData(date, callbackSuccess) {
 			}
 		},
 		error: function (err) {
+			alert(1);
 			alert(...err);
 		}
 	});
