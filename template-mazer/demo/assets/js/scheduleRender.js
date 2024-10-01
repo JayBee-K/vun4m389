@@ -7,8 +7,9 @@ let scheduleCont = document.getElementById('schedule-overflow');
 let currentView = document.getElementById('current-time');
 let eventStore = document.getElementById('event-store');
 
-let dragDelay = 500; // Thời gian delay (ms)
+let dragDelay = 1500; // Thời gian delay (ms)
 let timer; // Khai báo biến timer
+alert(1);
 
 window.onload = function () {
 	loadSchedule();
