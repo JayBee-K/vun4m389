@@ -33,8 +33,8 @@ function LoadData(date, callbackSuccess) {
 			}
 		},
 		error: function (err) {
-			console.log(err); // Xem chi tiết lỗi trong console
-			alert("Error Status: " + err.status + "\n" +
+			alert("123123123" +
+				"Error Status: " + err.status + "\n" +
 				"Status Text: " + err.statusText + "\n" +
 				"Response: " + err.responseText);
 		}
