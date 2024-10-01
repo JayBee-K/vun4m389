@@ -45,6 +45,10 @@ function LoadData(date, callbackSuccess) {
 
 };
 
+let isSortableEnabled = false;
+let timer;
+alert(1);
+
 export function loadSchedule(date, instances) {
 	AppointmentJS.instance = instances;
 	//console.log(AppointmentJS.instance);
@@ -132,11 +136,35 @@ export function loadSchedule(date, instances) {
 			//viewDetail();
 		});
 
+		$(".ev-draggable").on("mousedown touchstart", function(e) {
+			// Bắt đầu đếm thời gian khi nhấn chuột hoặc chạm
+			timer = setTimeout(function() {
+				isSortableEnabled = true;
+				$(".ev-draggable").sortable("enable"); // Cho phép sortable
+			}, 1000); // 1000ms = 1 giây
+
+			// Nếu hủy bỏ giữ chuột/touch trước thời gian
+			$(this).on("mouseup touchend", function() {
+				clearTimeout(timer); // Hủy đếm thời gian
+				if (!isSortableEnabled) {
+					$(".ev-draggable").sortable("disable"); // Vô hiệu hóa sortable
+				}
+			});
+		});
+
 		$(".ev-draggable").sortable({
 			items: '.ev-draggable',
 			placeholder: "ui-state-highlight",
-			delay: 500,
-		}).disableSelection();
+			start: function(event, ui) {
+				if (!isSortableEnabled) {
+					return false; // Ngăn không cho kéo thả khi chưa giữ đủ lâu
+				}
+			},
+			stop: function(event, ui) {
+				isSortableEnabled = false;
+				$(".ev-draggable").sortable("disable"); // Tắt sortable sau khi thả
+			}
+		}).sortable("disable"); // Vô hiệu hóa sortable ban đầu
 
 
 		document.querySelectorAll('.ev-draggable').forEach(function (ele, index) {
