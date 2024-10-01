@@ -23,11 +23,12 @@ export function Init() {
 function LoadData(date, callbackSuccess) {
 	$.ajax({
 		type: "POST",
-		url: "../assets/json/datajson.txt",
-		data: '{date:"' + date + '"}',
+		url: "/assets/json/data.json",
+		data: '',
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
 		success: function (data) {
+			alert(data.length)
 			if (data.length > 0) {
 				callbackSuccess(data);
 			}
