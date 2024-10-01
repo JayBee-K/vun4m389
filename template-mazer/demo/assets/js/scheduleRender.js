@@ -134,15 +134,13 @@ export function loadSchedule(date, instances) {
 
 	    $(".ev-draggable").sortable({
 		    items: '.ev-draggable',
-		    placeholder: "ui-state-highlight", // Để tạo không gian cho phần tử được kéo
+		    placeholder: "ui-state-highlight",
+		    delay: 1500,
 		    start: function(event, ui) {
-			    console.log("Kéo bắt đầu:", ui.item.text());
 		    },
 		    stop: function(event, ui) {
-			    console.log("Kéo kết thúc:", ui.item.text());
-			    // Ghi nhận lại vị trí mới hoặc thực hiện hành động sau khi thả
 		    }
-	    }).disableSelection(); // Vô hiệu hóa lựa chọn văn bản
+	    }).disableSelection();
 
 
 	    document.querySelectorAll('.ev-draggable').forEach(function (ele, index) {
@@ -151,10 +149,10 @@ export function loadSchedule(date, instances) {
                 console.log(t);
                 var sbsID = $(element).find('input.idE').val();
                 var a = $(element).find('input.idE').closest('td');
-                AppointmentJS.instance.invokeMethodAsync("UpdateMoveService", { HHmm: t, SessionDetailID: Number(sbsID), UserID: Number(a.attr('data-id')) })
+                // AppointmentJS.instance.invokeMethodAsync("UpdateMoveService", { HHmm: t, SessionDetailID: Number(sbsID), UserID: Number(a.attr('data-id')) })
             });
         });
-        AppointmentJS.instance.invokeMethodAsync("HideLoading");
+        // AppointmentJS.instance.invokeMethodAsync("HideLoading");
     });
     // fixed left col
     $("#schedule-overflow-horizontal").on("scroll", function (e) {
