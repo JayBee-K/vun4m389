@@ -33,7 +33,7 @@ function LoadData(date, callbackSuccess) {
 			}
 		},
 		error: function (err) {
-			alert("123123123" +
+			alert("254" +
 				"Error Status: " + err.status + "\n" +
 				"Status Text: " + err.statusText + "\n" +
 				"Response: " + err.responseText);
