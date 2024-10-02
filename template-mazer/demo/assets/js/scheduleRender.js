@@ -11,6 +11,8 @@ window.onload = function () {
 	loadSchedule();
 }
 
+alert(1);
+
 export const AppointmentJS = {
 	instance: null,
 }
