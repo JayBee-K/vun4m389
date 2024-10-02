@@ -1137,6 +1137,20 @@
 	margin-top: auto;
 }
 
+.popup-order .modal-close_btn {
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	height: 40px;
+	width: 40px;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+	font-size: 1.45em;
+}
+
 @media screen and (min-width: 992px) and (max-width: 1199px) {
 	.modal-xl {
 		--bs-modal-width: 960px;
@@ -1511,6 +1525,10 @@
 		height: auto;
 	}
 
+	.popup-order .popup-order_wrapper .popup-order_left {
+		padding-top: 30px;
+	}
+
 	.popup-order .popup-order_wrapper .popup-order_left,
 	.popup-order .popup-order_wrapper .popup-order_right {
 		width: 100%;
@@ -1558,5 +1576,8 @@
 		padding-top: 20px;
 		margin-top: 20px;
 	}
-
+	.popup-order .modal-close_btn {
+		right: 0;
+		top: 0;
+	}
 }
