@@ -11,8 +11,6 @@ window.onload = function () {
 	loadSchedule();
 }
 
-alert(1);
-
 export const AppointmentJS = {
 	instance: null,
 }
@@ -411,6 +409,7 @@ function addBlankTime(timeStar = '', timeEnd = '', operatory = 0, ID = 0, dateno
 	contEle.append(eleTempalte);
 }
 
+
 function draggSch(obj, callbackStopDragg) {
 	let w = $('#table-schedule-time td:not(.time)').innerWidth() + 3;
 	let h = $('#table-schedule-time td:not(.time)').innerHeight();
@@ -423,6 +422,7 @@ function draggSch(obj, callbackStopDragg) {
 			axis: "y",
 			revert: false,
 			zIndex: 10,
+			delay: 1000,
 			create: function (e, ui) {
 
 			},
@@ -531,7 +531,6 @@ function draggSch(obj, callbackStopDragg) {
 						console.log(timeByPositionY(topStamp));
 						topStamp = 0;
 					}, 300);//animate 300ms
-
 				}
 			}
 		});
@@ -581,7 +580,6 @@ function freeAxisOp(obj, callbackTL) {
 					$(obj).addClass('highlight');
 				});
 				revertClass = checkDisableOp(this);
-
 
 			},
 			drag: function (event, ui) {
