@@ -422,7 +422,7 @@ function draggSch(obj, callbackStopDragg) {
 			axis: "y",
 			revert: false,
 			zIndex: 10,
-			//delay: 1000,
+			delay: 1000,
 			create: function (e, ui) {
 
 			},
