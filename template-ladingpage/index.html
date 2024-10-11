@@ -882,96 +882,70 @@
 					<div class="booking-item_title">
 						Appointment Date
 					</div>
-					<div class="booking-item_time slider-theme position-relative" id="sliderDate">
-						<div class="swiper h-auto">
-							<div class="swiper-wrapper h-auto">
-								<div class="swiper-slide">
-									<button type="button" class="booking-item_calendar buttonDate" data-index="0">
-										<span class="booking-item_calendar__title">
-											Mon
-										</span>
-										<span class="booking-item_calendar__value">
-											09/30/2024
-										</span>
-									</button>
-								</div>
-								<div class="swiper-slide">
-									<button type="button" class="booking-item_calendar buttonDate" data-index="1">
-										<span class="booking-item_calendar__title">
-											Tue
-										</span>
-										<span class="booking-item_calendar__value">
-											10/01/2024
-										</span>
-									</button>
-								</div>
-								<div class="swiper-slide">
-									<button type="button" class="booking-item_calendar buttonDate" data-index="2">
-										<span class="booking-item_calendar__title">
-											Wed
-										</span>
-										<span class="booking-item_calendar__value">
-											10/02/2024
-										</span>
-									</button>
-								</div>
-								<div class="swiper-slide">
-									<button type="button" class="booking-item_calendar buttonDate active"
-									        data-index="3">
-										<span class="booking-item_calendar__title">
-											Thu
-										</span>
-										<span class="booking-item_calendar__value">
-											10/03/2024
-										</span>
-									</button>
-								</div>
-								<div class="swiper-slide">
-									<button type="button" class="booking-item_calendar buttonDate" data-index="4">
-										<span class="booking-item_calendar__title">
-											Fri
-										</span>
-										<span class="booking-item_calendar__value">
-											10/04/2024
-										</span>
-									</button>
-								</div>
-								<div class="swiper-slide">
-									<button type="button" class="booking-item_calendar buttonDate" data-index="5">
-										<span class="booking-item_calendar__title">
-											Sat
-										</span>
-										<span class="booking-item_calendar__value">
-											10/05/2024
-										</span>
-									</button>
-								</div>
-								<div class="swiper-slide">
-									<button type="button" class="booking-item_calendar buttonDate" data-index="6">
-										<span class="booking-item_calendar__title">
-											Sun
-										</span>
-										<span class="booking-item_calendar__value">
-											10/05/2024
-										</span>
-									</button>
-								</div>
-							</div>
+					<div class="booking-item_time slider-theme position-relative slideScroll">
+						<div class="booking-item_time__list hstack gap-15px slideScrollInner">
+							<button type="button" class="booking-item_calendar slideScrollItem">
+								<span class="booking-item_calendar__title">
+									Mon
+								</span>
+								<span class="booking-item_calendar__value">
+									09/30/2024
+								</span>
+							</button>
+							<button type="button" class="booking-item_calendar slideScrollItem">
+								<span class="booking-item_calendar__title">
+									Tue
+								</span>
+								<span class="booking-item_calendar__value">
+									10/01/2024
+								</span>
+							</button>
+							<button type="button" class="booking-item_calendar slideScrollItem">
+								<span class="booking-item_calendar__title">
+									Wed
+								</span>
+								<span class="booking-item_calendar__value">
+									10/02/2024
+								</span>
+							</button>
+							<button type="button" class="booking-item_calendar slideScrollItem active">
+								<span class="booking-item_calendar__title">
+									Thu
+								</span>
+								<span class="booking-item_calendar__value">
+									10/03/2024
+								</span>
+							</button>
+							<button type="button" class="booking-item_calendar slideScrollItem">
+								<span class="booking-item_calendar__title">
+									Fri
+								</span>
+								<span class="booking-item_calendar__value">
+									10/04/2024
+								</span>
+							</button>
+							<button type="button" class="booking-item_calendar slideScrollItem">
+								<span class="booking-item_calendar__title">
+									Sat
+								</span>
+								<span class="booking-item_calendar__value">
+									10/05/2024
+								</span>
+							</button>
+							<button type="button" class="booking-item_calendar slideScrollItem">
+								<span class="booking-item_calendar__title">
+									Sun
+								</span>
+								<span class="booking-item_calendar__value">
+									10/05/2024
+								</span>
+							</button>
 						</div>
-						<div class="button-swiper__item button-prev">
-							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-							     fill="none">
-								<path fill-rule="evenodd" clip-rule="evenodd"
-								      d="M6.4226 5.24408C6.74804 5.56951 6.74804 6.09715 6.4226 6.42259L3.67852 9.16667H18.3333C18.7936 9.16667 19.1667 9.53976 19.1667 10C19.1667 10.4602 18.7936 10.8333 18.3333 10.8333H3.67852L6.4226 13.5774C6.74804 13.9028 6.74804 14.4305 6.4226 14.7559C6.09716 15.0814 5.56952 15.0814 5.24409 14.7559L1.07742 10.5893C0.751984 10.2638 0.751984 9.73618 1.07742 9.41074L5.24409 5.24408C5.56952 4.91864 6.09716 4.91864 6.4226 5.24408Z"
-								      fill="#111215"></path>
-							</svg>
+						<div class="scroll-button scroll-prev slideScrollNext">
+							<i class="fal fa-angle-left"></i>
 						</div>
-						<div class="button-swiper__item button-next">
-							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-							     fill="none">
-								<path d="M13.5775 13.5774C13.252 13.9028 13.252 14.4305 13.5775 14.7559C13.9029 15.0814 14.4305 15.0814 14.756 14.7559L18.9226 10.5893C19.2481 10.2638 19.2481 9.73618 18.9226 9.41075L14.756 5.24408C14.4305 4.91864 13.9029 4.91864 13.5775 5.24408C13.252 5.56951 13.252 6.09715 13.5775 6.42259L16.3215 9.16667H1.66671C1.20647 9.16667 0.833374 9.53976 0.833374 10C0.833374 10.4602 1.20647 10.8333 1.66671 10.8333H16.3215L13.5775 13.5774Z"
-								      fill="#111215"></path>
-							</svg>
+						<div class="scroll-button scroll-next slideScrollPrev">
+							<i class="fal fa-angle-right"></i>
 						</div>
 					</div>
 				</div>
@@ -1112,109 +1086,75 @@
 						<img src="./assets/images/user.jpg" class="img-fluid" alt="">
 						Please choose your next service
 					</div>
-					<div class="booking-item_time slider-theme position-relative" id="sliderTime">
-						<div class="swiper h-auto">
-							<div class="swiper-wrapper h-auto">
-								<div class="swiper-slide">
-									<button type="button" class="booking-item_calendar buttonTime" data-index="0">
-										<span class="booking-item_calendar__title">
-											00:00 AM
-										</span>
-									</button>
-								</div>
-								<div class="swiper-slide">
-									<button type="button" class="booking-item_calendar buttonTime" data-index="1">
-										<span class="booking-item_calendar__title">
-											01:00 AM
-										</span>
-									</button>
-								</div>
-								<div class="swiper-slide">
-									<button type="button" class="booking-item_calendar buttonTime" data-index="2">
-										<span class="booking-item_calendar__title">
-											02:00 AM
-										</span>
-									</button>
-								</div>
-								<div class="swiper-slide">
-									<button type="button" class="booking-item_calendar active buttonTime"
-									        data-index="3">
-										<span class="booking-item_calendar__title">
-											03:00 AM
-										</span>
-									</button>
-								</div>
-								<div class="swiper-slide">
-									<button type="button" class="booking-item_calendar buttonTime" data-index="4">
-										<span class="booking-item_calendar__title">
-											04:00 AM
-										</span>
-									</button>
-								</div>
-								<div class="swiper-slide">
-									<button type="button" class="booking-item_calendar buttonTime" data-index="5">
-										<span class="booking-item_calendar__title">
-											05:00 AM
-										</span>
-									</button>
-								</div>
-								<div class="swiper-slide">
-									<button type="button" class="booking-item_calendar buttonTime" data-index="6">
-										<span class="booking-item_calendar__title">
-											04:00 AM
-										</span>
-									</button>
-								</div>
-								<div class="swiper-slide">
-									<button type="button" class="booking-item_calendar buttonTime" data-index="7">
-										<span class="booking-item_calendar__title">
-											05:00 AM
-										</span>
-									</button>
-								</div>
-								<div class="swiper-slide">
-									<button type="button" class="booking-item_calendar buttonTime" data-index="8">
-										<span class="booking-item_calendar__title">
-											04:00 AM
-										</span>
-									</button>
-								</div>
-								<div class="swiper-slide">
-									<button type="button" class="booking-item_calendar buttonTime" data-index="9">
-										<span class="booking-item_calendar__title">
-											05:00 AM
-										</span>
-									</button>
-								</div>
-								<div class="swiper-slide">
-									<button type="button" class="booking-item_calendar buttonTime" data-index="10">
-										<span class="booking-item_calendar__title">
-											04:00 AM
-										</span>
-									</button>
-								</div>
-							</div>
+					<div class="booking-item_time position-relative slideScroll">
+						<div class="booking-item_time__list hstack gap-15px slideScrollInner">
+							<button type="button" class="booking-item_calendar slideScrollItem">
+								<span class="booking-item_calendar__title">
+									00:00 AM
+								</span>
+							</button>
+							<button type="button" class="booking-item_calendar slideScrollItem">
+								<span class="booking-item_calendar__title">
+									01:00 AM
+								</span>
+							</button>
+							<button type="button" class="booking-item_calendar slideScrollItem">
+								<span class="booking-item_calendar__title">
+									02:00 AM
+								</span>
+							</button>
+							<button type="button" class="booking-item_calendar active slideScrollItem">
+								<span class="booking-item_calendar__title">
+									03:00 AM
+								</span>
+							</button>
+							<button type="button" class="booking-item_calendar slideScrollItem">
+								<span class="booking-item_calendar__title">
+									04:00 AM
+								</span>
+							</button>
+							<button type="button" class="booking-item_calendar slideScrollItem">
+								<span class="booking-item_calendar__title">
+									05:00 AM
+								</span>
+							</button>
+							<button type="button" class="booking-item_calendar slideScrollItem">
+								<span class="booking-item_calendar__title">
+									04:00 AM
+								</span>
+							</button>
+							<button type="button" class="booking-item_calendar slideScrollItem">
+								<span class="booking-item_calendar__title">
+									05:00 AM
+								</span>
+							</button>
+							<button type="button" class="booking-item_calendar slideScrollItem">
+								<span class="booking-item_calendar__title">
+									04:00 AM
+								</span>
+							</button>
+							<button type="button" class="booking-item_calendar slideScrollItem">
+								<span class="booking-item_calendar__title">
+									05:00 AM
+								</span>
+							</button>
+							<button type="button" class="booking-item_calendar slideScrollItem">
+								<span class="booking-item_calendar__title">
+									04:00 AM
+								</span>
+							</button>
 						</div>
-						<div class="button-swiper__item button-prev">
-							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-							     fill="none">
-								<path fill-rule="evenodd" clip-rule="evenodd"
-								      d="M6.4226 5.24408C6.74804 5.56951 6.74804 6.09715 6.4226 6.42259L3.67852 9.16667H18.3333C18.7936 9.16667 19.1667 9.53976 19.1667 10C19.1667 10.4602 18.7936 10.8333 18.3333 10.8333H3.67852L6.4226 13.5774C6.74804 13.9028 6.74804 14.4305 6.4226 14.7559C6.09716 15.0814 5.56952 15.0814 5.24409 14.7559L1.07742 10.5893C0.751984 10.2638 0.751984 9.73618 1.07742 9.41074L5.24409 5.24408C5.56952 4.91864 6.09716 4.91864 6.4226 5.24408Z"
-								      fill="#111215"></path>
-							</svg>
+						<div class="scroll-button scroll-prev slideScrollNext">
+							<i class="fal fa-angle-left"></i>
 						</div>
-						<div class="button-swiper__item button-next">
-							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-							     fill="none">
-								<path d="M13.5775 13.5774C13.252 13.9028 13.252 14.4305 13.5775 14.7559C13.9029 15.0814 14.4305 15.0814 14.756 14.7559L18.9226 10.5893C19.2481 10.2638 19.2481 9.73618 18.9226 9.41075L14.756 5.24408C14.4305 4.91864 13.9029 4.91864 13.5775 5.24408C13.252 5.56951 13.252 6.09715 13.5775 6.42259L16.3215 9.16667H1.66671C1.20647 9.16667 0.833374 9.53976 0.833374 10C0.833374 10.4602 1.20647 10.8333 1.66671 10.8333H16.3215L13.5775 13.5774Z"
-								      fill="#111215"></path>
-							</svg>
+						<div class="scroll-button scroll-next slideScrollPrev">
+							<i class="fal fa-angle-right"></i>
 						</div>
 					</div>
 				</div>
 				<div class="booking-item">
 					<div class="booking-item_title">
-						Service List
+						Category
 					</div>
 					<div class="booking-item_service">
 						<div class="service-item">
@@ -1227,86 +1167,26 @@
 								<div class="service-item_title">
 									Dip Nail
 								</div>
-								<div class="service-item_sub">
-									First Technician Available
-								</div>
-								<div class="service-item_time">
-									07:00 AM - 07:45 AM
-								</div>
-							</div>
-							<div class="service-item_remove">
-								<button class="link-default" type="button">
-									<i class="fal fa-times"></i>
-								</button>
-							</div>
-						</div>
-						<div class="service-item">
-							<div class="service-item_avatar">
-								<div class="ratio ratio-3x2">
-									<img src="./assets/images/nails.png" class="img-fluid" alt="">
+								<div class="hstack gap-5px text-nowrap">
+									<div class="service-item_sub">
+										45 Minutes
+									</div>
+									&nbsp;-&nbsp;
+									<div class="service-item_time">
+										$50
+									</div>
 								</div>
 							</div>
-							<div class="service-item_content">
-								<div class="service-item_title">
-									Dip Nail
+							<div class="service-item_quantity">
+								<div class="service-quantity_inner">
+									<button type="button" class="link-default service-quantity_button__minus">
+										<i class="fal fa-minus"></i>
+									</button>
+									<input type="text" class="form-control" step="1" min="0" value="1" disabled="">
+									<button type="button" class="link-default service-quantity_button__plus">
+										<i class="fal fa-plus"></i>
+									</button>
 								</div>
-								<div class="service-item_sub">
-									First Technician Available
-								</div>
-								<div class="service-item_time">
-									07:00 AM - 07:45 AM
-								</div>
-							</div>
-							<div class="service-item_remove">
-								<button class="link-default" type="button">
-									<i class="fal fa-times"></i>
-								</button>
-							</div>
-						</div>
-						<div class="service-item">
-							<div class="service-item_avatar">
-								<div class="ratio ratio-3x2">
-									<img src="./assets/images/nails.png" class="img-fluid" alt="">
-								</div>
-							</div>
-							<div class="service-item_content">
-								<div class="service-item_title">
-									Dip Nail
-								</div>
-								<div class="service-item_sub">
-									First Technician Available
-								</div>
-								<div class="service-item_time">
-									07:00 AM - 07:45 AM
-								</div>
-							</div>
-							<div class="service-item_remove">
-								<button class="link-default" type="button">
-									<i class="fal fa-times"></i>
-								</button>
-							</div>
-						</div>
-						<div class="service-item">
-							<div class="service-item_avatar">
-								<div class="ratio ratio-3x2">
-									<img src="./assets/images/nails.png" class="img-fluid" alt="">
-								</div>
-							</div>
-							<div class="service-item_content">
-								<div class="service-item_title">
-									Dip Nail
-								</div>
-								<div class="service-item_sub">
-									First Technician Available
-								</div>
-								<div class="service-item_time">
-									07:00 AM - 07:45 AM
-								</div>
-							</div>
-							<div class="service-item_remove">
-								<button class="link-default" type="button">
-									<i class="fal fa-times"></i>
-								</button>
 							</div>
 						</div>
 					</div>

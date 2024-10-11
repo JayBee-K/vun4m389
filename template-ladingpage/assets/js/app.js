@@ -110,102 +110,38 @@ export const initSliderFeedback = function () {
 	}
 }
 
-export const initSliderDate = function () {
-	if ($('#sliderDate').length > 0) {
-		const elmSwiper = '#sliderDate';
-		const objSwiper = {
-			speed: 1000,
-			loop: 0,
-			slidesPerView: 3.5,
-			spaceBetween: 12,
-			navigation: {
-				nextEl: elmSwiper + " .button-next",
-				prevEl: elmSwiper + " .button-prev",
-			},
-			breakpoints: {
-				320: {
-					slidesPerView: 2.25,
-				},
-				575: {
-					slidesPerView: 3.25,
-				},
-				768: {
-					slidesPerView: 3.5,
+export const handleSlideScroll = function () {
+	if ($('.slideScroll').length > 0) {
+		$('.slideScroll').each(function () {
+			let slide = $(this),
+				slideInner = slide.find('.slideScrollInner'),
+				slideItemActive = slideInner.find('.slideScrollItem.active'),
+				slidePrev = slide.find('.slideScrollPrev'),
+				slideNext = slide.find('.slideScrollNext');
+
+			/*if (slideItemActive.length) {
+				let activeOffset = slideItemActive.position().left + slideInner.scrollLeft(); // tính vị trí phần tử active trong container
+				slideInner.scrollLeft(activeOffset - (slideInner.width() / 2) + (slideItemActive.outerWidth() / 2)); // cuộn để phần tử active ở giữa viewport
+			}*/
+
+			let scrollPixel = slideInner.find('.slideScrollItem').outerWidth() + 15; // Chiều rộng của 1 phần tử + khoảng cách giữa 2 phần tử
+
+			slidePrev.click(function () {
+				let maxScrollLeft = slideInner[0].scrollWidth - slideInner.outerWidth();
+
+				if (slideInner.scrollLeft() < maxScrollLeft) {
+					// Đang ở vị trí đầu tiên thì không scroll qua trái được
+					slideInner.scrollLeft(slideInner.scrollLeft() + scrollPixel);
 				}
-			},
-			on: {
-				init: function () {
-					const index = $('.buttonDate.active').attr('data-index');
-					this.slideTo(index)
-				},
-			}
-		}
+			})
 
-		const sliderDate = handleSwiper(elmSwiper + ' .swiper', objSwiper);
-
-		if ($('.buttonDate').length > 0) {
-			$('.buttonDate').click(function () {
-				let button = $(this);
-
-				if (button.hasClass('active')) {
-					return false;
-				} else {
-					$('.buttonDate').removeClass('active');
-					button.addClass('active');
-					const index = button.parent().attr('data-swiper-slide-index');
-					sliderDate.slideTo(index)
+			slideNext.click(function () {
+				if (slideInner.scrollLeft() > 0) {
+					// Đang ở vị trí cuối cùng thì không scroll qua phải được
+					slideInner.scrollLeft(slideInner.scrollLeft() - scrollPixel);
 				}
-			});
-		}
-	}
-}
-export const initSliderTime = function () {
-	if ($('#sliderTime').length > 0) {
-		const elmSwiper = '#sliderTime';
-		const objSwiper = {
-			speed: 1000,
-			loop: 0,
-			slidesPerView: 3.5,
-			spaceBetween: 12,
-			navigation: {
-				nextEl: elmSwiper + " .button-next",
-				prevEl: elmSwiper + " .button-prev",
-			},
-			breakpoints: {
-				320: {
-					slidesPerView: 2.25,
-				},
-				575: {
-					slidesPerView: 3.25,
-				},
-				768: {
-					slidesPerView: 3.5,
-				}
-			},
-			on: {
-				init: function () {
-					const index = $('.buttonTime.active').attr('data-index');
-					this.slideTo(index)
-				},
-			}
-		}
-
-		const sliderTime = handleSwiper(elmSwiper + ' .swiper', objSwiper);
-
-		if ($('.buttonTime').length > 0) {
-			$('.buttonTime').click(function () {
-				let button = $(this);
-
-				if (button.hasClass('active')) {
-					return false;
-				} else {
-					$('.buttonTime').removeClass('active');
-					button.addClass('active');
-					const index = button.attr('data-index');
-					sliderTime.slideTo(index)
-				}
-			});
-		}
+			})
+		})
 	}
 }
 
@@ -223,6 +159,5 @@ $(function () {
 	handleStickHeader();
 	handleSelect();
 	initSliderFeedback();
-	initSliderDate();
-	initSliderTime();
+	handleSlideScroll();
 });
