@@ -409,14 +409,12 @@ function addBlankTime(timeStar = '', timeEnd = '', operatory = 0, ID = 0, dateno
 	contEle.append(eleTempalte);
 }
 
-alert(3)
 
 function draggSch(obj, callbackStopDragg) {
 	let w = $('#table-schedule-time td:not(.time)').innerWidth() + 3;
 	let h = $('#table-schedule-time td:not(.time)').innerHeight();
 	let topStamp = 0;
 
-	let dragDelay = 1000; // Thời gian delay (ms)
 
 	try {
 		$(obj).draggable({
@@ -547,21 +545,6 @@ function draggSch(obj, callbackStopDragg) {
 			callbackStopDragg(timeB, obj);
 		});
 	}
-
-	$(obj).on('mousedown', function (e) {
-		let startTime = Date.now(); // Thời gian bắt đầu
-
-		$(document).on('mouseup', function () {
-			let elapsedTime = Date.now() - startTime; // Thời gian đã trôi qua
-			if (elapsedTime >= dragDelay) {
-				$(obj).draggable("enable"); // Kích hoạt draggable nếu đủ thời gian
-			}
-			$(document).off('mouseup'); // Gỡ sự kiện mouseup sau khi xử lý
-		});
-
-		// Nếu người dùng giữ chuột quá thời gian delay, cho phép kéo
-		$(obj).draggable("disable"); // Tạm thời vô hiệu hóa draggable khi nhấn
-	});
 }
 
 function OpenEditMenu1(obj, date) {
