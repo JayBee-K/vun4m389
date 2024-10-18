@@ -408,6 +408,7 @@ function addBlankTime(timeStar = '', timeEnd = '', operatory = 0, ID = 0, dateno
     `;
 	contEle.append(eleTempalte);
 }
+alert(1);
 
 function draggSch(obj, callbackStopDragg) {
 	let w = $('#table-schedule-time td:not(.time)').innerWidth() + 3;
@@ -471,7 +472,7 @@ function draggSch(obj, callbackStopDragg) {
 				//Endtime
 			},
 			start: function (e, ui) {
-				dragscroll.reset();
+				//dragscroll.reset();
 				w = $('#table-schedule-time td:not(.time)').innerWidth() + 3;
 				h = $('#table-schedule-time td:not(.time)').innerHeight();
 
@@ -565,7 +566,7 @@ function freeAxisOp(obj, callbackTL) {
 		$item.draggable("option", {
 			axis: '',
 			start: function (event, ui) {
-				dragscroll.reset();
+				//dragscroll.reset();
 				topStamp = ui.position.top;
 				leftStamp = ui.position.left;
 				revertHeight = $(this).innerHeight();
