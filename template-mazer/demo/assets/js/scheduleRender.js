@@ -409,7 +409,7 @@ function addBlankTime(timeStar = '', timeEnd = '', operatory = 0, ID = 0, dateno
 	contEle.append(eleTempalte);
 }
 
-alert(111)
+alert(1212)
 
 function draggSch(obj, callbackStopDragg) {
 	let w = $('#table-schedule-time td:not(.time)').innerWidth() + 3;
@@ -419,12 +419,12 @@ function draggSch(obj, callbackStopDragg) {
 		$(obj).draggable({
 			scroll: true,
 			containment: "#table-schedule-time",
-			refreshPositions: false,
+			refreshPositions: true,
 			axis: "y",
-			revert: false,
+			revert: true,
 			zIndex: 10,
 			delay: 1000,
-			/*create: function (e, ui) {
+			create: function (e, ui) {
 
 			},
 			drag: function (e, ui) {
@@ -533,8 +533,8 @@ function draggSch(obj, callbackStopDragg) {
 						topStamp = 0;
 					}, 300);//animate 300ms
 				}
-			}*/
-		});
+			}
+		}).disableSelection();
 	} catch (ex) {
 	}
 	if ($(obj).hasClass('free-axis')) {
@@ -564,9 +564,9 @@ function freeAxisOp(obj, callbackTL) {
 	let revertClass = '';
 	let revertHeight = 0;
 	try {
-		$item.draggable("option", {
+		/*$item.draggable("option", {
 			axis: '',
-			/*start: function (event, ui) {
+			start: function (event, ui) {
 				dragscroll.reset();
 				topStamp = ui.position.top;
 				leftStamp = ui.position.left;
@@ -700,8 +700,8 @@ function freeAxisOp(obj, callbackTL) {
 
 					}, 300)
 				}
-			}*/
-		});
+			}
+		});*/
 	} catch (ex) {
 	}
 }
