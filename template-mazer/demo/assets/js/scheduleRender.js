@@ -408,7 +408,8 @@ function addBlankTime(timeStar = '', timeEnd = '', operatory = 0, ID = 0, dateno
     `;
 	contEle.append(eleTempalte);
 }
-alert(2);
+
+alert(3);
 
 function draggSch(obj, callbackStopDragg) {
 	let w = $('#table-schedule-time td:not(.time)').innerWidth() + 3;
@@ -427,61 +428,60 @@ function draggSch(obj, callbackStopDragg) {
 
 			},
 			drag: function (e, ui) {
-				ui.position.left = 0;
-				ui.position.top = Math.floor(ui.position.top / 40) * 40;
-				checkOvertimeSingle(this);
-				// show tamp time
-				var tmpTime = timeByPositionY(ui.position.top);
-				var tmpTimeEND = timeByPositionY(ui.position.top + $(obj).innerHeight());
-
-				var s = [];
-				s = tmpTime.split(":");
-
-				var e = [];
-				var ee = [];
-				ee = tmpTimeEND.split(":");
-				if (parseInt(ee[1]) == 59) {
-					var hn = parseInt(ee[0]) + 1;
-					e.push('' + hn + '');
-					e.push('00');
-				} else {
-					e.push('' + ee[0] + '');
-					var hn = parseInt(ee[1]);
-					e.push('' + hn + '');
-				}
-				if (s[0] >= 12) {
-					var hs = s[0];
-					if (s[0] > 12) {
-						hs = s[0] - 12;
-					}
-					var he = e[0] - 12;
-
-					$(obj).find('.tmp-time-top').html(hs + ':' + s[1] + 'PM - ' + he + ':' + e[1] + 'PM');
-				} else {
-					if (s[0] < 12 && e[0] >= 12) {
-						var he = e[0] - 12;
-						if (e[0] == 12) {
-							$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + e[0] + ':' + e[1] + 'PM');
-						} else {
-							$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + he + ':' + e[1] + 'PM');
-						}
-					} else {
-						$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + e[0] + ':' + e[1] + 'AM');
-					}
-				}
+				// ui.position.left = 0;
+				// ui.position.top = Math.floor(ui.position.top / 40) * 40;
+				// checkOvertimeSingle(this);
+				// // show tamp time
+				// var tmpTime = timeByPositionY(ui.position.top);
+				// var tmpTimeEND = timeByPositionY(ui.position.top + $(obj).innerHeight());
+				//
+				// var s = [];
+				// s = tmpTime.split(":");
+				//
+				// var e = [];
+				// var ee = [];
+				// ee = tmpTimeEND.split(":");
+				// if (parseInt(ee[1]) == 59) {
+				// 	var hn = parseInt(ee[0]) + 1;
+				// 	e.push('' + hn + '');
+				// 	e.push('00');
+				// } else {
+				// 	e.push('' + ee[0] + '');
+				// 	var hn = parseInt(ee[1]);
+				// 	e.push('' + hn + '');
+				// }
+				// if (s[0] >= 12) {
+				// 	var hs = s[0];
+				// 	if (s[0] > 12) {
+				// 		hs = s[0] - 12;
+				// 	}
+				// 	var he = e[0] - 12;
+				//
+				// 	$(obj).find('.tmp-time-top').html(hs + ':' + s[1] + 'PM - ' + he + ':' + e[1] + 'PM');
+				// } else {
+				// 	if (s[0] < 12 && e[0] >= 12) {
+				// 		var he = e[0] - 12;
+				// 		if (e[0] == 12) {
+				// 			$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + e[0] + ':' + e[1] + 'PM');
+				// 		} else {
+				// 			$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + he + ':' + e[1] + 'PM');
+				// 		}
+				// 	} else {
+				// 		$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + e[0] + ':' + e[1] + 'AM');
+				// 	}
+				// }
 				//Endtime
 			},
 			start: function (e, ui) {
-				dragscroll.reset();
-				w = $('#table-schedule-time td:not(.time)').innerWidth() + 3;
-				h = $('#table-schedule-time td:not(.time)').innerHeight();
-
-				topStamp = ui.position.top;
-
-				OtherEvent(this).forEach(function (obj, index) {
-					$(obj).addClass('highlight');
-				});
-
+				// dragscroll.reset();
+				// w = $('#table-schedule-time td:not(.time)').innerWidth() + 3;
+				// h = $('#table-schedule-time td:not(.time)').innerHeight();
+				//
+				// topStamp = ui.position.top;
+				//
+				// OtherEvent(this).forEach(function (obj, index) {
+				// 	$(obj).addClass('highlight');
+				// });
 			},
 			stop: function (e, ui) {
 				let currentEle = this;
