@@ -408,7 +408,7 @@ function addBlankTime(timeStar = '', timeEnd = '', operatory = 0, ID = 0, dateno
     `;
 	contEle.append(eleTempalte);
 }
-alert(1);
+alert(2);
 
 function draggSch(obj, callbackStopDragg) {
 	let w = $('#table-schedule-time td:not(.time)').innerWidth() + 3;
@@ -533,7 +533,7 @@ function draggSch(obj, callbackStopDragg) {
 					}, 300);//animate 300ms
 				}
 			}
-		}).disableSelection();
+		});
 	} catch (ex) {
 	}
 	if ($(obj).hasClass('free-axis')) {
@@ -566,7 +566,6 @@ function freeAxisOp(obj, callbackTL) {
 		$item.draggable("option", {
 			axis: '',
 			start: function (event, ui) {
-				alert(3);
 				dragscroll.reset();
 				topStamp = ui.position.top;
 				leftStamp = ui.position.left;
@@ -584,7 +583,6 @@ function freeAxisOp(obj, callbackTL) {
 
 			},
 			drag: function (event, ui) {
-				alert(4);
 				let obj = this;
 				ui.position.left = Math.floor(ui.position.left / wframe) * wframe;
 				ui.position.top = Math.floor(ui.position.top / 40) * 40;
