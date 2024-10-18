@@ -410,7 +410,7 @@ function addBlankTime(timeStar = '', timeEnd = '', operatory = 0, ID = 0, dateno
 }
 
 
-alert(3);
+alert(4);
 function draggSch(obj, callbackStopDragg) {
 	let w = $('#table-schedule-time td:not(.time)').innerWidth() + 3;
 	let h = $('#table-schedule-time td:not(.time)').innerHeight();
@@ -423,7 +423,7 @@ function draggSch(obj, callbackStopDragg) {
 			axis: "y",
 			revert: false,
 			distance: 50,
-			handle: '.ev-draggable',
+			scrollSensitivity: 50,
 			zIndex: 10,
 			delay: 1000,
 			create: function (e, ui) {
