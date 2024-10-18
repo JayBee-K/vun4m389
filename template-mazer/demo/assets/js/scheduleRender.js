@@ -1,4 +1,5 @@
 ﻿"use strict";
+alert(1);
 const $ = jQuery;
 let scheduleOperatory = document.getElementById('schedule-operatory');
 let scheduleTable = document.getElementById('table-schedule-time');
@@ -533,7 +534,7 @@ function draggSch(obj, callbackStopDragg) {
 					}, 300);//animate 300ms
 				}
 			}
-		});
+		}).disableSelection();
 	} catch (ex) {
 	}
 	if ($(obj).hasClass('free-axis')) {
