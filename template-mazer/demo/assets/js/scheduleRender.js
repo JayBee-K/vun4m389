@@ -409,7 +409,7 @@ function addBlankTime(timeStar = '', timeEnd = '', operatory = 0, ID = 0, dateno
 	contEle.append(eleTempalte);
 }
 
-alert(1212)
+alert(3223)
 
 function draggSch(obj, callbackStopDragg) {
 	let w = $('#table-schedule-time td:not(.time)').innerWidth() + 3;
@@ -419,9 +419,11 @@ function draggSch(obj, callbackStopDragg) {
 		$(obj).draggable({
 			scroll: true,
 			containment: "#table-schedule-time",
-			refreshPositions: true,
+			refreshPositions: false,
 			axis: "y",
-			revert: true,
+			revert: false,
+			distance: 50,
+			scrollSensitivity: 50,
 			zIndex: 10,
 			delay: 1000,
 			create: function (e, ui) {
@@ -544,6 +546,27 @@ function draggSch(obj, callbackStopDragg) {
 		});
 	}
 
+
+	let isDragging = false; // Biến kiểm tra đang kéo hay không
+
+// Sự kiện để theo dõi trạng thái kéo
+	$(obj).on('mousedown touchstart', function () {
+		isDragging = true; // Khi bắt đầu kéo
+	});
+
+	$(document).on('mousedown touchstart', function (e) {
+		if (!$(e.target).closest(obj).length) {
+			$(obj).draggable("disable");
+			//dragscroll.disable();
+		}
+	});
+
+	$(document).on('mouseup touchend', function () {
+		if (isDragging) {
+			$(obj).draggable("enable");
+			//dragscroll.enable();
+		}
+	});
 }
 
 function OpenEditMenu1(obj, date) {
@@ -564,7 +587,7 @@ function freeAxisOp(obj, callbackTL) {
 	let revertClass = '';
 	let revertHeight = 0;
 	try {
-		/*$item.draggable("option", {
+		$item.draggable("option", {
 			axis: '',
 			start: function (event, ui) {
 				dragscroll.reset();
@@ -701,7 +724,7 @@ function freeAxisOp(obj, callbackTL) {
 					}, 300)
 				}
 			}
-		});*/
+		});
 	} catch (ex) {
 	}
 }
