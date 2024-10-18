@@ -472,7 +472,7 @@ function draggSch(obj, callbackStopDragg) {
 				//Endtime
 			},
 			start: function (e, ui) {
-				//dragscroll.reset();
+				dragscroll.reset();
 				w = $('#table-schedule-time td:not(.time)').innerWidth() + 3;
 				h = $('#table-schedule-time td:not(.time)').innerHeight();
 
@@ -566,7 +566,8 @@ function freeAxisOp(obj, callbackTL) {
 		$item.draggable("option", {
 			axis: '',
 			start: function (event, ui) {
-				//dragscroll.reset();
+				alert(3);
+				dragscroll.reset();
 				topStamp = ui.position.top;
 				leftStamp = ui.position.left;
 				revertHeight = $(this).innerHeight();
@@ -583,6 +584,7 @@ function freeAxisOp(obj, callbackTL) {
 
 			},
 			drag: function (event, ui) {
+				alert(4);
 				let obj = this;
 				ui.position.left = Math.floor(ui.position.left / wframe) * wframe;
 				ui.position.top = Math.floor(ui.position.top / 40) * 40;
