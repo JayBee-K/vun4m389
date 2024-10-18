@@ -409,12 +409,11 @@ function addBlankTime(timeStar = '', timeEnd = '', operatory = 0, ID = 0, dateno
 	contEle.append(eleTempalte);
 }
 
-
+alert(5);
 function draggSch(obj, callbackStopDragg) {
 	let w = $('#table-schedule-time td:not(.time)').innerWidth() + 3;
 	let h = $('#table-schedule-time td:not(.time)').innerHeight();
 	let topStamp = 0;
-
 
 	try {
 		$(obj).draggable({
@@ -545,6 +544,12 @@ function draggSch(obj, callbackStopDragg) {
 			callbackStopDragg(timeB, obj);
 		});
 	}
+
+	$(document).on('touchstart  mousedown', function (e) {
+		if ($(e.target).closest('.ev-draggable').length) {
+			$(e.target).closest('.ev-draggable').addClass('ui-draggable-dragging');
+		}
+	});
 }
 
 function OpenEditMenu1(obj, date) {
