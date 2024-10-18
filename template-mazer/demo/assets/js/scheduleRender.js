@@ -409,6 +409,8 @@ function addBlankTime(timeStar = '', timeEnd = '', operatory = 0, ID = 0, dateno
 	contEle.append(eleTempalte);
 }
 
+alert(3)
+
 function draggSch(obj, callbackStopDragg) {
 	let w = $('#table-schedule-time td:not(.time)').innerWidth() + 3;
 	let h = $('#table-schedule-time td:not(.time)').innerHeight();
