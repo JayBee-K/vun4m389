@@ -414,6 +414,8 @@ function draggSch(obj, callbackStopDragg) {
 	let h = $('#table-schedule-time td:not(.time)').innerHeight();
 	let topStamp = 0;
 
+	let timeDelay = 1000;
+
 	try {
 		$(obj).draggable({
 			scroll: true,
@@ -423,7 +425,7 @@ function draggSch(obj, callbackStopDragg) {
 			revert: false,
 			distance: 0,
 			zIndex: 10,
-			delay: 1000,
+			delay: timeDelay,
 			create: function (e, ui) {
 
 			},
@@ -546,7 +548,9 @@ function draggSch(obj, callbackStopDragg) {
 
 	$(document).on('touchstart  mousedown', function (e) {
 		if ($(e.target).closest('.ev-draggable').length) {
-			$(e.target).closest('.ev-draggable').addClass('ui-draggable-dragging');
+			setTimeout(function () {
+				$(e.target).closest('.ev-draggable').addClass('ui-draggable-dragging');
+			}, timeDelay)
 		}
 	});
 }
