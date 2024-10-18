@@ -1,5 +1,5 @@
 ﻿"use strict";
-alert(1);
+alert(2);
 const $ = jQuery;
 let scheduleOperatory = document.getElementById('schedule-operatory');
 let scheduleTable = document.getElementById('table-schedule-time');
@@ -422,6 +422,7 @@ function draggSch(obj, callbackStopDragg) {
 			refreshPositions: false,
 			axis: "y",
 			revert: false,
+			distance: 10,
 			zIndex: 10,
 			delay: 1000,
 			create: function (e, ui) {
