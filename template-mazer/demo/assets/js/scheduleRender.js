@@ -409,7 +409,7 @@ function addBlankTime(timeStar = '', timeEnd = '', operatory = 0, ID = 0, dateno
 	contEle.append(eleTempalte);
 }
 
-alert(3);
+alert(4);
 
 function draggSch(obj, callbackStopDragg) {
 	let w = $('#table-schedule-time td:not(.time)').innerWidth() + 3;
@@ -566,78 +566,78 @@ function freeAxisOp(obj, callbackTL) {
 		$item.draggable("option", {
 			axis: '',
 			start: function (event, ui) {
-				dragscroll.reset();
-				topStamp = ui.position.top;
-				leftStamp = ui.position.left;
-				revertHeight = $(this).innerHeight();
-				wframe = $item.parent('.events').width();
-				//n4m edit 11-05-2024
-				if (wframe < 0)
-					wframe = wframe - 2;
-				else
-					wframe = wframe + 2;
-				OtherEvent(this).forEach(function (obj, index) {
-					$(obj).addClass('highlight');
-				});
-				revertClass = checkDisableOp(this);
+				// dragscroll.reset();
+				// topStamp = ui.position.top;
+				// leftStamp = ui.position.left;
+				// revertHeight = $(this).innerHeight();
+				// wframe = $item.parent('.events').width();
+				// //n4m edit 11-05-2024
+				// if (wframe < 0)
+				// 	wframe = wframe - 2;
+				// else
+				// 	wframe = wframe + 2;
+				// OtherEvent(this).forEach(function (obj, index) {
+				// 	$(obj).addClass('highlight');
+				// });
+				// revertClass = checkDisableOp(this);
 
 			},
 			drag: function (event, ui) {
-				let obj = this;
-				ui.position.left = Math.floor(ui.position.left / wframe) * wframe;
-				ui.position.top = Math.floor(ui.position.top / 40) * 40;
-				checkOvertimeSingle(this);
-
-				let objLeft = this.offsetLeft + $(this).closest('td')[0].offsetLeft;
-
-				//timeByPositionY(ui.position.top)
-				$(eventStore).find('td').each(function (index, ele) {
-					let eleLeft = ele.offsetLeft;
-					if (Math.abs(objLeft - eleLeft) <= 10) {
-						let typeNV = parseInt($(ele).data('id'));
-						updateEventByTier(obj, typeNV);
-					}
-				});
-				// show tamp time
-				var tmpTime = timeByPositionY(ui.position.top);
-				var tmpTimeEND = timeByPositionY(ui.position.top + $(obj).innerHeight());
-
-
-				var s = [];
-				s = tmpTime.split(":");
-
-				var e = [];
-				var ee = [];
-				ee = tmpTimeEND.split(":");
-				if (parseInt(ee[1]) == 59) {
-					var hn = parseInt(ee[0]) + 1;
-					e.push('' + hn + '');
-					e.push('00');
-				} else {
-					e.push('' + ee[0] + '');
-					var hn = parseInt(ee[1]);
-					e.push('' + hn + '');
-				}
-				if (s[0] >= 12) {
-					var hs = s[0];
-					if (s[0] > 12) {
-						hs = s[0] - 12;
-					}
-					var he = e[0] - 12;
-
-					$(obj).find('.tmp-time-top').html(hs + ':' + s[1] + 'PM - ' + he + ':' + e[1] + 'PM');
-				} else {
-					if (s[0] < 12 && e[0] >= 12) {
-						var he = e[0] - 12;
-						if (e[0] == 12) {
-							$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + e[0] + ':' + e[1] + 'PM');
-						} else {
-							$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + he + ':' + e[1] + 'PM');
-						}
-					} else {
-						$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + e[0] + ':' + e[1] + 'AM');
-					}
-				}
+				// let obj = this;
+				// ui.position.left = Math.floor(ui.position.left / wframe) * wframe;
+				// ui.position.top = Math.floor(ui.position.top / 40) * 40;
+				// checkOvertimeSingle(this);
+				//
+				// let objLeft = this.offsetLeft + $(this).closest('td')[0].offsetLeft;
+				//
+				// //timeByPositionY(ui.position.top)
+				// $(eventStore).find('td').each(function (index, ele) {
+				// 	let eleLeft = ele.offsetLeft;
+				// 	if (Math.abs(objLeft - eleLeft) <= 10) {
+				// 		let typeNV = parseInt($(ele).data('id'));
+				// 		updateEventByTier(obj, typeNV);
+				// 	}
+				// });
+				// // show tamp time
+				// var tmpTime = timeByPositionY(ui.position.top);
+				// var tmpTimeEND = timeByPositionY(ui.position.top + $(obj).innerHeight());
+				//
+				//
+				// var s = [];
+				// s = tmpTime.split(":");
+				//
+				// var e = [];
+				// var ee = [];
+				// ee = tmpTimeEND.split(":");
+				// if (parseInt(ee[1]) == 59) {
+				// 	var hn = parseInt(ee[0]) + 1;
+				// 	e.push('' + hn + '');
+				// 	e.push('00');
+				// } else {
+				// 	e.push('' + ee[0] + '');
+				// 	var hn = parseInt(ee[1]);
+				// 	e.push('' + hn + '');
+				// }
+				// if (s[0] >= 12) {
+				// 	var hs = s[0];
+				// 	if (s[0] > 12) {
+				// 		hs = s[0] - 12;
+				// 	}
+				// 	var he = e[0] - 12;
+				//
+				// 	$(obj).find('.tmp-time-top').html(hs + ':' + s[1] + 'PM - ' + he + ':' + e[1] + 'PM');
+				// } else {
+				// 	if (s[0] < 12 && e[0] >= 12) {
+				// 		var he = e[0] - 12;
+				// 		if (e[0] == 12) {
+				// 			$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + e[0] + ':' + e[1] + 'PM');
+				// 		} else {
+				// 			$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + he + ':' + e[1] + 'PM');
+				// 		}
+				// 	} else {
+				// 		$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + e[0] + ':' + e[1] + 'AM');
+				// 	}
+				// }
 			},
 			stop: function (event, ui) {
 				let currentEle = this;
