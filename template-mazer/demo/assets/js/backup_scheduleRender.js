@@ -38,6 +38,11 @@ function LoadData(date, callbackSuccess) {
 				"Response: " + err.responseText);
 		}
 	});
+
+	/* var d = AppointmentJS.instance.invokeMethodAsync("LoadData").then(result => {
+		 callbackSuccess(result);
+	 });*/
+
 };
 
 export function loadSchedule(date, instances) {
@@ -126,32 +131,15 @@ export function loadSchedule(date, instances) {
 			//handleRemoveSsAllEvent();
 			//viewDetail();
 		});
+
 		document.querySelectorAll('.ev-draggable').forEach(function (ele, index) {
 			draggSch(ele, function (t, element) {
-				console.log(t);
 				var sbsID = $(element).find('input.idE').val();
 				var a = $(element).find('input.idE').closest('td');
-				//AppointmentJS.instance.invokeMethodAsync("UpdateMoveService", { HHmm: t, SessionDetailID: Number(sbsID), UserID: Number(a.attr('data-id')) })
+				// AppointmentJS.instance.invokeMethodAsync("UpdateMoveService", { HHmm: t, SessionDetailID: Number(sbsID), UserID: Number(a.attr('data-id')) })
 			});
-
-			try {
-				Sortable.create(ele, {
-					group: 'shared',
-					animation: 150,
-					ghostClass: 'sortable-ghost',
-					onStart: function (/**Event*/evt) {
-						console.log('start');
-					},
-					onEnd: function (evt) {
-						console.log('Moved: ' + evt.item.innerText);
-					}
-				});
-				console.log("Sortable initialized successfully for element index: " + index, ele);
-			} catch (error) {
-				console.error("Error initializing Sortable for element index: " + index, error);
-			}
 		});
-		//AppointmentJS.instance.invokeMethodAsync("HideLoading");
+		// AppointmentJS.instance.invokeMethodAsync("HideLoading");
 	});
 	// fixed left col
 	$("#schedule-overflow-horizontal").on("scroll", function (e) {
@@ -258,7 +246,7 @@ function positionYByTime(time = svTime) {
 	let hour = time.getHours() - 8;
 	let minute = time.getMinutes() + 1;
 	return hour / 16 * divH + minute / 60 * rowH;
-};
+}
 
 function rePositionYByTime(stime = new Date()) {
 	var reSvTime = new Date(stime.getTime() + stime.getTimezoneOffset() * 60000 + timezone * 60 * 60 * 1000);
@@ -268,7 +256,7 @@ function rePositionYByTime(stime = new Date()) {
 	let hour = time.getHours() - 8;
 	let minute = time.getMinutes() + 1;
 	return hour / 16 * divH + minute / 60 * rowH;
-};
+}
 
 function timeByPositionY(pos) {
 	let divH = scheduleTable.clientHeight;
@@ -296,7 +284,7 @@ function timeByPositionY(pos) {
 		m = 0;
 	}
 	return `${hours + 8}:${m == 0 ? '00' : Math.round(m)}`;
-};
+}
 
 function addCustomer(timeStar = "", timeEnd = "", tierTimeEnd = "", timeStarMin = "", timeEndMin = "", operatory = 0, opt = {
 	id: 0,
@@ -426,136 +414,135 @@ function draggSch(obj, callbackStopDragg) {
 	let h = $('#table-schedule-time td:not(.time)').innerHeight();
 	let topStamp = 0;
 	try {
-		$(obj).draggable(
-			{
-				scroll: true,
-				containment: "#table-schedule-time",
-				refreshPositions: false,
-				axis: "y",
-				revert: false,
-				zIndex: 10,
-				create: function (e, ui) {
-				},
-				drag: function (e, ui) {
-					ui.position.left = 0;
-					ui.position.top = Math.floor(ui.position.top / 40) * 40;
-					checkOvertimeSingle(this);
-					// show tamp time
-					var tmpTime = timeByPositionY(ui.position.top);
-					var tmpTimeEND = timeByPositionY(ui.position.top + $(obj).innerHeight());
+		$(obj).draggable({
+			scroll: true,
+			containment: "#table-schedule-time",
+			refreshPositions: false,
+			axis: "y",
+			revert: false,
+			distance: 50,
+			scrollSensitivity: 50,
+			zIndex: 10,
+			delay: 1000,
+			create: function (e, ui) {
 
-					var s = [];
-					s = tmpTime.split(":");
+			},
+			drag: function (e, ui) {
+				ui.position.left = 0;
+				ui.position.top = Math.floor(ui.position.top / 40) * 40;
+				checkOvertimeSingle(this);
+				// show tamp time
+				var tmpTime = timeByPositionY(ui.position.top);
+				var tmpTimeEND = timeByPositionY(ui.position.top + $(obj).innerHeight());
 
-					var e = [];
-					var ee = [];
-					ee = tmpTimeEND.split(":");
-					if (parseInt(ee[1]) == 59) {
-						var hn = parseInt(ee[0]) + 1;
-						e.push('' + hn + '');
-						e.push('00');
-					} else {
-						e.push('' + ee[0] + '');
-						var hn = parseInt(ee[1]);
-						e.push('' + hn + '');
+				var s = [];
+				s = tmpTime.split(":");
+
+				var e = [];
+				var ee = [];
+				ee = tmpTimeEND.split(":");
+				if (parseInt(ee[1]) == 59) {
+					var hn = parseInt(ee[0]) + 1;
+					e.push('' + hn + '');
+					e.push('00');
+				} else {
+					e.push('' + ee[0] + '');
+					var hn = parseInt(ee[1]);
+					e.push('' + hn + '');
+				}
+				if (s[0] >= 12) {
+					var hs = s[0];
+					if (s[0] > 12) {
+						hs = s[0] - 12;
 					}
-					if (s[0] >= 12) {
-						var hs = s[0];
-						if (s[0] > 12) {
-							hs = s[0] - 12;
-						}
+					var he = e[0] - 12;
+
+					$(obj).find('.tmp-time-top').html(hs + ':' + s[1] + 'PM - ' + he + ':' + e[1] + 'PM');
+				} else {
+					if (s[0] < 12 && e[0] >= 12) {
 						var he = e[0] - 12;
-
-						$(obj).find('.tmp-time-top').html(hs + ':' + s[1] + 'PM - ' + he + ':' + e[1] + 'PM');
-					} else {
-						if (s[0] < 12 && e[0] >= 12) {
-							var he = e[0] - 12;
-							if (e[0] == 12) {
-								$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + e[0] + ':' + e[1] + 'PM');
-							} else {
-								$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + he + ':' + e[1] + 'PM');
-							}
+						if (e[0] == 12) {
+							$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + e[0] + ':' + e[1] + 'PM');
 						} else {
-							$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + e[0] + ':' + e[1] + 'AM');
+							$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + he + ':' + e[1] + 'PM');
 						}
+					} else {
+						$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + e[0] + ':' + e[1] + 'AM');
 					}
-					//Endtime
-				},
-				start: function (e, ui) {
-					dragscroll.reset();
-					w = $('#table-schedule-time td:not(.time)').innerWidth() + 3;
-					h = $('#table-schedule-time td:not(.time)').innerHeight();
+				}
+				//Endtime
+			},
+			start: function (e, ui) {
+				dragscroll.reset();
+				w = $('#table-schedule-time td:not(.time)').innerWidth() + 3;
+				h = $('#table-schedule-time td:not(.time)').innerHeight();
 
-					topStamp = ui.position.top;
+				topStamp = ui.position.top;
 
-					OtherEvent(this).forEach(function (obj, index) {
-						$(obj).addClass('highlight');
-					});
+				OtherEvent(this).forEach(function (obj, index) {
+					$(obj).addClass('highlight');
+				});
 
-				},
-				stop: function (e, ui) {
-					let currentEle = this;
-					let posTp = currentEle.offsetTop;
-					let posBt = currentEle.offsetTop + $(currentEle).innerHeight();
-					let isRevert = false;
+			},
+			stop: function (e, ui) {
+				let currentEle = this;
+				let posTp = currentEle.offsetTop;
+				let posBt = currentEle.offsetTop + $(currentEle).innerHeight();
+				let isRevert = false;
 
-					OtherEvent(this).forEach(function (obj, index) {
-						let itTp = obj.offsetTop;
-						let itBt = obj.offsetTop + $(obj).innerHeight();
-						$(obj).removeClass('highlight');
-						if (!$(currentEle).hasClass('parallel')) {
-							if (posBt > itTp) {
-								if (posTp < itBt) {
-									isRevert = true;
-									$(currentEle).animate({top: topStamp + 'px'});
-								} else {
-								}
-							} else {
-							}
-						}
-
-
-					});
-					inColEvent(this).forEach(function (obj, index) {
-						let itTp = obj.offsetTop;
-						let itBt = obj.offsetTop + $(obj).innerHeight();
+				OtherEvent(this).forEach(function (obj, index) {
+					let itTp = obj.offsetTop;
+					let itBt = obj.offsetTop + $(obj).innerHeight();
+					$(obj).removeClass('highlight');
+					if (!$(currentEle).hasClass('parallel')) {
 						if (posBt > itTp) {
 							if (posTp < itBt) {
 								isRevert = true;
-								$(currentEle).animate({top: topStamp + 'px'}, function () {
-								});
+								$(currentEle).animate({top: topStamp + 'px'});
 							} else {
 							}
 						} else {
 						}
-					});
-					if (!isRevert) {
-						checkOvertimeSingle(currentEle);
-						console.log(timeByPositionY(ui.position.top));
-						topStamp = 0;
-						callbackStopDragg(timeByPositionY(ui.position.top), currentEle);
-						// truyen bien ajax
-					} else {
-						setTimeout(function () {
-							checkOvertimeSingle(currentEle);
-							console.log(timeByPositionY(topStamp));
-							topStamp = 0;
-						}, 300);//animate 300ms
-
 					}
 
+
+				});
+				inColEvent(this).forEach(function (obj, index) {
+					let itTp = obj.offsetTop;
+					let itBt = obj.offsetTop + $(obj).innerHeight();
+					if (posBt > itTp) {
+						if (posTp < itBt) {
+							isRevert = true;
+							$(currentEle).animate({top: topStamp + 'px'}, function () {
+							});
+						} else {
+						}
+					} else {
+					}
+				});
+				if (!isRevert) {
+					checkOvertimeSingle(currentEle);
+					console.log(timeByPositionY(ui.position.top));
+					topStamp = 0;
+					callbackStopDragg(timeByPositionY(ui.position.top), currentEle);
+					// truyen bien ajax
+				} else {
+					setTimeout(function () {
+						checkOvertimeSingle(currentEle);
+						console.log(timeByPositionY(topStamp));
+						topStamp = 0;
+					}, 300);//animate 300ms
 				}
 			}
-		);
+		}).disableSelection();
 	} catch (ex) {
-		//console.log(ex);
 	}
 	if ($(obj).hasClass('free-axis')) {
+
 		freeAxisOp(obj, function (timeB, element) {
 			callbackStopDragg(timeB, obj);
 		});
 	}
-
 }
 
 function OpenEditMenu1(obj, date) {
@@ -576,150 +563,144 @@ function freeAxisOp(obj, callbackTL) {
 	let revertClass = '';
 	let revertHeight = 0;
 	try {
-		$item.draggable(
-			"option", {
-				axis: '',
-				start: function (event, ui) {
-					dragscroll.reset();
-					topStamp = ui.position.top;
-					leftStamp = ui.position.left;
-					revertHeight = $(this).innerHeight();
-					wframe = $item.parent('.events').width();
-					//n4m edit 11-05-2024
-					if (wframe < 0)
-						wframe = wframe - 2;
-					else
-						wframe = wframe + 2;
-					OtherEvent(this).forEach(function (obj, index) {
-						$(obj).addClass('highlight');
-					});
-					revertClass = checkDisableOp(this);
+		$item.draggable("option", {
+			axis: '',
+			start: function (event, ui) {
+				dragscroll.reset();
+				topStamp = ui.position.top;
+				leftStamp = ui.position.left;
+				revertHeight = $(this).innerHeight();
+				wframe = $item.parent('.events').width();
+				//n4m edit 11-05-2024
+				if (wframe < 0)
+					wframe = wframe - 2;
+				else
+					wframe = wframe + 2;
+				OtherEvent(this).forEach(function (obj, index) {
+					$(obj).addClass('highlight');
+				});
+				revertClass = checkDisableOp(this);
 
+			},
+			drag: function (event, ui) {
+				let obj = this;
+				ui.position.left = Math.floor(ui.position.left / wframe) * wframe;
+				ui.position.top = Math.floor(ui.position.top / 40) * 40;
+				checkOvertimeSingle(this);
 
-				},
-				drag: function (event, ui) {
-					let obj = this;
-					ui.position.left = Math.floor(ui.position.left / wframe) * wframe;
-					ui.position.top = Math.floor(ui.position.top / 40) * 40;
-					checkOvertimeSingle(this);
+				let objLeft = this.offsetLeft + $(this).closest('td')[0].offsetLeft;
 
-					let objLeft = this.offsetLeft + $(this).closest('td')[0].offsetLeft;
-
-					//timeByPositionY(ui.position.top)
-					$(eventStore).find('td').each(function (index, ele) {
-						let eleLeft = ele.offsetLeft;
-						if (Math.abs(objLeft - eleLeft) <= 10) {
-							let typeNV = parseInt($(ele).data('id'));
-							updateEventByTier(obj, typeNV);
-						}
-					});
-					// show tamp time
-					var tmpTime = timeByPositionY(ui.position.top);
-					var tmpTimeEND = timeByPositionY(ui.position.top + $(obj).innerHeight());
-
-					console.log(tmpTime);
-					console.log(tmpTimeEND);
-
-					var s = [];
-					s = tmpTime.split(":");
-
-					var e = [];
-					var ee = [];
-					ee = tmpTimeEND.split(":");
-					if (parseInt(ee[1]) == 59) {
-						var hn = parseInt(ee[0]) + 1;
-						e.push('' + hn + '');
-						e.push('00');
-					} else {
-						e.push('' + ee[0] + '');
-						var hn = parseInt(ee[1]);
-						e.push('' + hn + '');
+				//timeByPositionY(ui.position.top)
+				$(eventStore).find('td').each(function (index, ele) {
+					let eleLeft = ele.offsetLeft;
+					if (Math.abs(objLeft - eleLeft) <= 10) {
+						let typeNV = parseInt($(ele).data('id'));
+						updateEventByTier(obj, typeNV);
 					}
-					if (s[0] >= 12) {
-						var hs = s[0];
-						if (s[0] > 12) {
-							hs = s[0] - 12;
-						}
-						var he = e[0] - 12;
+				});
+				// show tamp time
+				var tmpTime = timeByPositionY(ui.position.top);
+				var tmpTimeEND = timeByPositionY(ui.position.top + $(obj).innerHeight());
 
-						$(obj).find('.tmp-time-top').html(hs + ':' + s[1] + 'PM - ' + he + ':' + e[1] + 'PM');
+
+				var s = [];
+				s = tmpTime.split(":");
+
+				var e = [];
+				var ee = [];
+				ee = tmpTimeEND.split(":");
+				if (parseInt(ee[1]) == 59) {
+					var hn = parseInt(ee[0]) + 1;
+					e.push('' + hn + '');
+					e.push('00');
+				} else {
+					e.push('' + ee[0] + '');
+					var hn = parseInt(ee[1]);
+					e.push('' + hn + '');
+				}
+				if (s[0] >= 12) {
+					var hs = s[0];
+					if (s[0] > 12) {
+						hs = s[0] - 12;
+					}
+					var he = e[0] - 12;
+
+					$(obj).find('.tmp-time-top').html(hs + ':' + s[1] + 'PM - ' + he + ':' + e[1] + 'PM');
+				} else {
+					if (s[0] < 12 && e[0] >= 12) {
+						var he = e[0] - 12;
+						if (e[0] == 12) {
+							$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + e[0] + ':' + e[1] + 'PM');
+						} else {
+							$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + he + ':' + e[1] + 'PM');
+						}
 					} else {
-						if (s[0] < 12 && e[0] >= 12) {
-							var he = e[0] - 12;
-							if (e[0] == 12) {
-								$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + e[0] + ':' + e[1] + 'PM');
+						$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + e[0] + ':' + e[1] + 'AM');
+					}
+				}
+			},
+			stop: function (event, ui) {
+				let currentEle = this;
+				let posTp = currentEle.offsetTop;
+				let posBt = currentEle.offsetTop + $(currentEle).innerHeight();
+				let isRevert = false;
+				$(this).find('.tmp-time-top').html('');
+
+				if (ui.position.left != 0) {
+
+					isRevert = moveOpaSch(currentEle, topStamp, $(currentEle.parentElement), revertClass);
+				} else {
+					// only time change
+					inColEvent(this).forEach(function (obj, index) {
+						let itTp = obj.offsetTop;
+						let itBt = obj.offsetTop + $(obj).innerHeight();
+						;
+						if (posBt > itTp) {
+							if (posTp < itBt) {
+								isRevert = true;
+								$(currentEle).animate({top: topStamp + 'px', left: 0 + 'px'}, function () {
+								});
 							} else {
-								$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + he + ':' + e[1] + 'PM');
+
 							}
 						} else {
-							$(obj).find('.tmp-time-top').html(tmpTime + 'AM - ' + e[0] + ':' + e[1] + 'AM');
+
 						}
-					}
-				},
-				stop: function (event, ui) {
-					let currentEle = this;
-					let posTp = currentEle.offsetTop;
-					let posBt = currentEle.offsetTop + $(currentEle).innerHeight();
-					let isRevert = false;
-					$(this).find('.tmp-time-top').html('');
+					});
 
-					if (ui.position.left != 0) {
+					OtherEvent(this).forEach(function (obj, index) {
+						let itTp = obj.offsetTop;
+						let itBt = obj.offsetTop + $(obj).innerHeight();
+						$(obj).removeClass('highlight');
 
-						isRevert = moveOpaSch(currentEle, topStamp, $(currentEle.parentElement), revertClass);
-					} else {
-						// only time change
-						inColEvent(this).forEach(function (obj, index) {
-							let itTp = obj.offsetTop;
-							let itBt = obj.offsetTop + $(obj).innerHeight();
-							;
+						if (!$(currentEle).hasClass('parallel')) {
 							if (posBt > itTp) {
 								if (posTp < itBt) {
 									isRevert = true;
-									$(currentEle).animate({top: topStamp + 'px', left: 0 + 'px'}, function () {
-									});
+									$(currentEle).animate({top: topStamp + 'px'});
 								} else {
-
 								}
 							} else {
-
 							}
-						});
-
-						OtherEvent(this).forEach(function (obj, index) {
-							let itTp = obj.offsetTop;
-							let itBt = obj.offsetTop + $(obj).innerHeight();
-							$(obj).removeClass('highlight');
-
-							if (!$(currentEle).hasClass('parallel')) {
-								if (posBt > itTp) {
-									if (posTp < itBt) {
-										isRevert = true;
-										$(currentEle).animate({top: topStamp + 'px'});
-									} else {
-									}
-								} else {
-								}
-							}
-						});
-					}
-					clearAllHighlightCol(this);
-					if (!isRevert) {
+						}
+					});
+				}
+				clearAllHighlightCol(this);
+				if (!isRevert) {
+					checkOvertimeSingle(currentEle);
+					topStamp = 0;
+					callbackTL(timeByPositionY(ui.position.top), obj);
+				} else {
+					$(currentEle).css({height: revertHeight + 'px'});
+					setTimeout(function () {
 						checkOvertimeSingle(currentEle);
-						console.log(timeByPositionY(ui.position.top));
+						console.log(timeByPositionY(topStamp));
 						topStamp = 0;
-						callbackTL(timeByPositionY(ui.position.top), obj);
-					} else {
-						$(currentEle).css({height: revertHeight + 'px'});
-						setTimeout(function () {
-							checkOvertimeSingle(currentEle);
-							console.log(timeByPositionY(topStamp));
-							topStamp = 0;
 
-						}, 300)
-					}
+					}, 300)
 				}
 			}
-		);
+		});
 	} catch (ex) {
 	}
 }
@@ -797,7 +778,6 @@ function moveOpaSch(obj, revertTop, revertCont, revertClass) {
 
 //danh sach thoi gian lam duoc cua nv theo dich vu
 var TimeLevelStaff = [];
-console.log(TimeLevelStaff);
 
 function getLvsByServiceID(id) {
 	var result = [];
@@ -1082,6 +1062,7 @@ jQuery(document).ready(function ($) {
 			});
 		}
 	});
+
 	//xóa dịch vụ
 	$(document).on("click", ".delete-service", function () {
 		if (AppointmentJS.instance !== null) {
@@ -1090,6 +1071,7 @@ jQuery(document).ready(function ($) {
 			});
 		}
 	});
+
 	//reset dịch vụ
 	$(document).on("click", ".reset-service", function () {
 		if (AppointmentJS.instance !== null) {
@@ -1098,6 +1080,7 @@ jQuery(document).ready(function ($) {
 			});
 		}
 	});
+
 	//thay doi session cho dịch vụ
 	$(document).on("click", ".change-session", function () {
 		if (AppointmentJS.instance !== null) {
@@ -1106,6 +1089,7 @@ jQuery(document).ready(function ($) {
 			});
 		}
 	});
+
 	//thay đổi thời gian dịch vụ
 	$(document).on("click", ".change-time", function () {
 		let session = $(this).attr('data-service');
@@ -1114,4 +1098,5 @@ jQuery(document).ready(function ($) {
 			});
 		}
 	});
+
 });
