@@ -1,5 +1,4 @@
 ﻿"use strict";
-alert(2);
 const $ = jQuery;
 let scheduleOperatory = document.getElementById('schedule-operatory');
 let scheduleTable = document.getElementById('table-schedule-time');
@@ -411,6 +410,7 @@ function addBlankTime(timeStar = '', timeEnd = '', operatory = 0, ID = 0, dateno
 }
 
 
+alert(3);
 function draggSch(obj, callbackStopDragg) {
 	let w = $('#table-schedule-time td:not(.time)').innerWidth() + 3;
 	let h = $('#table-schedule-time td:not(.time)').innerHeight();
@@ -422,7 +422,8 @@ function draggSch(obj, callbackStopDragg) {
 			refreshPositions: false,
 			axis: "y",
 			revert: false,
-			distance: 10,
+			distance: 50,
+			handle: '.ev-draggable',
 			zIndex: 10,
 			delay: 1000,
 			create: function (e, ui) {
