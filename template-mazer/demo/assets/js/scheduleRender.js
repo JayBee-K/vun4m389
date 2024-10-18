@@ -409,7 +409,7 @@ function addBlankTime(timeStar = '', timeEnd = '', operatory = 0, ID = 0, dateno
 	contEle.append(eleTempalte);
 }
 
-alert(6)
+alert(7)
 function draggSch(obj, callbackStopDragg) {
 	let w = $('#table-schedule-time td:not(.time)').innerWidth() + 3;
 	let h = $('#table-schedule-time td:not(.time)').innerHeight();
@@ -421,8 +421,6 @@ function draggSch(obj, callbackStopDragg) {
 			refreshPositions: false,
 			axis: "y",
 			revert: false,
-			distance: 50,
-			scrollSensitivity: 50,
 			zIndex: 10,
 			delay: 1000,
 			create: function (e, ui) {
@@ -534,8 +532,6 @@ function draggSch(obj, callbackStopDragg) {
 						topStamp = 0;
 					}, 300);//animate 300ms
 				}
-
-				setTimeout(function(){ui.helper.unbind("click.prevent");}, 100);
 			}
 		}).disableSelection();
 	} catch (ex) {
