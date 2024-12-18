@@ -2980,6 +2980,8 @@
 	text-align: center;
 	border: 1px solid transparent;
 	transition: var(--transition-default);
+	width: calc(100% / 8);
+	flex-shrink: 0;
 }
 
 .card-calendar__title {
@@ -2991,6 +2993,103 @@
 
 .card-calendar__text {
 	color: var(--text-color);
+}
+
+.button-swiper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	z-index: 4;
+}
+
+.button-swiper .button-swiper__item {
+	width: 56px;
+	height: 56px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+}
+
+.button-swiper .button-swiper__item > svg {
+	width: 20px;
+	height: 20px;
+	transition: .3s all ease-in-out;
+}
+
+.button-swiper__item.button-prev:hover svg {
+	transform: translateX(-5px);
+}
+
+.button-swiper__item.button-next:hover svg {
+	transform: translateX(5px);
+}
+
+.calendar-swiper .calendar-swiper__list {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.calendar-swiper .scroll-button {
+	position: absolute;
+	top: calc(50% - 5px);
+	transform: translateY(-50%);
+	z-index: 2;
+	height: 36px;
+	width: 36px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background: var(--primary-color);
+	transition: .3s all ease;
+	cursor: pointer;
+}
+
+.calendar-swiper .scroll-button svg path {
+	fill: var(--bs-white);
+}
+
+.calendar-swiper .scroll-button:hover {
+	background: var(--primary-hover);
+}
+
+.calendar-swiper .scroll-button.scroll-prev {
+	left: -18px;
+}
+
+.calendar-swiper .scroll-button.scroll-next {
+	right: -18px;
+}
+
+.calendar-swiper .calendar-swiper__list::-webkit-scrollbar {
+	height: 8px;
+}
+
+.calendar-swiper .calendar-swiper__list::-webkit-scrollbar-track {
+	background: #f3f3f3;
+	border-radius: 8px;
+}
+
+.calendar-swiper .calendar-swiper__list::-webkit-scrollbar-thumb {
+	background: #d7d7d7;
+	border-radius: 8px;
+}
+
+.calendar-swiper .calendar-swiper__list::-webkit-scrollbar-thumb:hover {
+	background: #b9b9b9;
+}
+
+.calendar-swiper .calendar-swiper__list {
+	width: 100%;
+	overflow-x: auto;
+	overflow-y: hidden;
+	max-width: 100%;
+	padding-bottom: 5px;
 }
 
 .calendar-swiper .button-swiper__item {
@@ -3018,30 +3117,9 @@
 .swiper-slide-active .card-calendar {
 	border-radius: 24px;
 	border: 1px solid var(--primary-color);
-	background: var(--primary-50);
+	background: #f1f8f7;
 }
 
-@media (max-width: 992px) {
-	.card-calendar {
-		padding: 12px;
-		gap: 0;
-	}
-
-	.card-calendar__title {
-		font-size: 1em;
-	}
-
-	.card-calendar__text {
-		font-size: 0.85em;
-	}
-}
-
-@media (max-width: 576px) {
-	.card-calendar__title {
-		font-size: 1em;
-	}
-
-}
 
 .page-cart__tab-top .cart-tab {
 	border-radius: 32px;
@@ -3097,18 +3175,19 @@
 }
 
 .service-list {
-	border-top: 1px solid var(--primary-50);
-	border-bottom: 1px solid var(--primary-50);
+	border-top: 1px solid #ebf0ff;
+	border-bottom: 1px solid #ebf0ff;
 	display: flex;
-	padding: 16px 0px;
+	padding: 16px 0;
 	align-items: center;
 	justify-content: space-between;
-	gap: 24px;
+	gap: 15px;
 	align-self: stretch;
 }
 
 .service-list__image {
-	width: 20%;
+	flex-shrink: 0;
+	width: 150px;
 	height: auto;
 	overflow: hidden;
 	display: block;
@@ -3122,14 +3201,13 @@
 }
 
 .service-list__content {
-	width: 70%;
+	width: 100%
 }
 
 .service-list__title {
 	color: var(--primary-color);
-	font-size: 1.25em;
+	font-size: 1.3em;
 	font-weight: 700;
-	margin-bottom: 12px;
 }
 
 .service-list__text {
@@ -3138,9 +3216,8 @@
 }
 
 .service-list__text .title {
-	color: var(--text-color);
+	color: #121212;
 	font-weight: 700;
-
 }
 
 .service-list__text .text {
@@ -3148,7 +3225,6 @@
 	position: relative;
 	padding-left: 12px;
 	margin-left: 12px;
-
 }
 
 .service-list__text .text::before {
@@ -3160,12 +3236,13 @@
 	height: 16px;
 	width: 1px;
 	opacity: 0.5;
-	background: var(--gray-100);
-	transition: var(--transition-default);
+	background: #dadbe0;
+	transition: 0.3s all ease-in-out;
 }
 
 .service-list__remove {
 	width: 10%;
+	flex-shrink: 0;
 }
 
 .service-list__remove .remove {
@@ -3178,7 +3255,8 @@
 	width: 35px;
 	height: 35px;
 	border-radius: 5px;
-	transition: var(--transition-default);
+	transition: 0.3s all ease-in-out;
+	background-color: #f5f5f5;
 }
 
 .service-list__remove .remove:hover {
@@ -3186,11 +3264,72 @@
 }
 
 .service-list__remove .remove svg path {
-	transition: var(--transition-default);
+	transition: 0.3s all ease-in-out;
 }
 
 .service-list__remove .remove:hover svg path {
 	fill: var(--bs-white);
+}
+
+.service-list__quantity {
+	width: 120px;
+	flex-shrink: 0;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.service-list__quantity .service-quantity__inner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: 0;
+	overflow: hidden;
+	position: relative;
+}
+
+.service-list__quantity .service-quantity__inner .service-quantity__button {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 0;
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	background: transparent;
+	padding: 0;
+	font-size: 1.15em;
+	color: #161c2d;
+	z-index: 2;
+	line-height: 5px;
+}
+
+.service-list__quantity .service-quantity__inner .service-quantity__button___minus {
+	left: 6px;
+}
+
+.service-list__quantity .service-quantity__inner .service-quantity__button___plus {
+	right: 6px;
+}
+
+.service-list__quantity .service-quantity__inner .form-control {
+	height: 36px;
+	width: 100%;
+	background-color: #F8F8F9;
+	border-radius: 20px;
+	border: 0;
+	text-align: center;
+	padding-left: 40px;
+	padding-right: 40px;
+	outline: none !important;
+	box-shadow: none !important;
 }
 
 @media (max-width: 1024px) {
@@ -3610,4 +3749,105 @@
 
 .modal-theme.modal.fade.show .modal-dialog {
 	transform: scale(1);
+}
+
+
+@media screen and (max-width: 768px) {
+	.card-calendar {
+		width: calc(100% / 4);
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.card-calendar {
+		width: calc(100% / 5);
+		padding: 12px 16px;
+		line-height: 1.2;
+	}
+
+	.card-calendar__title {
+		font-size: 1em;
+	}
+
+	.card-calendar__text {
+		font-size: .925em;
+	}
+
+	.service-list__image {
+		width: 85px;
+		flex-shrink: 0;
+	}
+
+	.service-list__title {
+		font-size: 1em;
+		line-height: 1.3;
+	}
+
+	.service-list__text {
+		font-size: .925em;
+	}
+
+	.service-list {
+		gap: 10px;
+		padding-right: 30px;
+		position: relative;
+		flex-wrap: wrap;
+	}
+
+	.service-list__remove {
+		width: 28px;
+		position: absolute;
+		top: 5px;
+		right: -5px;
+	}
+
+
+	.service-list__content {
+		width: calc(100% - 95px);
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.card-calendar {
+		width: calc(100% / 3);
+	}
+
+	.service-list__remove .remove {
+		width: 28px;
+		height: 28px;
+	}
+
+	.service-list__title {
+		font-size: 1em;
+		line-height: 1.3;
+	}
+
+	.service-list__text {
+		font-size: .925em;
+		white-space: nowrap;
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	.service-list__text .text {
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	.service-list__text .text::before {
+		display: none;
+	}
+
+	.page-cart__tab-top .cart-tab {
+		justify-content: flex-start;
+		overflow-x: auto;
+		max-width: 100%;
+	}
+
+}
+
+@media screen and (max-width: 375px) {
+	.card-calendar {
+		width: calc(100% / 2);
+	}
 }

@@ -133,6 +133,41 @@ const handleSelectInput = function(){
 		}
 }
 
+const handleSlideScroll = function () {
+	if ($('.slideScroll').length > 0) {
+		$('.slideScroll').each(function () {
+			let slide = $(this),
+				slideInner = slide.find('.slideScrollInner'),
+				slideItemActive = slideInner.find('.slideScrollItem.active'),
+				slidePrev = slide.find('.slideScrollPrev'),
+				slideNext = slide.find('.slideScrollNext');
+
+			/*if (slideItemActive.length) {
+				let activeOffset = slideItemActive.position().left + slideInner.scrollLeft(); // tính vị trí phần tử active trong container
+				slideInner.scrollLeft(activeOffset - (slideInner.width() / 2) + (slideItemActive.outerWidth() / 2)); // cuộn để phần tử active ở giữa viewport
+			}*/
+
+			let scrollPixel = slideInner.find('.slideScrollItem').outerWidth() + 15; // Chiều rộng của 1 phần tử + khoảng cách giữa 2 phần tử
+
+			slidePrev.click(function () {
+				let maxScrollLeft = slideInner[0].scrollWidth - slideInner.outerWidth();
+
+				if (slideInner.scrollLeft() < maxScrollLeft) {
+					// Đang ở vị trí đầu tiên thì không scroll qua trái được
+					slideInner.scrollLeft(slideInner.scrollLeft() + scrollPixel);
+				}
+			})
+
+			slideNext.click(function () {
+				if (slideInner.scrollLeft() > 0) {
+					// Đang ở vị trí cuối cùng thì không scroll qua phải được
+					slideInner.scrollLeft(slideInner.scrollLeft() - scrollPixel);
+				}
+			})
+		})
+	}
+}
+
 $(function () {
 	Fancybox.bind("[data-fancybox]");
 	handleStickyMenu();
@@ -140,4 +175,5 @@ $(function () {
 	handleInitFancybox();
 	handleScrollTop();
 	handleSelectInput();
+	handleSlideScroll();
 });
