@@ -1,7 +1,4 @@
-var windowWidth = document.documentElement.clientWidth;
-window.addEventListener("resize", () => {
-	windowWidth = document.documentElement.clientWidth;
-});
+let windowWidth = $('body').width();
 
 const handleStickyMenu = function(){
 	var headerPosition = $('.header-bottom').offset().top;
@@ -31,7 +28,6 @@ const handleCallMenu = function () {
 				$body.addClass('is-navigation is-overflow')
 			}
 		}
-
 	}
 
 	if (windowWidth <= 1024) {
@@ -55,11 +51,22 @@ const handleCallMenu = function () {
 			});
 		}
 
-
 	} else {
 		handleBody();
 	}
 }
+
+const handleHeader = function () {
+	handleCallMenu();
+	$(window).resize(function () {
+		let newWindowWidth = $('body').width();
+		if (newWindowWidth !== windowWidth) {
+			windowWidth = newWindowWidth;
+			handleCallMenu();
+		}
+	});
+}
+
 
 // =====================fancybox==================================
 
@@ -171,7 +178,7 @@ const handleSlideScroll = function () {
 $(function () {
 	Fancybox.bind("[data-fancybox]");
 	handleStickyMenu();
-	handleCallMenu();
+	handleHeader();
 	handleInitFancybox();
 	handleScrollTop();
 	handleSelectInput();
