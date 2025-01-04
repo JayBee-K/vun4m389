@@ -3910,8 +3910,8 @@
 }
 
 .show-popup {
-	overflow: hidden;
 	height: 100vh;
+	overflow: hidden;
 }
 
 .show-popup .popup-theme {
@@ -3919,6 +3919,56 @@
 	visibility: visible;
 	pointer-events: auto;
 }
+
+.popup-theme_locations .popup-theme_body {
+	overflow-y: auto;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+}
+
+.popup-theme_locations .card-location .card-location__content .card-location__information .information-item {
+	flex-wrap: nowrap;
+}
+
+@media screen and (min-width: 1024px) {
+	.popup-theme_locations .popup-theme_body .popup-theme_locations__list {
+		max-width: 991px;
+		max-height: 85vh;
+		margin: auto 0;
+	}
+
+	.popup-theme_locations .popup-theme_body .popup-theme_close {
+		position: fixed;
+		top: 30px;
+		right: 30px;
+	}
+
+	.popup-theme_locations .card-location {
+		padding: 18px;
+		gap: 20px;
+	}
+
+	.popup-theme_locations .card-location .card-location__content {
+		gap: 18px;
+	}
+
+	.popup-theme_locations .card-location .card-location__content .card-location__icon {
+		width: 38px;
+		height: 38px;
+	}
+
+	.popup-theme_locations .card-location .card-location__content .card-location__title {
+		font-size: 1.6em;
+	}
+
+	.popup-theme_locations .card-location .card-location__content .card-location__information {
+		gap: 8px;
+		padding: 0 6px;
+	}
+}
+
 
 @media screen and (max-width: 575px) {
 	.popup-theme .popup-theme_body {
