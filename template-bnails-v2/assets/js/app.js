@@ -1,6 +1,6 @@
 let windowWidth = $('body').width();
 
-const handleStickyMenu = function(){
+const handleStickyMenu = function () {
 	var headerPosition = $('.header-bottom').offset().top;
 	$(window).scroll(function () {
 		var scrollValue = $(window).scrollTop();
@@ -106,38 +106,38 @@ const handleScrollTop = function () {
 
 // =====================select form==================================
 
-const handleSelectInput = function(){
+const handleSelectInput = function () {
 
-		let selectOption = $('.form-group__select');
+	let selectOption = $('.form-group__select');
 
-		if(selectOption.length){
-			selectOption.each(function(){
-				let elmSelect = $(this);
-				let inputSelect = elmSelect.find('.input-select');
-				let option = elmSelect.find('.select-group__absolute');
+	if (selectOption.length) {
+		selectOption.each(function () {
+			let elmSelect = $(this);
+			let inputSelect = elmSelect.find('.input-select');
+			let option = elmSelect.find('.select-group__absolute');
 
-				inputSelect.click(function (){
-					elmSelect.addClass('show-select');
-				})
-
-				if(option.length){
-					let optionElm = option.find('li');
-
-					optionElm.click(function(e){
-						let elm = $(this);
-						let getTitleOption = elm.data('title');
-
-						optionElm.removeClass('active');
-						elm.addClass('active');
-
-						let a = elmSelect.find('.input-select');
-						a.val(getTitleOption);
-						elmSelect.removeClass('show-select');
-					})
-				}
-
+			inputSelect.click(function () {
+				elmSelect.addClass('show-select');
 			})
-		}
+
+			if (option.length) {
+				let optionElm = option.find('li');
+
+				optionElm.click(function (e) {
+					let elm = $(this);
+					let getTitleOption = elm.data('title');
+
+					optionElm.removeClass('active');
+					elm.addClass('active');
+
+					let a = elmSelect.find('.input-select');
+					a.val(getTitleOption);
+					elmSelect.removeClass('show-select');
+				})
+			}
+
+		})
+	}
 }
 
 const handleSlideScroll = function () {
@@ -175,6 +175,21 @@ const handleSlideScroll = function () {
 	}
 }
 
+const handlePopupTheme = function () {
+	if ($('#handlePopup').length) {
+		setTimeout(function () {
+			$('body').addClass('show-popup')
+		}, 500);
+
+
+		$('#popupClose').click(function () {
+			if($('body').hasClass('show-popup')) {
+				$('body').removeClass('show-popup')
+			}
+		})
+	}
+}
+
 $(function () {
 	Fancybox.bind("[data-fancybox]");
 	handleStickyMenu();
@@ -183,4 +198,6 @@ $(function () {
 	handleScrollTop();
 	handleSelectInput();
 	handleSlideScroll();
+
+	handlePopupTheme();
 });
