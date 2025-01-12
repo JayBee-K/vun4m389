@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Notification</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta name="format-detection" content="telephone=no, date=no"/>
+
+    <link rel="icon" href="./assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="./assets/images/favicon.png">
+    <link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body class="page-theme bg-gradient">
+
+<div class="section-header bg-transparent position-fixed top-0 start-0 end-0 zi-10 w-100">
+    <div class="container">
+        <div class="vstack flex-row justify-content-between position-relative">
+            <a href="index.html"
+               class="header-back">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                     viewBox="0 0 24 24" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289Z"
+                          fill="#191E24"></path>
+                </svg>
+            </a>
+            <div class="header-title text-white fw-600 position-absolute top-50 start-50 zi-2 ">
+                Notification
+            </div>
+            <a href="" class="header-delete">
+                <svg width="20" height="25" viewBox="0 0 20 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.375 22C1.375 23.5125 2.6125 24.75 4.125 24.75H15.125C16.6375 24.75 17.875 23.5125 17.875 22V5.5H1.375V22ZM19.25 1.375H14.4375L13.0625 0H6.1875L4.8125 1.375H0V4.125H19.25V1.375Z"
+                          fill="black"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+</div>
+<!-- end header-->
+
+<main class="overflow-hidden position-relative vh-100">
+    <div class="section-body position-absolute top-0 start-0 w-100 h-100 overflow-hidden">
+        <div class="container h-100">
+            <div class="page-notification hstack justify-content-start flex-column position-relative pb-1 h-100 overflow-hidden">
+                <div class="page-notification__body d-flex flex-column gap-2 w-100 overflow-y scrollbar-hidden">
+                    <div class="notification-item fw-500 bg-white d-flex align-items-start  justify-content-between gap-1">
+                        <div class="d-flex align-items-center gap-md-3 gap-2">
+                            <div class="notification-item__image hstack justify-content-center flex-shrink-0">
+                                <img src="assets/images/notification.png" class="w-100 h-100 object-fit-contain"
+                                     width="84"
+                                     height="84" alt="">
+                            </div>
+                            <div class="hstack flex-column justify-content-start align-items-start">
+                                <div class="notification-item__title">
+                                    Break a rule and you may receive a Break a rule and you may receive a
+                                </div>
+                                <div class="notification-item__text text-gray fw-400">
+                                    A floating top-up counter which shows how much time can be used. Try to settle
+                                    disputes
+                                    with discussion
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="notification-item__time text-nowrap text-gray position-relative ms-4 fw-400">
+                            <div class="circle position-relative d-block rounded-circle ms-auto"></div>
+                            <div class="time">2h ago</div>
+                        </div>
+                    </div>
+                    <div class="notification-item fw-500 bg-white d-flex align-items-start  justify-content-between gap-1">
+                        <div class="d-flex align-items-center gap-md-3 gap-2">
+                            <div class="notification-item__image hstack justify-content-center flex-shrink-0">
+                                <img src="assets/images/notification.png" class="w-100 h-100 object-fit-contain"
+                                     width="84"
+                                     height="84" alt="">
+                            </div>
+                            <div class="hstack flex-column justify-content-start align-items-start">
+                                <div class="notification-item__title">
+                                    Break a rule and you may receive a Break a rule and you may receive a
+                                </div>
+                                <div class="notification-item__text text-gray fw-400">
+                                    A floating top-up counter which shows how much time can be used. Try to settle
+                                    disputes
+                                    with discussion
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="notification-item__time text-nowrap text-gray position-relative ms-4 fw-400">
+                            <div class="circle position-relative d-block rounded-circle ms-auto"></div>
+                            <div class="time">2h ago</div>
+                        </div>
+                    </div>
+                    <div class="notification-item fw-500 bg-white d-flex align-items-start  justify-content-between gap-1">
+                        <div class="d-flex align-items-center gap-md-3 gap-2">
+                            <div class="notification-item__image hstack justify-content-center flex-shrink-0">
+                                <img src="assets/images/notification.png" class="w-100 h-100 object-fit-contain"
+                                     width="84"
+                                     height="84" alt="">
+                            </div>
+                            <div class="hstack flex-column justify-content-start align-items-start">
+                                <div class="notification-item__title">
+                                    Break a rule and you may receive a Break a rule and you may receive a
+                                </div>
+                                <div class="notification-item__text text-gray fw-400">
+                                    A floating top-up counter which shows how much time can be used. Try to settle
+                                    disputes
+                                    with discussion
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="notification-item__time text-nowrap text-gray position-relative ms-4 fw-400">
+                            <div class="circle position-relative d-block rounded-circle ms-auto"></div>
+                            <div class="time">2h ago</div>
+                        </div>
+                    </div>
+                    <div class="notification-item fw-500 bg-white d-flex align-items-start  justify-content-between gap-1">
+                        <div class="d-flex align-items-center gap-md-3 gap-2">
+                            <div class="notification-item__image hstack justify-content-center flex-shrink-0">
+                                <img src="assets/images/notification.png" class="w-100 h-100 object-fit-contain"
+                                     width="84"
+                                     height="84" alt="">
+                            </div>
+                            <div class="hstack flex-column justify-content-start align-items-start">
+                                <div class="notification-item__title">
+                                    Break a rule and you may receive a Break a rule and you may receive a
+                                </div>
+                                <div class="notification-item__text text-gray fw-400">
+                                    A floating top-up counter which shows how much time can be used. Try to settle
+                                    disputes
+                                    with discussion
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="notification-item__time text-nowrap text-gray position-relative ms-4 fw-400">
+                            <div class="circle position-relative d-block rounded-circle ms-auto"></div>
+                            <div class="time">2h ago</div>
+                        </div>
+                    </div>
+                    <div class="notification-item fw-500 bg-white d-flex align-items-start  justify-content-between gap-1">
+                        <div class="d-flex align-items-center gap-md-3 gap-2">
+                            <div class="notification-item__image hstack justify-content-center flex-shrink-0">
+                                <img src="assets/images/notification.png" class="w-100 h-100 object-fit-contain"
+                                     width="84"
+                                     height="84" alt="">
+                            </div>
+                            <div class="hstack flex-column justify-content-start align-items-start">
+                                <div class="notification-item__title">
+                                    Break a rule and you may receive a Break a rule and you may receive a
+                                </div>
+                                <div class="notification-item__text text-gray fw-400">
+                                    A floating top-up counter which shows how much time can be used. Try to settle
+                                    disputes
+                                    with discussion
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="notification-item__time text-nowrap text-gray position-relative ms-4 fw-400">
+                            <div class="circle position-relative d-block rounded-circle ms-auto"></div>
+                            <div class="time">2h ago</div>
+                        </div>
+                    </div>
+                    <div class="notification-item fw-500 bg-white d-flex align-items-start  justify-content-between gap-1">
+                        <div class="d-flex align-items-center gap-md-3 gap-2">
+                            <div class="notification-item__image hstack justify-content-center flex-shrink-0">
+                                <img src="assets/images/notification.png" class="w-100 h-100 object-fit-contain"
+                                     width="84"
+                                     height="84" alt="">
+                            </div>
+                            <div class="hstack flex-column justify-content-start align-items-start">
+                                <div class="notification-item__title">
+                                    Break a rule and you may receive a Break a rule and you may receive a
+                                </div>
+                                <div class="notification-item__text text-gray fw-400">
+                                    A floating top-up counter which shows how much time can be used. Try to settle
+                                    disputes
+                                    with discussion
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="notification-item__time text-nowrap text-gray position-relative ms-4 fw-400">
+                            <div class="circle position-relative d-block rounded-circle ms-auto"></div>
+                            <div class="time">2h ago</div>
+                        </div>
+                    </div>
+                    <div class="notification-item fw-500 bg-white d-flex align-items-start  justify-content-between gap-1">
+                        <div class="d-flex align-items-center gap-md-3 gap-2">
+                            <div class="notification-item__image hstack justify-content-center flex-shrink-0">
+                                <img src="assets/images/notification.png" class="w-100 h-100 object-fit-contain"
+                                     width="84"
+                                     height="84" alt="">
+                            </div>
+                            <div class="hstack flex-column justify-content-start align-items-start">
+                                <div class="notification-item__title">
+                                    Break a rule and you may receive a Break a rule and you may receive a
+                                </div>
+                                <div class="notification-item__text text-gray fw-400">
+                                    A floating top-up counter which shows how much time can be used. Try to settle
+                                    disputes
+                                    with discussion
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="notification-item__time text-nowrap text-gray position-relative ms-4 fw-400">
+                            <div class="circle position-relative d-block rounded-circle ms-auto"></div>
+                            <div class="time">2h ago</div>
+                        </div>
+                    </div>
+                    <div class="notification-item fw-500 bg-white d-flex align-items-start  justify-content-between gap-1">
+                        <div class="d-flex align-items-center gap-md-3 gap-2">
+                            <div class="notification-item__image hstack justify-content-center flex-shrink-0">
+                                <img src="assets/images/notification.png" class="w-100 h-100 object-fit-contain"
+                                     width="84"
+                                     height="84" alt="">
+                            </div>
+                            <div class="hstack flex-column justify-content-start align-items-start">
+                                <div class="notification-item__title">
+                                    Break a rule and you may receive a Break a rule and you may receive a
+                                </div>
+                                <div class="notification-item__text text-gray fw-400">
+                                    A floating top-up counter which shows how much time can be used. Try to settle
+                                    disputes
+                                    with discussion
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="notification-item__time text-nowrap text-gray position-relative ms-4 fw-400">
+                            <div class="circle position-relative d-block rounded-circle ms-auto"></div>
+                            <div class="time">2h ago</div>
+                        </div>
+                    </div>
+                    <div class="notification-item fw-500 bg-white d-flex align-items-start  justify-content-between gap-1">
+                        <div class="d-flex align-items-center gap-md-3 gap-2">
+                            <div class="notification-item__image hstack justify-content-center flex-shrink-0">
+                                <img src="assets/images/notification.png" class="w-100 h-100 object-fit-contain"
+                                     width="84"
+                                     height="84" alt="">
+                            </div>
+                            <div class="hstack flex-column justify-content-start align-items-start">
+                                <div class="notification-item__title">
+                                    Break a rule and you may receive a Break a rule and you may receive a
+                                </div>
+                                <div class="notification-item__text text-gray fw-400">
+                                    A floating top-up counter which shows how much time can be used. Try to settle
+                                    disputes
+                                    with discussion
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="notification-item__time text-nowrap text-gray position-relative ms-4 fw-400">
+                            <div class="circle position-relative d-block rounded-circle ms-auto"></div>
+                            <div class="time">2h ago</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/fancybox/fancybox.min.js"></script>
+<script type="module" src="./assets/js/app.js"></script>
+</body>
+</html>
