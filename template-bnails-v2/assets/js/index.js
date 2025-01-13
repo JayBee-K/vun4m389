@@ -225,6 +225,47 @@
             });
         }
     }
+
+    const handleSliderFeedback = function () {
+        if($('#section-feedback .swiper').length){
+            new Swiper('#section-feedback .swiper', {
+                slidesPerView: 1.1,
+                spaceBetween: 10,
+                loop:true,
+                speed: 1000,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 6000,
+                    disableOnInteraction: true,
+                },
+                navigation: {
+                    nextEl: '#section-feedback .button-next',
+                    prevEl: '#section-feedback .button-prev',
+                },
+                breakpoints: {
+                    375: {
+                        slidesPerView: 1.1
+                    },
+                    576: {
+                        slidesPerView: 1.2
+                    },
+                    768: {
+                        slidesPerView: 1.8
+                    },
+                    992: {
+                        slidesPerView: 2.5
+                    },
+                    1024: {
+                        slidesPerView: 2.5
+                    },
+                    1440: {
+                        slidesPerView: 3.3
+                    },
+
+                }
+            });
+        }
+    }
     $(function () {
         handleSliderHero();
         handleSliderCustomers();
@@ -233,6 +274,7 @@
         handleCallSidebarService();
         handleSliderCalendar();
         handleSliderClock();
+        handleSliderFeedback();
     });
 
 })(jQuery);
