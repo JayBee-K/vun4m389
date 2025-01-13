@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./assets/plugins/material-datetime-picker/datepicker.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -54,9 +55,9 @@
     <div class="section-body position-absolute top-0 start-0 w-100 h-100 overflow-hidden">
         <div class="container h-100">
             <div class="page-customer hstack justify-content-start flex-column position-relative pb-1 h-100 overflow-hidden">
-                <div class="page-customer__header d-flex align-items-center gap-2 w-100">
-                    <div class="form-search position-relative overflow-hidden">
-                        <div class="form-search__icon position-absolute top-0 start-0 h-100 d-flex align-items-center justify-content-center">
+                <div class="form-search__wrap d-flex align-items-center flex-column gap-2 w-100">
+                    <div class="form-search__item form-search position-relative overflow-hidden w-100">
+                        <div class="icon">
                             <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path d="M24.7875 24.7353L32 32M28.6667 15.3333C28.6667 22.6972 22.6972 28.6667 15.3333 28.6667C7.96953 28.6667 2 22.6972 2 15.3333C2 7.96953 7.96953 2 15.3333 2C22.6972 2 28.6667 7.96953 28.6667 15.3333Z"
@@ -65,31 +66,53 @@
                         </div>
                         <input type="text" class="form-control bg-white" placeholder="Search name">
                     </div>
-                    <div class="search-select bg-white position-relative">
-                        <div class="d-flex align-items-center justify-content-between gap-2 h-100">
-                            <div class="title text-gray">
-                                Sort
-                            </div>
+                    <div class="d-flex align-items-center justify-content-between gap-1 w-100">
+                        <div class="form-search__item form-select__input position-relative">
                             <div class="icon">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.9875 2.5C8.0875 2.5 2.5 8.1 2.5 15C2.5 21.9 8.0875 27.5 14.9875 27.5C21.9 27.5 27.5 21.9 27.5 15C27.5 8.1 21.9 2.5 14.9875 2.5ZM15 25C9.475 25 5 20.525 5 15C5 9.475 9.475 5 15 5C20.525 5 25 9.475 25 15C25 20.525 20.525 25 15 25Z"
+                                          fill="#B0B2BB"/>
+                                    <path d="M15.625 8.75H13.75V16.25L20.3125 20.1875L21.25 18.65L15.625 15.3125V8.75Z"
+                                          fill="#B0B2BB"/>
+                                </svg>
+                            </div>
+                            <input type="text" placeholder="From"
+                                   class="form-control handleInitMaterial">
+                            <div class="arrow">
                                 <svg width="21" height="13" viewBox="0 0 21 13" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M10.5391 12.5586C10.1289 12.5586 9.77734 12.4062 9.46094 12.0781L0.542968 2.96094C0.285156 2.70312 0.144531 2.375 0.144531 1.98828C0.144531 1.21484 0.753906 0.59375 1.53906 0.59375C1.91406 0.59375 2.26562 0.757812 2.53516 1.01562L10.5391 9.23047L18.543 1.01562C18.8125 0.757812 19.1523 0.593749 19.5391 0.593749C20.3242 0.593749 20.9336 1.21484 20.9336 1.98828C20.9336 2.375 20.793 2.70312 20.5352 2.96094L11.6055 12.0781C11.3008 12.4062 10.9492 12.5586 10.5391 12.5586Z"
-                                          fill="black"/>
+                                          fill="#B0B2BB"/>
                                 </svg>
                             </div>
                         </div>
-                        <ul class="mb-0 list-unstyled transition-default position-absolute top-100 end-0 bg-white zi-2">
-                            <li>
-                                Demo text 1
-                            </li>
-                            <li>
-                                Demo text 1 Demo text 1 Demo text 1
-                            </li>
-                        </ul>
-
+                        <div class="form-search__item form-select__input position-relative">
+                            <div class="icon">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.9875 2.5C8.0875 2.5 2.5 8.1 2.5 15C2.5 21.9 8.0875 27.5 14.9875 27.5C21.9 27.5 27.5 21.9 27.5 15C27.5 8.1 21.9 2.5 14.9875 2.5ZM15 25C9.475 25 5 20.525 5 15C5 9.475 9.475 5 15 5C20.525 5 25 9.475 25 15C25 20.525 20.525 25 15 25Z"
+                                          fill="#B0B2BB"/>
+                                    <path d="M15.625 8.75H13.75V16.25L20.3125 20.1875L21.25 18.65L15.625 15.3125V8.75Z"
+                                          fill="#B0B2BB"/>
+                                </svg>
+                            </div>
+                            <input type="text" placeholder="To"
+                                   class="form-control handleInitMaterial">
+                            <div class="arrow">
+                                <svg width="21" height="13" viewBox="0 0 21 13" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5391 12.5586C10.1289 12.5586 9.77734 12.4062 9.46094 12.0781L0.542968 2.96094C0.285156 2.70312 0.144531 2.375 0.144531 1.98828C0.144531 1.21484 0.753906 0.59375 1.53906 0.59375C1.91406 0.59375 2.26562 0.757812 2.53516 1.01562L10.5391 9.23047L18.543 1.01562C18.8125 0.757812 19.1523 0.593749 19.5391 0.593749C20.3242 0.593749 20.9336 1.21484 20.9336 1.98828C20.9336 2.375 20.793 2.70312 20.5352 2.96094L11.6055 12.0781C11.3008 12.4062 10.9492 12.5586 10.5391 12.5586Z"
+                                          fill="#B0B2BB"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <button class="button-search transition-default">
+                            Search
+                        </button>
                     </div>
                 </div>
-                <div class="page-customer__body d-flex flex-column gap-2 w-100 mt-3 scrollbar-hidden">
+                <div class="page-customer__body d-flex flex-column gap-2 w-100 mt-3 scrollbar-hidden overflow-y">
                     <div class="customer-item bg-white d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-between gap-1">
                         <div class="customer-item__name">
                             Baddie
@@ -298,9 +321,11 @@
 
 
 <script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/momment.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/fancybox/fancybox.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/material-datetime-picker/datepicker.js"></script>
 <script type="module" src="./assets/js/app.js"></script>
 </body>
 </html>

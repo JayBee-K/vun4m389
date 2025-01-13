@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Popup button</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta name="format-detection" content="telephone=no, date=no"/>
+
+    <link rel="icon" href="./assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="./assets/images/favicon.png">
+    <link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body class="page-theme bg-gradient">
+
+<div class="p-5">
+    <button type="button" class="button-theme button-theme_secondary" data-bs-toggle="modal" data-bs-target="#modalPopup">
+        Contact us
+    </button>
+</div>
+
+
+<div class="modal fade modal-popup" id="modalPopup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <button class="modal-popup__close link-default" data-bs-dismiss="modal">
+                <i class="fal fa-times"></i>
+            </button>
+            <div class="bg-white rounded-4 hstack justify-content-start flex-column position-relative">
+                <div class="section-profile__decor-left">
+                    <img src="assets/images/star_left.png" width="107" height="105" alt="Star"
+                         class="star-left position-absolute zi-1">
+                    <img src="assets/images/circle4.png" width="13" height="13" alt="Circle"
+                         class="circle-1 position-absolute zi-1">
+                    <img src="assets/images/circle3.png" width="21" height="21" alt="Circle"
+                         class="circle-2 position-absolute zi-1">
+                </div>
+                <div class="section-profile__decor-right">
+                    <img src="assets/images/circle4.png" width="13" height="13" alt="Circle"
+                         class="circle-3 position-absolute zi-1">
+                    <img src="assets/images/star_right.png" width="67" height="66" alt="Star"
+                         class="star-right position-absolute zi-1">
+                    <img src="assets/images/circle2.png" width="13" height="13" alt="Circle"
+                         class="circle-4 position-absolute zi-1">
+                </div>
+                <form class="w-100">
+                    <div class="p-md-5 p-4 w-100">
+                        <div class="section-profile__header text-center hstack flex-column justify-content-center mb-auto">
+                            <div class="profile-avatar position-relative overflow-hidden rounded-circle">
+                                <img src="assets/images/avatar_decor.png" width="220" height="222"
+                                     class="image-decor position-absolute top-0 start-0 w-100 h-100 zi-1" alt="">
+                                <img src="assets/images/avatar2.png" class="image-avatar position-absolute zi-2" alt="">
+                                <div class="profile-button__edit d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle bg-white transition-default">
+                                    <input type="file" class="profile-button__edit___input">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.9998 15.1998C13.7671 15.1998 15.1998 13.7671 15.1998 11.9998C15.1998 10.2325 13.7671 8.7998 11.9998 8.7998C10.2325 8.7998 8.7998 10.2325 8.7998 11.9998C8.7998 13.7671 10.2325 15.1998 11.9998 15.1998Z"
+                                              fill="#19224D"/>
+                                        <path d="M9 2L7.17 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4H16.83L15 2H9ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17Z"
+                                              fill="#19224D"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="profile-form w-100 ps-md-5 pe-md-5 ps-4 pe-4 mt-4">
+                                <div class="form-group mb-4">
+                                    <label class="form-label fw-600 text-gray text-start w-100 mb-0" for="frm-name">
+                                        Your name
+                                    </label>
+                                    <div class="position-relative overflow-hidden w-100">
+                                        <input type="text" value="Admin" class="form-control" placeholder="Admin"
+                                               name="" id="frm-name">
+                                        <div class="icon position-absolute hstack top-0 end-0 zi-1 justify-content-center">
+                                            <svg width="27" height="27" viewBox="0 0 27 27" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.375 19.4061V23.6248H7.59375L20.0362 11.1823L15.8175 6.96357L3.375 19.4061ZM23.2987 7.91982C23.403 7.81574 23.4858 7.69212 23.5422 7.55602C23.5987 7.41993 23.6277 7.27403 23.6277 7.12669C23.6277 6.97936 23.5987 6.83346 23.5422 6.69737C23.4858 6.56127 23.403 6.43765 23.2987 6.33357L20.6663 3.70107C20.5622 3.59678 20.4385 3.51404 20.3025 3.45758C20.1664 3.40113 20.0205 3.37207 19.8731 3.37207C19.7258 3.37207 19.5799 3.40113 19.4438 3.45758C19.3077 3.51404 19.1841 3.59678 19.08 3.70107L17.0212 5.75982L21.24 9.97857L23.2987 7.91982Z"
+                                                      fill="#19224D"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label class="form-label fw-600 text-gray text-start w-100 mb-0" for="frm-phone">
+                                        Your number phone
+                                    </label>
+                                    <div class="position-relative overflow-hidden w-100">
+                                        <input type="tel" maxlength="12" minlength="12" value="+84 5676 345"
+                                               class="form-control" placeholder="+84 5676 345" name="" id="frm-phone">
+                                        <div class="icon position-absolute hstack top-0 end-0 zi-1 justify-content-center">
+                                            <svg width="27" height="27" viewBox="0 0 27 27" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.375 19.4061V23.6248H7.59375L20.0362 11.1823L15.8175 6.96357L3.375 19.4061ZM23.2987 7.91982C23.403 7.81574 23.4858 7.69212 23.5422 7.55602C23.5987 7.41993 23.6277 7.27403 23.6277 7.12669C23.6277 6.97936 23.5987 6.83346 23.5422 6.69737C23.4858 6.56127 23.403 6.43765 23.2987 6.33357L20.6663 3.70107C20.5622 3.59678 20.4385 3.51404 20.3025 3.45758C20.1664 3.40113 20.0205 3.37207 19.8731 3.37207C19.7258 3.37207 19.5799 3.40113 19.4438 3.45758C19.3077 3.51404 19.1841 3.59678 19.08 3.70107L17.0212 5.75982L21.24 9.97857L23.2987 7.91982Z"
+                                                      fill="#19224D"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label class="form-label fw-600 text-gray text-start w-100 mb-0" for="frm-pass">
+                                        Password
+                                    </label>
+                                    <div class="position-relative overflow-hidden w-100">
+                                        <input type="password" maxlength="12" minlength="12" value="12345"
+                                               class="form-control" placeholder="" name="" id="frm-pass">
+                                        <div class="icon position-absolute hstack top-0 end-0 zi-1 justify-content-center">
+                                            <svg width="27" height="27" viewBox="0 0 27 27" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.375 19.4061V23.6248H7.59375L20.0362 11.1823L15.8175 6.96357L3.375 19.4061ZM23.2987 7.91982C23.403 7.81574 23.4858 7.69212 23.5422 7.55602C23.5987 7.41993 23.6277 7.27403 23.6277 7.12669C23.6277 6.97936 23.5987 6.83346 23.5422 6.69737C23.4858 6.56127 23.403 6.43765 23.2987 6.33357L20.6663 3.70107C20.5622 3.59678 20.4385 3.51404 20.3025 3.45758C20.1664 3.40113 20.0205 3.37207 19.8731 3.37207C19.7258 3.37207 19.5799 3.40113 19.4438 3.45758C19.3077 3.51404 19.1841 3.59678 19.08 3.70107L17.0212 5.75982L21.24 9.97857L23.2987 7.91982Z"
+                                                      fill="#19224D"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="button-theme button-theme_dark w-100 mt-5">
+                            Save
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/fancybox/fancybox.min.js"></script>
+<script type="module" src="./assets/js/app.js"></script>
+</body>
+</html>

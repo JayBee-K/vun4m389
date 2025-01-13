@@ -9,11 +9,12 @@
 
     /* Color Base */
     --primary-color: #19224D;
-    --primary-hover: #149892;
+    --primary-hover: #131c44;
     --primary-rgb: 26, 173, 166;
 
     --secondary-color: #AC8EFA;
     --secondary-color-50: #E0D3FF;
+    --secondary-color-25: #F2EDFF;
 
     --gray-color: #B0B2BB;
     --bg-gradient: linear-gradient(to bottom, #D1C3F6, #9E7BFB);
@@ -384,6 +385,7 @@ textarea:focus {
 }
 
 .overflow-y {
+    overflow-x: hidden !important;
     overflow-y: auto !important;
 }
 
@@ -411,7 +413,7 @@ textarea:focus {
     -webkit-box-shadow: none;
     box-shadow: none;
     outline: none;
-    border-radius: 25px;
+    border-radius: 30px;
     border: 1px solid transparent;
     gap: 8px;
     display: -webkit-inline-box;
@@ -508,6 +510,12 @@ textarea:focus {
     border-color: transparent;
 }
 
+.button-theme.button-theme_secondary-50 {
+    background-color: var(--secondary-color-50);
+    color: var(--secondary-color);
+    border-color: transparent;
+}
+
 .button-theme.button-theme_light {
     background-color: var(--bs-white);
     color: var(--dark-color);
@@ -519,8 +527,189 @@ textarea:focus {
     fill: var(--bs-white);
 }
 
+.c-scrim {
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1058;
+}
+
+.c-datepicker {
+    z-index: 1059;
+    min-height: 350px;
+    padding-bottom: 85px;
+    border-radius: 24px;
+    overflow: hidden;
+    top: 75%;
+}
+
+.c-datepicker__calendar {
+    height: auto;
+}
+
+
+.c-datepicker.c-datepicker {
+    top: 50%;
+}
+
+.c-datepicker,
+.c-datepicker:after,
+.c-datepicker:before,
+.c-datepicker *,
+.c-datepicker *:after,
+.c-datepicker *:before {
+    -webkit-box-sizing: unset;
+    box-sizing: unset;
+}
+
+.c-datepicker__header,
+.c-datepicker__clock,
+.c-datepicker .c-datepicker--show-time:after,
+.c-datepicker .c-datepicker--show-calendar:after {
+    display: none !important;
+}
+
+.c-datepicker__header-day {
+    background-color: var(--primary-color);
+}
+
+.c-datepicker__header-date {
+    background-color: var(--primary-hover);
+}
+
+.c-datepicker__header-date__month {
+    font-size: 1.3em;
+}
+
+.c-datepicker__header-date__day {
+    line-height: 1.35;
+    font-size: 4em;
+}
+
+.c-datepicker__header-date__time {
+    font-size: 1.7em;
+}
+
+.c-datepicker__clock-hands {
+    background-color: var(--secondary-color);
+}
+
+.c-datepicker__day--selected {
+    color: var(--bs-white);
+}
+
+.c-datepicker__day--selected::after {
+    background-color: var(--secondary-color) !important;
+    z-index: -1;
+}
+
+.c-datepicker__hour-hand,
+.u-hover-ball-effect:hover:before, .c-datepicker__day-body:hover:before, .c-datepicker__clock__num:hover:before, .c-datepicker__clock__am-pm-toggle label:hover:before {
+    background-color: var(--secondary-color-50) !important;
+}
+
+.c-btn {
+    color: var(--dark-700);
+    padding: 8px 24px;
+    border-radius: 25px;
+    border: 1px solid transparent;
+    width: calc(100% / 2 - 5px);
+    font-weight: 600;
+}
+
+.c-btn:hover {
+    opacity: 0.9;
+}
+
+.rd-month-label {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.c-datepicker__day-head {
+    color: var(--dark-color);
+}
+
+.c-datepicker__day-head,
+.c-datepicker__day-body {
+    font-size: 14px;
+}
+
+.c-datepicker .modal-btns {
+    float: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: calc(100% - 20px);
+}
+
+.c-datepicker .modal-btns .js-ok {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+    gap: 8px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transition: var(--transition-default);
+    -o-transition: var(--transition-default);
+    transition: var(--transition-default);
+    white-space: nowrap;
+    background-color: var(--secondary-color);
+    color: var(--bs-white);
+}
+
+.c-datepicker .modal-btns .js-ok:active {
+    background-color: var(--secondary-color);
+}
+
+.c-datepicker .modal-btns .js-cancel {
+    color: var(--bs-white);
+    background-color: var(--bs-black);
+}
+
+.c-datepicker .modal-btns .js-cancel:hover {
+    opacity: 0.8;
+}
+
 .bg-gradient {
     background: var(--bg-gradient) !important;
+}
+
+.bg-orange {
+    color: #CFAE3D;
+    background-color: #FFDF75;
+}
+
+.bg-pink {
+    color: #DD76C7;
+    background-color: #F9B7EB;
+}
+
+.bg-green {
+    color: #9FAF3F;
+    background-color: #D3E27B;
+}
+
+.bg-blue {
+    color: #7D9CCF;
+    background-color: #BED5FC;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
 }
 
 .text-secondary {
@@ -535,6 +724,41 @@ textarea:focus {
     font-family: var(--font-heading) !important;
 }
 
+.form-check.form-switch {
+    gap: 8px;
+}
+
+.form-switch {
+    padding-left: inherit;
+}
+
+.form-switch .form-check-input {
+    width: 2.3em;
+    height: 1.2em;
+    margin-top: 0;
+    margin-left: unset;
+    background-color: #B8A0F8;
+    border-color: #B8A0F8;
+    border: 1px solid #B8A0F8;
+    background-position: left center;
+    background-image: url('data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 8 8"%3e%3ccircle r="3" fill="%23ffffff" /%3e%3c/svg%3e');
+}
+
+.form-check-input:checked {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+}
+
+.bg-white-after::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 98%;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bs-white);
+}
+
 .section-page {
     padding: 50px 0 70px 0;
 }
@@ -547,6 +771,11 @@ textarea:focus {
     margin-bottom: 30px;
 }
 
+.section-heading .icon {
+    width: 24px;
+    height: 24px;
+}
+
 .heading-title {
     font-size: 2.6em;
     font-weight: 600;
@@ -556,6 +785,12 @@ textarea:focus {
 
 .heading-title-3 {
     font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.heading-title-4 {
+    font-size: 1.6em;
     font-weight: 600;
     margin-bottom: 0;
 }
