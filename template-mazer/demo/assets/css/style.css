@@ -855,8 +855,10 @@ a.hl-txt:hover {
 }
 
 .move-table {
-	padding: 15px !important;
+	padding: 0 !important;
+	margin: 0 !important;
 	height: 100vh;
+	overflow: hidden;
 }
 
 .move-table header {

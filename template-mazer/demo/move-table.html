@@ -12,13 +12,1228 @@
 
 	<link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
 	<link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+	<link rel="stylesheet" href="assets/vendors/Radzen.Blazor/css/material-base.css">
+	<link rel="stylesheet" href="assets/vendors/Radzen.Blazor/css/standard-base.css">
 	<link rel="stylesheet" href="assets/css/app.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/move-table.css">
 	<link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
 </head>
 
 <body>
 <div id="app">
+	<div class="modal fade popup-booking" id="popup-break-time" data-bs-backdrop="static" data-bs-keyboard="false">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">
+						BREAK TIME Sunday, 06-15-25
+					</h5>
+				</div>
+				<div class="modal-body scrollable-vertical">
+					<div class="row form-theme">
+						<div class="col-12 mb-2">
+							<div class="form-item">
+								<div class="form-item_label">
+									Staff:
+								</div>
+								<div class="form-item_input form-item_input__group">
+									<select class="form-select">
+										<option value="0">---</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 mb-2">
+							<div class="form-item">
+								<div class="form-item_label">
+									From:
+								</div>
+								<div class="form-item_input form-item_input__group">
+									<select class="form-select">
+										<option value="">---</option>
+										<option value="6/15/2025 9:15:00 AM">09:15 AM</option>
+										<option value="6/15/2025 9:30:00 AM">09:30 AM</option>
+										<option value="6/15/2025 9:45:00 AM">09:45 AM</option>
+										<option value="6/15/2025 10:00:00 AM">10:00 AM</option>
+										<option value="6/15/2025 10:15:00 AM">10:15 AM</option>
+										<option value="6/15/2025 10:30:00 AM">10:30 AM</option>
+										<option value="6/15/2025 10:45:00 AM">10:45 AM</option>
+										<option value="6/15/2025 11:00:00 AM">11:00 AM</option>
+										<option value="6/15/2025 11:15:00 AM">11:15 AM</option>
+										<option value="6/15/2025 11:30:00 AM">11:30 AM</option>
+										<option value="6/15/2025 11:45:00 AM">11:45 AM</option>
+										<option value="6/15/2025 12:00:00 PM">12:00 PM</option>
+										<option value="6/15/2025 12:15:00 PM">12:15 PM</option>
+										<option value="6/15/2025 12:30:00 PM">12:30 PM</option>
+										<option value="6/15/2025 12:45:00 PM">12:45 PM</option>
+										<option value="6/15/2025 1:00:00 PM">01:00 PM</option>
+										<option value="6/15/2025 1:15:00 PM">01:15 PM</option>
+										<option value="6/15/2025 1:30:00 PM">01:30 PM</option>
+										<option value="6/15/2025 1:45:00 PM">01:45 PM</option>
+										<option value="6/15/2025 2:00:00 PM">02:00 PM</option>
+										<option value="6/15/2025 2:15:00 PM">02:15 PM</option>
+										<option value="6/15/2025 2:30:00 PM">02:30 PM</option>
+										<option value="6/15/2025 2:45:00 PM">02:45 PM</option>
+										<option value="6/15/2025 3:00:00 PM">03:00 PM</option>
+										<option value="6/15/2025 3:15:00 PM">03:15 PM</option>
+										<option value="6/15/2025 3:30:00 PM">03:30 PM</option>
+										<option value="6/15/2025 3:45:00 PM">03:45 PM</option>
+										<option value="6/15/2025 4:00:00 PM">04:00 PM</option>
+										<option value="6/15/2025 4:15:00 PM">04:15 PM</option>
+										<option value="6/15/2025 4:30:00 PM">04:30 PM</option>
+										<option value="6/15/2025 4:45:00 PM">04:45 PM</option>
+										<option value="6/15/2025 5:00:00 PM">05:00 PM</option>
+										<option value="6/15/2025 5:15:00 PM">05:15 PM</option>
+										<option value="6/15/2025 5:30:00 PM">05:30 PM</option>
+										<option value="6/15/2025 5:45:00 PM">05:45 PM</option>
+										<option value="6/15/2025 6:00:00 PM">06:00 PM</option>
+										<option value="6/15/2025 6:15:00 PM">06:15 PM</option>
+										<option value="6/15/2025 6:30:00 PM">06:30 PM</option>
+										<option value="6/15/2025 6:45:00 PM">06:45 PM</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 mb-2">
+							<div class="form-item">
+								<div class="form-item_label">
+									Note:
+								</div>
+								<div class="form-item_input">
+									<input type="text" placeholder="..." class="form-control">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary"><i class="bi bi-save"></i>
+						Add Break
+					</button>
+					<button type="button" class="btn btn-info"><i class="bi bi-calendar-check"></i>
+						Add Full
+					</button>
+					<button type="button" class="btn btn-light" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i>
+						Close
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade popup-booking" id="popup-appointmnet-date" data-bs-backdrop="static"
+	     data-bs-keyboard="false">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">
+						APPOINTMENT DATE
+					</h5>
+				</div>
+				<div class="modal-body scrollable-vertical">
+					<div class="row">
+						<div class="col-12">
+							<div class="rz-text-align-center">
+								<div class="rz-calendar-inline" style="display: inline-block;overflow:auto;"
+								     id="dQeSlGGdP0">
+
+									<div class="rz-datepicker-inline rz-datepicker" style="white-space: nowrap"
+									     id="popupdQeSlGGdP0">
+
+										<div class="rz-datepicker-group">
+											<div class="rz-datepicker-header">
+												<a id="dQeSlGGdP0pm" tabindex="-1" aria-label="Previous month"
+												   __internal_preventDefault_onclick class="rz-datepicker-prev">
+													<span class="rz-datepicker-prev-icon rzi rzi-chevron-left"></span>
+												</a>
+												<a id="dQeSlGGdP0nm" tabindex="-1" aria-label="Next month"
+												   __internal_preventDefault_onclick class="rz-datepicker-next">
+													<span class="rz-datepicker-next-icon rzi rzi-chevron-right"></span>
+												</a>
+												<div class="rz-datepicker-title">
+													<div class="rz-dropdown" onmousedown="Radzen.activeElement = null"
+													     __internal_preventDefault_onclick
+													     __internal_stopPropagation_onclick
+													     style="height:auto;width:120px;margin-top:5px;text-align:left;"
+													     tabindex="0" id="s8DFEqGw9U">
+														<div class="rz-helper-hidden-accessible">
+															<input aria-haspopup="listbox" readonly="" type="text"
+															       tabindex="-1" value="6" aria-label="6"/>
+														</div>
+
+														<span class="rz-dropdown-label rz-inputtext">
+															June
+														</span>
+
+														<div class="rz-dropdown-trigger rz-corner-right">
+															<span class="rz-dropdown-trigger-icon  rzi rzi-chevron-down"></span>
+														</div>
+
+														<div id="popup-s8DFEqGw9U" class="rz-dropdown-panel"
+														     style="display:none; box-sizing: border-box">
+															<div class="rz-dropdown-items-wrapper"
+															     style="max-height:200px;overflow-x:hidden">
+																<ul class="rz-dropdown-items rz-dropdown-list"
+																    role="listbox">
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="January"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			January </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="February"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			February </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="March"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			March </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="April"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			April </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="May"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			May </span>
+																	</li>
+																	<li role="option"
+																	    class="rz-dropdown-item rz-state-highlight "
+																	    aria-label="June"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			June </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="July"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			July </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="August"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			August </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="September"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			September </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="October"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			October </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="November"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			November </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="December"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			December </span>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+
+													<div class="rz-dropdown" onmousedown="Radzen.activeElement = null"
+													     __internal_preventDefault_onclick
+													     __internal_stopPropagation_onclick
+													     style="height:auto;width:80px;margin-top:5px;text-align:left;"
+													     tabindex="0" id="qM9pQbrwO0">
+														<div class="rz-helper-hidden-accessible">
+															<input aria-haspopup="listbox" readonly="" type="text"
+															       tabindex="-1" value="2025" aria-label="2025"/>
+														</div>
+
+														<span class="rz-dropdown-label rz-inputtext">
+															2025
+														</span>
+
+														<div class="rz-dropdown-trigger rz-corner-right">
+															<span class="rz-dropdown-trigger-icon  rzi rzi-chevron-down"></span>
+														</div>
+
+														<div id="popup-qM9pQbrwO0" class="rz-dropdown-panel"
+														     style="display:none; box-sizing: border-box">
+															<div class="rz-dropdown-items-wrapper"
+															     style="max-height:200px;overflow-x:hidden">
+																<ul class="rz-dropdown-items rz-dropdown-list"
+																    role="listbox">
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1950"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1950 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1951"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1951 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1952"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1952 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1953"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1953 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1954"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1954 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1955"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1955 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1956"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1956 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1957"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1957 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1958"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1958 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1959"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1959 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1960"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1960 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1961"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1961 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1962"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1962 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1963"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1963 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1964"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1964 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1965"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1965 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1966"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1966 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1967"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1967 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1968"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1968 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1969"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1969 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1970"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1970 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1971"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1971 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1972"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1972 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1973"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1973 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1974"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1974 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1975"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1975 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1976"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1976 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1977"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1977 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1978"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1978 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1979"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1979 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1980"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1980 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1981"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1981 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1982"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1982 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1983"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1983 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1984"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1984 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1985"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1985 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1986"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1986 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1987"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1987 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1988"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1988 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1989"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1989 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1990"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1990 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1991"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1991 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1992"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1992 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1993"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1993 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1994"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1994 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1995"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1995 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1996"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1996 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1997"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1997 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1998"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1998 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="1999"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			1999 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2000"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2000 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2001"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2001 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2002"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2002 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2003"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2003 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2004"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2004 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2005"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2005 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2006"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2006 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2007"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2007 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2008"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2008 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2009"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2009 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2010"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2010 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2011"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2011 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2012"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2012 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2013"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2013 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2014"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2014 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2015"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2015 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2016"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2016 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2017"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2017 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2018"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2018 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2019"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2019 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2020"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2020 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2021"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2021 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2022"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2022 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2023"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2023 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2024"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2024 </span>
+																	</li>
+																	<li role="option"
+																	    class="rz-dropdown-item rz-state-highlight "
+																	    aria-label="2025"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2025 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2026"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2026 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2027"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2027 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2028"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2028 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2029"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2029 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2030"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2030 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2031"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2031 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2032"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2032 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2033"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2033 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2034"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2034 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2035"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2035 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2036"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2036 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2037"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2037 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2038"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2038 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2039"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2039 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2040"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2040 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2041"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2041 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2042"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2042 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2043"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2043 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2044"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2044 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2045"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2045 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2046"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2046 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2047"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2047 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2048"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2048 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2049"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2049 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2050"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2050 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2051"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2051 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2052"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2052 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2053"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2053 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2054"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2054 </span>
+																	</li>
+																	<li role="option" class="rz-dropdown-item "
+																	    aria-label="2055"
+																	    __internal_preventDefault_onmousedown
+																	    __internal_preventDefault_onclick>
+																		<span>
+																			2055 </span>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+
+												</div>
+											</div>
+											<div class="rz-datepicker-calendar-container" tabindex="0"
+											     __internal_stopPropagation_onkeydown>
+												<table class="rz-datepicker-calendar" style="">
+													<thead>
+													<tr>
+														<th scope="col">
+															<span>Sun</span>
+														</th>
+														<th scope="col">
+															<span>Mon</span>
+														</th>
+														<th scope="col">
+															<span>Tue</span>
+														</th>
+														<th scope="col">
+															<span>Wed</span>
+														</th>
+														<th scope="col">
+															<span>Thu</span>
+														</th>
+														<th scope="col">
+															<span>Fri</span>
+														</th>
+														<th scope="col">
+															<span>Sat</span>
+														</th>
+													</tr>
+													</thead>
+													<tbody>
+													<tr>
+														<td class="">
+															<span class="rz-state-default">1</span>
+														</td>
+														<td class="">
+															<span class="rz-state-default">2</span>
+														</td>
+														<td class="">
+															<span class="rz-state-default">3</span>
+														</td>
+														<td class="">
+															<span class="rz-state-default">4</span>
+														</td>
+														<td class="">
+															<span class="rz-state-default">5</span>
+														</td>
+														<td class="">
+															<span class="rz-state-default">6</span>
+														</td>
+														<td class="">
+															<span class="rz-state-default">7</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="">
+															<span class="rz-state-default">8</span>
+														</td>
+														<td class="">
+															<span class="rz-state-default">9</span>
+														</td>
+														<td class="">
+															<span class="rz-state-default">10</span>
+														</td>
+														<td class="">
+															<span class="rz-state-default">11</span>
+														</td>
+														<td class="">
+															<span class="rz-state-default">12</span>
+														</td>
+														<td class="">
+															<span class="rz-state-default">13</span>
+														</td>
+														<td class="">
+															<span class="rz-state-default rz-datepicker-today rz-state-focused">14</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="">
+															<span class="rz-state-default rz-state-active">15</span>
+														</td>
+														<td class="">
+															<span class="rz-state-default">16</span>
+														</td>
+														<td class="">
+															<span class="rz-state-default">17</span>
+														</td>
+														<td class="">
+															<span class="rz-state-default">18</span>
+														</td>
+														<td class="">
+															<span class="rz-state-default">19</span>
+														</td>
+														<td class="">
+															<span class="rz-state-default">20</span>
+														</td>
+														<td class="">
+															<span class="rz-state-default">21</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="">
+															<span class="rz-state-default">22</span>
+														</td>
+														<td class="">
+															<span class="rz-state-default">23</span>
+														</td>
+														<td class="">
+															<span class="rz-state-default">24</span>
+														</td>
+														<td class="">
+															<span class="rz-state-default">25</span>
+														</td>
+														<td class="">
+															<span class="rz-state-default">26</span>
+														</td>
+														<td class="">
+															<span class="rz-state-default">27</span>
+														</td>
+														<td class="">
+															<span class="rz-state-default">28</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="">
+															<span class="rz-state-default">29</span>
+														</td>
+														<td class="">
+															<span class="rz-state-default">30</span>
+														</td>
+														<td class="rz-datepicker-other-month">
+															<span class="rz-state-default rz-datepicker-other-month">1</span>
+														</td>
+														<td class="rz-datepicker-other-month">
+															<span class="rz-state-default rz-datepicker-other-month">2</span>
+														</td>
+														<td class="rz-datepicker-other-month">
+															<span class="rz-state-default rz-datepicker-other-month">3</span>
+														</td>
+														<td class="rz-datepicker-other-month">
+															<span class="rz-state-default rz-datepicker-other-month">4</span>
+														</td>
+														<td class="rz-datepicker-other-month">
+															<span class="rz-state-default rz-datepicker-other-month">5</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="rz-datepicker-other-month">
+															<span class="rz-state-default rz-datepicker-other-month">6</span>
+														</td>
+														<td class="rz-datepicker-other-month">
+															<span class="rz-state-default rz-datepicker-other-month">7</span>
+														</td>
+														<td class="rz-datepicker-other-month">
+															<span class="rz-state-default rz-datepicker-other-month">8</span>
+														</td>
+														<td class="rz-datepicker-other-month">
+															<span class="rz-state-default rz-datepicker-other-month">9</span>
+														</td>
+														<td class="rz-datepicker-other-month">
+															<span class="rz-state-default rz-datepicker-other-month">10</span>
+														</td>
+														<td class="rz-datepicker-other-month">
+															<span class="rz-state-default rz-datepicker-other-month">11</span>
+														</td>
+														<td class="rz-datepicker-other-month">
+															<span class="rz-state-default rz-datepicker-other-month">12</span>
+														</td>
+													</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-bs-dismiss="modal"><i
+							class="bi bi-journal-bookmark"></i>
+						Show Booking
+					</button>
+					<button type="button" class="btn btn-info" data-bs-dismiss="modal"><i
+							class="bi bi-calendar-check"></i>
+						Today
+					</button>
+					<button type="button" class="btn btn-light" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i>
+						Close
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div class="modal fade popup-booking" id="popupBooking" data-bs-backdrop="static" data-bs-keyboard="false">
 		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
@@ -37,11 +1252,25 @@
 											<div class="form-item_label">
 												Search:
 											</div>
-											<div class="form-item_input form-item_input__group">
-												<div class="form-item_icon">
-													<i class="bi bi-search"></i>
+
+											<div style="width: 100%;;display:inline-block;"
+											     class="rz-autocomplete rz-state-empty" id="kk1iZEy-cU"
+											     _bl_7a6129b1-952c-4c9a-b47a-15da973cb7a1="">
+												<input oninput="Radzen.openPopup(this.parentNode, 'popupkk1iZEy-cU', true)"
+												       tabindex="0" aria-autocomplete="list" aria-haspopup="true"
+												       autocomplete="off" role="combobox"
+												       class="rz-inputtext rz-autocomplete-input"
+												       onblur="Radzen.activeElement = null" type="text"
+												       aria-expanded="true" placeholder="Name or phone"
+												       _bl_95f679e5-c8d7-4b30-bfac-50db7e1f84cc="">
+												<div id="popupkk1iZEy-cU" class="rz-autocomplete-panel"
+												     style="display:none; transform: none; box-sizing: border-box; max-height: 200px;">
+
+													<ul class="rz-autocomplete-items rz-autocomplete-list"
+													    role="listbox" _bl_91481cc1-48fc-4b55-9eb4-94df0dd9e203="">
+
+													</ul>
 												</div>
-												<input type="text" placeholder="Name or Phone" class="form-control">
 											</div>
 										</div>
 										<div class="form-item">
@@ -49,10 +1278,10 @@
 												Phone:
 											</div>
 											<div class="form-item_input form-item_input__group">
-												<div class="form-item_icon">
-													<i class="bi bi-telephone"></i>
-												</div>
-												<input type="text" placeholder="" class="form-control">
+												<div class="form-item_icon"><i class="bi bi-telephone"></i></div>
+												<input type="number" placeholder="" class="form-control">
+												<div data-lastpass-icon-root=""
+												     style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div>
 											</div>
 										</div>
 										<div class="form-item">
@@ -60,151 +1289,1967 @@
 												Name:
 											</div>
 											<div class="form-item_input form-item_input__group">
-												<div class="form-item_icon">
-													<i class="bi bi-person"></i>
-												</div>
-												<input type="text" placeholder="" class="form-control">
-											</div>
+												<div class="form-item_icon"><i class="bi bi-person"></i></div>
+												<input type="text" placeholder="" class="form-control"></div>
 										</div>
 										<div class="form-item">
 											<div class="form-item_label">
 												Email:
 											</div>
 											<div class="form-item_input form-item_input__group">
-												<div class="form-item_icon">
-													<i class="bi bi-envelope"></i>
-												</div>
-												<input type="text" placeholder="" class="form-control">
-											</div>
+												<div class="form-item_icon"><i class="bi bi-envelope"></i></div>
+												<input type="email" placeholder="" class="form-control"></div>
 										</div>
 										<div class="form-item">
 											<div class="form-item_label">
 												Birthday:
 											</div>
 											<div class="form-item_input form-item_input__group">
-												<div class="form-item_icon">
-													<i class="bi bi-calendar3"></i>
+												<div class="" style="display: inline-block;width: 100%; height: 34px;"
+												     id="ea9uAdaNcU" _bl_eca8ffdd-9459-41df-a00f-9dac4a6cef85="">
+
+													<span class="rz-calendar rz-calendar-w-btn" style="width:100%">
+
+														<input tabindex="0" autocomplete="off" type="text"
+														       class="rz-inputtext  " placeholder="MM/DD/YYYY"
+														       _bl_17902cea-f0bc-4e27-9c3a-61376206dd40="">
+														<button aria-label="Toggle"
+														        class="rz-datepicker-trigger rz-calendar-button rz-button rz-button-icon-only"
+														        tabindex="-1" type="button">
+															<span aria-hidden="true"
+															      class="rz-button-icon-left rzi rzi-calendar"></span>
+															<span
+																	class="rz-button-text"></span>
+														</button>
+													</span>
+
+
+													<div class="rz-datepicker" style="width: 320px; display:none;"
+													     id="popupea9uAdaNcU"
+													     _bl_046eee89-086b-42d4-a26b-2e2afb9d85da="">
+
+														<div class="rz-datepicker-group">
+															<div class="rz-datepicker-header">
+																<a id="ea9uAdaNcUpm" tabindex="-1"
+																   aria-label="Previous month"
+																   class="rz-datepicker-prev">
+																	<span class="rz-datepicker-prev-icon rzi rzi-chevron-left"></span>
+																</a>
+																<a id="ea9uAdaNcUnm" tabindex="-1"
+																   aria-label="Next month" class="rz-datepicker-next">
+
+																	<span class="rz-datepicker-next-icon rzi rzi-chevron-right"></span>
+																</a>
+																<div class="rz-datepicker-title">
+
+																	<div class="rz-dropdown"
+																	     onmousedown="Radzen.activeElement = null"
+																	     style="height:auto;width:120px;margin-top:5px;text-align:left;"
+																	     tabindex="0" id="elK-ct6x9k"
+																	     _bl_0d57caa6-4537-4732-b7b9-0dfe7bd6a0f7="">
+
+																		<div class="rz-helper-hidden-accessible">
+
+																			<input aria-haspopup="listbox" readonly=""
+																			       type="text" tabindex="-1"
+																			       aria-label="6">
+																		</div>
+
+																		<span class="rz-dropdown-label rz-inputtext">
+
+																			June
+																		</span>
+
+
+																		<div class="rz-dropdown-trigger rz-corner-right">
+																			<span class="rz-dropdown-trigger-icon  rzi rzi-chevron-down"></span>
+																		</div>
+
+																		<div id="popup-elK-ct6x9k"
+																		     class="rz-dropdown-panel"
+																		     style="display:none; box-sizing: border-box">
+
+																			<div class="rz-dropdown-items-wrapper"
+																			     style="max-height:200px;overflow-x:hidden">
+
+																				<ul class="rz-dropdown-items rz-dropdown-list"
+																				    role="listbox"
+																				    _bl_00126403-e8ef-4516-bbd1-2598e2635653="">
+
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="January">
+																						<span>
+																							January </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="February">
+																						<span>
+																							February </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="March">
+																						<span>
+																							March </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="April">
+																						<span>
+																							April </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="May">
+																						<span>
+																							May </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item rz-state-highlight "
+																					    aria-label="June">
+																						<span>
+																							June </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="July">
+																						<span>
+																							July </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="August">
+																						<span>
+																							August </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="September">
+																						<span>
+																							September </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="October">
+																						<span>
+																							October </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="November">
+																						<span>
+																							November </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="December">
+																						<span>
+																							December </span>
+																					</li>
+																				</ul>
+																			</div>
+																		</div>
+																	</div>
+
+
+																	<div class="rz-dropdown"
+																	     onmousedown="Radzen.activeElement = null"
+																	     style="height:auto;width:80px;margin-top:5px;text-align:left;"
+																	     tabindex="0" id="pAtYIoaGPk"
+																	     _bl_4d8331dc-bd4e-4b7e-9e0f-ae49006933f2="">
+
+																		<div class="rz-helper-hidden-accessible">
+
+																			<input aria-haspopup="listbox" readonly=""
+																			       type="text" tabindex="-1"
+																			       aria-label="2025">
+																		</div>
+
+																		<span class="rz-dropdown-label rz-inputtext">
+
+																			2025
+																		</span>
+
+
+																		<div class="rz-dropdown-trigger rz-corner-right">
+																			<span class="rz-dropdown-trigger-icon  rzi rzi-chevron-down"></span>
+																		</div>
+
+																		<div id="popup-pAtYIoaGPk"
+																		     class="rz-dropdown-panel"
+																		     style="display:none; box-sizing: border-box">
+
+																			<div class="rz-dropdown-items-wrapper"
+																			     style="max-height:200px;overflow-x:hidden">
+
+																				<ul class="rz-dropdown-items rz-dropdown-list"
+																				    role="listbox"
+																				    _bl_4df73226-3011-493e-8940-db481c6f7c7c="">
+
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1950">
+																						<span>
+																							1950 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1951">
+																						<span>
+																							1951 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1952">
+																						<span>
+																							1952 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1953">
+																						<span>
+																							1953 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1954">
+																						<span>
+																							1954 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1955">
+																						<span>
+																							1955 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1956">
+																						<span>
+																							1956 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1957">
+																						<span>
+																							1957 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1958">
+																						<span>
+																							1958 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1959">
+																						<span>
+																							1959 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1960">
+																						<span>
+																							1960 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1961">
+																						<span>
+																							1961 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1962">
+																						<span>
+																							1962 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1963">
+																						<span>
+																							1963 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1964">
+																						<span>
+																							1964 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1965">
+																						<span>
+																							1965 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1966">
+																						<span>
+																							1966 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1967">
+																						<span>
+																							1967 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1968">
+																						<span>
+																							1968 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1969">
+																						<span>
+																							1969 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1970">
+																						<span>
+																							1970 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1971">
+																						<span>
+																							1971 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1972">
+																						<span>
+																							1972 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1973">
+																						<span>
+																							1973 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1974">
+																						<span>
+																							1974 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1975">
+																						<span>
+																							1975 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1976">
+																						<span>
+																							1976 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1977">
+																						<span>
+																							1977 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1978">
+																						<span>
+																							1978 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1979">
+																						<span>
+																							1979 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1980">
+																						<span>
+																							1980 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1981">
+																						<span>
+																							1981 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1982">
+																						<span>
+																							1982 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1983">
+																						<span>
+																							1983 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1984">
+																						<span>
+																							1984 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1985">
+																						<span>
+																							1985 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1986">
+																						<span>
+																							1986 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1987">
+																						<span>
+																							1987 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1988">
+																						<span>
+																							1988 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1989">
+																						<span>
+																							1989 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1990">
+																						<span>
+																							1990 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1991">
+																						<span>
+																							1991 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1992">
+																						<span>
+																							1992 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1993">
+																						<span>
+																							1993 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1994">
+																						<span>
+																							1994 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1995">
+																						<span>
+																							1995 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1996">
+																						<span>
+																							1996 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1997">
+																						<span>
+																							1997 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1998">
+																						<span>
+																							1998 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="1999">
+																						<span>
+																							1999 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2000">
+																						<span>
+																							2000 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2001">
+																						<span>
+																							2001 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2002">
+																						<span>
+																							2002 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2003">
+																						<span>
+																							2003 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2004">
+																						<span>
+																							2004 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2005">
+																						<span>
+																							2005 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2006">
+																						<span>
+																							2006 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2007">
+																						<span>
+																							2007 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2008">
+																						<span>
+																							2008 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2009">
+																						<span>
+																							2009 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2010">
+																						<span>
+																							2010 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2011">
+																						<span>
+																							2011 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2012">
+																						<span>
+																							2012 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2013">
+																						<span>
+																							2013 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2014">
+																						<span>
+																							2014 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2015">
+																						<span>
+																							2015 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2016">
+																						<span>
+																							2016 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2017">
+																						<span>
+																							2017 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2018">
+																						<span>
+																							2018 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2019">
+																						<span>
+																							2019 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2020">
+																						<span>
+																							2020 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2021">
+																						<span>
+																							2021 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2022">
+																						<span>
+																							2022 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2023">
+																						<span>
+																							2023 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2024">
+																						<span>
+																							2024 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item rz-state-highlight "
+																					    aria-label="2025">
+																						<span>
+																							2025 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2026">
+																						<span>
+																							2026 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2027">
+																						<span>
+																							2027 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2028">
+																						<span>
+																							2028 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2029">
+																						<span>
+																							2029 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2030">
+																						<span>
+																							2030 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2031">
+																						<span>
+																							2031 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2032">
+																						<span>
+																							2032 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2033">
+																						<span>
+																							2033 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2034">
+																						<span>
+																							2034 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2035">
+																						<span>
+																							2035 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2036">
+																						<span>
+																							2036 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2037">
+																						<span>
+																							2037 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2038">
+																						<span>
+																							2038 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2039">
+																						<span>
+																							2039 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2040">
+																						<span>
+																							2040 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2041">
+																						<span>
+																							2041 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2042">
+																						<span>
+																							2042 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2043">
+																						<span>
+																							2043 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2044">
+																						<span>
+																							2044 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2045">
+																						<span>
+																							2045 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2046">
+																						<span>
+																							2046 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2047">
+																						<span>
+																							2047 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2048">
+																						<span>
+																							2048 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2049">
+																						<span>
+																							2049 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2050">
+																						<span>
+																							2050 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2051">
+																						<span>
+																							2051 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2052">
+																						<span>
+																							2052 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2053">
+																						<span>
+																							2053 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2054">
+																						<span>
+																							2054 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2055">
+																						<span>
+																							2055 </span>
+																					</li>
+																				</ul>
+																			</div>
+																		</div>
+																	</div>
+
+																</div>
+															</div>
+															<div class="rz-datepicker-calendar-container" tabindex="0">
+
+																<table class="rz-datepicker-calendar"
+																       style="width:100%">
+																	<thead>
+																	<tr>
+																		<th scope="col">
+																			<span>Sun</span>
+																		</th>
+																		<th scope="col">
+																			<span>Mon</span>
+																		</th>
+																		<th scope="col">
+																			<span>Tue</span>
+																		</th>
+																		<th scope="col">
+																			<span>Wed</span>
+																		</th>
+																		<th scope="col">
+																			<span>Thu</span>
+																		</th>
+																		<th scope="col">
+																			<span>Fri</span>
+																		</th>
+																		<th scope="col">
+																			<span>Sat</span>
+																		</th>
+																	</tr>
+																	</thead>
+																	<tbody>
+																	<tr>
+																		<td class="">
+																			<span class="rz-state-default">1</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">2</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">3</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">4</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">5</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">6</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">7</span>
+
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class="">
+																			<span class="rz-state-default">8</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">9</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">10</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">11</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">12</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">13</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default rz-state-focused">14</span>
+
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class="">
+																			<span class="rz-state-default rz-datepicker-today">15</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">16</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">17</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">18</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">19</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">20</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">21</span>
+
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class="">
+																			<span class="rz-state-default">22</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">23</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">24</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">25</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">26</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">27</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">28</span>
+
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class="">
+																			<span class="rz-state-default">29</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">30</span>
+
+																		</td>
+																		<td class="rz-datepicker-other-month">
+																			<span class="rz-state-default rz-datepicker-other-month">1</span>
+
+																		</td>
+																		<td class="rz-datepicker-other-month">
+																			<span class="rz-state-default rz-datepicker-other-month">2</span>
+
+																		</td>
+																		<td class="rz-datepicker-other-month">
+																			<span class="rz-state-default rz-datepicker-other-month">3</span>
+
+																		</td>
+																		<td class="rz-datepicker-other-month">
+																			<span class="rz-state-default rz-datepicker-other-month">4</span>
+
+																		</td>
+																		<td class="rz-datepicker-other-month">
+																			<span class="rz-state-default rz-datepicker-other-month">5</span>
+
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class="rz-datepicker-other-month">
+																			<span class="rz-state-default rz-datepicker-other-month">6</span>
+
+																		</td>
+																		<td class="rz-datepicker-other-month">
+																			<span class="rz-state-default rz-datepicker-other-month">7</span>
+
+																		</td>
+																		<td class="rz-datepicker-other-month">
+																			<span class="rz-state-default rz-datepicker-other-month">8</span>
+
+																		</td>
+																		<td class="rz-datepicker-other-month">
+																			<span class="rz-state-default rz-datepicker-other-month">9</span>
+
+																		</td>
+																		<td class="rz-datepicker-other-month">
+																			<span class="rz-state-default rz-datepicker-other-month">10</span>
+
+																		</td>
+																		<td class="rz-datepicker-other-month">
+																			<span class="rz-state-default rz-datepicker-other-month">11</span>
+
+																		</td>
+																		<td class="rz-datepicker-other-month">
+																			<span class="rz-state-default rz-datepicker-other-month">12</span>
+
+																		</td>
+																	</tr>
+																	</tbody>
+																</table>
+															</div>
+														</div>
+													</div>
+
 												</div>
-												<input type="date" placeholder="" class="form-control">
 											</div>
 										</div>
 										<div class="form-item">
 											<div class="form-item_label"></div>
 											<div class="form-item_input">
-												<div class="form-item_check">
-													<input type="checkbox" name="example-check-1" id="example-check-1"
-													       placeholder="" class="form-check">
-													<label for="example-check-1" class="form-check_label">
+												<div class="form-item_check"><input type="checkbox"
+												                                    name="example-check-1"
+												                                    id="ck-fix-redo" disabled=""
+												                                    class="form-check">
+													<label for="ck-fix-redo"
+													       class="form-check_label">
 														FIX/REDO
-													</label>
-												</div>
+													</label></div>
+												<button type="button" class="btn btn-orange w-100"
+												        style="margin-left: 15px;"><i
+														class="bi bi-hand-index-thumb"></i>
+													Checkin App
+												</button>
 											</div>
 										</div>
 										<div class="form-item">
 											<div class="form-item_label"></div>
 											<button type="button" class="btn btn-primary">
-												Profile Customer
+												Customer Details
 											</button>
-											<button type="button" class="btn btn-orange">
-												From ADS
+											<button type="button" class="btn btn-orange w-100">
+												From Ads
 											</button>
 										</div>
 									</div>
 									<div class="col-lg-6">
-										<div class="form-item">
-											<div class="form-item_label">
-												Phone:
-											</div>
-											<div class="form-item_input form-item_input__group">
-												<div class="form-item_icon">
-													<i class="bi bi-calendar3"></i>
-												</div>
-												<input type="text" placeholder="" class="form-control">
+										<div class="form-item d-none">
+											<div class="form-item_label">Mode</div>
+											<div class="form-item_input form-item_status">
+												<div class="form-item_status__box" style="width: 100%;"><input
+														type="checkbox" id="status-manual" class="form-status">
+													<label
+															for="status-manual" class="form-status_label">
+														MANUAL BOOKING
+													</label></div>
 											</div>
 										</div>
 										<div class="form-item">
 											<div class="form-item_label">
-												Status:
+												Booking Date:
 											</div>
-											<div class="form-item_input form-item_status">
-												<div class="form-item_status__box">
-													<input type="radio" name="example-status" id="status-1"
-													       placeholder="" class="form-status">
-													<label for="status-1" class="form-status_label">
+											<div class="form-item_input form-item_input__group">
+												<div class="" style="display: inline-block;width: 100%; height: 34px;"
+												     id="GP8MIfvQck" _bl_7f3797de-bc04-4aed-8117-9a66a17de238="">
+
+													<span class="rz-calendar rz-calendar-w-btn" style="width:100%">
+
+														<input tabindex="0" autocomplete="off" type="text"
+														       class="rz-inputtext  " placeholder="MM/DD/YYYY"
+														       _bl_6e16ab25-20fa-4303-b595-1ccda21f003d="">
+														<button aria-label="Toggle"
+														        class="rz-datepicker-trigger rz-calendar-button rz-button rz-button-icon-only"
+														        tabindex="-1" type="button">
+															<span aria-hidden="true"
+															      class="rz-button-icon-left rzi rzi-calendar"></span>
+															<span
+																	class="rz-button-text"></span>
+														</button>
+													</span>
+
+
+													<div class="rz-datepicker" style="width: 320px; display:none;"
+													     id="popupGP8MIfvQck"
+													     _bl_8c2cd3a5-7178-4257-a2f9-64ed2827f394="">
+
+														<div class="rz-datepicker-group">
+															<div class="rz-datepicker-header">
+																<a id="GP8MIfvQckpm" tabindex="-1"
+																   aria-label="Previous month"
+																   class="rz-datepicker-prev">
+																	<span class="rz-datepicker-prev-icon rzi rzi-chevron-left"></span>
+																</a>
+																<a id="GP8MIfvQcknm" tabindex="-1"
+																   aria-label="Next month" class="rz-datepicker-next">
+
+																	<span class="rz-datepicker-next-icon rzi rzi-chevron-right"></span>
+																</a>
+																<div class="rz-datepicker-title">
+
+																	<div class="rz-dropdown"
+																	     onmousedown="Radzen.activeElement = null"
+																	     style="height:auto;width:120px;margin-top:5px;text-align:left;"
+																	     tabindex="0" id="Pj-xQ-95pU"
+																	     _bl_2810c948-ce4d-4dec-9e86-82f0ff6b5835="">
+
+																		<div class="rz-helper-hidden-accessible">
+
+																			<input aria-haspopup="listbox" readonly=""
+																			       type="text" tabindex="-1"
+																			       aria-label="6">
+																		</div>
+
+																		<span class="rz-dropdown-label rz-inputtext">
+
+																			June
+																		</span>
+
+
+																		<div class="rz-dropdown-trigger rz-corner-right">
+																			<span class="rz-dropdown-trigger-icon  rzi rzi-chevron-down"></span>
+																		</div>
+
+																		<div id="popup-Pj-xQ-95pU"
+																		     class="rz-dropdown-panel"
+																		     style="display:none; box-sizing: border-box">
+
+																			<div class="rz-dropdown-items-wrapper"
+																			     style="max-height:200px;overflow-x:hidden">
+
+																				<ul class="rz-dropdown-items rz-dropdown-list"
+																				    role="listbox"
+																				    _bl_0950a120-e87f-4aec-bfef-802791423c62="">
+
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="January">
+																						<span>
+																							January </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="February">
+																						<span>
+																							February </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="March">
+																						<span>
+																							March </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="April">
+																						<span>
+																							April </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="May">
+																						<span>
+																							May </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item rz-state-highlight "
+																					    aria-label="June">
+																						<span>
+																							June </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="July">
+																						<span>
+																							July </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="August">
+																						<span>
+																							August </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="September">
+																						<span>
+																							September </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="October">
+																						<span>
+																							October </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="November">
+																						<span>
+																							November </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="December">
+																						<span>
+																							December </span>
+																					</li>
+																				</ul>
+																			</div>
+																		</div>
+																	</div>
+
+
+																	<div class="rz-dropdown"
+																	     onmousedown="Radzen.activeElement = null"
+																	     style="height:auto;width:80px;margin-top:5px;text-align:left;"
+																	     tabindex="0" id="bUymsWj8SU"
+																	     _bl_988b7ad1-2cca-45f9-94ed-1dcb0953a635="">
+
+																		<div class="rz-helper-hidden-accessible">
+
+																			<input aria-haspopup="listbox" readonly=""
+																			       type="text" tabindex="-1"
+																			       aria-label="2025">
+																		</div>
+
+																		<span class="rz-dropdown-label rz-inputtext">
+
+																			2025
+																		</span>
+
+
+																		<div class="rz-dropdown-trigger rz-corner-right">
+																			<span class="rz-dropdown-trigger-icon  rzi rzi-chevron-down"></span>
+																		</div>
+
+																		<div id="popup-bUymsWj8SU"
+																		     class="rz-dropdown-panel"
+																		     style="display:none; box-sizing: border-box">
+
+																			<div class="rz-dropdown-items-wrapper"
+																			     style="max-height:200px;overflow-x:hidden">
+
+																				<ul class="rz-dropdown-items rz-dropdown-list"
+																				    role="listbox"
+																				    _bl_f30c19f4-8f2a-46c4-a19d-631d10ba8cb3="">
+
+
+																					<li role="option"
+																					    class="rz-dropdown-item rz-state-highlight "
+																					    aria-label="2025">
+																						<span>
+																							2025 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2026">
+																						<span>
+																							2026 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2027">
+																						<span>
+																							2027 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2028">
+																						<span>
+																							2028 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2029">
+																						<span>
+																							2029 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2030">
+																						<span>
+																							2030 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2031">
+																						<span>
+																							2031 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2032">
+																						<span>
+																							2032 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2033">
+																						<span>
+																							2033 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2034">
+																						<span>
+																							2034 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2035">
+																						<span>
+																							2035 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2036">
+																						<span>
+																							2036 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2037">
+																						<span>
+																							2037 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2038">
+																						<span>
+																							2038 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2039">
+																						<span>
+																							2039 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2040">
+																						<span>
+																							2040 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2041">
+																						<span>
+																							2041 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2042">
+																						<span>
+																							2042 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2043">
+																						<span>
+																							2043 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2044">
+																						<span>
+																							2044 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2045">
+																						<span>
+																							2045 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2046">
+																						<span>
+																							2046 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2047">
+																						<span>
+																							2047 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2048">
+																						<span>
+																							2048 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2049">
+																						<span>
+																							2049 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2050">
+																						<span>
+																							2050 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2051">
+																						<span>
+																							2051 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2052">
+																						<span>
+																							2052 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2053">
+																						<span>
+																							2053 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2054">
+																						<span>
+																							2054 </span>
+																					</li>
+
+																					<li role="option"
+																					    class="rz-dropdown-item "
+																					    aria-label="2055">
+																						<span>
+																							2055 </span>
+																					</li>
+																				</ul>
+																			</div>
+																		</div>
+																	</div>
+
+																</div>
+															</div>
+															<div class="rz-datepicker-calendar-container" tabindex="0">
+
+																<table class="rz-datepicker-calendar"
+																       style="width:100%">
+																	<thead>
+																	<tr>
+																		<th scope="col">
+																			<span>Sun</span>
+																		</th>
+																		<th scope="col">
+																			<span>Mon</span>
+																		</th>
+																		<th scope="col">
+																			<span>Tue</span>
+																		</th>
+																		<th scope="col">
+																			<span>Wed</span>
+																		</th>
+																		<th scope="col">
+																			<span>Thu</span>
+																		</th>
+																		<th scope="col">
+																			<span>Fri</span>
+																		</th>
+																		<th scope="col">
+																			<span>Sat</span>
+																		</th>
+																	</tr>
+																	</thead>
+																	<tbody>
+																	<tr>
+																		<td class="">
+																			<span class="rz-state-default rz-state-disabled">1</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default rz-state-disabled">2</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default rz-state-disabled">3</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default rz-state-disabled">4</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default rz-state-disabled">5</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default rz-state-disabled">6</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default rz-state-disabled">7</span>
+
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class="">
+																			<span class="rz-state-default rz-state-disabled">8</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default rz-state-disabled">9</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default rz-state-disabled">10</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default rz-state-disabled">11</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default rz-state-disabled">12</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default rz-state-disabled">13</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default rz-state-focused rz-state-disabled">14</span>
+
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class="">
+																			<span class="rz-state-default rz-state-active rz-datepicker-today">15</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">16</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">17</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">18</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">19</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">20</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">21</span>
+
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class="">
+																			<span class="rz-state-default">22</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">23</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">24</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">25</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">26</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">27</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">28</span>
+
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class="">
+																			<span class="rz-state-default">29</span>
+
+																		</td>
+																		<td class="">
+																			<span class="rz-state-default">30</span>
+
+																		</td>
+																		<td class="rz-datepicker-other-month">
+																			<span class="rz-state-default rz-datepicker-other-month">1</span>
+
+																		</td>
+																		<td class="rz-datepicker-other-month">
+																			<span class="rz-state-default rz-datepicker-other-month">2</span>
+
+																		</td>
+																		<td class="rz-datepicker-other-month">
+																			<span class="rz-state-default rz-datepicker-other-month">3</span>
+
+																		</td>
+																		<td class="rz-datepicker-other-month">
+																			<span class="rz-state-default rz-datepicker-other-month">4</span>
+
+																		</td>
+																		<td class="rz-datepicker-other-month">
+																			<span class="rz-state-default rz-datepicker-other-month">5</span>
+
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class="rz-datepicker-other-month">
+																			<span class="rz-state-default rz-datepicker-other-month">6</span>
+
+																		</td>
+																		<td class="rz-datepicker-other-month">
+																			<span class="rz-state-default rz-datepicker-other-month">7</span>
+
+																		</td>
+																		<td class="rz-datepicker-other-month">
+																			<span class="rz-state-default rz-datepicker-other-month">8</span>
+
+																		</td>
+																		<td class="rz-datepicker-other-month">
+																			<span class="rz-state-default rz-datepicker-other-month">9</span>
+
+																		</td>
+																		<td class="rz-datepicker-other-month">
+																			<span class="rz-state-default rz-datepicker-other-month">10</span>
+
+																		</td>
+																		<td class="rz-datepicker-other-month">
+																			<span class="rz-state-default rz-datepicker-other-month">11</span>
+
+																		</td>
+																		<td class="rz-datepicker-other-month">
+																			<span class="rz-state-default rz-datepicker-other-month">12</span>
+
+																		</td>
+																	</tr>
+																	</tbody>
+																</table>
+															</div>
+														</div>
+													</div>
+
+												</div>
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="form-item_label"></div>
+											<div class="form-item_input form-item_status booking-type-box">
+												<div class="form-item_status__box "><input type="radio"
+												                                           id="status-walkin"
+												                                           class="form-status">
+													<label
+															for="status-walkin" class="form-status_label">
 														Walk-in
-													</label>
-												</div>
-												<div class="form-item_status__box">
-													<input type="radio" name="example-status" id="status-2"
-													       placeholder="" checked class="form-status">
-													<label for="status-2" class="form-status_label">
-														Appointment
-													</label>
-												</div>
+													</label></div>
+												<div class="form-item_status__box "><input type="radio" id="status-call"
+												                                           class="form-status">
+													<label
+															for="status-call" class="form-status_label">
+														Booking
+													</label></div>
+												<div class="form-item_status__box"><input type="radio" id="status-lost"
+												                                          class="form-status">
+													<label
+															for="status-lost" class="form-status_label">
+														Lost
+													</label></div>
 											</div>
 										</div>
 										<div class="form-item">
 											<div class="form-item_label">
 												Staff:
 											</div>
-											<div class="form-item_input form-item_input__group">
-												<select name="" class="form-select" id="">
-													<option value="">Staff 1</option>
-													<option value="">Staff 2</option>
-													<option value="">Staff 3</option>
-													<option value="">Staff 4</option>
-													<option value="">Staff 5</option>
-												</select>
-											</div>
+											<div class="form-item_input form-item_input__group"><select
+													class="form-select">
+												<option value="0">First Available Technician</option>
+											</select></div>
 										</div>
 										<div class="form-item">
 											<div class="form-item_label">
 												Service:
 											</div>
 											<div class="form-item_input form-item_input__group">
-												<select name="" class="form-select" id="">
-													<option value="">Service 1</option>
-													<option value="">Service 2</option>
-													<option value="">Service 3</option>
-													<option value="">Service 4</option>
-													<option value="">Service 5</option>
-												</select>
+												<div style="width: 100%;;display:inline-block;"
+												     class="rz-autocomplete rz-state-empty" id="yBB-1-HWxk"
+												     _bl_4d71e038-77d0-4fa7-9f70-a4add8a32c22="">
+													<input oninput="Radzen.openPopup(this.parentNode, 'popupyBB-1-HWxk', true)"
+													       tabindex="0" aria-autocomplete="list" aria-haspopup="true"
+													       autocomplete="off" role="combobox"
+													       class="rz-inputtext rz-autocomplete-input"
+													       onblur="Radzen.activeElement = null" type="text"
+													       aria-expanded="true" placeholder="Search service name"
+													       _bl_5720ffdc-9fd8-458b-92e3-79ae945124bc="">
+													<div id="popupyBB-1-HWxk" class="rz-autocomplete-panel"
+													     style="display:none; transform: none; box-sizing: border-box; max-height: 200px;">
+
+														<ul class="rz-autocomplete-items rz-autocomplete-list"
+														    role="listbox" _bl_0f032f17-cbe5-4e63-98f8-a3e2764ccca5="">
+
+														</ul>
+													</div>
+												</div>
 											</div>
 										</div>
 										<div class="form-item">
-											<div class="form-item_label">Type</div>
+											<div class="form-item_label" style="padding-top: 0px">Type</div>
 											<div class="form-item_input form-item_checks">
-												<div class="form-item_check">
-													<input type="checkbox" name="example-type" id="example-type-1"
-													       placeholder="" class="form-check">
-													<label for="example-type-1" class="form-check_label">
+												<div class="form-item_check d-none"><input type="checkbox"
+												                                           name="example-type"
+												                                           id="ck-service-parallel"
+												                                           placeholder=""
+												                                           class="form-check" value="">
+
+													<label for="ck-service-parallel" class="form-check_label">
 														Service Parallel
-													</label>
-												</div>
-												<div class="form-item_check">
-													<input type="checkbox" name="example-type" id="example-type-2"
-													       placeholder="" class="form-check">
-													<label for="example-type-2" class="form-check_label">
-														Overbook
-													</label>
-												</div>
-												<div class="form-item_check">
-													<input type="checkbox" name="example-type" id="example-type-3"
-													       placeholder="" class="form-check">
-													<label for="example-type-3" class="form-check_label">
-														Next Hour
-													</label>
-												</div>
+													</label></div>
+												<div class="form-item_check"><input type="checkbox" name="example-type"
+												                                    id="ck-overbook" placeholder=""
+												                                    class="form-check">
+													<label
+															for="ck-overbook" class="form-check_label">
+														Flexibook
+													</label></div>
+												<div class="form-item_check"><input type="checkbox" name="example-type"
+												                                    id="ck-next-hour" placeholder=""
+												                                    class="form-check">
+													<label
+															for="ck-next-hour" class="form-check_label">
+														Next Up
+													</label></div>
 											</div>
 										</div>
-
 										<div class="form-item">
 											<div class="form-item_label"></div>
-											<button type="button" class="btn btn-primary w-100">
-												<i class="bi bi-check-square"></i>
+											<button type="button" class="btn btn-primary w-100"><i
+													class="bi bi-check-square"></i>
 												Add Service
 											</button>
 										</div>
+										<div class="form-item">
+											<div class="form-item_label">
+												Deposit ($):
+											</div>
+											<input type="number" class="form-control" placeholder="0.00"></div>
 									</div>
 								</div>
 							</div>
@@ -212,141 +3257,190 @@
 						<div class="col-lg-4 position-relative mb-3">
 							<div class="list-service scrollable-vertical">
 								<div class="list-service_item active">
-									<div class="service-item_image">
-										<img src="https://bnails.com/App_Themes/bnails/images/ser7.png"
-										     class="img-fluid" width="50px" height="50px" alt="">
-									</div>
+									<div class="service-item_image"><img src="/assets/images/ser7.png" class="img-fluid"
+									                                     width="50" height="50" alt=""></div>
+
 									<div class="service-item_content">
 										<div class="service-item_title">
-											Add On
+											Custom Service
 										</div>
 										<div class="service-item_price">
-											$5.00
+											$0.00
 										</div>
 									</div>
 									<div class="service-item_button">
-										<button type="button" class="btn btn-primary btn-sm">
-											<i class="bi bi-check-square"></i>
+										<button type="button" class="btn btn-primary btn-sm"><i
+												class="bi bi-check-square"></i>
 											Add Service
 										</button>
 									</div>
 								</div>
 								<div class="list-service_item">
-									<div class="service-item_image">
-										<img src="https://bnails.com/App_Themes/bnails/images/ser7.png"
-										     class="img-fluid" width="50px" height="50px" alt="">
-									</div>
+									<div class="service-item_image"><img src="/assets/images/nail-polish.png"
+									                                     class="img-fluid" width="50" height="50"
+									                                     alt=""></div>
 									<div class="service-item_content">
-										<div class="service-item_title">
-											Add On
-										</div>
+										<div class="service-item_title">Acrylic Nail</div>
 										<div class="service-item_price">
-											$5.00
+											$60.00
 										</div>
 									</div>
 									<div class="service-item_button">
-										<button type="button" class="btn btn-primary btn-sm">
-											<i class="bi bi-check-square"></i>
+										<button type="button" class="btn btn-primary btn-sm"><i
+												class="bi bi-check-square"></i>
 											Add Service
 										</button>
 									</div>
 								</div>
 								<div class="list-service_item">
-									<div class="service-item_image">
-										<img src="https://bnails.com/App_Themes/bnails/images/ser7.png"
-										     class="img-fluid" width="50px" height="50px" alt="">
-									</div>
+									<div class="service-item_image"><img src="/assets/images/nail-polish.png"
+									                                     class="img-fluid" width="50" height="50"
+									                                     alt=""></div>
 									<div class="service-item_content">
-										<div class="service-item_title">
-											Add On
-										</div>
+										<div class="service-item_title">Healthy Gel</div>
 										<div class="service-item_price">
-											$5.00
+											$45.00
 										</div>
 									</div>
 									<div class="service-item_button">
-										<button type="button" class="btn btn-primary btn-sm">
-											<i class="bi bi-check-square"></i>
+										<button type="button" class="btn btn-primary btn-sm"><i
+												class="bi bi-check-square"></i>
 											Add Service
 										</button>
 									</div>
 								</div>
 								<div class="list-service_item">
-									<div class="service-item_image">
-										<img src="https://bnails.com/App_Themes/bnails/images/ser7.png"
-										     class="img-fluid" width="50px" height="50px" alt="">
-									</div>
+									<div class="service-item_image"><img src="/assets/images/nail-polish.png"
+									                                     class="img-fluid" width="50" height="50"
+									                                     alt=""></div>
 									<div class="service-item_content">
-										<div class="service-item_title">
-											Add On
-										</div>
+										<div class="service-item_title">Basic Pedi</div>
 										<div class="service-item_price">
-											$5.00
+											$15.00
 										</div>
 									</div>
 									<div class="service-item_button">
-										<button type="button" class="btn btn-primary btn-sm">
-											<i class="bi bi-check-square"></i>
+										<button type="button" class="btn btn-primary btn-sm"><i
+												class="bi bi-check-square"></i>
 											Add Service
 										</button>
 									</div>
 								</div>
 								<div class="list-service_item">
-									<div class="service-item_image">
-										<img src="https://bnails.com/App_Themes/bnails/images/ser7.png"
-										     class="img-fluid" width="50px" height="50px" alt="">
-									</div>
+									<div class="service-item_image"><img src="/assets/images/nail-polish.png"
+									                                     class="img-fluid" width="50" height="50"
+									                                     alt=""></div>
 									<div class="service-item_content">
-										<div class="service-item_title">
-											Add On
-										</div>
+										<div class="service-item_title">Pedi Mani</div>
 										<div class="service-item_price">
-											$5.00
+											$60.00
 										</div>
 									</div>
 									<div class="service-item_button">
-										<button type="button" class="btn btn-primary btn-sm">
-											<i class="bi bi-check-square"></i>
+										<button type="button" class="btn btn-primary btn-sm"><i
+												class="bi bi-check-square"></i>
 											Add Service
 										</button>
 									</div>
 								</div>
 								<div class="list-service_item">
-									<div class="service-item_image">
-										<img src="https://bnails.com/App_Themes/bnails/images/ser7.png"
-										     class="img-fluid" width="50px" height="50px" alt="">
-									</div>
+									<div class="service-item_image"><img src="/assets/images/nail-polish.png"
+									                                     class="img-fluid" width="50" height="50"
+									                                     alt=""></div>
 									<div class="service-item_content">
-										<div class="service-item_title">
-											Add On
-										</div>
+										<div class="service-item_title">Deluxe Pedi</div>
 										<div class="service-item_price">
-											$5.00
+											$45.00
 										</div>
 									</div>
 									<div class="service-item_button">
-										<button type="button" class="btn btn-primary btn-sm">
-											<i class="bi bi-check-square"></i>
+										<button type="button" class="btn btn-primary btn-sm"><i
+												class="bi bi-check-square"></i>
 											Add Service
 										</button>
 									</div>
 								</div>
 								<div class="list-service_item">
-									<div class="service-item_image">
-										<img src="https://bnails.com/App_Themes/bnails/images/ser7.png"
-										     class="img-fluid" width="50px" height="50px" alt="">
-									</div>
+									<div class="service-item_image"><img src="/assets/images/nail-polish.png"
+									                                     class="img-fluid" width="50" height="50"
+									                                     alt=""></div>
 									<div class="service-item_content">
-										<div class="service-item_title">
-											Add On
-										</div>
+										<div class="service-item_title">Hot Towel Pedi</div>
 										<div class="service-item_price">
-											$5.00
+											$10.00
 										</div>
 									</div>
 									<div class="service-item_button">
-										<button type="button" class="btn btn-primary btn-sm">
-											<i class="bi bi-check-square"></i>
+										<button type="button" class="btn btn-primary btn-sm"><i
+												class="bi bi-check-square"></i>
+											Add Service
+										</button>
+									</div>
+								</div>
+								<div class="list-service_item">
+									<div class="service-item_image"><img src="/assets/images/nail-polish.png"
+									                                     class="img-fluid" width="50" height="50"
+									                                     alt=""></div>
+									<div class="service-item_content">
+										<div class="service-item_title">Dip Color</div>
+										<div class="service-item_price">
+											$50.00
+										</div>
+									</div>
+									<div class="service-item_button">
+										<button type="button" class="btn btn-primary btn-sm"><i
+												class="bi bi-check-square"></i>
+											Add Service
+										</button>
+									</div>
+								</div>
+								<div class="list-service_item">
+									<div class="service-item_image"><img src="/assets/images/nail-polish.png"
+									                                     class="img-fluid" width="50" height="50"
+									                                     alt=""></div>
+									<div class="service-item_content">
+										<div class="service-item_title">Massage 15'</div>
+										<div class="service-item_price">
+											$10.00
+										</div>
+									</div>
+									<div class="service-item_button">
+										<button type="button" class="btn btn-primary btn-sm"><i
+												class="bi bi-check-square"></i>
+											Add Service
+										</button>
+									</div>
+								</div>
+								<div class="list-service_item">
+									<div class="service-item_image"><img src="/assets/images/nail-polish.png"
+									                                     class="img-fluid" width="50" height="50"
+									                                     alt=""></div>
+									<div class="service-item_content">
+										<div class="service-item_title">Healthy Gel New Set</div>
+										<div class="service-item_price">
+											$70.00
+										</div>
+									</div>
+									<div class="service-item_button">
+										<button type="button" class="btn btn-primary btn-sm"><i
+												class="bi bi-check-square"></i>
+											Add Service
+										</button>
+									</div>
+								</div>
+								<div class="list-service_item">
+									<div class="service-item_image"><img src="/assets/images/nail-polish.png"
+									                                     class="img-fluid" width="50" height="50"
+									                                     alt=""></div>
+									<div class="service-item_content">
+										<div class="service-item_title">Healthy Gel Fill</div>
+										<div class="service-item_price">
+											$50.00
+										</div>
+									</div>
+									<div class="service-item_button">
+										<button type="button" class="btn btn-primary btn-sm"><i
+												class="bi bi-check-square"></i>
 											Add Service
 										</button>
 									</div>
@@ -355,503 +3449,62 @@
 						</div>
 					</div>
 					<div class="form-theme">
-						<div class="form-item mb-0">
+						<div class="form-item mb-2">
 							<div class="form-item_label">
 								Important Note:
 							</div>
-							<div class="form-item_input">
-								<input type="text" placeholder="Note customer" class="form-control">
-							</div>
-							<div class="form-item_button">
-								<button type="button" class="btn btn-primary">
-									Update Important Note
+							<div class="form-item_input"><input type="text" placeholder="Note customer"
+							                                    class="form-control" style="color:red;"></div>
+							<div class="form-item_label" style="padding-top:0px;">
+								<button type="button" class="btn btn-primary w-100">
+									Save Note
 								</button>
 							</div>
 						</div>
-					</div>
-					<div class="time-list">
-						<div class="time-item">
-							<div class="time-item_title">
-								Today:
+						<div class="form-item mb-0">
+							<div class="form-item_label">
+								Session Note:
 							</div>
-							<div class="time-item_value scrollable-horizontal">
-								<div class="time-choose">
-									<input type="radio" name="time-example-1" id="time-example-1-1">
-									<label for="time-example-1-1">
-										05:00 AM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-1" id="time-example-1-2">
-									<label for="time-example-1-2">
-										10:45 AM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-1" id="time-example-1-3">
-									<label for="time-example-1-3">
-										11:00 AM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-1" id="time-example-1-4">
-									<label for="time-example-1-4">
-										12:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-1" id="time-example-1-5">
-									<label for="time-example-1-5">
-										1:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-1" id="time-example-1-6">
-									<label for="time-example-1-6">
-										2:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-1" id="time-example-1-7">
-									<label for="time-example-1-7">
-										3:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-1" id="time-example-1-8">
-									<label for="time-example-1-8">
-										4:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-1" id="time-example-1-9">
-									<label for="time-example-1-9">
-										5:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-1" id="time-example-1-10">
-									<label for="time-example-1-10">
-										6:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-1" id="time-example-1-11">
-									<label for="time-example-1-11">
-										7:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-1" id="time-example-1-12">
-									<label for="time-example-1-12">
-										8:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-1" id="time-example-1-13">
-									<label for="time-example-1-13">
-										9:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-1" id="time-example-1-14">
-									<label for="time-example-1-14">
-										10:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-1" id="time-example-1-15">
-									<label for="time-example-1-15">
-										11:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-1" id="time-example-1-16">
-									<label for="time-example-1-16">
-										12:00 PM
-									</label>
-								</div>
-							</div>
-						</div>
-						<div class="time-item">
-							<div class="time-item_title">
-								Sun 03/10:
-							</div>
-							<div class="time-item_value scrollable-horizontal">
-								<div class="time-choose">
-									<input type="radio" name="time-example-2" id="time-example-2-1">
-									<label for="time-example-2-1">
-										05:00 AM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-2" id="time-example-2-2">
-									<label for="time-example-2-2">
-										10:45 AM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-2" id="time-example-2-3">
-									<label for="time-example-2-3">
-										11:00 AM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-2" id="time-example-2-4">
-									<label for="time-example-2-4">
-										12:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-2" id="time-example-2-5">
-									<label for="time-example-2-5">
-										1:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-2" id="time-example-2-6">
-									<label for="time-example-2-6">
-										2:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-2" id="time-example-2-7">
-									<label for="time-example-2-7">
-										3:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-2" id="time-example-2-8">
-									<label for="time-example-2-8">
-										4:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-2" id="time-example-2-9">
-									<label for="time-example-2-9">
-										5:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-2" id="time-example-2-10">
-									<label for="time-example-2-10">
-										6:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-2" id="time-example-2-11">
-									<label for="time-example-2-11">
-										7:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-2" id="time-example-2-12">
-									<label for="time-example-2-12">
-										8:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-2" id="time-example-2-13">
-									<label for="time-example-2-13">
-										9:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-2" id="time-example-2-14">
-									<label for="time-example-2-14">
-										10:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-2" id="time-example-2-15">
-									<label for="time-example-2-15">
-										11:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-2" id="time-example-2-16">
-									<label for="time-example-2-16">
-										12:00 PM
-									</label>
-								</div>
-							</div>
-						</div>
-						<div class="time-item">
-							<div class="time-item_title">
-								Mon 03/11:
-							</div>
-							<div class="time-item_value scrollable-horizontal">
-								<div class="time-choose">
-									<input type="radio" name="time-example-3" id="time-example-3-1">
-									<label for="time-example-3-1">
-										05:00 AM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-3" id="time-example-3-2">
-									<label for="time-example-3-2">
-										10:45 AM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-3" id="time-example-3-3">
-									<label for="time-example-3-3">
-										11:00 AM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-3" id="time-example-3-4">
-									<label for="time-example-3-4">
-										12:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-3" id="time-example-3-5">
-									<label for="time-example-3-5">
-										1:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-3" id="time-example-3-6">
-									<label for="time-example-3-6">
-										2:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-3" id="time-example-3-7">
-									<label for="time-example-3-7">
-										3:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-3" id="time-example-3-8">
-									<label for="time-example-3-8">
-										4:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-3" id="time-example-3-9">
-									<label for="time-example-3-9">
-										5:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-3" id="time-example-3-10">
-									<label for="time-example-3-10">
-										6:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-3" id="time-example-3-11">
-									<label for="time-example-3-11">
-										7:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-3" id="time-example-3-12">
-									<label for="time-example-3-12">
-										8:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-3" id="time-example-3-13">
-									<label for="time-example-3-13">
-										9:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-3" id="time-example-3-14">
-									<label for="time-example-3-14">
-										10:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-3" id="time-example-3-15">
-									<label for="time-example-3-15">
-										11:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-3" id="time-example-3-16">
-									<label for="time-example-3-16">
-										12:00 PM
-									</label>
-								</div>
-							</div>
-						</div>
-						<div class="time-item">
-							<div class="time-item_title">
-								Tue 03/12:
-							</div>
-							<div class="time-item_value scrollable-horizontal">
-								<div class="time-choose">
-									<input type="radio" name="time-example-4" id="time-example-4-1">
-									<label for="time-example-4-1">
-										05:00 AM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-4" id="time-example-4-2">
-									<label for="time-example-4-2">
-										10:45 AM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-4" id="time-example-4-3">
-									<label for="time-example-4-3">
-										11:00 AM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-4" id="time-example-4-4">
-									<label for="time-example-4-4">
-										12:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-4" id="time-example-4-5">
-									<label for="time-example-4-5">
-										1:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-4" id="time-example-4-6">
-									<label for="time-example-4-6">
-										2:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-4" id="time-example-4-7">
-									<label for="time-example-4-7">
-										3:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-4" id="time-example-4-8">
-									<label for="time-example-4-8">
-										4:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-4" id="time-example-4-9">
-									<label for="time-example-4-9">
-										5:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-4" id="time-example-4-10">
-									<label for="time-example-4-10">
-										6:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-4" id="time-example-4-11">
-									<label for="time-example-4-11">
-										7:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-4" id="time-example-4-12">
-									<label for="time-example-4-12">
-										8:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-4" id="time-example-4-13">
-									<label for="time-example-4-13">
-										9:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-4" id="time-example-4-14">
-									<label for="time-example-4-14">
-										10:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-4" id="time-example-4-15">
-									<label for="time-example-4-15">
-										11:00 PM
-									</label>
-								</div>
-								<div class="time-choose">
-									<input type="radio" name="time-example-4" id="time-example-4-16">
-									<label for="time-example-4-16">
-										12:00 PM
-									</label>
-								</div>
-							</div>
+							<div class="form-item_input"><input type="text" placeholder="Note customer"
+							                                    class="form-control" style="color:red;"></div>
 						</div>
 					</div>
+					<div class="time-list"></div>
 					<div class="table-responsive">
 						<table class="table table-bordered align-middle text-nowrap">
+							<thead>
 							<tr>
 								<th>
 									STT
 								</th>
+
 								<th>
 									Name
 								</th>
+
 								<th>
 									Price
 								</th>
+
 								<th>
-									Staff
+									Note
 								</th>
+
 								<th style="width: 175px;">
-									Time
+									Staff - Time
 								</th>
-								<th style="width: 175px;">
-									<button type="button" class="btn btn-info">
-										<i class="bi bi-check-square"></i>
-										Update group
-									</button>
-								</th>
+								<th style="width: 100px;"></th>
 							</tr>
-							<tr>
-								<td>
-									1
-								</td>
-								<td>
-									<div class="input-borderless">
-										<input type="text" class="form-control" value="Pedicure">
-									</div>
-								</td>
-								<td>
-									<div class="input-borderless">
-										<input type="text" class="form-control" value="38">
-									</div>
-								</td>
-								<td>
-									<p class="mb-0">First Available Technician</p>
-									<div class="input-borderless">
-										<input type="text" class="form-control" value="" placeholder="Note">
-									</div>
-								</td>
-								<td>
-									05:00 PM - 5:45 PM
-								</td>
-								<td>
-									<button type="button" class="btn btn-danger">
-										<i class="bi bi-trash-fill"></i>
-										Delete
-									</button>
-								</td>
-							</tr>
+							</thead>
+							<tbody></tbody>
 						</table>
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-primary">
-						<i class="bi bi-bookmark-check"></i>
+					<button type="button" class="btn btn-primary"><i class="bi bi-bookmark-check"></i>
 						Book
 					</button>
-					<button type="button" class="btn btn-orange">
-						<i class="bi bi-list-check"></i>
-						Wait List
-					</button>
-					<button type="button" class="btn btn-light" data-bs-dismiss="modal">
-						<i class="bi bi-x-circle"></i>
+					<button type="button" class="btn btn-light" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i>
 						Close
 					</button>
 				</div>
@@ -859,375 +3512,153 @@
 		</div>
 	</div>
 
-	<div id="sidebar" class="active">
-		<div class="sidebar-wrapper active">
-			<div class="sidebar-header">
-				<div class="d-flex justify-content-between">
-					<div class="logo">
-						<a href="index.html"><img src="assets/images/logo/logo.png" alt="Logo" srcset=""></a>
-					</div>
-					<div class="toggler">
-						<a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+	<div class="modal fade popup-booking" id="popup-confirm-booking" data-bs-backdrop="static">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable" role="document"
+		     style="max-width:750px;">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">
+						CONFIRM BOOKING TODAY
+					</h5>
+				</div>
+				<div class="modal-body">
+					<div class="form-horizontal">
+						<div class="row">
+							<div class="col-4 scrollable-vertical"
+							     style="border-right: 2px solid #d1d1d1;height:550px;overflow-y: auto;">
+								<ul style="list-style: none; padding-left: 0px;"></ul>
+							</div>
+							<div class="col-8">
+								<div class="table-responsive" style="padding-top:15px;">
+									<table class="table table-bordered">
+										<thead>
+										<tr style="font-weight:bold;">
+											<th>SERVICE</th>
+											<th style="width:85px;">TIME</th>
+											<th>STAFF</th>
+										</tr>
+										</thead>
+										<tbody></tbody>
+									</table>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-light" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i>
+						Close
+					</button>
+				</div>
 			</div>
-			<div class="sidebar-menu">
-				<ul class="menu">
-					<li class="sidebar-title">Menu</li>
-
-					<li class="sidebar-item  ">
-						<a href="index.html" class='sidebar-link'>
-							<i class="bi bi-grid-fill"></i>
-							<span>Dashboard</span>
-						</a>
-					</li>
-
-					<li class="sidebar-item  has-sub">
-						<a href="#" class='sidebar-link'>
-							<i class="bi bi-stack"></i>
-							<span>Components</span>
-						</a>
-						<ul class="submenu ">
-							<li class="submenu-item ">
-								<a href="component-alert.html">Alert</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="component-badge.html">Badge</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="component-breadcrumb.html">Breadcrumb</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="component-button.html">Button</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="component-card.html">Card</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="component-carousel.html">Carousel</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="component-dropdown.html">Dropdown</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="component-list-group.html">List Group</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="component-modal.html">Modal</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="component-navs.html">Navs</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="component-pagination.html">Pagination</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="component-progress.html">Progress</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="component-spinner.html">Spinner</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="component-tooltip.html">Tooltip</a>
-							</li>
-						</ul>
-					</li>
-
-					<li class="sidebar-item  has-sub">
-						<a href="#" class='sidebar-link'>
-							<i class="bi bi-collection-fill"></i>
-							<span>Extra Components</span>
-						</a>
-						<ul class="submenu ">
-							<li class="submenu-item ">
-								<a href="extra-component-avatar.html">Avatar</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="extra-component-sweetalert.html">Sweet Alert</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="extra-component-toastify.html">Toastify</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="extra-component-rating.html">Rating</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="extra-component-divider.html">Divider</a>
-							</li>
-						</ul>
-					</li>
-
-					<li class="sidebar-item  has-sub">
-						<a href="#" class='sidebar-link'>
-							<i class="bi bi-grid-1x2-fill"></i>
-							<span>Layouts</span>
-						</a>
-						<ul class="submenu ">
-							<li class="submenu-item ">
-								<a href="layout-default.html">Default Layout</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="layout-vertical-1-column.html">1 Column</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="layout-vertical-navbar.html">Vertical Navbar</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="layout-rtl.html">RTL Layout</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="layout-horizontal.html">Horizontal Menu</a>
-							</li>
-						</ul>
-					</li>
-
-					<li class="sidebar-title">Forms &amp; Tables</li>
-
-					<li class="sidebar-item  has-sub">
-						<a href="#" class='sidebar-link'>
-							<i class="bi bi-hexagon-fill"></i>
-							<span>Form Elements</span>
-						</a>
-						<ul class="submenu ">
-							<li class="submenu-item ">
-								<a href="form-element-input.html">Input</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="form-element-input-group.html">Input Group</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="form-element-select.html">Select</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="form-element-radio.html">Radio</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="form-element-checkbox.html">Checkbox</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="form-element-textarea.html">Textarea</a>
-							</li>
-						</ul>
-					</li>
-
-					<li class="sidebar-item  ">
-						<a href="form-layout.html" class='sidebar-link'>
-							<i class="bi bi-file-earmark-medical-fill"></i>
-							<span>Form Layout</span>
-						</a>
-					</li>
-
-					<li class="sidebar-item  has-sub">
-						<a href="#" class='sidebar-link'>
-							<i class="bi bi-pen-fill"></i>
-							<span>Form Editor</span>
-						</a>
-						<ul class="submenu ">
-							<li class="submenu-item ">
-								<a href="form-editor-quill.html">Quill</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="form-editor-ckeditor.html">CKEditor</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="form-editor-summernote.html">Summernote</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="form-editor-tinymce.html">TinyMCE</a>
-							</li>
-						</ul>
-					</li>
-
-					<li class="sidebar-item active ">
-						<a href="table.html" class='sidebar-link'>
-							<i class="bi bi-grid-1x2-fill"></i>
-							<span>Table</span>
-						</a>
-					</li>
-
-					<li class="sidebar-item  ">
-						<a href="table-datatable.html" class='sidebar-link'>
-							<i class="bi bi-file-earmark-spreadsheet-fill"></i>
-							<span>Datatable</span>
-						</a>
-					</li>
-
-					<li class="sidebar-title">Extra UI</li>
-
-					<li class="sidebar-item  has-sub">
-						<a href="#" class='sidebar-link'>
-							<i class="bi bi-pentagon-fill"></i>
-							<span>Widgets</span>
-						</a>
-						<ul class="submenu ">
-							<li class="submenu-item ">
-								<a href="ui-widgets-chatbox.html">Chatbox</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="ui-widgets-pricing.html">Pricing</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="ui-widgets-todolist.html">To-do List</a>
-							</li>
-						</ul>
-					</li>
-
-					<li class="sidebar-item  has-sub">
-						<a href="#" class='sidebar-link'>
-							<i class="bi bi-egg-fill"></i>
-							<span>Icons</span>
-						</a>
-						<ul class="submenu ">
-							<li class="submenu-item ">
-								<a href="ui-icons-bootstrap-icons.html">Bootstrap Icons </a>
-							</li>
-							<li class="submenu-item ">
-								<a href="ui-icons-fontawesome.html">Fontawesome</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="ui-icons-dripicons.html">Dripicons</a>
-							</li>
-						</ul>
-					</li>
-
-					<li class="sidebar-item  has-sub">
-						<a href="#" class='sidebar-link'>
-							<i class="bi bi-bar-chart-fill"></i>
-							<span>Charts</span>
-						</a>
-						<ul class="submenu ">
-							<li class="submenu-item ">
-								<a href="ui-chart-chartjs.html">ChartJS</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="ui-chart-apexcharts.html">Apexcharts</a>
-							</li>
-						</ul>
-					</li>
-
-					<li class="sidebar-item  ">
-						<a href="ui-file-uploader.html" class='sidebar-link'>
-							<i class="bi bi-cloud-arrow-up-fill"></i>
-							<span>File Uploader</span>
-						</a>
-					</li>
-
-					<li class="sidebar-item  has-sub">
-						<a href="#" class='sidebar-link'>
-							<i class="bi bi-map-fill"></i>
-							<span>Maps</span>
-						</a>
-						<ul class="submenu ">
-							<li class="submenu-item ">
-								<a href="ui-map-google-map.html">Google Map</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="ui-map-jsvectormap.html">JS Vector Map</a>
-							</li>
-						</ul>
-					</li>
-
-					<li class="sidebar-title">Pages</li>
-
-					<li class="sidebar-item  ">
-						<a href="application-email.html" class='sidebar-link'>
-							<i class="bi bi-envelope-fill"></i>
-							<span>Email Application</span>
-						</a>
-					</li>
-
-					<li class="sidebar-item  ">
-						<a href="application-chat.html" class='sidebar-link'>
-							<i class="bi bi-chat-dots-fill"></i>
-							<span>Chat Application</span>
-						</a>
-					</li>
-
-					<li class="sidebar-item  ">
-						<a href="application-gallery.html" class='sidebar-link'>
-							<i class="bi bi-image-fill"></i>
-							<span>Photo Gallery</span>
-						</a>
-					</li>
-
-					<li class="sidebar-item  ">
-						<a href="application-checkout.html" class='sidebar-link'>
-							<i class="bi bi-basket-fill"></i>
-							<span>Checkout Page</span>
-						</a>
-					</li>
-
-					<li class="sidebar-item  has-sub">
-						<a href="#" class='sidebar-link'>
-							<i class="bi bi-person-badge-fill"></i>
-							<span>Authentication</span>
-						</a>
-						<ul class="submenu ">
-							<li class="submenu-item ">
-								<a href="auth-login.html">Login</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="auth-register.html">Register</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="auth-forgot-password.html">Forgot Password</a>
-							</li>
-						</ul>
-					</li>
-
-					<li class="sidebar-item  has-sub">
-						<a href="#" class='sidebar-link'>
-							<i class="bi bi-x-octagon-fill"></i>
-							<span>Errors</span>
-						</a>
-						<ul class="submenu ">
-							<li class="submenu-item ">
-								<a href="error-403.html">403</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="error-404.html">404</a>
-							</li>
-							<li class="submenu-item ">
-								<a href="error-500.html">500</a>
-							</li>
-						</ul>
-					</li>
-
-					<li class="sidebar-title">Raise Support</li>
-
-					<li class="sidebar-item  ">
-						<a href="https://zuramai.github.io/mazer/docs" class='sidebar-link'>
-							<i class="bi bi-life-preserver"></i>
-							<span>Documentation</span>
-						</a>
-					</li>
-
-					<li class="sidebar-item  ">
-						<a href="https://github.com/zuramai/mazer/blob/main/CONTRIBUTING.md" class='sidebar-link'>
-							<i class="bi bi-puzzle"></i>
-							<span>Contribute</span>
-						</a>
-					</li>
-
-					<li class="sidebar-item  ">
-						<a href="https://github.com/zuramai/mazer#donate" class='sidebar-link'>
-							<i class="bi bi-cash"></i>
-							<span>Donate</span>
-						</a>
-					</li>
-
-				</ul>
-			</div>
-			<button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
 		</div>
 	</div>
-	<div id="main" class="move-table">
-		<header class="mb-3">
-			<a href="#" class="burger-btn d-block d-xl-none">
-				<i class="bi bi-justify fs-3"></i>
-			</a>
-		</header>
 
+	<div class="modal fade popup-booking" id="popup-check-inout" data-bs-backdrop="static" data-bs-keyboard="false">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable" role="document"
+		     style="max-width:600px;">
+			<div class="modal-content">
+				<div class="modal-header d-flex justify-content-between">
+					<h5 class="modal-title w-100 text-center">CHECK IN/OUT</h5>
+					<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">X</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-horizontal">
+						<div class="row">
+							<div class="col-12">
+								<div class="table-responsive" style="padding-top:15px;">
+									<table class="table table-bordered">
+										<thead>
+										<tr style="font-weight:bold;">
+											<th style="width:55px;"></th>
+											<th>STAFF</th>
+											<th style="width:85px;"></th>
+										</tr>
+										</thead>
+										<tbody>
+										<tr>
+											<td><img
+													style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+											</td>
+											<td>BB</td>
+											<td>
+												<button class="btn icon icon-left btn-primary w-100"><i
+														class="bi bi-check2-circle"></i>
+													Check-in
+												</button>
+											</td>
+										</tr>
+										<tr>
+											<td><img
+													style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+											</td>
+											<td>cashier02</td>
+											<td>
+												<button class="btn icon icon-left btn-primary w-100"><i
+														class="bi bi-check2-circle"></i>
+													Check-in
+												</button>
+											</td>
+										</tr>
+										<tr>
+											<td><img
+													style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+											</td>
+											<td>Manager 02</td>
+											<td>
+												<button class="btn icon icon-left btn-primary w-100"><i
+														class="bi bi-check2-circle"></i>
+													Check-in
+												</button>
+											</td>
+										</tr>
+										<tr>
+											<td><img
+													style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+											</td>
+											<td>test</td>
+											<td>
+												<button class="btn icon icon-left btn-primary w-100"><i
+														class="bi bi-check2-circle"></i>
+													Check-in
+												</button>
+											</td>
+										</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-light" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i>
+						Close
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade popup-booking" id="popup-iframe-payment" data-bs-backdrop="static"
+	     data-bs-keyboard="false">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+		     style="max-width: 100%; height: 100vh; margin: 0px">
+			<div class="modal-content">
+				<div class="modal-body scrollable-vertical">
+					<button style="position: absolute; right: 0px; top: 0px; width: 50px; height: 50px; border-radius: 50%; color: white; font-size: 14px; background: red; border: none;"
+					        data-bs-dismiss="modal"><!--!-->
+					                                Close
+					</button>
+					<iframe src="/payment" style="width: 100%; height: 100vh;" scrolling="no"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="main" class="move-table">
 		<div class="page-heading">
 			<!-- Move Tables start -->
 			<section class="section">
@@ -1236,106 +3667,85 @@
 						<div class="sch-hd-left">
 							<a href="javascript:;" class="sch-nav prev"><i class="bi bi-chevron-left"></i>
 								PRev</a>
+							<a href="javascript:;" class="hd-item btn-calendar">HOME</a>
+							<a href="javascript:;" class="hd-item btn-calendar">LIGHT MODE</a>
+							<a href="#popup-iframe-payment" data-bs-toggle="modal" class="hd-item btn-calendar">PAYMENT</a>
 						</div>
 						<div class="sch-hd-right">
-							<div class="noti-parent hd-item pending-block">
-								<a href="javascript:;" class="btn-square-border pending-link"><span
-										class="badge">1</span></a>
+							<a href="javascript:;" class="hd-item btn-calendar" style="">MANUAL BOOKING</a>
+							<a href="#popup-check-inout" data-bs-toggle="modal" class="hd-item btn-calendar">CHECK-IN/OUT</a>
+							<div class="noti-parent hd-item trash-block">
+								<a href="/sms-list" target="_blank"
+								   class="btn-calendar">
+									SMS
+									<span class="badge">1</span>
+								</a>
 								<ul class="noti-ul">
+									<li><a href="javascript:;" class="service-item">
+										<h4 class="caption">TT</h4>
+										<dl class="dl-info clear">
+											<dt>Phone:</dt>
+											<dd>8065768782</dd>
+											<dt>SMS:</dt>
+											<dd>Hi</dd>
+										</dl>
+									</a></li>
 									<li>
-										<a href="#" class="service-item">
-											<h4 class="caption">NO: 224 - Trần Văn A</h4>
-											<dl class="dl-info clear">
-												<dt>Phone:</dt>
-												<dd>01010101</dd>
-												<dt>Email:</dt>
-												<dd>atranvan@email.com</dd>
-											</dl>
-										</a>
-									</li>
-									<li>
-										<a href="#" class="service-item">
-											<h4 class="caption">NO: 224 - Trần Văn B</h4>
-											<dl class="dl-info clear">
-												<dt>Phone:</dt>
-												<dd>01010101</dd>
-												<dt>Email:</dt>
-												<dd>atranvan@email.com</dd>
-											</dl>
-										</a>
-									</li>
-									<li>
-										<a href="#" class="service-item">
-											<h4 class="caption">NO: 224 - Trần Văn C</h4>
-											<dl class="dl-info clear">
-												<dt>Phone:</dt>
-												<dd>01010101</dd>
-												<dt>Email:</dt>
-												<dd>atranvan@email.com</dd>
-											</dl>
-										</a>
+										<div class="row">
+											<div class="col-6">
+												<a href="/sms-list" target="_blank" class="service-item">
+													<h4 class="caption" style="text-align: center;">ALL SMS</h4>
+												</a>
+											</div>
+											<div class="col-6">
+												<a href="/report-ticket" target="_blank" class="service-item">
+													<h4 class="caption" style="text-align: center;">ALL TICKET</h4>
+												</a>
+											</div>
+										</div>
 									</li>
 								</ul>
 							</div>
 							<div class="noti-parent hd-item trash-block">
-								<a href="javascript:;" class="btn-square-border trash-link"><span
-										class="badge">11</span></a>
-								<ul class="noti-ul">
-									<li>
-										<a href="#" class="service-item ">
-											<h4 class="caption">NO: 224 - Trần Văn A</h4>
-											<dl class="dl-info clear">
-												<dt>Phone:</dt>
-												<dd>01010101</dd>
-												<dt>Email:</dt>
-												<dd>atranvan@email.com</dd>
-												<dt>Dịch vụ</dt>
-												<dd>dv1, dv2, dv3</dd>
-											</dl>
-										</a>
-									</li>
-									<li>
-										<a href="#" class="service-item ">
-											<h4 class="caption">NO: 224 - Trần Văn A</h4>
-											<dl class="dl-info clear">
-												<dt>Phone:</dt>
-												<dd>01010101</dd>
-												<dt>Email:</dt>
-												<dd>atranvan@email.com</dd>
-												<dt>Dịch vụ</dt>
-												<dd>dv1, dv2, dv3</dd>
-											</dl>
-										</a>
-									</li>
-									<li>
-										<a href="#" class="service-item ">
-											<h4 class="caption">NO: 224 - Trần Văn A</h4>
-											<dl class="dl-info clear">
-												<dt>Phone:</dt>
-												<dd>01010101</dd>
-												<dt>Email:</dt>
-												<dd>atranvan@email.com</dd>
-												<dt>Dịch vụ</dt>
-												<dd>dv1, dv2, dv3</dd>
-											</dl>
-										</a>
-									</li>
-
-								</ul>
+								<a href="javascript:;" class="btn-calendar">
+									NOTE
+								</a></div>
+							<div class="noti-parent hd-item trash-block">
+								<a href="javascript:;" class="btn-calendar">
+									PRINT TICKET
+								</a>
 							</div>
-							<span class="badge">1</span></a>
-							<a href="#popupBooking" data-bs-toggle="modal" class="hd-item btn-calendar"><i
-									class="bi bi-calendar4-week"></i></a>
+							<div class="noti-parent hd-item trash-block">
+								<a href="javascript:;" class="btn-calendar">
+									FLEXIBOOK
+								</a>
+							</div>
+							<div class="noti-parent hd-item trash-block">
+								<a href="#popup-confirm-booking" data-bs-toggle="modal" class="hd-item btn-calendar">
+									CONFIRM
+								</a>
+							</div>
+							<div class="noti-parent hd-item trash-block">
+								<a href="javascript:;" class="btn-calendar">
+									DEPOSIT
+								</a>
+							</div>
+							<a href="#popup-break-time" data-bs-toggle="modal"
+							   class="hd-item btn-calendar">BREAK-TIME</a>
+							<a href="#popupBooking" data-bs-toggle="modal" class="hd-item btn-calendar"
+							   style="background-color: #019801">BOOKING</a>
+							<a href="#popup-appointmnet-date" data-bs-toggle="modal" class="hd-item btn-calendar"
+							   style="text-transform: uppercase; color: chartreuse;">Sun, 06-15-25</a>
 							<a href="javascript:;" class="hd-item sch-nav next">Next <i class="bi bi-chevron-right"></i></a>
-
 						</div>
-						<div class="sch-hd-center"><i class="bi bi-calendar4-week"></i> Mon, 31 july, 2017</div>
+						<div class="sch-hd-center"><i class="bi bi-clock" style="padding-left:5px;"></i>
+							09:01:52 AM
+						</div>
 					</div>
 					<div class="schedule-cont dragscroll" id="schedule-overflow-horizontal">
 						<table class="">
 							<thead class="schedule-operatory" id="schedule-operatory">
 							<tr>
-								<!--!-->
 								<th class="axisX" style="width: 100px"></th>
 								<th id="107" class="sv-3 sv-4 sv-7 sv-8 sv-12 sv-13 sv-14 sv-16 sv-17 sv-97 sv-98 ">
 									Staff 20
@@ -1388,133 +3798,6 @@
 						</table>
 					</div>
 				</section>
-				<section class="sec-menu-side" id="menu-edit-user">
-					<div class="menu-overlay"></div>
-					<div class="menu-inner">
-						<ul class="menu-feat-ul">
-							<li>
-								<h4 class="title">Thông tin khách hàng</h4>
-								<div class="menu-feat">
-									<div class="user-info-row">
-										<div class="lb">Name</div>
-										<input type="text" class="form-control" value="Nguyen Thanh Phuong">
-									</div>
-									<div class="user-info-row">
-										<div class="lb">Phone</div>
-										<input type="text" class="form-control" value="402-426-5199">
-									</div>
-									<div class="user-info-row">
-										<div class="lb">Email</div>
-										<input type="text" class="form-control" value="kolby.weber@yahoo.com">
-									</div>
-								</div>
-							</li>
-							<li>
-								<h4 class="title clear">Dịch vụ <a href="javascript:;" onclick=""
-								                                   class="call-model right">Add</a></h4>
-								<div class="menu-feat">
-									<div class="user-info-row removeable-item">
-										<div class="service-item">
-											<h4 class="caption">Cắt móng, sơn móng, đắp móng</h4>
-											<dl class="dl-info clear">
-												<dt>Giá tiền:</dt>
-												<dd class="hl-txt">500.000 vnđ</dd>
-												<dt>Nhân viên:</dt>
-												<dd>Nguyễn Thị Mai</dd>
-												<dt>Thời gian</dt>
-												<dd>11:00 - 11:30</dd>
-											</dl>
-											<a href="javascript:;" class="remove-item"><i class="bi bi-x"></i></a>
-										</div>
-									</div>
-									<div class="user-info-row removeable-item">
-										<div class="service-item ">
-											<h4 class="caption">Cắt móng, sơn móng, đắp móng</h4>
-											<dl class="dl-info clear">
-												<dt>Giá tiền:</dt>
-												<dd class="hl-txt">500.000 vnđ</dd>
-												<dt>Nhân viên:</dt>
-												<dd>Nguyễn Thị Mai</dd>
-												<dt>Thời gian</dt>
-												<dd>11:30 - 12:00</dd>
-											</dl>
-											<a href="javascript:;" class="remove-item"><i class="bi bi-x"></i></a>
-										</div>
-									</div>
-
-								</div>
-							</li>
-							<li>
-								<h4 class="title clear">Sản phẩm <a href="javascript:;" onclick=""
-								                                    class="call-model right">Add</a></h4>
-								<div class="menu-feat">
-									<div class="user-info-row removeable-item">
-										<div class="service-item">
-											<h4 class="caption">Kềm cắt da</h4>
-											<dl class="dl-info clear">
-												<dt>Giá tiền:</dt>
-												<dd class="hl-txt">500.000 vnđ</dd>
-												<dt>Người giới thiệu:</dt>
-												<dd>Nguyễn Thị Mai</dd>
-											</dl>
-											<a href="javascript:;" class="remove-item"><i class="bi bi-x"></i></a>
-										</div>
-									</div>
-									<div class="user-info-row removeable-item">
-										<div class="service-item ">
-											<h4 class="caption">Kềm cắt da</h4>
-											<dl class="dl-info clear">
-												<dt>Giá tiền:</dt>
-												<dd class="hl-txt">500.000 vnđ</dd>
-												<dt>Người giới thiệu:</dt>
-												<dd>Nguyễn Thị Mai</dd>
-											</dl>
-											<a href="javascript:;" class="remove-item"><i class="bi bi-x"></i></a>
-										</div>
-									</div>
-
-								</div>
-							</li>
-							<li>
-								<h4 class="title clear">Voucher <a href="javascript:;" onclick=""
-								                                   class="call-model right">Add</a></h4>
-								<div class="menu-feat">
-									<div class="user-info-row removeable-item">
-										<div class="service-item">
-											<dl class="dl-info clear">
-												<dt>Mã voucher:</dt>
-												<dd>kasdjaksdjciqoiqwucn</dd>
-												<dt>Giá tiền:</dt>
-												<dd class="hl-txt">500.000 vnđ</dd>
-
-											</dl>
-											<a href="javascript:;" class="remove-item"><i class="bi bi-x"></i></a>
-										</div>
-									</div>
-									<div class="user-info-row">
-										<div class="service-item ">
-											<dl class="dl-info clear">
-												<dt>Mã voucher:</dt>
-												<dd>kasdjaksdjciqoiqwucn</dd>
-												<dt>Giá tiền:</dt>
-												<dd class="hl-txt">500.000 vnđ</dd>
-											</dl>
-											<a href="javascript:;" class="remove-item"><i class="bi bi-x"></i></a>
-										</div>
-									</div>
-
-								</div>
-							</li>
-							<li>
-								<div class="user-info-row row-btn">
-									<a href="javascript:;" class="btn process-btn">Process</a>
-									<a href="javascript:;" class="btn booking-btn">booking</a>
-									<a href="javascript:;" class="btn thanhtoan-btn">Thanh toán</a>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</section>
 			</section>
 			<!-- Move Tables end -->
 		</div>
@@ -1528,6 +3811,7 @@
 <script src="assets/js/jquery-1.9.1.min.js"></script>
 <script src="assets/js/jquery-ui-1-13.min.js"></script>
 <script src="assets/js/jquery-ui-touch-punch.min.js"></script>
+<script src="assets/js/Radzen.Blazor/Radzen.Blazor.js"></script>
 <script type="module" src="assets/js/scheduleRender.js"></script>
 <script src="assets/js/draggscroll.js"></script>
 

@@ -1,0 +1,226 @@
+.schedule-header .badge {
+	top: 27px !important;
+	right: 19px !important;
+}
+
+#main {
+	margin-left: 0px !important;
+}
+
+.schedule-overflow .current-time {
+	background-color: red !important;
+	z-index: 2;
+}
+
+.sch-event {
+	width: 100% !important;
+	margin: 0px !important;
+	border-bottom-right-radius: 0px !important;
+	border-bottom-left-radius: 0px !important;
+}
+
+.sch-event .ev-body {
+	border-bottom-right-radius: 0px !important;
+	border-bottom-left-radius: 0px !important;
+}
+
+.sch-event .process {
+	right: -1px;
+}
+
+.svName {
+	text-transform: capitalize;
+	background: rgba(0, 0, 0, 0.5);
+	float: right;
+	color: #e6e6e6;
+}
+
+.time-minute-rezo {
+	border-top: solid 1px #224a5f;
+}
+
+.sch-event:hover .actions .bi-arrows-vertical {
+	display: inline-block
+}
+
+.sch-event:hover .actions .bi-recycle {
+	display: inline-block
+}
+
+.sch-event:hover .actions .bi-arrow-repeat {
+	display: inline-block
+}
+
+.sch-event:hover .actions .bi-arrows {
+	display: inline-block
+}
+
+.sch-event:hover .actions .bi-x-lg {
+	display: inline-block
+}
+
+.sch-event:hover .actions .bi-trash3 {
+	display: inline-block
+}
+
+.sch-event:hover .actions .bi-slash-circle {
+	display: inline-block
+}
+
+.schedule-wrap .btn-calendar {
+	line-height: 20px;
+	height: 40px;
+	border-radius: 0px;
+}
+
+.ui-helper-hidden-accessible {
+	display: none;
+}
+
+.bi {
+	height: unset;
+	width: unset;
+}
+
+.bi:before {
+	vertical-align: -0.125em;
+}
+
+.btn i, .btn svg {
+	height: unset;
+	width: unset;
+}
+
+.schedule-overflow .current-time {
+	z-index: 4;
+}
+
+.popup-booking .form-theme .form-item .form-item_input.form-item_status .form-item_status__box .form-status:checked + .form-status_label:after {
+	z-index: 1;
+}
+
+.sch-event .actions > a {
+	line-height: 25px;
+	width: 20px;
+	height: 25px;
+	font-size: 18px;
+}
+
+.sch-event .actions {
+	bottom: -2px;
+}
+
+.rz-spinner:not(:disabled):not(.rz-state-disabled):hover {
+	border: none;
+	border-bottom: 2px solid #bb3c25;
+}
+
+.bg-opc {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: #fff;
+	opacity: 0.6;
+}
+
+.img-status-service {
+	width: 100px;
+	position: absolute;
+	bottom: 0;
+}
+
+.sch-event .actions {
+	color: white;
+}
+
+.schedule-header .badge {
+	right: 12px;
+}
+
+.li-confirm {
+	margin-bottom: 5px;
+	border-bottom: 1px solid #d1d1d1;
+	padding-bottom: 5px;
+	cursor: pointer;
+}
+
+.price-add-on {
+	width: 100px;
+	border-radius: 0 !important;
+	border: 0;
+	border-bottom: 2px solid #bb3c25;
+}
+
+.sch-event.booking .ev-top {
+	background-color: #ff2828;
+	opacity: 1;
+}
+
+.sch-event.booking-sent-sms .ev-top {
+	background-color: yellow;
+}
+
+.sch-event.booking-sent-sms:hover .power-off {
+	display: block
+}
+
+.sch-event.booking-confirm-sms .ev-top {
+	background-color: #20dd20;
+}
+
+.sch-event.booking-confirm-sms:hover .power-off {
+	display: block
+}
+
+.sch-event.booking-cancel-sms .ev-top {
+	background-color: black;
+	color: white;
+}
+
+.sch-event.booking-cancel-sms:hover .power-off {
+	display: block
+}
+
+.select {
+	border-bottom: 2px solid #bb3c25;
+	outline: none;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	width: 100%;
+}
+
+.schedule-wrap .btn-calendar {
+	padding: 10px;
+}
+
+.time-grid .hl-colnhe {
+	position: absolute;
+	top: 0;
+	height: 2000px;
+	background: #000;
+	z-index: 1;
+}
+
+.booking-type-box .form-item_status__box {
+	width: calc(33% - 2px) !important;
+}
+
+.booking-type-box .form-item_status__box_update {
+	width: calc(50% - 2px) !important;
+}
+
+.noti-ul {
+	padding: 5px 12px;
+}
+
+.rz-datepicker-calendar td a.rz-state-default, .rz-datepicker-calendar td span.rz-state-default, .rz-datepicker-calendar th a.rz-state-default, .rz-datepicker-calendar th span.rz-state-default {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.modal .modal-header .close {
+	padding: 3px 10px;
+	border: 2px solid #ff0000;
+}
