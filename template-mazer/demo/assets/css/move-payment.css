@@ -1,0 +1,264 @@
+.tata-title {
+	color: white;
+}
+
+.move-payment {
+	font-size: 25px;
+	color: black;
+	background: white !important;
+	margin-left: 0 !important;
+	padding: 12px 0 !important;
+	height: 100vh;
+}
+
+.move-payment .page-heading{
+	height: 100%;
+	margin: 0;
+}
+
+.move-payment .table {
+	color: black;
+}
+
+.move-payment .row {
+	margin: 0;
+}
+
+.move-payment input {
+	font-size: 25px
+}
+
+.move-payment .col-4 {
+	padding: 0;
+	text-align: center;
+	display: grid;
+	color: white;
+	align-items: center;
+	border: 1px solid black;
+	background: #9b9b9b;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.move-payment .product-sale {
+	padding: 0;
+	text-align: center;
+	display: grid;
+	color: white;
+	align-items: center;
+	border: 1px solid black;
+	background: #9b9b9b;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.move-payment .connect {
+	padding: 0;
+	text-align: center;
+	display: grid;
+	color: white;
+	align-items: center;
+	border: 1px solid black;
+	background: #9b9b9b;
+	cursor: pointer;
+}
+
+.move-payment .tab-open-till {
+	padding: 0;
+	text-align: center;
+	display: grid;
+	color: white;
+	align-items: center;
+	border: 1px solid black;
+	background: #9b9b9b;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.move-payment .sale {
+	/* background: #66a076; */
+}
+
+.move-payment .col-6 {
+	padding: 0;
+}
+
+.move-payment .col-8 {
+	padding: 0;
+}
+
+.move-payment .col-12 {
+	padding: 0;
+}
+
+.move-payment .ticket {
+	vertical-align: middle;
+	text-align: center;
+}
+
+.move-payment .received-cash-back {
+	padding: 0;
+	text-align: center;
+	display: grid;
+	color: black;
+	align-items: center;
+	border: 1px solid black;
+	background: white;
+	font-size: 30px;
+	cursor: pointer;
+	min-height: 65px;
+}
+
+.move-payment .cong_tru {
+	background: #9b9b9b;
+	text-align: center;
+	display: grid;
+	align-items: center;
+	border: 1px solid black;
+}
+
+.move-payment .btn_add_to_order {
+	background: #9b9b9b !important;
+	color: white;
+	text-transform: uppercase;
+	min-width: 150px;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+.move-payment .form-check-input {
+	width: 2em;
+	height: 2em;
+}
+
+.move-payment .form-check .form-check-input {
+	float: none !important;
+}
+
+.move-payment .form-check-label {
+	line-height: 2.5;
+	/* position: absolute;
+	padding-left: 10px;     */
+}
+
+.move-payment .autocomplete {
+	position: relative;
+}
+
+.move-payment .autocomplete .options {
+	position: absolute;
+	top: 60px;
+	left: 0;
+	background: white;
+	width: 100%;
+	padding: 0;
+	z-index: 10;
+	border: 1px solid #ced4da;
+	border-radius: 0.5rem;
+	box-shadow: 0 30px 25px 8px rgba(0, 0, 0, 0.1);
+}
+
+.move-payment .autocomplete .option {
+	display: block;
+	padding: 0.25rem;
+}
+
+.move-payment .autocomplete .option .option-text {
+	padding: 0.25rem 0.5rem;
+}
+
+.move-payment .autocomplete .option:hover {
+	background: #1E90FF;
+	color: #fff;
+}
+
+.move-payment .autocomplete .option.disabled {
+	background-color: lightgrey;
+	cursor: not-allowed;
+}
+
+.autocomplete .option.disabled:hover {
+	background: lightgrey;
+	color: var(--bs-body);
+}
+
+/* kbd */
+html, body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1:focus {
+	outline: none;
+}
+
+.move-payment a, .move-payment .btn-link {
+	color: #0071c1;
+}
+
+.move-payment .btn-primary {
+	color: #fff;
+	background-color: #1b6ec2;
+	border-color: #1861ac;
+}
+
+.move-payment .valid.modified:not([type=checkbox]) {
+	outline: 1px solid #26b050;
+}
+
+.move-payment .invalid {
+	outline: 1px solid red;
+}
+
+.move-payment .validation-message {
+	color: red;
+}
+
+.move-payment #blazor-error-ui {
+	background: lightyellow;
+	bottom: 0;
+	box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+	display: none;
+	left: 0;
+	padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+}
+
+.move-payment #blazor-error-ui .dismiss {
+	cursor: pointer;
+	position: absolute;
+	right: 0.75rem;
+	top: 0.5rem;
+}
+
+.move-payment .dataTable-table:not(.table-borderless) thead th, .move-payment .table:not(.table-borderless) thead th {
+	border-bottom: 1px solid #00000038 !important;
+}
+
+.move-payment input.rz-inputtext {
+	height: 60px !important;
+	font-size: 20px !important;
+	padding: 15px !important;
+}
+
+.move-payment tbody, .move-payment td, .move-payment tfoot, .move-payment th, .move-payment thead, .move-payment tr {
+	border-color: #00000038;
+}
+
+.move-payment .select-box-service {
+	border: none;
+	border-bottom: 1px solid #c7c7c7;
+	padding-bottom: 5px;
+}
+
+.move-payment .custom-select-service option {
+	background-color: white; /* Ensure dropdown menu options have a white background */
+	color: black; /* Optional: Change text color of options */
+}
+
+.move-payment .icon-add-on {
+	cursor: pointer;
+	margin-right: 10px;
+	margin-left: 10px;
+}

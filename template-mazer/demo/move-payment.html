@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Table - Mazer Admin Dashboard</title>
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	
+	<link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+	<link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+	<link rel="stylesheet" href="assets/vendors/Radzen.Blazor/css/material-base.css">
+	<link rel="stylesheet" href="assets/vendors/Radzen.Blazor/css/standard-base.css">
+	<link rel="stylesheet" href="assets/css/app.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/move-payment.css">
+	<link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+</head>
+
+<body>
+<div id="app">
+	<div id="main" class="move-payment">
+		<div class="page-heading">
+			<!-- Move Payment start -->
+			<div class="row" style="height:100%; width:100%;">
+				<div class="col-7" style="overflow-y: scroll; height: 100%;">
+					<div class="row" style="height:30%">
+						<div class="col-12 connect"><!--!-->
+						                            START AMOUNT
+							<br>
+						                            $300.00
+						</div><!--!-->
+						<div class="col-8 connect"><textarea style="width: 100%; height: 100%; padding: 20px;"
+						                                     placeholder="INOUT YOUR CONFIRM"
+						                                     required=""></textarea></div><!--!-->
+						<div class="col-4 connect"><!--!-->
+						                           START SHIFT
+						</div>
+					</div><!--!-->
+					<div class="row" style="height:70%">
+						<div class="col-12 table-filter">
+							<table class="table table-bordered"><!--!-->
+								<thead>
+								<tr>
+									<th>STAFF NAME</th>
+									<th style="width: 150px;"></th>
+									<th>DROP</th>
+									<th>LEFT</th>
+								</tr>
+								</thead>
+								<tbody></tbody>
+							</table>
+						</div>
+					</div>
+				</div><!--!-->
+				<div class="col-5">
+					<div class="row" style="height:100%; width:100%;">
+						<div class="col-12">
+							<div class="row" style="height:100%;">
+								<div class="col-4 connect" style="font-size: 12px;"><!--!-->
+								                                                    Disconnect
+									<br>
+								                                                    POS - C035UT34550079<!--!-->
+									<br>
+								                                                    Hello: N4m<!--!-->
+									<br>
+								                                                    MPOS LLC 02
+								</div>
+								<div class="col-4">CANCEL</div>
+								<div class="col-4" style="background: black;"><!--!--><span>OK</span></div>
+								<div class="col-4" style="background:#d3b85d;">PRINT</div><!--!-->
+								<div class="col-4" style="background:#d3b85d;">SHIFT</div><!--!-->
+								<div class="col-4" style="background:#d3b85d;">GIFT SALE</div>
+								<div class="col-12 product-sale" style="background:#d3b85d;">PRODUCT SALE</div>
+								<div class="col-4" style="background: ">CARD</div><!--!-->
+								<div class="col-4" style="background: ">CASH</div><!--!-->
+								<div class="col-4" style="background: ">OTHER</div><!--!-->
+								<div class="col-4" style="background: ">GIFT</div><!--!-->
+								
+								<div class="col-4 sale" style="background: ">CREDIT</div><!--!-->
+								<div class="col-4 sale" style="background: #3c3c3c">SPLIT</div><!--!-->
+								
+								<div class="col-4 sale">NEW ORDER</div><!--!-->
+								<div class="col-4 sale">+TICKETS</div><!--!-->
+								<div class="col-4 sale">TICKETS</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Move Payment end -->
+		</div>
+	</div>
+</div>
+<script>
+	var timezone = -12;
+</script>
+<script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jquery-1.9.1.min.js"></script>
+<script src="assets/js/jquery-ui-1-13.min.js"></script>
+<script src="assets/js/jquery-ui-touch-punch.min.js"></script>
+<script src="assets/js/Radzen.Blazor/Radzen.Blazor.js"></script>
+<script type="module" src="assets/js/scheduleRender.js"></script>
+<script src="assets/js/draggscroll.js"></script>
+
+<script src="assets/js/main.js"></script>
+</body>
+
+</html>
