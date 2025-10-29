@@ -9,13 +9,18 @@
 	--primary-rgb: 255, 186, 1; /*#ffba01*/
 	--accent-rgb: 255, 219, 58; /*#ffdb3a*/
 	--secondary-rgb: 255, 230, 47; /*#ffe62f*/
+
+	--color-dark: #121212;
+	--color-gray: #5b5858;
+	--color-desc: #8c8c8c;
+	--color-price: #f0325e
 }
 
 
 body {
 	position: relative;
 	width: 100%;
-	color: #121212;
+	color: var(--color-dark);
 	font-family: var(--font-theme);
 	font-size: var(--size-theme);
 	font-weight: 400;
@@ -264,4 +269,15 @@ textarea:focus {
 	display: none;
 	opacity: 0;
 	visibility: hidden;
+}
+
+.limit {
+	--line: 2;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: var(--line);
+	line-clamp: var(--line);
+	-webkit-box-orient: vertical;
 }
