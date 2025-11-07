@@ -244,11 +244,41 @@
 	margin-bottom: 6px;
 }
 
-.section-seo .handleCollapseContentToggle {
+.section-seo .seo-title {
+	font-size: 1.15em;
+	color: var(--color-gray);
+	font-weight: 700;
+	opacity: 0.5;
+}
+
+.section-seo .seo-keywords {
+	margin-top: 12px;
+	margin-bottom: 0;
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 0;
+}
+
+.section-seo .seo-keywords li {
+	width: 25%;
+	list-style-position: inside;
+	font-size: 0.85em;
+}
+
+.section-seo .seo-keywords li a {
+	color: var(--color-desc);
+	line-height: 25px;
+}
+
+.section-seo .seo-keywords li a:hover {
+	color: var(--color-gray);
+}
+
+.handleCollapseContent .handleCollapseContentToggle {
 	position: relative;
 }
 
-.section-seo .handleCollapseContentToggle:before {
+.handleCollapseContent .handleCollapseContentToggle:before {
 	position: absolute;
 	height: 25px;
 	top: -25px;
@@ -273,4 +303,46 @@
 .handleCollapseContent.is-expanded .handleCollapseContentToggle:before {
 	opacity: 0;
 	visibility: hidden;
+}
+
+.section-app {
+	margin-top: 12px;
+	background: linear-gradient(180deg, rgb(var(--primary-rgb)), rgb(var(--accent-rgb)) 50%, rgb(var(--secondary-rgb)));
+}
+
+.section-app .app-inner {
+	gap: 24px;
+	display: flex;
+	padding: 48px 0;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	color: #222;
+	background-image: url(../images/bg-uni-homepage.webp);
+	background-repeat: no-repeat;
+	background-position: 100%;
+	background-size: contain;
+}
+
+.section-app .app-inner .app-title {
+	font-size: 3.425em;
+	line-height: 1.15em;
+	font-weight: 800;
+	color: #313131;
+}
+
+.section-app .app-inner .app-sub {
+	color: var(--bs-black);
+	font-size: 2em;
+	line-height: 1.225em;
+}
+
+.section-app .app-inner .app-buttons {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+
+.section-app .app-inner .app-buttons img{
+	height: 40px;
 }
