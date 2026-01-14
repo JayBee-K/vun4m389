@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="theme-color" content="#ffffff">
+
+	<title>Home</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<meta property="og:title" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="">
+	<meta name="format-detection" content="telephone=no, date=no"/>
+
+	<link rel="icon" href="./assets/images/favicon.png">
+	<link rel="apple-touch-icon" href="./assets/images/favicon.png">
+	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+	<link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="./assets/css/base.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<div class="modal fade modal-theme" id="modalSignin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button type="button" class="modal-theme_close" data-bs-dismiss="modal" aria-label="Close">
+					<i class="fal fa-times"></i>
+				</button>
+				<div class="modal-theme_heading">
+					<div class="modal-theme_heading__title">Bnails Booking</div>
+					<div class="modal-theme_heading__sub">
+						Please enter your <span>cell phone number!</span>
+					</div>
+				</div>
+				<div class="form-theme">
+					<form action="">
+						<div class="form-theme_item">
+							<div class="form-theme_group">
+								<div class="form-theme_append">
+									<select name="" class="form-select" id="">
+										<option value="US">US</option>
+										<option value="CA">CA</option>
+										<option value="DE">DE</option>
+										<option value="CH">CH</option>
+										<option value="AU">AU</option>
+										<option value="GB">GB</option>
+										<option value="CZ">CZ</option>
+										<option value="FI">FI</option>
+										<option value="FR">FR</option>
+										<option value="ES">ES</option>
+										<option value="NZ">NZ</option>
+										<option value="SG">SG</option>
+										<option value="SK">SK</option>
+										<option value="AE">AE</option>
+									</select>
+								</div>
+								<input type="text" class="form-control" placeholder="(201) 555-0123">
+							</div>
+						</div>
+						<div class="form-theme_button form-theme_item">
+							<button type="submit" class="button-theme button-theme_primary w-100"
+							        aria-label="Next">
+								Next
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+								     stroke="currentColor" aria-hidden="true" class="ms-2 text-white">
+									<path stroke-linecap="round" stroke-linejoin="round"
+									      d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+								</svg>
+							</button>
+						</div>
+						<div class="form-theme_check form-theme_item">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+								<label class="form-check-label" for="flexCheckDefault">
+									By entering your phone number, you consent to receiving SMS messages and accepting
+									our <a href="">Terms of Service</a> and <a href="">Privacy Policy</a>.<br>
+									You can opt out at any time by replying “STOP” to any message. Standard message and
+									data rates may apply.
+								</label>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade modal-theme" id="modalOtp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button type="button" class="modal-theme_close" data-bs-dismiss="modal" aria-label="Close">
+					<i class="fal fa-times"></i>
+				</button>
+				<div class="modal-theme_heading">
+					<div class="modal-theme_heading__title">Bnails Booking</div>
+					<div class="modal-theme_heading__sub">
+						Please enter your <span>cell phone number!</span>
+					</div>
+				</div>
+				<div class="form-theme">
+					<form action="">
+						<div class="form-theme_item">
+							<div class="form-theme_group">
+								<div class="form-theme_append form-theme_icon">
+									<i class="far fa-phone-alt"></i>
+								</div>
+								<button class="form-theme_prepend form-theme_icon">
+									<i class="far fa-edit"></i>
+								</button>
+								<input type="text" class="form-control" value="(201) 555-0123" disabled>
+							</div>
+						</div>
+						<div class="form-theme_item">
+							<div class="form-theme_group">
+								<div class="form-theme_append form-theme_icon">
+									<i class="far fa-comment-dots"></i>
+								</div>
+								<input type="text" class="form-control" placeholder="Verification code">
+							</div>
+						</div>
+						<div class="form-theme_button form-theme_item">
+							<button type="submit" class="button-theme button-theme_primary w-100"
+							        aria-label="Next">
+								Verify
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+								     stroke="currentColor" aria-hidden="true" class="ms-2 text-white">
+									<path stroke-linecap="round" stroke-linejoin="round"
+									      d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+								</svg>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<header class="header" id="header">
+	<div class="container">
+		<div class="header-grid d-flex align-items-center">
+			<div class="header-logo">
+				<a href="/" aria-label="Logo">
+					<img src="./assets/images/logo-primary.webp"
+					     class="mw-100 h-100 w-auto"
+					     width="954" height="471" loading="lazy" alt="Logo">
+				</a>
+			</div>
+			<div class="header-toolbar ms-auto d-flex align-items-center justify-content-end flex-md-row flex-column-reverse">
+				<a href="./business.html" class="header-toolbar_button" aria-label="For Business">
+					<i class="far fa-lightbulb-on"></i>
+					For Business
+				</a>
+				<button type="button" data-bs-target="#modalSignin" data-bs-toggle="modal" class="header-toolbar_link"
+				        aria-label="Sign in">
+					Sign in
+					<i class="fas fa-sign-in-alt"></i>
+				</button>
+			</div>
+			<button type="button" class="header-hamburger" id="navigationButton">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+	</div>
+</header>
+<div class="main">
+	<div class="page-blog">
+		<div class="container">
+			<div class="position-relative">
+				<div class="blog-decor">
+					<img src="./assets/images/decor-blog.svg" class="blog-decor_1" width="404" height="384" alt="">
+					<img src="./assets/images/decor-blog.svg" class="blog-decor_2" width="404" height="384" alt="">
+					<img src="./assets/images/decor-blog.svg" class="blog-decor_3" width="404" height="384" alt="">
+				</div>
+				<div class="row g-4 justify-content-center">
+					<div class="col-lg-8 col-xl-6">
+						<div class="blog-detail">
+							<div class="blog-detail_sub">
+								Bnails Booking
+							</div>
+							<div class="blog-detail_title">
+								Terms and Conditions for Partners
+							</div>
+							<div class="blog-detail_date">
+								Last Updated: Nov 06, 2025
+							</div>
+							<div class="blog-detail_description">
+								<p><strong>1. General</strong></p>
+								<p>“Bnails Booking” (referred to as either "We", "Us" or "Our" in this Agreement) refers
+								   to
+								   Bnails Booking Inc.
+								</p>
+								<ul>
+									<li>“Partners” means the beauty salons or businesses who are using Bnails Booking or
+									    POS
+									    as their software to manage their business and offer their goods and services
+									    for
+									    sale on the Bnails Booking Platform.
+									</li>
+									<li>“Personal Data” is any information that relates to an identified or identifiable
+									    individual.
+									</li>
+									<li>“Platform” means www.dashbooking.com and www.partnersdash.com, including all
+									    subdirectories, subdomains, and mobile sites thereof.
+									</li>
+									<li>“Service” means any of the services We provide to Partners or individuals
+									    through
+									    our Applications and Websites.
+									</li>
+									<li>“Service Provider” means any natural or legal person who processes the data on
+									    behalf of Bnails Booking. It refers to third-party companies or individuals
+									    employed
+									    by the Bnails Booking to facilitate the Service, to provide the Service on behalf
+									    of
+									    the Bnails Booking, to perform services related to the Service, or to assist the
+									    Dash
+									    Booking in analyzing how the Service is used.
+									</li>
+									<li>“Website” refers to Bnails Booking, accessible from https://www.dashbooking.com or
+									    https://www.partnersdash.com
+									</li>
+								</ul>
+								<p>The contract for the purchase of Services is between the Partner and the User. The
+								   Commission or Network Access Contribution (as defined on the cover page(s) or Partner
+								   application) is owed to Bnails Booking as a commission for each Booking. The Network
+								   Access
+								   Contribution is in consideration of the privilege and benefits gained from connecting
+								   the
+								   Partner to the User on our Platform.<br>The Partner grants Bnails Booking a license to
+								   use
+								   the Partner's name, menu, logo, and other material or information used in the
+								   Partner's
+								   business provided by the Partner for the purposes of publishing and displaying such
+								   information on our Platform during the Term. The Partner represents and warrants to
+								   Dash
+								   Booking that the Partner's name, menu, logo, and other material or information
+								   provided
+								   by the Partner to Bnails Booking do not violate, infringe or otherwise breach any
+								   patent,
+								   copyright, trademark, trade secret, or other proprietary rights of any third party
+								   (including without limitation any licensor or franchisor).
+								</p>
+								<p><strong>2a. Partner Payment</strong></p>
+								<p>By continuing, the Partner authorizes Bnails Booking to withdraw automatically from its
+								   Account for charges for services and products Bnails Booking provided. When the Partner
+								   subscribes to pay for the Products and Services of Bnails Booking, its Financial
+								   Institution account will be billed according to current Bnails Booking rates for the
+								   selected subscription plan to prepay usage of Products and Services for the current
+								   period. For monthly plans, the Partner will be charged on the first day of each
+								   month.
+								   Bnails Booking does not provide refunds for Products and Services that have already
+								   been
+								   processed.
+								</p>
+								<p>The Partner agrees to maintain a sufficient balance of funds in its banking account
+								   in
+								   order to use our Products and Services. If a payment withdrawal is unsuccessful due
+								   to
+								   Non-Sufficient Funds (NSF), closed account, or any other returned payment reason, the
+								   Partner will be charged an additional <strong>$30 NSF processing fee.</strong> This
+								   fee
+								   will be automatically debited from the Partner's account together with the
+								   outstanding
+								   payment amount on the next withdrawal attempt. Bnails Booking reserves the right to
+								   suspend
+								   access to the Platform and Services if payment remains outstanding.
+								</p>
+								<p>If the Partner chooses to pay by Credit Card instead of PAD or bank transfer, a
+								   processing fee equal to <strong>three percent (3%)</strong> of the total transaction
+								   amount will be applied and charged at the time of payment. This fee covers
+								   credit-card
+								   network and payment-gateway processing expenses and is non-refundable.
+								</p>
+								<p>The Partner authorizes Bnails Booking Inc. to debit its account for monthly regular
+								   recurring payments and/or one-time payments from time to time, for payment of all
+								   charges
+								   arising under its account including subscription fees, chargebacks, NSF fees, and
+								   applicable credit-card payment fees.
+								</p>
+								<p>The Partner agrees to waive any legislative or regulatory requirement for
+								   pre-notification.
+								</p>
+								<p>The Partner has certain recourse rights if any debit does not comply with this
+								   agreement.
+								   For example, the Partner has the right to receive reimbursement for any PAD that is
+								   not
+								   authorized or is not consistent with this PAD Agreement. To obtain more information
+								   about
+								   your recourse rights, you can visit: <a href="" target="_blank"
+								                                           rel="noopener noreferrer">www.payments.ca</a>.
+								</p>
+								<p>This authority is to remain in effect until Bnails Booking Inc. has received written
+								   notification of its change or termination. This notification must be received at
+								   least
+								   ten (10) business days before the next debit is scheduled. The Partner may obtain a
+								   sample cancellation form, or more information on the Partner's right to cancel a PAD
+								   Agreement at <a href="" target="_blank" rel="noopener noreferrer">www.payments.ca</a>.
+								</p>
+								<p>Bnails Booking may change the price of the Services at any time. We will notify you by
+								   email at least 15 days before the price change. If you do not agree to the price
+								   change,
+								   you must cancel and stop using the Services before the price change takes effect.
+								</p>
+								<p><strong>2b. Partner Payment for Website Development Services</strong></p>
+								<p> Upon completion and publication of the website, the payment for our website
+								    development
+								    service will be finalized two weeks after the website goes live. This period allows
+								    for
+								    any final adjustments and ensures Partner's satisfaction with the delivered product.<br>After
+								    one month from the date the website is published, no refunds or cancellations will
+								    be
+								    accepted. This policy is in place to ensure that the development work is valued and
+								    to
+								    protect against extended usage without full compensation.<br>After one month, the
+								    Partner can request changes to the website for an additional fee. The Partner will
+								    be
+								    notified of the price for these changes prior to any work being carried out.
+								</p>
+								<p><strong>3. Partner Obligations And Responsibility</strong></p>
+								<p>The Partner agrees to receive, confirm, arrange and provide services for Users in a
+								   timely manner, appointments as booked by Users via our Platform (each a “Booking”)
+								   using
+								   skill, care, diligence, and quality consistent with best industry practices and all
+								   applicable laws. Service must correspond to what is stated in the Appointment as
+								   received
+								   by the Partner without error, be in good and fair quality within the description of
+								   the
+								   Service. The Partner will review all Users comments included in the Booking and will
+								   ensure that all Services are provided in accordance with such comments including, but
+								   not
+								   limited to, ensuring that any Services provided from Booking takes into account any
+								   User
+								   allergies that are disclosed.<br>The Partner will accept all Bookings from Users,
+								   where
+								   applicable, and will immediately communicate any inability to fulfill a Booking. The
+								   Partner must be responsible for its hours of operation (the “Opening Hours”) and of
+								   any
+								   changes to such Opening Hours. The Partner must remain online and able to accept
+								   Bookings
+								   at all times during the Opening Hours, save in case of closures for emergencies or
+								   planned closures, the duration of which has been communicated to Bnails Booking in
+								   writing
+								   in advance if reasonably possible. The User may cancel the Booking at no cost if the
+								   Booking is adjusted by Partner or the Booking is canceled prior to the start time.
+								   Dash
+								   Booking may amend the User Satisfaction Guidelines from time to time and
+								   notwithstanding
+								   anything else in this Agreement, amendments to the User Satisfaction Guidelines shall
+								   take effect immediately upon notice to the Partner.<br>The Partner agrees that it
+								   will at
+								   all times allow Users the option to pay for Bookings using either a credit or debit
+								   card
+								   or other electronic means via our Platform, directly to the Partner (not via our
+								   Platform).<br>The Gift Card is offered by the Partner in the System through dedicated
+								   functionality. Before issuing a Gift Card, it must be paid for by the User. Partners
+								   are
+								   solely responsible for the sale, transfer, and implementation of the Gift Card and
+								   for
+								   the proper performance of the Service covered by the Gift Card. Prior to providing
+								   the
+								   Services to the User, as the case may be, the Partner shall verify that the Services
+								   provided to the User are the Services intended to be booked by the User. Bnails Booking
+								   reserves the right to pass on to the Partner any and all costs, fees, and penalties
+								   it
+								   incurs, including but not limited to credit or debit card chargebacks, should the
+								   Partner
+								   fail to comply with its obligations under this Agreement.<br>The Partner undertakes
+								   to
+								   refer positively to and not to disparage Bnails Booking or our Website during the Term
+								   or
+								   post-termination including in relation to any publicity regarding the Bookings and
+								   our
+								   Platform and must not at any time actively encourage Users to place a future booking
+								   directly with the Partner, nor attempt to direct bookings placed with the Partner
+								   through
+								   any website other than our Website. Where the Partner agrees to market Bnails Booking
+								   or
+								   our Platform by means of menus, stickers, or other relevant advertising material, the
+								   Partner agrees to do so only in accordance with Bnails Booking's guidelines and
+								   instructions. Upon termination of this Partner Agreement, the Partner will no longer
+								   market, display, or reference Bnails Booking or our Platform and will return or
+								   destroy, at
+								   Bnails Booking's sole discretion, any and all materials (including any stickers)
+								   provided
+								   to it by Bnails Booking and the Partner will delete any of Bnails Booking's applications
+								   from
+								   all of the Partner's devices and, if it has not done so already, destroy any data or
+								   personal information of the User in the Partner's possession or control. The Partner
+								   will
+								   also promptly stop using Bnails Booking's intellectual property both online and offline
+								   (for example, the Partner will remove any links to our Platform which may exist on
+								   the
+								   Partner's own website) and agrees to continue not to disparage Bnails Booking or our
+								   Platform.<br>The Partner will be solely responsible for all menu information to be
+								   displayed on our Platform including, but not limited to product, prices, and allergy
+								   information (identifying which menu items contain harmful materials, etc., and if
+								   applicable or if required by law). The Partner agrees that the menu prices it
+								   provides
+								   for display on our Platform will be the same as the menu prices used in the Partner's
+								   premises and will not offer a User any discounts or redeem any coupons which are not
+								   also
+								   offered via our Platform other than discounts offered to Users who booked their
+								   appointments at the Partner location. The Partner will be solely responsible for
+								   ensuring
+								   that the information displayed on our Platform is accurate, corresponds exactly to
+								   the
+								   information contained in the Partner's current menu, and complies with all applicable
+								   regulations and laws (including but not limited to in relation to allergy
+								   information).
+								   The Partner agrees and acknowledges that if there is any conflict between the
+								   information
+								   provided on our Platform and the information in the Partner's current menu, the
+								   information provided on our Platform will prevail. Menu pricing on our Platform shall
+								   be
+								   no higher than the Partner's menu pricing shown on any alternative booking networks
+								   that
+								   the Partner engages, or may engage with, from time to time, if any. <br>The Partner
+								   will
+								   at all times comply with all health, safety, sanitary, service standards and any
+								   other
+								   laws, regulations, permits, licenses, Appointments, codes, and directions of any
+								   governmental authority or agency relating to the operation of the Partner and the
+								   preparation, handling, processing, and delivery of any Service pursuant to an
+								   Appointment. The Partner agrees that Bnails Booking has the right to inspect the
+								   Partner's
+								   premises on no less than 24 hours' notice, in Appointment for Bnails Booking to satisfy
+								   itself of the Partner's compliance with this Section or for any other reasonable
+								   purpose.
+								   The Partner will be solely responsible for self-assessing, claiming, and remitting
+								   all
+								   its applicable taxes. <br>The Partner represents and warrants that it is and will at
+								   all
+								   times remain compliant with all applicable privacy laws in the applicable
+								   jurisdiction
+								   including without limitation ensuring that all User personal information is
+								   collected,
+								   used, disclosed, safeguarded, retained, and maintained in accordance with the
+								   applicable
+								   privacy legislation and the then-current Bnails Booking Privacy Policy (which may be
+								   amended or updated by Bnails Booking from time to time). The Partner will use User
+								   personal
+								   information: (i) provided to it by Bnails Booking, if any, or (ii) collected by the
+								   Partner
+								   in connection with the preparation, processing, and delivering of a Service, if any,
+								   for
+								   the sole purpose of preparing, processing and delivering the Service. The Partner
+								   will
+								   not use such User personal information for any other purposes and will not disclose
+								   such
+								   User personal information to third parties.<br>Bnails Booking will provide an invoice
+								   to
+								   the Partner (the “Invoice”) once a month (the time between Invoices is hereafter
+								   referred
+								   to as the “Billing Period”). The Invoice will include: (i) the total amount charged
+								   by
+								   Bnails Booking to the Partner for Bookings ( plus any applicable taxes; (ii) the total
+								   amount of all Network Access Contributions, (iii) any other applicable charges, or
+								   fees
+								   payable to Bnails Booking by the Partner specified in this Partner Agreement or
+								   otherwise
+								   agreed upon by the Partner and Bnails Booking (such as in relation to POS or other
+								   service
+								   fees) (the Network Access Contributions and such fees and charges, collectively the
+								   “Partner Payments”); and (iv) the total amount owing for the Billing Period (the
+								   “Total
+								   Amount Payable”).<br>If there are any amounts payable by Partner to Bnails Booking
+								   (i.e.,
+								   the Total Amount Payable is a negative number), such amount will be due and payable
+								   by
+								   the Partner to Bnails Booking within 3 days of the date of the Invoice and thereafter
+								   all
+								   unpaid amounts will accrue interest at a rate of 19.56% per annum (or 1.5% per month)
+								   or
+								   the highest rate permitted by law, whichever is lower and may be set by Dash
+								   Booking<br>If
+								   the Partner disagrees with the Invoice, the Partner must notify Bnails Booking of its
+								   disagreement within 14 days after the date of the Invoice. If the Partner fails to
+								   notify
+								   Bnails Booking of any disagreement within such a 14-day period, the Partner will be
+								   deemed
+								   to have irrevocably accepted and agreed with the Invoice. <br></p>
+								<p><strong>4. Bnails Booking Obligation and Responsibility</strong></p>
+								<p>Bnails Booking agrees to use best efforts to display on the Platform information about
+								   and
+								   create a profile for the Partner (the “Profile”) which includes the Partner's name,
+								   logo,
+								   address, and menu in Appointment to allow Users to book appointments at the Partner
+								   (the
+								   “Platform Access”).
+								</p>
+								<ul>
+									<li>“Partners” means the beauty salons or businesses who are using Bnails Booking or
+									    POS
+									    as their software to manage their business and offer their goods and services
+									    for
+									    sale on the Bnails Booking Platform.
+									</li>
+									<li>“Personal Data” is any information that relates to an identified or identifiable
+									    individual.
+									</li>
+									<li>“Platform” means www.dashbooking.com and www.partnersdash.com, including all
+									    subdirectories, subdomains, and mobile sites thereof.
+									</li>
+									<li>“Service” means any of the services We provide to Partners or individuals
+									    through
+									    our Applications and Websites.
+									</li>
+									<li>“Service Provider” means any natural or legal person who processes the data on
+									    behalf of Bnails Booking. It refers to third-party companies or individuals
+									    employed
+									    by the Bnails Booking to facilitate the Service, to provide the Service on behalf
+									    of
+									    the Bnails Booking, to perform services related to the Service, or to assist the
+									    Dash
+									    Booking in analyzing how the Service is used.
+									</li>
+									<li>“Website” refers to Bnails Booking, accessible from https://www.dashbooking.com or
+									    https://www.partnersdash.com
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer class="footer" id="footer">
+	<div class="footer-top">
+		<div class="container">
+			<div class="row g-4">
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-item">
+						<div class="footer-logo">
+							<a href="/" aria-label="Logo">
+								<img src="./assets/images/logo-primary.webp"
+								     class="mw-100 h-100 w-auto"
+								     width="954" height="471" loading="lazy" alt="Logo">
+							</a>
+						</div>
+						<div class="footer-desc">
+							Making the world a better place through saving people time.
+						</div>
+						<div class="footer-social">
+							<a href="" class="footer-social_item" aria-label="Facebook">
+								<svg fill="currentColor" height="24" width="24" viewBox="0 0 24 24" aria-hidden="true">
+									<path fill-rule="evenodd"
+									      d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+									      clip-rule="evenodd"></path>
+								</svg>
+							</a>
+							<a href="" class="footer-social_item" aria-label="Instagram">
+								<svg fill="currentColor" height="24" width="24" viewBox="0 0 24 24" aria-hidden="true">
+									<path fill-rule="evenodd"
+									      d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+									      clip-rule="evenodd"></path>
+								</svg>
+							</a>
+							<a href="" class="footer-social_item" aria-label="Telegram">
+								<svg width="22" height="22" viewBox="0 0 256 256">
+									<path d="M128,0 C57.307,0 0,57.307 0,128 L0,128 C0,198.693 57.307,256 128,256 L128,256 C198.693,256 256,198.693 256,128 L256,128 C256,57.307 198.693,0 128,0 L128,0 Z"
+									      fill="currentColor">
+									</path>
+									<path d="M190.2826,73.6308 L167.4206,188.8978 C167.4206,188.8978 164.2236,196.8918 155.4306,193.0548 L102.6726,152.6068 L83.4886,143.3348 L51.1946,132.4628 C51.1946,132.4628 46.2386,130.7048 45.7586,126.8678 C45.2796,123.0308 51.3546,120.9528 51.3546,120.9528 L179.7306,70.5928 C179.7306,70.5928 190.2826,65.9568 190.2826,73.6308"
+									      fill="#FFFFFF">
+									</path>
+									<path d="M98.6178,187.6035 C98.6178,187.6035 97.0778,187.4595 95.1588,181.3835 C93.2408,175.3085 83.4888,143.3345 83.4888,143.3345 L161.0258,94.0945 C161.0258,94.0945 165.5028,91.3765 165.3428,94.0945 C165.3428,94.0945 166.1418,94.5735 163.7438,96.8115 C161.3458,99.0505 102.8328,151.6475 102.8328,151.6475"
+									      fill="#D2E5F1">
+									</path>
+									<path d="M122.9015,168.1154 L102.0335,187.1414 C102.0335,187.1414 100.4025,188.3794 98.6175,187.6034 L102.6135,152.2624"
+									      fill="#B5CFE4">
+									</path>
+								</svg>
+							</a>
+						</div>
+						<div class="footer-language">
+							<div class="dropdown">
+								<button class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+								        aria-expanded="false">
+									<img src="./assets/images/country/us.svg" alt="">
+									English
+								</button>
+								<ul class="dropdown-menu">
+									<li>
+										<button type="button" class="dropdown-item active">
+											<img src="./assets/images/country/us.svg" alt="">
+											English
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+											     fill="currentColor" aria-hidden="true">
+												<path fill-rule="evenodd"
+												      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+												      clip-rule="evenodd"></path>
+											</svg>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="dropdown-item">
+											<img src="./assets/images/country/fr.svg" alt="">
+											Français
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+											     fill="currentColor" aria-hidden="true">
+												<path fill-rule="evenodd"
+												      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+												      clip-rule="evenodd"></path>
+											</svg>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="dropdown-item">
+											<img src="./assets/images/country/de.svg" alt="">
+											Deutsch
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+											     fill="currentColor" aria-hidden="true">
+												<path fill-rule="evenodd"
+												      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+												      clip-rule="evenodd"></path>
+											</svg>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="dropdown-item">
+											<img src="./assets/images/country/es.svg" alt="">
+											Español
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+											     fill="currentColor" aria-hidden="true">
+												<path fill-rule="evenodd"
+												      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+												      clip-rule="evenodd"></path>
+											</svg>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="dropdown-item">
+											<img src="./assets/images/country/cs.svg" alt="">
+											Czech
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+											     fill="currentColor" aria-hidden="true">
+												<path fill-rule="evenodd"
+												      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+												      clip-rule="evenodd"></path>
+											</svg>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="dropdown-item">
+											<img src="./assets/images/country/fi.svg" alt="">
+											Finnish
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+											     fill="currentColor" aria-hidden="true">
+												<path fill-rule="evenodd"
+												      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+												      clip-rule="evenodd"></path>
+											</svg>
+										</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-item">
+						<div class="footer-title">
+							BNAILS
+						</div>
+						<div class="footer-list">
+							<a href="" class="footer-list_item">
+								Careers
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-item">
+						<div class="footer-title">
+							For Beauty Salons
+						</div>
+						<div class="footer-list">
+							<a href="" class="footer-list_item">
+								Features
+							</a>
+							<a href="" class="footer-list_item">
+								Pricing
+							</a>
+							<a href="" class="footer-list_item">
+								Partner with us
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-item">
+						<div class="footer-title">
+							Legal
+						</div>
+						<div class="footer-list">
+							<a href="" class="footer-list_item">
+								Privacy Policy
+							</a>
+							<a href="" class="footer-list_item">
+								Terms of Service
+							</a>
+							<a href="" class="footer-list_item">
+								Terms and Conditions for Partners
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<div class="container">
+			<div class="text-center">
+				© 2026 Bnails Booking Inc. All rights reserved.
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/fancybox/fancybox.min.js"></script>
+<script type="module" src="./assets/js/app.js"></script>
+</body>
+</html>

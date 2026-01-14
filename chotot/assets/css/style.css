@@ -10,6 +10,7 @@
 	align-items: center;
 	justify-content: center;
 	white-space: nowrap;
+	border: 0;
 }
 
 .button-theme.button-outline {
@@ -21,12 +22,30 @@
 	background: #e8e8e8;
 }
 
+.button-theme.button-theme_primary {
+	background-color: rgb(var(--primary-rgb));
+	color: var(--color-dark);
+}
+
+.button-theme.button-theme_primary:hover {
+	background-color: rgb(var(--secondary-rgb));
+	color: var(--color-dark);
+}
+
 .button-theme.button-more {
-	font-weight: 700;
-	height: 40px;
 	width: 268px;
 	padding: 0 16px;
 	font-size: 1.15em;
+	font-weight: 700;
+	height: 40px;
+}
+
+.button-theme.button-theme_default {
+	font-size: 1.15em;
+	font-weight: 700;
+	height: 40px;
+	border-radius: 8px;
+	padding: 0 16px;
 }
 
 .section-gap {
