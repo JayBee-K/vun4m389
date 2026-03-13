@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+	--transition-default: 0.3s all ease-in-out;
+	--font-theme: "Manrope", sans-serif;
+	--size-theme: 14px;
+
+	/* Color Base */
+	--primary-rgb: 44, 169, 181; /*#2CA9B5*/
+	--primary-hover: 32, 146, 157; /*#20929d*/
+	--primary-gradient: linear-gradient(178.07deg, rgba(176, 242, 237, 0.3) 1.63%, rgba(150, 226, 240, 0.5) 98.37%);
+	--primary-gradient-2: linear-gradient(90deg, #42CCE7 0%, #48CCB8 100%);
+	--primary-gradient-3: linear-gradient(178.07deg, rgba(176, 242, 237, 0.05) 1.63%, rgba(150, 226, 240, 0.1) 98.37%);
+	--secondary-rgb: 44, 181, 145; /*#2CB591*/
+
+	--color-dark: #111215;
+	--color-gray: #F8F8F9;
+	--bg-gray: #F1F2F4;
+	--gap: 8px;
+}
+
+body {
+	position: relative;
+	width: 100%;
+	color: var(--color-dark);
+	font-family: var(--font-theme);
+	font-size: var(--size-theme);
+	font-weight: 400;
+	font-style: normal;
+	line-height: 1.4;
+	background-color: var(--bs-white);
+}
+
+a,
+a:hover,
+a:focus {
+	outline: none;
+	text-decoration: none;
+	cursor: pointer;
+	-o-transition: var(--transition-default);
+	transition: var(--transition-default);
+	-webkit-transition: var(--transition-default);
+}
+
+button,
+button:hover,
+button:focus {
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	outline: none !important;
+	text-decoration: none !important;
+	-o-transition: var(--transition-default);
+	transition: var(--transition-default);
+	-webkit-transition: var(--transition-default);
+	cursor: pointer !important;
+}
+
+input,
+select,
+textarea {
+	-o-transition: var(--transition-default);
+	transition: var(--transition-default);
+	-webkit-transition: var(--transition-default);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	outline: none !important;
+	border-color: rgb(var(--primary-rgb)) !important;
+}
+
+.transition-default {
+	-o-transition: var(--transition-default);
+	transition: var(--transition-default);
+	-webkit-transition: var(--transition-default);
+}
+
+.background-cover {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.image-cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.image-contain {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-o-object-fit: contain;
+	object-fit: contain;
+}
+
+.object-fit-cover {
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.object-fit-contain {
+	-o-object-fit: contain;
+	object-fit: contain;
+}
+
+.pseudo {
+	position: relative;
+}
+
+.pseudo:before,
+.pseudo:after {
+	position: absolute;
+	content: '';
+	display: block;
+}
+
+.zi--1 {
+	z-index: -1;
+}
+
+.zi-1 {
+	z-index: 1;
+}
+
+.zi-2 {
+	z-index: 2;
+}
+
+.zi-3 {
+	z-index: 3;
+}
+
+.zi-4 {
+	z-index: 4;
+}
+
+.zi-5 {
+	z-index: 5;
+}
+
+.zi-10 {
+	z-index: 10;
+}
+
+.ratio > img {
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.ratio-2x1 {
+	--bs-aspect-ratio: 50%;
+}
+
+.ratio-3x2 {
+	--bs-aspect-ratio: calc(2 / 3 * 100%);
+}
+
+.gap-5px {
+	gap: 5px;
+}
+
+.gap-10px {
+	gap: 10px;
+}
+
+.gap-15px {
+	gap: 15px;
+}
+
+.gap-20px {
+	gap: 20px;
+}
+
+.gap-25px {
+	gap: 25px;
+}
+
+.gap-30px {
+	gap: 30px;
+}
+
+.link-default {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	vertical-align: middle;
+	border: 0;
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	background: transparent;
+	padding: 0;
+}
+
+.link-default:active {
+	color: rgb(var(--primary-rgb));
+}
+
+.flex-same {
+	-webkit-box-flex: 1 !important;
+	-ms-flex: 1 1 0px !important;
+	flex: 1 1 0 !important;
+}
+
+.fw-300 {
+	font-weight: 300;
+}
+
+.fw-400 {
+	font-weight: 400;
+}
+
+.fw-500 {
+	font-weight: 500;
+}
+
+.fw-600 {
+	font-weight: 600;
+}
+
+.fw-700 {
+	font-weight: 700;
+}
+
+.fw-800 {
+	font-weight: 800;
+}
+
+.fw-900 {
+	font-weight: 900;
+}
+
+.mw-25px {
+	min-width: 25px !important;
+}
+
+.mw-50px {
+	min-width: 50px !important;
+}
+
+.mw-75px {
+	min-width: 75px !important;
+}
+
+.mw-100px {
+	min-width: 100px !important;
+}
+
+.overflow-y {
+	overflow-x: hidden !important;
+	overflow-y: auto !important;
+}
+
+.overflow-y::-webkit-scrollbar,
+.scrollbar-hidden::-webkit-scrollbar,
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar {
+	width: 0;
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.limit {
+	--line: 2;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: var(--line);
+	line-clamp: var(--line);
+	-webkit-box-orient: vertical;
+}
